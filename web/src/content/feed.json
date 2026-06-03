@@ -1,0 +1,137 @@
+{
+  "lastUpdated": "2026-06-03",
+  "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
+  "items": [
+    {
+      "id": "feed-ofac-genius-nprm",
+      "type": "regulatory",
+      "title": "FinCEN & OFAC propose GENIUS Act AML/sanctions rules for stablecoin issuers",
+      "summary": "On 8 Apr 2026 FinCEN and OFAC issued a joint NPRM implementing the GENIUS Act: permitted payment stablecoin issuers (PPSIs) would be treated as BSA 'financial institutions', must run AML/CFT programmes and — for the first time — maintain an explicit sanctions-compliance programme. Final rules take effect 12 months after issuance.",
+      "soWhat": "Stablecoin issuers become regulated FIs with their own sanctions duties — counterparty risk on compliant issuers falls, but expect them to wield freeze/seize powers; align issuer-freeze playbooks now.",
+      "date": "2026-04-08",
+      "addedAt": "2026-06-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "tags": ["stablecoin", "GENIUS-Act", "FinCEN", "OFAC", "BSA"],
+      "sources": [
+        { "name": "Federal Register — PPSI AML/sanctions NPRM", "url": "https://www.federalregister.gov/documents/2026/04/10/2026-06963/permitted-payment-stablecoin-issuer-anti-money-launderingcountering-the-financing-of-terrorism" },
+        { "name": "Mayer Brown — Stable rules for stablecoins", "url": "https://www.mayerbrown.com/en/insights/publications/2026/04/stable-rules-for-stablecoins-treasury-proposes-aml-and-sanctions-framework-for-issuers" }
+      ]
+    },
+    {
+      "id": "feed-fatf-stablecoin-report",
+      "type": "regulatory",
+      "title": "FATF: stablecoins now 84% of illicit crypto volume; wants issuer freeze/burn controls",
+      "summary": "FATF's 3 Mar 2026 targeted report flags stablecoin misuse via P2P transfers and unhosted wallets; Chainalysis puts stablecoins at 84% of illicit virtual-asset volume in 2025. FATF urges issuers to be able to freeze, burn or withdraw in the secondary market and to fully implement Recommendation 15.",
+      "soWhat": "The 84% figure reframes stablecoins as the primary laundering rail — make issuer freeze capability a weighted criterion in vendor and counterparty assessment, and prioritise stablecoin-flow tracing.",
+      "date": "2026-03-03",
+      "addedAt": "2026-06-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "tags": ["FATF", "stablecoin", "unhosted-wallets", "Recommendation-15"],
+      "sources": [
+        { "name": "FATF — Stablecoins & unhosted wallets report", "url": "https://www.fatf-gafi.org/en/publications/Virtualassets/targeted-report-stablecoins-unhosted-wallets.html" },
+        { "name": "CoinDesk — FATF stablecoin warning", "url": "https://www.coindesk.com/policy/2026/03/03/international-financial-watchdog-warns-stablecoins-are-increasingly-used-in-sanctions-evasion-and-money-laundering" },
+        { "name": "Chainalysis — Assessing the FATF targeted report", "url": "https://www.chainalysis.com/blog/fatf-targeted-report-secondary-market-monitoring-stablecoins-march-2026/" }
+      ]
+    },
+    {
+      "id": "feed-fdic-stablecoin-rule",
+      "type": "regulatory",
+      "title": "FDIC proposes BSA & sanctions rule for stablecoin issuers",
+      "summary": "On 22 May 2026 the FDIC released proposed rules implementing Bank Secrecy Act and sanctions-compliance standards for FDIC-supervised permitted payment stablecoin issuers, reinforcing the FinCEN/OFAC line.",
+      "soWhat": "Bank-regulator reinforcement: stablecoin issuance is converging on bank-grade AML expectations across multiple US supervisors — treat compliant issuers more like regulated counterparties.",
+      "date": "2026-05-22",
+      "addedAt": "2026-06-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "tags": ["FDIC", "stablecoin", "BSA", "sanctions"],
+      "sources": [
+        { "name": "Hunton — FDIC stablecoin AML/sanctions rule", "url": "https://www.hunton.com/blockchain-legal-resource/fdic-proposes-aml-and-sanctions-rule-for-permitted-stablecoin-issuers" }
+      ]
+    },
+    {
+      "id": "feed-ofac-cbi-tether-freeze",
+      "type": "signal",
+      "title": "OFAC adds crypto addresses to SDN after $344m USDT freeze tied to Iran's central bank",
+      "summary": "On 24 Apr 2026 OFAC updated its designation of the Central Bank of Iran, adding two cryptocurrency addresses to the SDN List after Tether and US law enforcement froze $344m in USDT linked to CBI-affiliated wallets.",
+      "soWhat": "A live demonstration of the stablecoin issuer-freeze lever at scale — screen freshly-listed SDN crypto addresses and confirm your stablecoin-exposure controls can act on issuer freezes.",
+      "date": "2026-04-24",
+      "addedAt": "2026-06-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "tags": ["OFAC", "sanctions", "stablecoin", "USDT", "Iran"],
+      "sources": [
+        { "name": "Global Legal Insights — OFAC sanctions & digital assets", "url": "https://www.globallegalinsights.com/practice-areas/blockchain-cryptocurrency-laws-and-regulations/ofac-sanctions-and-digital-assets-regulation-compliance-and-recent-developments/" },
+        { "name": "Chainalysis — OFAC sanctions tracker", "url": "https://www.chainalysis.com/blog/ofac-sanctions/" }
+      ]
+    },
+    {
+      "id": "feed-dprk-it-workers",
+      "type": "typology",
+      "title": "DPRK IT-worker revenue laundering",
+      "summary": "OFAC's 12 Mar 2026 action designated six individuals and two entities facilitating North Korean IT-worker schemes that generated nearly $800m in 2024 to fund DPRK weapons programmes — wages laundered through crypto via front identities.",
+      "soWhat": "Contractor/payroll payouts to fake remote workers are a live DPRK laundering vector — pair behavioural KYC red flags (location/IP mismatch) with screening of designated address clusters.",
+      "date": "2026-03-12",
+      "addedAt": "2026-06-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "tags": ["DPRK", "sanctions", "typology", "KYC"],
+      "typology": {
+        "vector": "DPRK IT-worker revenue laundering",
+        "controls": ["Behavioural KYC red flags (location/IP mismatch)", "Screening of designated address clusters", "Contractor/payroll payout monitoring"],
+        "obligations": ["OFAC / UN sanctions screening", "SAR on DPRK-nexus"]
+      },
+      "sources": [
+        { "name": "Chainalysis — Crypto sanctions 2026", "url": "https://www.chainalysis.com/blog/crypto-sanctions-2026/" },
+        { "name": "Global Legal Insights — OFAC sanctions & digital assets", "url": "https://www.globallegalinsights.com/practice-areas/blockchain-cryptocurrency-laws-and-regulations/ofac-sanctions-and-digital-assets-regulation-compliance-and-recent-developments/" }
+      ]
+    },
+    {
+      "id": "feed-trm-series-c",
+      "type": "venture",
+      "title": "TRM Labs raises $70m Series C to scale AI illicit-finance tooling",
+      "summary": "TRM Labs raised a reported $70m Series C — backed by Blockchain Capital, Goldman Sachs and Galaxy Ventures — to scale AI tools for disrupting illicit finance. Confidence: medium (funding figure per secondary RegTech-funding trackers).",
+      "soWhat": "A war-chest for a primary KYT vendor means faster product velocity and a stronger 'buy' option — a data point for the build-vs-buy calculus and vendor-viability assessment.",
+      "date": "2026-05-26",
+      "addedAt": "2026-06-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "tags": ["funding", "TRM", "KYT", "RegTech"],
+      "venture": { "company": "TRM Labs", "round": "Series C", "amount": "$70m", "investors": ["Blockchain Capital", "Goldman Sachs", "Galaxy Ventures"] },
+      "sources": [
+        { "name": "Landbase — fastest-growing RegTech", "url": "https://www.landbase.com/blog/fastest-growing-regtech" },
+        { "name": "Ellty — RegTech investors 2026", "url": "https://www.ellty.com/blog/regtech-investors" }
+      ]
+    },
+    {
+      "id": "feed-treasury-programmable-enforcement",
+      "type": "signal",
+      "title": "Treasury pushes 'programmable' on-protocol sanctions enforcement",
+      "summary": "Treasury (FinCEN/OFAC) proposals would have digital-asset firms build systems where sanctions enforcement, transaction blocking and monitoring are automatic and embedded in the protocol — compliance continuous and built-in rather than after-the-fact.",
+      "soWhat": "This is the on-ledger enforcement thesis going mainstream in policy — directly strengthens the case for the in-house Daml-on-Canton compliance engine over bolt-on, after-the-fact screening.",
+      "date": "2026-05-18",
+      "addedAt": "2026-06-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "tags": ["on-ledger", "enforcement", "FinCEN", "OFAC", "policy"],
+      "sources": [
+        { "name": "PYMNTS — Treasury calls for programmable enforcement", "url": "https://www.pymnts.com/cryptocurrency/2026/treasury-calls-for-programmable-financial-enforcement-across-crypto/" }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { useReviewOverlay } from "./lib/store";
 import { Brief } from "./views/Brief";
 import { Collection } from "./views/Collection";
 import { Intelligence } from "./views/Intelligence";
+import { Radar } from "./views/Radar";
 import { Activity } from "./views/Activity";
 
 export function App() {
@@ -64,6 +65,7 @@ export function App() {
             />
           )}
           {page === "intelligence" && <Intelligence items={items} />}
+          {page === "radar" && <Radar items={items} />}
           {page === "activity" && <Activity items={items} lastUpdated={FEED_META.lastUpdated} />}
         </div>
       </main>

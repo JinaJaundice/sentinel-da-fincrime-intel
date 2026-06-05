@@ -7,7 +7,7 @@
   (sidebar + stat tiles + dense expandable tables).
 - Project docs: `CLAUDE.md` + `docs/`.
 
-## Phase 2 — the ingestion agent — pipeline ✅ · scheduling next
+## Phase 2 — the ingestion agent ✅ (scheduled & running)
 
 - **Auto-publish** pipeline: agent writes `published` items to
   [`web/src/content/feed.json`](web/src/content/feed.json), merged into the
@@ -28,8 +28,7 @@
 
 ## Phase 4 — refinements
 
-- Optional: a lightweight "hide" safety valve in Activity; per-stream sorting
-  and search; a charting library.
+- Optional: a lightweight "hide" safety valve in Activity; a charting library.
 
 ## Deliberately deferred
 

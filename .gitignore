@@ -4,6 +4,10 @@ node_modules/
 # Build output
 dist/
 build/
+*.tsbuildinfo
+
+# Vercel
+.vercel/
 
 # Local env / secrets
 .env

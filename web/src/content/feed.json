@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-03",
+  "lastUpdated": "2026-06-04",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -131,6 +131,86 @@
       "tags": ["on-ledger", "enforcement", "FinCEN", "OFAC", "policy"],
       "sources": [
         { "name": "PYMNTS — Treasury calls for programmable enforcement", "url": "https://www.pymnts.com/cryptocurrency/2026/treasury-calls-for-programmable-financial-enforcement-across-crypto/" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-eu-russia-sanctions-casp-ban",
+      "type": "regulatory",
+      "title": "EU 20th sanctions package bans all transactions with Russian and Belarusian CASPs",
+      "summary": "Adopted 23 April 2026 and effective 24 May 2026, the EU's 20th Russia sanctions package moves beyond entity-level listing: it bans any EU person from transacting with any crypto-asset service provider established in Russia or Belarus. Four Russian-linked crypto assets are simultaneously prohibited — A7A5, RUBx, and both the Russian and Belarusian digital rubles. Decentralised platforms established in Russia are explicitly in scope.",
+      "soWhat": "Sector-level bans are structurally harder to route around than entity lists — a new Russian exchange is in scope from day one without waiting for a specific listing. Review all counterparty flows for Russian/Belarusian CASP involvement and treat the A7A5, RUBx and digital ruble prohibitions as screening inputs on par with SDN entries.",
+      "date": "2026-04-23",
+      "addedAt": "2026-06-04",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "high",
+      "tags": ["sanctions", "Russia", "CASP", "A7A5", "digital-ruble", "EU", "MiCA"],
+      "sources": [
+        { "name": "EU Council — 20th Russia sanctions press release", "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/04/23/russia-s-war-of-aggression-against-ukraine-20th-round-of-stern-eu-sanctions-hits-energy-military-industrial-complex-trade-and-financial-services-including-crypto/" },
+        { "name": "TRM Labs — EU 20th package: sweeping Russian crypto ban", "url": "https://www.trmlabs.com/resources/blog/eu-adopts-20th-sanctions-package-on-russia----including-a-sweeping-ban-on-all-crypto-asset-transactions-with-russian-and-belarusian-providers" },
+        { "name": "Elliptic — architecture of crypto sanctions evasion", "url": "https://www.elliptic.co/blog/eu-20th-sanctions-package-targets-the-architecture-of-crypto-sanctions-evasion" }
+      ]
+    },
+    {
+      "id": "feed-uk-ofsi-htx-a7a5-designation",
+      "type": "signal",
+      "title": "UK OFSI designates HTX (Huobi), EXMO and A7A5 stablecoin issuer — first Regulation 17A action against crypto exchanges",
+      "summary": "On 26 May 2026 the UK FCDO designated 18 entities under its Russia sanctions regime, including Huobi/HTX ($3.3tn 2025 trading volume), EXMO, BitPapa, and A7 Guarantee — the entity behind the A7A5 ruble stablecoin. This is the first UK application of Regulation 17A to crypto exchanges, prohibiting UK financial institutions from acting as correspondent banks or processing payments for any of the 18 entities. Major exchanges began increasing transfer scrutiny with HTX within 24 hours.",
+      "soWhat": "HTX's scale means many institutions will have indirect exposure via omnibus accounts or liquidity routing — run an immediate lookback for HTX/EXMO/BitPapa counterparty flows and update screening lists. Regulation 17A's correspondent-bank prohibition extends to payment processing, so the exposure surface is wider than wallet screening alone.",
+      "date": "2026-05-26",
+      "addedAt": "2026-06-04",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "high",
+      "tags": ["sanctions", "Russia", "OFSI", "HTX", "Huobi", "A7A5", "UK", "correspondent-banking"],
+      "sources": [
+        { "name": "CoinDesk — UK sanctions Huobi and A7A5 issuer", "url": "https://www.coindesk.com/business/2026/05/26/uk-sanctions-huobi-and-ruble-stablecoin-issuer-in-crackdown-on-russia-crypto-networks" },
+        { "name": "TRM Labs — UK designates Huobi, Exmo, BitPapa", "url": "https://www.trmlabs.com/resources/blog/uk-designates-huobi-exmo-bitpapa-and-11-other-entities-for-russian-crypto-sanctions-evasion" },
+        { "name": "Elliptic — UK sweeping new sanctions designations", "url": "https://www.elliptic.co/blog/uk-designates-cryptoasset-exchanges-in-sweeping-new-sanctions-package" }
+      ]
+    },
+    {
+      "id": "feed-chinese-mln-laas-typology",
+      "type": "typology",
+      "title": "Chinese-language money laundering networks: $16.1B in 2025 via full-service laundering-as-a-service",
+      "summary": "Chainalysis's 2026 Crypto Crime Report identified Chinese-language money laundering networks (CLMNs) as the dominant professional laundering infrastructure in crypto, moving $16.1 billion in 2025 (~$44M/day across 1,799+ active wallets) — roughly 20% of all known illicit crypto volume. CLMNs run six discrete service lines via Telegram: point brokers, money mules, OTC desks, 'Black U' USDT services, gambling cash-outs, and money-movement services. OFAC subsequently designated the Prince Group; FinCEN designated Huione Group under Section 311.",
+      "soWhat": "CLMNs act as the shared back-office for DPRK heists, pig-butchering proceeds, and ransomware — meaning seemingly unrelated illicit events converge through the same wallet clusters. Cross-entity cluster analytics (not just direct attribution) is the only reliable detection method; add Telegram-advertised service wallets to your screening feed.",
+      "date": "2026-01-27",
+      "addedAt": "2026-06-04",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "tags": ["typology", "laundering-as-a-service", "China", "USDT", "DPRK", "pig-butchering", "OTC"],
+      "typology": {
+        "vector": "Chinese-language money laundering networks (CLMN) — full-service laundering-as-a-service via Telegram",
+        "controls": ["Cross-entity cluster analytics (not direct attribution alone)", "Telegram-advertised CLMN service wallet screening", "OTC desk and 'Black U' USDT flow detection", "Gambling platform cash-out pattern monitoring"],
+        "obligations": ["SAR on DPRK-nexus and scam-proceeds flows", "OFAC / UN screening of CLMN-linked wallet clusters"]
+      },
+      "sources": [
+        { "name": "Chainalysis — Chinese-language underground crypto money laundering", "url": "https://www.chainalysis.com/blog/2026-crypto-money-laundering/" },
+        { "name": "CNBC — Chinese networks moved $16B in 2025", "url": "https://www.cnbc.com/2026/02/02/chinese-money-laundering-networks-crypto-telegram-2025-chainalysis-scam-southeast-asia-cambodia.html" }
+      ]
+    },
+    {
+      "id": "feed-amla-supervision-selection-2026",
+      "type": "regulatory",
+      "title": "AMLA launches direct-supervision selection: NCAs submit data by 15 Aug 2026, provisional list Sep 2026",
+      "summary": "EU Anti-Money Laundering Authority (AMLA) has published the reporting package for national competent authorities to identify obliged entities eligible for AMLA's direct supervision from 2028. NCAs must submit data by 15 August 2026; a provisional list of ~40 high-risk cross-border firms — including large CASPs — is expected by end-September 2026. AMLA's Single Rulebook applies across all 27 member states from 10 July 2027.",
+      "soWhat": "Any EU-facing bank or large CASP with material cross-border AML exposure should treat AMLA readiness as a live project now: the 26 regulatory technical standards and guidelines AMLA is releasing in 2026–Q1 2027 define what 'adequate' looks like, and the August 15 NCA data-submission deadline means the selection criteria are being applied to live data right now.",
+      "date": "2026-05-20",
+      "addedAt": "2026-06-04",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "tags": ["AMLA", "supervision", "EU", "AML", "CASP", "Single-Rulebook"],
+      "sources": [
+        { "name": "AMLA — major step toward harmonised EU supervision", "url": "https://www.amla.europa.eu/amla-takes-major-step-toward-harmonised-eu-supervision_en" },
+        { "name": "AMLA — next step toward 2027 entity selection", "url": "https://www.amla.europa.eu/amla-takes-next-step-toward-2027-selection-entities-direct-supervision_en" }
       ]
     }
   ]

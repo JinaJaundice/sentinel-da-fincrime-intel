@@ -21,15 +21,16 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | Path | Responsibility |
 |---|---|
 | `web/src/App.tsx` | Shell: sidebar + main; merges seed + agent feed (`ALL_ITEMS`) with any overlay; routes `page → view` |
-| `web/src/components/Sidebar.tsx` | Left nav (the `Page` type lives here); review-count badge |
-| `web/src/components/DataTable.tsx` | Dense, expandable table for Signals/Ventures/Solutions (column config per `variant`) |
+| `web/src/components/Sidebar.tsx` | Left nav (the `Page` type lives here); "new agent items" badge |
+| `web/src/components/DataTable.tsx` | Dense, expandable table for Signals/Ventures/Solutions (per-`variant` columns) with search + sortable headers |
 | `web/src/components/ItemDetail.tsx` | Shared content block (summary, "So what", type-extras, sources, review actions) |
-| `web/src/components/ItemCard.tsx` | `Panel` + `ItemDetail` — used by Overview & Review |
-| `web/src/views/Brief.tsx` | Overview: stat tiles, review callout, latest list |
+| `web/src/components/ItemCard.tsx` | `Panel` + `ItemDetail` — used by Overview & Activity |
+| `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, latest list |
 | `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, renders a `DataTable` |
 | `web/src/views/Intelligence.tsx` | Typology library + coverage bars (derived metrics) |
 | `web/src/views/Activity.tsx` | Transparency log of what the agent auto-published (newest first) |
-| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `index.ts` (merges seed+feed → `ALL_ITEMS`) |
+| `web/src/views/Radar.tsx` | Regulatory radar: upcoming milestones (countdowns) + recently-landed regulatory items |
+| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `milestones.ts` (radar dates) · `index.ts` (merges seed+feed → `ALL_ITEMS`) |
 | `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `store.ts` (review overlay) · `utils.ts` |
 
 ## State: the review overlay

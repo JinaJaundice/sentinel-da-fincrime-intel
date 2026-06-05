@@ -1,7 +1,7 @@
-import { Radar, LayoutDashboard, Newspaper, TrendingUp, Boxes, Crosshair, Radio, type LucideIcon } from "lucide-react";
+import { Radar, LayoutDashboard, Newspaper, TrendingUp, Boxes, Crosshair, CalendarClock, Radio, type LucideIcon } from "lucide-react";
 import { cn } from "../lib/utils";
 
-export type Page = "brief" | "signals" | "ventures" | "solutions" | "intelligence" | "activity";
+export type Page = "brief" | "signals" | "ventures" | "solutions" | "intelligence" | "radar" | "activity";
 
 const NAV: { id: Page; label: string; Icon: LucideIcon }[] = [
   { id: "brief", label: "Overview", Icon: LayoutDashboard },
@@ -9,6 +9,7 @@ const NAV: { id: Page; label: string; Icon: LucideIcon }[] = [
   { id: "ventures", label: "Ventures", Icon: TrendingUp },
   { id: "solutions", label: "Solutions", Icon: Boxes },
   { id: "intelligence", label: "Intelligence", Icon: Crosshair },
+  { id: "radar", label: "Radar", Icon: CalendarClock },
   { id: "activity", label: "Activity", Icon: Radio },
 ];
 
@@ -68,7 +69,7 @@ export function Sidebar({
         </nav>
 
         <div className="hidden md:block md:mt-auto pt-4 text-[10px] text-neutral-600 leading-relaxed">
-          v0.1 · phase 2
+          v0.1 · phase 3
           <br />
           auto-publish
         </div>

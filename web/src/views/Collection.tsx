@@ -3,6 +3,7 @@ import type { LucideIcon } from "lucide-react";
 import type { Item, ItemType } from "../content/types";
 import { SectionHeading } from "../lib/ui";
 import { DataTable } from "../components/DataTable";
+import { CollectionDashboard } from "../components/CollectionDashboard";
 import { cn } from "../lib/utils";
 
 // Generic dense list — reused by Signals, Ventures and Solutions. Adding
@@ -38,6 +39,8 @@ export function Collection({
         sub={blurb}
         right={<span className="text-xs text-neutral-500 tabular-nums">{shown.length} item{shown.length === 1 ? "" : "s"}</span>}
       />
+
+      <CollectionDashboard items={inScope} variant={variant} />
 
       {regions.length > 2 && (
         <div className="flex items-center flex-wrap gap-1.5">

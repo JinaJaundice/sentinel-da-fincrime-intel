@@ -20,3 +20,9 @@ export function relativeDay(iso: string, now = new Date()): string {
 function startOfDay(d: Date) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
 }
+
+// True if `iso` (yyyy-mm-dd) is within the last `days` days.
+export function withinDays(iso: string, days: number, now = new Date()) {
+  const d = new Date(iso + "T00:00:00").getTime();
+  return now.getTime() - d <= days * 86_400_000;
+}

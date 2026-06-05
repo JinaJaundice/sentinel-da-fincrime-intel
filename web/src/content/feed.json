@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-04",
+  "lastUpdated": "2026-06-05",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -211,6 +211,77 @@
       "sources": [
         { "name": "AMLA — major step toward harmonised EU supervision", "url": "https://www.amla.europa.eu/amla-takes-major-step-toward-harmonised-eu-supervision_en" },
         { "name": "AMLA — next step toward 2027 entity selection", "url": "https://www.amla.europa.eu/amla-takes-next-step-toward-2027-selection-entities-direct-supervision_en" }
+      ]
+    },
+    {
+      "id": "feed-ofac-nobitex-iran-exchanges",
+      "type": "signal",
+      "title": "OFAC designates Nobitex and three Iranian crypto exchanges for IRGC ties and sanctions evasion",
+      "summary": "On 2 June 2026, OFAC designated Nobitex — Iran's largest crypto exchange handling over 50% of Iranian digital-asset inflows — alongside Wallex, Bitpin, and Ramzinex, and four named executives. Nobitex processed hundreds of millions in stablecoins for the Central Bank of Iran, handled transactions for IRGC-affiliated ransomware actors, and enabled regime insiders to move wealth during internet blackouts. The action is the third enforcement layer in five months targeting Iran's domestic crypto ecosystem, following the April CBI wallet freeze.",
+      "soWhat": "Four domestic Iranian exchanges are now fully off-limits; any correspondent-banking or payment-processing exposure — even indirect via omnibus accounts — triggers sanctions risk. Screen for Nobitex, Wallex, Bitpin, and Ramzinex counterparty flows immediately and review IRGC-linked cluster addresses newly added to the SDN list. Chainalysis estimates IRGC-linked addresses account for over 50% of total value received by the Iranian crypto ecosystem in Q4 2025 — meaning Iran-nexus exposure is likely underestimated without cluster analytics.",
+      "date": "2026-06-02",
+      "addedAt": "2026-06-05",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "tags": ["OFAC", "sanctions", "Iran", "IRGC", "stablecoin", "ransomware", "enforcement"],
+      "sources": [
+        { "name": "CoinDesk — US sanctions Iranian crypto exchanges", "url": "https://www.coindesk.com/policy/2026/06/02/u-s-sanctions-iranian-crypto-exchanges-in-ongoing-war-against-country" },
+        { "name": "Chainalysis — OFAC sanctions Iranian crypto exchanges June 2026", "url": "https://www.chainalysis.com/blog/ofac-sanctions-iranian-crypto-exchanges-june-2026/" },
+        { "name": "Elliptic — OFAC sanctions Nobitex and three Iranian exchanges", "url": "https://www.elliptic.co/blog/ofac-sanctions-nobitex-and-three-other-iranian-cryptoasset-exchanges" },
+        { "name": "TRM Labs — Three enforcement layers in five months", "url": "https://www.trmlabs.com/resources/blog/three-enforcement-layers-in-five-months-ofac-designates-irans-domestic-crypto-exchanges" }
+      ]
+    },
+    {
+      "id": "feed-mica-casp-july1-deadline",
+      "type": "regulatory",
+      "title": "MiCA transitional period ends 1 July 2026 — ESMA orders unlicensed CASPs to cease EU services",
+      "summary": "ESMA's April 2026 statement confirmed the hard cutoff: after 1 July 2026, any entity providing crypto-asset services to EU clients without a MiCA authorisation is in breach of EU law and must immediately cease operations. Unlicensed CASPs must have 'immediately executable' wind-down plans and must off-board clients to authorised platforms. ESMA explicitly rejected paper-only plans and put NCAs on notice to enforce. Penalties reach up to 12.5% of global annual turnover alongside cease-and-desist orders and executive liability.",
+      "soWhat": "The enforcement window is now 26 days away. For licensed banks the practical risk is counterparty exposure: a CASP that quietly continues operating post-deadline becomes an unlicensed counterparty overnight, with all the associated AML and reputational risk. Conduct a pre-July sweep of CASP counterparty authorisation status — any that are not MiCA-licensed by July 1 should be flagged for relationship review.",
+      "date": "2026-04-17",
+      "addedAt": "2026-06-05",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "high",
+      "tags": ["MiCA", "ESMA", "CASP", "EU", "authorization", "enforcement"],
+      "sources": [
+        { "name": "ESMA — Statement on the end of transitional periods under MiCA", "url": "https://www.esma.europa.eu/sites/default/files/2026-04/ESMA75-113276571-1679_Statement_on_the_end_of_transitional_periods_under_MiCA.pdf" },
+        { "name": "Fenech & Fenech — Get licensed or get out: ESMA's message to CASPs", "url": "https://fenechlaw.com/insights/get-licensed-or-get-out-esmas-message-to-casps-as-the-mica-transitional-period-looms/" },
+        { "name": "Deep ID — MiCA final deadline: 60 days for crypto firms to get authorized", "url": "https://www.deepidv.com/media/news/mica-final-deadline-60-days-crypto-authorization-eu" }
+      ]
+    },
+    {
+      "id": "feed-pig-butchering-ai-evolution-2026",
+      "type": "typology",
+      "title": "Pig-butchering 2026: agentic AI grooming, approval-phishing drains, and Southeast Asia scam-centre strikes",
+      "summary": "Pig-butchering has industrialised in 2026. Criminal syndicates now deploy agentic AI to run thousands of simultaneous grooming relationships, pushing average scam payouts up 253% year-on-year (from $782 to $2,764 per transaction). The attack endgame has shifted to 'approval phishing' — victims are manipulated into signing wallet-spending permissions that attackers drain weeks later, bypassing conventional 'send crypto' red flags. In April 2026, DOJ, OFAC, and State launched a coordinated multi-pronged strike against Southeast Asian scam centres; Operation Atlantic (March 2026) targeted approval-phishing victims alongside UK NCA and Canadian authorities.",
+      "soWhat": "AI-enabled scale means scam-proceeds volumes will keep rising even as individual victim counts plateau — expect higher-value SARs from investment-fraud flows. Approval-phishing bypasses typical transaction monitoring; update typologies to flag repeated ERC-20 token-approval contract interactions from retail wallets. Downstream laundering flows through Chinese-language money laundering networks (see feed-chinese-mln-laas-typology), so pig-butchering proceeds and CLMN cluster screening should be treated as coupled intelligence.",
+      "date": "2026-04-23",
+      "addedAt": "2026-06-05",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "tags": ["pig-butchering", "scams", "AI", "typology", "approval-phishing", "Southeast-Asia", "DOJ"],
+      "typology": {
+        "vector": "AI-enhanced pig-butchering via agentic grooming and approval-phishing wallet drains",
+        "controls": [
+          "Token-approval contract interaction monitoring for retail customers",
+          "Higher-value SAR triggers on investment-fraud proceeds",
+          "Screening of Southeast Asian scam-centre wallet clusters",
+          "Cross-referencing CLMN laundering infrastructure for downstream flows"
+        ],
+        "obligations": [
+          "SAR on suspected investment fraud proceeds",
+          "OFAC screening of designated scam-centre-linked addresses"
+        ]
+      },
+      "sources": [
+        { "name": "Chainalysis — US crackdown on Asian scam centres April 2026", "url": "https://www.chainalysis.com/blog/asian-scam-centers-crypto-fraud-april-2026/" },
+        { "name": "CryptoTimes — 2026 pig-butchering reckoning", "url": "https://www.cryptotimes.io/2026/05/05/2026-pig-butchering-crypto-scam-crackdowns/" },
+        { "name": "Forensic PSA — 2026 evolution of pig-butchering scams", "url": "https://ethicalassetsolutions.com/blog/pig-butchering-scam-2026-evolution/" }
       ]
     }
   ]

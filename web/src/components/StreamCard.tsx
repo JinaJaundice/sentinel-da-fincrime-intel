@@ -20,18 +20,18 @@ export function StreamCard({
   return (
     <button
       onClick={onClick}
-      className="group text-left w-full rounded-xl bg-neutral-900 ring-1 ring-neutral-800 hover:ring-neutral-700 hover:bg-neutral-800/40 transition-colors p-3.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+      className="group text-left w-full rounded-2xl surface surface-hover p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
     >
       <div className="flex items-center gap-2">
-        <Icon className="h-4 w-4 text-violet-400 shrink-0" strokeWidth={2} />
+        <Icon className="h-4 w-4 text-violet-300 shrink-0" strokeWidth={1.75} />
         <span className="text-sm font-medium text-neutral-100">{name}</span>
-        <span className="ml-auto inline-flex items-center gap-1 text-neutral-500 group-hover:text-neutral-200">
+        <span className="ml-auto inline-flex items-center gap-1 text-neutral-500 group-hover:text-violet-200 transition-colors">
           <span className="tabular-nums text-xs font-medium">{count}</span>
           <ArrowUpRight className="h-3.5 w-3.5" />
         </span>
       </div>
-      {latest && <div className="mt-1.5 text-[12px] text-neutral-400 truncate">{latest}</div>}
-      {meta && <div className="mt-1 text-[11px] text-neutral-500">{meta}</div>}
+      {latest && <div className="mt-2 text-[12px] text-neutral-400 truncate font-light">{latest}</div>}
+      {meta && <div className="mt-1 text-[11px] text-neutral-500 font-light">{meta}</div>}
     </button>
   );
 }

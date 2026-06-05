@@ -5,6 +5,7 @@ import { MILESTONES } from "../content/milestones";
 import { IMPACT_TONE } from "../lib/uiTokens";
 import { Panel, SectionHeading } from "../lib/ui";
 import { relativeDay, cn } from "../lib/utils";
+import { PageHeader } from "../components/PageHeader";
 
 // Phase 3: a forward-looking timeline of key compliance dates plus the
 // regulatory developments that recently landed (derived from the items).
@@ -18,10 +19,11 @@ export function Radar({ items }: { items: Item[] }) {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold text-neutral-100 tracking-tight">Regulatory radar</h1>
-        <p className="text-sm text-neutral-500">Key compliance dates — what's coming, and what just landed.</p>
-      </div>
+      <PageHeader
+        Icon={CalendarClock}
+        title="Regulatory radar"
+        subtitle="Key compliance dates — what's coming, and what just landed."
+      />
 
       <div>
         <SectionHeading Icon={CalendarClock} title="Upcoming" sub="Forward-looking deadlines & milestones" />

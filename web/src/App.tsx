@@ -29,7 +29,7 @@ export function App() {
   ).length;
 
   return (
-    <div className="md:flex min-h-screen bg-neutral-950 text-neutral-100">
+    <div className="md:flex min-h-screen text-neutral-100">
       <Sidebar page={page} setPage={setPage} badgeCount={badgeCount} />
       <main className="flex-1 min-w-0">
         <div className="max-w-5xl mx-auto px-5 sm:px-8 py-8" key={page}>

@@ -4,6 +4,7 @@ import { Panel, Stat, SectionHeading } from "../lib/ui";
 import { ItemCard } from "../components/ItemCard";
 import { TYPE_META } from "../content/taxonomy";
 import { cn } from "../lib/utils";
+import { PageHeader } from "../components/PageHeader";
 
 // The analytics-flavoured view: the typology library plus the shape of
 // what we're tracking. Metrics are derived from the one content store.
@@ -26,12 +27,11 @@ export function Intelligence({ items }: { items: Item[] }) {
 
   return (
     <div className="space-y-5">
-      <div>
-        <h1 className="text-2xl font-semibold text-neutral-100 tracking-tight">Intelligence</h1>
-        <p className="text-sm text-neutral-500">
-          Laundering typologies for digital assets, mapped to controls and obligations — plus the shape of what we're tracking.
-        </p>
-      </div>
+      <PageHeader
+        Icon={Crosshair}
+        title="Intelligence"
+        subtitle="Laundering typologies for digital assets, mapped to controls and obligations — plus the shape of what we're tracking."
+      />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <Stat Icon={Crosshair} tone="brand" label="Typologies" value={typologies.length} />

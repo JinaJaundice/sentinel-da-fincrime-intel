@@ -1,5 +1,4 @@
 import {
-  CalendarDays,
   Bot,
   ShieldAlert,
   Layers,
@@ -19,6 +18,7 @@ import { MILESTONES } from "../content/milestones";
 import { Panel, Stat, SectionHeading } from "../lib/ui";
 import { ItemCard } from "../components/ItemCard";
 import { StreamCard } from "../components/StreamCard";
+import { PageHeader } from "../components/PageHeader";
 import { ImpactMix, MiniBars } from "../components/viz";
 import { countBy } from "../lib/insights";
 import { withinDays } from "../lib/utils";
@@ -47,13 +47,12 @@ export function Brief({ items, setPage, lastUpdated }: { items: Item[]; setPage:
 
   return (
     <div className="space-y-5">
-      <div>
-        <div className="flex items-center gap-1.5 text-xs text-neutral-500">
-          <CalendarDays className="h-3.5 w-3.5" /> {todayLabel}
-        </div>
-        <h1 className="mt-1 text-2xl font-semibold text-neutral-100 tracking-tight">Overview</h1>
-        <p className="text-sm text-neutral-500">The financial-crime picture across digital assets — what changed, and what it means.</p>
-      </div>
+      <PageHeader
+        Icon={LayoutDashboard}
+        eyebrow={todayLabel}
+        title="Overview"
+        subtitle="A single, agent-tended pane of glass for financial crime across digital assets — what changed, and what it means."
+      />
 
       <Panel className="p-3 flex items-center gap-3">
         <span className="relative grid place-items-center w-8 h-8 rounded-lg bg-violet-500/15 ring-1 ring-violet-500/30 text-violet-300 shrink-0">
@@ -68,7 +67,7 @@ export function Brief({ items, setPage, lastUpdated }: { items: Item[]; setPage:
         </div>
         <button
           onClick={() => setPage("activity")}
-          className="inline-flex items-center gap-1.5 rounded-lg bg-neutral-800 text-neutral-200 ring-1 ring-neutral-700 text-xs font-medium px-3 py-1.5 hover:bg-neutral-700 transition-colors shrink-0"
+          className="inline-flex items-center gap-1.5 rounded-full bg-white/5 text-neutral-200 ring-1 ring-white/10 text-xs font-medium px-3.5 py-1.5 hover:bg-white/10 transition-colors shrink-0"
         >
           View activity <ArrowRight className="h-3.5 w-3.5" />
         </button>

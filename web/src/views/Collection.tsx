@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import type { Item, ItemType } from "../content/types";
-import { SectionHeading } from "../lib/ui";
+import { PageHeader } from "../components/PageHeader";
 import { DataTable } from "../components/DataTable";
 import { CollectionDashboard } from "../components/CollectionDashboard";
 import { cn } from "../lib/utils";
@@ -33,10 +33,10 @@ export function Collection({
 
   return (
     <div className="space-y-4">
-      <SectionHeading
+      <PageHeader
         Icon={Icon}
         title={title}
-        sub={blurb}
+        subtitle={blurb}
         right={<span className="text-xs text-neutral-500 tabular-nums">{shown.length} item{shown.length === 1 ? "" : "s"}</span>}
       />
 

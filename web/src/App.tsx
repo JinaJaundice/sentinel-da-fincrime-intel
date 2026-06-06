@@ -9,6 +9,7 @@ import { Intelligence } from "./views/Intelligence";
 import { Radar } from "./views/Radar";
 import { Activity } from "./views/Activity";
 import { Themes } from "./views/Themes";
+import { Learn } from "./views/Learn";
 import { BriefingPackDrawer } from "./components/BriefingPack";
 
 export function App() {
@@ -43,6 +44,7 @@ export function App() {
       <main className="flex-1 min-w-0">
         <div className="max-w-5xl mx-auto px-5 sm:px-8 py-8" key={page}>
           {page === "brief" && <Brief items={items} setPage={setPage} lastUpdated={FEED_META.lastUpdated} />}
+          {page === "learn" && <Learn setPage={setPage} />}
           {page === "themes" && <Themes items={items} theme={theme} setTheme={setTheme} />}
           {page === "signals" && (
             <Collection

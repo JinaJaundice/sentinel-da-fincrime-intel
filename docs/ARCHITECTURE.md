@@ -29,13 +29,15 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/components/ExportMenu.tsx` | Bulk export dropdown (copy Markdown · download .md / .csv) over a view's in-scope items; optional `intro` lead paragraph (theme primer) |
 | `web/src/components/BriefingPack.tsx` | `PackToggle` (per-item) + the floating `BriefingPackDrawer` — curate across views, reorder, export a one-pager |
 | `web/src/components/VendorMatrix.tsx` | Solutions comparison grid (vendors by category, stance-ordered) — the "Matrix" view mode |
+| `web/src/components/Term.tsx` | Inline glossary term — dotted-underline trigger, definition on hover/focus (looks up `glossary.ts`) |
 | `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, latest list |
+| `web/src/views/Learn.tsx` | Knowledge hub: guided "start here" path (stream tour, how to read an item) + the searchable glossary |
 | `web/src/views/Themes.tsx` | Curated topic briefings — one page per theme, aggregating related items + a primer; per-theme `ExportMenu` (primer leads the Markdown) |
 | `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, an `ExportMenu`, a Table/Matrix toggle (solutions), renders a `DataTable` or `VendorMatrix` |
-| `web/src/views/Intelligence.tsx` | Typology library + coverage bars (derived metrics) |
+| `web/src/views/Intelligence.tsx` | Typology library (each card expands to a "How it works" primer + key-term chips) + coverage bars |
 | `web/src/views/Activity.tsx` | Transparency log of what the agent auto-published (newest first) |
 | `web/src/views/Radar.tsx` | Regulatory radar: upcoming milestones (countdowns) + recently-landed regulatory items |
-| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `milestones.ts` (radar dates) · `index.ts` (merges seed+feed → `ALL_ITEMS`) |
+| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `glossary.ts` + `primers.ts` (knowledge layer) · `milestones.ts` (radar dates) · `index.ts` (merges seed+feed → `ALL_ITEMS`) |
 | `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `store.ts` (review overlay) · `pack.ts` (briefing-pack selection) · `utils.ts` · `export.ts` (delivery & export — see below) |
 
 ## State: the review overlay
@@ -84,6 +86,25 @@ kept apart so the formatters stay reusable. Call sites:
 The `VendorMatrix` is a second *view* of the solution Items (no new data),
 so the header `ExportMenu` still covers it. Adding a new export surface =
 call these functions, never re-format inline.
+
+## Knowledge layer
+
+The teaching layer over the same content — three pieces, no new data model:
+
+- **Glossary** ([`content/glossary.ts`](../web/src/content/glossary.ts)) — ~35
+  terms with a short definition, optional bank "so what", and a source on the
+  canonical frameworks. `<Term id="…">` ([`components/Term.tsx`](../web/src/components/Term.tsx))
+  renders any of them as an inline hover/focus tooltip; it falls back to plain
+  text if the id is unknown, so it's always safe to wrap a word.
+- **Typology primers** ([`content/primers.ts`](../web/src/content/primers.ts)) —
+  a plain-language "how it works" per typology `Item` (keyed by id), shown as an
+  expandable card section on **Intelligence** with key-term chips.
+- **Learn hub** ([`views/Learn.tsx`](../web/src/views/Learn.tsx)) — the front
+  door: a guided "start here" path (how to read an item, a clickable stream
+  tour, how to deliver) plus the searchable glossary. One nav tab.
+
+Definitions of standard industry terms are general knowledge (no source
+needed per the integrity rules); only the canonical frameworks link out.
 
 ## How to add a new tab
 

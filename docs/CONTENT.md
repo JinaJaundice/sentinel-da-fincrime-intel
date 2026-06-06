@@ -61,3 +61,18 @@ valve is re-enabled in the Activity view.
   per [`agent/INGEST.md`](../agent/INGEST.md).
 
 Keep `soWhat` sharp — that is the product.
+
+## Knowledge-layer content (not `Item`s)
+
+Two reference modules feed the Learn hub and Intelligence (see
+[`docs/ARCHITECTURE.md`](ARCHITECTURE.md#knowledge-layer)):
+
+- [`glossary.ts`](../web/src/content/glossary.ts) — terms with a short
+  definition, optional bank "so what", and `category`.
+- [`primers.ts`](../web/src/content/primers.ts) — a "how it works" per
+  typology `Item`, keyed by id.
+
+Integrity stance: definitions of **standard industry terms are general
+knowledge** — no source URL required (unlike `Item`s, where rule #1 is
+absolute). Only canonical frameworks (FATF, OFAC, FinCEN, …) carry a link.
+Never invent a definition you're unsure of; omit rather than guess.

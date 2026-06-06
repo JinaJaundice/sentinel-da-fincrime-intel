@@ -1,11 +1,12 @@
-import { Radar, LayoutDashboard, Newspaper, TrendingUp, Boxes, Crosshair, CalendarClock, Shapes, Radio, type LucideIcon } from "lucide-react";
+import { Radar, LayoutDashboard, Newspaper, TrendingUp, Boxes, Crosshair, CalendarClock, Shapes, Radio, GraduationCap, type LucideIcon } from "lucide-react";
 import { cn } from "../lib/utils";
 
-export type Page = "brief" | "themes" | "signals" | "ventures" | "solutions" | "intelligence" | "radar" | "activity";
+export type Page = "brief" | "learn" | "themes" | "signals" | "ventures" | "solutions" | "intelligence" | "radar" | "activity";
 
 // Each tab carries a plain-language descriptor so the punchy names aren't cryptic.
 const NAV: { id: Page; label: string; desc: string; Icon: LucideIcon }[] = [
   { id: "brief", label: "Overview", desc: "Today's briefing", Icon: LayoutDashboard },
+  { id: "learn", label: "Learn", desc: "Start here & glossary", Icon: GraduationCap },
   { id: "themes", label: "Themes", desc: "Topics & briefings", Icon: Shapes },
   { id: "signals", label: "Signals", desc: "News & regulation", Icon: Newspaper },
   { id: "ventures", label: "Ventures", desc: "Funding & M&A", Icon: TrendingUp },

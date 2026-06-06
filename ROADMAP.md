@@ -46,6 +46,24 @@ engine ([`web/src/lib/export.ts`](web/src/lib/export.ts)), many call sites.
 - **Per-theme export ✅**: each Theme page exports a ready-made briefing —
   the primer leads, followed by the theme's grouped items.
 
+## Phase 6 — knowledge layer ✅
+
+Turning Sentinel into a teaching tool, not just a feed. No new data model.
+
+- **Glossary + tooltips** — `content/glossary.ts` (~35 terms) surfaced inline
+  via `<Term>` (`components/Term.tsx`), hover/focus, accessible.
+- **Typology primers** — `content/primers.ts`; each typology on Intelligence
+  expands to a plain-language "how it works" + key-term chips.
+- **Learn hub** — a new tab (`views/Learn.tsx`): a guided "start here" path
+  (how to read an item, a clickable stream tour, how to deliver) + the
+  searchable glossary.
+
+## Next — client-ready / verified tier
+
+The last of the four "next level" thrusts: a human **verified** flag, a
+confidence signal, and primary-vs-secondary **source badges** — raising trust
+for client-facing use under auto-publish.
+
 ## Deliberately deferred
 
 - Auth / hosting so it's reachable without a terminal.

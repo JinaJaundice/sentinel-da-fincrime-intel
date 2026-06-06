@@ -1,8 +1,11 @@
-import { Crosshair, Scale, ShieldAlert, Globe, PieChart } from "lucide-react";
+import { useState } from "react";
+import { Crosshair, Scale, ShieldAlert, Globe, PieChart, BookOpen, ChevronDown } from "lucide-react";
 import type { Item, ItemType } from "../content/types";
 import { Panel, Stat, SectionHeading } from "../lib/ui";
-import { ItemCard } from "../components/ItemCard";
+import { ItemDetail } from "../components/ItemDetail";
+import { Term } from "../components/Term";
 import { TYPE_META } from "../content/taxonomy";
+import { TYPOLOGY_PRIMERS } from "../content/primers";
 import { cn } from "../lib/utils";
 import { PageHeader } from "../components/PageHeader";
 
@@ -42,10 +45,10 @@ export function Intelligence({ items }: { items: Item[] }) {
 
       <div className="grid lg:grid-cols-3 gap-5">
         <div className="lg:col-span-2 space-y-3">
-          <SectionHeading Icon={Crosshair} title="Typology library" sub="Vectors mapped to controls & obligations" />
+          <SectionHeading Icon={Crosshair} title="Typology library" sub="Vectors mapped to controls & obligations — expand for how each works" />
           {typologies.map((i) => (
             <div key={i.id} className="rise">
-              <ItemCard item={i} />
+              <TypologyCard item={i} />
             </div>
           ))}
         </div>
@@ -70,6 +73,43 @@ export function Intelligence({ items }: { items: Item[] }) {
         </div>
       </div>
     </div>
+  );
+}
+
+// A typology Item plus its expandable "How it works" primer (the knowledge
+// layer). Collapsed by default to keep the library scannable.
+function TypologyCard({ item }: { item: Item }) {
+  const primer = TYPOLOGY_PRIMERS[item.id];
+  const [open, setOpen] = useState(false);
+  return (
+    <Panel className="p-4">
+      <ItemDetail item={item} />
+      {primer && (
+        <div className="mt-3 border-t border-neutral-800 pt-3">
+          <button
+            onClick={() => setOpen((o) => !o)}
+            aria-expanded={open}
+            className="inline-flex items-center gap-1.5 text-[11px] font-medium text-violet-300 hover:text-violet-200 transition-colors"
+          >
+            <BookOpen className="h-3.5 w-3.5" /> How it works
+            <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", open && "rotate-180")} />
+          </button>
+          {open && (
+            <div className="mt-2 expand">
+              <p className="text-[12px] text-neutral-300 font-light leading-relaxed">{primer.how}</p>
+              {primer.terms && primer.terms.length > 0 && (
+                <div className="mt-2.5 flex items-center flex-wrap gap-x-3 gap-y-1.5">
+                  <span className="text-[10px] uppercase tracking-wide text-neutral-600 font-semibold">Key terms</span>
+                  {primer.terms.map((t) => (
+                    <Term key={t} id={t} className="text-[11px] text-neutral-300" />
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+    </Panel>
   );
 }
 

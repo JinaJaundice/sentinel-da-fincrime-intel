@@ -8,9 +8,17 @@ import { Collection } from "./views/Collection";
 import { Intelligence } from "./views/Intelligence";
 import { Radar } from "./views/Radar";
 import { Activity } from "./views/Activity";
+import { Themes } from "./views/Themes";
 
 export function App() {
-  const [page, setPage] = useState<Page>("brief");
+  const [page, setPageRaw] = useState<Page>("brief");
+  const [theme, setTheme] = useState<string | null>(null);
+  // Navigating to any tab clears the selected theme (so re-opening Themes
+  // lands on the grid, not a stale detail page).
+  const setPage = (p: Page) => {
+    setPageRaw(p);
+    setTheme(null);
+  };
   const overlay = useReviewOverlay();
 
   // Seed + agent feed, with any local overrides (e.g. a hidden item) applied.
@@ -34,6 +42,7 @@ export function App() {
       <main className="flex-1 min-w-0">
         <div className="max-w-5xl mx-auto px-5 sm:px-8 py-8" key={page}>
           {page === "brief" && <Brief items={items} setPage={setPage} lastUpdated={FEED_META.lastUpdated} />}
+          {page === "themes" && <Themes items={items} theme={theme} setTheme={setTheme} />}
           {page === "signals" && (
             <Collection
               items={items}

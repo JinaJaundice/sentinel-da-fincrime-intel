@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-05",
+  "lastUpdated": "2026-06-06",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -282,6 +282,95 @@
         { "name": "Chainalysis — US crackdown on Asian scam centres April 2026", "url": "https://www.chainalysis.com/blog/asian-scam-centers-crypto-fraud-april-2026/" },
         { "name": "CryptoTimes — 2026 pig-butchering reckoning", "url": "https://www.cryptotimes.io/2026/05/05/2026-pig-butchering-crypto-scam-crackdowns/" },
         { "name": "Forensic PSA — 2026 evolution of pig-butchering scams", "url": "https://ethicalassetsolutions.com/blog/pig-butchering-scam-2026-evolution/" }
+      ]
+    },
+    {
+      "id": "feed-fca-p2p-crypto-raid",
+      "type": "signal",
+      "title": "FCA leads first UK crackdown on illegal peer-to-peer crypto trading — eight sites raided",
+      "summary": "On 22 April 2026, the FCA (working with HMRC and the South West Regional Organised Crime Unit) raided eight premises suspected of running unlicensed peer-to-peer crypto exchange businesses, issuing cease-and-desist letters at each site. It is the first FCA enforcement action against illegal P2P crypto trading. Evidence gathered is supporting ongoing criminal investigations. No FCA-registered P2P crypto businesses currently operate in the UK.",
+      "soWhat": "The FCA is not waiting for October 2027's full crypto regime to enforce against unlicensed activity. UK banks should scrutinise the registration status of crypto counterparties now — any P2P business without FCA registration is already illegal, carrying live AML and reputational exposure. The action also signals heightened pre-authorisation scrutiny: firms preparing September 2026 licence applications will face a regulator that has already demonstrated willingness to act.",
+      "date": "2026-04-22",
+      "addedAt": "2026-06-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "tags": ["FCA", "enforcement", "P2P", "UK", "unregistered", "AML"],
+      "sources": [
+        { "name": "FCA — FCA leads first crackdown on illegal crypto trading", "url": "https://www.fca.org.uk/news/press-releases/fca-leads-first-crackdown-illegal-crypto-trading" },
+        { "name": "CoinDesk — UK FCA carries out coordinated crackdown on illegal P2P crypto trading", "url": "https://www.coindesk.com/policy/2026/04/22/uk-fca-carries-out-coordinated-crackdown-on-illegal-peer-to-peer-crypto-trading" },
+        { "name": "Fincrime Central — FCA targets illegal crypto traders in massive London AML operation", "url": "https://fincrimecentral.com/fca-illegal-crypto-p2p-trading-crackdown/" }
+      ]
+    },
+    {
+      "id": "feed-binance-doj-iran-probe",
+      "type": "signal",
+      "title": "DOJ probes Binance for $1.7B in Iran and Russia flows; senators challenge monitorship effectiveness",
+      "summary": "On 11 March 2026, the DOJ launched an investigation into over $1 billion in flows through Binance to Iran-linked entities — transactions that Binance's own internal compliance team had flagged before at least five investigators were fired in late 2025. Fortune's reporting identified $1.7 billion in flows linked to Iran proxies and Russia's shadow fleet. By April-May 2026, senators Blumenthal, Warren, Van Hollen, and Gallego sent formal letters to DOJ and FinCEN questioning the effectiveness of Binance's court-ordered compliance monitorship (established under its 2023 $4.3B settlement).",
+      "soWhat": "Even a post-settlement, court-monitored exchange can carry material sanctions exposure — the monitorship is not a blanket counterparty assurance. Banks with Binance exposure (including via omnibus accounts, liquidity routing, or payment rails) should run a lookback for Iran-nexus transactions and reassess whether the monitorship constitutes a sufficient control for continued counterparty status. The whistleblower-firing detail creates added reputational risk in any regulatory examination.",
+      "date": "2026-03-11",
+      "addedAt": "2026-06-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "tags": ["Binance", "Iran", "sanctions", "DOJ", "FinCEN", "monitorship", "Russia", "enforcement"],
+      "sources": [
+        { "name": "Euronews — US DOJ digs into Iran's sanctions evasion via Binance", "url": "https://www.euronews.com/business/2026/03/11/us-justice-department-digs-into-irans-sanctions-evasion-via-binance" },
+        { "name": "Fortune — Senator presses DOJ and Treasury over Binance monitors", "url": "https://fortune.com/2026/04/17/senator-blumenthal-binance-doj-fincen-treasury-monitorships-status/" },
+        { "name": "Sen. Blumenthal — Binance Iran/Russia inquiry press release", "url": "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-opens-inquiry-after-new-reporting-reveals-binance-allowed-17-billion-in-money-laundering-to-iran-proxies-and-russias-shadow-fleet" },
+        { "name": "The Block — Blumenthal presses DOJ and Treasury on Binance monitor", "url": "https://www.theblock.co/post/397915/sen-blumenthal-presses-doj-and-treasury-on-binance-monitor-amid-iran-sanctions-concerns" }
+      ]
+    },
+    {
+      "id": "feed-treasury-genius-innovation-report",
+      "type": "regulatory",
+      "title": "Treasury GENIUS Act tech report: AI-powered crypto oversight and a proposed 'digital-asset hold law'",
+      "summary": "On 6 March 2026, Treasury published its congressionally-mandated report on innovative technologies to counter illicit finance in digital assets under the GENIUS Act. The report endorses AI, digital identity, blockchain analytics, and APIs as priority compliance tools, and proposes a legislative 'digital-asset hold law' safe harbour — allowing financial institutions to temporarily freeze suspicious crypto transactions without liability while investigations proceed. Treasury also signalled a nuanced shift on mixers, acknowledging legitimate privacy use cases rather than treating all mixer-touched funds as presumptively illicit.",
+      "soWhat": "The proposed hold-law safe harbour removes a key legal barrier for proactive crypto intervention, directly reinforcing the on-ledger enforcement thesis already in Treasury's NPRM (see feed-treasury-programmable-enforcement). For bank compliance teams, the report is also a forward indicator for supervisory expectations: AI-assisted transaction monitoring and blockchain analytics are being positioned as required capabilities, not differentiators. The mixer nuance matters too — blanket mixer-flag policies may need recalibration against a mixed-use risk-based standard.",
+      "date": "2026-03-06",
+      "addedAt": "2026-06-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "tags": ["Treasury", "GENIUS-Act", "AI", "blockchain-analytics", "hold-law", "mixers", "DeFi", "policy"],
+      "sources": [
+        { "name": "Treasury — GENIUS Act Illicit Finance Innovation Congressional Report (PDF)", "url": "https://home.treasury.gov/system/files/246/GENIUS-Act-Illicit-Finance-Innovation-Congressional-Report-March-2026.pdf" },
+        { "name": "Consumer Financial Services Law Monitor — Treasury outlines Innovation Roadmap", "url": "https://www.consumerfinancialserviceslawmonitor.com/2026/03/treasury-outlines-innovation-roadmap-for-countering-illicit-finance-in-digital-assets/" },
+        { "name": "CoinDesk — US Treasury signals shift on crypto mixers", "url": "https://www.coindesk.com/policy/2026/03/09/u-s-treasury-signals-shift-on-crypto-mixers-acknowledges-legitimate-privacy-uses" },
+        { "name": "Perkins Coie — Treasury releases 2026 report on technologies countering illicit finance", "url": "https://perkinscoie.com/insights/article/treasury-releases-2026-report-technologies-countering-illicit-finance-involving" }
+      ]
+    },
+    {
+      "id": "feed-ransomware-bridge-laundering-shift",
+      "type": "typology",
+      "title": "Ransomware laundering pivots from mixers to cross-chain bridges: 66% bridge surge, 37% mixer decline",
+      "summary": "TRM Labs' 2026 Crypto Crime Report documents a sharp behavioural shift in ransomware post-payment laundering across 2024-25: bridge-related activity grew 66% while mixer use fell 37%, as threat actors adapted to OFAC sanctions against Tornado Cash and heightened mixer monitoring. Ransomware itself is growing — 93 new variants emerged (a 94% jump) and $820M in payments were recorded in 2025. Cross-chain bridges offer routing flexibility and liquidity-venue diversity that is structurally harder to trace via wallet-level blockchain analytics.",
+      "soWhat": "Detection rules anchored to mixer-flag typologies are increasingly stale for ransomware proceeds. Update transaction monitoring to flag multi-hop cross-chain bridge sequences — particularly patterns that hop tokens across chains before converging on an exchange deposit address. The 94% jump in active ransomware strains also means the incoming volume of laundering flows to the financial system is growing; expect higher SAR volumes from this vector.",
+      "date": "2026-01-27",
+      "addedAt": "2026-06-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "tags": ["typology", "ransomware", "cross-chain", "bridges", "mixers", "laundering", "TRM"],
+      "typology": {
+        "vector": "Ransomware post-payment laundering via cross-chain bridges (displacing mixers)",
+        "controls": [
+          "Multi-hop cross-chain bridge interaction monitoring for unusual routing patterns",
+          "Rapid screening of newly-emerging ransomware strain payment addresses",
+          "Expanding mixer-only detection rules to cover cross-chain routing signatures"
+        ],
+        "obligations": [
+          "SAR on suspected ransomware payment proceeds",
+          "OFAC screening of designated ransomware operator address clusters"
+        ]
+      },
+      "sources": [
+        { "name": "TRM Labs — 2026 Crypto Crime Report", "url": "https://www.trmlabs.com/reports-and-whitepapers/2026-crypto-crime-report" },
+        { "name": "CoinDesk — Criminal use of crypto spikes after years of steady decline, TRM report says", "url": "https://www.coindesk.com/policy/2026/01/27/criminal-use-of-crypto-spikes-after-years-of-steady-decline-trm-report-says" }
       ]
     }
   ]

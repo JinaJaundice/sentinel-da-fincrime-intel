@@ -261,6 +261,21 @@ export const GLOSSARY: GlossaryEntry[] = [
     short: "Evidence of where specific funds came from (distinct from overall source of wealth).",
   },
   {
+    id: "primary-source",
+    term: "Primary source",
+    category: "Controls & obligations",
+    aliases: ["primary"],
+    short: "An original, authoritative source — the regulator's notice, the court filing, or the issuer's own statement.",
+    soWhat: "Weight primary sources highest for client-facing claims; corroborate secondary reporting before relying on it.",
+  },
+  {
+    id: "secondary-source",
+    term: "Secondary source",
+    category: "Controls & obligations",
+    aliases: ["secondary"],
+    short: "Reporting or analysis about an event (news, vendor research) rather than the original document.",
+  },
+  {
     id: "issuer-freeze",
     term: "Issuer freeze",
     category: "Controls & obligations",

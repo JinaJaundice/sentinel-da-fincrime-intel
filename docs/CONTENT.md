@@ -15,7 +15,8 @@ fields on every item:
 | `addedBy` | `agent \| human` (shown as provenance) |
 | `status` | `published \| pending \| rejected` |
 | `region`, `impact` | impact drives the risk chip (`low/medium/high`) |
-| `tags`, `sources` | sources = `{ name, url? }[]` |
+| `confidence`, `verified` | `confidence` = trust signal (`high/medium/low`); `verified` = a human vouched — **never set by the agent** |
+| `tags`, `sources` | sources = `{ name, url?, kind? }[]`; `kind` is `primary` (official/originating) or `secondary` (reporting/analysis) |
 
 Type-specific extras (optional, populated per `type`):
 `venture { company, round, amount, investors }` ·
@@ -52,7 +53,10 @@ valve is re-enabled in the Activity view.
 3. **Label illustrative** content `[Illustrative]` in the title.
 4. **Summarise-and-link** — never paste paywalled report bodies (Chainalysis
    / TRM / Elliptic). Store the takeaway, the "So what", and the URL.
-5. Flag low-confidence items in the `summary` ("Confidence: medium — …").
+5. Set `confidence` (`high/medium/low`) honestly, and mark each source's
+   `kind` (`primary`/`secondary`). The agent **never** sets `verified` — that
+   is a human vouch only (the client-ready tier). Marking an item verified =
+   a human edits the content and commits it.
 
 ## Adding an item
 

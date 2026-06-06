@@ -37,10 +37,14 @@ export function deckBullet(item: Item): string {
   return `${item.title}\n\t${point} (${attribution})`;
 }
 
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
 // The compact meta line shared by the markdown renderers.
 function metaLine(item: Item): string {
   const parts = [item.region, longDate(item.date)];
   if (item.impact) parts.push(`Impact: ${IMPACT_TONE[item.impact].label}`);
+  if (item.confidence) parts.push(`Confidence: ${cap(item.confidence)}`);
+  if (item.verified) parts.push("✓ Verified");
   return parts.filter(Boolean).join(sep);
 }
 
@@ -68,7 +72,10 @@ function extrasLine(item: Item): string | null {
 
 function sourcesMarkdown(item: Item): string {
   if (item.sources.length === 0) return "_Source not recorded._";
-  const links = item.sources.map((s) => (s.url ? `[${s.name}](${s.url})` : s.name));
+  const links = item.sources.map((s) => {
+    const base = s.url ? `[${s.name}](${s.url})` : s.name;
+    return s.kind ? `${base} (${s.kind})` : base;
+  });
   return `Sources: ${links.join("; ")}`;
 }
 
@@ -117,7 +124,7 @@ export function itemsToMarkdown(
 
 // Items as CSV — one row per item, for a spreadsheet/data hand-off.
 export function itemsToCsv(items: Item[]): string {
-  const headers = ["Type", "Title", "Date", "Region", "Impact", "Tags", "Summary", "So what", "Sources"];
+  const headers = ["Type", "Title", "Date", "Region", "Impact", "Confidence", "Verified", "Tags", "Summary", "So what", "Sources"];
   const rows = items.map((i) =>
     [
       TYPE_META[i.type].label,
@@ -125,10 +132,12 @@ export function itemsToCsv(items: Item[]): string {
       i.date,
       i.region ?? "",
       i.impact ? IMPACT_TONE[i.impact].label : "",
+      i.confidence ? cap(i.confidence) : "",
+      i.verified ? "Yes" : "",
       i.tags.join("; "),
       i.summary,
       i.soWhat ?? "",
-      i.sources.map((s) => (s.url ? `${s.name} (${s.url})` : s.name)).join("; "),
+      i.sources.map((s) => `${s.url ? `${s.name} (${s.url})` : s.name}${s.kind ? ` [${s.kind}]` : ""}`).join("; "),
     ].map(csvCell),
   );
   return [headers.map(csvCell), ...rows].map((r) => r.join(",")).join("\r\n");

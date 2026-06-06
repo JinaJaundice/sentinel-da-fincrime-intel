@@ -58,11 +58,23 @@ Turning Sentinel into a teaching tool, not just a feed. No new data model.
   (how to read an item, a clickable stream tour, how to deliver) + the
   searchable glossary.
 
-## Next — client-ready / verified tier
+## Phase 7 — client-ready / verified tier ✅
 
-The last of the four "next level" thrusts: a human **verified** flag, a
-confidence signal, and primary-vs-secondary **source badges** — raising trust
-for client-facing use under auto-publish.
+The last of the four "next level" thrusts — trust signals on the one `Item`,
+no new plumbing. Durable, git-versioned data fields (so they travel into
+client exports), not a local overlay.
+
+- **Verified** — a human-vouched `verified` flag (never set by the agent),
+  shown as a violet shield; a **Verified-only** filter on every collection to
+  build client packs from vouched items.
+- **Confidence** — a `high/medium/low` trust signal, distinct from impact.
+- **Source provenance** — each source tagged `primary` / `secondary`, badged
+  on the item.
+- Trust signals flow into the Markdown/CSV exports; the agent contract
+  (`INGEST.md`) now emits `confidence` + source `kind` (but never `verified`).
+
+All four "next level" thrusts are now delivered (Themes, Delivery & export,
+Knowledge layer, Verified tier).
 
 ## Deliberately deferred
 

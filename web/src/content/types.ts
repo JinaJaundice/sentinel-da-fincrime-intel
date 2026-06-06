@@ -18,9 +18,14 @@ export type AddedBy = "agent" | "human";
 
 export type SolutionStance = "in-use" | "shortlist" | "evaluate" | "watch";
 
+// How confident we are in the item itself — distinct from `impact` (severity).
+export type Confidence = "high" | "medium" | "low";
+
 export interface Source {
   name: string;
   url?: string;
+  /** primary = the official / originating document; secondary = reporting or analysis about it. */
+  kind?: "primary" | "secondary";
 }
 
 export interface Item {
@@ -39,6 +44,10 @@ export interface Item {
   status: Status;
   region?: string;
   impact?: Impact;
+  /** Trust in the item, separate from impact. Optional; shown as a subtle signal. */
+  confidence?: Confidence;
+  /** A human has reviewed and vouched for this item. Never set by the agent. */
+  verified?: boolean;
   tags: string[];
   sources: Source[];
 

@@ -25,7 +25,12 @@ them by appending to `web/src/content/feed.json`.
    - **`soWhat`** — what it means for a regulated bank's financial-crime posture;
    - `date` (event), `addedAt` (today), `addedBy: "agent"`, `status: "published"`;
    - `region`, `impact`, `tags`, and **`sources` with at least one URL**;
-   - type extras where relevant (venture/solution/typology blocks).
+   - `confidence` (`high`/`medium`/`low`) — your honest certainty in the item;
+   - mark each source's `kind`: `primary` (the official / originating document —
+     a regulator, court, the filing itself) or `secondary` (reporting / analysis);
+   - type extras where relevant (venture/solution/typology blocks);
+   - **never set `verified`** — that flag is a human vouch only. The agent
+     publishes unverified; a human marks `verified: true` when they vouch.
 4. **Validate** (hard gates — drop the item if it fails):
    - has ≥1 source URL; no fabricated specifics; illustrative content labelled
      `[Illustrative]`; paywalled bodies summarised-and-linked only.

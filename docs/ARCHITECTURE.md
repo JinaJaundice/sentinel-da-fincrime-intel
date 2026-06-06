@@ -23,7 +23,7 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/App.tsx` | Shell: sidebar + main; merges seed + agent feed (`ALL_ITEMS`) with any overlay; routes `page → view` |
 | `web/src/components/Sidebar.tsx` | Left nav (the `Page` type lives here); "new agent items" badge |
 | `web/src/components/DataTable.tsx` | Dense, expandable table for Signals/Ventures/Solutions (per-`variant` columns) with search + sortable headers |
-| `web/src/components/ItemDetail.tsx` | Shared content block (summary, "So what", type-extras, sources, per-item copy actions, review actions) |
+| `web/src/components/ItemDetail.tsx` | Shared content block (summary, "So what", type-extras, sources with primary/secondary tags, trust badges (verified · confidence), per-item copy actions, review actions) |
 | `web/src/components/ItemCard.tsx` | `Panel` + `ItemDetail` — used by Overview & Activity |
 | `web/src/components/CopyButton.tsx` | Ghost copy-to-clipboard control (citation / deck bullet); used inside `ItemDetail` |
 | `web/src/components/ExportMenu.tsx` | Bulk export dropdown (copy Markdown · download .md / .csv) over a view's in-scope items; optional `intro` lead paragraph (theme primer) |
@@ -33,7 +33,7 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, latest list |
 | `web/src/views/Learn.tsx` | Knowledge hub: guided "start here" path (stream tour, how to read an item) + the searchable glossary |
 | `web/src/views/Themes.tsx` | Curated topic briefings — one page per theme, aggregating related items + a primer; per-theme `ExportMenu` (primer leads the Markdown) |
-| `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, an `ExportMenu`, a Table/Matrix toggle (solutions), renders a `DataTable` or `VendorMatrix` |
+| `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, a Verified-only filter, an `ExportMenu`, a Table/Matrix toggle (solutions), renders a `DataTable` or `VendorMatrix` |
 | `web/src/views/Intelligence.tsx` | Typology library (each card expands to a "How it works" primer + key-term chips) + coverage bars |
 | `web/src/views/Activity.tsx` | Transparency log of what the agent auto-published (newest first) |
 | `web/src/views/Radar.tsx` | Regulatory radar: upcoming milestones (countdowns) + recently-landed regulatory items |

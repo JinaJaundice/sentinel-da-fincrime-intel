@@ -6,7 +6,7 @@ import {
   Crosshair,
   type LucideIcon,
 } from "lucide-react";
-import type { ItemType, SolutionStance } from "./types";
+import type { ItemType, SolutionStance, Confidence } from "./types";
 
 // Label + icon metadata per content type. The UI is monochrome by
 // design (types are told apart by icon + label, not colour), so there is
@@ -28,4 +28,19 @@ export const STANCE_META: Record<SolutionStance, { label: string; chip: string }
   shortlist: { label: "Shortlisted", chip: "bg-neutral-200/10 text-neutral-200 ring-1 ring-neutral-200/20" },
   evaluate: { label: "Evaluating", chip: "bg-amber-500/10 text-amber-300 ring-1 ring-amber-500/25" },
   watch: { label: "Watching", chip: "bg-neutral-800 text-neutral-400 ring-1 ring-neutral-700" },
+};
+
+// Confidence — a trust signal distinct from impact, so it deliberately
+// avoids the amber/rose risk colours. A single dot scales violet → grey.
+export const CONFIDENCE_META: Record<Confidence, { label: string; dot: string }> = {
+  high: { label: "High confidence", dot: "bg-violet-400" },
+  medium: { label: "Medium confidence", dot: "bg-neutral-400" },
+  low: { label: "Low confidence", dot: "bg-neutral-600" },
+};
+
+// Source provenance — a primary (originating/official) source is emphasised
+// in violet; secondary reporting is muted neutral.
+export const SOURCE_KIND_META: Record<"primary" | "secondary", { label: string; chip: string }> = {
+  primary: { label: "Primary", chip: "bg-violet-500/10 text-violet-300 ring-1 ring-violet-500/25" },
+  secondary: { label: "Secondary", chip: "bg-neutral-800 text-neutral-500 ring-1 ring-neutral-700" },
 };

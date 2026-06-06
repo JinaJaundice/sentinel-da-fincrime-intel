@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import {
   GraduationCap,
   BookMarked,
@@ -7,6 +7,7 @@ import {
   Lightbulb,
   Compass,
   Send,
+  ShieldCheck,
   LayoutDashboard,
   Shapes,
   Newspaper,
@@ -69,6 +70,32 @@ export function Learn({ setPage }: { setPage: (p: Page) => void }) {
             accent
           />
           <AnatomyRow n={3} label="Sources & impact" body="Every item links a real source; the High / Medium / Low chip is its risk weight." />
+        </Panel>
+      </div>
+
+      {/* Trust signals */}
+      <div>
+        <SectionHeading Icon={ShieldCheck} title="Judge what you can rely on" sub="Trust signals on every item — built for client-facing work" />
+        <Panel className="p-4 space-y-2.5">
+          <TrustRow
+            Icon={ShieldCheck}
+            label="Verified"
+            body="A human has reviewed and vouched for the item (a violet shield). Agent-published items stay unverified until someone vouches — filter any stream to 'Verified only' to build a client pack."
+            accent
+          />
+          <TrustRow
+            label="Confidence"
+            body="How certain we are in the item itself — High, Medium or Low (a small dot). Distinct from impact, which is severity."
+          />
+          <TrustRow
+            label="Source provenance"
+            body={
+              <>
+                Each source is tagged a <Term id="primary-source">primary</Term> (official / originating) or{" "}
+                <Term id="secondary-source">secondary</Term> (reporting / analysis) source.
+              </>
+            }
+          />
         </Panel>
       </div>
 
@@ -137,6 +164,25 @@ function AnatomyRow({ n, label, body, accent }: { n: number; label: string; body
         )}
       >
         {n}
+      </span>
+      <p className="text-[13px] leading-snug">
+        <span className={cn("font-medium", accent ? "text-violet-200" : "text-neutral-100")}>{label}</span>
+        <span className="text-neutral-400 font-light"> — {body}</span>
+      </p>
+    </div>
+  );
+}
+
+function TrustRow({ Icon, label, body, accent }: { Icon?: LucideIcon; label: string; body: ReactNode; accent?: boolean }) {
+  return (
+    <div className="flex items-start gap-3">
+      <span
+        className={cn(
+          "grid place-items-center w-5 h-5 rounded-full shrink-0",
+          accent ? "bg-violet-500/20 text-violet-200 ring-1 ring-violet-500/30" : "bg-neutral-800 text-neutral-400 ring-1 ring-neutral-700",
+        )}
+      >
+        {Icon ? <Icon className="h-3 w-3" /> : <span className="h-1.5 w-1.5 rounded-full bg-current" />}
       </span>
       <p className="text-[13px] leading-snug">
         <span className={cn("font-medium", accent ? "text-violet-200" : "text-neutral-100")}>{label}</span>

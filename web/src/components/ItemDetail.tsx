@@ -1,6 +1,6 @@
-import { ExternalLink, Bot, User, Lightbulb, MapPin, CheckCircle2, XCircle, Quote, List } from "lucide-react";
-import type { Item } from "../content/types";
-import { TYPE_META, STANCE_META } from "../content/taxonomy";
+import { ExternalLink, Bot, User, Lightbulb, MapPin, CheckCircle2, XCircle, Quote, List, ShieldCheck } from "lucide-react";
+import type { Item, Source, Confidence } from "../content/types";
+import { TYPE_META, STANCE_META, CONFIDENCE_META, SOURCE_KIND_META } from "../content/taxonomy";
 import { IMPACT_TONE } from "../lib/uiTokens";
 import { Badge } from "../lib/ui";
 import { relativeDay, cn } from "../lib/utils";
@@ -31,6 +31,7 @@ export function ItemDetail({
         <>
           <div className="flex items-center flex-wrap gap-x-2 gap-y-1 text-[11px] text-neutral-500">
             <Badge>{meta.label}</Badge>
+            {item.verified && <VerifiedBadge />}
             {item.region && (
               <span className="inline-flex items-center gap-0.5">
                 <MapPin className="h-3 w-3" /> {item.region}
@@ -93,23 +94,13 @@ export function ItemDetail({
             </span>
           ))}
         </div>
-        <span className="ml-auto inline-flex items-center gap-1 text-[10px] text-neutral-600">
+        {item.confidence && <ConfidenceTag confidence={item.confidence} className="ml-auto" />}
+        <span className={cn("inline-flex items-center gap-1 text-[10px] text-neutral-600", !item.confidence && "ml-auto")}>
           {item.addedBy === "agent" ? <Bot className="h-3 w-3" /> : <User className="h-3 w-3" />}
           {item.addedBy === "agent" ? "agent" : "curated"}
         </span>
         {item.sources.map((s) => (
-          <a
-            key={s.url ?? s.name}
-            href={s.url}
-            target="_blank"
-            rel="noreferrer"
-            className={cn(
-              "inline-flex items-center gap-1 text-[10px] text-neutral-500 hover:text-violet-300",
-              !s.url && "pointer-events-none text-neutral-700",
-            )}
-          >
-            <ExternalLink className="h-3 w-3" /> {s.name}
-          </a>
+          <SourceLink key={s.url ?? s.name} source={s} />
         ))}
       </div>
 
@@ -140,6 +131,49 @@ export function ItemDetail({
         </div>
       )}
     </div>
+  );
+}
+
+// Human-vouched marker — violet (the brand = trust), shield-check.
+function VerifiedBadge() {
+  return (
+    <span className="inline-flex items-center gap-1 rounded-full bg-violet-500/15 text-violet-200 ring-1 ring-violet-500/30 px-1.5 py-0.5 text-[10px] font-medium">
+      <ShieldCheck className="h-3 w-3" /> Verified
+    </span>
+  );
+}
+
+function ConfidenceTag({ confidence, className }: { confidence: Confidence; className?: string }) {
+  const c = CONFIDENCE_META[confidence];
+  return (
+    <span className={cn("inline-flex items-center gap-1 text-[10px] text-neutral-500", className)}>
+      <span className={cn("h-1.5 w-1.5 rounded-full", c.dot)} /> {c.label}
+    </span>
+  );
+}
+
+function SourceLink({ source }: { source: Source }) {
+  return (
+    <span className="inline-flex items-center gap-1">
+      <a
+        href={source.url}
+        target="_blank"
+        rel="noreferrer"
+        className={cn(
+          "inline-flex items-center gap-1 text-[10px] text-neutral-500 hover:text-violet-300",
+          !source.url && "pointer-events-none text-neutral-700",
+        )}
+      >
+        <ExternalLink className="h-3 w-3" /> {source.name}
+      </a>
+      {source.kind && (
+        <span
+          className={cn("rounded px-1 py-0.5 text-[9px] font-medium uppercase tracking-wide", SOURCE_KIND_META[source.kind].chip)}
+        >
+          {SOURCE_KIND_META[source.kind].label}
+        </span>
+      )}
+    </span>
   );
 }
 

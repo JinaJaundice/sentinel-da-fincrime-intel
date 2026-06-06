@@ -61,6 +61,13 @@ Radar · Activity.
   - a **briefing-pack builder** — a floating, zero-footprint drawer to curate
     items across any view, reorder, and export a one-pager;
   - a **vendor comparison matrix** — a Table/Matrix toggle on Solutions.
+- **Knowledge layer** (Phase 6, ✅) — a **Learn** hub tab (guided "start here"
+  path + searchable glossary), an accessible `<Term>` glossary tooltip, and a
+  "how it works" **primer** on every typology in Intelligence.
+- **Verified tier** (Phase 7, ✅) — trust signals on the one `Item`, as durable
+  git-versioned data fields: a human **verified** shield (never set by the
+  agent) + a **Verified-only** filter, a **confidence** signal, and
+  **primary/secondary** source badges. All flow into the exports.
 
 ## The autonomous agent (daily routine)
 
@@ -93,9 +100,9 @@ not a 24/7 cloud cron.
 
 ## Next up
 
-Two roadmap thrusts remain (see [`ROADMAP.md`](ROADMAP.md)):
-
-1. **Knowledge layer** — typology primers, a glossary with tooltips, a guided
-   "start here" path.
-2. **Client-ready / verified tier** — a human "verified" flag, confidence
-   scoring, primary-vs-secondary source badges.
+All four "next level" thrusts are now delivered (Themes · Delivery & export ·
+Knowledge layer · Verified tier). What's left is the **deliberately deferred**
+list in [`ROADMAP.md`](ROADMAP.md): auth/hosting so it's reachable without a
+terminal, renaming off the "Sentinel" placeholder, and tests/lint/CI when it
+becomes a shared tool. Otherwise: keep curating, let the agent run, and mark
+items `verified` as you vouch for them.

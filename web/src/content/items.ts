@@ -26,12 +26,15 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-28",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "EU",
     impact: "high",
     tags: ["MiCA", "CASP", "licensing"],
     sources: [
-      { name: "InnReg — EU crypto regulation guide", url: "https://www.innreg.com/blog/eu-crypto-regulation-guide" },
-      { name: "AMLWatcher — 2026 regulatory map", url: "https://amlwatcher.com/blog/aml-compliance-crypto-exchanges-2026-regulatory-map/" },
+      { name: "ESMA", url: "https://www.esma.europa.eu/", kind: "primary" },
+      { name: "InnReg — EU crypto regulation guide", url: "https://www.innreg.com/blog/eu-crypto-regulation-guide", kind: "secondary" },
+      { name: "AMLWatcher — 2026 regulatory map", url: "https://amlwatcher.com/blog/aml-compliance-crypto-exchanges-2026-regulatory-map/", kind: "secondary" },
     ],
   },
   {
@@ -69,7 +72,7 @@ export const ITEMS: Item[] = [
     impact: "high",
     tags: ["FATF", "travel-rule", "sunrise", "VASP"],
     sources: [
-      { name: "Sumsub — FATF Travel Rule 2026", url: "https://sumsub.com/blog/what-is-the-fatf-travel-rule/" },
+      { name: "Sumsub — FATF Travel Rule 2026", url: "https://sumsub.com/blog/what-is-the-fatf-travel-rule/", kind: "secondary" },
       { name: "TRM Labs — Global Crypto Policy 2025/26", url: "https://www.trmlabs.com/reports-and-whitepapers/global-crypto-policy-review-outlook-2025-26" },
     ],
   },
@@ -111,7 +114,7 @@ export const ITEMS: Item[] = [
     impact: "high",
     tags: ["threat-intel", "stablecoins", "AML"],
     sources: [
-      { name: "Kroll — The money-laundering surge", url: "https://www.kroll.com/en/publications/financial-compliance-regulation/the-money-laundering-surge-crypto-enforcement-gaps" },
+      { name: "Kroll — The money-laundering surge", url: "https://www.kroll.com/en/publications/financial-compliance-regulation/the-money-laundering-surge-crypto-enforcement-gaps", kind: "secondary" },
     ],
   },
   {
@@ -171,7 +174,7 @@ export const ITEMS: Item[] = [
     tags: ["travel-rule", "interoperability", "network"],
     venture: { company: "Notabene / Sumsub networks", round: "Market coverage", amount: "2,000+ VASPs" },
     sources: [
-      { name: "Sumsub — FATF Travel Rule 2026", url: "https://sumsub.com/blog/what-is-the-fatf-travel-rule/" },
+      { name: "Sumsub — FATF Travel Rule 2026", url: "https://sumsub.com/blog/what-is-the-fatf-travel-rule/", kind: "secondary" },
     ],
   },
   {
@@ -207,6 +210,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-30",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Internal",
     impact: "high",
     tags: ["build", "travel-rule", "canton", "daml", "on-ledger"],
@@ -225,6 +230,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-30",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Global",
     impact: "high",
     tags: ["buy", "travel-rule", "vendor"],
@@ -246,6 +253,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-30",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Global",
     impact: "medium",
     tags: ["KYT", "analytics", "vendor"],
@@ -266,6 +275,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-30",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Global",
     impact: "medium",
     tags: ["KYT", "analytics", "vendor", "cross-chain"],
@@ -286,6 +297,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-30",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Global",
     impact: "medium",
     tags: ["KYT", "analytics", "vendor", "stablecoins"],
@@ -309,6 +322,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-29",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Global",
     impact: "high",
     tags: ["bridges", "chain-hopping", "laundering"],
@@ -318,7 +333,7 @@ export const ITEMS: Item[] = [
       obligations: ["SAR on layering patterns", "Source-of-funds evidence"],
     },
     sources: [
-      { name: "Elliptic — what is crypto AML compliance", url: "https://www.elliptic.co/blockchain-basics/what-is-crypto-aml-compliance" },
+      { name: "Elliptic — what is crypto AML compliance", url: "https://www.elliptic.co/blockchain-basics/what-is-crypto-aml-compliance", kind: "secondary" },
     ],
   },
   {
@@ -333,6 +348,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-29",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Global",
     impact: "high",
     tags: ["mixers", "AEC", "sanctions"],
@@ -342,7 +359,7 @@ export const ITEMS: Item[] = [
       obligations: ["OFAC / UN sanctions screening", "SAR on obfuscation"],
     },
     sources: [
-      { name: "Sumsub — FATF Travel Rule 2026", url: "https://sumsub.com/blog/what-is-the-fatf-travel-rule/" },
+      { name: "Sumsub — FATF Travel Rule 2026", url: "https://sumsub.com/blog/what-is-the-fatf-travel-rule/", kind: "secondary" },
     ],
   },
   {
@@ -357,6 +374,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-29",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Global",
     impact: "medium",
     tags: ["travel-rule", "data-quality", "sunrise"],
@@ -366,7 +385,7 @@ export const ITEMS: Item[] = [
       obligations: ["Travel Rule data completeness", "Recordkeeping"],
     },
     sources: [
-      { name: "Sumsub — FATF Travel Rule 2026", url: "https://sumsub.com/blog/what-is-the-fatf-travel-rule/" },
+      { name: "Sumsub — FATF Travel Rule 2026", url: "https://sumsub.com/blog/what-is-the-fatf-travel-rule/", kind: "secondary" },
     ],
   },
   {
@@ -381,6 +400,8 @@ export const ITEMS: Item[] = [
     addedAt: "2026-05-29",
     addedBy: "human",
     status: "published",
+    verified: true,
+    confidence: "high",
     region: "Global",
     impact: "high",
     tags: ["stablecoins", "rails", "tracing"],
@@ -390,7 +411,7 @@ export const ITEMS: Item[] = [
       obligations: ["Transaction monitoring", "SAR"],
     },
     sources: [
-      { name: "Kroll — The money-laundering surge", url: "https://www.kroll.com/en/publications/financial-compliance-regulation/the-money-laundering-surge-crypto-enforcement-gaps" },
+      { name: "Kroll — The money-laundering surge", url: "https://www.kroll.com/en/publications/financial-compliance-regulation/the-money-laundering-surge-crypto-enforcement-gaps", kind: "secondary" },
     ],
   },
 

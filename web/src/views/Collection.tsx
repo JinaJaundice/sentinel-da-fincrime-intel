@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Table2, LayoutGrid, type LucideIcon } from "lucide-react";
+import { Table2, LayoutGrid, ShieldCheck, type LucideIcon } from "lucide-react";
 import type { Item, ItemType } from "../content/types";
 import { PageHeader } from "../components/PageHeader";
 import { DataTable } from "../components/DataTable";
@@ -31,7 +31,12 @@ export function Collection({
 
   const regions = ["all", ...Array.from(new Set(inScope.map((i) => i.region).filter(Boolean) as string[]))];
   const [region, setRegion] = useState("all");
-  const shown = region === "all" ? inScope : inScope.filter((i) => i.region === region);
+  const byRegion = region === "all" ? inScope : inScope.filter((i) => i.region === region);
+
+  // Verified-only filter (client-ready tier) — offered when any item in scope is vouched.
+  const hasVerified = inScope.some((i) => i.verified);
+  const [verifiedOnly, setVerifiedOnly] = useState(false);
+  const shown = verifiedOnly ? byRegion.filter((i) => i.verified) : byRegion;
 
   // Solutions can switch between the dense table and a vendor matrix.
   const canCompare = variant === "solution";
@@ -55,7 +60,7 @@ export function Collection({
 
       <CollectionDashboard items={inScope} variant={variant} />
 
-      {(regions.length > 2 || canCompare) && (
+      {(regions.length > 2 || canCompare || hasVerified) && (
         <div className="flex items-center justify-between gap-2 flex-wrap">
           <div className="flex items-center flex-wrap gap-1.5">
             {regions.length > 2 &&
@@ -73,6 +78,20 @@ export function Collection({
                   {r === "all" ? "All regions" : r}
                 </button>
               ))}
+            {hasVerified && (
+              <button
+                onClick={() => setVerifiedOnly((v) => !v)}
+                aria-pressed={verifiedOnly}
+                className={cn(
+                  "inline-flex items-center gap-1 rounded-md px-2.5 py-1 text-[11px] font-medium ring-1 transition-colors",
+                  verifiedOnly
+                    ? "bg-violet-500/15 text-violet-200 ring-violet-500/30"
+                    : "bg-neutral-900 text-neutral-400 ring-neutral-800 hover:text-neutral-200 hover:bg-neutral-800",
+                )}
+              >
+                <ShieldCheck className="h-3 w-3" /> Verified only
+              </button>
+            )}
           </div>
           {canCompare && (
             <div className="flex items-center gap-0.5 rounded-lg bg-neutral-900 ring-1 ring-neutral-800 p-0.5">

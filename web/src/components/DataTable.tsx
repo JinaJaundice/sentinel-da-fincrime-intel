@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { ChevronDown, MapPin, Search, ArrowUp, ArrowDown } from "lucide-react";
+import { ChevronDown, MapPin, Search, ArrowUp, ArrowDown, ShieldCheck } from "lucide-react";
 import type { Item } from "../content/types";
 import { TYPE_META, STANCE_META } from "../content/taxonomy";
 import { IMPACT_TONE } from "../lib/uiTokens";
@@ -150,7 +150,10 @@ export function DataTable({ items, variant }: { items: Item[]; variant: Variant 
               >
                 <Icon className="h-4 w-4 text-neutral-500 shrink-0" strokeWidth={2} />
                 <div className="min-w-0 flex-1">
-                  <div className="text-[13px] text-neutral-100 truncate">{item.title}</div>
+                  <div className="text-[13px] text-neutral-100 truncate flex items-center gap-1.5">
+                    {item.verified && <ShieldCheck className="h-3 w-3 text-violet-300 shrink-0" aria-label="Verified" />}
+                    <span className="truncate">{item.title}</span>
+                  </div>
                   <div className="text-[10px] text-neutral-500 flex items-center gap-1 mt-0.5">
                     {item.region && (
                       <>

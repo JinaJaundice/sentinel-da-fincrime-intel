@@ -30,6 +30,22 @@
 
 - Optional: a lightweight "hide" safety valve in Activity; a charting library.
 
+## Phase 5 — delivery & export
+
+Turning Sentinel from a read-tool into a client-delivery tool. One formatter
+engine ([`web/src/lib/export.ts`](web/src/lib/export.ts)), many call sites.
+
+- **Tier A — export primitives ✅**: per-item copy-as-citation and
+  copy-as-deck-bullet (in `ItemDetail`); a per-view **Export** menu — copy
+  Markdown, download `.md` / `.csv` — in every Collection header
+  (`ExportMenu`), scoped to the items currently shown.
+- **Tier B ✅**: a **briefing-pack builder** — a floating, zero-footprint
+  drawer (`BriefingPack.tsx`) to curate items across any view, reorder them and
+  export a one-pager (ordered Markdown / CSV); and a **vendor comparison
+  matrix** (`VendorMatrix.tsx`) as a Table/Matrix toggle on Solutions.
+- **Per-theme export ✅**: each Theme page exports a ready-made briefing —
+  the primer leads, followed by the theme's grouped items.
+
 ## Deliberately deferred
 
 - Auth / hosting so it's reachable without a terminal.

@@ -5,6 +5,7 @@ import { TYPE_META } from "../content/taxonomy";
 import { PageHeader } from "../components/PageHeader";
 import { StreamCard } from "../components/StreamCard";
 import { ItemCard } from "../components/ItemCard";
+import { ExportMenu } from "../components/ExportMenu";
 import { Panel, Stat, SectionHeading } from "../lib/ui";
 import { ImpactMix } from "../components/viz";
 import { cn } from "../lib/utils";
@@ -72,12 +73,20 @@ function ThemeDetail({ items, theme, onBack }: { items: Item[]; theme: Theme; on
         title={theme.label}
         subtitle={theme.tagline}
         right={
-          <button
-            onClick={onBack}
-            className="inline-flex items-center gap-1.5 rounded-full bg-white/5 text-neutral-300 ring-1 ring-white/10 text-xs font-medium px-3 py-1.5 hover:bg-white/10 transition-colors"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" /> All themes
-          </button>
+          <div className="flex items-center gap-2">
+            <ExportMenu
+              items={list}
+              docTitle={theme.label}
+              filenameBase={`sentinel-theme-${theme.id}`}
+              intro={theme.primer}
+            />
+            <button
+              onClick={onBack}
+              className="inline-flex items-center gap-1.5 rounded-full bg-white/5 text-neutral-300 ring-1 ring-white/10 text-xs font-medium px-3 py-1.5 hover:bg-white/10 transition-colors"
+            >
+              <ArrowLeft className="h-3.5 w-3.5" /> All themes
+            </button>
+          </div>
         }
       />
 

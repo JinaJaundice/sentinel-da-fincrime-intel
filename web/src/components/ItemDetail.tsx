@@ -1,10 +1,13 @@
-import { ExternalLink, Bot, User, Lightbulb, MapPin, CheckCircle2, XCircle } from "lucide-react";
+import { ExternalLink, Bot, User, Lightbulb, MapPin, CheckCircle2, XCircle, Quote, List } from "lucide-react";
 import type { Item } from "../content/types";
 import { TYPE_META, STANCE_META } from "../content/taxonomy";
 import { IMPACT_TONE } from "../lib/uiTokens";
 import { Badge } from "../lib/ui";
 import { relativeDay, cn } from "../lib/utils";
 import { setStatus } from "../lib/store";
+import { citationText, deckBullet } from "../lib/export";
+import { CopyButton } from "./CopyButton";
+import { PackToggle } from "./BriefingPack";
 
 // The shared content block for an item. `header` draws the type/title
 // row (off when a table row already shows it). `review` adds the
@@ -13,10 +16,13 @@ export function ItemDetail({
   item,
   header = true,
   review = false,
+  actions = true,
 }: {
   item: Item;
   header?: boolean;
   review?: boolean;
+  /** Per-item copy affordances (citation / deck bullet). Off in dense contexts. */
+  actions?: boolean;
 }) {
   const meta = TYPE_META[item.type];
   return (
@@ -106,6 +112,15 @@ export function ItemDetail({
           </a>
         ))}
       </div>
+
+      {actions && (
+        <div className="mt-2 flex items-center justify-end gap-3">
+          <PackToggle id={item.id} />
+          <span className="text-neutral-800" aria-hidden>|</span>
+          <CopyButton text={citationText(item)} label="Citation" Icon={Quote} />
+          <CopyButton text={deckBullet(item)} label="Deck bullet" Icon={List} />
+        </div>
+      )}
 
       {review && (
         <div className="mt-3 flex items-center gap-2 border-t border-neutral-800 pt-3">

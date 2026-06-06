@@ -21,6 +21,16 @@ function startOfDay(d: Date) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
 }
 
+// Full date for exports/citations (e.g. "3 June 2026"). Distinct from the
+// in-UI relativeDay — exported docs need an absolute, unambiguous date.
+export function longDate(iso: string): string {
+  return new Date(iso + "T00:00:00").toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
 // True if `iso` (yyyy-mm-dd) is within the last `days` days.
 export function withinDays(iso: string, days: number, now = new Date()) {
   const d = new Date(iso + "T00:00:00").getTime();

@@ -23,15 +23,20 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/App.tsx` | Shell: sidebar + main; merges seed + agent feed (`ALL_ITEMS`) with any overlay; routes `page → view` |
 | `web/src/components/Sidebar.tsx` | Left nav (the `Page` type lives here); "new agent items" badge |
 | `web/src/components/DataTable.tsx` | Dense, expandable table for Signals/Ventures/Solutions (per-`variant` columns) with search + sortable headers |
-| `web/src/components/ItemDetail.tsx` | Shared content block (summary, "So what", type-extras, sources, review actions) |
+| `web/src/components/ItemDetail.tsx` | Shared content block (summary, "So what", type-extras, sources, per-item copy actions, review actions) |
 | `web/src/components/ItemCard.tsx` | `Panel` + `ItemDetail` — used by Overview & Activity |
+| `web/src/components/CopyButton.tsx` | Ghost copy-to-clipboard control (citation / deck bullet); used inside `ItemDetail` |
+| `web/src/components/ExportMenu.tsx` | Bulk export dropdown (copy Markdown · download .md / .csv) over a view's in-scope items; optional `intro` lead paragraph (theme primer) |
+| `web/src/components/BriefingPack.tsx` | `PackToggle` (per-item) + the floating `BriefingPackDrawer` — curate across views, reorder, export a one-pager |
+| `web/src/components/VendorMatrix.tsx` | Solutions comparison grid (vendors by category, stance-ordered) — the "Matrix" view mode |
 | `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, latest list |
-| `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, renders a `DataTable` |
+| `web/src/views/Themes.tsx` | Curated topic briefings — one page per theme, aggregating related items + a primer; per-theme `ExportMenu` (primer leads the Markdown) |
+| `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, an `ExportMenu`, a Table/Matrix toggle (solutions), renders a `DataTable` or `VendorMatrix` |
 | `web/src/views/Intelligence.tsx` | Typology library + coverage bars (derived metrics) |
 | `web/src/views/Activity.tsx` | Transparency log of what the agent auto-published (newest first) |
 | `web/src/views/Radar.tsx` | Regulatory radar: upcoming milestones (countdowns) + recently-landed regulatory items |
-| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `milestones.ts` (radar dates) · `index.ts` (merges seed+feed → `ALL_ITEMS`) |
-| `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `store.ts` (review overlay) · `utils.ts` |
+| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `milestones.ts` (radar dates) · `index.ts` (merges seed+feed → `ALL_ITEMS`) |
+| `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `store.ts` (review overlay) · `pack.ts` (briefing-pack selection) · `utils.ts` · `export.ts` (delivery & export — see below) |
 
 ## State: the review overlay
 
@@ -51,6 +56,34 @@ status = overlay[id] ?? item.status        // published | pending | rejected
 
 Phase 2 is live: the agent appends `published` items to `feed.json`, merged by
 `content/index.ts` into `ALL_ITEMS`. See [`agent/INGEST.md`](../agent/INGEST.md).
+
+The **briefing pack** ([`lib/pack.ts`](../web/src/lib/pack.ts)) reuses this
+exact pattern — an ordered list of item ids in a localStorage overlay via
+`useSyncExternalStore`. Order matters (it's a curated narrative), so it's an
+array with reorder, where the review overlay is a per-id map.
+
+## Delivery & export
+
+Same discipline as the content model — **one engine, many call sites**.
+[`lib/export.ts`](../web/src/lib/export.ts) holds pure formatters that turn
+`Item`s into pasteable / downloadable text:
+
+- `citationText(item)` — a sourced, absolute-dated citation line.
+- `deckBullet(item)` — title + tab-indented "So what" (pastes as a slide bullet + sub-bullet).
+- `itemsToMarkdown(items, title)` — a briefing doc grouped by type.
+- `itemsToCsv(items)` — one row per item, BOM-prefixed on download for Excel.
+
+The two side-effects (`copyText`, `downloadText`) are the only impure parts,
+kept apart so the formatters stay reusable. Call sites:
+
+- per-item `CopyButton`s in `ItemDetail` (`citationText` / `deckBullet`);
+- the `ExportMenu` in each `Collection` header and on Theme pages (whole view, grouped by type; theme exports lead with the primer via `intro`);
+- the `BriefingPackDrawer`, which exports a **curated one-pager** in pack order
+  via `itemsToMarkdown(items, title, { grouped: false })`.
+
+The `VendorMatrix` is a second *view* of the solution Items (no new data),
+so the header `ExportMenu` still covers it. Adding a new export surface =
+call these functions, never re-format inline.
 
 ## How to add a new tab
 

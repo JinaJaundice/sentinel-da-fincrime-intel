@@ -9,6 +9,7 @@ import { Intelligence } from "./views/Intelligence";
 import { Radar } from "./views/Radar";
 import { Activity } from "./views/Activity";
 import { Themes } from "./views/Themes";
+import { BriefingPackDrawer } from "./components/BriefingPack";
 
 export function App() {
   const [page, setPageRaw] = useState<Page>("brief");
@@ -78,6 +79,7 @@ export function App() {
           {page === "activity" && <Activity items={items} lastUpdated={FEED_META.lastUpdated} />}
         </div>
       </main>
+      <BriefingPackDrawer items={items} />
     </div>
   );
 }

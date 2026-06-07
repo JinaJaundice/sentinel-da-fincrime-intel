@@ -75,6 +75,15 @@ export function ItemDetail({
           <DetailList label="Obligations" items={item.typology.obligations} />
         </div>
       )}
+      {item.publication && (
+        <div className="mt-2 flex items-center flex-wrap gap-2 text-[11px]">
+          <span className="rounded-md px-1.5 py-0.5 font-medium bg-violet-500/10 text-violet-300 ring-1 ring-violet-500/25">
+            {item.publication.issuer}
+          </span>
+          <span className="text-neutral-400">{item.publication.kind}</span>
+          {item.publication.ref && <span className="text-neutral-500 tabular-nums">{item.publication.ref}</span>}
+        </div>
+      )}
 
       {item.soWhat && (
         <div className="mt-2.5 flex gap-2 rounded-lg bg-neutral-800/40 border-l-2 border-violet-500/50 px-3 py-2">

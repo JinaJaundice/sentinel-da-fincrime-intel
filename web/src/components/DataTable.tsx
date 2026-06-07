@@ -7,7 +7,7 @@ import { Panel } from "../lib/ui";
 import { ItemDetail } from "./ItemDetail";
 import { relativeDay, cn } from "../lib/utils";
 
-type Variant = "signal" | "venture" | "solution";
+type Variant = "signal" | "venture" | "solution" | "fca";
 type Col = { label: string; width: string; render: (i: Item) => ReactNode; sortValue?: (i: Item) => string | number };
 
 const impactRank = (i: Item) => (i.impact === "high" ? 3 : i.impact === "medium" ? 2 : i.impact === "low" ? 1 : 0);
@@ -47,6 +47,11 @@ const COLS: Record<Variant, Col[]> = {
         ) : null,
       sortValue: (i) => i.solution?.stance ?? "",
     },
+    { label: "Date", width: "w-16", render: dateCell, sortValue: (i) => i.date },
+  ],
+  fca: [
+    { label: "Kind", width: "w-36", render: (i) => <span className="text-neutral-400">{i.publication?.kind ?? "—"}</span>, sortValue: (i) => i.publication?.kind ?? "" },
+    { label: "Ref", width: "w-20", render: (i) => <span className="text-neutral-500 tabular-nums">{i.publication?.ref ?? "—"}</span>, sortValue: (i) => i.publication?.ref ?? "" },
     { label: "Date", width: "w-16", render: dateCell, sortValue: (i) => i.date },
   ],
 };

@@ -453,4 +453,139 @@ export const ITEMS: Item[] = [
       { name: "Nominis — TRM/Elliptic/Chainalysis alternative", url: "https://www.nominis.io/insights/nominis-the-trm-labs-elliptic-and-chainalysis-alternative-made-for-vasps" },
     ],
   },
+
+  // ---------------- FCA publications (crypto + financial crime) ----------------
+  // Real FCA papers — primary sources (fca.org.uk), human-curated → verified.
+  {
+    id: "fca-cp25-14",
+    type: "regulatory",
+    title: "FCA CP25/14: Stablecoin issuance and cryptoasset custody",
+    summary:
+      "The FCA's proposed rules and guidance for issuing qualifying (fiat-referenced) stablecoins and safeguarding qualifying cryptoassets — the first detailed UK conduct rulebook for stablecoins and custody (feedback closed 31 Jul 2025; final rules expected 2026).",
+    soWhat:
+      "Sets the UK bar for stablecoin issuers and custodians a bank may face as counterparties — fold backing-asset, redemption and safeguarding expectations into counterparty due diligence and any in-house stablecoin/custody build.",
+    date: "2025-05-28",
+    addedAt: "2026-06-07",
+    addedBy: "human",
+    status: "published",
+    verified: true,
+    confidence: "high",
+    region: "UK",
+    impact: "high",
+    tags: ["FCA", "UK", "stablecoin", "custody", "crypto"],
+    publication: { issuer: "FCA", kind: "Consultation Paper", ref: "CP25/14" },
+    sources: [
+      { name: "FCA — CP25/14", url: "https://www.fca.org.uk/publications/consultation-papers/cp25-14-stablecoin-issuance-cryptoasset-custody", kind: "primary" },
+    ],
+  },
+  {
+    id: "fca-cp25-15",
+    type: "regulatory",
+    title: "FCA CP25/15: A prudential regime for cryptoasset firms",
+    summary:
+      "Proposals for a prudential regime — capital, liquidity and risk-management requirements — for FCA-authorised cryptoasset firms, published alongside CP25/14.",
+    soWhat:
+      "Prudential soundness of crypto counterparties becomes assessable against a UK standard — weigh capital/liquidity expectations into counterparty risk on crypto firms you face.",
+    date: "2025-05-28",
+    addedAt: "2026-06-07",
+    addedBy: "human",
+    status: "published",
+    verified: true,
+    confidence: "high",
+    region: "UK",
+    impact: "medium",
+    tags: ["FCA", "UK", "prudential", "crypto"],
+    publication: { issuer: "FCA", kind: "Consultation Paper", ref: "CP25/15" },
+    sources: [
+      { name: "FCA — CP25/15", url: "https://www.fca.org.uk/publications/consultation-papers/cp25-15-prudential-regime-cryptoasset-firms", kind: "primary" },
+    ],
+  },
+  {
+    id: "fca-dp24-4",
+    type: "regulatory",
+    title: "FCA DP24/4: Regulating cryptoassets — admissions & disclosures and market abuse",
+    summary:
+      "FCA discussion paper seeking views on a cryptoasset admissions & disclosures regime and a market abuse regime for cryptoassets, to reduce consumer harm and build trust in UK crypto markets.",
+    soWhat:
+      "Foreshadows UK market-abuse obligations on crypto venues — an early signal of the surveillance and disclosure expectations that will shape which venues are bankable.",
+    date: "2024-12-16",
+    addedAt: "2026-06-07",
+    addedBy: "human",
+    status: "published",
+    verified: true,
+    confidence: "high",
+    region: "UK",
+    impact: "medium",
+    tags: ["FCA", "UK", "market-abuse", "disclosures", "crypto"],
+    publication: { issuer: "FCA", kind: "Discussion Paper", ref: "DP24/4" },
+    sources: [
+      { name: "FCA — DP24/4", url: "https://www.fca.org.uk/publications/discussion-papers/dp24-4-regulating-cryptoassets", kind: "primary" },
+    ],
+  },
+  {
+    id: "fca-cp25-40",
+    type: "regulatory",
+    title: "FCA CP25/40: Regulating cryptoasset activities",
+    summary:
+      "Part of the FCA's December 2025 consultation trilogy: proposed conduct rules for the core regulated cryptoasset activities under the forthcoming UK regime, including the authorisation gateway.",
+    soWhat:
+      "Defines who must be FCA-authorised to offer crypto activities in the UK — sharpens the bright line between authorised and unauthorised crypto counterparties ahead of the ~Oct 2027 regime.",
+    date: "2025-12-16",
+    addedAt: "2026-06-07",
+    addedBy: "human",
+    status: "published",
+    verified: true,
+    confidence: "high",
+    region: "UK",
+    impact: "high",
+    tags: ["FCA", "UK", "authorisation", "crypto"],
+    publication: { issuer: "FCA", kind: "Consultation Paper", ref: "CP25/40" },
+    sources: [
+      { name: "FCA — CP25/40", url: "https://www.fca.org.uk/publications/consultation-papers/cp25-40-regulating-cryptoasset-activities", kind: "primary" },
+    ],
+  },
+  {
+    id: "fca-cp25-41",
+    type: "regulatory",
+    title: "FCA CP25/41: Cryptoasset admissions & disclosures and market abuse regime",
+    summary:
+      "FCA consultation proposing the cryptoasset admissions & disclosures framework and a market abuse regime for cryptoassets, turning DP24/4 feedback into draft rules.",
+    soWhat:
+      "A UK market-abuse regime for crypto raises the surveillance bar on listed cryptoassets — relevant to any bank facilitating market access or relying on venue integrity.",
+    date: "2025-12-16",
+    addedAt: "2026-06-07",
+    addedBy: "human",
+    status: "published",
+    verified: true,
+    confidence: "high",
+    region: "UK",
+    impact: "high",
+    tags: ["FCA", "UK", "market-abuse", "disclosures", "crypto"],
+    publication: { issuer: "FCA", kind: "Consultation Paper", ref: "CP25/41" },
+    sources: [
+      { name: "FCA — CP25/41", url: "https://www.fca.org.uk/publications/consultation-papers/cp25-41-regulating-cryptoassets-admissions-disclosures-market-abuse-regime-cryptoassets", kind: "primary" },
+    ],
+  },
+  {
+    id: "fca-ps24-17",
+    type: "regulatory",
+    title: "FCA PS24/17: Financial Crime Guide updates",
+    summary:
+      "Finalised updates to the FCA's Financial Crime Guide covering sanctions, proliferation financing, transaction monitoring and cryptoassets — confirming what the FCA expects of firms' financial-crime systems and controls.",
+    soWhat:
+      "This is the FCA's stated yardstick for financial-crime systems and controls — align sanctions, proliferation-financing and transaction-monitoring frameworks (including crypto exposure) to the updated Guide.",
+    date: "2024-11-29",
+    addedAt: "2026-06-07",
+    addedBy: "human",
+    status: "published",
+    verified: true,
+    confidence: "high",
+    region: "UK",
+    impact: "high",
+    tags: ["FCA", "UK", "financial-crime", "AML", "sanctions", "proliferation-financing"],
+    publication: { issuer: "FCA", kind: "Policy Statement", ref: "PS24/17" },
+    sources: [
+      { name: "FCA — PS24/17", url: "https://www.fca.org.uk/publications/policy-statements/ps24-17-financial-crime-guide-updates", kind: "primary" },
+    ],
+  },
 ];

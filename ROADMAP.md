@@ -101,6 +101,15 @@ agent regenerates [`DIGEST.md`](DIGEST.md) each run (`npm run digest`, wired in
 week" pulse — top movers (`weeklyMovers`, click to drill into a theme) + the
 digest copy/download.
 
+## Phase 10 — FCA publications tab ✅
+
+A dedicated **FCA** tab tracking FCA publications (consultation & discussion
+papers, policy statements, …) across crypto and financial crime — a filtered
+lens over items carrying a `publication { issuer, kind, ref }` extra, so they
+also surface in Signals. New [`views/FCA.tsx`](web/src/views/FCA.tsx) + an `fca`
+`DataTable` variant; no new data model. Seeded with real FCA papers (primary
+sources); the agent keeps it current from `fca.org.uk` (see `agent/INGEST.md`).
+
 ## Settled (former deferred items, decided 2026-06-06)
 
 - **Hosting** ✅ — live on Vercel, git-linked auto-deploy from `main`.

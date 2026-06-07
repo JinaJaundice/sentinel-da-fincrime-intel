@@ -21,7 +21,9 @@ fields on every item:
 Type-specific extras (optional, populated per `type`):
 `venture { company, round, amount, investors }` ·
 `solution { vendor, category, stance, note }` ·
-`typology { vector, controls[], obligations[] }`.
+`typology { vector, controls[], obligations[] }` ·
+`publication { issuer, kind, ref? }` (a regulator paper, e.g. an FCA CP/DP/PS —
+powers the **FCA** tab; usually on a `regulatory` item).
 
 Labels/icons per type and the stance chips live in
 [`taxonomy.ts`](../web/src/content/taxonomy.ts).

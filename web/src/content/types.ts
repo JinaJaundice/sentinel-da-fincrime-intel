@@ -69,4 +69,10 @@ export interface Item {
     controls: string[];
     obligations: string[];
   };
+  /** Regulator publication (e.g. an FCA paper) — powers the FCA tab. */
+  publication?: {
+    issuer: string; // e.g. "FCA"
+    kind: string; // "Consultation Paper" | "Discussion Paper" | "Policy Statement" | "Guidance" | "Blog" | …
+    ref?: string; // e.g. "CP25/14"
+  };
 }

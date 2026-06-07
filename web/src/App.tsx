@@ -10,6 +10,7 @@ import { Activity } from "./views/Activity";
 import { Themes } from "./views/Themes";
 import { Learn } from "./views/Learn";
 import { Trends } from "./views/Trends";
+import { FCA } from "./views/FCA";
 import { BriefingPackDrawer } from "./components/BriefingPack";
 
 export function App() {
@@ -67,6 +68,7 @@ export function App() {
               variant="solution"
             />
           )}
+          {page === "fca" && <FCA items={items} />}
           {page === "intelligence" && <Intelligence items={items} />}
           {page === "trends" && <Trends items={items} setPage={setPage} setTheme={setTheme} />}
           {page === "radar" && <Radar items={items} />}

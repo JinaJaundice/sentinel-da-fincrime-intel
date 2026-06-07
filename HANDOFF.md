@@ -40,8 +40,8 @@ bank (the differentiator vs. a news feed).
 `content/index.ts` → `ALL_ITEMS`. Each tab is a filtered view. See
 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
-Tabs: Overview · Learn · Themes · Signals · Ventures · Solutions ·
-Intelligence · Trends · Radar · Activity.
+Tabs: Overview · Learn · Trends · Themes · Signals · FCA · Ventures ·
+Solutions · Intelligence · Radar · Activity.
 
 ## What's built
 
@@ -75,6 +75,11 @@ Intelligence · Trends · Radar · Activity.
   volume × risk, theme momentum (click a row to drill into the theme), top
   topics, and a **weekly digest** one-pager (copy/download in-app; the agent
   also writes `DIGEST.md`).
+- **FCA** tab — tracks FCA publications (consultation / discussion papers,
+  policy statements) across crypto + financial crime. They're regulatory
+  `Item`s with a `publication { issuer, kind, ref }` extra; the agent keeps it
+  fresh from `fca.org.uk`. Seeded with real papers (CP25/14, CP25/40, CP25/41,
+  CP25/15, DP24/4, PS24/17).
 
 ## The autonomous agent (daily routine)
 

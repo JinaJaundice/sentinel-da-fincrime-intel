@@ -19,6 +19,9 @@ them by appending to `web/src/content/feed.json`.
 
 1. **Scan / search** the registry and the web for items dated since the last
    `lastUpdated` (regulation, enforcement, reports, funding/M&A, typologies).
+   Include the **FCA publications** feed (`fca.org.uk` — consultation &
+   discussion papers, policy statements, guidance, blogs) for crypto and
+   financial-crime topics; it's reliably current.
 2. **Dedupe** against existing ids/titles; skip anything already covered.
 3. **Draft** each new item as an [`Item`](../web/src/content/types.ts):
    - `type` (signal/regulatory/venture/solution/typology), `title`, `summary`;
@@ -29,6 +32,10 @@ them by appending to `web/src/content/feed.json`.
    - mark each source's `kind`: `primary` (the official / originating document —
      a regulator, court, the filing itself) or `secondary` (reporting / analysis);
    - type extras where relevant (venture/solution/typology blocks);
+   - for a **regulator publication** (e.g. an FCA paper) use `type: "regulatory"`
+     and set the `publication { issuer, kind, ref }` extra (e.g. issuer "FCA",
+     kind "Consultation Paper", ref "CP25/14") — it then surfaces in both Signals
+     and the **FCA** tab;
    - **never set `verified`** — that flag is a human vouch only. The agent
      publishes unverified; a human marks `verified: true` when they vouch.
 4. **Validate** (hard gates — drop the item if it fails):

@@ -173,7 +173,7 @@ export function DataTable({ items, variant }: { items: Item[]; variant: Variant 
               {isOpen && (
                 <div className="px-4 pb-4 pt-1 expand bg-neutral-900/40">
                   <div className="sm:pl-7">
-                    <ItemDetail item={item} header={false} />
+                    <ItemDetail item={item} header={false} onTagClick={setQuery} />
                   </div>
                 </div>
               )}

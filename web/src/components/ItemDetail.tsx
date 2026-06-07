@@ -15,11 +15,14 @@ export function ItemDetail({
   item,
   header = true,
   actions = true,
+  onTagClick,
 }: {
   item: Item;
   header?: boolean;
   /** Per-item copy affordances (citation / deck bullet). Off in dense contexts. */
   actions?: boolean;
+  /** When set, tags render as buttons that invoke this (e.g. to filter a table). */
+  onTagClick?: (tag: string) => void;
 }) {
   const meta = TYPE_META[item.type];
   return (
@@ -85,11 +88,22 @@ export function ItemDetail({
 
       <div className="mt-2.5 flex items-center flex-wrap gap-x-3 gap-y-1.5">
         <div className="flex items-center flex-wrap gap-1">
-          {item.tags.slice(0, 4).map((t) => (
-            <span key={t} className="text-[10px] text-neutral-500 bg-neutral-800 rounded px-1.5 py-0.5">
-              {t}
-            </span>
-          ))}
+          {item.tags.slice(0, 4).map((t) =>
+            onTagClick ? (
+              <button
+                key={t}
+                onClick={() => onTagClick(t)}
+                className="text-[10px] text-neutral-500 bg-neutral-800 rounded px-1.5 py-0.5 hover:bg-neutral-700 hover:text-violet-300 transition-colors"
+                title={`Filter by "${t}"`}
+              >
+                {t}
+              </button>
+            ) : (
+              <span key={t} className="text-[10px] text-neutral-500 bg-neutral-800 rounded px-1.5 py-0.5">
+                {t}
+              </span>
+            ),
+          )}
         </div>
         {item.confidence && <ConfidenceTag confidence={item.confidence} className="ml-auto" />}
         <span className={cn("inline-flex items-center gap-1 text-[10px] text-neutral-600", !item.confidence && "ml-auto")}>

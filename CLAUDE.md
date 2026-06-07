@@ -75,11 +75,13 @@ URL** — no source, no publish. The Activity view is a transparency log.
 ## Verification discipline (every change)
 
 1. `tsc --noEmit` clean (run via `web/node_modules/.bin/tsc`).
-2. Preview console clean (no errors/warnings).
-3. **Verify via preview _snapshots_, not screenshots** — headless
+2. `npm --prefix web run lint` + `npm --prefix web test` green (ESLint +
+   Vitest; **CI runs lint + test + build on every push** — see RUNBOOK).
+3. Preview console clean (no errors/warnings).
+4. **Verify via preview _snapshots_, not screenshots** — headless
    rasterisation is blocked on this machine, so screenshots time out;
    accessibility-tree snapshots are reliable. See [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
-4. Decluttered + on-identity (dark/neutral/violet) — confirm before reporting.
+5. Decluttered + on-identity (dark/neutral/violet) — confirm before reporting.
 
 ---
 

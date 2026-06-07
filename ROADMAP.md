@@ -76,8 +76,19 @@ client exports), not a local overlay.
 All four "next level" thrusts are now delivered (Themes, Delivery & export,
 Knowledge layer, Verified tier).
 
-## Deliberately deferred
+## Phase 8 — dev infra ✅
 
-- Auth / hosting so it's reachable without a terminal.
-- Rename off the "Sentinel" placeholder + branding.
-- Tests / lint / CI (add when it becomes a shared tool).
+Now that it's a shared, deployed tool: **ESLint 9** (flat config,
+`web/eslint.config.js`) + **Vitest** unit tests for the pure export
+formatters (`web/src/lib/export.test.ts`) + a **GitHub Actions CI**
+([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) running lint + test +
+build on every push/PR to `main` (no secrets). See [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
+
+## Settled (former deferred items, decided 2026-06-06)
+
+- **Hosting** ✅ — live on Vercel, git-linked auto-deploy from `main`.
+- **Access** — deliberately left **public** (content is summarise-and-link
+  from public sources). Can lock down later via Vercel Deployment Protection.
+- **Name** — **keeping "Sentinel"** for now (a rename would touch the repo,
+  the Vercel project and the live URL).
+- **Tests / lint / CI** ✅ — done (Phase 8 above).

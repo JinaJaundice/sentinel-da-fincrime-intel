@@ -91,9 +91,6 @@ export function DataTable({ items, variant }: { items: Item[]; variant: Variant 
     return sort.dir === "asc" ? c : -c;
   });
 
-  const SortArrow = ({ active }: { active: boolean }) =>
-    active ? (sort.dir === "asc" ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />) : null;
-
   return (
     <Panel className="overflow-hidden">
       <div className="flex items-center gap-2 px-3 py-2 border-b border-neutral-800">
@@ -115,7 +112,7 @@ export function DataTable({ items, variant }: { items: Item[]; variant: Variant 
           onClick={() => toggleSort("Name")}
           className="flex-1 flex items-center gap-1 text-left hover:text-neutral-300 transition-colors"
         >
-          Name <SortArrow active={sort.key === "Name"} />
+          Name <SortArrow active={sort.key === "Name"} dir={sort.dir} />
         </button>
         {cols.map((c) =>
           c.sortValue ? (
@@ -124,7 +121,7 @@ export function DataTable({ items, variant }: { items: Item[]; variant: Variant 
               onClick={() => toggleSort(c.label)}
               className={cn(c.width, "hidden sm:flex items-center justify-end gap-1 hover:text-neutral-300 transition-colors")}
             >
-              {c.label} <SortArrow active={sort.key === c.label} />
+              {c.label} <SortArrow active={sort.key === c.label} dir={sort.dir} />
             </button>
           ) : (
             <span key={c.label} className={cn(c.width, "text-right hidden sm:block")}>
@@ -191,4 +188,9 @@ export function DataTable({ items, variant }: { items: Item[]; variant: Variant 
 function shortTeaser(i: Item) {
   const s = i.summary.split(/[.;:]/)[0];
   return s.length > 90 ? s.slice(0, 90) + "…" : s;
+}
+
+function SortArrow({ active, dir }: { active: boolean; dir: "asc" | "desc" }) {
+  if (!active) return null;
+  return dir === "asc" ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />;
 }

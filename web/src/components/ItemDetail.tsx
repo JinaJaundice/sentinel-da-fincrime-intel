@@ -1,26 +1,23 @@
-import { ExternalLink, Bot, User, Lightbulb, MapPin, CheckCircle2, XCircle, Quote, List, ShieldCheck } from "lucide-react";
+import { ExternalLink, Bot, User, Lightbulb, MapPin, Quote, List, ShieldCheck } from "lucide-react";
 import type { Item, Source, Confidence } from "../content/types";
 import { TYPE_META, STANCE_META, CONFIDENCE_META, SOURCE_KIND_META } from "../content/taxonomy";
 import { IMPACT_TONE } from "../lib/uiTokens";
 import { Badge } from "../lib/ui";
 import { relativeDay, cn } from "../lib/utils";
-import { setStatus } from "../lib/store";
 import { citationText, deckBullet } from "../lib/export";
 import { CopyButton } from "./CopyButton";
 import { PackToggle } from "./BriefingPack";
 
-// The shared content block for an item. `header` draws the type/title
-// row (off when a table row already shows it). `review` adds the
-// approve/reject controls.
+// The shared content block for an item. `header` draws the type/title row
+// (off when a table row already shows it); `actions` adds the per-item copy
+// affordances.
 export function ItemDetail({
   item,
   header = true,
-  review = false,
   actions = true,
 }: {
   item: Item;
   header?: boolean;
-  review?: boolean;
   /** Per-item copy affordances (citation / deck bullet). Off in dense contexts. */
   actions?: boolean;
 }) {
@@ -113,23 +110,6 @@ export function ItemDetail({
         </div>
       )}
 
-      {review && (
-        <div className="mt-3 flex items-center gap-2 border-t border-neutral-800 pt-3">
-          <button
-            onClick={() => setStatus(item.id, "published")}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-violet-500 text-neutral-950 text-xs font-semibold px-3 py-1.5 hover:bg-violet-400 transition-colors"
-          >
-            <CheckCircle2 className="h-3.5 w-3.5" /> Approve &amp; publish
-          </button>
-          <button
-            onClick={() => setStatus(item.id, "rejected")}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-neutral-800 text-neutral-300 ring-1 ring-neutral-700 text-xs font-medium px-3 py-1.5 hover:bg-neutral-700 transition-colors"
-          >
-            <XCircle className="h-3.5 w-3.5" /> Reject
-          </button>
-          <span className="ml-auto text-[10px] text-neutral-600">Nothing publishes until you approve it.</span>
-        </div>
-      )}
     </div>
   );
 }

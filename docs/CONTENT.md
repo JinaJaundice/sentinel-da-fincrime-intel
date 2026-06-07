@@ -41,9 +41,9 @@ Phase 2 is **auto-publish**: the agent writes items straight to
 agent ─▶ status:"published" ─▶ live in its stream + listed in Activity
 ```
 
-The localStorage overlay (`lib/store.ts`) is retained but unused by default;
-it can still mark an item `rejected` (hidden) if an optional "hide" safety
-valve is re-enabled in the Activity view.
+`status` stays in the schema (`published | pending | rejected`) and views
+filter to `published`, but nothing produces the other states today — the
+human-in-the-loop review overlay was removed when auto-publish became the model.
 
 ## Integrity rules (enforced here and in the agent)
 

@@ -2,13 +2,10 @@ import { useSyncExternalStore } from "react";
 
 // ---------------------------------------------------------------
 // Briefing pack — a curated, ordered selection of items the user is
-// assembling into a one-pager / export. Same shape as the review
-// overlay (store.ts): an ordered list of item ids in a localStorage
-// overlay, exposed through useSyncExternalStore so the toggle on each
-// item and the floating drawer stay in lockstep without a backend.
-//
-// Order matters here (unlike the review overlay set): the pack is a
-// curated narrative, so it's an array and supports reordering.
+// assembling into a one-pager / export. An ordered list of item ids in a
+// localStorage overlay, exposed through useSyncExternalStore so the toggle
+// on each item and the floating drawer stay in lockstep without a backend.
+// Order matters (it's a curated narrative), so it's an array with reorder.
 // ---------------------------------------------------------------
 
 const KEY = "sentinel.pack.v1";

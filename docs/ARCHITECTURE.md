@@ -23,7 +23,7 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/App.tsx` | Shell: sidebar + main; merges seed + agent feed (`ALL_ITEMS`) with any overlay; routes `page → view` |
 | `web/src/components/Sidebar.tsx` | Left nav (the `Page` type lives here); "new agent items" badge |
 | `web/src/components/DataTable.tsx` | Dense, expandable table for Signals/Ventures/Solutions (per-`variant` columns) with search + sortable headers |
-| `web/src/components/ItemDetail.tsx` | Shared content block (summary, "So what", type-extras, sources with primary/secondary tags, trust badges (verified · confidence), per-item copy actions, review actions) |
+| `web/src/components/ItemDetail.tsx` | Shared content block (summary, "So what", type-extras, sources with primary/secondary tags, trust badges (verified · confidence), per-item copy actions) |
 | `web/src/components/ItemCard.tsx` | `Panel` + `ItemDetail` — used by Overview & Activity |
 | `web/src/components/CopyButton.tsx` | Ghost copy-to-clipboard control (citation / deck bullet); used inside `ItemDetail` |
 | `web/src/components/ExportMenu.tsx` | Bulk export dropdown (copy Markdown · download .md / .csv) over a view's in-scope items; optional `intro` lead paragraph (theme primer) |
@@ -40,32 +40,25 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/views/Activity.tsx` | Transparency log of what the agent auto-published (newest first) |
 | `web/src/views/Radar.tsx` | Regulatory radar: upcoming milestones (countdowns) + recently-landed regulatory items |
 | `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `glossary.ts` + `primers.ts` (knowledge layer) · `milestones.ts` (radar dates) · `index.ts` (merges seed+feed → `ALL_ITEMS`) |
-| `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `store.ts` (review overlay) · `pack.ts` (briefing-pack selection) · `utils.ts` · `insights.ts` (derived metrics + time-series) · `digest.ts` (weekly one-pager) · `export.ts` (delivery & export — see below) |
+| `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `pack.ts` (briefing-pack selection) · `utils.ts` · `insights.ts` (derived metrics + time-series) · `digest.ts` (weekly one-pager) · `export.ts` (delivery & export — see below) |
 | `web/src/components/viz.tsx` | Chart primitives (CSS/flex, no chart lib): `ImpactMix`, `MiniBars`, `MonthlyImpactChart`, `MomentumList` |
 
-## State: the review overlay
+## State: client-side only
 
-Seed items ship with a baseline `status`. The reviewer's approve/reject
-decisions are stored as a **localStorage overlay** keyed by item id
-([`lib/store.ts`](../web/src/lib/store.ts), `useSyncExternalStore`). `App.tsx`
-merges the overlay onto the seed at render:
+There is **no backend**. Views render straight from `ALL_ITEMS`
+(`content/index.ts` = seed `items.ts` + agent `feed.json`); the agent
+auto-publishes, so every item is live in its stream. `App.tsx` holds only the
+current `page` and selected `theme` in `useState`.
 
-```
-status = overlay[id] ?? item.status        // published | pending | rejected
-```
-
-- `published` is the default — the agent **auto-publishes**, so items appear
-  in their stream's view immediately.
-- `rejected` (via the overlay) hides an item — unused by default; reserved for
-  an optional "hide" valve in Activity.
+The one piece of *persisted* UI state is the **briefing pack**
+([`lib/pack.ts`](../web/src/lib/pack.ts)) — an ordered list of item ids in a
+`localStorage` overlay exposed via `useSyncExternalStore`, so the per-item
+toggle and the floating drawer stay in lockstep without a backend.
 
 Phase 2 is live: the agent appends `published` items to `feed.json`, merged by
 `content/index.ts` into `ALL_ITEMS`. See [`agent/INGEST.md`](../agent/INGEST.md).
-
-The **briefing pack** ([`lib/pack.ts`](../web/src/lib/pack.ts)) reuses this
-exact pattern — an ordered list of item ids in a localStorage overlay via
-`useSyncExternalStore`. Order matters (it's a curated narrative), so it's an
-array with reorder, where the review overlay is a per-id map.
+(The old human-in-the-loop review overlay was removed when auto-publish became
+the model — see the Activity view for the transparency log.)
 
 ## Delivery & export
 

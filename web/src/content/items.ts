@@ -7,9 +7,7 @@ import type { Item } from "./types";
 // it): cite a source for every factual claim; never fabricate specific
 // enforcement actions or financings; label anything illustrative.
 // The single invented item below is explicitly marked "[Illustrative]".
-//
-// `pending` + addedBy:"agent" items sit in the Review Queue to show the
-// human-in-the-loop loop working before the scheduled agent is wired up.
+// Everything auto-publishes (Phase 2) — there is no review queue.
 // ---------------------------------------------------------------
 
 export const ITEMS: Item[] = [

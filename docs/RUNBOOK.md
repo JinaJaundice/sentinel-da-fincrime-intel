@@ -39,16 +39,17 @@ constraint is noted in the machine-local memory's image-generation pipeline.)
 
 ## Common interactions to snapshot-test
 
-- Nav: `nav[aria-label="Primary"] button:nth-child(n)` (Overview…Review).
+- Nav: `nav[aria-label="Primary"] button` (Overview…Activity, 10 tabs).
 - Expand a table row: `main button[aria-expanded="false"]`.
-- Review actions: the approve/reject buttons inside a pending `ItemCard`;
-  approving drops the sidebar "Review" badge and removes the row.
-- Reset: the "Reset demo decisions" button restores the seeded queue.
+- Add to briefing pack: the "Add to pack" toggle in an expanded `ItemDetail`;
+  the floating pack drawer appears (bottom-right) once the pack is non-empty.
+- Drill a theme: click a momentum row on Trends, or a "This week" chip on
+  Overview → the theme's briefing page.
 
 ## Gotchas
 
 - `vite-env.d.ts` (`/// <reference types="vite/client" />`) is required or
   `tsc` errors on the `index.css` side-effect import.
-- Review overlay localStorage key: `sentinel.review.v1`.
+- Briefing-pack localStorage key: `sentinel.pack.v1`.
 - Tailwind v4 only generates classes it sees as **literal strings** — keep
   colour in the enumerated tokens (see [DESIGN](DESIGN.md)).

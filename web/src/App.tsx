@@ -1,8 +1,7 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Sidebar, type Page } from "./components/Sidebar";
 import { ALL_ITEMS, FEED_META } from "./content";
 import { TYPE_META } from "./content/taxonomy";
-import { useReviewOverlay } from "./lib/store";
 import { Brief } from "./views/Brief";
 import { Collection } from "./views/Collection";
 import { Intelligence } from "./views/Intelligence";
@@ -22,17 +21,8 @@ export function App() {
     setPageRaw(p);
     setTheme(null);
   };
-  const overlay = useReviewOverlay();
-
-  // Seed + agent feed, with any local overrides (e.g. a hidden item) applied.
-  const items = useMemo(
-    () =>
-      ALL_ITEMS.map((i) => {
-        const s = overlay[i.id];
-        return s ? { ...i, status: s } : i;
-      }),
-    [overlay],
-  );
+  // Single source of truth: hand-seeded items + the agent feed.
+  const items = ALL_ITEMS;
 
   // "New" indicator: agent items published in the last 2 days.
   const badgeCount = items.filter(

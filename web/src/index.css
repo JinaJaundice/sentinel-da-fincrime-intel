@@ -9,6 +9,14 @@
   color-scheme: dark;
 }
 
+/* Keyboard-focus fallback — a visible violet ring for any focusable element
+   that doesn't define its own focus-visible style (those use Tailwind, which
+   wins on specificity). Mouse clicks don't trigger :focus-visible. */
+:focus-visible {
+  outline: 2px solid rgba(139, 92, 246, 0.55);
+  outline-offset: 2px;
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;

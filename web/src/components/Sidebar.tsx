@@ -1,7 +1,7 @@
-import { Radar, LayoutDashboard, Newspaper, TrendingUp, Boxes, Crosshair, CalendarClock, Shapes, Radio, GraduationCap, type LucideIcon } from "lucide-react";
+import { Radar, LayoutDashboard, Newspaper, TrendingUp, Boxes, Crosshair, CalendarClock, Shapes, Radio, GraduationCap, LineChart, type LucideIcon } from "lucide-react";
 import { cn } from "../lib/utils";
 
-export type Page = "brief" | "learn" | "themes" | "signals" | "ventures" | "solutions" | "intelligence" | "radar" | "activity";
+export type Page = "brief" | "learn" | "themes" | "signals" | "ventures" | "solutions" | "intelligence" | "trends" | "radar" | "activity";
 
 // Each tab carries a plain-language descriptor so the punchy names aren't cryptic.
 const NAV: { id: Page; label: string; desc: string; Icon: LucideIcon }[] = [
@@ -12,6 +12,7 @@ const NAV: { id: Page; label: string; desc: string; Icon: LucideIcon }[] = [
   { id: "ventures", label: "Ventures", desc: "Funding & M&A", Icon: TrendingUp },
   { id: "solutions", label: "Solutions", desc: "Vendors & build-vs-buy", Icon: Boxes },
   { id: "intelligence", label: "Intelligence", desc: "Laundering typologies", Icon: Crosshair },
+  { id: "trends", label: "Trends", desc: "What's moving over time", Icon: LineChart },
   { id: "radar", label: "Radar", desc: "Key dates ahead", Icon: CalendarClock },
   { id: "activity", label: "Activity", desc: "What the agent published", Icon: Radio },
 ];

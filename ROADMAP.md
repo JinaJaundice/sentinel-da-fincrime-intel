@@ -84,6 +84,16 @@ formatters (`web/src/lib/export.test.ts`) + a **GitHub Actions CI**
 ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) running lint + test +
 build on every push/PR to `main` (no secrets). See [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
 
+## Phase 9 — trends & analytics ✅
+
+A new **Trends** tab ([`web/src/views/Trends.tsx`](web/src/views/Trends.tsx))
+over the accumulating feed: monthly volume stacked by impact, **theme/tag
+momentum** (new items in the last 60 days vs the 60 before — rising / cooling),
+and most-active topics. Pure derivations in `lib/insights.ts`
+(`monthlyByImpact`, `momentum`, `countByMulti`); CSS chart primitives in
+`components/viz.tsx` (`MonthlyImpactChart`, `MomentumList`). No new data model
+— just the one store, so it sharpens as the agent publishes.
+
 ## Settled (former deferred items, decided 2026-06-06)
 
 - **Hosting** ✅ — live on Vercel, git-linked auto-deploy from `main`.

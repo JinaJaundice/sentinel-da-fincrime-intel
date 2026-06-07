@@ -1,5 +1,6 @@
+import { TrendingUp, TrendingDown } from "lucide-react";
 import type { Item } from "../content/types";
-import { impactMix } from "../lib/insights";
+import { impactMix, type MonthBucket, type Momentum } from "../lib/insights";
 import { cn } from "../lib/utils";
 
 // A single stacked bar showing the high/medium/low risk mix, with a legend.
@@ -22,13 +23,91 @@ export function ImpactMix({ items }: { items: Item[] }) {
   );
 }
 
-function Legend({ dot, label, n }: { dot: string; label: string; n: number }) {
+function Legend({ dot, label, n }: { dot: string; label: string; n?: number }) {
   return (
     <span className="inline-flex items-center gap-1.5">
       <span className={cn("w-2 h-2 rounded-full", dot)} />
-      {label} <span className="tabular-nums text-neutral-500">{n}</span>
+      {label} {n !== undefined && <span className="tabular-nums text-neutral-500">{n}</span>}
     </span>
   );
+}
+
+// Monthly columns (by event date), stacked by impact (rose/amber/neutral),
+// growing from the baseline. Empty months render as gaps.
+export function MonthlyImpactChart({ data }: { data: MonthBucket[] }) {
+  if (data.length === 0) return <p className="text-[11px] text-neutral-600">No data yet.</p>;
+  const max = Math.max(...data.map((d) => d.total), 1);
+  return (
+    <div>
+      <div className="flex items-end gap-1.5 h-28">
+        {data.map((d) => (
+          <div
+            key={d.key}
+            className="flex-1 h-full flex flex-col-reverse rounded-t-sm overflow-hidden min-w-0"
+            title={`${d.label}: ${d.total}  ·  High ${d.high} / Med ${d.medium} / Low ${d.low}`}
+          >
+            <div className="bg-rose-500/75" style={{ height: `${(d.high / max) * 100}%` }} />
+            <div className="bg-amber-500/75" style={{ height: `${(d.medium / max) * 100}%` }} />
+            <div className="bg-neutral-600" style={{ height: `${(d.low / max) * 100}%` }} />
+          </div>
+        ))}
+      </div>
+      <div className="flex gap-1.5 mt-1.5">
+        {data.map((d) => (
+          <div key={d.key} className="flex-1 text-center text-[9px] text-neutral-500 truncate">
+            {d.label}
+          </div>
+        ))}
+      </div>
+      <div className="mt-2.5 flex items-center gap-3 text-[11px] text-neutral-400">
+        <Legend dot="bg-rose-500" label="High" />
+        <Legend dot="bg-amber-500" label="Medium" />
+        <Legend dot="bg-neutral-600" label="Low" />
+      </div>
+    </div>
+  );
+}
+
+// Direction-of-travel list: a magnitude bar (overall volume) + a rising /
+// cooling delta versus the previous window.
+export function MomentumList({ rows, empty = "No data yet." }: { rows: Momentum[]; empty?: string }) {
+  if (rows.length === 0) return <p className="text-[11px] text-neutral-600">{empty}</p>;
+  const max = Math.max(...rows.map((r) => r.total), 1);
+  return (
+    <div className="space-y-2.5">
+      {rows.map((r) => (
+        <div key={r.label}>
+          <div className="flex items-center justify-between gap-2 text-[11px] mb-1">
+            <span className="text-neutral-300 truncate">{r.label}</span>
+            <span className="inline-flex items-center gap-2 shrink-0">
+              <TrendDelta delta={r.delta} />
+              <span className="tabular-nums text-neutral-500">{r.total}</span>
+            </span>
+          </div>
+          <div className="h-1.5 rounded-full bg-neutral-800 overflow-hidden">
+            <div className="h-full rounded-full bg-violet-500" style={{ width: `${(r.total / max) * 100}%` }} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function TrendDelta({ delta }: { delta: number }) {
+  if (delta > 0)
+    return (
+      <span className="inline-flex items-center gap-0.5 text-violet-300">
+        <TrendingUp className="h-3 w-3" />+{delta}
+      </span>
+    );
+  if (delta < 0)
+    return (
+      <span className="inline-flex items-center gap-0.5 text-neutral-500">
+        <TrendingDown className="h-3 w-3" />
+        {delta}
+      </span>
+    );
+  return <span className="text-[10px] text-neutral-600">flat</span>;
 }
 
 // A titled set of horizontal distribution bars.

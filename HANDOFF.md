@@ -40,8 +40,8 @@ bank (the differentiator vs. a news feed).
 `content/index.ts` → `ALL_ITEMS`. Each tab is a filtered view. See
 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
-Tabs: Overview · Themes · Signals · Ventures · Solutions · Intelligence ·
-Radar · Activity.
+Tabs: Overview · Learn · Themes · Signals · Ventures · Solutions ·
+Intelligence · Trends · Radar · Activity.
 
 ## What's built
 
@@ -68,6 +68,11 @@ Radar · Activity.
   git-versioned data fields: a human **verified** shield (never set by the
   agent) + a **Verified-only** filter, a **confidence** signal, and
   **primary/secondary** source badges. All flow into the exports.
+- **Dev-infra** (Phase 8, ✅) — ESLint 9 + Vitest (export-formatter tests) +
+  GitHub Actions CI (lint·test·build on every push; no secrets).
+- **Trends** (Phase 9, ✅) — a time-series tab: monthly volume × risk, theme/tag
+  momentum (rising/cooling vs the prior window), most-active topics — all
+  derived from the one store.
 
 ## The autonomous agent (daily routine)
 
@@ -90,7 +95,8 @@ not a 24/7 cloud cron.
   `git commit -F <msgfile>`.
 - **Direct to `main`:** this repo deploys from `main` and the agent commits
   there daily — the established workflow is commit-to-main, not feature
-  branches/PRs.
+  branches/PRs. **Standing user preference: "commit" means commit AND push to
+  live** — never stop at a local commit.
 
 ## Parked
 
@@ -100,9 +106,10 @@ not a 24/7 cloud cron.
 
 ## Next up
 
-All four "next level" thrusts are now delivered (Themes · Delivery & export ·
-Knowledge layer · Verified tier). What's left is the **deliberately deferred**
-list in [`ROADMAP.md`](ROADMAP.md): auth/hosting so it's reachable without a
-terminal, renaming off the "Sentinel" placeholder, and tests/lint/CI when it
-becomes a shared tool. Otherwise: keep curating, let the agent run, and mark
-items `verified` as you vouch for them.
+The full roadmap is delivered — the four "next level" thrusts (Themes ·
+Delivery & export · Knowledge layer · Verified tier), the **dev-infra**
+(ESLint · Vitest · CI), and a **Trends** analytics tab. The deferred list is
+settled (see [`ROADMAP.md`](ROADMAP.md)): hosting is live on Vercel, the name
+stays **"Sentinel"**, and the site is deliberately **public**. From here it's
+curation (let the agent run, mark items `verified` as you vouch) or a fresh
+direction.

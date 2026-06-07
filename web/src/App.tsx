@@ -10,6 +10,7 @@ import { Radar } from "./views/Radar";
 import { Activity } from "./views/Activity";
 import { Themes } from "./views/Themes";
 import { Learn } from "./views/Learn";
+import { Trends } from "./views/Trends";
 import { BriefingPackDrawer } from "./components/BriefingPack";
 
 export function App() {
@@ -77,6 +78,7 @@ export function App() {
             />
           )}
           {page === "intelligence" && <Intelligence items={items} />}
+          {page === "trends" && <Trends items={items} />}
           {page === "radar" && <Radar items={items} />}
           {page === "activity" && <Activity items={items} lastUpdated={FEED_META.lastUpdated} />}
         </div>

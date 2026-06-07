@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-06",
+  "lastUpdated": "2026-06-07",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -371,6 +371,97 @@
       "sources": [
         { "name": "TRM Labs — 2026 Crypto Crime Report", "url": "https://www.trmlabs.com/reports-and-whitepapers/2026-crypto-crime-report" },
         { "name": "CoinDesk — Criminal use of crypto spikes after years of steady decline, TRM report says", "url": "https://www.coindesk.com/policy/2026/01/27/criminal-use-of-crypto-spikes-after-years-of-steady-decline-trm-report-says" }
+      ]
+    },
+    {
+      "id": "feed-dprk-drift-kelp-hacks-2026",
+      "type": "typology",
+      "title": "DPRK's Drift and KelpDAO exploits claim 76% of all 2026 crypto hack losses — $577M via protocol-level compromise",
+      "summary": "Two North Korean operations in April 2026 — Drift ($285M, April 1) and KelpDAO ($290M, April 18) — captured 76% of all crypto hack losses year-to-date and pushed DPRK cumulative theft past $6 billion since 2017. The Drift attack involved months of in-person social engineering to compromise Solana multisig signers, executing a 12-minute drain; KelpDAO was exploited via a single-verifier LayerZero bridge flaw. Laundering diverged: Drift proceeds remain dormant; KelpDAO funds (after $75M were frozen on Arbitrum) were routed through THORChain and converted to Bitcoin via Chinese intermediaries using the TraderTraitor playbook.",
+      "soWhat": "DPRK has shifted decisively to DeFi protocol-level compromise — achieving $500M+ single incidents via governance attacks and bridge exploits rather than exchange hacks alone. Banks should screen for THORChain-to-Bitcoin conversion patterns tied to the April 2026 addresses, assess any counterparty exposure to Drift or KelpDAO recovery flows, and treat dormant DPRK holdings as a deferred laundering risk that will hit the financial system on DPRK's timetable.",
+      "date": "2026-04-30",
+      "addedAt": "2026-06-07",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "tags": ["DPRK", "typology", "hacking", "DeFi", "THORChain", "cross-chain", "laundering", "TraderTraitor"],
+      "typology": {
+        "vector": "DPRK state-sponsored DeFi protocol compromise — social engineering of multisig signers and bridge single-verifier exploits, followed by THORChain-to-Bitcoin laundering via Chinese intermediaries",
+        "controls": [
+          "Screen THORChain-to-Bitcoin conversion clusters linked to April 2026 DPRK attack addresses",
+          "Monitor counterparty recovery flows from Drift and KelpDAO",
+          "Flag large cross-chain bridge→BTC sequences consistent with TraderTraitor playbook",
+          "Treat dormant DPRK address holdings as active laundering risk on DPRK's schedule"
+        ],
+        "obligations": [
+          "OFAC / UN sanctions screening of DPRK-attributed address clusters",
+          "SAR on suspected DPRK-nexus laundering flows"
+        ]
+      },
+      "sources": [
+        { "name": "TRM Labs — North Korea stole 76% of all crypto hack value in 2026", "url": "https://www.trmlabs.com/resources/blog/north-korea-stole-76-of-all-crypto-hack-value-in-2026-with-just-two-attacks" },
+        { "name": "CoinDesk — The long con: North Korean spies drain $285M from Drift", "url": "https://www.coindesk.com/business/2026/04/30/north-korean-hackers-are-moving-faster-they-account-for-76-of-crypto-exploits-this-year-trmlabs" },
+        { "name": "Elliptic — Drift Protocol exploited for $286M in suspected DPRK-linked attack", "url": "https://www.elliptic.co/blog/drift-protocol-exploited-for-286-million-in-suspected-dprk-linked-attack" },
+        { "name": "Chainalysis — KelpDAO bridge exploit April 2026", "url": "https://www.chainalysis.com/blog/kelpdao-bridge-exploit-april-2026/" }
+      ]
+    },
+    {
+      "id": "feed-a7a5-certik-110b-volume",
+      "type": "signal",
+      "title": "CertiK: A7A5 hits $110B cumulative, 43% of non-USD stablecoin market — no kill-switch makes sanctions structurally ineffective",
+      "summary": "CertiK's Skynet 2026 Stablecoin Threat Intelligence Report found A7A5 processed over $110 billion in cumulative on-chain transactions between February 2025 and May 2026, capturing 43% of the global non-USD stablecoin market. Active wallets grew from 13,000 to 29,000 in the period. Critically, A7A5 was designed without a centralised kill-switch — smart contracts are controlled by Russian and Kyrgyz developers; reserves sit in Central Asian banking networks beyond Western reach. Despite the UK's May 2026 OFSI designation and the EU 20th package prohibition, daily volume fell only from a $1.5B peak to approximately $500M.",
+      "soWhat": "A7A5's 43% non-USD stablecoin market share reframes it from a niche evasion tool to a systemically significant parallel settlement rail. The absence of a kill-switch makes issuer-level sanctions structurally ineffective at stopping flows — the only reliable controls are blocking the fiat on/off ramps (Grinex, TengriCoin, Central Asian banking channels). Banks should treat any A7A5-denominated settlement or Grinex counterparty exposure as equivalent to direct Russia sanctions risk and prioritise on-chain screening of known A7A5 broker clusters.",
+      "date": "2026-05-30",
+      "addedAt": "2026-06-07",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": ["A7A5", "Russia", "sanctions-evasion", "stablecoin", "CertiK", "intelligence", "kill-switch"],
+      "sources": [
+        { "name": "FinanceFeeds — A7A5 stablecoin tops $110B in transactions despite sanctions", "url": "https://financefeeds.com/a7a5-stablecoin-tops-110-billion-in-transactions-despite-sanctions/" },
+        { "name": "Crypto Economy — A7A5 keeps growing, moving $110B under sanctions: CertiK", "url": "https://crypto-economy.com/a7a5-stablecoin-keeps-growing/" },
+        { "name": "Macau Business — CertiK Skynet 2026 Stablecoin Threat Intelligence Report", "url": "https://macaubusiness.com/skynet-2026-stablecoin-threat-intelligence-report-328-million-in-bridge-losses-and-a-110-billion-sanctions-evasion-network-define-the-years-biggest-stablecoin-security-threats/" }
+      ]
+    },
+    {
+      "id": "feed-fca-crypto-gateway-sept-2026",
+      "type": "regulatory",
+      "title": "FCA cryptoasset authorisation gateway opens 30 September 2026 — no auto-conversion from MLR registration",
+      "summary": "The FCA's Pre-Application Support Service (PASS) for cryptoasset firms opened on 11 May 2026, with the formal authorisation gateway following on 30 September 2026 (closing 28 February 2027). Firms applying during this window receive an FCA commitment to determine their application before the new FSMA cryptoasset regime commences on 25 October 2027. Existing FCA anti-money laundering register entries do not automatically convert — all firms must apply fresh for FSMA authorisation with the appropriate permissions.",
+      "soWhat": "For banks assessing CASP counterparty risk: the September gateway is the practical cut-off to monitor. Any CASP that cannot demonstrate a PASS meeting or filed application by end-2026 is on a credible path to operating unlicensed from October 2027. Banks should build CASP authorisation-status tracking into their counterparty due diligence programmes now — the MLR registration list is no longer a reliable proxy for future regulatory standing.",
+      "date": "2026-05-11",
+      "addedAt": "2026-06-07",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "tags": ["FCA", "CASP", "authorization", "gateway", "UK", "licensing", "counterparty-risk"],
+      "sources": [
+        { "name": "FCA — How the cryptoasset gateway will operate", "url": "https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation/how-gateway-will-operate" },
+        { "name": "FCA — Cryptoasset firms can request pre-application meetings from 11 May 2026", "url": "https://www.fca.org.uk/news/news-stories/cryptoasset-firms-can-request-pre-application-meetings-11-may-2026" },
+        { "name": "Regulation Tomorrow — FCA announces cryptoasset pre-application meetings from 11 May 2026", "url": "https://www.regulationtomorrow.com/2026/04/fca-announces-that-cryptoasset-firms-can-request-pre-application-meetings-from-11-may-2026-and-publishes-new-webpage-on-preparing-for-the-new-regime/" }
+      ]
+    },
+    {
+      "id": "feed-russia-sanctions-browder-a7a5",
+      "type": "signal",
+      "title": "Russia counter-sanctions UK teenager for A7A5 war-finance report — confirming stablecoin's strategic role",
+      "summary": "On 4 June 2026, Russia designated 17-year-old Alexander Browder — co-author of a Henry Jackson Society report alleging A7A5 forms part of Russia's war-finance infrastructure — alongside three other UK nationals including Washington Post reporter Catherine Belton. The report claimed approximately $350 billion in combined state-linked crypto laundering by Russia, Iran, and North Korea. Russia's Foreign Ministry described the findings as 'defamatory speculation'; Browder called the designation 'a badge of honour'. The retaliatory listing followed the UK's OFSI sanctioning of A7A5's issuer A7 Guarantee in May 2026.",
+      "soWhat": "Moscow designating a teenage researcher over a think-tank paper is a sharp political signal that Western attribution of A7A5's war-finance role is landing with material strategic effect. For compliance teams, the retaliation confirms A7A5 and its broker network are not peripheral to Russia's sanctions evasion — they are load-bearing infrastructure. Treat continued A7A5 volume (~$500M/day) as confirmation that enforcement pressure has not disrupted the rail.",
+      "date": "2026-06-04",
+      "addedAt": "2026-06-07",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "tags": ["A7A5", "Russia", "sanctions", "war-finance", "signal", "counter-sanctions"],
+      "sources": [
+        { "name": "CoinDesk — Russia sanctions British teenager for alleging A7A5 use in funding Ukraine war", "url": "https://www.coindesk.com/policy/2026/06/04/russia-sanctions-british-teenager-for-alleging-a7a5-use-in-funding-ukraine-war" },
+        { "name": "Euronews — British teenager sanctioned by Russia over Moscow-backed crypto laundering report", "url": "https://www.euronews.com/my-europe/2026/06/04/british-teenager-sanctioned-by-russia-over-his-report-on-alleged-moscow-backed-crypto-laun" },
+        { "name": "The Moscow Times — 'I Touched a Nerve': British Teenager Banned From Russia Over Crypto Sanctions Evasion Work", "url": "https://www.themoscowtimes.com/2026/06/05/i-touched-a-nerve-british-teenager-banned-from-russia-over-work-on-crypto-sanctions-evasion-a92940" }
       ]
     }
   ]

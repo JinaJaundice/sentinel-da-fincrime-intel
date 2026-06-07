@@ -92,7 +92,12 @@ momentum** (new items in the last 60 days vs the 60 before — rising / cooling)
 and most-active topics. Pure derivations in `lib/insights.ts`
 (`monthlyByImpact`, `momentum`, `countByMulti`); CSS chart primitives in
 `components/viz.tsx` (`MonthlyImpactChart`, `MomentumList`). No new data model
-— just the one store, so it sharpens as the agent publishes.
+— just the one store, so it sharpens as the agent publishes. Extended: a
+**date-range** selector (All / 12m / 90d / 30d) scoping the period; momentum
+rows **drill into the theme**; and a **weekly digest** one-pager
+([`lib/digest.ts`](web/src/lib/digest.ts)) — copy/download in-app, plus the
+agent regenerates [`DIGEST.md`](DIGEST.md) each run (`npm run digest`, wired in
+[`agent/INGEST.md`](agent/INGEST.md)).
 
 ## Settled (former deferred items, decided 2026-06-06)
 

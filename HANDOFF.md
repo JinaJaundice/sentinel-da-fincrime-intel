@@ -70,17 +70,18 @@ Intelligence · Trends · Radar · Activity.
   **primary/secondary** source badges. All flow into the exports.
 - **Dev-infra** (Phase 8, ✅) — ESLint 9 + Vitest (export-formatter tests) +
   GitHub Actions CI (lint·test·build on every push; no secrets).
-- **Trends** (Phase 9, ✅) — a time-series tab: monthly volume × risk, theme/tag
-  momentum (rising/cooling vs the prior window), most-active topics — all
-  derived from the one store.
+- **Trends** (Phase 9, ✅) — a time-series tab (3rd in the nav): date-ranged
+  volume × risk, theme momentum (click a row to drill into the theme), top
+  topics, and a **weekly digest** one-pager (copy/download in-app; the agent
+  also writes `DIGEST.md`).
 
 ## The autonomous agent (daily routine)
 
 **Auto-publish, no human-in-the-loop.** A local Claude Code scheduled task
 (`sentinel-daily-ingest`, ~08:15 local) runs [`agent/INGEST.md`](agent/INGEST.md):
 web-searches new DA×FinCrime developments → drafts `Item`s (every item needs a
-real source URL) → appends `feed.json` → commits + pushes → Vercel
-auto-redeploys. Runs while Claude Code is open (catches up on next launch) —
+real source URL) → appends `feed.json` → regenerates `DIGEST.md` (the weekly
+one-pager) → commits + pushes → Vercel auto-redeploys. Runs while Claude Code is open (catches up on next launch) —
 not a 24/7 cloud cron.
 
 ## Key gotchas (read before committing)

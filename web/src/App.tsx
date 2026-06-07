@@ -78,7 +78,7 @@ export function App() {
             />
           )}
           {page === "intelligence" && <Intelligence items={items} />}
-          {page === "trends" && <Trends items={items} />}
+          {page === "trends" && <Trends items={items} setPage={setPage} setTheme={setTheme} />}
           {page === "radar" && <Radar items={items} />}
           {page === "activity" && <Activity items={items} lastUpdated={FEED_META.lastUpdated} />}
         </div>

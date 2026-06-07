@@ -35,7 +35,11 @@ them by appending to `web/src/content/feed.json`.
    - has ≥1 source URL; no fabricated specifics; illustrative content labelled
      `[Illustrative]`; paywalled bodies summarised-and-linked only.
 5. **Write**: append the new items to `feed.json` and set `lastUpdated` to today.
-6. (Remote mode) commit the diff: `feat(feed): ingest YYYY-MM-DD (N items)`.
+6. **Digest**: regenerate the rolling weekly one-pager — `npm --prefix web run digest`
+   (writes `DIGEST.md` at the repo root: a "what moved + so what" summary of the
+   last 7 days, by `addedAt`). Cheap and idempotent — run it every cycle so the
+   digest stays current.
+7. (Remote mode) commit the diff (include `DIGEST.md`): `feat(feed): ingest YYYY-MM-DD (N items)`.
 
 ## Output shape (`feed.json`)
 

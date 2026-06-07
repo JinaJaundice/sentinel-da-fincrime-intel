@@ -69,26 +69,46 @@ export function MonthlyImpactChart({ data }: { data: MonthBucket[] }) {
 }
 
 // Direction-of-travel list: a magnitude bar (overall volume) + a rising /
-// cooling delta versus the previous window.
-export function MomentumList({ rows, empty = "No data yet." }: { rows: Momentum[]; empty?: string }) {
+// cooling delta versus the previous window. Rows are clickable when
+// `onSelect` is given (e.g. to drill into a theme).
+export function MomentumList({
+  rows,
+  empty = "No data yet.",
+  onSelect,
+}: {
+  rows: Momentum[];
+  empty?: string;
+  onSelect?: (label: string) => void;
+}) {
   if (rows.length === 0) return <p className="text-[11px] text-neutral-600">{empty}</p>;
   const max = Math.max(...rows.map((r) => r.total), 1);
   return (
     <div className="space-y-2.5">
-      {rows.map((r) => (
-        <div key={r.label}>
-          <div className="flex items-center justify-between gap-2 text-[11px] mb-1">
-            <span className="text-neutral-300 truncate">{r.label}</span>
-            <span className="inline-flex items-center gap-2 shrink-0">
-              <TrendDelta delta={r.delta} />
-              <span className="tabular-nums text-neutral-500">{r.total}</span>
-            </span>
-          </div>
-          <div className="h-1.5 rounded-full bg-neutral-800 overflow-hidden">
-            <div className="h-full rounded-full bg-violet-500" style={{ width: `${(r.total / max) * 100}%` }} />
-          </div>
-        </div>
-      ))}
+      {rows.map((r) => {
+        const inner = (
+          <>
+            <div className="flex items-center justify-between gap-2 text-[11px] mb-1">
+              <span className={cn("truncate", onSelect ? "text-neutral-200 group-hover:text-violet-300 transition-colors" : "text-neutral-300")}>
+                {r.label}
+              </span>
+              <span className="inline-flex items-center gap-2 shrink-0">
+                <TrendDelta delta={r.delta} />
+                <span className="tabular-nums text-neutral-500">{r.total}</span>
+              </span>
+            </div>
+            <div className="h-1.5 rounded-full bg-neutral-800 overflow-hidden">
+              <div className="h-full rounded-full bg-violet-500" style={{ width: `${(r.total / max) * 100}%` }} />
+            </div>
+          </>
+        );
+        return onSelect ? (
+          <button key={r.label} onClick={() => onSelect(r.label)} className="group w-full text-left">
+            {inner}
+          </button>
+        ) : (
+          <div key={r.label}>{inner}</div>
+        );
+      })}
     </div>
   );
 }

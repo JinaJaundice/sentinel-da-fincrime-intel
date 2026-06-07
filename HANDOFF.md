@@ -76,10 +76,13 @@ Solutions · Intelligence · Radar · Activity.
   topics, and a **weekly digest** one-pager (copy/download in-app; the agent
   also writes `DIGEST.md`).
 - **FCA** tab — tracks FCA publications (consultation / discussion papers,
-  policy statements) across crypto + financial crime. They're regulatory
-  `Item`s with a `publication { issuer, kind, ref }` extra; the agent keeps it
-  fresh from `fca.org.uk`. Seeded with real papers (CP25/14, CP25/40, CP25/41,
-  CP25/15, DP24/4, PS24/17).
+  policy statements, guidance consultations) across crypto + financial crime.
+  They're regulatory `Item`s with a `publication { issuer, kind, ref }` extra.
+  Seeded with the **full crypto-regime set** (DP23/4 · DP24/4 · DP25/1 ·
+  CP25/14 · CP25/15 · CP25/25 · CP25/40 · CP25/41 · CP25/42 · CP26/4 · CP26/13 ·
+  GC26/2) plus **PS24/17** (Financial Crime Guide). The agent now **sweeps the
+  FCA listings exhaustively** each run (`INGEST.md`) and dedupes by `ref`, so
+  every new paper flows in.
 
 ## The autonomous agent (daily routine)
 

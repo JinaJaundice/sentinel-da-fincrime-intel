@@ -107,8 +107,10 @@ A dedicated **FCA** tab tracking FCA publications (consultation & discussion
 papers, policy statements, …) across crypto and financial crime — a filtered
 lens over items carrying a `publication { issuer, kind, ref }` extra, so they
 also surface in Signals. New [`views/FCA.tsx`](web/src/views/FCA.tsx) + an `fca`
-`DataTable` variant; no new data model. Seeded with real FCA papers (primary
-sources); the agent keeps it current from `fca.org.uk` (see `agent/INGEST.md`).
+`DataTable` variant; no new data model. Seeded with the **full crypto-regime
+set** (DP23/4 → CP26/13, incl. CP25/25, CP25/40–42, GC26/2) + PS24/17 —
+real papers, primary `fca.org.uk` sources. The agent now **sweeps the FCA
+listings exhaustively** each run and dedupes by `ref` (see `agent/INGEST.md`).
 
 ## Settled (former deferred items, decided 2026-06-06)
 

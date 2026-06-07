@@ -19,9 +19,17 @@ them by appending to `web/src/content/feed.json`.
 
 1. **Scan / search** the registry and the web for items dated since the last
    `lastUpdated` (regulation, enforcement, reports, funding/M&A, typologies).
-   Include the **FCA publications** feed (`fca.org.uk` — consultation &
-   discussion papers, policy statements, guidance, blogs) for crypto and
-   financial-crime topics; it's reliably current.
+   **FCA publications — sweep exhaustively.** Each run, enumerate the FCA's own
+   listings and add EVERY crypto- or financial-crime-related publication not
+   already in the store (dedupe by `publication.ref`, e.g. `CP25/25`), not just
+   the headline ones:
+   - crypto regime index (lists all crypto CP/DP/GC): https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation
+   - financial-crime hub: https://www.fca.org.uk/firms/financial-crime
+   - publications search filtered to "cryptoasset" and to "financial crime": https://www.fca.org.uk/publications
+   Capture consultation papers (CP), discussion papers (DP), policy statements
+   (PS), guidance consultations (GC), finalised guidance (FG) and relevant
+   blogs/speeches. Take the title, **exact date** and URL from the FCA page
+   itself (a primary source) — never guess a reference or date.
 2. **Dedupe** against existing ids/titles; skip anything already covered.
 3. **Draft** each new item as an [`Item`](../web/src/content/types.ts):
    - `type` (signal/regulatory/venture/solution/typology), `title`, `summary`;

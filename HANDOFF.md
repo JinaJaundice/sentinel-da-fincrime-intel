@@ -45,9 +45,10 @@ Intelligence · Trends · Radar · Activity.
 
 ## What's built
 
-- Command-center **Overview**, dense searchable/sortable tables with per-tab
-  dashboards, **Radar** (key-date timeline), **Intelligence** (typology
-  library), **Activity** (agent log).
+- Command-center **Overview** (with a "This week" pulse — top movers + the
+  weekly digest), dense searchable/sortable tables with per-tab dashboards,
+  **Radar** (key-date timeline), **Intelligence** (typology library),
+  **Activity** (agent log).
 - **Themes** — 6 curated topic briefings (Stablecoins, Sanctions/OFAC, Travel
   Rule, MiCA/EU, US rulemaking, State actors/DPRK), each a primer + aggregated
   items + risk-mix + key dates.

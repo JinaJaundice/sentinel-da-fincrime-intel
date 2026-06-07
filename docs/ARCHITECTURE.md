@@ -30,7 +30,7 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/components/BriefingPack.tsx` | `PackToggle` (per-item) + the floating `BriefingPackDrawer` — curate across views, reorder, export a one-pager |
 | `web/src/components/VendorMatrix.tsx` | Solutions comparison grid (vendors by category, stance-ordered) — the "Matrix" view mode |
 | `web/src/components/Term.tsx` | Inline glossary term — dotted-underline trigger, definition on hover/focus (looks up `glossary.ts`) |
-| `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, latest list |
+| `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, a "This week" pulse (movers + digest copy/download), latest list |
 | `web/src/views/Learn.tsx` | Knowledge hub: guided "start here" path (stream tour, how to read an item) + the searchable glossary |
 | `web/src/views/Themes.tsx` | Curated topic briefings — one page per theme, aggregating related items + a primer; per-theme `ExportMenu` (primer leads the Markdown) |
 | `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, a Verified-only filter, an `ExportMenu`, a Table/Matrix toggle (solutions), renders a `DataTable` or `VendorMatrix` |

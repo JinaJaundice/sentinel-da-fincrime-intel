@@ -44,7 +44,7 @@ export function App() {
       <Sidebar page={page} setPage={setPage} badgeCount={badgeCount} />
       <main className="flex-1 min-w-0">
         <div className="max-w-5xl mx-auto px-5 sm:px-8 py-8" key={page}>
-          {page === "brief" && <Brief items={items} setPage={setPage} lastUpdated={FEED_META.lastUpdated} />}
+          {page === "brief" && <Brief items={items} setPage={setPage} setTheme={setTheme} lastUpdated={FEED_META.lastUpdated} />}
           {page === "learn" && <Learn setPage={setPage} />}
           {page === "themes" && <Themes items={items} theme={theme} setTheme={setTheme} />}
           {page === "signals" && (

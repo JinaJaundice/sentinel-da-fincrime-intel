@@ -11,6 +11,8 @@ import {
   CalendarClock,
   Globe,
   LayoutDashboard,
+  Flame,
+  Download,
 } from "lucide-react";
 import type { Item, ItemType } from "../content/types";
 import type { Page } from "../components/Sidebar";
@@ -18,14 +20,27 @@ import { MILESTONES } from "../content/milestones";
 import { Panel, Stat, SectionHeading } from "../lib/ui";
 import { ItemCard } from "../components/ItemCard";
 import { StreamCard } from "../components/StreamCard";
+import { CopyButton } from "../components/CopyButton";
 import { PageHeader } from "../components/PageHeader";
 import { ImpactMix, MiniBars } from "../components/viz";
 import { countBy } from "../lib/insights";
+import { weeklyDigest, weeklyMovers } from "../lib/digest";
+import { downloadText } from "../lib/export";
 import { withinDays } from "../lib/utils";
 
 // The command center: headline metrics, a clickable summary of every
 // stream, an "at a glance" panel, and the latest few items.
-export function Brief({ items, setPage, lastUpdated }: { items: Item[]; setPage: (p: Page) => void; lastUpdated: string }) {
+export function Brief({
+  items,
+  setPage,
+  setTheme,
+  lastUpdated,
+}: {
+  items: Item[];
+  setPage: (p: Page) => void;
+  setTheme: (id: string) => void;
+  lastUpdated: string;
+}) {
   const published = items.filter((i) => i.status === "published");
   const agentSourced = published.filter((i) => i.addedBy === "agent");
   const highImpact = published.filter((i) => i.impact === "high");
@@ -44,6 +59,16 @@ export function Brief({ items, setPage, lastUpdated }: { items: Item[]; setPage:
   const regions = countBy(published, (i) => i.region);
 
   const todayLabel = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+
+  // "This week" pulse — reuses the digest machinery.
+  const movers = weeklyMovers(published).slice(0, 4);
+  const digest = weeklyDigest(published);
+  const openTheme = (id: string) => {
+    setPage("themes"); // setPage clears the theme, so set it after
+    setTheme(id);
+  };
+  const downloadDigest = () =>
+    downloadText(`sentinel-weekly-digest-${new Date().toISOString().slice(0, 10)}.md`, digest, "text/markdown");
 
   return (
     <div className="space-y-5">
@@ -79,6 +104,44 @@ export function Brief({ items, setPage, lastUpdated }: { items: Item[]; setPage:
         <Stat Icon={ShieldAlert} tone="rose" label="High impact" value={highImpact.length} />
         <Stat Icon={Sparkles} tone="neutral" label="Added this week" value={thisWeek.length} />
       </div>
+
+      <Panel className="p-4">
+        <SectionHeading
+          Icon={Flame}
+          title="This week"
+          sub="What moved in the last 7 days"
+          right={
+            <div className="flex items-center gap-2">
+              <CopyButton
+                text={digest}
+                label="Copy digest"
+                className="rounded-lg px-2.5 py-1.5 text-[11px] font-medium bg-neutral-900 ring-1 ring-neutral-800 hover:bg-neutral-800"
+              />
+              <button
+                onClick={downloadDigest}
+                className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-medium bg-neutral-900 text-neutral-300 ring-1 ring-neutral-800 hover:text-neutral-100 hover:bg-neutral-800 transition-colors"
+              >
+                <Download className="h-3.5 w-3.5" /> .md
+              </button>
+            </div>
+          }
+        />
+        {movers.length > 0 ? (
+          <div className="flex flex-wrap gap-2">
+            {movers.map((m) => (
+              <button
+                key={m.id}
+                onClick={() => openTheme(m.id)}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-violet-500/10 text-violet-200 ring-1 ring-violet-500/25 px-2.5 py-1 text-[12px] hover:bg-violet-500/20 transition-colors"
+              >
+                {m.label} <span className="text-violet-300/70 tabular-nums">{m.n} new</span>
+              </button>
+            ))}
+          </div>
+        ) : (
+          <p className="text-xs text-neutral-500">No new items in the last 7 days.</p>
+        )}
+      </Panel>
 
       <div className="grid lg:grid-cols-3 gap-5">
         <div className="lg:col-span-2">

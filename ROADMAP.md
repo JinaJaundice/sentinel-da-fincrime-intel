@@ -97,7 +97,9 @@ and most-active topics. Pure derivations in `lib/insights.ts`
 rows **drill into the theme**; and a **weekly digest** one-pager
 ([`lib/digest.ts`](web/src/lib/digest.ts)) — copy/download in-app, plus the
 agent regenerates [`DIGEST.md`](DIGEST.md) each run (`npm run digest`, wired in
-[`agent/INGEST.md`](agent/INGEST.md)).
+[`agent/INGEST.md`](agent/INGEST.md)). The **Overview** also carries a "This
+week" pulse — top movers (`weeklyMovers`, click to drill into a theme) + the
+digest copy/download.
 
 ## Settled (former deferred items, decided 2026-06-06)
 

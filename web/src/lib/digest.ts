@@ -16,6 +16,22 @@ function byNotable(a: Item, b: Item): number {
   return a.addedAt < b.addedAt ? 1 : -1;
 }
 
+// Themes ranked by how many items they drew in the last 7 days — the
+// structured form of the digest's "What moved" (for the Overview pulse).
+export interface WeeklyMover {
+  id: string;
+  label: string;
+  n: number;
+}
+
+export function weeklyMovers(items: Item[], now = new Date()): WeeklyMover[] {
+  const weekAgo = now.getTime() - 7 * 86_400_000;
+  const fresh = items.filter((i) => i.status === "published" && new Date(i.addedAt + "T00:00:00").getTime() >= weekAgo);
+  return THEMES.map((t) => ({ id: t.id, label: t.label, n: fresh.filter((i) => itemMatchesTheme(i, t)).length }))
+    .filter((x) => x.n > 0)
+    .sort((a, b) => b.n - a.n);
+}
+
 export function weeklyDigest(items: Item[], now = new Date()): string {
   const weekAgo = now.getTime() - 7 * 86_400_000;
   const pub = items.filter((i) => i.status === "published");

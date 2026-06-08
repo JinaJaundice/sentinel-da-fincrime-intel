@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07",
+  "lastUpdated": "2026-06-08",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -462,6 +462,63 @@
         { "name": "CoinDesk — Russia sanctions British teenager for alleging A7A5 use in funding Ukraine war", "url": "https://www.coindesk.com/policy/2026/06/04/russia-sanctions-british-teenager-for-alleging-a7a5-use-in-funding-ukraine-war" },
         { "name": "Euronews — British teenager sanctioned by Russia over Moscow-backed crypto laundering report", "url": "https://www.euronews.com/my-europe/2026/06/04/british-teenager-sanctioned-by-russia-over-his-report-on-alleged-moscow-backed-crypto-laun" },
         { "name": "The Moscow Times — 'I Touched a Nerve': British Teenager Banned From Russia Over Crypto Sanctions Evasion Work", "url": "https://www.themoscowtimes.com/2026/06/05/i-touched-a-nerve-british-teenager-banned-from-russia-over-work-on-crypto-sanctions-evasion-a92940" }
+      ]
+    },
+    {
+      "id": "feed-fincen-mbaer-section311",
+      "type": "signal",
+      "title": "FinCEN Section 311 severs Swiss MBaer Merchant Bank from US system — FINMA orders liquidation",
+      "summary": "On 26 February 2026, FinCEN proposed the most severe Section 311 measure against MBaer Merchant Bank AG, a Swiss private bank, prohibiting US financial institutions from opening or maintaining correspondent accounts for it and requiring enhanced due diligence against indirect access. FinCEN alleged MBaer funnelled over $100M through the US financial system on behalf of Iranian and Russian illicit actors — including $50M+ in Iranian oil smuggling — as well as Venezuelan corruption and terrorist financing. Swiss regulator FINMA swiftly followed by withdrawing MBaer's banking licence and ordering liquidation; FINMA's investigation found 80% of MBaer's business relationships carried elevated risk and 98% of its assets came from high-risk clients.",
+      "soWhat": "Section 311 is the functional equivalent of a dollar-clearing death sentence — MBaer's banking licence was gone within days of the NPRM. For UK/EU banks, the lesson is that a small private bank with concentrated high-risk client exposure and lax controls can be severed from the dollar system with no grandfathering period. Review any correspondent banking or sub-custodian relationships with Swiss private banks that have material CIS/Russia/Iran-nexus client books — the MBaer precedent signals FinCEN is prepared to use its most severe tool against non-US banks.",
+      "date": "2026-02-26",
+      "addedAt": "2026-06-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "tags": ["FinCEN", "Section-311", "Switzerland", "correspondent-banking", "Iran", "Russia", "Venezuela", "enforcement"],
+      "sources": [
+        { "name": "Treasury — FinCEN proposes cutting off Swiss bank MBaer's US financial system access", "url": "https://home.treasury.gov/news/press-releases/sb0408" },
+        { "name": "WilmerHale — FinCEN's 311 Action Targets Swiss MBaer and High-Risk Financial Crime", "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260310-fincens-311-action-targets-swiss-mbaer-and-high-risk-financial-crime" },
+        { "name": "Money Laundering Watch — FinCEN Targets MBaer with Most Severe Section 311 Measure", "url": "https://www.moneylaunderingnews.com/2026/03/fincen-targets-mbaer-with-most-severe-section-311-measure/" },
+        { "name": "Lenz & Staehelin — MBaer: FinCEN 311 and FINMA liquidation — compliance lessons for Swiss FIs", "url": "https://www.lenzstaehelin.com/news-and-insights/browse-thought-leadership-insights/insights-detail/mbaer-merchant-bank-ag-fincen-section-311-action-and-finma-liquidation-important-compliance-lessons-for-swiss-financial-institutions/" }
+      ]
+    },
+    {
+      "id": "feed-clarity-act-senate-floor-2026",
+      "type": "regulatory",
+      "title": "CLARITY Act reaches US Senate floor calendar — 8 weeks to pass or die before summer recess",
+      "summary": "The Digital Asset Market Clarity Act cleared the Senate Banking Committee 15–9 on 14 May 2026 and was formally placed on the Senate Legislative Calendar on 1 June 2026. The bill would resolve the SEC/CFTC jurisdiction standoff by routing every digital asset into one of three categories: digital commodities (CFTC exclusive jurisdiction), investment-contract assets (SEC), and permitted payment stablecoins (joint oversight). It faces a narrow runway — approximately eight weeks of Senate floor time before the summer recess — and needs 60 votes, requiring at least seven Democrats. The principal sticking point is an ethics provision mandating that the President and senior officials divest personal crypto holdings; without it, Democrats call the bill a dealbreaker. Galaxy Digital has reportedly bet $10M on 2026 passage.",
+      "soWhat": "Passage would end five years of enforcement-by-litigation uncertainty on the securities/commodity classification question — materially reducing regulatory risk for US-facing crypto counterparties and reshaping what 'compliant' means for exchange and token products. Failure (or a thin partisan passage) leaves the SEC/CFTC ambiguity intact and signals continued litigation-as-regulation. Banks with US digital-asset exposure should treat the ethics-provision resolution as the leading indicator: a bipartisan deal implies durable certainty; a party-line result implies fragility.",
+      "date": "2026-06-01",
+      "addedAt": "2026-06-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "tags": ["CLARITY-Act", "SEC", "CFTC", "market-structure", "legislation", "US", "digital-commodities"],
+      "sources": [
+        { "name": "CoinDesk — Clarity Act survival depends on Senate getting a lot of non-crypto work done", "url": "https://www.coindesk.com/news-analysis/2026/06/02/clarity-act-survival-depends-on-the-u-s-senate-getting-a-lot-of-non-crypto-work-done" },
+        { "name": "ABA Banking Journal — Senate Banking Committee advances Clarity Act", "url": "https://bankingjournal.aba.com/2026/05/senate-banking-committee-advances-clarity-act/" },
+        { "name": "CNBC — Crypto industry scores win as Clarity Act clears Senate hurdle", "url": "https://www.cnbc.com/2026/05/14/clarity-act-congress-crypto-senate.html" },
+        { "name": "Senate Banking Committee — CLARITY Act section-by-section summary", "url": "https://www.banking.senate.gov/imo/media/doc/section-by-section.pdf" }
+      ]
+    },
+    {
+      "id": "feed-kroll-us-enforcement-gap-2026",
+      "type": "signal",
+      "title": "Kroll: US AML fines declining as illicit crypto flows hit record $158B — deregulation widens enforcement gap",
+      "summary": "Kroll's March 2026 report 'The Money Laundering Surge: Crypto, Enforcement Gaps and What Comes Next' documents a structural mismatch: crypto-linked illicit flows reached an estimated record $158 billion in 2025 — more than twice 2024's total — while global AML fines and penalties declined, especially in the US. Kroll attributes the enforcement gap to deregulatory trends, FinCEN staff reductions, and a fragmented state-level money transmitter licence framework that leaves crypto exchanges — handling trillions annually — subject to rarer and less rigorous federal examination than banks. AI-powered automation is identified as a key driver of the surge in laundering sophistication.",
+      "soWhat": "A record illicit-flow number alongside declining US enforcement creates a de facto permissiveness signal that sophisticated laundering networks will exploit. For UK/EU institutions, the US enforcement gap means US-origin counterparties and correspondent flows warrant heightened scrutiny, not reduced, even as domestic US regulatory noise quietens under the Trump administration. The Kroll finding also validates the European approach of tightening (AMLA, MiCA) as a competitive differentiator — expect divergent standards between the US and EU crypto compliance regimes to widen further in 2026–27.",
+      "date": "2026-03-26",
+      "addedAt": "2026-06-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "tags": ["enforcement", "FinCEN", "AML", "US", "deregulation", "illicit-flows", "Kroll", "regulatory-divergence"],
+      "sources": [
+        { "name": "Kroll — The Money Laundering Surge: Crypto, Enforcement Gaps and What Comes Next", "url": "https://www.kroll.com/en/publications/financial-compliance-regulation/the-money-laundering-surge-crypto-enforcement-gaps" }
       ]
     }
   ]

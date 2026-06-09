@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-08",
+  "lastUpdated": "2026-06-09",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -519,6 +519,104 @@
       "tags": ["enforcement", "FinCEN", "AML", "US", "deregulation", "illicit-flows", "Kroll", "regulatory-divergence"],
       "sources": [
         { "name": "Kroll — The Money Laundering Surge: Crypto, Enforcement Gaps and What Comes Next", "url": "https://www.kroll.com/en/publications/financial-compliance-regulation/the-money-laundering-surge-crypto-enforcement-gaps" }
+      ]
+    },
+    {
+      "id": "feed-fbi-ic3-2025-crypto-fraud",
+      "type": "signal",
+      "title": "FBI IC3 2025: crypto fraud hits record $11.4B — half of all US cybercrime losses",
+      "summary": "The FBI's 2025 Internet Crime Report (released 7 April 2026) recorded 181,565 crypto-related complaints totalling $11.4 billion, a 22% increase from 2024 and the highest annual figure on record. Crypto-linked losses now represent roughly 55% of the FBI's $20.9B total internet-crime loss tally. Investment fraud was the dominant sub-category at $7.2B; Americans over 60 accounted for $7.7B across all fraud types (up 37%). The report includes a first-ever AI-fraud section: 22,364 AI-related complaints at $893M. Operation Level Up — the FBI's proactive victim-notification programme using IC3 data to contact victims mid-scam — interrupted 3,780 cases in 2025 and saved an estimated $225.8M.",
+      "soWhat": "Crypto-enabled investment fraud is now the largest single US cybercrime loss category by dollar value, and its share is growing. For banks, two operational implications follow: (1) transaction monitoring should be calibrated for higher SAR volumes from pig-butchering and trust-investment typologies as the loss curve steepens; (2) the $7.7B senior-loss figure creates specific obligations under financial-exploitation frameworks — front-line staff should treat rapid large crypto transfers by older customers as a red flag requiring positive confirmation of purpose. Operation Level Up's model also signals FBI expectation that financial institutions actively cooperate to interrupt fraud in progress, not just file retrospective SARs.",
+      "date": "2026-04-07",
+      "addedAt": "2026-06-09",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["FBI", "IC3", "investment-fraud", "fraud", "pig-butchering", "AI", "seniors", "typology"],
+      "sources": [
+        { "name": "FBI IC3 — 2025 Internet Crime Report (PDF)", "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf", "kind": "primary" },
+        { "name": "FBI — Cryptocurrency and AI Scams Bilk Americans of Billions (press release)", "url": "https://www.fbi.gov/news/press-releases/cryptocurrency-and-ai-scams-bilk-americans-of-billions", "kind": "primary" },
+        { "name": "The Block — FBI: crypto-related fraud losses hit record $11.4B in 2025", "url": "https://www.theblock.co/post/397134/fbi-says-crypto-related-fraud-losses-hit-record-11-4-billion-in-2025-with-seniors-bearing-the-brunt", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-crypto-wrench-attacks-2026",
+      "type": "typology",
+      "title": "Physical coercion ('wrench attacks') on crypto holders surges 75% — $101M lost, France charges 88",
+      "summary": "CertiK's 2026 Wrench Attacks Overview and CoinDesk reporting document a 75% year-on-year surge in physical coercion attacks on crypto holders. By early May 2026, 34 verified incidents had caused $101M+ in losses globally. Europe accounts for 82% of cases; France logged 41 kidnappings and home invasions since January — roughly one every 2.5 days — and has charged 88 suspects, more than 10 of them minors, across 12 active judicial investigations. Attackers are no longer opportunistic: transnational organised criminal networks use OSINT-driven targeting, social engineering, and extreme violence to extract private keys. CertiK projects 130+ incidents in 2026. Binance launched 'Withdraw Protection' in direct response.",
+      "soWhat": "Physical coercion creates a laundering flow that bypasses most AML typologies — the victim authorises the transfer under duress, so on-chain it reads as a self-directed movement. For banks, proceeds may arrive as large rapid-liquidation flows from an account that appears to belong to the genuine holder. Typology update needed: flag high-value self-directed crypto transfers followed by rapid fiat off-ramp activity, particularly when preceded by unusual prior contact or OTC red flags. Relationship managers and branch staff should be briefed on distress signals. UK institutions face specific POCA obligations as receiving institutions for criminal property, regardless of whether the transfer looked voluntary.",
+      "date": "2026-05-08",
+      "addedAt": "2026-06-09",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["typology", "physical-coercion", "wrench-attacks", "France", "organized-crime", "OSINT", "laundering", "CertiK"],
+      "typology": {
+        "vector": "Physical coercion (wrench attacks) — transnational organised criminal networks use OSINT targeting, social engineering and violence to extract private keys; proceeds laundered as apparently self-directed transfers",
+        "controls": [
+          "Flag high-value self-directed crypto transfers followed by rapid fiat off-ramp activity",
+          "Relationship-manager briefing on customer distress signals at point of instruction",
+          "Screen addresses linked to known wrench-attack clusters (CertiK Skynet)",
+          "Treat rapid large crypto liquidation from retail accounts as enhanced-due-diligence trigger"
+        ],
+        "obligations": [
+          "SAR on suspected theft proceeds transferred under duress",
+          "POCA obligations on receiving institutions for criminal property regardless of voluntary appearance"
+        ]
+      },
+      "sources": [
+        { "name": "CertiK — 2026 Wrench Attacks Overview", "url": "https://www.certik.com/blog/2026-wrench-attacks-overview", "kind": "primary" },
+        { "name": "CoinDesk — Crypto crime is getting violent: wrench attacks jumped 75% in 2026", "url": "https://www.coindesk.com/markets/2026/02/02/crypto-crime-is-getting-violent-wrench-attacks-jumped-75-in-2026", "kind": "secondary" },
+        { "name": "CoinDesk — Inside the rise of wrench attacks: how France has become the focus", "url": "https://www.coindesk.com/business/2026/04/19/inside-the-rise-of-wrench-attacks-against-crypto-holders-and-how-france-has-become-the-focus", "kind": "secondary" },
+        { "name": "CoinAlert — Crypto Wrench Attack Losses Hit $101M in Early 2026", "url": "https://coinalertnews.com/news/2026/05/08/crypto-wrench-attacks-2026", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fca-cp26-13-perimeter-guidance",
+      "type": "regulatory",
+      "title": "FCA CP26/13: cryptoasset perimeter guidance defines who needs FSMA authorisation from October 2027",
+      "summary": "On 15 April 2026 the FCA published Consultation Paper CP26/13 adding a new Chapter 19 to the Perimeter Guidance Manual to clarify which activities require FCA authorisation under the Financial Services and Markets Act 2000 (Cryptoassets) Regulations 2026, effective 25 October 2027. Seven regulated activities are addressed: issuing qualifying stablecoins, safeguarding cryptoassets, operating a trading platform, dealing as principal or agent, arranging deals, and arranging staking. The consultation closed 3 June 2026; final guidance is expected September 2026, ahead of the application gateway opening 30 September 2026.",
+      "soWhat": "CP26/13 is the definitive guide to the UK crypto perimeter — it determines whether a counterparty, custodian or service provider will need FSMA authorisation. For banks, the critical sections are safeguarding and stablecoin issuance: firms that arrange safeguarding of qualifying cryptoassets for clients will need their own permissions, raising the authorisation bar for tokenised-asset custody and sub-custody arrangements. September 2026 final guidance will be the reference for counterparty authorisation-status assessments — banks should start tracking which CASP counterparties have engaged with PASS now, before authorisation status becomes determinative for relationship eligibility.",
+      "date": "2026-04-15",
+      "addedAt": "2026-06-09",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "CP26-13", "perimeter", "authorization", "CASP", "UK", "stablecoin", "safeguarding", "staking"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Consultation Paper",
+        "ref": "CP26/13"
+      },
+      "sources": [
+        { "name": "FCA — CP26/13: Cryptoasset perimeter guidance", "url": "https://www.fca.org.uk/publications/consultation-papers/cp26-13-cryptoasset-perimeter-guidance", "kind": "primary" },
+        { "name": "FCA — CP26/13 consultation paper (PDF)", "url": "https://www.fca.org.uk/publication/consultation/cp26-13.pdf", "kind": "primary" },
+        { "name": "Regulation Tomorrow — FCA CP26/13: Cryptoasset Perimeter Guidance", "url": "https://www.regulationtomorrow.com/2026/04/fca-cp26-13-cryptoasset-perimeter-guidance/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-genius-defi-scope-contest",
+      "type": "signal",
+      "title": "GENIUS Act AML rule: Paradigm and Hyperliquid warn DeFi protocols could be swept into compliance perimeter",
+      "summary": "As the FinCEN/OFAC GENIUS Act stablecoin AML/sanctions NPRM comment period closed on 9 June 2026, Paradigm and the Hyperliquid Policy Center submitted a joint letter arguing that the rule as drafted could treat stablecoin issuers as compliance gatekeepers for every downstream smart-contract interaction — including DeFi protocols the issuer does not control or monitor. They warned this could push regulated stablecoin activity offshore and unintentionally extend AML obligations to developers, validators, and protocol infrastructure builders. The final rule is expected later in 2026.",
+      "soWhat": "The scope question — whether a stablecoin issuer's AML obligations follow the coin into permissionless DeFi — is now formally contested and will be resolved in the final rule. Two scenarios: (1) FinCEN confirms broad scope, forcing issuers to build real-time DeFi monitoring and potentially freezing coins used in non-compliant protocols — this would push DeFi toward regulated stablecoins with embedded compliance; (2) FinCEN excludes DeFi, leaving DeFi stablecoin flows in a grey compliance zone for bank counterparties. Banks with US stablecoin or DeFi exposure should monitor the final rule closely and refrain from assuming compliant stablecoin issuance extends compliance assurance into the DeFi layer.",
+      "date": "2026-06-09",
+      "addedAt": "2026-06-09",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["GENIUS-Act", "stablecoin", "DeFi", "FinCEN", "OFAC", "perimeter", "AML", "comment-period"],
+      "sources": [
+        { "name": "The Block — Hyperliquid advocate and Paradigm urge US to revise proposed AML rule", "url": "https://www.theblock.co/post/404159/hyperliquid-advocate-paradigm-urge-us-revise-proposed-anti-money-laundering-rule", "kind": "secondary" },
+        { "name": "CryptoTimes — Paradigm, Hyperliquid Sound Alarm on GENIUS Act Over Stablecoin and DeFi", "url": "https://www.cryptotimes.io/2026/06/09/paradigm-hyperliquid-sound-alarm-on-genius-act-over-stablecoin-and-defi/", "kind": "secondary" }
       ]
     }
   ]

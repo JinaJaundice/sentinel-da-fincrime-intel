@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-09",
+  "lastUpdated": "2026-06-10",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -598,6 +598,69 @@
         { "name": "FCA — CP26/13: Cryptoasset perimeter guidance", "url": "https://www.fca.org.uk/publications/consultation-papers/cp26-13-cryptoasset-perimeter-guidance", "kind": "primary" },
         { "name": "FCA — CP26/13 consultation paper (PDF)", "url": "https://www.fca.org.uk/publication/consultation/cp26-13.pdf", "kind": "primary" },
         { "name": "Regulation Tomorrow — FCA CP26/13: Cryptoasset Perimeter Guidance", "url": "https://www.regulationtomorrow.com/2026/04/fca-cp26-13-cryptoasset-perimeter-guidance/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fca-aml-qa-cryptoasset-june2026",
+      "type": "regulatory",
+      "title": "FCA publishes detailed AML/financial crime expectations for cryptoasset firms ahead of September 2026 gateway",
+      "summary": "On 3 June 2026 the FCA published a webinar Q&A setting out its financial crime expectations for cryptoasset firms under the forthcoming FSMA regime. Key clarifications: no automatic conversion from MLR registration to FSMA authorisation; firms must satisfy materially higher standards — including MLRO competency, a documented and tested business-wide risk assessment (BWRA), justified and configured transaction monitoring tools, and end-to-end integration of AML, CTF, CPF and sanctions controls. The Travel Rule continues to operate concurrently under the MLRs and is assessed per firm. Applications open 30 September 2026.",
+      "soWhat": "The FCA has raised the bar: FSMA authorisation requires full financial crime governance — not just AML registration. For banks, two direct implications: (1) any bank activity falling within the FSMA cryptoasset perimeter must plan a governance overhaul before September, not a registration renewal; (2) CASP counterparty assessments should use these expectations as the benchmark — a CASP that cannot demonstrate MLRO competency, a live BWRA and tested transaction monitoring is unlikely to pass the gateway, creating a forward-looking counterparty risk cliff from October 2027 for non-compliant firms.",
+      "date": "2026-06-03",
+      "addedAt": "2026-06-10",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "AML", "MLR", "FSMA", "cryptoasset", "financial-crime", "MLRO", "gateway", "authorization"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Guidance",
+        "ref": "Cryptoasset AML/CTF webinar Q&A 2026"
+      },
+      "sources": [
+        { "name": "FCA — Cryptoasset AML/CTF webinar Q&A (PDF)", "url": "https://www.fca.org.uk/publication/documents/introduction-anti-money-laundering-regulations-webinar-qa-2026.pdf", "kind": "primary" },
+        { "name": "Regulation Tomorrow — FCA respond to firms' questions on interaction between MLRs and new cryptoassets framework", "url": "https://www.regulationtomorrow.com/2026/06/fca-respond-to-firms-questions-on-interaction-between-money-laundering-regulations-and-new-cryptoassets-regulatory-framework/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-nydfs-genius-stablecoin-proposal",
+      "type": "regulatory",
+      "title": "New York DFS proposes GENIUS Act-compatible stablecoin framework — first state certification blueprint",
+      "summary": "On 9 June 2026 the New York Department of Financial Services published a proposed regulation updating its USD-backed stablecoin framework to align with US Treasury's proposed requirements for state certification under the GENIUS Act. The proposal preserves NY's existing core requirements (full backing, redemption rights, independent audit) and adds federal provisions: custodian concentration limits (maximum reserves per single custodian) and mandatory risk management programmes covering internal controls, information security, internal audits, asset growth oversight, and affiliate transaction governance. A 10-day pre-proposal comment period opened June 9, followed by a 60-day formal consultation; the final rule takes effect when the GENIUS Act becomes effective, with a one-year transition for existing NY-licensed issuers.",
+      "soWhat": "New York is the world's most experienced crypto supervisor — its GENIUS-compatible framework is the likely template for state certification across the US. The custodian concentration limits are significant: they impose portfolio diversification standards on reserve custodians, reducing single-point-of-failure risk. For banks, NY-licensed stablecoin issuers operating under this framework (including Circle's USDC) will offer stronger operational safeguards and a clearer compliance pathway than off-shore or non-certified issuers — a meaningful differentiator for counterparty risk tiering. Track the 60-day comment period; custodian limits and risk-management programme requirements are the provisions most likely to draw industry pushback.",
+      "date": "2026-06-09",
+      "addedAt": "2026-06-10",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["GENIUS-Act", "stablecoin", "DFS", "New-York", "state-regulation", "custodian", "reserve", "AML"],
+      "sources": [
+        { "name": "NY DFS — Proposed stablecoin regulation press release", "url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr20260609", "kind": "primary" },
+        { "name": "CryptoTimes — New York moves to align stablecoin rules under the GENIUS Act", "url": "https://www.cryptotimes.io/2026/06/10/new-york-moves-to-align-stablecoin-rules-under-the-genius-act/", "kind": "secondary" },
+        { "name": "PYMNTS — New York moves to align stablecoin rules with GENIUS Act", "url": "https://www.pymnts.com/cryptocurrency/2026/new-york-moves-align-stablecoin-rules-with-genius-act/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-mica-17pct-licensed-21-days",
+      "type": "signal",
+      "title": "21 days to MiCA deadline: only ~17% of pre-MiCA VASPs licensed — banks face imminent CASP counterparty cliff",
+      "summary": "With the MiCA transitional period expiring 1 July 2026, ESMA's Interim MiCA Register (refreshed 4 June) shows approximately 210 authorised CASPs against more than 1,200 pre-MiCA VASP entities — a ~17% conversion rate with three weeks remaining. Around 10 EU jurisdictions have issued zero CASP authorisations to date. An estimated 7.6 million of 18.5 million EU crypto app downloads in the past year went to currently unlicensed exchanges.",
+      "soWhat": "Roughly 83% of the existing CASP universe will be operating in breach of EU law from July 1 unless they wind down or receive last-minute authorisation. For banks, any CASP counterparty relationship not confirmed as an authorised CASP in ESMA's register is a live compliance risk today — not a future risk. Run an immediate pass of all active CASP counterparties (including omnibus accounts, payment routing and liquidity providers) against the ESMA Interim MiCA Register. The 10 EU jurisdictions with zero authorisations signal uneven enforcement — monitor NCA-level post-July 1 actions. Existing item feed-mica-casp-july1-deadline covers the legal framework; this data quantifies the counterparty cliff.",
+      "date": "2026-06-07",
+      "addedAt": "2026-06-10",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": ["MiCA", "ESMA", "CASP", "EU", "authorization", "counterparty-risk", "enforcement", "deadline"],
+      "sources": [
+        { "name": "ESMA — Interim MiCA Register (updated 4 June 2026)", "url": "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica", "kind": "primary" },
+        { "name": "Spoted Crypto — MiCA July 2026 Deadline: Unlicensed Crypto Exchanges Must Stop EU", "url": "https://www.spotedcrypto.com/mica-casp-deadline-july-2026-unlicensed-exchanges/", "kind": "secondary" }
       ]
     },
     {

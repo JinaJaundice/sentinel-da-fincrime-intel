@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-10",
+  "lastUpdated": "2026-06-11",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -680,6 +680,52 @@
       "sources": [
         { "name": "The Block — Hyperliquid advocate and Paradigm urge US to revise proposed AML rule", "url": "https://www.theblock.co/post/404159/hyperliquid-advocate-paradigm-urge-us-revise-proposed-anti-money-laundering-rule", "kind": "secondary" },
         { "name": "CryptoTimes — Paradigm, Hyperliquid Sound Alarm on GENIUS Act Over Stablecoin and DeFi", "url": "https://www.cryptotimes.io/2026/06/09/paradigm-hyperliquid-sound-alarm-on-genius-act-over-stablecoin-and-defi/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-audia6-mixer-takedown-2026",
+      "type": "signal",
+      "title": "US and Europol dismantle AudiA6 mixer — $389M laundered for ransomware gangs, two operators arrested",
+      "summary": "On 11 June 2026, US authorities (DOJ Eastern District of Pennsylvania, IRS-CI, US Secret Service) and Europol dismantled AudiA6, a cryptocurrency mixing service that processed approximately $389M (EUR 336M) over five years, with at least $20M directly traceable to ransomware payments and dark-web criminal proceeds. Two operators — Igorevich Tkachuk, 37 (Ukraine), and Alexander Vladimirovich Ledenev, 25 (Russia) — were arrested in Batumi, Georgia. Europol linked AudiA6 infrastructure to 15+ international cybercrime investigations. Servers, domains, and encrypted assets were seized. Despite AudiA6's promises of untraceability, investigators traced transactions directly through exchange records.",
+      "soWhat": "Two points for bank AML teams: first, mixer-based post-payment obfuscation remains active despite OFAC Tornado Cash sanctions — cross-chain and mixer-sequence typologies must stay live. Second, Europol's attribution of AudiA6 to 15+ cybercrime investigations means proceeds flowing through this service will surface in law-enforcement lookback requests — ensure your blockchain analytics tooling indexes the now-seized AudiA6 address clusters. The traceability finding (federal investigators traced every transaction despite 'untraceability' claims) also reinforces the operational value of on-chain forensics for mixer-touched flows.",
+      "date": "2026-06-11",
+      "addedAt": "2026-06-11",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["mixer", "enforcement", "DOJ", "Europol", "ransomware", "money-laundering", "takedown", "IRS-CI"],
+      "sources": [
+        { "name": "DOJ — Operators of Cryptocurrency Mixers Charged with Money Laundering", "url": "https://www.justice.gov/usao-ndga/pr/operators-cryptocurrency-mixers-charged-money-laundering", "kind": "primary" },
+        { "name": "Europol — Ransomware gangs cut from EUR 336M AudiA6 laundering pipeline", "url": "https://www.europol.europa.eu/media-press/newsroom/news/ransomware-gangs-cut-eur-336-million-audia6-crypto-laundering-pipeline", "kind": "primary" },
+        { "name": "Philadelphia Inquirer — Philly feds charge two with running $389M crypto laundering scheme", "url": "https://www.inquirer.com/crime/bitcoin-crypto-money-laundering-dark-web-audia6-arrested-20260611.html", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fca-cp26-17-cetns-authorised-funds",
+      "type": "regulatory",
+      "title": "FCA CP26/17: UK authorised funds may hold crypto ETNs up to 10% — first retail-fund crypto exposure rule",
+      "summary": "Published 5 June 2026 (consultation closes 13 July 2026), FCA CP26/17 proposes that authorised UCITS and non-UCITS retail schemes (NURS) may hold cryptoasset exchange traded notes (cETNs) up to 10% of scheme property. Qualified investor schemes (QIS) face no cap; long-term asset funds (LTAFs) and feeder authorised investment funds (FAIFs) are excluded. The proposal follows the FCA lifting its retail cETN sales prohibition in August 2025 and sets the first explicit exposure limit for crypto within mainstream UK retail fund structures. CP26/17 also proposes setting regulated income as the tariff base for cryptoasset firms' FCA fees, and removing mandatory post-approval notifications for crypto financial promotions that are already substantially compliant.",
+      "soWhat": "A 10% cETN cap in retail funds is a material boundary rule for UK fund managers and bank wealth platforms: existing and planned fund products must model crypto ETN allocations against the cap and assess liquidity risk under stress. For bank compliance, cETN holdings create a new AML/CFT due-diligence question — crypto-linked exposures in retail fund products may now feed into customer risk assessments. The regulated-income fee tariff is the first indicator of what FCA cryptoasset authorisation will cost, directly informing the build-vs-buy and counterparty-viability calculus for firms planning September 2026 gateway applications.",
+      "date": "2026-06-05",
+      "addedAt": "2026-06-11",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "CP26-17", "cETN", "authorised-funds", "UCITS", "retail", "cryptoasset", "UK", "fees", "financial-promotion"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Consultation Paper",
+        "ref": "CP26/17"
+      },
+      "sources": [
+        { "name": "FCA — CP26/17: Quarterly consultation paper No. 52", "url": "https://www.fca.org.uk/publications/consultation-papers/cp26-17-quarterly-consultation-paper-no-52", "kind": "primary" },
+        { "name": "FCA — CP26/17 full PDF", "url": "https://www.fca.org.uk/publication/consultation/cp26-17.pdf", "kind": "primary" },
+        { "name": "The Block — UK FCA proposes allowing authorised funds to allocate up to 10% to crypto ETNs", "url": "https://www.theblock.co/post/403957/uk-fca-proposes-allowing-authorized-funds-to-allocate-up-to-10-to-crypto-etns", "kind": "secondary" },
+        { "name": "Regulation Tomorrow — FCA CP26/17: Quarterly Consultation Paper No. 52", "url": "https://www.regulationtomorrow.com/2026/06/fca-cp26-17-quarterly-consultation-paper-no-52/", "kind": "secondary" }
       ]
     }
   ]

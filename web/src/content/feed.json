@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -726,6 +726,93 @@
         { "name": "FCA — CP26/17 full PDF", "url": "https://www.fca.org.uk/publication/consultation/cp26-17.pdf", "kind": "primary" },
         { "name": "The Block — UK FCA proposes allowing authorised funds to allocate up to 10% to crypto ETNs", "url": "https://www.theblock.co/post/403957/uk-fca-proposes-allowing-authorized-funds-to-allocate-up-to-10-to-crypto-etns", "kind": "secondary" },
         { "name": "Regulation Tomorrow — FCA CP26/17: Quarterly Consultation Paper No. 52", "url": "https://www.regulationtomorrow.com/2026/06/fca-cp26-17-quarterly-consultation-paper-no-52/", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-eu-russia-21st-sanctions-country-ban",
+      "type": "regulatory",
+      "title": "EU 21st Russia sanctions package: 11 crypto platforms banned and first country-level crypto-sector kill-switch power",
+      "summary": "Unveiled 10 June 2026 (formal adoption expected at the EU Foreign Ministers meeting on 15 June), the EU's 21st Russia sanctions package bans EU persons from transacting with 11 named crypto platforms that have facilitated Russian sanctions evasion through third-country intermediaries, adds 31 Russian banks to the full asset-freeze list (taking the total sanctioned Russian banks past 100), and introduces a mechanism with no precedent in prior EU sanctions rounds: the European Commission may now designate entire foreign jurisdictions as off-limits for crypto-asset services if those countries are found to be hosting platforms enabling Russian sanctions evasion. Turkey, the UAE, Kazakhstan, and Hong Kong are identified in the public analytical frame as the primary intermediary hubs for Russian crypto flows.",
+      "soWhat": "A country-level crypto-sector ban is structurally more powerful than entity-level listing — a single EC designation decision cuts an entire jurisdiction's CASP ecosystem off from EU-regulated markets, with no grandfathering for existing counterparty relationships. Banks should stress-test exposure now: any correspondent banking, liquidity, or CASP counterparty flows routed through Turkish, Emirati, or Kazakh platforms could become sanctioned exposure without a specific entity being pre-listed. The 11 new platform bans require an immediate counterparty sweep. This is distinct from the 20th package's blanket ban on Russian and Belarusian CASPs — the 21st extends the weapon to Russia's intermediary jurisdictions.",
+      "date": "2026-06-10",
+      "addedAt": "2026-06-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["sanctions", "Russia", "EU", "CASP", "country-ban", "kill-switch", "Turkey", "UAE", "Kazakhstan"],
+      "sources": [
+        { "name": "OCCRP — EU Plans Massive 21st Sanctions Package to Target Russian Banks and Crypto", "url": "https://www.occrp.org/en/news/eu-plans-massive-21st-sanctions-package-to-target-russian-banks-and-crypto", "kind": "secondary" },
+        { "name": "The Block — EU proposes expanded sanctions on Russia-linked crypto platforms", "url": "https://www.theblock.co/amp/post/404207/eu-proposes-russia-crypto-sanction", "kind": "secondary" },
+        { "name": "CryptoBriefing — EU targets Kremlin aide Medinsky and crypto platforms", "url": "https://cryptobriefing.com/eu-sanctions-medinsky-crypto-platforms/", "kind": "secondary" },
+        { "name": "Kyiv Independent — EU unveils 21st Russia sanctions package", "url": "https://kyivindependent.com/eu-unveils-21st-russia-sanctions-package/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-elliptic-series-d",
+      "type": "venture",
+      "title": "Elliptic raises $120M Series D at $670M valuation — Deutsche Bank, Nasdaq Ventures, J.P. Morgan and British Business Bank back blockchain compliance expansion",
+      "summary": "On 12 May 2026, Elliptic closed a $120 million Series D led by One Peak, with Deutsche Bank, Nasdaq Ventures, the British Business Bank, AlbionVC, Evolution Equity Partners, and J.P. Morgan participating, valuing the London-based blockchain analytics firm at $670 million. Elliptic screens over 1 billion transactions weekly across 65+ blockchains for 700+ clients in 30 countries. Proceeds will accelerate AI-driven analytics for stablecoin and tokenised-asset transaction monitoring.",
+      "soWhat": "Deutsche Bank's direct equity stake — alongside J.P. Morgan and the UK state-backed British Business Bank — signals blockchain analytics is transitioning from compliance tooling to systemically important financial infrastructure. The British Business Bank's participation carries implicit public-sector endorsement with direct relevance to FCA CASP authorisation assessments. Combined with TRM Labs' $70M Series C earlier in 2026 (see feed-trm-series-c), the KYT/blockchain analytics market is consolidating into a small set of institutionally-backed vendors — accelerating build-vs-buy economics decisively toward buy for banks assessing compliance technology.",
+      "date": "2026-05-12",
+      "addedAt": "2026-06-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["funding", "Elliptic", "blockchain-analytics", "KYT", "Deutsche-Bank", "RegTech", "Series-D", "AI"],
+      "venture": {
+        "company": "Elliptic",
+        "round": "Series D",
+        "amount": "$120M",
+        "investors": ["One Peak", "Deutsche Bank", "Nasdaq Ventures", "British Business Bank", "AlbionVC", "Evolution Equity Partners", "J.P. Morgan"]
+      },
+      "sources": [
+        { "name": "Elliptic — $120M Series D announcement", "url": "https://www.elliptic.co/media-center/elliptic-secures-120-million-investment", "kind": "primary" },
+        { "name": "British Business Bank — investment press release", "url": "https://www.british-business-bank.co.uk/news-and-events/news/british-business-bank-invests-175m-elliptic-including-second-investment-made-british-growth", "kind": "primary" },
+        { "name": "CoinDesk — Elliptic raises $120M backed by Nasdaq, Deutsche Bank", "url": "https://www.coindesk.com/business/2026/05/12/elliptic-raises-usd120-million-backed-by-nasdaq-deutsche-bank-as-ai-reshapes-crypto-security", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-doj-disruption-week-pig-butchering",
+      "type": "signal",
+      "title": "DOJ Scam Center Strike Force 'Disruption Week': Apple, Coinbase, Google, Meta and SpaceX kill 1.4M scam accounts and freeze $3.8M in first coordinated public-private anti-scam offensive",
+      "summary": "The DOJ's Scam Center Strike Force conducted 'Disruption Week' from 18–21 May 2026, with results announced 3 June 2026. FBI and Secret Service shared real-time intelligence with Apple, Coinbase, Google, Meta, Microsoft, SpaceX, Silent Push, TRM Labs, and Zenlayer, resulting in the voluntary takedown of 1.4 million social media, email, and internet access accounts operated by pig-butchering syndicates targeting Americans from Southeast Asian scam compounds, plus voluntary freezes of $3.8 million in cryptocurrency linked to laundering proceeds. 63 arrests were made across multiple jurisdictions.",
+      "soWhat": "This operation sets the template for what private-sector cooperation with US law enforcement on crypto fraud will look like — and banks are the next layer. The FBI's model of sharing intelligence for voluntary real-time action, rather than waiting for retrospective SARs, means financial institutions should expect to be drawn into active disruption partnerships, not just reporting chains. Banks with crypto on/off ramp infrastructure, payment rails, or high-risk retail accounts should assess what their operational response to a real-time FBI intelligence-share would look like. The gap between $3.8M frozen and $11B+ in annual losses tells you this model is in early innings and will scale.",
+      "date": "2026-06-03",
+      "addedAt": "2026-06-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["pig-butchering", "enforcement", "DOJ", "FBI", "tech-sector", "Coinbase", "Southeast-Asia", "disruption", "public-private"],
+      "sources": [
+        { "name": "DOJ — Scam Center Strike Force: US & Private Industry Disruption Week results", "url": "https://www.justice.gov/opa/pr/scam-center-strike-force-announces-results-us-private-industry-disruption-week", "kind": "primary" },
+        { "name": "The Block — Coinbase, SpaceX, Meta join DOJ anti-scam operation that froze $3.8M in crypto", "url": "https://www.theblock.co/amp/post/403608/coinbase-spacex-meta-join-doj-anti-scam-operation-that-froze-3-8-million-in-crypto", "kind": "secondary" },
+        { "name": "The Hacker News — DoJ Disrupts Southeast Asia Crypto Fraud Networks, Freezes $3.8 Million", "url": "https://thehackernews.com/2026/06/doj-disrupts-southeast-asia-crypto.html", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-house-crypto-theft-taskforce-bill",
+      "type": "signal",
+      "title": "US House introduces Federal Cryptocurrency Theft Enforcement and Coordination Act — bipartisan DOJ-chaired crypto-theft task force bill",
+      "summary": "On 11 June 2026, Representatives Lance Gooden (R-TX) and Josh Gottheimer (D-NJ) introduced the Federal Cryptocurrency Theft Enforcement and Coordination Act, a bipartisan bill establishing a DOJ-chaired federal task force spanning FBI, DHS, and Treasury to coordinate crypto theft and fraud investigations. The bill requires an annual report to Congress on trends and outcomes, builds a model playbook for state and local law enforcement on blockchain forensics and victim support, and focuses exclusively on criminal enforcement rather than restricting innovation. The sponsors cited FBI IC3 data showing $11 billion in crypto-linked fraud losses in 2025 left victims with no unified federal channel for redress.",
+      "soWhat": "If enacted, this creates a stable institutional counterpart for financial institutions filing SARs on crypto theft and fraud — a single coordination point replacing the current fragmented multi-agency landscape. The FBI's model from Operation Level Up and Disruption Week would be institutionalised into a permanent standing loop. For banks, the operative question is what operational engagement with a DOJ Crypto Theft Task Force would require from the AML function — begin assessing now. The bipartisan sponsorship signals genuine consensus that enforcement infrastructure is lagging the loss curve.",
+      "date": "2026-06-11",
+      "addedAt": "2026-06-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["legislation", "FBI", "DOJ", "crypto-theft", "enforcement", "task-force", "bipartisan", "SAR"],
+      "sources": [
+        { "name": "CoinDesk — US House bill would erect crypto-theft task force across law enforcement agencies", "url": "https://www.coindesk.com/policy/2026/06/10/u-s-house-bill-would-erect-crypto-theft-task-force-across-law-enforcement-agencies", "kind": "secondary" },
+        { "name": "PYMNTS — Lawmakers Move to Create Federal Task Force Against Crypto Theft", "url": "https://www.pymnts.com/cryptocurrency/2026/lawmakers-move-to-create-federal-task-force-against-crypto-theft/", "kind": "secondary" }
       ]
     }
   ]

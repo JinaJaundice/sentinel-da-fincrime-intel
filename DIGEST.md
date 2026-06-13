@@ -1,13 +1,13 @@
-# Sentinel weekly digest — 12 June 2026
+# Sentinel weekly digest — 13 June 2026
 
-_37 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_35 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 10 new items; latest: FCA CP25/14: Stablecoin issuance and cryptoasset custody
-- **Sanctions & OFAC** — 10 new items; latest: FCA PS24/17: Financial Crime Guide updates
-- **US rulemaking** — 7 new items; latest: FinCEN Section 311 severs Swiss MBaer Merchant Bank from US system — FINMA orders liquidation
-- **MiCA & the EU** — 4 new items; latest: EU 21st Russia sanctions package: 11 crypto platforms banned and first country-level crypto-sector kill-switch power
-- **State actors & DPRK** — 4 new items; latest: FinCEN Section 311 severs Swiss MBaer Merchant Bank from US system — FINMA orders liquidation
+- **Stablecoins** — 9 new items; latest: FCA CP25/14: Stablecoin issuance and cryptoasset custody
+- **Sanctions & OFAC** — 8 new items; latest: FCA PS24/17: Financial Crime Guide updates
+- **MiCA & the EU** — 6 new items; latest: EU 21st Russia sanctions package: 11 crypto platforms banned and first country-level crypto-sector kill-switch power
+- **US rulemaking** — 5 new items; latest: FinCEN Section 311 severs Swiss MBaer Merchant Bank from US system — FINMA orders liquidation
+- **State actors & DPRK** — 3 new items; latest: FinCEN Section 311 severs Swiss MBaer Merchant Bank from US system — FINMA orders liquidation
 
 ## Notable this week
 
@@ -42,4 +42,4 @@ Source: [FCA — CP25/40](https://www.fca.org.uk/publications/consultation-paper
 Source: [FCA — CP25/14](https://www.fca.org.uk/publications/consultation-papers/cp25-14-stablecoin-issuance-cryptoasset-custody)
 
 ## By the numbers
-37 new · 13 high-impact · 13 verified
+35 new · 12 high-impact · 13 verified

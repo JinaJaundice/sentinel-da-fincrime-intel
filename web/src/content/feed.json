@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12",
+  "lastUpdated": "2026-06-13",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -813,6 +813,46 @@
       "sources": [
         { "name": "CoinDesk — US House bill would erect crypto-theft task force across law enforcement agencies", "url": "https://www.coindesk.com/policy/2026/06/10/u-s-house-bill-would-erect-crypto-theft-task-force-across-law-enforcement-agencies", "kind": "secondary" },
         { "name": "PYMNTS — Lawmakers Move to Create Federal Task Force Against Crypto Theft", "url": "https://www.pymnts.com/cryptocurrency/2026/lawmakers-move-to-create-federal-task-force-against-crypto-theft/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-amla-first-conference-june2026",
+      "type": "regulatory",
+      "title": "AMLA's inaugural conference frames financial integrity as essential to EU strategic autonomy — digital assets and AI on the supervision agenda",
+      "summary": "On 9 June 2026, AMLA hosted its inaugural conference 'Building Trust, Enhancing Integrity: A New Chapter in the EU's Fight Against Financial Crime' at the Alte Oper Frankfurt, drawing supervisors, FIUs, law enforcement, private sector leaders and EU institutions from all 27 member states. In her keynote, Chair Bruna Szego argued that EU strategic autonomy requires financial integrity — that protecting the EU's financial system from abuse is a precondition for genuine economic sovereignty. EU Finance Commissioner Maria Luís Albuquerque set AMLA's supervisory mandate: 'simpler, smarter, more proportionate' rules. Panel discussions addressed the role of financial intelligence in tackling transnational organised crime; effective AML/CFT supervision and cooperation; and the opportunities and risks of AI and digital assets. The conference marks AMLA's first major public platform since formally assuming all EU-level AML/CFT tasks from the EBA on 1 January 2026.",
+      "soWhat": "AMLA's inaugural conference signals the authority's supervisory character: intelligence-led, technology-forward, and explicitly focused on digital-asset and AI-enabled financial crime as priority risks. For regulated banks, two implications stand out: (1) the 'strategic autonomy' frame means AMLA will face direct political pressure to produce visible results against sanctions evasion and illicit crypto flows — expect early supervisory actions designed to set an example; (2) the 'simpler, smarter' mandate from Commissioner Albuquerque opens space for a risk-based, proportionate approach to CASP supervision. Banks with EU cross-border exposure should track AMLA's 2026-2028 Single Programming Document and align internal AML frameworks to the 26 regulatory technical standards being released through Q1 2027.",
+      "date": "2026-06-09",
+      "addedAt": "2026-06-13",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["AMLA", "EU", "supervision", "AML", "digital-assets", "AI", "strategic-autonomy", "financial-crime", "Single-Rulebook"],
+      "sources": [
+        { "name": "AMLA — First Conference: Building Trust, Enhancing Integrity (official page)", "url": "https://www.amla.europa.eu/amla-hosts-its-first-conference_en", "kind": "primary" },
+        { "name": "AML Intelligence — Strategic autonomy starts with financial integrity, AMLA's Szego", "url": "https://www.amlintelligence.com/2026/06/amla-szego-strategic-autonomy-financial-integrity/", "kind": "secondary" },
+        { "name": "Freshfields — Unveiling AMLA's Blueprint: 2026-2028 Work Programme", "url": "https://www.freshfields.com/en/our-thinking/blogs/risk-and-compliance/unveiling-amlas-blueprint-a-snapshot-of-the-2026-2028-work-programme-and-key-re-102mm45", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-binance-mica-greece-imminent",
+      "type": "signal",
+      "title": "Binance on brink of pan-European MiCA CASP licence via Greece — world's largest exchange set to enter EU AML supervisory perimeter before July 1",
+      "summary": "AML Intelligence reported on 4 June 2026 that Greek authorities are set to grant Binance a pan-European MiCA CASP authorisation before the July 1 deadline. Binance submitted its application to the Hellenic Capital Market Commission (HCMC) in January 2026 and the HCMC enlisted EY, KPMG, PwC, and Deloitte to fast-track the review. Authorisation would passport Binance across all 27 EU member states under MiCA's harmonised AML/CFT framework. Binance recorded approximately $3.3 trillion in trading volume in 2025 and had not appeared on the ESMA Interim MiCA Register as of early June 2026. No formal approval has been announced as of this report.",
+      "soWhat": "Binance securing MiCA authorisation would be the highest-profile single CASP approval under the new EU framework — and the most complicated for bank counterparty teams to process. MiCA CASP authorisation establishes an EU legal baseline but is not a clean AML bill of health: Binance is simultaneously under active DOJ investigation for $1.7B in Iran and Russia flows (see feed-binance-doj-iran-probe) and operating under a court-ordered US compliance monitorship from its 2023 $4.3B settlement. EU authorisation via a fast-tracked national review does not cancel that exposure. For banks, the correct risk posture on Binance is 'pending MiCA — enhanced scrutiny warranted' even if the formal authorisation arrives before July 1: treat it as a lower-quality counterparty assurance than exchanges with clean enforcement histories and multi-year MiCA supervisory track records.",
+      "date": "2026-06-04",
+      "addedAt": "2026-06-13",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["Binance", "MiCA", "EU", "CASP", "authorization", "Greece", "counterparty-risk", "AML", "HCMC"],
+      "sources": [
+        { "name": "AML Intelligence — Binance likely to secure pan-European MiCA licence in Greece", "url": "https://www.amlintelligence.com/2026/06/news-binance-likely-to-secure-pan-european-mica-licence-in-greece/", "kind": "secondary" },
+        { "name": "CoinDesk — Binance applies for EU crypto license in Greece under MiCA framework", "url": "https://www.coindesk.com/markets/2026/01/23/binance-applies-for-eu-crypto-license-in-greece-under-mica-framework", "kind": "secondary" },
+        { "name": "Greek City Times — Binance MiCA license Greece holding company", "url": "https://greekcitytimes.com/2026/01/23/binance-mica-license-greece-holding-company-2026", "kind": "secondary" }
       ]
     }
   ]

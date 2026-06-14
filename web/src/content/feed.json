@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-13",
+  "lastUpdated": "2026-06-14",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -853,6 +853,26 @@
         { "name": "AML Intelligence — Binance likely to secure pan-European MiCA licence in Greece", "url": "https://www.amlintelligence.com/2026/06/news-binance-likely-to-secure-pan-european-mica-licence-in-greece/", "kind": "secondary" },
         { "name": "CoinDesk — Binance applies for EU crypto license in Greece under MiCA framework", "url": "https://www.coindesk.com/markets/2026/01/23/binance-applies-for-eu-crypto-license-in-greece-under-mica-framework", "kind": "secondary" },
         { "name": "Greek City Times — Binance MiCA license Greece holding company", "url": "https://greekcitytimes.com/2026/01/23/binance-mica-license-greece-holding-company-2026", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-russia-usdt-usdc-fees-spief",
+      "type": "signal",
+      "title": "Russia announces 0.5–3% fees on USDT, USDC and 'unfriendly' stablecoins — mirror-move to EU 21st package on same day",
+      "summary": "On 9 June 2026 — the same day the EU unveiled its 21st sanctions package — Russian Deputy Finance Minister Ivan Chebeskov announced at SPIEF 2026 that Moscow is preparing transaction fees of 0.5–2% on broadly classified 'unfriendly' crypto assets, rising to as much as 3% on dollar-pegged stablecoins (USDT and USDC). BNB and other assets linked to 'unfriendly' countries are also in scope. The fee framework targets assets from sanctioning states (US, EU, UK et al.); implementation is expected by July 1, 2026 with full compliance rules by July 1, 2027.",
+      "soWhat": "The simultaneous EU kill-switch and Russian fee announcement on June 9 marks a formal bifurcation of the global crypto settlement layer into Western and non-Western rails. For bank AML teams: (1) Russian flows will increasingly migrate from USDT/USDC (now domestically penalised) to A7A5 and ruble-denominated alternatives — effective sanctions screening of Russian exposure must prioritise A7A5 cluster monitoring and Central Asian on/off-ramps, not USDT transaction volumes alone; (2) Russia's fee counter-move confirms that Western stablecoin sanctions leverage (Tether freeze capability, UK/EU issuer bans) is landing with sufficient strategic effect to provoke a formal policy response; (3) watch whether Russian exchange implementation creates detectable on-chain routing signatures — compliance-driven flow changes generate intelligence value for sanctions-evasion detection.",
+      "date": "2026-06-09",
+      "addedAt": "2026-06-14",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["Russia", "stablecoin", "USDT", "USDC", "sanctions-evasion", "counter-sanctions", "A7A5", "SPIEF", "regulatory-divergence"],
+      "sources": [
+        { "name": "CryptoNews — Russia Takes Aim at Pro-Western Crypto With New Fees and Limits", "url": "https://cryptonews.com/news/russia-fees-limits-unfriendly-crypto-usdt-bnb/", "kind": "secondary" },
+        { "name": "Yahoo Finance — Europe got power to ban countries from crypto; Russia hit back with fees on same day", "url": "https://finance.yahoo.com/markets/crypto/articles/europe-just-got-power-ban-101834455.html", "kind": "secondary" },
+        { "name": "Cryptopolitan — Russia's planned fees on 'unfriendly' crypto", "url": "https://www.cryptopolitan.com/russias-planned-fees-on-unfriendly-crypto/", "kind": "secondary" }
       ]
     }
   ]

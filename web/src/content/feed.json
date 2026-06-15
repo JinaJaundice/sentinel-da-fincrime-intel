@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-14",
+  "lastUpdated": "2026-06-15",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -873,6 +873,47 @@
         { "name": "CryptoNews — Russia Takes Aim at Pro-Western Crypto With New Fees and Limits", "url": "https://cryptonews.com/news/russia-fees-limits-unfriendly-crypto-usdt-bnb/", "kind": "secondary" },
         { "name": "Yahoo Finance — Europe got power to ban countries from crypto; Russia hit back with fees on same day", "url": "https://finance.yahoo.com/markets/crypto/articles/europe-just-got-power-ban-101834455.html", "kind": "secondary" },
         { "name": "Cryptopolitan — Russia's planned fees on 'unfriendly' crypto", "url": "https://www.cryptopolitan.com/russias-planned-fees-on-unfriendly-crypto/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-t3-fcu-450m-frozen",
+      "type": "signal",
+      "title": "T3 Financial Crime Unit freezes $450M in illicit USDT across 23 jurisdictions — issuer-freeze at standing institutional scale",
+      "summary": "On 14 May 2026, Tether, TRON, and TRM Labs announced that the T3 Financial Crime Unit (T3 FCU) — launched September 2024 — had frozen over $450M in illicit USDT globally, collaborating with law enforcement in 23 jurisdictions including the US, UK, Germany, Spain, and Brazil. The unit intercepted 43.9% more illicit proceeds in 2025 than the prior year, with 24-hour emergency freeze protocols active across cases covering DPRK-linked activity, ransomware payments, drug trafficking, terrorist financing, and kidnapping-for-ransom.",
+      "soWhat": "The T3 FCU institutionalises what the feed has tracked episodically: Tether's issuer-freeze capability is now a standing, bilateral intelligence-and-enforcement unit rather than a reactive OFAC-order execution. Three bank compliance implications: (1) USDT flows are subject to proactive issuer-led disruption — this changes the counterparty risk profile of USDT-denominated settlement compared with stablecoins whose issuers lack a standing law-enforcement partnership; (2) the 24-hour freeze protocol is the model regulators will cite when defining 'adequate' stablecoin-issuer compliance under GENIUS Act rules — expect supervisory expectations to be set by T3's demonstrated capability; (3) because TRM Labs operates both T3 and the Beacon Network, T3 intelligence on active illicit clusters flows directly into commercial KYT screening tools — banks using TRM may already benefit without knowing it. Cross-reference: see feed-ofac-cbi-tether-freeze for the episodic precedent this formalises.",
+      "date": "2026-05-14",
+      "addedAt": "2026-06-15",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["stablecoin", "Tether", "USDT", "public-private", "enforcement", "freeze", "TRM", "GENIUS-Act", "DPRK", "ransomware"],
+      "sources": [
+        { "name": "Tether — $450M Frozen And Counting: T3 Financial Crime Unit Continues Global Crackdown", "url": "https://tether.io/news/450-million-frozen-and-counting-t3-financial-crime-unit-continues-global-crackdown-on-illicit-crypto-flows/", "kind": "primary" },
+        { "name": "TRM Labs — T3 FCU: A Model for Public-Private Disruption in the Age of Stablecoins", "url": "https://www.trmlabs.com/resources/blog/t3-financial-crime-unit-a-model-for-public-private-disruption-in-the-age-of-stablecoins", "kind": "secondary" },
+        { "name": "CryptoTimes — $450M Frozen: Tether, TRON, and TRM Tighten the Net on Crypto Crime", "url": "https://www.cryptotimes.io/2026/05/14/450m-frozen-tether-tron-and-trm-tighten-the-net-on-crypto-crime/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-uk-ofsi-xinbi-8park",
+      "type": "signal",
+      "title": "UK first to sanction Xinbi Guarantee: $19.9B CLMN successor platform and Cambodia's #8 Park scam compound designated",
+      "summary": "On 26 March 2026, UK FCDO became the world's first government to designate Xinbi Guarantee — the dominant Chinese-language Telegram-based crypto marketplace after Huione Guarantee's collapse, having processed $19.9B in illicit transactions (2021–2025) across pig-butchering proceeds, DPRK-linked activity, drug trafficking, and sanctions evasion. Six individuals and four entities were designated under the UK Global Human Rights sanctions regime. The same action sanctioned Legend Innovation Co. — operator of Cambodia's #8 Park compound (believed to house up to 20,000 trafficked workers), linked to the Prince Group — freezing associated London-based real-estate assets. Xinbi had survived Huione's Section 311 shutdown by migrating to SafeW (a proprietary messaging platform) and NewPay/XinbiPay (a no-KYC crypto wallet), with daily inflows nearly doubling post-Huione.",
+      "soWhat": "Xinbi is the dominant successor to Huione as the shared laundering back-office for the CLMN ecosystem (see feed-chinese-mln-laas-typology). Its survival of FinCEN's Section 311 action — by pivoting to a proprietary platform outside Telegram's enforcement reach — means standard entity-list screening and Telegram-wallet monitoring will miss Xinbi flows. Banks must run CLMN cluster analytics covering SafeW and XinbiPay wallet infrastructure to detect Xinbi exposure. The UK designation activates POCA obligations on receiving institutions for any Xinbi-designated-entity proceeds — including indirectly via omnibus accounts. The London property freeze is a reminder that CLMN infrastructure has been laundered into UK real estate, creating an exposure surface beyond crypto flows alone. Add Xinbi/Prince Group designated addresses to screening feeds and escalate any UK-property counterparty links.",
+      "date": "2026-03-26",
+      "addedAt": "2026-06-15",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["Xinbi", "CLMN", "UK", "OFSI", "sanctions", "scam-centres", "laundering-as-a-service", "trafficking", "Prince-Group", "Southeast-Asia", "POCA"],
+      "sources": [
+        { "name": "TRM Labs — UK first to sanction Xinbi, one of Southeast Asia's largest illicit crypto marketplaces", "url": "https://www.trmlabs.com/resources/blog/uk-becomes-first-country-to-sanction-xinbi-one-of-southeast-asias-largest-illicit-crypto-marketplaces", "kind": "secondary" },
+        { "name": "Elliptic — UK sanctions Xinbi and #8 Park-connected entities", "url": "https://www.elliptic.co/blog/uk-sanctions-xinbi-marketplace-and-entities-connected-to-8-park-in-latest-crackdown-on-illicit-cryptoassets", "kind": "secondary" },
+        { "name": "The Block — UK sanctions Xinbi amid crackdown on Southeast Asia scam centres", "url": "https://www.theblock.co/post/395287/uk-sanctions-crypto-linked-marketplace-xinbi-amid-crackdown-on-southeast-asia-scam-centres", "kind": "secondary" },
+        { "name": "The Record — UK sanctions Chinese crypto marketplace tied to scam compounds", "url": "https://therecord.media/xinbi-crypto-marketplace-sanctioned", "kind": "secondary" }
       ]
     }
   ]

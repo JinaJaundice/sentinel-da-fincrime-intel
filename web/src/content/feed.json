@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15",
+  "lastUpdated": "2026-06-16",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -914,6 +914,81 @@
         { "name": "Elliptic — UK sanctions Xinbi and #8 Park-connected entities", "url": "https://www.elliptic.co/blog/uk-sanctions-xinbi-marketplace-and-entities-connected-to-8-park-in-latest-crackdown-on-illicit-cryptoassets", "kind": "secondary" },
         { "name": "The Block — UK sanctions Xinbi amid crackdown on Southeast Asia scam centres", "url": "https://www.theblock.co/post/395287/uk-sanctions-crypto-linked-marketplace-xinbi-amid-crackdown-on-southeast-asia-scam-centres", "kind": "secondary" },
         { "name": "The Record — UK sanctions Chinese crypto marketplace tied to scam compounds", "url": "https://therecord.media/xinbi-crypto-marketplace-sanctioned", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-genius-act-rulemaking-sprint",
+      "type": "regulatory",
+      "title": "GENIUS Act implementing rules: five agencies proposed, Federal Reserve absent — July 18 statutory deadline now 32 days away",
+      "summary": "With comment periods on all five GENIUS Act proposed rules now closed (June 9, 2026), US regulators face a 32-day sprint to finalise implementing regulations by the statutory July 18, 2026 deadline. The OCC (February 25), FDIC (April 10), NCUA, FinCEN/OFAC (April 8), and Treasury have all issued proposed rules; the OCC's proposal — covering chartering, reserve requirements, capital, and operational risk for nationally chartered stablecoin issuers — has become the gravitational centre to which FDIC and Treasury have explicitly aligned their own frameworks. The Federal Reserve, primary prudential regulator for bank holding company stablecoin issuers, has issued no proposed rule. If agencies finalise rules by July 18, the GENIUS Act's provisions take effect 120 days later (≈November 15, 2026), not the January 18, 2027 backstop date.",
+      "soWhat": "The July 18 deadline is now the GENIUS Act's critical path for bank compliance planning. Three direct implications: (1) the November 2026 effective-date scenario is live — banks and stablecoin counterparties must model a compressed timeline alongside the January 2027 baseline; (2) the Federal Reserve's absence creates a prudential gap specifically for bank holding company issuers — the largest potential stablecoin issuers have no Fed-approved framework yet, and any delay from the Fed could trigger a two-tier market where OCC-chartered issuers operate under tighter standards than BHC issuers; (3) the OCC rule's role as the benchmark standard means OCC-chartered stablecoin issuers now define the counterparty-risk yardstick — banks should use the OCC proposed standards (1:1 reserve backing, capital, liquidity, operational risk, concentration limits) as the reference for PPSI counterparty due diligence, regardless of final rule timing.",
+      "date": "2026-06-09",
+      "addedAt": "2026-06-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["GENIUS-Act", "stablecoin", "OCC", "FDIC", "rulemaking", "Federal-Reserve", "implementation", "deadline", "PPSI"],
+      "sources": [
+        { "name": "Cahill Gordon — Five Rulemakings in Ten Weeks: Inside the GENIUS Act Implementation Sprint", "url": "https://www.cahill.com/publications/client-alerts/2026-05-05-five-rulemakings-in-ten-weeks-inside-the-genius-act-implementation-sprint", "kind": "secondary" },
+        { "name": "OCC — GENIUS Act Notice of Proposed Rulemaking (Bulletin 2026-3)", "url": "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html", "kind": "primary" },
+        { "name": "Paradigm — GENIUS Act Rulemaking Tracker", "url": "https://paradigm.xyz/genius", "kind": "secondary" },
+        { "name": "Mayer Brown — FDIC proposes GENIUS Act rules: how do they compare to the OCC proposal?", "url": "https://www.mayerbrown.com/en/insights/publications/2026/04/fdic-proposes-genius-act-rules-how-do-they-compare-to-the-occ-proposal", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fatf-offshore-vasp-risks",
+      "type": "regulatory",
+      "title": "FATF offshore VASP report: 'nested account' abuse lets unlicensed VASPs hide as retail customers — only 46% of jurisdictions apply activity-based licensing",
+      "summary": "Published March 11, 2026, FATF's report 'Understanding and Mitigating the Risks of Offshore VASPs' identifies a structural supervisory gap: offshore, unlicensed VASPs access services at licensed platforms by posing as private individual customers ('nested account' abuse), bypassing VASP-level due diligence and Travel Rule obligations. Only 46% of FATF-assessed jurisdictions apply activity-based regulation — meaning a VASP's registration requirements depend on where it is incorporated, not where it actively serves customers. The report documents how offshore VASP relationships are used to convert scam-compound proceeds, channel funds to terrorist groups, and route illicit value through multi-hop wallet layering and cross-chain bridges to defeat tracing.",
+      "soWhat": "The 'nested account' finding is the highest-priority operational risk for banks operating in the crypto space: an unlicensed offshore VASP posing as a private individual retail customer defeats both VASP-relationship due diligence and Travel Rule obligations, making the bank an unwitting correspondent for unlicensed crypto activity. Two controls are directly indicated: (1) behavioural profiling of apparent retail customers for high-frequency, high-value, multi-counterparty crypto transfer patterns inconsistent with individual use — the nested-account signature; (2) expanding VASP counterparty due diligence beyond entity-level lists and incorporation jurisdictions to activity-based screening — does this 'customer' address serve retail users at scale? The 46% licensing gap also confirms that jurisdiction of incorporation is not a reliable proxy for supervisory coverage, reinforcing the ESMA Interim MiCA Register as the authoritative source for EU CASP status (see feed-mica-17pct-licensed-21-days).",
+      "date": "2026-03-11",
+      "addedAt": "2026-06-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["FATF", "VASP", "offshore", "nested-accounts", "licensing", "AML", "Travel-Rule", "typology"],
+      "typology": {
+        "vector": "Offshore VASP 'nested account' abuse — unlicensed VASPs pose as individual retail customers at licensed platforms, accessing services while bypassing VASP-level due diligence and Travel Rule obligations",
+        "controls": [
+          "Behavioural profiling of apparent retail customers for high-frequency, high-value, multi-counterparty crypto transfer patterns inconsistent with individual use",
+          "Activity-based VASP screening beyond incorporation-jurisdiction lists",
+          "Enhanced due diligence on customers sending to offshore jurisdiction addresses at scale",
+          "Cross-referencing Travel Rule data completeness against volume — low data completeness at high volume signals nested VASP behaviour"
+        ],
+        "obligations": [
+          "VASP counterparty due diligence under MLRs and the Travel Rule",
+          "SAR on suspected unlicensed VASP nested-account activity",
+          "AML/CFT risk-based approach to apparent retail customers with VASP-level transaction profiles"
+        ]
+      },
+      "sources": [
+        { "name": "FATF — Understanding and Mitigating the Risks of Offshore VASPs", "url": "https://www.fatf-gafi.org/en/publications/Virtualassets/Understanding-Mitigating-Risks-Offshore-VASPs.html", "kind": "primary" },
+        { "name": "AML Intelligence — FATF report warns offshore crypto providers pose illicit finance risks", "url": "https://www.amlintelligence.com/2026/03/latest-fatf-report-warns-offshore-crypto-providers-pose-illicit-finance-risks/", "kind": "secondary" },
+        { "name": "The Paypers — FATF flags offshore VASP gaps enabling fraud and money laundering", "url": "https://thepaypers.com/fraud-and-fincrime/news/fatf-report-flags-oversight-gaps-in-offshore-virtual-asset-service-providers", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fatf-cyber-fraud-paper",
+      "type": "regulatory",
+      "title": "FATF: 90% of jurisdictions flag cyber-enabled fraud as a major ML risk — virtual assets carry the proceeds from fraud factories",
+      "summary": "Published 24 February 2026 at the FATF February plenary, 'Cyber-Enabled Fraud – Digitalisation and ML/TF/PF Risks' establishes cyber-enabled fraud as a systemic ML driver: 156 of 174 FATF-assessed jurisdictions (90%) identify it as a major money laundering risk. UK fraud now exceeds 40% of all recorded crimes; Singapore logged a 61% two-year increase in cyber-fraud cases. The paper identifies virtual assets as the primary proceeds-transfer mechanism, documents 'fraud factory' typologies including pig-butchering compounds, romance-investment scams, and tech-support fraud, and calls for three priority responses: domestic public-private coordination, international multi-lateral collaboration, and strengthened victim-detection and reporting frameworks.",
+      "soWhat": "FATF's 90% ML-risk designation makes cyber-enabled fraud a mandatory input to any bank's risk-based approach — not a fringe typology but the dominant ML risk by jurisdiction count. Three implications: (1) transaction-monitoring calibration should treat investment-fraud proceeds as a top-tier risk signal, with higher SAR sensitivity on rapid crypto-to-fiat conversion following relationship-investing patterns; (2) the public-private coordination call is a forward indicator — expect supervisory frameworks to require proactive fraud-intelligence sharing with law enforcement, not just retrospective SAR filing (consistent with the DOJ Disruption Week model, see feed-doj-disruption-week-pig-butchering); (3) the 'fraud factory' typology formally unifies the DPRK, CLMN, and pig-butchering items in this feed under a single FATF risk label — these are not isolated threats but instances of a recognised global ML taxonomy now embedded in the FATF standards framework.",
+      "date": "2026-02-24",
+      "addedAt": "2026-06-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FATF", "cyber-fraud", "ML", "investment-fraud", "pig-butchering", "fraud-factory", "public-private", "AML", "typology"],
+      "sources": [
+        { "name": "FATF — Cyber-Enabled Fraud: Digitalisation and ML/TF/PF Risks", "url": "https://www.fatf-gafi.org/en/publications/Methodsandtrends/cyber-enabled-fraud-digitalisation-ml-tf-pf-risks.html", "kind": "primary" },
+        { "name": "FATF — February 2026 Plenary Outcomes", "url": "https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-FATF-plenary-february-2026.html", "kind": "primary" },
+        { "name": "ACAMS — FATF Highlights Outcomes of February 2026 Plenary", "url": "https://www.acams.org/en/legs-regs/fatf-highlights-outcomes-february-2026-plenary", "kind": "secondary" }
       ]
     }
   ]

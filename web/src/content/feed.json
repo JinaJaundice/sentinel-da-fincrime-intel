@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16",
+  "lastUpdated": "2026-06-17",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -989,6 +989,77 @@
         { "name": "FATF — Cyber-Enabled Fraud: Digitalisation and ML/TF/PF Risks", "url": "https://www.fatf-gafi.org/en/publications/Methodsandtrends/cyber-enabled-fraud-digitalisation-ml-tf-pf-risks.html", "kind": "primary" },
         { "name": "FATF — February 2026 Plenary Outcomes", "url": "https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-FATF-plenary-february-2026.html", "kind": "primary" },
         { "name": "ACAMS — FATF Highlights Outcomes of February 2026 Plenary", "url": "https://www.acams.org/en/legs-regs/fatf-highlights-outcomes-february-2026-plenary", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-sec-cftc-token-taxonomy-2026",
+      "type": "regulatory",
+      "title": "SEC and CFTC issue landmark joint crypto asset classification — five-part token taxonomy ends enforcement-by-litigation era",
+      "summary": "On March 17, 2026, the SEC and CFTC issued a joint interpretive release establishing the first federal taxonomy for crypto assets: digital commodities (CFTC exclusive jurisdiction), digital collectibles, digital tools, payment stablecoins, and digital securities (tokenised securities). The guidance addresses when a non-security crypto asset can become — and cease to be — subject to securities laws through an 'investment contract'. Activities including airdrops, protocol mining, staking and token wrapping are each addressed. The interpretation followed a March 11, 2026 SEC-CFTC Memorandum of Understanding on shared regulatory coordination.",
+      "soWhat": "The five-part taxonomy is the first authoritative basis in US law for classifying crypto assets — ending five years of SEC enforcement-by-litigation that left financial institutions with no clear framework for counterparty risk on crypto holdings. Three direct compliance implications: (1) banks can now tier counterparty and custody risk frameworks against defined asset categories rather than applying blanket conservatism; (2) the investment-contract clarification — that a non-security asset ceases to be one once issuer obligations are fulfilled — requires ongoing classification monitoring, not a one-time call; (3) combined with the GENIUS Act stablecoin framework (already in force), the SEC-CFTC taxonomy completes the core US regulatory classification map, narrowing residual uncertainty to exchange-level jurisdiction questions the CLARITY Act (still pending; see feed-clarity-act-july4-dead) is intended to resolve.",
+      "date": "2026-03-17",
+      "addedAt": "2026-06-17",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["SEC", "CFTC", "classification", "token-taxonomy", "securities-law", "investment-contract", "stablecoin", "US", "regulatory-clarity"],
+      "publication": {
+        "issuer": "SEC",
+        "kind": "Interpretive Release",
+        "ref": "SEC Release 2026-30"
+      },
+      "sources": [
+        { "name": "SEC — Clarifies the Application of Federal Securities Laws to Crypto Assets", "url": "https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets", "kind": "primary" },
+        { "name": "CFTC — CFTC Joins SEC to Clarify Application of Federal Securities Laws to Crypto Assets", "url": "https://www.cftc.gov/PressRoom/PressReleases/9198-26", "kind": "primary" },
+        { "name": "Sullivan & Cromwell — SEC Clarifies Application of Securities Laws to Crypto Assets", "url": "https://www.sullcrom.com/insights/memo/2026/March/SEC-Clarifies-Application-Securities-Laws-Crypto-Assets", "kind": "secondary" },
+        { "name": "Ropes & Gray — SEC and CFTC Issue Landmark Joint Guidance on Classification of Crypto Assets", "url": "https://www.ropesgray.com/en/insights/alerts/2026/03/sec-and-cftc-issue-landmark-joint-guidance-on-classification-of-crypto-assets", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fca-cp26-04-handbook-cryptoassets",
+      "type": "regulatory",
+      "title": "FCA CP26/4: Consumer Duty, COBS and SM&CR applied to cryptoasset firms — ten-chapter FSMA authorisation compliance blueprint",
+      "summary": "Published January 23, 2026 (consultation closed March 12, 2026), FCA Consultation Paper CP26/4 — the second instalment of the FCA Handbook application series — sets out proposed requirements across ten areas for firms seeking FSMA cryptoasset authorisation from September 2026: Consumer Duty (supplemented by companion guidance GC26/2); Complaints and Redress (DISP); Conduct of Business Standards (COBS); Credit for Crypto Purchases; Training and Competence; Senior Managers and Certification Regime (SM&CR); Regulatory Reporting (SUP 16); Cryptoasset Safeguarding (client asset rules); Retail Collateral Treatment in Cryptoasset Borrowing; and Location Policy Guidance. The FCA's 'same risk, same regulatory outcome' principle imports mainstream financial services obligations as the baseline, with crypto-specific tailoring throughout.",
+      "soWhat": "CP26/4 defines the full FSMA compliance architecture a cryptoasset firm — or a bank with FSMA cryptoasset permissions — must build before the September 2026 gateway. Three direct bank implications: (1) any bank activity in scope of FSMA cryptoasset permissions faces Consumer Duty, COBS and client-asset obligations equivalent to mainstream regulated business — not a lighter registration, but full regulatory parity; (2) Consumer Duty applies through the distribution chain, meaning banks acting as manufacturers or distributors of crypto products (tokenised assets, cETN platforms) must demonstrate fair-value outcomes — a material uplift for white-label custody and structured product partnerships; (3) SM&CR requirements for Senior Manager responsibility in crypto activities must be mapped and filed before any FSMA application, making CP26/4 the effective pre-gateway compliance checklist.",
+      "date": "2026-01-23",
+      "addedAt": "2026-06-17",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "CP26-4", "Consumer-Duty", "COBS", "SM-CR", "safeguarding", "cryptoasset", "UK", "authorization", "handbook"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Consultation Paper",
+        "ref": "CP26/4"
+      },
+      "sources": [
+        { "name": "FCA — CP26/4: Application of FCA Handbook for regulated cryptoasset activities (Part 2)", "url": "https://www.fca.org.uk/publications/consultation-papers/cp26-4-application-handbook-regulated-cryptoasset-activities-II", "kind": "primary" },
+        { "name": "Regulation Tomorrow — FCA CP26/4: Application of FCA Handbook for regulated cryptoasset activities – part 2", "url": "https://www.regulationtomorrow.com/2026/01/fca-cp26-4-application-of-fca-handbook-for-regulated-cryptoasset-activities-part-2/", "kind": "secondary" },
+        { "name": "Mondaq — FCA Handbook Application for Regulated Cryptoasset Activities: Key Takeaways from CP26/4", "url": "https://www.mondaq.com/uk/fintech/1762736/fca-handbook-application-for-regulated-cryptoasset-activities-key-takeaways-from-cp264", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-clarity-act-july4-dead",
+      "type": "signal",
+      "title": "CLARITY Act July 4 target confirmed dead — ethics talks collapse and Senate passage probability drops to 45%",
+      "summary": "Closed-door bipartisan negotiations on the Digital Asset Market Clarity Act collapsed in mid-June 2026. The White House withdrew a compromise provision that would have allowed state attorneys general to enforce ethics rules tied to presidential crypto holdings — the condition Democratic holdouts (including Senators Alsobrooks, Gallego, and Gillibrand) had set for floor votes. The White House's July 4 signing target is confirmed logistically impossible. Prediction markets repriced passage probability from above 70% to approximately 45%. Senator Lummis warned that failure to pass before August recess risks deferring final enactment to 2027; the bill needs 60 cloture votes and faces a 31-session-day Senate calendar before recess.",
+      "soWhat": "The CLARITY Act's passage timeline is now genuinely uncertain, not merely delayed. Two direct bank planning implications: (1) the SEC/CFTC exchange-level jurisdiction ambiguity will not be resolved before summer recess — compliance strategies premised on CLARITY Act clarity by Q3 2026 should rebase to a Q4 2026/Q1 2027 base case with meaningful no-passage risk; (2) the ethics-provision resolution — not the Senate calendar — is the leading indicator to monitor: a fresh ethics compromise takes weeks to stabilise after a collapse, so track whether the White House and Democratic holdouts re-engage rather than watching floor scheduling. Cross-reference: see feed-clarity-act-senate-floor-2026 for the bill's background and feed-sec-cftc-token-taxonomy-2026 for the classification clarity already achieved without CLARITY Act passage.",
+      "date": "2026-06-12",
+      "addedAt": "2026-06-17",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["CLARITY-Act", "SEC", "CFTC", "market-structure", "legislation", "US", "ethics", "Senate", "digital-commodities"],
+      "sources": [
+        { "name": "Yahoo Finance — Clarity Act News: July 4 Deadline Dead in the Water, Senate Ethics Fight and 60-Vote Hurdle", "url": "https://www.yahoo.com/news/politics/articles/clarity-act-news-july-4-151648496.html", "kind": "secondary" },
+        { "name": "CoinDesk — Alsobrooks says Clarity Act needs ethics deal before Senate vote", "url": "https://www.coindesk.com/coindesk-news/2026/06/05/alsobrooks-says-clarity-act-needs-ethics-deal-before-senate-vote", "kind": "secondary" },
+        { "name": "CryptoNews — CLARITY Act July 4 Deadline Dead as Ethics and Section 604 Talks Collapse", "url": "https://cryptonews.com/news/clarity-act-july-4-deadline-ethics-section-604-collapse/", "kind": "secondary" }
       ]
     }
   ]

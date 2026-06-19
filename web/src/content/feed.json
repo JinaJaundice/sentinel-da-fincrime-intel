@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17",
+  "lastUpdated": "2026-06-19",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1040,6 +1040,27 @@
         { "name": "FCA — CP26/4: Application of FCA Handbook for regulated cryptoasset activities (Part 2)", "url": "https://www.fca.org.uk/publications/consultation-papers/cp26-4-application-handbook-regulated-cryptoasset-activities-II", "kind": "primary" },
         { "name": "Regulation Tomorrow — FCA CP26/4: Application of FCA Handbook for regulated cryptoasset activities – part 2", "url": "https://www.regulationtomorrow.com/2026/01/fca-cp26-4-application-of-fca-handbook-for-regulated-cryptoasset-activities-part-2/", "kind": "secondary" },
         { "name": "Mondaq — FCA Handbook Application for Regulated Cryptoasset Activities: Key Takeaways from CP26/4", "url": "https://www.mondaq.com/uk/fintech/1762736/fca-handbook-application-for-regulated-cryptoasset-activities-key-takeaways-from-cp264", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-ireland-nra-crypto-june2026",
+      "type": "regulatory",
+      "title": "Ireland's first digital asset NRA in 7 years: crypto rated 'very significant' ML/TF/sanctions risk — 30-point action plan targets CASPs",
+      "summary": "On 18 June 2026, Ireland's Department of Finance published the country's first National Risk Assessment on Money Laundering, Terrorist Financing, and Proliferation Financing in seven years. Crypto-asset service providers are rated as carrying 'very significant' ML, TF, and sanctions evasion risk — a step up from the 2019 assessment, which pre-dated both MiCA and the explosion of stablecoin volumes. Alongside the NRA, a 30-point Action Plan sets implementation timetables: enhanced transaction monitoring and stricter reporting obligations for financial institutions with crypto exposure, new source-of-funds standards for gambling firms accepting crypto by Q2 2027, and tighter inter-agency intelligence sharing between the CBI, An Garda Síochána, and the Revenue Commissioners.",
+      "soWhat": "Ireland is the EU gateway jurisdiction for Coinbase, Circle, Crypto.com, Gemini and other major CASPs passporting across all 27 member states under MiCA — the Central Bank of Ireland is therefore the lead EU AML supervisor for much of the industry's highest-volume activity. The CBI has already shown willingness to act (issuing Ireland's first crypto enforcement fine in 2025); a formal NRA classifying CASPs at 'very significant' ML risk gives it a mandate and evidence base for supervisory escalation. For banks, two direct implications follow: (1) CASPs passporting via Ireland should be treated as subject to intensifying CBI supervisory pressure — any counterparty relationship with a CBI-regulated CASP should be reassessed using the 30-point action plan as a forward indicator of supervisory expectations; (2) the source-of-funds gambling provision signals that Irish regulators are alive to the CLMN/pig-butchering proceeds corridor through gambling cash-out platforms — a known laundering typology (see feed-chinese-mln-laas-typology).",
+      "date": "2026-06-18",
+      "addedAt": "2026-06-19",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["Ireland", "NRA", "AML", "MiCA", "CASP", "CBI", "EU", "passporting", "regulatory"],
+      "sources": [
+        { "name": "RTÉ News — Government unveils financial crime action plan", "url": "https://www.rte.ie/news/business/2026/0618/1579017-financial-crime-action-plan/", "kind": "primary" },
+        { "name": "Decrypt — Ireland Tightens Crypto Safeguards in New Financial Crime Action Plan", "url": "https://decrypt.co/371518/ireland-tightens-crypto-safeguards-in-new-financial-crime-action-plan", "kind": "secondary" },
+        { "name": "AML Intelligence — Insight: Ireland's new financial crime Action Plan 2026", "url": "https://www.amlintelligence.com/2026/06/insight-irelands-new-financial-crime-action-plan-2026-here-are-the-key-points/", "kind": "secondary" },
+        { "name": "CryptoTimes — Ireland Targets Crypto Risks in New 30-Point Crime Action Plan", "url": "https://www.cryptotimes.io/2026/06/19/ireland-targets-crypto-risks-in-new-30-point-crime-action-plan/", "kind": "secondary" }
       ]
     },
     {

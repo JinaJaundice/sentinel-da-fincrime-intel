@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19",
+  "lastUpdated": "2026-06-20",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1081,6 +1081,58 @@
         { "name": "Yahoo Finance — Clarity Act News: July 4 Deadline Dead in the Water, Senate Ethics Fight and 60-Vote Hurdle", "url": "https://www.yahoo.com/news/politics/articles/clarity-act-news-july-4-151648496.html", "kind": "secondary" },
         { "name": "CoinDesk — Alsobrooks says Clarity Act needs ethics deal before Senate vote", "url": "https://www.coindesk.com/coindesk-news/2026/06/05/alsobrooks-says-clarity-act-needs-ethics-deal-before-senate-vote", "kind": "secondary" },
         { "name": "CryptoNews — CLARITY Act July 4 Deadline Dead as Ethics and Section 604 Talks Collapse", "url": "https://cryptonews.com/news/clarity-act-july-4-deadline-ethics-section-604-collapse/", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-fed-genius-cip-nprm",
+      "type": "regulatory",
+      "title": "Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline",
+      "summary": "On 18 June 2026, the Federal Reserve Board approved — 5 to 0 with incoming Chair Kevin Warsh abstaining — a proposed rule requiring certain permitted payment stablecoin issuers (PPSIs) to maintain effective customer identification programmes (CIPs) under the Bank Secrecy Act. The proposal requires verification of customer name, birthdate, and address, and screening against US government watchlists. Decentralised protocols are explicitly exempt. Governor Michael Barr voted in favour but flagged a residual gap: the GENIUS Act framework does not adequately address illicit-finance risks in secondary market transactions in payment stablecoins. The 60-day public comment period means the final rule will arrive well after the GENIUS Act's July 18, 2026 implementing-rule statutory deadline.",
+      "soWhat": "The Fed's rule closes the last institutional gap in the GENIUS Act CIP architecture — completing a five-agency suite (OCC, FDIC, NCUA, FinCEN/OFAC, Fed). Three bank compliance implications: (1) BHC-subsidiary stablecoin issuers now face the highest compliance bar of any PPSI pathway — Fed supervision plus bank-equivalent CIP obligations make Fed-supervised issuers the most credible counterparty tier for AML purposes; update counterparty risk tiering to distinguish Fed-supervised PPSIs from OCC-chartered and state-licensed peers. (2) The 60-day comment period (closing mid-August) means the Fed's final rule will land on the January 18, 2027 backstop date, not the accelerated November 2026 scenario; the multi-agency effective-date map is now split. (3) Warsh's unexplained abstention from Powell's proposal — the first meaningful Fed GENIUS Act split — introduces genuine uncertainty about the final rule's scope; track whether Warsh signals preference for supervisory flexibility (lighter CIP for non-bank PPSIs) or Barr's secondary-market extension during the comment period. Cross-reference: feed-genius-act-rulemaking-sprint for multi-agency implementation context.",
+      "date": "2026-06-18",
+      "addedAt": "2026-06-20",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["GENIUS-Act", "Federal-Reserve", "stablecoin", "CIP", "KYC", "AML", "PPSI", "rulemaking", "BSA", "Warsh"],
+      "publication": {
+        "issuer": "Federal Reserve",
+        "kind": "Notice of Proposed Rulemaking",
+        "ref": "bcreg20260618a"
+      },
+      "sources": [
+        { "name": "Federal Reserve — Press release: CIP proposal for payment stablecoin issuers", "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260618a.htm", "kind": "primary" },
+        { "name": "The Block — Federal Reserve rolls out proposed rulemaking requiring stablecoin issuers to maintain customer identification program", "url": "https://www.theblock.co/post/405247/federal-reserve-rolls-out-proposing-rulemaking-requiring-stablecoin-issuers-to-maintain-customer-identification-program", "kind": "secondary" },
+        { "name": "Decrypt — Powell supports Fed's new stablecoin policies—but Chair Warsh abstains", "url": "https://decrypt.co/371548/jerome-powell-supports-fed-stablecoin-policies-chair-kevin-warsh-abstains", "kind": "secondary" },
+        { "name": "CryptoBriefing — Federal Reserve proposes new stablecoin rules requiring customer screening under GENIUS Act", "url": "https://cryptobriefing.com/fed-proposes-stablecoin-customer-screening-rules/", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-fatf-plenary-june2026",
+      "type": "regulatory",
+      "title": "FATF June 2026 Plenary: seventh VA/VASP standards update approved, DeFi ML risks report commissioned, UK assumes presidency",
+      "summary": "The sixth and final FATF Plenary under Mexico's presidency (Paris, 17–19 June 2026) approved a seventh targeted update on implementation of the FATF Standards on Virtual Assets and VASPs — to be published July 2026. A new targeted report on ML/TF/PF risks in decentralised finance (DeFi) was commissioned for future publication. The UK assumes the FATF Presidency from July 2026, with India's Vivek Aggarwal appointed incoming Vice-President (July 2026 – June 2027). Travel Rule legislation has been enacted in 85 of 117 assessed FATF jurisdictions, up from 65 in 2024. Algeria and Namibia were removed from the increased-monitoring list. A separate report on underground banking and hawala exploitation by criminal actors was approved for September 2026 publication.",
+      "soWhat": "Two structural signals for bank compliance planning: (1) The seventh VA/VASP update — landing in July 2026 — will be the global adequacy benchmark against which FCA's September 2026 authorisation gateway assessments, AMLA's forthcoming RTSs, and the GENIUS Act final rules will be calibrated. Any CASP or bank seeking FSMA/MiCA/GENIUS Act compliance sign-off in the next 12 months should treat this update as defining the minimum AML/CTF and Travel Rule implementation standard. (2) The UK assuming the FATF Presidency while simultaneously opening its crypto authorisation gateway in September 2026 creates direct structural alignment between FCA's supervisory rulebook and the FATF standards-setting agenda. Expect the UK presidency to prioritise DeFi ML risks and stablecoin issuer obligations as flagship themes — the commissioned DeFi report is the first FATF work specifically on DeFi ML/TF/PF risks; track its publication (July–August 2026 estimate) as a forward indicator of FCA and AMLA supervisory expectations. The Travel Rule count (85/117) confirms most major financial jurisdictions now have legislation — supervisory attention is shifting from enactment to enforcement quality.",
+      "date": "2026-06-19",
+      "addedAt": "2026-06-20",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FATF", "virtual-assets", "VASP", "DeFi", "Travel-Rule", "UK", "AML", "hawala", "plenary", "regulation"],
+      "publication": {
+        "issuer": "FATF",
+        "kind": "Plenary Outcomes",
+        "ref": "FATF June 2026 Plenary"
+      },
+      "sources": [
+        { "name": "FATF — Outcomes FATF Plenary, 17–19 June 2026", "url": "https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-fatf-plenary-june-2026.html", "kind": "primary" },
+        { "name": "FATF — Jurisdictions under Increased Monitoring: June 2026 update", "url": "https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/increased-monitoring-june-2026.html", "kind": "primary" }
       ]
     }
   ]

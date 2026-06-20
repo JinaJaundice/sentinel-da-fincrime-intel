@@ -1,15 +1,20 @@
-# Sentinel weekly digest — 17 June 2026
+# Sentinel weekly digest — 20 June 2026
 
-_17 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_12 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 5 new items; latest: SEC and CFTC issue landmark joint crypto asset classification — five-part token taxonomy ends enforcement-by-litigation era
+- **Stablecoins** — 6 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
 - **Sanctions & OFAC** — 5 new items; latest: GENIUS Act implementing rules: five agencies proposed, Federal Reserve absent — July 18 statutory deadline now 32 days away
-- **MiCA & the EU** — 4 new items; latest: FATF offshore VASP report: 'nested account' abuse lets unlicensed VASPs hide as retail customers — only 46% of jurisdictions apply activity-based licensing
-- **US rulemaking** — 3 new items; latest: GENIUS Act implementing rules: five agencies proposed, Federal Reserve absent — July 18 statutory deadline now 32 days away
-- **Travel Rule** — 2 new items; latest: FATF offshore VASP report: 'nested account' abuse lets unlicensed VASPs hide as retail customers — only 46% of jurisdictions apply activity-based licensing
+- **Travel Rule** — 3 new items; latest: FATF offshore VASP report: 'nested account' abuse lets unlicensed VASPs hide as retail customers — only 46% of jurisdictions apply activity-based licensing
+- **US rulemaking** — 3 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
+- **MiCA & the EU** — 2 new items; latest: FATF offshore VASP report: 'nested account' abuse lets unlicensed VASPs hide as retail customers — only 46% of jurisdictions apply activity-based licensing
 
 ## Notable this week
+
+### Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
+*US · 18 June 2026 · High impact*
+> **So what:** The Fed's rule closes the last institutional gap in the GENIUS Act CIP architecture — completing a five-agency suite (OCC, FDIC, NCUA, FinCEN/OFAC, Fed). Three bank compliance implications: (1) BHC-subsidiary stablecoin issuers now face the highest compliance bar of any PPSI pathway — Fed supervision plus bank-equivalent CIP obligations make Fed-supervised issuers the most credible counterparty tier for AML purposes; update counterparty risk tiering to distinguish Fed-supervised PPSIs from OCC-chartered and state-licensed peers. (2) The 60-day comment period (closing mid-August) means the Fed's final rule will land on the January 18, 2027 backstop date, not the accelerated November 2026 scenario; the multi-agency effective-date map is now split. (3) Warsh's unexplained abstention from Powell's proposal — the first meaningful Fed GENIUS Act split — introduces genuine uncertainty about the final rule's scope; track whether Warsh signals preference for supervisory flexibility (lighter CIP for non-bank PPSIs) or Barr's secondary-market extension during the comment period. Cross-reference: feed-genius-act-rulemaking-sprint for multi-agency implementation context.
+Source: [Federal Reserve — Press release: CIP proposal for payment stablecoin issuers](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260618a.htm)
 
 ### SEC and CFTC issue landmark joint crypto asset classification — five-part token taxonomy ends enforcement-by-litigation era
 *US · 17 March 2026 · High impact*
@@ -31,15 +36,10 @@ Source: [OCC — GENIUS Act Notice of Proposed Rulemaking (Bulletin 2026-3)](htt
 > **So what:** Xinbi is the dominant successor to Huione as the shared laundering back-office for the CLMN ecosystem (see feed-chinese-mln-laas-typology). Its survival of FinCEN's Section 311 action — by pivoting to a proprietary platform outside Telegram's enforcement reach — means standard entity-list screening and Telegram-wallet monitoring will miss Xinbi flows. Banks must run CLMN cluster analytics covering SafeW and XinbiPay wallet infrastructure to detect Xinbi exposure. The UK designation activates POCA obligations on receiving institutions for any Xinbi-designated-entity proceeds — including indirectly via omnibus accounts. The London property freeze is a reminder that CLMN infrastructure has been laundered into UK real estate, creating an exposure surface beyond crypto flows alone. Add Xinbi/Prince Group designated addresses to screening feeds and escalate any UK-property counterparty links.
 Source: [TRM Labs — UK first to sanction Xinbi, one of Southeast Asia's largest illicit crypto marketplaces](https://www.trmlabs.com/resources/blog/uk-becomes-first-country-to-sanction-xinbi-one-of-southeast-asias-largest-illicit-crypto-marketplaces)
 
-### EU 21st Russia sanctions package: 11 crypto platforms banned and first country-level crypto-sector kill-switch power
-*EU · 10 June 2026 · High impact*
-> **So what:** A country-level crypto-sector ban is structurally more powerful than entity-level listing — a single EC designation decision cuts an entire jurisdiction's CASP ecosystem off from EU-regulated markets, with no grandfathering for existing counterparty relationships. Banks should stress-test exposure now: any correspondent banking, liquidity, or CASP counterparty flows routed through Turkish, Emirati, or Kazakh platforms could become sanctioned exposure without a specific entity being pre-listed. The 11 new platform bans require an immediate counterparty sweep. This is distinct from the 20th package's blanket ban on Russian and Belarusian CASPs — the 21st extends the weapon to Russia's intermediary jurisdictions.
-Source: [OCCRP — EU Plans Massive 21st Sanctions Package to Target Russian Banks and Crypto](https://www.occrp.org/en/news/eu-plans-massive-21st-sanctions-package-to-target-russian-banks-and-crypto)
-
-### CLARITY Act July 4 target confirmed dead — ethics talks collapse and Senate passage probability drops to 45%
-*US · 12 June 2026 · Medium impact*
-> **So what:** The CLARITY Act's passage timeline is now genuinely uncertain, not merely delayed. Two direct bank planning implications: (1) the SEC/CFTC exchange-level jurisdiction ambiguity will not be resolved before summer recess — compliance strategies premised on CLARITY Act clarity by Q3 2026 should rebase to a Q4 2026/Q1 2027 base case with meaningful no-passage risk; (2) the ethics-provision resolution — not the Senate calendar — is the leading indicator to monitor: a fresh ethics compromise takes weeks to stabilise after a collapse, so track whether the White House and Democratic holdouts re-engage rather than watching floor scheduling. Cross-reference: see feed-clarity-act-senate-floor-2026 for the bill's background and feed-sec-cftc-token-taxonomy-2026 for the classification clarity already achieved without CLARITY Act passage.
-Source: [Yahoo Finance — Clarity Act News: July 4 Deadline Dead in the Water, Senate Ethics Fight and 60-Vote Hurdle](https://www.yahoo.com/news/politics/articles/clarity-act-news-july-4-151648496.html)
+### FATF June 2026 Plenary: seventh VA/VASP standards update approved, DeFi ML risks report commissioned, UK assumes presidency
+*Global · 19 June 2026 · Medium impact*
+> **So what:** Two structural signals for bank compliance planning: (1) The seventh VA/VASP update — landing in July 2026 — will be the global adequacy benchmark against which FCA's September 2026 authorisation gateway assessments, AMLA's forthcoming RTSs, and the GENIUS Act final rules will be calibrated. Any CASP or bank seeking FSMA/MiCA/GENIUS Act compliance sign-off in the next 12 months should treat this update as defining the minimum AML/CTF and Travel Rule implementation standard. (2) The UK assuming the FATF Presidency while simultaneously opening its crypto authorisation gateway in September 2026 creates direct structural alignment between FCA's supervisory rulebook and the FATF standards-setting agenda. Expect the UK presidency to prioritise DeFi ML risks and stablecoin issuer obligations as flagship themes — the commissioned DeFi report is the first FATF work specifically on DeFi ML/TF/PF risks; track its publication (July–August 2026 estimate) as a forward indicator of FCA and AMLA supervisory expectations. The Travel Rule count (85/117) confirms most major financial jurisdictions now have legislation — supervisory attention is shifting from enactment to enforcement quality.
+Source: [FATF — Outcomes FATF Plenary, 17–19 June 2026](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-fatf-plenary-june-2026.html)
 
 ## By the numbers
-17 new · 5 high-impact · 0 verified
+12 new · 5 high-impact · 0 verified

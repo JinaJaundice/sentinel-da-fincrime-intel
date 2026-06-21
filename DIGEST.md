@@ -1,15 +1,20 @@
-# Sentinel weekly digest — 20 June 2026
+# Sentinel weekly digest — 21 June 2026
 
 _12 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 6 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
-- **Sanctions & OFAC** — 5 new items; latest: GENIUS Act implementing rules: five agencies proposed, Federal Reserve absent — July 18 statutory deadline now 32 days away
+- **Stablecoins** — 5 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
+- **Sanctions & OFAC** — 4 new items; latest: GENIUS Act implementing rules: five agencies proposed, Federal Reserve absent — July 18 statutory deadline now 32 days away
 - **Travel Rule** — 3 new items; latest: FATF offshore VASP report: 'nested account' abuse lets unlicensed VASPs hide as retail customers — only 46% of jurisdictions apply activity-based licensing
+- **MiCA & the EU** — 3 new items; latest: Binance confirmed EU exit July 1 — Greece rejects MiCA licence, world's largest exchange loses EU market
 - **US rulemaking** — 3 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
-- **MiCA & the EU** — 2 new items; latest: FATF offshore VASP report: 'nested account' abuse lets unlicensed VASPs hide as retail customers — only 46% of jurisdictions apply activity-based licensing
 
 ## Notable this week
+
+### Binance confirmed EU exit July 1 — Greece rejects MiCA licence, world's largest exchange loses EU market
+*EU · 16 June 2026 · High impact*
+> **So what:** The world's largest exchange by volume is exiting the EU as an unlicensed entity from July 1 — confirming that MiCA enforcement carries real commercial consequences. Three immediate implications for bank compliance teams: (1) any CASP counterparty relationship with Binance that touches EU-resident clients must be treated as exposure to an unauthorised provider from July 1; existing AML exposure via omnibus accounts or payment rails that runs through Binance's EU-facing operations requires an immediate lookback and relationship review; (2) EU users displacing from Binance will migrate to authorised competitors in volume — monitor for AML onboarding risk and unusual account funding spikes at licensed CASPs absorbing Binance's displaced user base; (3) Binance retains its court-ordered US compliance monitorship alongside an active DOJ investigation for $1.7B in Iran and Russia flows (see feed-binance-doj-iran-probe) — the EU exit concentrates Binance's remaining activity in non-EU jurisdictions with less regulatory visibility. Cross-reference: feed-binance-mica-greece-imminent for prior context (the optimistic June 13 prediction this item updates); feed-mica-17pct-licensed-21-days for the broader CASP authorisation landscape.
+Source: [Binance — An Update on Our MiCA Licensing Journey in Europe](https://www.binance.com/en/blog/regulation/5369321191341949883)
 
 ### Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
 *US · 18 June 2026 · High impact*
@@ -36,10 +41,5 @@ Source: [OCC — GENIUS Act Notice of Proposed Rulemaking (Bulletin 2026-3)](htt
 > **So what:** Xinbi is the dominant successor to Huione as the shared laundering back-office for the CLMN ecosystem (see feed-chinese-mln-laas-typology). Its survival of FinCEN's Section 311 action — by pivoting to a proprietary platform outside Telegram's enforcement reach — means standard entity-list screening and Telegram-wallet monitoring will miss Xinbi flows. Banks must run CLMN cluster analytics covering SafeW and XinbiPay wallet infrastructure to detect Xinbi exposure. The UK designation activates POCA obligations on receiving institutions for any Xinbi-designated-entity proceeds — including indirectly via omnibus accounts. The London property freeze is a reminder that CLMN infrastructure has been laundered into UK real estate, creating an exposure surface beyond crypto flows alone. Add Xinbi/Prince Group designated addresses to screening feeds and escalate any UK-property counterparty links.
 Source: [TRM Labs — UK first to sanction Xinbi, one of Southeast Asia's largest illicit crypto marketplaces](https://www.trmlabs.com/resources/blog/uk-becomes-first-country-to-sanction-xinbi-one-of-southeast-asias-largest-illicit-crypto-marketplaces)
 
-### FATF June 2026 Plenary: seventh VA/VASP standards update approved, DeFi ML risks report commissioned, UK assumes presidency
-*Global · 19 June 2026 · Medium impact*
-> **So what:** Two structural signals for bank compliance planning: (1) The seventh VA/VASP update — landing in July 2026 — will be the global adequacy benchmark against which FCA's September 2026 authorisation gateway assessments, AMLA's forthcoming RTSs, and the GENIUS Act final rules will be calibrated. Any CASP or bank seeking FSMA/MiCA/GENIUS Act compliance sign-off in the next 12 months should treat this update as defining the minimum AML/CTF and Travel Rule implementation standard. (2) The UK assuming the FATF Presidency while simultaneously opening its crypto authorisation gateway in September 2026 creates direct structural alignment between FCA's supervisory rulebook and the FATF standards-setting agenda. Expect the UK presidency to prioritise DeFi ML risks and stablecoin issuer obligations as flagship themes — the commissioned DeFi report is the first FATF work specifically on DeFi ML/TF/PF risks; track its publication (July–August 2026 estimate) as a forward indicator of FCA and AMLA supervisory expectations. The Travel Rule count (85/117) confirms most major financial jurisdictions now have legislation — supervisory attention is shifting from enactment to enforcement quality.
-Source: [FATF — Outcomes FATF Plenary, 17–19 June 2026](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-fatf-plenary-june-2026.html)
-
 ## By the numbers
-12 new · 5 high-impact · 0 verified
+12 new · 6 high-impact · 0 verified

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20",
+  "lastUpdated": "2026-06-21",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1133,6 +1133,28 @@
       "sources": [
         { "name": "FATF — Outcomes FATF Plenary, 17–19 June 2026", "url": "https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-fatf-plenary-june-2026.html", "kind": "primary" },
         { "name": "FATF — Jurisdictions under Increased Monitoring: June 2026 update", "url": "https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/increased-monitoring-june-2026.html", "kind": "primary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-binance-mica-eu-exit-july2026",
+      "type": "signal",
+      "title": "Binance confirmed EU exit July 1 — Greece rejects MiCA licence, world's largest exchange loses EU market",
+      "summary": "Reuters reported on 16 June 2026 that Greece's Hellenic Capital Market Commission (HCMC) was set to reject Binance's pan-European MiCA CASP application — the exchange's only live EU licensing pathway. Binance's own subsequent statement confirmed: without authorisation from any European regulator before 30 June, it cannot continue operating for EU-resident users from 1 July 2026. Binance serves more EU users than any other crypto exchange and recorded approximately $3.3 trillion in 2025 global trading volume; it has no CASP licence in any EU member state as of the deadline. Binance disputed the characterisation of a formal rejection, stating it received no official notice, but confirmed service cessation in the EU.",
+      "soWhat": "The world's largest exchange by volume is exiting the EU as an unlicensed entity from July 1 — confirming that MiCA enforcement carries real commercial consequences. Three immediate implications for bank compliance teams: (1) any CASP counterparty relationship with Binance that touches EU-resident clients must be treated as exposure to an unauthorised provider from July 1; existing AML exposure via omnibus accounts or payment rails that runs through Binance's EU-facing operations requires an immediate lookback and relationship review; (2) EU users displacing from Binance will migrate to authorised competitors in volume — monitor for AML onboarding risk and unusual account funding spikes at licensed CASPs absorbing Binance's displaced user base; (3) Binance retains its court-ordered US compliance monitorship alongside an active DOJ investigation for $1.7B in Iran and Russia flows (see feed-binance-doj-iran-probe) — the EU exit concentrates Binance's remaining activity in non-EU jurisdictions with less regulatory visibility. Cross-reference: feed-binance-mica-greece-imminent for prior context (the optimistic June 13 prediction this item updates); feed-mica-17pct-licensed-21-days for the broader CASP authorisation landscape.",
+      "date": "2026-06-16",
+      "addedAt": "2026-06-21",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": ["Binance", "MiCA", "EU", "CASP", "authorization", "Greece", "HCMC", "counterparty-risk", "enforcement"],
+      "sources": [
+        { "name": "The Block — Binance may be forced to halt services for EU clients next month: Reuters", "url": "https://www.theblock.co/post/404947/binance-may-forced-halt-services-eu-clients-next-month-reuters", "kind": "secondary" },
+        { "name": "CoinDesk — Binance says its European regulatory application is fully compliant despite report of Greek rejection", "url": "https://www.coindesk.com/policy/2026/06/16/binance-says-its-european-regulatory-application-is-fully-compliant-despite-report-of-greek-rejection", "kind": "secondary" },
+        { "name": "CryptoBriefing — Binance set to lose permission to operate in EU as Greece expected to reject MiCA license", "url": "https://cryptobriefing.com/binance-eu-mica-license-rejection/", "kind": "secondary" },
+        { "name": "Binance — An Update on Our MiCA Licensing Journey in Europe", "url": "https://www.binance.com/en/blog/regulation/5369321191341949883", "kind": "primary" }
       ]
     }
   ]

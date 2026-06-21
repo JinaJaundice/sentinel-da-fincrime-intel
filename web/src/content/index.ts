@@ -10,4 +10,19 @@ import type { Item } from "./types";
 // provenance stays clean. Views consume ALL_ITEMS.
 export const FEED = feedData.items as unknown as Item[];
 export const FEED_META = { lastUpdated: feedData.lastUpdated };
-export const ALL_ITEMS: Item[] = [...ITEMS, ...FEED];
+
+// De-duplicate the merged list. The same regulator publication can land in
+// both the curated seed and the agent feed (same paper, different id), so
+// collapse those by issuer+ref; everything else collapses by id. ITEMS come
+// first, so the curated (verified) copy wins over an agent duplicate.
+function dedupe(items: Item[]): Item[] {
+  const seen = new Set<string>();
+  return items.filter((i) => {
+    const key = i.publication?.ref ? `pub:${i.publication.issuer}:${i.publication.ref}` : `id:${i.id}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+export const ALL_ITEMS: Item[] = dedupe([...ITEMS, ...FEED]);

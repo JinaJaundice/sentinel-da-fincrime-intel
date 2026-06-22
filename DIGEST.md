@@ -1,13 +1,13 @@
-# Sentinel weekly digest — 21 June 2026
+# Sentinel weekly digest — 22 June 2026
 
 _12 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 5 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
-- **Sanctions & OFAC** — 4 new items; latest: GENIUS Act implementing rules: five agencies proposed, Federal Reserve absent — July 18 statutory deadline now 32 days away
+- **Stablecoins** — 4 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
+- **Sanctions & OFAC** — 3 new items; latest: GENIUS Act implementing rules: five agencies proposed, Federal Reserve absent — July 18 statutory deadline now 32 days away
 - **Travel Rule** — 3 new items; latest: FATF offshore VASP report: 'nested account' abuse lets unlicensed VASPs hide as retail customers — only 46% of jurisdictions apply activity-based licensing
 - **MiCA & the EU** — 3 new items; latest: Binance confirmed EU exit July 1 — Greece rejects MiCA licence, world's largest exchange loses EU market
-- **US rulemaking** — 3 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
+- **US rulemaking** — 2 new items; latest: Federal Reserve issues GENIUS Act CIP proposed rule — Warsh abstains, secondary-market gap persists, 60-day comment period pushes past July 18 deadline
 
 ## Notable this week
 
@@ -36,10 +36,10 @@ Source: [FATF — Understanding and Mitigating the Risks of Offshore VASPs](http
 > **So what:** The July 18 deadline is now the GENIUS Act's critical path for bank compliance planning. Three direct implications: (1) the November 2026 effective-date scenario is live — banks and stablecoin counterparties must model a compressed timeline alongside the January 2027 baseline; (2) the Federal Reserve's absence creates a prudential gap specifically for bank holding company issuers — the largest potential stablecoin issuers have no Fed-approved framework yet, and any delay from the Fed could trigger a two-tier market where OCC-chartered issuers operate under tighter standards than BHC issuers; (3) the OCC rule's role as the benchmark standard means OCC-chartered stablecoin issuers now define the counterparty-risk yardstick — banks should use the OCC proposed standards (1:1 reserve backing, capital, liquidity, operational risk, concentration limits) as the reference for PPSI counterparty due diligence, regardless of final rule timing.
 Source: [OCC — GENIUS Act Notice of Proposed Rulemaking (Bulletin 2026-3)](https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html)
 
-### UK first to sanction Xinbi Guarantee: $19.9B CLMN successor platform and Cambodia's #8 Park scam compound designated
-*UK · 26 March 2026 · High impact*
-> **So what:** Xinbi is the dominant successor to Huione as the shared laundering back-office for the CLMN ecosystem (see feed-chinese-mln-laas-typology). Its survival of FinCEN's Section 311 action — by pivoting to a proprietary platform outside Telegram's enforcement reach — means standard entity-list screening and Telegram-wallet monitoring will miss Xinbi flows. Banks must run CLMN cluster analytics covering SafeW and XinbiPay wallet infrastructure to detect Xinbi exposure. The UK designation activates POCA obligations on receiving institutions for any Xinbi-designated-entity proceeds — including indirectly via omnibus accounts. The London property freeze is a reminder that CLMN infrastructure has been laundered into UK real estate, creating an exposure surface beyond crypto flows alone. Add Xinbi/Prince Group designated addresses to screening feeds and escalate any UK-property counterparty links.
-Source: [TRM Labs — UK first to sanction Xinbi, one of Southeast Asia's largest illicit crypto marketplaces](https://www.trmlabs.com/resources/blog/uk-becomes-first-country-to-sanction-xinbi-one-of-southeast-asias-largest-illicit-crypto-marketplaces)
+### FCA PS26/7: UK authorised funds green-lit to tokenise on DLT — MLR cryptoasset registration required for public blockchain use
+*UK · 30 April 2026 · Medium impact*
+> **So what:** PS26/7 opens a live regulatory pathway for tokenised UK funds at scale — and explicitly links it to crypto AML obligations. Three bank compliance implications: (1) Banks acting as sub-custodians, depositaries or distributors for tokenised UCITS/NURS products must assess whether the DLT-register function triggers MLR cryptoasset registration now and FSMA cryptoasset permissions from 2027 — the D2F model removes a traditional custodial AML checkpoint, creating new activity and registration exposure. (2) The D2F model bypasses the traditional custodian intermediary layer: banks receiving D2F subscriptions or redemptions must assess whether fund-level investor KYC is sufficient or whether supplementary account-level checks are required, particularly for retail-facing tokenised products. (3) Combined with the cETN 10% cap in CP26/17 (see feed-fca-cp26-17-cetns-authorised-funds) and the FSMA perimeter guidance in CP26/13 (see feed-fca-cp26-13-perimeter-guidance), PS26/7 is the third pillar of a full DLT-in-mainstream-finance rulebook — bank product and compliance teams embedding tokenised assets into fund structures should map all three instruments now rather than at the September 2026 gateway deadline.
+Source: [FCA — PS26/7: Progressing fund tokenisation](https://www.fca.org.uk/publications/policy-statements/ps26-7-progressing-fund-tokenisation)
 
 ## By the numbers
-12 new · 6 high-impact · 0 verified
+12 new · 5 high-impact · 0 verified

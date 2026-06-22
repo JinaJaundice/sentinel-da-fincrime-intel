@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21",
+  "lastUpdated": "2026-06-22",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1155,6 +1155,78 @@
         { "name": "CoinDesk — Binance says its European regulatory application is fully compliant despite report of Greek rejection", "url": "https://www.coindesk.com/policy/2026/06/16/binance-says-its-european-regulatory-application-is-fully-compliant-despite-report-of-greek-rejection", "kind": "secondary" },
         { "name": "CryptoBriefing — Binance set to lose permission to operate in EU as Greece expected to reject MiCA license", "url": "https://cryptobriefing.com/binance-eu-mica-license-rejection/", "kind": "secondary" },
         { "name": "Binance — An Update on Our MiCA Licensing Journey in Europe", "url": "https://www.binance.com/en/blog/regulation/5369321191341949883", "kind": "primary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-g7-evian-dprk-crypto-2026",
+      "type": "signal",
+      "title": "G7 Évian declares DPRK crypto theft a global security threat — $6.75B cumulative, coordinated disruption mandated",
+      "summary": "At the G7 Summit in Évian-les-Bains (15–17 June 2026), leaders of Canada, France, Germany, Italy, Japan, the UK and the US published a joint geopolitical statement flagging North Korea's cryptocurrency thefts and cybercrimes as a global security threat. The statement cited $6.75 billion stolen cumulatively since 2017 — including $577 million in April 2026 from the Drift and KelpDAO exploits — and explicitly linked the proceeds to DPRK nuclear and ballistic-missile programmes. G7 leaders called for enhanced policy coordination, stronger enforcement of existing sanctions frameworks, and disruption of the laundering networks that convert stolen crypto into usable funds. No new designated wallets or exchange rules were announced.",
+      "soWhat": "The G7 framing moves DPRK crypto theft from a financial-crime typology to a weapons-proliferation financing priority — meaning banks with DPRK-exposed counterparty flows now sit squarely in the UN and G7 proliferation-financing framework, not just AML. Three implications: (1) All G7 supervisors face political pressure to intensify DPRK sanctions-screening scrutiny; the FCA's September 2026 crypto gateway assessments and AMLA's 2028 supervision selections both now operate under a G7-level DPRK mandate. (2) The coordinated-disruption call is a forward indicator of joint action against THORChain-to-Bitcoin conversion chains and Chinese intermediary networks (see feed-dprk-drift-kelp-hacks-2026); banks should refresh DPRK address clusters to include the April 2026 attack addresses. (3) The UK, as the new FATF president from July 2026, delivered this G7 commitment — expect the DeFi ML/TF risk report commissioned at the FATF June Plenary to foreground DPRK methodology alongside the weapons-financing angle.",
+      "date": "2026-06-17",
+      "addedAt": "2026-06-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["DPRK", "G7", "sanctions", "proliferation-financing", "Lazarus", "crypto-theft", "geopolitical", "weapons"],
+      "sources": [
+        { "name": "EU Council — G7 Leaders' Joint Statements, Évian, 16–17 June 2026", "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/17/g7-leaders-joint-statements-evian-france-16-17-june-2026/", "kind": "primary" },
+        { "name": "99Bitcoins — G7 Targets North Korea Crypto Hackers as Weapons-Financing Threat After $6.75B Stolen", "url": "https://99bitcoins.com/news/scams-theft/north-korea-crypto-theft-g7-evian-response/", "kind": "secondary" },
+        { "name": "Crypto.news — North Korea's crypto hack spree draws fresh G7 warning", "url": "https://crypto.news/north-koreas-crypto-hack-spree-draws-fresh-g7-warning/", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-fca-chambers-fincrime-speech-june2026",
+      "type": "regulatory",
+      "title": "FCA: AI has made financial crime 'cheap, fast and invisible' — whole-system response required beyond enforcement headlines",
+      "summary": "On 17 June 2026, Therese Chambers, FCA Joint Executive Director of Enforcement and Market Oversight, delivered a speech at the 22nd IBA Anti-Corruption Conference titled 'Beyond the headlines: the unseen fight against financial crime.' She warned that AI has made the criminal threat 'cheap, fast and invisible' while traditional enforcement remains 'expensive, slow and highly visible.' The FCA argues its response must encompass proactive supervision, market oversight and real-time detection alongside headline penalties, and that whole-system collaboration — across regulators, law enforcement and financial institutions — is essential to close the gaps criminals exploit. Crypto was identified as a primary vector for industrialised financial crime at scale.",
+      "soWhat": "Three operational implications: (1) The FCA is signalling it will assess firms' contribution to proactive crime detection — not just internal-controls adequacy — as part of supervisory engagement; September 2026 crypto gateway applicants should be prepared to demonstrate intelligence-sharing arrangements and real-time fraud-disruption protocols alongside documented AML programmes. (2) 'Cheap, fast and invisible' AI-enabled crime is a direct forward indicator for transaction monitoring calibration: static rule-based systems will not satisfy an FCA supervisory test calibrated against AI-enabled crime at scale; AI-assisted anomaly detection is now the implicit baseline expectation, consistent with Treasury's GENIUS Act tech roadmap (see feed-treasury-genius-innovation-report). (3) The whole-system model mirrors the FBI's Disruption Week approach (see feed-doj-disruption-week-pig-butchering); banks should map their operational readiness for real-time intelligence-sharing with regulators and law enforcement, not just retrospective SAR submission chains.",
+      "date": "2026-06-17",
+      "addedAt": "2026-06-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "AI", "financial-crime", "enforcement", "intelligence-sharing", "whole-system", "speech", "UK"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Speech",
+        "ref": "Chambers — IBA Anti-Corruption Conference 17 June 2026"
+      },
+      "sources": [
+        { "name": "FCA — 'Beyond the headlines: the unseen fight against financial crime' (Therese Chambers, 17 June 2026)", "url": "https://www.fca.org.uk/news/speeches/beyond-headlines-unseen-fight-against-financial-crime", "kind": "primary" },
+        { "name": "Regulation Tomorrow — FCA speech: Beyond the headlines: the unseen fight against financial crime", "url": "https://www.regulationtomorrow.com/2026/06/fca-speech-beyond-the-headlines-the-unseen-fight-against-financial-crime/", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-fca-ps26-7-fund-tokenisation",
+      "type": "regulatory",
+      "title": "FCA PS26/7: UK authorised funds green-lit to tokenise on DLT — MLR cryptoasset registration required for public blockchain use",
+      "summary": "On 30 April 2026, the FCA published Policy Statement PS26/7 'Progressing Fund Tokenisation', finalising guidance enabling authorised fund managers to use distributed ledger technology (DLT) within the existing regulatory framework. The rules enable the industry Blueprint model for tokenised UK UCITS and non-UCITS schemes, add Handbook guidance for maintaining unitholder registers on DLT, and introduce an optional Direct-to-Fund (D2F) model allowing investors to deal directly with a fund — bypassing the traditional custodian intermediary layer. The FCA authorised the UK's first tokenised UCITS scheme in January 2025. Critically, firms using public DLT networks must implement robust AML controls and may need Money Laundering Regulations registration as a cryptoasset custodian wallet provider until the FSMA cryptoasset regime takes effect in October 2027.",
+      "soWhat": "PS26/7 opens a live regulatory pathway for tokenised UK funds at scale — and explicitly links it to crypto AML obligations. Three bank compliance implications: (1) Banks acting as sub-custodians, depositaries or distributors for tokenised UCITS/NURS products must assess whether the DLT-register function triggers MLR cryptoasset registration now and FSMA cryptoasset permissions from 2027 — the D2F model removes a traditional custodial AML checkpoint, creating new activity and registration exposure. (2) The D2F model bypasses the traditional custodian intermediary layer: banks receiving D2F subscriptions or redemptions must assess whether fund-level investor KYC is sufficient or whether supplementary account-level checks are required, particularly for retail-facing tokenised products. (3) Combined with the cETN 10% cap in CP26/17 (see feed-fca-cp26-17-cetns-authorised-funds) and the FSMA perimeter guidance in CP26/13 (see feed-fca-cp26-13-perimeter-guidance), PS26/7 is the third pillar of a full DLT-in-mainstream-finance rulebook — bank product and compliance teams embedding tokenised assets into fund structures should map all three instruments now rather than at the September 2026 gateway deadline.",
+      "date": "2026-04-30",
+      "addedAt": "2026-06-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "PS26-7", "fund-tokenisation", "DLT", "MLR", "AML", "UCITS", "blockchain", "Direct-to-Fund", "custody", "UK"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Policy Statement",
+        "ref": "PS26/7"
+      },
+      "sources": [
+        { "name": "FCA — PS26/7: Progressing fund tokenisation", "url": "https://www.fca.org.uk/publications/policy-statements/ps26-7-progressing-fund-tokenisation", "kind": "primary" },
+        { "name": "FCA — Guidance to support innovation in fund tokenisation (press release)", "url": "https://www.fca.org.uk/news/press-releases/fca-sets-out-guidance-support-innovation-fund-tokenisation", "kind": "primary" },
+        { "name": "Regulation Tomorrow — FCA Policy Statement 26/7: Progressing Fund Tokenisation", "url": "https://www.regulationtomorrow.com/2026/04/fca-policy-statement-26-7-progressing-fund-tokenisation/", "kind": "secondary" }
       ]
     }
   ]

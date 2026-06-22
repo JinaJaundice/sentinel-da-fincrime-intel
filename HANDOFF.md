@@ -40,7 +40,7 @@ bank (the differentiator vs. a news feed).
 `content/index.ts` → `ALL_ITEMS`. Each tab is a filtered view. See
 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
-Tabs: Overview · Learn · Trends · Themes · Signals · FCA · Ventures ·
+Tabs: Overview · Learn · Trends · Themes · Signals · FCA · Atlas · Ventures ·
 Solutions · Intelligence · Radar · Activity.
 
 ## What's built
@@ -83,6 +83,11 @@ Solutions · Intelligence · Radar · Activity.
   GC26/2) plus **PS24/17** (Financial Crime Guide). The agent now **sweeps the
   FCA listings exhaustively** each run (`INGEST.md`) and dedupes by `ref`, so
   every new paper flows in.
+- **Atlas** tab — an interactive **world map** of crypto-regulation status by
+  jurisdiction (`implemented` / `in-progress` / `none`). Self-rendered SVG from
+  a topojson (`components/WorldMap.tsx`, no map lib) with clickable markers →
+  a detail panel (status, So-what, key dates, sources). Data in
+  `content/jurisdictions.ts` (~18 to start); lazy-loaded.
 
 ## The autonomous agent (daily routine)
 

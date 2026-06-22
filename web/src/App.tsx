@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Sidebar, type Page } from "./components/Sidebar";
 import { ALL_ITEMS, FEED_META } from "./content";
 import { TYPE_META } from "./content/taxonomy";
@@ -12,6 +12,10 @@ import { Learn } from "./views/Learn";
 import { Trends } from "./views/Trends";
 import { FCA } from "./views/FCA";
 import { BriefingPackDrawer } from "./components/BriefingPack";
+
+// The Atlas pulls in a world-map topojson (~100 kB) — load it on demand so it
+// never weighs down the initial bundle.
+const Atlas = lazy(() => import("./views/Atlas").then((m) => ({ default: m.Atlas })));
 
 export function App() {
   const [page, setPageRaw] = useState<Page>("brief");
@@ -69,6 +73,11 @@ export function App() {
             />
           )}
           {page === "fca" && <FCA items={items} />}
+          {page === "atlas" && (
+            <Suspense fallback={<p className="text-sm text-neutral-500">Loading map…</p>}>
+              <Atlas />
+            </Suspense>
+          )}
           {page === "intelligence" && <Intelligence items={items} />}
           {page === "trends" && <Trends items={items} setPage={setPage} setTheme={setTheme} />}
           {page === "radar" && <Radar items={items} />}

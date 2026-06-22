@@ -30,17 +30,19 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/components/BriefingPack.tsx` | `PackToggle` (per-item) + the floating `BriefingPackDrawer` — curate across views, reorder, export a one-pager |
 | `web/src/components/VendorMatrix.tsx` | Solutions comparison grid (vendors by category, stance-ordered) — the "Matrix" view mode |
 | `web/src/components/Term.tsx` | Inline glossary term — dotted-underline trigger, definition on hover/focus (looks up `glossary.ts`) |
+| `web/src/components/WorldMap.tsx` | Self-rendered SVG world map — equirectangular projection of a topojson, status-tinted countries + pulsing clickable markers + drag-pan/zoom (no map lib) |
 | `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, a "This week" pulse (movers + digest copy/download), latest list |
 | `web/src/views/Learn.tsx` | Knowledge hub: guided "start here" path (stream tour, how to read an item) + the searchable glossary |
 | `web/src/views/Themes.tsx` | Curated topic briefings — one page per theme, aggregating related items + a primer; per-theme `ExportMenu` (primer leads the Markdown) |
 | `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, a Verified-only filter, an `ExportMenu`, a Table/Matrix toggle (solutions), renders a `DataTable` or `VendorMatrix` |
 | `web/src/views/FCA.tsx` | FCA-publications tracker — a filtered lens over items with a `publication` from the FCA (paper-type filter + the `fca` `DataTable` variant) |
+| `web/src/views/Atlas.tsx` | Interactive world map of crypto-regulation status by jurisdiction (map + detail panel + drill-down list); **lazy-loaded** (`App.tsx`) so the topojson never weighs down the initial bundle |
 | `web/src/views/Intelligence.tsx` | Typology library (each card expands to a "How it works" primer + key-term chips) + coverage bars |
 | `web/src/views/Trends.tsx` | Time-series analytics: date-ranged monthly volume × risk, theme momentum (click a row to drill into the theme), top topics, and a weekly-digest export |
 | `web/scripts/digest.ts` | Writes `DIGEST.md` at the repo root (`npm --prefix web run digest`, via `tsx`) — the agent runs it each cycle |
 | `web/src/views/Activity.tsx` | Transparency log of what the agent auto-published (newest first) |
 | `web/src/views/Radar.tsx` | Regulatory radar: upcoming milestones (countdowns) + recently-landed regulatory items |
-| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `glossary.ts` + `primers.ts` (knowledge layer) · `milestones.ts` (radar dates) · `index.ts` (merges **and de-dupes** seed+feed → `ALL_ITEMS`: regulator publications by issuer+ref, else by id; seed wins) |
+| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `glossary.ts` + `primers.ts` (knowledge layer) · `jurisdictions.ts` (atlas regulation status) · `milestones.ts` (radar dates) · `index.ts` (merges **and de-dupes** seed+feed → `ALL_ITEMS`: regulator publications by issuer+ref, else by id; seed wins) |
 | `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `pack.ts` (briefing-pack selection) · `utils.ts` · `insights.ts` (derived metrics + time-series) · `digest.ts` (weekly one-pager) · `export.ts` (delivery & export — see below) |
 | `web/src/components/viz.tsx` | Chart primitives (CSS/flex, no chart lib): `ImpactMix`, `MiniBars`, `MonthlyImpactChart`, `MomentumList` |
 

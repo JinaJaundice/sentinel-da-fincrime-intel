@@ -112,6 +112,20 @@ set** (DP23/4 → CP26/13, incl. CP25/25, CP25/40–42, GC26/2) + PS24/17 —
 real papers, primary `fca.org.uk` sources. The agent now **sweeps the FCA
 listings exhaustively** each run and dedupes by `ref` (see `agent/INGEST.md`).
 
+## Phase 11 — regulatory atlas ✅
+
+An interactive **Atlas** tab ([`views/Atlas.tsx`](web/src/views/Atlas.tsx)): a
+world map of crypto-regulation **status by jurisdiction**
+(`implemented` / `in-progress` / `none`). The map
+([`components/WorldMap.tsx`](web/src/components/WorldMap.tsx)) is **self-rendered**
+— an equirectangular projection of a `world-atlas` topojson into SVG (no map
+library), with status-tinted countries, pulsing clickable markers, and
+drag-pan/zoom. Click a marker (or a name) → a detail panel with the status,
+the bank "So what", key dates and **sources** to explore. Curated, sourced
+data in [`content/jurisdictions.ts`](web/src/content/jurisdictions.ts) (~18
+jurisdictions to start). The view is **lazy-loaded** so the topojson never
+weighs down the initial bundle.
+
 ## Settled (former deferred items, decided 2026-06-06)
 
 - **Hosting** ✅ — live on Vercel, git-linked auto-deploy from `main`.

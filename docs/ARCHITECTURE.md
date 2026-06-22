@@ -30,7 +30,7 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/src/components/BriefingPack.tsx` | `PackToggle` (per-item) + the floating `BriefingPackDrawer` — curate across views, reorder, export a one-pager |
 | `web/src/components/VendorMatrix.tsx` | Solutions comparison grid (vendors by category, stance-ordered) — the "Matrix" view mode |
 | `web/src/components/Term.tsx` | Inline glossary term — dotted-underline trigger, definition on hover/focus (looks up `glossary.ts`) |
-| `web/src/components/WorldMap.tsx` | Self-rendered SVG world map — equirectangular projection of a topojson, status-tinted countries + pulsing clickable markers + drag-pan/zoom (no map lib) |
+| `web/src/components/WorldMap.tsx` | World map via **react-simple-maps** (d3-geo `geoEqualEarth`) — status-tinted country geographies + pulsing clickable markers + drag-pan / scroll-wheel zoom |
 | `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, a "This week" pulse (movers + digest copy/download), latest list |
 | `web/src/views/Learn.tsx` | Knowledge hub: guided "start here" path (stream tour, how to read an item) + the searchable glossary |
 | `web/src/views/Themes.tsx` | Curated topic briefings — one page per theme, aggregating related items + a primer; per-theme `ExportMenu` (primer leads the Markdown) |
@@ -42,7 +42,7 @@ entry + (optionally) a `DataTable` variant — never new plumbing.
 | `web/scripts/digest.ts` | Writes `DIGEST.md` at the repo root (`npm --prefix web run digest`, via `tsx`) — the agent runs it each cycle |
 | `web/src/views/Activity.tsx` | Transparency log of what the agent auto-published (newest first) |
 | `web/src/views/Radar.tsx` | Regulatory radar: upcoming milestones (countdowns) + recently-landed regulatory items |
-| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `glossary.ts` + `primers.ts` (knowledge layer) · `jurisdictions.ts` (atlas regulation status) · `milestones.ts` (radar dates) · `index.ts` (merges **and de-dupes** seed+feed → `ALL_ITEMS`: regulator publications by issuer+ref, else by id; seed wins) |
+| `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `glossary.ts` + `primers.ts` (knowledge layer) · `jurisdictions.ts` + `jurisdictions.json` (atlas regulation status — seed + agent feed, merged by id; the daily agent maintains the JSON, see [`agent/INGEST.md`](../agent/INGEST.md)) · `milestones.ts` (radar dates) · `index.ts` (merges **and de-dupes** seed+feed → `ALL_ITEMS`: regulator publications by issuer+ref, else by id; seed wins) |
 | `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `pack.ts` (briefing-pack selection) · `utils.ts` · `insights.ts` (derived metrics + time-series) · `digest.ts` (weekly one-pager) · `export.ts` (delivery & export — see below) |
 | `web/src/components/viz.tsx` | Chart primitives (CSS/flex, no chart lib): `ImpactMix`, `MiniBars`, `MonthlyImpactChart`, `MomentumList` |
 

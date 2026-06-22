@@ -5,7 +5,13 @@
 // matching the world-atlas topojson (a bloc like the EU lists all members);
 // `lat`/`lon` place the clickable marker. Status uses the palette: violet
 // (implemented), amber (in progress), neutral (none / restrictive).
+//
+// The curated SEED below is merged with the agent-maintained
+// jurisdictions.json (which the daily agent updates) — a feed entry with the
+// same id overrides the seed, new ids are added. Invalid entries are dropped.
 // ---------------------------------------------------------------
+
+import jurisdictionsFeed from "./jurisdictions.json";
 
 export type RegStatus = "implemented" | "in-progress" | "none";
 
@@ -54,7 +60,7 @@ const EU_MEMBERS = [
 
 const sumsub = { name: "Sumsub — global crypto regulations 2026", url: "https://sumsub.com/blog/global-crypto-regulations/" };
 
-export const JURISDICTIONS: Jurisdiction[] = [
+const SEED: Jurisdiction[] = [
   {
     id: "eu",
     name: "European Union",
@@ -296,3 +302,29 @@ export const JURISDICTIONS: Jurisdiction[] = [
     sources: [sumsub],
   },
 ];
+
+// Merge the agent feed over the seed; drop anything malformed so a bad agent
+// edit can never break the Atlas.
+const VALID_STATUS: RegStatus[] = ["implemented", "in-progress", "none"];
+function isValid(j: Jurisdiction): boolean {
+  return (
+    !!j &&
+    typeof j.id === "string" &&
+    typeof j.name === "string" &&
+    VALID_STATUS.includes(j.status) &&
+    Array.isArray(j.iso) &&
+    typeof j.lat === "number" &&
+    typeof j.lon === "number" &&
+    Array.isArray(j.sources) &&
+    j.sources.length > 0
+  );
+}
+
+export const JURISDICTIONS: Jurisdiction[] = (() => {
+  const byId = new Map<string, Jurisdiction>();
+  for (const j of SEED) byId.set(j.id, j);
+  for (const j of jurisdictionsFeed.jurisdictions as unknown as Jurisdiction[]) {
+    if (isValid(j)) byId.set(j.id, j);
+  }
+  return [...byId.values()].filter(isValid).sort((a, b) => a.name.localeCompare(b.name));
+})();

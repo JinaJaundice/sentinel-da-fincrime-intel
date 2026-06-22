@@ -1,0 +1,252 @@
+{
+  "_comment": "Agent-maintained crypto-regulation jurisdictions. Merged over the curated seed in jurisdictions.ts (an entry here overrides the seed by id, or adds a new one). Shape: { id, name, iso (ISO-3166 numeric string[]), lat, lon, status (implemented|in-progress|none), headline, summary, soWhat?, keyDates?, sources[{name,url}] }. Invalid entries are dropped at load. The agent updates this each run — see agent/INGEST.md.",
+  "jurisdictions": [
+    {
+      "id": "bahrain",
+      "name": "Bahrain",
+      "iso": ["048"],
+      "lat": 26.1,
+      "lon": 50.55,
+      "status": "implemented",
+      "headline": "CBB crypto-asset licensing regime",
+      "summary": "The Central Bank of Bahrain runs a clear crypto-asset module (CRA) that licenses permitted activities; unlicensed crypto activity is prohibited.",
+      "soWhat": "A Gulf early-mover with explicit licensing — check a Bahraini counterparty's CBB authorisation.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "iso": ["764"],
+      "lat": 15.0,
+      "lon": 101.0,
+      "status": "implemented",
+      "headline": "SEC licensing; payments prohibited",
+      "summary": "Thailand's SEC licenses digital-asset businesses and operators; trading and holding are legal, but using crypto for payments is banned.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "indonesia",
+      "name": "Indonesia",
+      "iso": ["360"],
+      "lat": -2.0,
+      "lon": 118.0,
+      "status": "implemented",
+      "headline": "Supervision moved to OJK; payments banned",
+      "summary": "Crypto trading is regulated (oversight transferred from Bappebti to the financial regulator OJK); it is legal to trade and hold but not to pay with.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "philippines",
+      "name": "Philippines",
+      "iso": ["608"],
+      "lat": 12.9,
+      "lon": 122.0,
+      "status": "implemented",
+      "headline": "BSP VASP licensing + SEC rules",
+      "summary": "The Bangko Sentral ng Pilipinas licenses Virtual Asset Service Providers, with the SEC adding rules for crypto offerings and exchanges.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "argentina",
+      "name": "Argentina",
+      "iso": ["032"],
+      "lat": -35.0,
+      "lon": -64.0,
+      "status": "implemented",
+      "headline": "CNV VASP registration enforced",
+      "summary": "The securities regulator CNV enforced a VASP registration regime (Resolution 1058/2025) for crypto firms serving Argentine users.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "kenya",
+      "name": "Kenya",
+      "iso": ["404"],
+      "lat": 0.2,
+      "lon": 37.9,
+      "status": "implemented",
+      "headline": "Virtual Asset Service Providers Act 2025",
+      "summary": "Kenya's VASP Act (2025) is in force, with the Central Bank and Capital Markets Authority setting rules for licensing and bank integration.",
+      "soWhat": "East Africa's new licensing regime — a reference point for the region's high-adoption markets.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "gibraltar",
+      "name": "Gibraltar",
+      "iso": ["292"],
+      "lat": 36.14,
+      "lon": -5.35,
+      "status": "implemented",
+      "headline": "DLT Provider framework (since 2018)",
+      "summary": "Gibraltar's GFSC has licensed Distributed Ledger Technology providers under a principles-based framework since 2018 — one of the earliest dedicated regimes.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "cayman-islands",
+      "name": "Cayman Islands",
+      "iso": ["136"],
+      "lat": 19.3,
+      "lon": -81.2,
+      "status": "implemented",
+      "headline": "Virtual Asset (Service Providers) Act",
+      "summary": "Crypto businesses must register or be licensed under the Cayman VASP Act before operating — a major offshore fund/crypto domicile.",
+      "soWhat": "A common domicile for crypto funds and issuers — VASP registration status is a key diligence point.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "liechtenstein",
+      "name": "Liechtenstein",
+      "iso": ["438"],
+      "lat": 47.16,
+      "lon": 9.55,
+      "status": "implemented",
+      "headline": "Token & TT Service Provider Act (Blockchain Act)",
+      "summary": "Liechtenstein's TVTG (Blockchain Act, in force since 2020) provides a comprehensive token-economy framework with registered service providers.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "turkey",
+      "name": "Türkiye",
+      "iso": ["792"],
+      "lat": 39.0,
+      "lon": 35.2,
+      "status": "in-progress",
+      "headline": "CMB licensing rolling out; payments banned",
+      "summary": "Türkiye passed a crypto law bringing exchanges under Capital Markets Board licensing; trading and holding are permitted but paying with crypto is banned.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "saudi-arabia",
+      "name": "Saudi Arabia",
+      "iso": ["682"],
+      "lat": 24.0,
+      "lon": 45.0,
+      "status": "in-progress",
+      "headline": "Asset, not legal tender; framework forming",
+      "summary": "Crypto is treated as an asset (not legal tender); banks need explicit SAMA approval, and regulators are running pilots before finalising a national framework.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "qatar",
+      "name": "Qatar",
+      "iso": ["634"],
+      "lat": 25.3,
+      "lon": 51.2,
+      "status": "in-progress",
+      "headline": "QFC Digital Assets framework; payments banned",
+      "summary": "The Qatar Financial Centre operates a Digital Assets framework/regulatory zone, while crypto payments remain prohibited outside it.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "israel",
+      "name": "Israel",
+      "iso": ["376"],
+      "lat": 31.5,
+      "lon": 34.9,
+      "status": "in-progress",
+      "headline": "Securities-led; AML in force",
+      "summary": "Crypto is not legal tender; the ISA treats many tokens as securities and AML/CFT obligations apply, with a dedicated framework still developing.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "vietnam",
+      "name": "Vietnam",
+      "iso": ["704"],
+      "lat": 16.0,
+      "lon": 106.0,
+      "status": "in-progress",
+      "headline": "Digital assets recognised; 5-year pilot",
+      "summary": "The Law on Digital Technology Industry (effective 1 Jan 2026) recognises digital assets as legal property and launches a five-year trading pilot.",
+      "keyDates": [{ "date": "2026-01-01", "label": "Digital-asset law in force" }],
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "pakistan",
+      "name": "Pakistan",
+      "iso": ["586"],
+      "lat": 30.0,
+      "lon": 70.0,
+      "status": "in-progress",
+      "headline": "Ban lifted; PVARA stood up (2026)",
+      "summary": "In April 2026 Pakistan replaced its prior ban with a framework, creating a Crypto Council and the Virtual Asset Regulatory Authority (PVARA).",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "kazakhstan",
+      "name": "Kazakhstan",
+      "iso": ["398"],
+      "lat": 48.0,
+      "lon": 67.0,
+      "status": "in-progress",
+      "headline": "AIFC zone licensing; national rules forming",
+      "summary": "Crypto exchanges can be licensed within the Astana International Financial Centre (AIFC); a broader national framework and CBDC work are developing.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "iso": ["484"],
+      "lat": 23.6,
+      "lon": -102.5,
+      "status": "in-progress",
+      "headline": "Fintech Law; no dedicated crypto regime",
+      "summary": "Mexico's Fintech Law touches virtual assets and the central bank restricts bank involvement, but there is no comprehensive dedicated crypto framework.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "colombia",
+      "name": "Colombia",
+      "iso": ["170"],
+      "lat": 4.0,
+      "lon": -73.0,
+      "status": "in-progress",
+      "headline": "Banks barred; sandbox + draft rules",
+      "summary": "Financial institutions are restricted from facilitating crypto, but regulators have run sandboxes and are working toward a clearer framework.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "new-zealand",
+      "name": "New Zealand",
+      "iso": ["554"],
+      "lat": -41.0,
+      "lon": 174.0,
+      "status": "in-progress",
+      "headline": "Legal; supervised under existing law",
+      "summary": "Crypto is legal and supervised through existing financial-services and AML rules (FMA / DIA), without a bespoke dedicated regime.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "iso": ["818"],
+      "lat": 26.8,
+      "lon": 30.0,
+      "status": "none",
+      "headline": "Trading banned (CBE Law 194)",
+      "summary": "Egypt prohibits crypto trading under Central Bank Law No. 194, even as it pursues a national blockchain strategy.",
+      "soWhat": "No legitimate onshore crypto activity — treat any Egypt-nexus crypto flow with heightened scrutiny.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "bangladesh",
+      "name": "Bangladesh",
+      "iso": ["050"],
+      "lat": 23.7,
+      "lon": 90.4,
+      "status": "none",
+      "headline": "Comprehensive ban",
+      "summary": "Bangladesh maintains a complete prohibition on cryptocurrency use and trading.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "morocco",
+      "name": "Morocco",
+      "iso": ["504"],
+      "lat": 32.0,
+      "lon": -6.5,
+      "status": "none",
+      "headline": "Ban in place; framework drafted",
+      "summary": "Crypto trading is banned, though Morocco's central bank has drafted a framework that could legalise and regulate it.",
+      "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    }
+  ]
+}

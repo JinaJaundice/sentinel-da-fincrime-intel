@@ -54,7 +54,19 @@ them by appending to `web/src/content/feed.json`.
    (writes `DIGEST.md` at the repo root: a "what moved + so what" summary of the
    last 7 days, by `addedAt`). Cheap and idempotent — run it every cycle so the
    digest stays current.
-7. (Remote mode) commit the diff (include `DIGEST.md`): `feat(feed): ingest YYYY-MM-DD (N items)`.
+7. **Atlas jurisdictions** — keep the crypto-regulation world map current. If a
+   country's status materially changed (a regime came into force, a ban was
+   lifted or imposed, a new framework proposed) or a notable jurisdiction is
+   missing, add or override an entry in
+   [`web/src/content/jurisdictions.json`](../web/src/content/jurisdictions.json)
+   by `id`. Shape: `{ id, name, iso (ISO-3166 numeric string[]), lat, lon,
+   status (implemented | in-progress | none), headline, summary, soWhat?,
+   keyDates?, sources[{name,url}] }`. Use a real source and the country's true
+   status; the seed in `jurisdictions.ts` is the baseline your entry overrides.
+   This data changes **slowly** — only touch it when something actually changed,
+   and never invent a status or coordinates.
+8. (Remote mode) commit the diff (include `DIGEST.md` and any
+   `jurisdictions.json` change): `feat(feed): ingest YYYY-MM-DD (N items)`.
 
 ## Output shape (`feed.json`)
 

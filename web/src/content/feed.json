@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22",
+  "lastUpdated": "2026-06-23",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1227,6 +1227,28 @@
         { "name": "FCA — PS26/7: Progressing fund tokenisation", "url": "https://www.fca.org.uk/publications/policy-statements/ps26-7-progressing-fund-tokenisation", "kind": "primary" },
         { "name": "FCA — Guidance to support innovation in fund tokenisation (press release)", "url": "https://www.fca.org.uk/news/press-releases/fca-sets-out-guidance-support-innovation-fund-tokenisation", "kind": "primary" },
         { "name": "Regulation Tomorrow — FCA Policy Statement 26/7: Progressing Fund Tokenisation", "url": "https://www.regulationtomorrow.com/2026/04/fca-policy-statement-26-7-progressing-fund-tokenisation/", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-ofac-isis-bitcoin-xchange-june2026",
+      "type": "signal",
+      "title": "OFAC designates ISIS crypto financing network — Bitcoin Xchange (Syria), Nigerian exchangers and European facilitators; two TRON addresses on SDN",
+      "summary": "On 22 June 2026, OFAC designated three individuals and six entities for facilitating Islamic State (ISIS) terrorist financing via cryptocurrency. At the centre is Bitcoin Xchange — a Syria-based money services business founded by Abdelhakim Boukich (a former Dutch national) — which TRM Labs has tracked since 2022 as a core ISIS crypto off-ramp, with approximately $10 million in traced transactions with ISIS-linked fundraising campaigns. The network connected European donors (Norway, Belgium, Netherlands, France, South Africa, US) transmitting crypto via Telegram channels to Syria-based cash exchangers, who converted funds for ISIS beneficiaries at 2–5% fees. Additional designated entities include three Nigerian bureau de change operators (Nine to Nine Exchange, Manhattan Bureau de Change, Generation Currency Bureau de Change) and individual facilitators Abdurrahmane Miloud (France) and Mukhtar Adamu Muhammad (Nigeria). Two TRON wallet addresses attributed to Miloud were added to the SDN list — among the comparatively rare OFAC actions identifying individual on-chain TRON wallet addresses.",
+      "soWhat": "Three bank compliance steps: (1) add the two designated TRON wallet addresses to blockchain analytics screening feeds immediately — any transaction touching these addresses is a potential sanctions breach. (2) The Telegram-to-Syria-exchanger-to-cash typology differs from Russia/Iran stablecoin-evasion patterns: crypto is used as a cross-border transmission rail to conflict zones, not a store of value, and the off-ramp is informal cash exchange — meaning detection depends on TRON transaction monitoring and Telegram-linked wallet cluster analysis rather than CASP-level screening. (3) The European facilitator angle — French and Dutch nationals routing funds from Western Europe — confirms that retail banking customers, not just specialist crypto businesses, can be network nodes. CTF SAR obligations apply to UK and EU banks whose retail customers transact with designated addresses or entities. The $10M attribution is a known-low estimate based on traced campaign flows; actual ISIS financing routed through this network is likely higher.",
+      "date": "2026-06-22",
+      "addedAt": "2026-06-23",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["OFAC", "ISIS", "terrorist-financing", "TRON", "sanctions", "enforcement", "Syria", "Nigeria", "MSB", "CTF"],
+      "sources": [
+        { "name": "Treasury — Treasury Targets ISIS Facilitators and Disrupts Terrorist Financial Networks", "url": "https://home.treasury.gov/news/press-releases/sb0537", "kind": "primary" },
+        { "name": "OFAC — Counter Terrorism Designations 22 June 2026", "url": "https://ofac.treasury.gov/recent-actions/20260622", "kind": "primary" },
+        { "name": "TRM Labs — OFAC Targets ISIS Crypto Financing Network, Including Bitcoin Xchange", "url": "https://www.trmlabs.com/resources/blog/ofac-targets-isis-crypto-financing-network-including-bitcoin-xchange", "kind": "secondary" },
+        { "name": "Chainalysis — OFAC Sanctions ISIS Financial Facilitators", "url": "https://www.chainalysis.com/blog/ofac-sanctions-isis-financial-facilitators-june-2026/", "kind": "secondary" }
       ]
     }
   ]

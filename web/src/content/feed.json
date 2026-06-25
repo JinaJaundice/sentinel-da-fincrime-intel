@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23",
+  "lastUpdated": "2026-06-25",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1249,6 +1249,46 @@
         { "name": "OFAC — Counter Terrorism Designations 22 June 2026", "url": "https://ofac.treasury.gov/recent-actions/20260622", "kind": "primary" },
         { "name": "TRM Labs — OFAC Targets ISIS Crypto Financing Network, Including Bitcoin Xchange", "url": "https://www.trmlabs.com/resources/blog/ofac-targets-isis-crypto-financing-network-including-bitcoin-xchange", "kind": "secondary" },
         { "name": "Chainalysis — OFAC Sanctions ISIS Financial Facilitators", "url": "https://www.chainalysis.com/blog/ofac-sanctions-isis-financial-facilitators-june-2026/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-doj-huione-infrastructure-seizure",
+      "type": "signal",
+      "title": "DOJ seizes Huione Group cloud infrastructure in Operation Riptide — $70B CLMN marketplace backbone physically dismantled",
+      "summary": "On 23 June 2026, the Justice Department seized the cloud computing account hosting backend infrastructure for Huione Guarantee (Haowang Guarantee), subsidiaries of Cambodia-based Huione Group. The cloud account ran the marketplace systems that allegedly processed transfers of pig-butchering proceeds, DPRK Lazarus Group cyber-heist funds, and other criminal crypto flows, and facilitated conversion into the legitimate banking sector. Chainalysis estimates the Huione ecosystem processed over $70 billion in crypto transactions across five years; FinCEN's October 2025 Section 311 analysis found at least $4 billion in verifiable illicit proceeds between 2021–2025. The seizure is part of Operation Riptide, an ongoing FBI campaign targeting cybercrime financial networks; Chainalysis, Elliptic, and Google's cybercrime team assisted with on-chain attribution and infrastructure identification.",
+      "soWhat": "The Huione infrastructure seizure is the third enforcement layer targeting the Chinese-language money laundering network (CLMN) ecosystem: FinCEN Section 311 (October 2025) severed Huione from the US financial system; the UK designated Xinbi Guarantee and 8 Park in March 2026 (see feed-uk-ofsi-xinbi-8park); now physical cloud infrastructure is seized. The critical compliance implication is that dismantling Huione has not disrupted the CLMN ecosystem — Xinbi Guarantee (which processed $19.9B before its UK designation, migrating to SafeW and XinbiPay) remains the active successor. Banks should not treat the Huione seizure as resolving CLMN exposure: the CLMN operational model survives by migrating platforms, and effective screening requires cluster-level analytics covering Xinbi/SafeW wallet infrastructure, not entity-list matching on Huione alone. The Section 311 prohibition means any residual Huione-linked correspondent or payment flow is a live US sanctions breach.",
+      "date": "2026-06-23",
+      "addedAt": "2026-06-25",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["Huione", "CLMN", "DOJ", "Operation-Riptide", "pig-butchering", "enforcement", "DPRK", "Section-311", "FBI", "laundering-as-a-service"],
+      "sources": [
+        { "name": "DOJ — Justice Department seizes backend infrastructure used by the Huione Group for money laundering services", "url": "https://www.justice.gov/opa/pr/justice-department-seizes-backend-infrastructure-used-huione-group-money-laundering-services", "kind": "primary" },
+        { "name": "Decrypt — DOJ seizes Huione infrastructure linked to billions in crypto laundering", "url": "https://decrypt.co/371950/doj-seizes-huione-infrastructure-linked-to-billions-in-crypto-laundering", "kind": "secondary" },
+        { "name": "CryptoTimes — Chainalysis details DOJ takedown of Huione's crypto crime hub", "url": "https://www.cryptotimes.io/2026/06/25/chainalysis-details-doj-takedown-of-huiones-crypto-crime-hub/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-binance-mica-greece-withdrawal",
+      "type": "signal",
+      "title": "Binance withdraws Greek MiCA application 7 days before deadline — pivots to unnamed EU jurisdiction with France the reported front-runner",
+      "summary": "On 24 June 2026, Binance formally withdrew its MiCA CASP application from Greece's Hellenic Capital Market Commission (HCMC) and announced plans to seek authorisation in a different EU member state. Binance said it received no formal HCMC rejection but cited the absence of a decision with the July 1 deadline imminent; Reuters had reported on June 16 that the HCMC was poised to reject the application citing Binance's prior enforcement history (including its $4.3B 2023 US settlement). France — where Binance already holds an AML registration with the AMF — is widely reported as the most likely alternative jurisdiction. Binance said it expects EU authorisation 'within months'; EU users face service disruption from July 1 until a new licence is secured.",
+      "soWhat": "This directly updates feed-binance-mica-eu-exit-july2026: the situation is not a clean EU exit but a jurisdictional pivot with an unresolved interim period. Three bank compliance implications: (1) Binance EU-facing activity is in a regulatory gap from July 1 until a new CASP licence is issued — any bank counterparty relationship touching Binance's EU user base should be treated as exposure to an unauthorised provider during this window, with enhanced due diligence on flows that were previously considered EU-supervised; (2) an AMF authorisation in France would place Binance under French AML/CFT oversight — a significantly more rigorous supervisory posture than Greece, and one that may accelerate scrutiny of the unresolved DOJ investigation into $1.7B in Iran and Russia flows (see feed-binance-doj-iran-probe); (3) the pivot itself confirms that MiCA's 17% CASP conversion rate reflects substantive supervisory assessments, not administrative delay — even with $3.3T in annual trading volume, Binance could not clear the Greek regulator's threshold. Treat any subsequent MiCA authorisation for Binance as a minimum-floor assurance, not a clean AML bill of health.",
+      "date": "2026-06-24",
+      "addedAt": "2026-06-25",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["Binance", "MiCA", "EU", "CASP", "authorization", "Greece", "HCMC", "France", "AMF", "counterparty-risk", "July1-deadline"],
+      "sources": [
+        { "name": "CoinDesk — Binance withdraws Greek MiCA bid but vows to remain in Europe", "url": "https://www.coindesk.com/policy/2026/06/24/binance-withdraws-greek-mica-bid-but-vows-to-remain-in-europe", "kind": "secondary" },
+        { "name": "Cryptopolitan — Binance pulls MiCA licence bid in Greece, will reapply in another EU country", "url": "https://www.cryptopolitan.com/binance-pulls-mica-licence-greece/", "kind": "secondary" },
+        { "name": "Yahoo Finance — Binance withdraws MiCA license application leaving EU users in limbo", "url": "https://finance.yahoo.com/markets/crypto/articles/binance-withdraws-mica-license-application-173752458.html", "kind": "secondary" }
       ]
     }
   ]

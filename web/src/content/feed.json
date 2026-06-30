@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25",
+  "lastUpdated": "2026-06-30",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1289,6 +1289,74 @@
         { "name": "CoinDesk — Binance withdraws Greek MiCA bid but vows to remain in Europe", "url": "https://www.coindesk.com/policy/2026/06/24/binance-withdraws-greek-mica-bid-but-vows-to-remain-in-europe", "kind": "secondary" },
         { "name": "Cryptopolitan — Binance pulls MiCA licence bid in Greece, will reapply in another EU country", "url": "https://www.cryptopolitan.com/binance-pulls-mica-licence-greece/", "kind": "secondary" },
         { "name": "Yahoo Finance — Binance withdraws MiCA license application leaving EU users in limbo", "url": "https://finance.yahoo.com/markets/crypto/articles/binance-withdraws-mica-license-application-173752458.html", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-fca-final-crypto-rules-june2026",
+      "type": "regulatory",
+      "title": "FCA publishes landmark final crypto rules — stablecoin capital cut to 1%, market abuse regime finalised, September gateway confirmed",
+      "summary": "On 30 June 2026, the FCA published its final rules and policy statements completing the UK cryptoasset regulatory framework. Stablecoin issuers will need to hold capital equal to 1% of total stablecoins issued — reduced from the 2% proposed in consultation after industry feedback that the higher level would be uncompetitive globally. Final market-abuse and admissions-and-disclosures rules are established at a standard equivalent to mainstream regulated activities. Eligible cryptoassets admitted to qualifying UK trading platforms face a 40% net risk-position requirement and a 40% counterparty-default volatility adjustment. The full framework applies to all FCA-authorised cryptoasset firms from 25 October 2027. The application gateway opens 30 September 2026; firms must apply by 28 February 2027.",
+      "soWhat": "The final rulebook — completing the consultation series (CP25/14, CP25/15, CP25/40–42, CP26/4, CP26/13) tracked in this feed — is the definitive standard against which banks must assess CASP counterparty compliance readiness. Three immediate bank actions: (1) map any own FSMA crypto-permission in scope to the final capital, conduct and market-abuse requirements as the September gateway application benchmark — gap analyses need to start now; (2) update CASP counterparty due diligence to use these final requirements as the pass/fail threshold from October 2027 — a CASP unable to demonstrate it can meet them is on a credible path to unlicensed status; (3) the 1% stablecoin capital floor (down from 2%) resets reserve-adequacy assumptions for UK-authorised stablecoin counterparty exposure — update stress-test models accordingly.",
+      "date": "2026-06-30",
+      "addedAt": "2026-06-30",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["FCA", "UK", "crypto", "prudential", "stablecoin", "market-abuse", "final-rules", "authorization", "gateway"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Policy Statements",
+        "ref": "Final Cryptoasset Regulatory Framework — 30 June 2026"
+      },
+      "sources": [
+        { "name": "FCA — FCA sets landmark crypto rules to cement the UK's place as a global hub", "url": "https://www.fca.org.uk/news/press-releases/fca-sets-landmark-crypto-rules-cement-uks-place-global-hub", "kind": "primary" },
+        { "name": "The Block — UK sets capital, market abuse rules in landmark crypto framework", "url": "https://www.theblock.co/post/406546/uk-sets-capital-market-abuse-rules-landmark-crypto-framework", "kind": "secondary" },
+        { "name": "AML Intelligence — FCA weakens 'landmark' new rules for UK crypto firms", "url": "https://www.amlintelligence.com/2026/06/latest-fca-weakens-landmark-new-rules-for-uk-crypto-firms/", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-fincen-hpay-s311-nprm",
+      "type": "signal",
+      "title": "FinCEN extends Huione Group Section 311 special measure to H-Pay successor — rebrand loophole closed, 'any successor entity' covered",
+      "summary": "On 25 June 2026, FinCEN published a Notice of Proposed Rulemaking (Federal Register 2026-12794) amending the definition of 'Huione Group' in its existing Section 311 special measure to explicitly include H-Pay Service PLC and 'any successor entity.' FinCEN found that Huione Pay PLC — covered by the October 2025 Huione Group Section 311 action severing the network from the US financial system — had rebranded as H-Pay Service PLC to evade public scrutiny and circumvent the measure. The NPRM maintains the same prohibition on US financial institutions: no correspondent accounts or US-dollar payments on behalf of H-Pay. The action is coordinated with OFAC's June 23 second-wave Prince Group designations (9 individuals, 26 entities, including Hu Xiaowei arrested in Osaka on June 14) and the DOJ's Operation Riptide seizure of Huione cloud infrastructure.",
+      "soWhat": "FinCEN's explicit coverage of 'any successor entity' sets a binding precedent: Section 311 special measures now follow rebrand evasion, not just the named legal entity. Banks must update sanctions and correspondent-banking screening to include H-Pay Service PLC alongside the existing Huione Pay and Huione Group entity list. Any institution that continued processing payments for what it believed was a new counterparty called 'H-Pay' should assess retrospective exposure immediately. Combined with the DOJ cloud infrastructure seizure (see feed-doj-huione-infrastructure-seizure) and the UK's Xinbi designation (see feed-uk-ofsi-xinbi-8park), this is the fourth enforcement layer targeting the Chinese-language money-laundering network ecosystem in three months — a signal that multi-agency disruption of CLMN infrastructure is now a standing coordinated campaign, not episodic.",
+      "date": "2026-06-25",
+      "addedAt": "2026-06-30",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FinCEN", "Section-311", "Huione", "H-Pay", "laundering-as-a-service", "CLMN", "correspondent-banking", "enforcement", "rebrand-evasion"],
+      "sources": [
+        { "name": "Federal Register — FinCEN NPRM: Definition of Huione Group to include H-Pay (2026-12794)", "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12794/definition-of-huione-group-a-financial-institution-operating-outside-the-united-states-of-primary", "kind": "primary" },
+        { "name": "FinCEN — H-Pay NPRM (PDF)", "url": "https://www.fincen.gov/system/files/2026-06/HPay-NPRM.pdf", "kind": "primary" },
+        { "name": "Zyphe — Prince Group sanctions widen: 35 new targets including Hu Xiaowei", "url": "https://www.zyphe.com/resources/news/prince-group-sanctions-ofac-fincen-june-2026", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-binance-eu-40m-suspension-july2026",
+      "type": "signal",
+      "title": "Binance suspends EU services for ~40M users from July 1 — no deposits, no trading, no staking; France the sole re-licensing pathway",
+      "summary": "On 26 June 2026, Binance sent direct email notifications to EU-resident users in France, Poland, Italy, Spain and other member states confirming that from 1 July 2026 it will halt new spot orders, deposits, sign-ups, and Earn/staking/launchpool products for EU residents. Existing funds remain accessible and withdrawable. The suspension affects approximately 40 million EU users — the largest single-exchange user displacement since MiCA's announcement. After withdrawing its Greek HCMC application on June 24 (the rejection was reportedly driven by Binance's enforcement history and doubts about co-founder CZ's 'fit and proper' status), Binance confirmed France — where it holds an AMF AML registration — as its sole remaining EU re-licensing pathway, with no timeline given.",
+      "soWhat": "40 million Binance EU users need to move assets to authorised exchanges — the largest single-event onboarding spike at MiCA-licensed CASPs since the regulation was enacted. Three bank compliance implications: (1) AML monitoring should be calibrated for a significant inflow surge at EU-licensed on-ramps absorbing displaced Binance users, particularly in Germany (56 licensed CASPs), Netherlands (26) and France (21); the AML risk of rapid large-scale account funding spikes requires short-window enhanced due diligence triggers. (2) Regulatory arbitrage pressure: some EU users will attempt to continue accessing Binance via VPNs or non-EU accounts — treat unusual geographic routing or sudden VPN-indicator flags at retail accounts as elevated-risk signals in the near term. (3) Binance's AMF pathway means France becomes the pivotal jurisdiction: if the AMF grants authorisation, Binance returns to 40M EU users under French supervisory oversight, which would represent a step-change in supervisory scrutiny compared with Greece — but the same unresolved DOJ investigation into $1.7B in Iran/Russia flows (see feed-binance-doj-iran-probe) applies regardless of which regulator grants the CASP licence.",
+      "date": "2026-06-26",
+      "addedAt": "2026-06-30",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["Binance", "MiCA", "EU", "CASP", "July1-deadline", "user-displacement", "AMF", "France", "AML", "onboarding", "HCMC"],
+      "sources": [
+        { "name": "CoinDesk — Binance tells EU users it will no longer provide services after failing to secure MiCA license", "url": "https://www.coindesk.com/policy/2026/06/26/binance-tells-eu-users-it-will-no-longer-provide-services-after-failing-to-secure-mica-license", "kind": "secondary" },
+        { "name": "CNBC — Binance to stop providing services to European clients after failing to obtain license", "url": "https://www.cnbc.com/2026/06/26/binance-to-stop-providing-services-to-european-clients-after-failing-to-obtain-license-ft.html", "kind": "secondary" },
+        { "name": "Euronews — Binance to halt crypto services across EU countries after failing to secure MiCA approval", "url": "https://www.euronews.com/business/2026/06/25/binance-to-halt-crypto-services-across-eu-countries-after-failing-to-secure-mica-approval", "kind": "secondary" }
       ]
     }
   ]

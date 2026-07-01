@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30",
+  "lastUpdated": "2026-07-01",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1357,6 +1357,94 @@
         { "name": "CoinDesk — Binance tells EU users it will no longer provide services after failing to secure MiCA license", "url": "https://www.coindesk.com/policy/2026/06/26/binance-tells-eu-users-it-will-no-longer-provide-services-after-failing-to-secure-mica-license", "kind": "secondary" },
         { "name": "CNBC — Binance to stop providing services to European clients after failing to obtain license", "url": "https://www.cnbc.com/2026/06/26/binance-to-stop-providing-services-to-european-clients-after-failing-to-obtain-license-ft.html", "kind": "secondary" },
         { "name": "Euronews — Binance to halt crypto services across EU countries after failing to secure MiCA approval", "url": "https://www.euronews.com/business/2026/06/25/binance-to-halt-crypto-services-across-eu-countries-after-failing-to-secure-mica-approval", "kind": "secondary" }
+      ]
+    }
+    ,
+    {
+      "id": "feed-occ-ppsi-bsa-sanctions-nprm",
+      "type": "regulatory",
+      "title": "OCC proposes BSA/sanctions compliance standards for OCC-supervised stablecoin issuers — third US banking regulator to align on the GENIUS Act framework",
+      "summary": "On 22 June 2026 the OCC issued a Notice of Proposed Rulemaking (published in the Federal Register 24 June 2026) setting principles-based BSA and sanctions-compliance standards for OCC-supervised permitted payment stablecoin issuers (PPSIs), cross-referencing the FinCEN/OFAC and GENIUS Act requirements already proposed. The rule requires OCC to consult FinCEN before any significant AML/CFT enforcement or supervisory action against a PPSI, and enables PPSI information-sharing between OCC and FinCEN. Comments close 24 July 2026.",
+      "soWhat": "The OCC joins FinCEN/OFAC (feed-ofac-genius-nprm) and the FDIC (feed-fdic-stablecoin-rule) in a converging three-regulator BSA/sanctions framework for stablecoin issuers — whichever prudential regulator a PPSI counterparty sits under, the compliance bar is now materially the same. Treat OCC-supervised stablecoin issuers as subject to the same freeze/sanctions-programme expectations already built into your issuer-counterparty assessment, and flag the 24 July comment deadline if LBG or industry bodies want to respond.",
+      "date": "2026-06-22",
+      "addedAt": "2026-07-01",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["OCC", "stablecoin", "GENIUS-Act", "BSA", "sanctions", "FinCEN"],
+      "publication": {
+        "issuer": "OCC",
+        "kind": "Notice of Proposed Rulemaking",
+        "ref": "Bulletin 2026-28"
+      },
+      "sources": [
+        { "name": "OCC — Bulletin 2026-28: GENIUS Act AML/CFT and Sanctions Compliance NPRM", "url": "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-28.html", "kind": "primary" },
+        { "name": "Federal Register — Permitted Payment Stablecoin Issuer AML/CFT and Sanctions Compliance Program Requirements (OCC)", "url": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12692.pdf", "kind": "primary" },
+        { "name": "Sullivan & Cromwell — OCC and FDIC propose BSA and sanctions compliance standards for PPSIs", "url": "https://www.sullcrom.com/insights/memo/2026/June/OCC-FDIC-Propose-Bank-Secrecy-Act-Sanctions-Compliance-Standards-Permitted-Payment-Stablecoin-Issuers", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fca-gc26-5-cryptopru-risk-assessment",
+      "type": "regulatory",
+      "title": "FCA consults on CRYPTOPRU 7 overall-risk-assessment guidance (GC26/5), alongside COREPRU companion GC26/4",
+      "summary": "Published 30 June 2026 as part of the FCA's final cryptoasset-framework package, GC26/5 is a guidance consultation on non-Handbook guidance for CRYPTOPRU Chapter 7 — the overall risk assessment cryptoasset firms must complete under the new prudential sourcebook. It runs alongside a parallel COREPRU companion (GC26/4). Responses are due 30 July 2026, ahead of the authorisation gateway opening 30 September 2026.",
+      "soWhat": "This is the practical 'how to self-assess' layer beneath the capital and market-abuse rules already tracked (feed-fca-final-crypto-rules-june2026) — it shapes what a CASP's internal risk-assessment documentation needs to look like to be gateway-ready. Useful as a benchmark when assessing whether a UK CASP counterparty's own risk-assessment process will hold up under FCA scrutiny from October 2027.",
+      "date": "2026-06-30",
+      "addedAt": "2026-07-01",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "low",
+      "confidence": "high",
+      "tags": ["FCA", "CRYPTOPRU", "COREPRU", "prudential", "guidance", "UK", "risk-assessment"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Guidance Consultation",
+        "ref": "GC26/5"
+      },
+      "sources": [
+        { "name": "FCA — GC26/5: Non-Handbook Guidance on CRYPTOPRU 7: Overall risk assessment for CRYPTOPRU firms", "url": "https://www.fca.org.uk/publications/guidance-consultations/gc26-5-non-handbook-guidance-cryptopru-7-overall-risk-assessment-cryptopru-firms", "kind": "primary" },
+        { "name": "FCA — Overview of our cryptoassets regime policy statements", "url": "https://www.fca.org.uk/publications/policy-statements/cryptoasset-regime", "kind": "primary" }
+      ]
+    },
+    {
+      "id": "feed-fatf-uk-presidency-fraud-roadmap",
+      "type": "regulatory",
+      "title": "FATF launches 2026-2028 Roadmap on Combating Fraud as UK assumes the FATF presidency",
+      "summary": "On 1 July 2026 the UK's Giles Thomson took over the FATF presidency (through 30 June 2028) and FATF officially launched its 2026-2028 Roadmap on Combating Fraud, convened with partners and stakeholders on day one of the presidency. The roadmap will examine financial flows around scam compounds and the transnational criminal organisations running them, alongside strengthening risk-based supervision and public-private information sharing; FATF cites an estimated ~$500bn lost to scams globally in 2024-25.",
+      "soWhat": "Fraud/scam-compound flows — the same infrastructure behind the pig-butchering typology already tracked (feed-pig-butchering-ai-evolution-2026) — become a standing FATF workstream for the next two years, not a one-off report. Expect FATF-level guidance and information-sharing mechanisms on scam-compound typologies to firm up over 2026-28; worth flagging to LBG's fraud and financial-crime teams jointly since this blurs the usual AML/fraud team boundary.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-01",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["FATF", "fraud", "scam-compounds", "UK-presidency", "roadmap", "pig-butchering"],
+      "sources": [
+        { "name": "AML Intelligence — FATF launches 2026-2028 Roadmap on Combatting Fraud", "url": "https://www.amlintelligence.com/2026/07/fraud-fatf-launches-2026-2028-roadmap-on-combatting-fraud/", "kind": "secondary" },
+        { "name": "Royal Gazette — UK takes FATF presidency and vows to fight 'fraud epidemic'", "url": "https://www.royalgazette.com/international-business/business/article/20260630/uk-takes-fatf-presidency-and-vows-to-fight-fraud-epidemic/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-stables-rip-freeze-tracker",
+      "type": "signal",
+      "title": "New tracker quantifies stablecoin issuer censorship: 3.7B tokens frozen over six years, 75% in the last two",
+      "summary": "A newly-launched public dashboard, stables.rip, tallies every USDT/USDC address freeze across Ethereum and Tron, putting a real-time number on issuer-level censorship capability: roughly 3.7 billion tokens frozen since inception, with 2.8 billion (75%) of that occurring in just the last two years (Tether alone froze $1.26bn and burned $698m in 2025). Reporting on the tracker surfaced 29 June 2026.",
+      "soWhat": "This is independent, continuously-updated evidence of the accelerating pace of the stablecoin issuer-freeze lever that FATF (feed-fatf-stablecoin-report), OFAC (feed-ofac-cbi-tether-freeze) and Treasury's 'programmable enforcement' push (feed-treasury-programmable-enforcement) are all counting on — worth bookmarking as a live sanity check when assessing how reliably a given issuer actually exercises its freeze/burn powers versus how it markets that capability.",
+      "date": "2026-06-29",
+      "addedAt": "2026-07-01",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": ["stablecoin", "freeze", "censorship", "USDT", "USDC", "tooling", "transparency"],
+      "sources": [
+        { "name": "Protos — Crypto censorship tracker shows $3.7B frozen stablecoins and counting", "url": "https://protos.com/crypto-censorship-tracker-shows-3-7b-frozen-stablecoins-and-counting/", "kind": "secondary" },
+        { "name": "stables.rip — On-chain stablecoin censorship tracker", "url": "https://stables.rip/", "kind": "primary" }
       ]
     }
   ]

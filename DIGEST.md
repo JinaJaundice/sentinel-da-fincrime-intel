@@ -1,13 +1,13 @@
-# Sentinel weekly digest — 30 June 2026
+# Sentinel weekly digest — 1 July 2026
 
-_5 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_9 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC** — 2 new items; latest: FinCEN extends Huione Group Section 311 special measure to H-Pay successor — rebrand loophole closed, 'any successor entity' covered
+- **Stablecoins** — 3 new items; latest: FCA publishes landmark final crypto rules — stablecoin capital cut to 1%, market abuse regime finalised, September gateway confirmed
+- **Sanctions & OFAC** — 3 new items; latest: OCC proposes BSA/sanctions compliance standards for OCC-supervised stablecoin issuers — third US banking regulator to align on the GENIUS Act framework
+- **US rulemaking** — 3 new items; latest: OCC proposes BSA/sanctions compliance standards for OCC-supervised stablecoin issuers — third US banking regulator to align on the GENIUS Act framework
 - **MiCA & the EU** — 2 new items; latest: Binance suspends EU services for ~40M users from July 1 — no deposits, no trading, no staking; France the sole re-licensing pathway
-- **US rulemaking** — 2 new items; latest: FinCEN extends Huione Group Section 311 special measure to H-Pay successor — rebrand loophole closed, 'any successor entity' covered
-- **Stablecoins** — 1 new item; latest: FCA publishes landmark final crypto rules — stablecoin capital cut to 1%, market abuse regime finalised, September gateway confirmed
-- **State actors & DPRK** — 1 new item; latest: DOJ seizes Huione Group cloud infrastructure in Operation Riptide — $70B CLMN marketplace backbone physically dismantled
+- **Travel Rule** — 1 new item; latest: FATF launches 2026-2028 Roadmap on Combating Fraud as UK assumes the FATF presidency
 
 ## Notable this week
 
@@ -15,6 +15,16 @@ _5 new items in the last 7 days · Sentinel — DA financial-crime intel_
 *UK · 30 June 2026 · High impact*
 > **So what:** The final rulebook — completing the consultation series (CP25/14, CP25/15, CP25/40–42, CP26/4, CP26/13) tracked in this feed — is the definitive standard against which banks must assess CASP counterparty compliance readiness. Three immediate bank actions: (1) map any own FSMA crypto-permission in scope to the final capital, conduct and market-abuse requirements as the September gateway application benchmark — gap analyses need to start now; (2) update CASP counterparty due diligence to use these final requirements as the pass/fail threshold from October 2027 — a CASP unable to demonstrate it can meet them is on a credible path to unlicensed status; (3) the 1% stablecoin capital floor (down from 2%) resets reserve-adequacy assumptions for UK-authorised stablecoin counterparty exposure — update stress-test models accordingly.
 Source: [FCA — FCA sets landmark crypto rules to cement the UK's place as a global hub](https://www.fca.org.uk/news/press-releases/fca-sets-landmark-crypto-rules-cement-uks-place-global-hub)
+
+### FATF launches 2026-2028 Roadmap on Combating Fraud as UK assumes the FATF presidency
+*Global · 1 July 2026 · Medium impact*
+> **So what:** Fraud/scam-compound flows — the same infrastructure behind the pig-butchering typology already tracked (feed-pig-butchering-ai-evolution-2026) — become a standing FATF workstream for the next two years, not a one-off report. Expect FATF-level guidance and information-sharing mechanisms on scam-compound typologies to firm up over 2026-28; worth flagging to LBG's fraud and financial-crime teams jointly since this blurs the usual AML/fraud team boundary.
+Source: [AML Intelligence — FATF launches 2026-2028 Roadmap on Combatting Fraud](https://www.amlintelligence.com/2026/07/fraud-fatf-launches-2026-2028-roadmap-on-combatting-fraud/)
+
+### OCC proposes BSA/sanctions compliance standards for OCC-supervised stablecoin issuers — third US banking regulator to align on the GENIUS Act framework
+*US · 22 June 2026 · Medium impact*
+> **So what:** The OCC joins FinCEN/OFAC (feed-ofac-genius-nprm) and the FDIC (feed-fdic-stablecoin-rule) in a converging three-regulator BSA/sanctions framework for stablecoin issuers — whichever prudential regulator a PPSI counterparty sits under, the compliance bar is now materially the same. Treat OCC-supervised stablecoin issuers as subject to the same freeze/sanctions-programme expectations already built into your issuer-counterparty assessment, and flag the 24 July comment deadline if LBG or industry bodies want to respond.
+Source: [OCC — Bulletin 2026-28: GENIUS Act AML/CFT and Sanctions Compliance NPRM](https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-28.html)
 
 ### Binance suspends EU services for ~40M users from July 1 — no deposits, no trading, no staking; France the sole re-licensing pathway
 *EU · 26 June 2026 · Medium impact*
@@ -31,10 +41,5 @@ Source: [Federal Register — FinCEN NPRM: Definition of Huione Group to include
 > **So what:** This directly updates feed-binance-mica-eu-exit-july2026: the situation is not a clean EU exit but a jurisdictional pivot with an unresolved interim period. Three bank compliance implications: (1) Binance EU-facing activity is in a regulatory gap from July 1 until a new CASP licence is issued — any bank counterparty relationship touching Binance's EU user base should be treated as exposure to an unauthorised provider during this window, with enhanced due diligence on flows that were previously considered EU-supervised; (2) an AMF authorisation in France would place Binance under French AML/CFT oversight — a significantly more rigorous supervisory posture than Greece, and one that may accelerate scrutiny of the unresolved DOJ investigation into $1.7B in Iran and Russia flows (see feed-binance-doj-iran-probe); (3) the pivot itself confirms that MiCA's 17% CASP conversion rate reflects substantive supervisory assessments, not administrative delay — even with $3.3T in annual trading volume, Binance could not clear the Greek regulator's threshold. Treat any subsequent MiCA authorisation for Binance as a minimum-floor assurance, not a clean AML bill of health.
 Source: [CoinDesk — Binance withdraws Greek MiCA bid but vows to remain in Europe](https://www.coindesk.com/policy/2026/06/24/binance-withdraws-greek-mica-bid-but-vows-to-remain-in-europe)
 
-### DOJ seizes Huione Group cloud infrastructure in Operation Riptide — $70B CLMN marketplace backbone physically dismantled
-*US · 23 June 2026 · Medium impact*
-> **So what:** The Huione infrastructure seizure is the third enforcement layer targeting the Chinese-language money laundering network (CLMN) ecosystem: FinCEN Section 311 (October 2025) severed Huione from the US financial system; the UK designated Xinbi Guarantee and 8 Park in March 2026 (see feed-uk-ofsi-xinbi-8park); now physical cloud infrastructure is seized. The critical compliance implication is that dismantling Huione has not disrupted the CLMN ecosystem — Xinbi Guarantee (which processed $19.9B before its UK designation, migrating to SafeW and XinbiPay) remains the active successor. Banks should not treat the Huione seizure as resolving CLMN exposure: the CLMN operational model survives by migrating platforms, and effective screening requires cluster-level analytics covering Xinbi/SafeW wallet infrastructure, not entity-list matching on Huione alone. The Section 311 prohibition means any residual Huione-linked correspondent or payment flow is a live US sanctions breach.
-Source: [DOJ — Justice Department seizes backend infrastructure used by the Huione Group for money laundering services](https://www.justice.gov/opa/pr/justice-department-seizes-backend-infrastructure-used-huione-group-money-laundering-services)
-
 ## By the numbers
-5 new · 1 high-impact · 0 verified
+9 new · 1 high-impact · 0 verified

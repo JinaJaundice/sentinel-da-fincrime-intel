@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01",
+  "lastUpdated": "2026-07-02",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1445,6 +1445,64 @@
       "sources": [
         { "name": "Protos — Crypto censorship tracker shows $3.7B frozen stablecoins and counting", "url": "https://protos.com/crypto-censorship-tracker-shows-3-7b-frozen-stablecoins-and-counting/", "kind": "secondary" },
         { "name": "stables.rip — On-chain stablecoin censorship tracker", "url": "https://stables.rip/", "kind": "primary" }
+      ]
+    },
+    {
+      "id": "feed-ofac-isisk-134-tron-monero-freeze",
+      "type": "signal",
+      "title": "OFAC designates 134 ISIS-K crypto wallets; Tether freezes all 131 TRON addresses within hours",
+      "summary": "On 1 July 2026, OFAC updated its ISIL-Khorasan (ISIS-K) designation with 134 cryptocurrency addresses as identifiers — 3 Monero and 131 TRON — used to move terrorist financing, with the wallets having received over $1.4m and sent over $880k since 2023, some to Syria-based cash exchangers. Tether froze the balances on all 131 TRON addresses almost immediately after the SDN update. This is a distinct network from the Bitcoin Xchange/Syria ISIS designation nine days earlier (feed-ofac-isis-bitcoin-xchange-june2026).",
+      "soWhat": "The near-instant TRON freeze is the clearest real-time demonstration yet of the issuer-freeze lever FATF and Treasury are counting on (feed-fatf-stablecoin-report, feed-treasury-programmable-enforcement) — but the 3 Monero addresses are a reminder the lever doesn't reach privacy coins. Add the newly-listed TRON/Monero clusters to screening and treat repeated same-week ISIS-linked SDN updates as a signal to re-run terrorist-financing typology lookbacks, not a one-off.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-02",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["OFAC", "sanctions", "ISIS-K", "TRON", "Monero", "Tether", "terrorist-financing"],
+      "sources": [
+        { "name": "Chainalysis — OFAC sanctions 100+ ISIS-K crypto addresses", "url": "https://www.chainalysis.com/blog/isis-designation-crypto-addresses-july-2026/", "kind": "secondary" },
+        { "name": "crypto.news — Tether freezes USDT in 131 ISIS-K-linked TRON wallets", "url": "https://crypto.news/tether-freezes-usdt-in-131-isis-k-linked-tron-wallets-chainalysis/", "kind": "secondary" },
+        { "name": "Phemex — OFAC sanctions 134 crypto wallets linked to ISIS-K", "url": "https://phemex.com/news/article/ofac-adds-134-crypto-wallets-to-isisk-sanctions-tether-freezes-tron-balances-91514", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-ofac-pcc-brazil-crypto-laundering",
+      "type": "signal",
+      "title": "OFAC sanctions Brazilian PCC network for laundering $30m+ in US drug proceeds via crypto",
+      "summary": "Also on 1 July 2026, OFAC designated two Brazilian nationals, three Brazilian companies and one Portuguese company tied to Primeiro Comando da Capital (PCC) — a Latin American criminal organisation the US designated a Foreign Terrorist Organization earlier in 2026. The São Paulo-based node, led by Victor Henrique de Oliveira Shimada, laundered more than $30m in US drug proceeds back to Brazil using cryptocurrency. It is OFAC's third action against PCC since the group's 2021 designation.",
+      "soWhat": "A cartel-adjacent FTO now has a documented crypto laundering corridor moving US drug proceeds to Brazil — secondary sanctions risk extends to any foreign financial institution facilitating the designated entities. Screen for the newly-listed Brazilian and Portuguese entities and treat US-to-Brazil crypto remittance corridors with elevated scrutiny given the FTO nexus.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-02",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["OFAC", "sanctions", "PCC", "Brazil", "FTO", "drug-trafficking", "laundering"],
+      "sources": [
+        { "name": "US Treasury — Treasury sanctions Brazilian criminal network exploiting US financial system", "url": "https://home.treasury.gov/news/press-releases/sb0549", "kind": "primary" },
+        { "name": "Rio Times — PCC sanctions: US blocks Brazil firms after terror label", "url": "https://www.riotimesonline.com/pcc-sanctions-ofac-brazil-companies-money-laundering-july-2026/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-california-dfal-effective-july2026",
+      "type": "regulatory",
+      "title": "California's Digital Financial Assets Law takes effect — licence or $100k/day penalties",
+      "summary": "California's Digital Financial Assets Law (DFAL, AB 39/SB 401, deadline extended by AB 1934) entered into force on 1 July 2026. Every exchange, custodian, stablecoin issuer and Bitcoin ATM operator serving California residents must hold a DFPI licence — or have a complete application on file via NMLS (which opened 9 March 2026) — or face civil penalties up to $100,000 per day. Indicative capital standards run to a $100,000 minimum tangible net worth and a $500,000 surety bond, both risk-adjusted.",
+      "soWhat": "California is roughly a quarter of the US crypto market, so DFAL functions as a de facto national floor. For a bank assessing US crypto counterparties: unlicensed-and-no-application-on-file exposure to California residents from today onward is a live regulatory and reputational risk, not a future one — fold DFAL licence/application status into US CASP counterparty due diligence alongside FinCEN MSB registration.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-02",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["California", "DFAL", "DFPI", "licensing", "US", "state-regulation", "counterparty-risk"],
+      "sources": [
+        { "name": "Tech Times — California crypto law now live: unlicensed platforms risk $100K daily fines", "url": "https://www.techtimes.com/articles/319477/20260701/california-crypto-law-now-live-unlicensed-platforms-risk-100k-daily-fines.htm", "kind": "secondary" },
+        { "name": "DFPI — Digital Financial Assets Law FAQ", "url": "https://dfpi.ca.gov/regulated-industries/digital-financial-assets/digital-financial-assets-law-frequently-asked-questions/", "kind": "primary" }
       ]
     }
   ]

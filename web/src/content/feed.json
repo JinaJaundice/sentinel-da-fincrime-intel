@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02",
+  "lastUpdated": "2026-07-03",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1503,6 +1503,50 @@
       "sources": [
         { "name": "Tech Times — California crypto law now live: unlicensed platforms risk $100K daily fines", "url": "https://www.techtimes.com/articles/319477/20260701/california-crypto-law-now-live-unlicensed-platforms-risk-100k-daily-fines.htm", "kind": "secondary" },
         { "name": "DFPI — Digital Financial Assets Law FAQ", "url": "https://dfpi.ca.gov/regulated-industries/digital-financial-assets/digital-financial-assets-law-frequently-asked-questions/", "kind": "primary" }
+      ]
+    },
+    {
+      "id": "feed-mica-transition-period-ends-july2026",
+      "type": "regulatory",
+      "title": "MiCA transitional period ends 1 July 2026 — ESMA orders unauthorised CASPs to wind down; only ~244 of 1,200+ VASPs converted",
+      "summary": "The MiCA transitional period for pre-existing national VASP registrations expired across the EU on 1 July 2026. ESMA's public statement instructs any crypto-asset service provider without full MiCA authorisation to immediately stop onboarding new EU clients, cease marketing, and limit activity to an orderly wind-down that safeguards client assets, with NCAs coordinating alongside EBA and AMLA on enforcement against holdouts. Only around 244 of the roughly 1,200+ previously-registered VASPs (17-20%) had secured full CASP authorisation as the deadline arrived; Germany (57 licences) and France (26) account for over a third of the EU total.",
+      "soWhat": "Any EU crypto counterparty not on the ESMA CASP register is now operating illegally in the EU — treat absence from the register as a hard trigger to suspend correspondent and counterparty relationships, not just a watch-list flag. With ~80% of previously-registered firms not yet converted, expect a wave of coordinated EBA/AMLA enforcement referrals over the coming months, and watch for licence-shopping moves between member states (the pattern already seen in Binance's Greece withdrawal) as a red flag on counterparty stability.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["MiCA", "ESMA", "EU", "CASP", "licensing", "wind-down", "AMLA", "EBA"],
+      "publication": {
+        "issuer": "ESMA",
+        "kind": "Public Statement",
+        "ref": "Statement on the end of transitional periods under MiCA"
+      },
+      "sources": [
+        { "name": "ESMA — Statement on the end of transitional periods under MiCA", "url": "https://www.esma.europa.eu/sites/default/files/2026-04/ESMA75-113276571-1679_Statement_on_the_end_of_transitional_periods_under_MiCA.pdf", "kind": "primary" },
+        { "name": "CoinDesk — Europe's unlicensed crypto firms face 'wipeout' as MiCA transition deadline falls", "url": "https://www.coindesk.com/policy/2026/06/29/europe-s-unlicensed-crypto-firms-face-wipeout-as-final-regulatory-deadline-falls", "kind": "secondary" },
+        { "name": "AMF — End of the MiCA transitional period: ESMA sets out its expectations", "url": "https://www.amf-france.org/en/news-publications/news/end-mica-transitional-period-esma-sets-out-its-expectations-professionals-and-warns-retail-investors", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-trm-h1-2026-crypto-hacks",
+      "type": "signal",
+      "title": "TRM Labs: H1 2026 sets record for crypto hack count (207) even as total losses fall to $972M — DPRK still 66% of value stolen",
+      "summary": "TRM Labs' H1 2026 wrap-up (published 1 July 2026) counted 207 separate hacks — the highest of any six-month period on record — for combined losses of $972M, under half of the $2.3B stolen in H1 2025. Infrastructure and operational compromises (key theft, multisig/RPC-node compromise) made up only 15% of incidents but drove roughly 76% of losses, while smart-contract exploits accounted for 125 of the 207 incidents but a small share of value stolen; the median loss was $219k against a $4.7m mean. DPRK-linked actors were attributed $643M (~66%) of H1 losses, nearly all of it (~$577M) from the April Drift and KelpDAO exploits already tracked in this feed.",
+      "soWhat": "Incident frequency is up sharply while aggregate loss is down — risk has concentrated into fewer, larger, state-directed operational compromises rather than smart-contract bugs. Counterparty and custody due diligence should weight key-management and infrastructure controls (multisig signer vetting, RPC node security) at least as heavily as smart-contract audit status; the DPRK share confirms April's Drift/KelpDAO incidents as the dominant H1 loss event rather than a one-off spike.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["TRM-Labs", "hacks", "DPRK", "DeFi", "infrastructure-compromise", "report"],
+      "sources": [
+        { "name": "TRM Labs — H1 2026 crypto hacks reach record high as losses fall below $1 billion", "url": "https://www.trmlabs.com/resources/blog/h1-2026-crypto-hacks-reach-record-high-as-losses-fall-below-usd-1-billion", "kind": "primary" },
+        { "name": "Korea Herald — North Korea behind two-thirds of global crypto stolen in H1", "url": "https://www.koreaherald.com/article/10797363", "kind": "secondary" }
       ]
     }
   ]

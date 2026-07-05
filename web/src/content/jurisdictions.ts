@@ -216,10 +216,11 @@ const SEED: Jurisdiction[] = [
     lat: -25.3,
     lon: 133.8,
     status: "in-progress",
-    headline: "Digital-asset framework being developed",
+    headline: "Travel Rule live; platform licensing still being developed",
     summary:
-      "Crypto is legal and treated as an investment asset; Treasury and ASIC are developing a dedicated digital-asset-platform licensing framework, still being finalised.",
-    soWhat: "Bespoke licensing is coming but not yet in force — current oversight leans on existing financial-services rules.",
+      "Crypto is legal and treated as an investment asset. AUSTRAC's Travel Rule for virtual-asset transfers took effect 1 July 2026 with no minimum-value threshold, but Treasury and ASIC's dedicated digital-asset-platform licensing framework is still being finalised.",
+    soWhat: "AML/CTF obligations (registration, Travel Rule) are now live even though bespoke platform licensing is not — treat Australia as split-state rather than fully 'in-progress'.",
+    keyDates: [{ date: "2026-07-01", label: "Travel Rule for virtual-asset transfers in force" }],
     sources: [sumsub],
   },
   {

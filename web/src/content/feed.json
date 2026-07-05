@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03",
+  "lastUpdated": "2026-07-05",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1547,6 +1547,50 @@
       "sources": [
         { "name": "TRM Labs — H1 2026 crypto hacks reach record high as losses fall below $1 billion", "url": "https://www.trmlabs.com/resources/blog/h1-2026-crypto-hacks-reach-record-high-as-losses-fall-below-usd-1-billion", "kind": "primary" },
         { "name": "Korea Herald — North Korea behind two-thirds of global crypto stolen in H1", "url": "https://www.koreaherald.com/article/10797363", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-a7a5-volume-dispute-analysts",
+      "type": "signal",
+      "title": "A7A5 volume claims disputed: analysts put real usage 60-96% below issuer's figures post-sanctions",
+      "summary": "A CoinDesk investigation published 3 July 2026 pits A7A5's own claims against blockchain-analytics readings. The issuer's regulatory-affairs director claims over $200m in average daily volume, driven mostly by DeFi activity. TRM Labs puts average daily volume closer to $75m and estimates roughly 34% of observed volume is circular, self-referential transfers that inflate apparent activity. Elliptic goes further: monthly transaction volumes are down more than 90% since January and 96% from last year's peak, following the layered US/EU/UK sanctions and the collapse of Grinex (A7A5's key on/off-ramp) earlier in 2026. None of the competing figures are independently verified.",
+      "soWhat": "This materially qualifies the CertiK-sourced $110bn cumulative-volume narrative already tracked (see feed-a7a5-certik-110b-volume): cumulative totals since launch look very different from current run-rate, and a third of even that run-rate may be wash activity. For sanctions-effectiveness reporting and any residual A7A5 counterparty exposure assessment, use current monthly run-rate and TRM/Elliptic's circular-flow-adjusted figures rather than headline cumulative volume — the sanctions-plus-Grinex-collapse combination appears to be working better than the issuer's self-reported numbers suggest.",
+      "date": "2026-07-03",
+      "addedAt": "2026-07-05",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["A7A5", "Russia", "sanctions-evasion", "stablecoin", "TRM", "Elliptic", "Grinex", "data-dispute"],
+      "sources": [
+        { "name": "CoinDesk — Inside the fierce data dispute over whether a sanctioned Russian crypto token is actually working to evade Western blocks", "url": "https://www.coindesk.com/business/2026/07/03/this-sanctioned-russian-stablecoin-claims-it-processes-billions-but-blockchain-analysts-disagree", "kind": "secondary" },
+        { "name": "BiggoFinance — Russia-sanctioned stablecoin A7A5 faces 34% volume manipulation allegations", "url": "https://finance.biggo.com/news/fb505c62-1fd2-49bd-b8a3-2e80246cdb0f", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-austrac-travel-rule-live-2026",
+      "type": "regulatory",
+      "title": "Australia's crypto Travel Rule takes effect 1 July 2026 with no minimum-value threshold",
+      "summary": "AUSTRAC's Travel Rule obligations for virtual-asset transfers came into force on 1 July 2026 (deferred from an original 31 March 2026 start under the AML/CTF transitional rules). Both existing and newly-regulated virtual asset service providers must now collect and share originator/beneficiary information on every virtual-asset transfer between providers, with no de minimis exemption — it applies regardless of transaction value. The obligation sits within Australia's wider AML/CTF Tranche 2 reform programme; ASIC's separate digital-asset-platform licensing framework remains under development.",
+      "soWhat": "Any correspondent flow into or out of an Australian VASP now carries a live Travel Rule counterparty-data obligation with zero threshold — smaller transfers that would fall below thresholds elsewhere (e.g. FATF's $1,000/€1,000 guidance figure) are still in scope in Australia. Confirm Travel Rule message-format interoperability with Australian counterparties now rather than at the next AML programme review, and treat Australia's overall regime as split-state: AML/CTF obligations (travel rule, registration) are live, but platform licensing is still pending.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-05",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Australia",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["AUSTRAC", "Travel-Rule", "Australia", "AML/CTF", "VASP"],
+      "publication": {
+        "issuer": "AUSTRAC",
+        "kind": "Regulatory obligation commencement",
+        "ref": "AML/CTF transitional rules 2026 — Travel Rule"
+      },
+      "sources": [
+        { "name": "AUSTRAC — AML/CTF transitional rules 2026", "url": "https://www.austrac.gov.au/about-us/legislation/updates-legislation/amlctf-transitional-rules-2026", "kind": "primary" },
+        { "name": "AUSTRAC — Travel rule overview", "url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/additional-guidance/travel-rule/travel-rule-overview", "kind": "primary" },
+        { "name": "SpendNode — Australia's crypto Travel Rule takes effect July 1 with no minimum threshold", "url": "https://www.spendnode.io/blog/australia-crypto-travel-rule-july-2026/", "kind": "secondary" }
       ]
     }
   ]

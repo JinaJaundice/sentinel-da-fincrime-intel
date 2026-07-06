@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05",
+  "lastUpdated": "2026-07-06",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1591,6 +1591,71 @@
         { "name": "AUSTRAC — AML/CTF transitional rules 2026", "url": "https://www.austrac.gov.au/about-us/legislation/updates-legislation/amlctf-transitional-rules-2026", "kind": "primary" },
         { "name": "AUSTRAC — Travel rule overview", "url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/additional-guidance/travel-rule/travel-rule-overview", "kind": "primary" },
         { "name": "SpendNode — Australia's crypto Travel Rule takes effect July 1 with no minimum threshold", "url": "https://www.spendnode.io/blog/australia-crypto-travel-rule-july-2026/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-tether-usdt-mica-delisting-2026",
+      "type": "signal",
+      "title": "USDT loses MiCA compliance as EU exchanges delist Tether's $186bn stablecoin from 1 July",
+      "summary": "MiCA's transitional period expired 1 July 2026 and Tether never sought e-money-token (EMT) authorisation, locking USDT — the world's largest stablecoin at roughly $186bn — out of MiCA-licensed EU exchange order books. Coinbase, Kraken, Crypto.com, Binance and Revolut have removed or restricted USDT pairs for EU users in a staged rollout since late 2024, completing on the 1 July deadline. Tether CEO Paolo Ardoino has argued MiCA's requirement that 60% of EMT reserves sit in EU bank deposits introduces its own risk given USDT's reserve base leans heavily on US Treasuries. Circle's USDC and EURC, both under an EU e-money-institution licence, are now the only top-10 stablecoins fully MiCA-compliant and are absorbing displaced liquidity on regulated venues.",
+      "soWhat": "The dominant global stablecoin is now structurally excluded from EU-regulated venues — any EU-facing bank or CASP counterparty still settling in USDT is, by definition, routing through unlicensed or offshore infrastructure from 1 July. Expect EU institutional and retail liquidity to concentrate further into USDC/EURC on regulated platforms, while USDT volume migrates toward non-MiCA venues (offshore exchanges, OTC, DeFi) that carry materially higher AML and counterparty risk. Treat continued USDT exposure via EU-facing counterparties as a live compliance flag rather than a watch-list item, and use Tether's non-compliance as a forcing function to tighten stablecoin counterparty concentration limits.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["MiCA", "Tether", "USDT", "Circle", "USDC", "EURC", "stablecoin", "EU", "delisting"],
+      "sources": [
+        { "name": "CoinGape — USDT exits EU markets as MiCA's final curtain falls on Tether", "url": "https://coingape.com/usdt-exits-eu-markets-today-as-micas-final-curtain-falls-on-tether/", "kind": "secondary" },
+        { "name": "crypto.news — Tether abandons Europe as MiCA ban wipes USDT from exchanges", "url": "https://crypto.news/tether-abandons-europe-as-mica-ban-wipes-usdt/", "kind": "secondary" },
+        { "name": "VaaSBlock — Tether left EU exchanges. Circle did not. The difference matters.", "url": "https://www.vaasblock.com/news/tether-usdt-mica-eu-delisting-circle-usdc-transparency-2026/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-genius-act-six-agency-july18-deadline",
+      "type": "signal",
+      "title": "GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback",
+      "summary": "The GENIUS Act, signed 18 July 2025, gives OFAC, FinCEN, the Federal Reserve, OCC, FDIC and NCUA exactly one year to finalise implementing rules for permitted payment stablecoin issuers (PPSIs) — a statutory deadline falling 18 July 2026. All six agencies published proposed rules between February and June 2026 (the OCC's $5m capital floor and three-tier liquidity framework per its 25 February NPRM; the FDIC's no-deposit-insurance clarification; the Federal Reserve's customer-identification NPRM; FinCEN/OFAC's joint AML/sanctions NPRM already tracked in this feed) and comment periods have now closed. The statute contains no fallback, interim-guidance mechanism or automatic-implementation provision if any agency misses the date; once final, issuers get roughly 120 days to comply before the framework fully takes effect later in 2026.",
+      "soWhat": "A missed deadline at even one of six agencies creates a live regulatory-gap risk for the whole PPSI framework — banks relying on 'GENIUS-Act-compliant issuer' as a counterparty-risk mitigant should hold a contingency view for a partial or delayed rule set past 18 July rather than assuming a clean cutover. Where rules do land on time, the specific calibration (capital floors, liquidity tiers, CIP/CDD detail) becomes the practical bar for what 'compliant' means in counterparty due-diligence questionnaires — worth a direct read of the final rules the week they drop rather than waiting for secondary summaries.",
+      "date": "2026-07-03",
+      "addedAt": "2026-07-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": ["GENIUS-Act", "stablecoin", "FinCEN", "OFAC", "OCC", "FDIC", "Federal-Reserve", "NCUA", "rulemaking", "deadline"],
+      "sources": [
+        { "name": "OCC — Bulletin 2026-3: GENIUS Act regulations, notice of proposed rulemaking", "url": "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html", "kind": "primary" },
+        { "name": "Stablecoin Insider — Six federal agencies have 35 days to finalize GENIUS Act stablecoin rules by July 18", "url": "https://stablecoininsider.org/six-federal-agencies-have-35-days-to-finalize-genius-act-stablecoin-rules-by-july-18/", "kind": "secondary" },
+        { "name": "Tech Times — Stablecoin compliance costs land July 18: mid-market issuers face existential math", "url": "https://www.techtimes.com/articles/319654/20260703/stablecoin-compliance-costs-land-july-18-mid-market-issuers-face-existential-math.htm", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fca-qcatp-overseas-equivalence-gap",
+      "type": "regulatory",
+      "title": "FCA's new crypto rules lean on overseas platforms via a QCATP route — but the 'comparable regulation' equivalence list is still undefined",
+      "summary": "Reporting on 4 July 2026 on the FCA's 30 June final cryptoasset rules highlighted a new Qualified Cryptoasset Trading Platform (QCATP) route and its accompanying finalised guidance on international firms (FG26/7): overseas trading venues can serve UK clients through a locally authorised branch, and non-UK-issued stablecoins can circulate domestically. The FCA has said it will authorise such branches only where the home jurisdiction offers 'comparable levels of regulatory protection', assessed case by case — it has explicitly not published, and says it is not yet in a position to publish, a formal equivalence or recognition list. Separately, over 85% of applications under the existing MLR cryptoasset registration regime were rejected or withdrawn, and the new FSMA framework adds materially broader consumer-protection, prudential, operational-resilience and senior-management-accountability requirements ahead of the September 2026 authorisation gateway.",
+      "soWhat": "An undefined equivalence standard is a live gap, not a settled control: due-diligence frameworks should not treat 'QCATP-eligible' as a durable green flag until the FCA actually names qualifying jurisdictions — build in a placeholder for case-by-case assessment rather than assuming automatic parity with FCA supervision. The 85% MLR rejection/withdrawal rate is also a hard data point for FSMA gateway-readiness modelling: banks assessing CASP counterparties' odds of clearing the September 2026 gateway should weight it heavily, since historical MLR registration has proven a poor predictor of FSMA authorisation success.",
+      "date": "2026-07-04",
+      "addedAt": "2026-07-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "QCATP", "overseas", "equivalence", "UK", "MLR", "authorization", "gateway", "stablecoin", "FG26-7"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Finalised Guidance",
+        "ref": "FG26/7"
+      },
+      "sources": [
+        { "name": "FCA — FG26/7: Approach to international cryptoasset firms", "url": "https://www.fca.org.uk/publication/finalised-guidance/fg26-7.pdf", "kind": "primary" },
+        { "name": "CoinDesk — UK's bold new crypto rules promise to unlock global trading, but huge compliance hurdles still threaten the rollout", "url": "https://www.coindesk.com/policy/2026/07/04/uk-s-bold-new-crypto-rules-promise-to-unlock-global-trading-but-huge-compliance-hurdles-still-threaten-the-rollout", "kind": "secondary" },
+        { "name": "BigGo Finance — UK FCA's crypto regulatory proposal: global liquidity access seen as 'positive,' but 85% licensing rejection rate remains a 'hurdle'", "url": "https://finance.biggo.com/news/5fb98248-001b-4a84-89ac-e20aaae0fba4", "kind": "secondary" }
       ]
     }
   ]

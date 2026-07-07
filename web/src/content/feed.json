@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06",
+  "lastUpdated": "2026-07-07",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1656,6 +1656,59 @@
         { "name": "FCA — FG26/7: Approach to international cryptoasset firms", "url": "https://www.fca.org.uk/publication/finalised-guidance/fg26-7.pdf", "kind": "primary" },
         { "name": "CoinDesk — UK's bold new crypto rules promise to unlock global trading, but huge compliance hurdles still threaten the rollout", "url": "https://www.coindesk.com/policy/2026/07/04/uk-s-bold-new-crypto-rules-promise-to-unlock-global-trading-but-huge-compliance-hurdles-still-threaten-the-rollout", "kind": "secondary" },
         { "name": "BigGo Finance — UK FCA's crypto regulatory proposal: global liquidity access seen as 'positive,' but 85% licensing rejection rate remains a 'hurdle'", "url": "https://finance.biggo.com/news/5fb98248-001b-4a84-89ac-e20aaae0fba4", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-revolut-usdt-mica-exit",
+      "type": "signal",
+      "title": "Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC",
+      "summary": "On 6 July 2026 Revolut confirmed a phased wind-down of Tether's USDT for its European users: purchases stopped 6 July, new deposits stop 30 July, and users can sell or withdraw until 31 August, after which remaining balances auto-convert to fiat. MiCA's full enforcement from 1 July bars MiCA-licensed venues from offering stablecoins whose issuer has not itself sought authorisation; Tether never applied. Revolut — a ~$75bn fintech serving over 75 million customers, licensed via CySEC in Cyprus — is the last major European platform to delist USDT, following Coinbase, Binance, Kraken, Crypto.com and OKX. USDT represented an estimated 15-20% of European spot crypto trading volume; commentators put the resulting liquidity gap at $30-35bn, expected to flow mainly to Circle's MiCA-compliant USDC and EURC.",
+      "soWhat": "Unlike exchange-level delistings, Revolut's exit removes USDT from the daily financial interface of tens of millions of ordinary EU retail customers — the clearest sign yet that MiCA has re-routed, not just restricted, European stablecoin liquidity. Banks should expect continued concentration of EU-facing stablecoin flows into a small number of MiCA-compliant issuers (principally USDC/EURC): treat USDT balances or transfers surfacing in EU retail-facing accounts after 31 August as a marker of non-compliant or offshore-routed activity worth enhanced scrutiny. The flip side is concentration risk — a growing share of 'compliant' stablecoin exposure now sits with one issuer group, which sanctions and counterparty-risk frameworks should track as a single point of dependency.",
+      "date": "2026-07-06",
+      "addedAt": "2026-07-07",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["MiCA", "Tether", "USDT", "Revolut", "Circle", "USDC", "stablecoin", "EU", "delisting", "counterparty-risk"],
+      "sources": [
+        { "name": "CoinDesk (via crypto.news) — Revolut drops Tether USDT as MiCA rules force major crypto shift", "url": "https://crypto.news/revolut-drops-tether-usdt-as-mica-force-it-out-of-eu/", "kind": "secondary" },
+        { "name": "Cryptopolitan — Revolut drops Tether's USDT in Europe, handing regulated market to USDC", "url": "https://www.cryptopolitan.com/revolut-becomes-last-major-european-venue-to-delist-usdt/", "kind": "secondary" },
+        { "name": "Yahoo Finance — Tether (USDT) exits Revolut by August 31, not Europe", "url": "https://finance.yahoo.com/markets/crypto/articles/tether-usdt-exits-revolut-august-110715220.html", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-defi-governance-accounting-exploits-july2026",
+      "type": "typology",
+      "title": "No code bug required: governance capture and flash-loan vault-accounting manipulation drain $26M from BonkDAO and Summer.fi in 48 hours",
+      "summary": "Two DeFi protocols were drained on 6 July 2026 using techniques that exploit a protocol's own rules rather than a smart-contract bug. An attacker spent roughly $4M buying BONK to acquire outsized voting power, then passed a malicious BonkDAO governance proposal — live for six days and decided by just seven voting wallets, over 99% of which were attacker-controlled — that authorised transfer of 4.426 billion BONK (~$20M) from the DAO treasury; no timelock, quorum minimum or multisig check existed to stop it. Separately, Summer.fi's Lazy Summer USDC vaults lost roughly $6M after an attacker took an approximately $65.4M flash loan (sourced via Morpho) to manipulate Curve DAI/USDC pool pricing and vault share-accounting, briefly showing a 2.08 million% displayed APY, before converting the proceeds to DAI.",
+      "soWhat": "Both attacks convert cleanly to stablecoins that can move toward exchanges within hours, yet neither trips typology rules built around code exploits, bridges or mixers. Detection should be extended to cover (1) large token purchases immediately preceding governance votes on low-turnout DAOs — a buy-the-vote pattern distinct from conventional market manipulation, and (2) rapid post-flash-loan stablecoin conversions from lending/vault protocols landing in retail or OTC-facing accounts. Treasury-governance design (timelocks, quorum floors, multisig gates) is becoming a due-diligence criterion in its own right when assessing DeFi-adjacent counterparties or collateral.",
+      "date": "2026-07-06",
+      "addedAt": "2026-07-07",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["typology", "DeFi", "governance-attack", "flash-loan", "vault-accounting", "BonkDAO", "Summer.fi", "treasury-drain"],
+      "typology": {
+        "vector": "DeFi treasury/vault drains executed via a protocol's own governance or accounting rules — vote-buying on low-quorum DAOs and flash-loan-driven vault share-price manipulation — rather than a code exploit",
+        "controls": [
+          "Flag large token purchases immediately preceding governance votes on low-turnout DAOs",
+          "Monitor rapid post-flash-loan stablecoin conversions from lending/vault protocols into retail or OTC-facing accounts",
+          "Treat absence of timelocks, quorum floors or multisig gates as a due-diligence red flag for DeFi-adjacent counterparties or collateral"
+        ],
+        "obligations": [
+          "SAR on suspected theft proceeds from DAO treasury or DeFi vault drains",
+          "Enhanced due diligence on counterparties receiving rapid inflows traceable to the BonkDAO or Summer.fi exploit addresses"
+        ]
+      },
+      "sources": [
+        { "name": "BeInCrypto — BONK DAO loses $20 million in governance attack, token falls 10%", "url": "https://beincrypto.com/bonk-dao-20-million-attack/", "kind": "secondary" },
+        { "name": "Bankless Times — BonkDAO loses $20M in BONK following malicious governance proposal", "url": "https://www.banklesstimes.com/articles/2026/07/07/bonkdao-loses-20m-in-bonk-following-malicious-governance-proposal/", "kind": "secondary" },
+        { "name": "CoinDesk — DeFi protocol Summer.fi halts Lazy Summer vaults after $6 million exploit", "url": "https://www.coindesk.com/web3/2026/07/06/defi-protocol-summer-fi-halts-lazy-summer-vaults-after-usd6-million-exploit", "kind": "secondary" },
+        { "name": "The Defiant — Summer Finance drained of $6M in flash loan exploit", "url": "https://thedefiant.io/news/hacks/summer-finance-drained-of-6m-in-flash-loan-exploit", "kind": "secondary" }
       ]
     }
   ]

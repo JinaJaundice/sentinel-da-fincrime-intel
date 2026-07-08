@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07",
+  "lastUpdated": "2026-07-08",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1709,6 +1709,93 @@
         { "name": "Bankless Times — BonkDAO loses $20M in BONK following malicious governance proposal", "url": "https://www.banklesstimes.com/articles/2026/07/07/bonkdao-loses-20m-in-bonk-following-malicious-governance-proposal/", "kind": "secondary" },
         { "name": "CoinDesk — DeFi protocol Summer.fi halts Lazy Summer vaults after $6 million exploit", "url": "https://www.coindesk.com/web3/2026/07/06/defi-protocol-summer-fi-halts-lazy-summer-vaults-after-usd6-million-exploit", "kind": "secondary" },
         { "name": "The Defiant — Summer Finance drained of $6M in flash loan exploit", "url": "https://thedefiant.io/news/hacks/summer-finance-drained-of-6m-in-flash-loan-exploit", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-clarity-act-stall-sanctions-gap",
+      "type": "regulatory",
+      "title": "CLARITY Act misses Senate's July 4 window as ex-NSC Iran official warns bill leaves BSA gaps for sanctions evasion",
+      "summary": "The Digital Asset Market Clarity Act failed to reach a Senate floor vote before the July 4 recess, still blocked by three unresolved disputes: ethics provisions tied to the President's crypto-income financial disclosure, Section 604 developer-protection language that the National District Attorneys' Association says would impair criminal investigations, and a stablecoin-yield loophole the American Bankers Association says undercuts the GENIUS Act's ban on issuer-paid interest. Days earlier, former NSC Iran director Richard Nephew argued in Fortune that the bill as drafted leaves large parts of DeFi outside clear Bank Secrecy Act obligations, citing FinCEN warnings that inadequate digital-asset regulation already lets Iranian facilitators access international digital-asset service providers.",
+      "soWhat": "Section 604 and the DeFi/BSA gap are the parts of this bill worth tracking closely, not the broader market-structure fight: if CLARITY passes with that language intact, DeFi-adjacent counterparties gain a durable argument for sitting outside BSA obligations altogether — the same structural gap already exploited in the Iran- and DPRK-linked flows tracked elsewhere in this feed. The Senate returns 13 July with roughly three working weeks before August recess; watch whether Section 604 and the stablecoin-yield carve-out survive amendment.",
+      "date": "2026-07-04",
+      "addedAt": "2026-07-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["CLARITY-Act", "Congress", "sanctions-evasion", "DeFi", "BSA", "stablecoin-yield", "GENIUS-Act"],
+      "sources": [
+        { "name": "Tech Times — Senate crypto bill misses July 4: three unresolved fights, three weeks left", "url": "https://www.techtimes.com/articles/319679/20260704/senate-crypto-bill-misses-july-4-three-unresolved-fights-three-weeks-left.htm", "kind": "secondary" },
+        { "name": "Fortune — Former Iran director at NSC: crypto legislation is a ticket to sanctions evasion", "url": "https://fortune.com/2026/07/02/crypto-legislation-is-a-ticket-to-sanctions-evasion/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fatf-june-plenary-defi-va-update",
+      "type": "regulatory",
+      "title": "FATF's June 2026 plenary agrees a 7th targeted VA/VASP update and a new DeFi regulatory-challenges report, both due for July publication",
+      "summary": "At its 17-19 June 2026 Paris plenary — the last chaired before Giles Thomson (UK) formally took over the FATF presidency on 1 July — the FATF approved a seventh targeted update on global implementation of its virtual-asset and VASP standards, plus a new report examining money-laundering, terrorist-financing and proliferation-financing risks specific to DeFi platforms. Both documents were scheduled for publication in July 2026 but had not yet appeared as of 8 July.",
+      "soWhat": "This is the standards-setting counterpart to the fraud roadmap already tracked (feed-fatf-uk-presidency-fraud-roadmap) — together they signal the incoming UK presidency prioritising DeFi and fraud rather than issuing new headline recommendations. Flag both documents for review the week they land: the VA/VASP targeted update typically resets the bar national regulators (including the FCA) cite for 'adequate' Travel Rule and VASP supervision, and a report devoted specifically to DeFi risk would be a first at this level of FATF specificity.",
+      "date": "2026-06-19",
+      "addedAt": "2026-07-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["FATF", "DeFi", "VASP", "virtual-assets", "UK-presidency", "standards"],
+      "publication": {
+        "issuer": "FATF",
+        "kind": "Plenary outcomes (targeted update and DeFi report pending July publication)",
+        "ref": "Outcomes FATF Plenary, 17-19 June 2026"
+      },
+      "sources": [
+        { "name": "FATF — Outcomes FATF Plenary, 17-19 June 2026", "url": "https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-fatf-plenary-june-2026.html", "kind": "primary" },
+        { "name": "ComplyAdvantage — FATF plenary June 2026 outcomes", "url": "https://complyadvantage.com/insights/fatf-plenary-june-2026-outcomes/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-elliptic-continuous-monitoring",
+      "type": "solution",
+      "title": "Elliptic launches Continuous Monitoring to catch risk that develops after a wallet is first screened",
+      "summary": "Elliptic introduced Continuous Monitoring (announced around 3 July 2026), a service that watches previously-screened wallets and transactions for new labels, cluster changes or other events that would alter a prior risk outcome, automatically reruns the screening against the institution's own risk rules, and pushes alerts via webhook or Slack once a configured threshold is crossed. It targets a specific gap: a wallet cleared as low-risk on day one can accumulate higher-risk associations afterward while the original clean result sits unchanged in a bank's systems.",
+      "soWhat": "Point-in-time screening has always had this blind spot; a vendor productising 'continuous' rescreening is a concrete data point for the build-vs-buy comparison — it raises the bar for what an in-house Daml-based compliance engine would need to replicate (event-driven rescreening, not just onboarding-time checks) to match commercial KYT tooling.",
+      "date": "2026-07-03",
+      "addedAt": "2026-07-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": ["Elliptic", "solution", "KYT", "continuous-monitoring", "vendor", "wallet-screening"],
+      "solution": {
+        "vendor": "Elliptic",
+        "category": "Wallet/transaction screening — continuous rescreening",
+        "stance": "watch",
+        "note": "Event-driven rescreening layered on Elliptic's existing screening/KYT platform; relevant benchmark for the in-house engine's monitoring capability."
+      },
+      "sources": [
+        { "name": "Elliptic — Introducing Continuous Monitoring", "url": "https://www.elliptic.co/blog/introducing-continuous-monitoring", "kind": "primary" },
+        { "name": "Crowdfund Insider — Elliptic introduces Continuous Monitoring for evolving cryptocurrency risks", "url": "https://www.crowdfundinsider.com/2026/07/289196-blockchain-intelligence-firm-elliptic-introduces-continuous-monitoring-for-evolving-cryptocurrency-risks/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-aptos-move-vm-70bn-vulnerability",
+      "type": "signal",
+      "title": "White-hat disclosure: Aptos Move VM bug put an estimated $70bn in cross-chain and stablecoin value at systemic risk",
+      "summary": "Security firm Hexens disclosed on 4 July 2026 that it had privately reported a stale-cache/type-confusion flaw in the Aptos Move VM on 25 February; Aptos Labs patched it within days (27 February), before any exploitation occurred. Hexens simulated the attack using roughly a third of the validator network for about $3,000 and achieved a greater-than-90% success rate; it assessed first-order systemic exposure — value reachable via bridges, cross-chain messaging, stablecoin administration flows and centralised exchanges built on Aptos — at approximately $70bn, though independent verifier Grego AI put directly-at-risk native TVL closer to $250m.",
+      "soWhat": "No funds were lost and the flaw was never exploited, but the gap between $250m of direct exposure and $70bn of first-order systemic exposure is the number worth remembering: a chain-level infrastructure bug can cascade through bridges and stablecoin rails far beyond a protocol's own TVL. Where any part of a digital-asset stack settles on or bridges through a given L1, validator/VM-level vulnerability disclosures belong in counterparty and custody due diligence as a distinct risk category from smart-contract exploits.",
+      "date": "2026-07-04",
+      "addedAt": "2026-07-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["Aptos", "vulnerability", "infrastructure-risk", "bridges", "stablecoin", "systemic-risk"],
+      "sources": [
+        { "name": "CoinDesk — How white hat hackers with a $3,000 server found a flaw that could've put $70 billion in crypto at risk", "url": "https://www.coindesk.com/tech/2026/07/04/how-ethical-hackers-with-just-a-usd3-000-server-found-a-flaw-that-could-ve-put-usd70-billion-in-crypto-at-risk", "kind": "secondary" },
+        { "name": "Phemex — Aptos blockchain vulnerability fixed after $70 billion risk exposed", "url": "https://phemex.com/news/article/aptos-blockchain-vulnerability-fixed-after-70-billion-risk-exposed-91840", "kind": "secondary" }
       ]
     }
   ]

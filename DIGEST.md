@@ -1,15 +1,20 @@
-# Sentinel weekly digest — 6 July 2026
+# Sentinel weekly digest — 9 July 2026
 
-_17 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_15 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 9 new items; latest: GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
-- **Sanctions & OFAC** — 7 new items; latest: GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
-- **MiCA & the EU** — 4 new items; latest: USDT loses MiCA compliance as EU exchanges delist Tether's $186bn stablecoin from 1 July
+- **Stablecoins** — 7 new items; latest: Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
+- **Sanctions & OFAC** — 5 new items; latest: GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
+- **MiCA & the EU** — 4 new items; latest: Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
 - **Travel Rule** — 3 new items; latest: MiCA transitional period ends 1 July 2026 — ESMA orders unauthorised CASPs to wind down; only ~244 of 1,200+ VASPs converted
 - **US rulemaking** — 3 new items; latest: GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
 
 ## Notable this week
+
+### Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
+*EU · 6 July 2026 · High impact*
+> **So what:** Unlike exchange-level delistings, Revolut's exit removes USDT from the daily financial interface of tens of millions of ordinary EU retail customers — the clearest sign yet that MiCA has re-routed, not just restricted, European stablecoin liquidity. Banks should expect continued concentration of EU-facing stablecoin flows into a small number of MiCA-compliant issuers (principally USDC/EURC): treat USDT balances or transfers surfacing in EU retail-facing accounts after 31 August as a marker of non-compliant or offshore-routed activity worth enhanced scrutiny. The flip side is concentration risk — a growing share of 'compliant' stablecoin exposure now sits with one issuer group, which sanctions and counterparty-risk frameworks should track as a single point of dependency.
+Source: [CoinDesk (via crypto.news) — Revolut drops Tether USDT as MiCA rules force major crypto shift](https://crypto.news/revolut-drops-tether-usdt-as-mica-force-it-out-of-eu/)
 
 ### GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
 *US · 3 July 2026 · High impact*
@@ -26,20 +31,15 @@ Source: [CoinGape — USDT exits EU markets as MiCA's final curtain falls on Tet
 > **So what:** Any EU crypto counterparty not on the ESMA CASP register is now operating illegally in the EU — treat absence from the register as a hard trigger to suspend correspondent and counterparty relationships, not just a watch-list flag. With ~80% of previously-registered firms not yet converted, expect a wave of coordinated EBA/AMLA enforcement referrals over the coming months, and watch for licence-shopping moves between member states (the pattern already seen in Binance's Greece withdrawal) as a red flag on counterparty stability.
 Source: [ESMA — Statement on the end of transitional periods under MiCA](https://www.esma.europa.eu/sites/default/files/2026-04/ESMA75-113276571-1679_Statement_on_the_end_of_transitional_periods_under_MiCA.pdf)
 
-### FCA publishes landmark final crypto rules — stablecoin capital cut to 1%, market abuse regime finalised, September gateway confirmed
-*UK · 30 June 2026 · High impact*
-> **So what:** The final rulebook — completing the consultation series (CP25/14, CP25/15, CP25/40–42, CP26/4, CP26/13) tracked in this feed — is the definitive standard against which banks must assess CASP counterparty compliance readiness. Three immediate bank actions: (1) map any own FSMA crypto-permission in scope to the final capital, conduct and market-abuse requirements as the September gateway application benchmark — gap analyses need to start now; (2) update CASP counterparty due diligence to use these final requirements as the pass/fail threshold from October 2027 — a CASP unable to demonstrate it can meet them is on a credible path to unlicensed status; (3) the 1% stablecoin capital floor (down from 2%) resets reserve-adequacy assumptions for UK-authorised stablecoin counterparty exposure — update stress-test models accordingly.
-Source: [FCA — FCA sets landmark crypto rules to cement the UK's place as a global hub](https://www.fca.org.uk/news/press-releases/fca-sets-landmark-crypto-rules-cement-uks-place-global-hub)
+### Alfa-Bank moves to build regulated crypto custody in Russia — a sanctioned bank formalising a domestic digital-asset rail
+*Russia · 9 July 2026 · Medium impact*
+> **So what:** A Western-sanctioned, systemically important Russian bank building licensed domestic custody infrastructure extends the same sanctions-evasion thesis already flagged around A7A5 and HTX — it is another piece of parallel, Western-correspondent-independent settlement infrastructure. Treat Alfa-Bank-linked custody and conversion-gateway addresses as a forward-looking screening target, not just its existing SDN/OFSI listings.
+Source: [crypto.news — Alfa-Bank is testing crypto as Russia's banking race heats up](https://crypto.news/alfa-bank-is-testing-crypto-as-russias-banking-race-heats-up/)
 
-### FCA's new crypto rules lean on overseas platforms via a QCATP route — but the 'comparable regulation' equivalence list is still undefined
-*UK · 4 July 2026 · Medium impact*
-> **So what:** An undefined equivalence standard is a live gap, not a settled control: due-diligence frameworks should not treat 'QCATP-eligible' as a durable green flag until the FCA actually names qualifying jurisdictions — build in a placeholder for case-by-case assessment rather than assuming automatic parity with FCA supervision. The 85% MLR rejection/withdrawal rate is also a hard data point for FSMA gateway-readiness modelling: banks assessing CASP counterparties' odds of clearing the September 2026 gateway should weight it heavily, since historical MLR registration has proven a poor predictor of FSMA authorisation success.
-Source: [FCA — FG26/7: Approach to international cryptoasset firms](https://www.fca.org.uk/publication/finalised-guidance/fg26-7.pdf)
-
-### Australia's crypto Travel Rule takes effect 1 July 2026 with no minimum-value threshold
-*Australia · 1 July 2026 · Medium impact*
-> **So what:** Any correspondent flow into or out of an Australian VASP now carries a live Travel Rule counterparty-data obligation with zero threshold — smaller transfers that would fall below thresholds elsewhere (e.g. FATF's $1,000/€1,000 guidance figure) are still in scope in Australia. Confirm Travel Rule message-format interoperability with Australian counterparties now rather than at the next AML programme review, and treat Australia's overall regime as split-state: AML/CTF obligations (travel rule, registration) are live, but platform licensing is still pending.
-Source: [AUSTRAC — AML/CTF transitional rules 2026](https://www.austrac.gov.au/about-us/legislation/updates-legislation/amlctf-transitional-rules-2026)
+### FCA publishes authorisation-form guidance for cryptoasset firms ahead of the September gateway
+*UK · 8 July 2026 · Medium impact*
+> **So what:** This is the practical checklist to test CASP counterparties against now: a firm that cannot readily produce this information is a live signal that it may miss the September gateway and slip into unlicensed status when the FSMA regime bites in October 2027. Build authorisation-readiness into counterparty due diligence rather than waiting for the application window to close.
+Source: [FCA — How the cryptoasset gateway will operate](https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation/how-gateway-will-operate)
 
 ## By the numbers
-17 new · 4 high-impact · 0 verified
+15 new · 4 high-impact · 0 verified

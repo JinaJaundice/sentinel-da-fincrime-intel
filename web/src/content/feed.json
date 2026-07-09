@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08",
+  "lastUpdated": "2026-07-09",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1796,6 +1796,45 @@
       "sources": [
         { "name": "CoinDesk — How white hat hackers with a $3,000 server found a flaw that could've put $70 billion in crypto at risk", "url": "https://www.coindesk.com/tech/2026/07/04/how-ethical-hackers-with-just-a-usd3-000-server-found-a-flaw-that-could-ve-put-usd70-billion-in-crypto-at-risk", "kind": "secondary" },
         { "name": "Phemex — Aptos blockchain vulnerability fixed after $70 billion risk exposed", "url": "https://phemex.com/news/article/aptos-blockchain-vulnerability-fixed-after-70-billion-risk-exposed-91840", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fca-authorisation-form-guidance-july2026",
+      "type": "regulatory",
+      "title": "FCA publishes authorisation-form guidance for cryptoasset firms ahead of the September gateway",
+      "summary": "On 8 July 2026 the FCA published guidance setting out what applicant cryptoasset firms will need to include in their FSMA authorisation application — covering both generic firm-wide sections and business-model-specific cryptoasset questions. The FCA says the form's structure is largely settled, though question wording may still change before the application window opens 30 September 2026 (closing 28 February 2027).",
+      "soWhat": "This is the practical checklist to test CASP counterparties against now: a firm that cannot readily produce this information is a live signal that it may miss the September gateway and slip into unlicensed status when the FSMA regime bites in October 2027. Build authorisation-readiness into counterparty due diligence rather than waiting for the application window to close.",
+      "date": "2026-07-08",
+      "addedAt": "2026-07-09",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "CASP", "authorization", "UK", "gateway", "counterparty-risk"],
+      "publication": { "issuer": "FCA", "kind": "Guidance" },
+      "sources": [
+        { "name": "FCA — How the cryptoasset gateway will operate", "url": "https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation/how-gateway-will-operate", "kind": "primary" },
+        { "name": "Global Regulation Tomorrow — FCA publishes information about the authorisation form for cryptoasset firms", "url": "https://www.regulationtomorrow.com/2026/07/fca-publishes-information-about-the-authorisation-form-for-cryptoasset-firms/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-alfabank-russia-crypto-custody",
+      "type": "signal",
+      "title": "Alfa-Bank moves to build regulated crypto custody in Russia — a sanctioned bank formalising a domestic digital-asset rail",
+      "summary": "Russia's largest private bank, Alfa-Bank, announced on 9 July 2026 plans to become a regulated digital-asset custodian, building its own 'digital depository' and currency-conversion gateways, with services opening to other businesses and a retail launch targeted for Q4 2026 once Russia's new crypto legislation takes effect. Alfa-Bank has already begun testing crypto trading for qualified investors via its Alfa-Investments app. Sberbank and T-Bank are pursuing similar digital-depository plans.",
+      "soWhat": "A Western-sanctioned, systemically important Russian bank building licensed domestic custody infrastructure extends the same sanctions-evasion thesis already flagged around A7A5 and HTX — it is another piece of parallel, Western-correspondent-independent settlement infrastructure. Treat Alfa-Bank-linked custody and conversion-gateway addresses as a forward-looking screening target, not just its existing SDN/OFSI listings.",
+      "date": "2026-07-09",
+      "addedAt": "2026-07-09",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Russia",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["Russia", "sanctions-evasion", "custody", "Alfa-Bank", "signal"],
+      "sources": [
+        { "name": "crypto.news — Alfa-Bank is testing crypto as Russia's banking race heats up", "url": "https://crypto.news/alfa-bank-is-testing-crypto-as-russias-banking-race-heats-up/", "kind": "secondary" },
+        { "name": "Coinfomania — Alfa-Bank moves to provide crypto custody", "url": "https://coinfomania.com/alfa-bank-moves-to-provide-crypto-custody-implications-for-institutional-investors/", "kind": "secondary" }
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09",
+  "lastUpdated": "2026-07-11",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1835,6 +1835,55 @@
       "sources": [
         { "name": "crypto.news — Alfa-Bank is testing crypto as Russia's banking race heats up", "url": "https://crypto.news/alfa-bank-is-testing-crypto-as-russias-banking-race-heats-up/", "kind": "secondary" },
         { "name": "Coinfomania — Alfa-Bank moves to provide crypto custody", "url": "https://coinfomania.com/alfa-bank-moves-to-provide-crypto-custody-implications-for-institutional-investors/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-interpol-first-light-2026",
+      "type": "signal",
+      "title": "Interpol's Operation First Light 2026: 5,811 arrests, $293m intercepted across 97 countries — but crypto still outruns the payment-blocking tools",
+      "summary": "Interpol announced results on 9 July 2026 for Operation First Light 2026, a social-engineering-fraud and money-laundering crackdown run 15 January–30 April 2026 across 97 countries with 15,606 suspects identified, 5,811 arrests, USD 293m in illicit assets intercepted, 31,014 bank accounts blocked and 142,000 victims identified. The operation was funded by China's Ministry of Public Security with ASEANAPOL, GCCPOL and Europol support. In one Thailand case, a single wallet processed over USD 122.5m in ten months of romance-scam proceeds using cross-chain token swaps to obscure the trail; Interpol's I-GRIP payment-blocking mechanism successfully froze a linked USD 6.6m business-email-compromise transfer between Singapore and Oman.",
+      "soWhat": "I-GRIP works well against traditional bank-rail transfers but the flagship crypto example in Interpol's own case file — a $122.5m wallet laundered via cross-chain swaps — shows the mechanism has no equivalent reach once proceeds go on-chain. Banks should treat cross-chain bridge/swap sequences following a large single-wallet inflow as a standing red flag for romance-scam proceeds, and expect Interpol/FIU stop-payment requests to keep missing crypto-routed fraud unless matched with blockchain-analytics tooling on the receiving side.",
+      "date": "2026-07-09",
+      "addedAt": "2026-07-11",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["Interpol", "fraud", "money-laundering", "enforcement", "cross-chain", "typology", "I-GRIP", "pig-butchering"],
+      "typology": {
+        "vector": "Romance/social-engineering scam proceeds laundered via cross-chain token swaps ahead of bank-rail payment-blocking requests",
+        "controls": [
+          "Flag large single-wallet inflows followed by rapid cross-chain bridge/swap sequences",
+          "Pair law-enforcement stop-payment (I-GRIP-style) requests with blockchain-analytics tracing on the receiving side",
+          "Screen for wallets matching known scam-compound infrastructure clusters"
+        ],
+        "obligations": ["SAR on suspected romance/investment-fraud proceeds", "Cooperation with cross-border payment-freeze requests"]
+      },
+      "sources": [
+        { "name": "Interpol — Over 5,800 arrests, USD 293 million intercepted in global fraud bust", "url": "https://www.interpol.int/en/News-and-Events/News/2026/Over-5-800-arrests-USD-293-million-intercepted-in-global-fraud-bust", "kind": "primary" },
+        { "name": "Security Affairs — Interpol Operation First Light nets 5,811 arrests and seizes $293 million", "url": "https://securityaffairs.com/195056/security/interpol-operation-first-light-nets-5811-arrests-and-seizes-293-million.html", "kind": "secondary" },
+        { "name": "TechRadar — $293 million seized and 5,811 arrests made in huge anti-scam and fraud action by Interpol", "url": "https://www.techradar.com/pro/security/usd293-million-seized-and-5-811-arrests-made-in-huge-anti-scam-and-fraud-action-by-interpol-and-law-enforcement-agencies-across-97-countries", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-circle-usdc-freeze-scrutiny-2026",
+      "type": "signal",
+      "title": "ICIJ investigation and Wisconsin criminal complaint expose a 30x gap between Tether's and Circle's stolen-fund freeze rates",
+      "summary": "An ICIJ investigation published 8 July 2026 details how Circle rebuffed repeated law-enforcement efforts to recover stolen USDC. In the underlying case, a Walworth County, Wisconsin romance-scam victim sent roughly 381,000 USDC to a fake investment platform; after Milwaukee County detectives obtained an August 2025 court order requiring Circle to freeze the tokens and reissue an equivalent amount to the sheriff's office, Circle refused, saying it lacks the technical ability to burn and reissue USDC held in a third party's wallet — prompting an unusual criminal complaint from Wisconsin prosecutors. AMLBot data cited in the reporting shows Tether froze roughly $3.3bn in USDT across 7,200+ wallets between 2023 and 2025, versus roughly $109m in USDC frozen by Circle over the same period — a 30x gap by value. Circle maintains it acts only on valid legal orders and disputes it profits from leaving frozen assets untouched.",
+      "soWhat": "Issuer-freeze capability — the control this feed has repeatedly flagged as the key sanctions/recovery lever (see feed-t3-fcu-450m-frozen, feed-ofac-cbi-tether-freeze) — is not uniform across major USD stablecoins. Do not assume USDC-denominated fraud or sanctions proceeds will be recovered as readily or as fast as USDT: build the court-order dependency and Circle's slower historical freeze rate into stablecoin counterparty risk tiering, customer victim-recovery expectations, and any product decision that relies on issuer cooperation as a compensating control.",
+      "date": "2026-07-08",
+      "addedAt": "2026-07-11",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["stablecoin", "USDC", "Circle", "Tether", "freeze", "ICIJ", "enforcement", "romance-scam", "counterparty-risk"],
+      "sources": [
+        { "name": "ICIJ — Crypto giant Circle rebuffed efforts to help scam victims, police say", "url": "https://www.icij.org/investigations/coin-laundry/crypto-giant-circle-rebuffed-efforts-to-help-scam-victims-police-say/", "kind": "primary" },
+        { "name": "CryptoTimes — Circle faces criminal complaint over refusal to return stolen USDC", "url": "https://www.cryptotimes.io/2026/07/09/circle-faces-criminal-complaint-over-refusal-to-return-stolen-usdc/", "kind": "secondary" },
+        { "name": "The Daily Hodl — USDC stablecoin issuer Circle accused of refusing to help scam victims", "url": "https://dailyhodl.com/2026/07/10/usdc-stablecoin-issuer-circle-accused-of-refusing-to-help-scam-victims-report/", "kind": "secondary" }
       ]
     }
   ]

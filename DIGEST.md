@@ -1,15 +1,20 @@
-# Sentinel weekly digest — 11 July 2026
+# Sentinel weekly digest — 12 July 2026
 
-_15 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_16 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 8 new items; latest: Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
-- **Sanctions & OFAC** — 4 new items; latest: GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
+- **Stablecoins** — 9 new items; latest: Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
+- **Sanctions & OFAC** — 5 new items; latest: Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
+- **US rulemaking** — 4 new items; latest: GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
 - **MiCA & the EU** — 3 new items; latest: Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
-- **US rulemaking** — 3 new items; latest: GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
-- **Travel Rule** — 2 new items; latest: FATF's June 2026 plenary agrees a 7th targeted VA/VASP update and a new DeFi regulatory-challenges report, both due for July publication
+- **Travel Rule** — 1 new item; latest: FATF's June 2026 plenary agrees a 7th targeted VA/VASP update and a new DeFi regulatory-challenges report, both due for July publication
 
 ## Notable this week
+
+### Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
+*Russia · 1 July 2026 · High impact*
+> **So what:** This formalises a state-licensed, Western-correspondent-independent settlement rail for Russian trade, sitting alongside the A7A5 stablecoin and Alfa-Bank's custody build-out as parallel Russian financial infrastructure (see feed-a7a5-certik-110b-volume, feed-alfabank-russia-crypto-custody). Screen for the eight newly licensed Russian trade venues and treat any counterparty flow touching them as equivalent to direct Russia sanctions exposure — the ruble-denominated reporting regime gives Western institutions no visibility into these flows.
+Source: [Yahoo Finance — Russia locks in July 1 crypto payments regime to bypass sanctions](https://finance.yahoo.com/markets/crypto/articles/russia-locks-july-1-crypto-115919933.html)
 
 ### Interpol's Operation First Light 2026: 5,811 arrests, $293m intercepted across 97 countries — but crypto still outruns the payment-blocking tools
 *Global · 9 July 2026 · High impact*
@@ -31,15 +36,10 @@ Source: [OCC — Bulletin 2026-3: GENIUS Act regulations, notice of proposed rul
 > **So what:** The dominant global stablecoin is now structurally excluded from EU-regulated venues — any EU-facing bank or CASP counterparty still settling in USDT is, by definition, routing through unlicensed or offshore infrastructure from 1 July. Expect EU institutional and retail liquidity to concentrate further into USDC/EURC on regulated platforms, while USDT volume migrates toward non-MiCA venues (offshore exchanges, OTC, DeFi) that carry materially higher AML and counterparty risk. Treat continued USDT exposure via EU-facing counterparties as a live compliance flag rather than a watch-list item, and use Tether's non-compliance as a forcing function to tighten stablecoin counterparty concentration limits.
 Source: [CoinGape — USDT exits EU markets as MiCA's final curtain falls on Tether](https://coingape.com/usdt-exits-eu-markets-today-as-micas-final-curtain-falls-on-tether/)
 
-### ICIJ investigation and Wisconsin criminal complaint expose a 30x gap between Tether's and Circle's stolen-fund freeze rates
-*US · 8 July 2026 · Medium impact*
-> **So what:** Issuer-freeze capability — the control this feed has repeatedly flagged as the key sanctions/recovery lever (see feed-t3-fcu-450m-frozen, feed-ofac-cbi-tether-freeze) — is not uniform across major USD stablecoins. Do not assume USDC-denominated fraud or sanctions proceeds will be recovered as readily or as fast as USDT: build the court-order dependency and Circle's slower historical freeze rate into stablecoin counterparty risk tiering, customer victim-recovery expectations, and any product decision that relies on issuer cooperation as a compensating control.
-Source: [ICIJ — Crypto giant Circle rebuffed efforts to help scam victims, police say](https://www.icij.org/investigations/coin-laundry/crypto-giant-circle-rebuffed-efforts-to-help-scam-victims-police-say/)
-
-### Alfa-Bank moves to build regulated crypto custody in Russia — a sanctioned bank formalising a domestic digital-asset rail
-*Russia · 9 July 2026 · Medium impact*
-> **So what:** A Western-sanctioned, systemically important Russian bank building licensed domestic custody infrastructure extends the same sanctions-evasion thesis already flagged around A7A5 and HTX — it is another piece of parallel, Western-correspondent-independent settlement infrastructure. Treat Alfa-Bank-linked custody and conversion-gateway addresses as a forward-looking screening target, not just its existing SDN/OFSI listings.
-Source: [crypto.news — Alfa-Bank is testing crypto as Russia's banking race heats up](https://crypto.news/alfa-bank-is-testing-crypto-as-russias-banking-race-heats-up/)
+### Brazil's Operation Veil of Maya: 87 shell companies used to launder illegal-betting proceeds abroad via crypto
+*Brazil · 10 July 2026 · Medium impact*
+> **So what:** Shell-company layering ahead of crypto conversion is now a standing Brazilian laundering pattern for illegal-gambling proceeds, not an isolated case — two coordinated Federal Police operations in five days. Banks with Brazilian corporate-account exposure should treat rapid fiat-to-crypto conversion following inflows from newly formed, thinly staffed corporate entities as a red flag, and cross-reference beneficiary companies against Brazilian gambling and organised-crime enforcement disclosures as they emerge.
+Source: [IBTimes — Brazil Crypto Crackdown: Police Raid 87 Shell Companies in Operation Veil of Maya](https://www.ibtimes.com/brazil-crypto-crackdown-police-raid-87-shell-companies-operation-veil-maya-3805193)
 
 ## By the numbers
-15 new · 4 high-impact · 0 verified
+16 new · 5 high-impact · 0 verified

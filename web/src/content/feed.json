@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11",
+  "lastUpdated": "2026-07-12",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1884,6 +1884,75 @@
         { "name": "ICIJ — Crypto giant Circle rebuffed efforts to help scam victims, police say", "url": "https://www.icij.org/investigations/coin-laundry/crypto-giant-circle-rebuffed-efforts-to-help-scam-victims-police-say/", "kind": "primary" },
         { "name": "CryptoTimes — Circle faces criminal complaint over refusal to return stolen USDC", "url": "https://www.cryptotimes.io/2026/07/09/circle-faces-criminal-complaint-over-refusal-to-return-stolen-usdc/", "kind": "secondary" },
         { "name": "The Daily Hodl — USDC stablecoin issuer Circle accused of refusing to help scam victims", "url": "https://dailyhodl.com/2026/07/10/usdc-stablecoin-issuer-circle-accused-of-refusing-to-help-scam-victims-report/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-russia-crypto-foreign-trade-law-july2026",
+      "type": "regulatory",
+      "title": "Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT",
+      "summary": "On 1 July 2026 Russia's law permitting cryptocurrency (Bitcoin and stablecoins) for cross-border trade settlement came into force, converting a 2024 pilot into statute. Only eight licensed venues may handle the trade; the corridor is narrowly scoped to cross-border invoicing (oil, metals, grain); the ruble remains Russia's sole domestic currency; and transfers above a reporting threshold (reported as low as 60,000 rubles, roughly $800) must be disclosed to the Central Bank and Rosfinmonitoring. Crypto-facilitated trade from Russia reached an estimated 1 trillion rubles (~$11bn) in 2025.",
+      "soWhat": "This formalises a state-licensed, Western-correspondent-independent settlement rail for Russian trade, sitting alongside the A7A5 stablecoin and Alfa-Bank's custody build-out as parallel Russian financial infrastructure (see feed-a7a5-certik-110b-volume, feed-alfabank-russia-crypto-custody). Screen for the eight newly licensed Russian trade venues and treat any counterparty flow touching them as equivalent to direct Russia sanctions exposure — the ruble-denominated reporting regime gives Western institutions no visibility into these flows.",
+      "date": "2026-07-01",
+      "addedAt": "2026-07-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Russia",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": ["Russia", "sanctions-evasion", "stablecoin", "trade-finance", "regulatory-divergence"],
+      "sources": [
+        { "name": "Yahoo Finance — Russia locks in July 1 crypto payments regime to bypass sanctions", "url": "https://finance.yahoo.com/markets/crypto/articles/russia-locks-july-1-crypto-115919933.html", "kind": "secondary" },
+        { "name": "Digital Today — Russia to legalise crypto payments for foreign trade from July 1, allowing bitcoin and stablecoins", "url": "https://www.digitaltoday.co.kr/en/view/50220/russia-to-legalise-crypto-payments-for-foreign-trade-from-july-1-allowing-bitcoin-stablecoins", "kind": "secondary" },
+        { "name": "CoinReporter — Russia lowers crypto reporting threshold to 60,000 rubles", "url": "https://www.coinreporter.io/2026/07/russia-lowers-crypto-reporting-threshold-to-60000-rubles/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-circle-occ-national-trust-bank",
+      "type": "signal",
+      "title": "Circle wins final OCC approval for a national trust bank — USDC reserve custody moves toward direct federal oversight",
+      "summary": "On 10 July 2026 the OCC granted Circle final approval to establish First National Digital Currency Bank, N.A. (trading as Circle National Trust), a federally chartered national trust bank. Circle applied in June 2025 and received conditional approval in December 2025. The charter initially covers fiduciary digital-asset custody for Circle and its affiliates, and is designed to eventually let Circle bring management of the USDC reserve itself under direct federal banking supervision rather than through commercial-bank custodians.",
+      "soWhat": "A federally chartered custodian for USDC's own reserves changes the counterparty-risk calculus for USDC relative to issuers that rely on third-party commercial banks — it is a stronger regulatory assurance than a state money-transmitter licence alone, and a template other stablecoin issuers will likely pursue as GENIUS Act rules finalise. Track whether reserve custody actually migrates into Circle National Trust before treating it as a materially stronger control; the charter itself doesn't yet reduce custodian-concentration risk until reserves move.",
+      "date": "2026-07-10",
+      "addedAt": "2026-07-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["Circle", "USDC", "OCC", "stablecoin", "custody", "GENIUS-Act", "counterparty-risk"],
+      "sources": [
+        { "name": "Circle — Circle Receives Final OCC Approval to Establish National Trust Bank", "url": "https://www.circle.com/pressroom/circle-receives-final-occ-approval-to-establish-national-trust-bank", "kind": "primary" },
+        { "name": "CoinDesk — Circle takes banking step with U.S. trust bank approval", "url": "https://www.coindesk.com/business/2026/07/10/circle-secures-u-s-trust-bank-approval-in-crypto-expansion", "kind": "secondary" },
+        { "name": "CNBC — Stablecoin issuer Circle just got the greenlight to operate as a bank", "url": "https://www.cnbc.com/2026/07/10/circle-gets-an-occ-bank-charter-as-stablecoin-competition-heats-up-shares-surge-14percent.html", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-brazil-veil-of-maya-crypto-gambling-laundering",
+      "type": "typology",
+      "title": "Brazil's Operation Veil of Maya: 87 shell companies used to launder illegal-betting proceeds abroad via crypto",
+      "summary": "On 10 July 2026 Brazil's Federal Police executed nine simultaneous search-and-seizure warrants across São Paulo, Ribeirão Preto, Porto Alegre and Canoas targeting a laundering network built on 87 shell companies. Fiat proceeds from illegal betting entered the shell-company layer, were converted to cryptocurrency, and exited Brazil digitally, leaving a cross-border paper trail that was difficult to follow. Brazil's Finance Ministry and its Prizes and Betting Secretariat supplied the intelligence behind the raids; suspects face potential money-laundering, tax-evasion and organised-crime charges. It follows Operation Exchange five days earlier (5 July), in which the same force dismantled a roughly $2bn crypto laundering ring tied to the PCC (see feed-ofac-pcc-brazil-crypto-laundering).",
+      "soWhat": "Shell-company layering ahead of crypto conversion is now a standing Brazilian laundering pattern for illegal-gambling proceeds, not an isolated case — two coordinated Federal Police operations in five days. Banks with Brazilian corporate-account exposure should treat rapid fiat-to-crypto conversion following inflows from newly formed, thinly staffed corporate entities as a red flag, and cross-reference beneficiary companies against Brazilian gambling and organised-crime enforcement disclosures as they emerge.",
+      "date": "2026-07-10",
+      "addedAt": "2026-07-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Brazil",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["typology", "Brazil", "shell-companies", "gambling", "money-laundering", "PCC", "enforcement"],
+      "typology": {
+        "vector": "Illegal-betting fiat proceeds laundered through shell-company layering and converted to crypto for cross-border exit",
+        "controls": [
+          "Flag rapid fiat-to-crypto conversion following inflows from newly formed or thinly staffed corporate accounts",
+          "Screen beneficiary companies against Brazilian gambling and organised-crime enforcement disclosures",
+          "Treat shell-company layering ahead of crypto conversion as an enhanced due-diligence trigger"
+        ],
+        "obligations": ["SAR on suspected illegal-gambling or organised-crime proceeds", "Cooperation with Brazilian Federal Police / Ministry of Finance information requests"]
+      },
+      "sources": [
+        { "name": "IBTimes — Brazil Crypto Crackdown: Police Raid 87 Shell Companies in Operation Veil of Maya", "url": "https://www.ibtimes.com/brazil-crypto-crackdown-police-raid-87-shell-companies-operation-veil-maya-3805193", "kind": "secondary" },
+        { "name": "Bitcoin.com News — Operation Veil of Maya: Brazilian Police Dismantle Massive Illegal Betting and Crypto Money Laundering Ring", "url": "https://news.bitcoin.com/operation-veil-of-maya-brazilian-police-dismantle-massive-illegal-betting-and-crypto-money-laundering-ring/", "kind": "secondary" },
+        { "name": "Coincu — Brazilian Police Raid 87 Shell Companies in Crypto Probe", "url": "https://coincu.com/brazilian-police-raid-87-shell-companies-crypto-money-laundering-investigation/", "kind": "secondary" }
       ]
     }
   ]

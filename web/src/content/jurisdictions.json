@@ -263,6 +263,22 @@
       "headline": "Ban in place; framework drafted",
       "summary": "Crypto trading is banned, though Morocco's central bank has drafted a framework that could legalise and regulate it.",
       "sources": [{ "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" }]
+    },
+    {
+      "id": "russia",
+      "name": "Russia",
+      "iso": ["643"],
+      "lat": 61.5,
+      "lon": 90.0,
+      "status": "in-progress",
+      "headline": "Mining legal, domestic payments banned; cross-border trade law now in force",
+      "summary": "Russia legalised and regulates crypto mining but bans domestic crypto payments. On 1 July 2026 its experimental cross-border trade regime — allowing Bitcoin and stablecoins to settle foreign trade (oil, metals, grain) through eight licensed venues, with reporting to the Central Bank and Rosfinmonitoring above a low ruble threshold — converted from pilot to statute.",
+      "soWhat": "Sanctions-evasion nexus — a formal, licensed settlement rail now exists outside SWIFT; treat Russian cross-border crypto settlement, and the eight newly licensed venues specifically, as elevated risk.",
+      "keyDates": [{ "date": "2026-07-01", "label": "Cross-border trade crypto-payments law in force" }],
+      "sources": [
+        { "name": "Sumsub — global crypto regulations 2026", "url": "https://sumsub.com/blog/global-crypto-regulations/" },
+        { "name": "Yahoo Finance — Russia locks in July 1 crypto payments regime to bypass sanctions", "url": "https://finance.yahoo.com/markets/crypto/articles/russia-locks-july-1-crypto-115919933.html" }
+      ]
     }
   ]
 }

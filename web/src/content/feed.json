@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12",
+  "lastUpdated": "2026-07-13",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1953,6 +1953,25 @@
         { "name": "IBTimes — Brazil Crypto Crackdown: Police Raid 87 Shell Companies in Operation Veil of Maya", "url": "https://www.ibtimes.com/brazil-crypto-crackdown-police-raid-87-shell-companies-operation-veil-maya-3805193", "kind": "secondary" },
         { "name": "Bitcoin.com News — Operation Veil of Maya: Brazilian Police Dismantle Massive Illegal Betting and Crypto Money Laundering Ring", "url": "https://news.bitcoin.com/operation-veil-of-maya-brazilian-police-dismantle-massive-illegal-betting-and-crypto-money-laundering-ring/", "kind": "secondary" },
         { "name": "Coincu — Brazilian Police Raid 87 Shell Companies in Crypto Probe", "url": "https://coincu.com/brazilian-police-raid-87-shell-companies-crypto-money-laundering-investigation/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-thailand-bot-sec-usdt-audit",
+      "type": "regulatory",
+      "title": "Bank of Thailand and SEC launch joint data-analytics audit of high-volume USDT trading",
+      "summary": "Reported 13 July 2026: the Bank of Thailand and the Thai SEC, working with the Anti-Money Laundering Office, began using data-analytics tools to audit high-volume stablecoin transactions, specifically USDT, for patterns consistent with illicit finance. Preliminary reviews have already surfaced transactions that appear structured to evade disclosure requirements or bypass normal transfer systems. BOT Governor Vitai Ratanakorn framed it as part of a broader Q4 2026 AML push that will also require source-of-funds verification on cash deposits above 5 million baht (~$153,000) and monitoring of gold and large-banknote transactions; no enforcement actions have been announced. A baht-backed stablecoin framework is separately due for public consultation before end-2026.",
+      "soWhat": "A major USDT trading jurisdiction is standing up direct, analytics-driven surveillance of stablecoin flows rather than relying on exchange-level KYC alone — a template other APAC regulators are likely to follow. Banks with Thai corporate or correspondent exposure should treat abnormal high-volume USDT flows through Thai counterparties as an elevated-risk signal now, ahead of any formal enforcement action landing.",
+      "date": "2026-07-13",
+      "addedAt": "2026-07-13",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Thailand",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["Thailand", "USDT", "stablecoin", "AML", "surveillance", "grey-economy", "BOT", "SEC"],
+      "sources": [
+        { "name": "The Block — Bank of Thailand audits high-volume stablecoin trades to crack down on illicit finance", "url": "https://www.theblock.co/post/407998/bank-of-thailand-audits-stablecoin", "kind": "secondary" },
+        { "name": "CryptoTimes — Thailand's Central Bank & SEC Target Cash and USDT in Grey Money Audit", "url": "https://www.cryptotimes.io/2026/07/13/thailands-central-bank-sec-target-cash-and-usdt-in-grey-money-audit/", "kind": "secondary" }
       ]
     }
   ]

@@ -1,12 +1,12 @@
-# Sentinel weekly digest — 12 July 2026
+# Sentinel weekly digest — 13 July 2026
 
-_16 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_14 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 9 new items; latest: Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
-- **Sanctions & OFAC** — 5 new items; latest: Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
-- **US rulemaking** — 4 new items; latest: GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
-- **MiCA & the EU** — 3 new items; latest: Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
+- **Stablecoins** — 7 new items; latest: Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
+- **Sanctions & OFAC** — 4 new items; latest: Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
+- **US rulemaking** — 3 new items; latest: Circle wins final OCC approval for a national trust bank — USDC reserve custody moves toward direct federal oversight
+- **MiCA & the EU** — 2 new items; latest: Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
 - **Travel Rule** — 1 new item; latest: FATF's June 2026 plenary agrees a 7th targeted VA/VASP update and a new DeFi regulatory-challenges report, both due for July publication
 
 ## Notable this week
@@ -26,20 +26,20 @@ Source: [Interpol — Over 5,800 arrests, USD 293 million intercepted in global 
 > **So what:** Unlike exchange-level delistings, Revolut's exit removes USDT from the daily financial interface of tens of millions of ordinary EU retail customers — the clearest sign yet that MiCA has re-routed, not just restricted, European stablecoin liquidity. Banks should expect continued concentration of EU-facing stablecoin flows into a small number of MiCA-compliant issuers (principally USDC/EURC): treat USDT balances or transfers surfacing in EU retail-facing accounts after 31 August as a marker of non-compliant or offshore-routed activity worth enhanced scrutiny. The flip side is concentration risk — a growing share of 'compliant' stablecoin exposure now sits with one issuer group, which sanctions and counterparty-risk frameworks should track as a single point of dependency.
 Source: [CoinDesk (via crypto.news) — Revolut drops Tether USDT as MiCA rules force major crypto shift](https://crypto.news/revolut-drops-tether-usdt-as-mica-force-it-out-of-eu/)
 
-### GENIUS Act's one-year clock runs out 18 July: six US regulators race to finalise stablecoin rules with no statutory fallback
-*US · 3 July 2026 · High impact*
-> **So what:** A missed deadline at even one of six agencies creates a live regulatory-gap risk for the whole PPSI framework — banks relying on 'GENIUS-Act-compliant issuer' as a counterparty-risk mitigant should hold a contingency view for a partial or delayed rule set past 18 July rather than assuming a clean cutover. Where rules do land on time, the specific calibration (capital floors, liquidity tiers, CIP/CDD detail) becomes the practical bar for what 'compliant' means in counterparty due-diligence questionnaires — worth a direct read of the final rules the week they drop rather than waiting for secondary summaries.
-Source: [OCC — Bulletin 2026-3: GENIUS Act regulations, notice of proposed rulemaking](https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html)
-
-### USDT loses MiCA compliance as EU exchanges delist Tether's $186bn stablecoin from 1 July
-*EU · 1 July 2026 · High impact*
-> **So what:** The dominant global stablecoin is now structurally excluded from EU-regulated venues — any EU-facing bank or CASP counterparty still settling in USDT is, by definition, routing through unlicensed or offshore infrastructure from 1 July. Expect EU institutional and retail liquidity to concentrate further into USDC/EURC on regulated platforms, while USDT volume migrates toward non-MiCA venues (offshore exchanges, OTC, DeFi) that carry materially higher AML and counterparty risk. Treat continued USDT exposure via EU-facing counterparties as a live compliance flag rather than a watch-list item, and use Tether's non-compliance as a forcing function to tighten stablecoin counterparty concentration limits.
-Source: [CoinGape — USDT exits EU markets as MiCA's final curtain falls on Tether](https://coingape.com/usdt-exits-eu-markets-today-as-micas-final-curtain-falls-on-tether/)
+### Bank of Thailand and SEC launch joint data-analytics audit of high-volume USDT trading
+*Thailand · 13 July 2026 · Medium impact*
+> **So what:** A major USDT trading jurisdiction is standing up direct, analytics-driven surveillance of stablecoin flows rather than relying on exchange-level KYC alone — a template other APAC regulators are likely to follow. Banks with Thai corporate or correspondent exposure should treat abnormal high-volume USDT flows through Thai counterparties as an elevated-risk signal now, ahead of any formal enforcement action landing.
+Source: [The Block — Bank of Thailand audits high-volume stablecoin trades to crack down on illicit finance](https://www.theblock.co/post/407998/bank-of-thailand-audits-stablecoin)
 
 ### Brazil's Operation Veil of Maya: 87 shell companies used to launder illegal-betting proceeds abroad via crypto
 *Brazil · 10 July 2026 · Medium impact*
 > **So what:** Shell-company layering ahead of crypto conversion is now a standing Brazilian laundering pattern for illegal-gambling proceeds, not an isolated case — two coordinated Federal Police operations in five days. Banks with Brazilian corporate-account exposure should treat rapid fiat-to-crypto conversion following inflows from newly formed, thinly staffed corporate entities as a red flag, and cross-reference beneficiary companies against Brazilian gambling and organised-crime enforcement disclosures as they emerge.
 Source: [IBTimes — Brazil Crypto Crackdown: Police Raid 87 Shell Companies in Operation Veil of Maya](https://www.ibtimes.com/brazil-crypto-crackdown-police-raid-87-shell-companies-operation-veil-maya-3805193)
 
+### Circle wins final OCC approval for a national trust bank — USDC reserve custody moves toward direct federal oversight
+*US · 10 July 2026 · Medium impact*
+> **So what:** A federally chartered custodian for USDC's own reserves changes the counterparty-risk calculus for USDC relative to issuers that rely on third-party commercial banks — it is a stronger regulatory assurance than a state money-transmitter licence alone, and a template other stablecoin issuers will likely pursue as GENIUS Act rules finalise. Track whether reserve custody actually migrates into Circle National Trust before treating it as a materially stronger control; the charter itself doesn't yet reduce custodian-concentration risk until reserves move.
+Source: [Circle — Circle Receives Final OCC Approval to Establish National Trust Bank](https://www.circle.com/pressroom/circle-receives-final-occ-approval-to-establish-national-trust-bank)
+
 ## By the numbers
-16 new · 5 high-impact · 0 verified
+14 new · 3 high-impact · 0 verified

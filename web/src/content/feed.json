@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-13",
+  "lastUpdated": "2026-07-14",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -1972,6 +1972,35 @@
       "sources": [
         { "name": "The Block — Bank of Thailand audits high-volume stablecoin trades to crack down on illicit finance", "url": "https://www.theblock.co/post/407998/bank-of-thailand-audits-stablecoin", "kind": "secondary" },
         { "name": "CryptoTimes — Thailand's Central Bank & SEC Target Cash and USDT in Grey Money Audit", "url": "https://www.cryptotimes.io/2026/07/13/thailands-central-bank-sec-target-cash-and-usdt-in-grey-money-audit/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-china-spp-mixer-evidentiary-presumption",
+      "type": "typology",
+      "title": "China's top prosecutors propose treating mixer or privacy-coin use as presumptive proof of money-laundering intent",
+      "summary": "A paper published 13 July 2026 on the Supreme People's Procuratorate's official website, co-authored by two SPP officials and a Xiangtan University professor, calls for a fundamental shift in how Chinese investigators build crypto money-laundering cases. It proposes presuming criminal intent when a suspect uses a mixer, transacts in privacy coins, or sells crypto at off-market prices, unless they can produce 'reasonable counter-evidence' — and would make on-chain records and analytics-firm reports admissible evidence outright. It also calls for a national platform to hold and liquidate seized crypto, a gap created by China's own trading ban.",
+      "soWhat": "This is a burden-of-proof inversion, not a guidance update: mixer or privacy-coin use alone becomes the evidentiary trigger rather than one red flag among many. It also runs directly counter to the more nuanced US Treasury line on mixers having legitimate privacy uses (see feed-treasury-genius-innovation-report) — a live regulatory divergence to track for any China-nexus flows. For counterparties or corridors touching Chinese-linked wallets, treat any mixer or privacy-coin hop as a materially harder-to-defend exposure going forward, and watch whether analytics-firm attribution reports start being cited as admissible evidence elsewhere.",
+      "date": "2026-07-13",
+      "addedAt": "2026-07-14",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "China",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["China", "typology", "mixers", "privacy-coins", "evidentiary-standard", "SPP", "asset-recovery"],
+      "typology": {
+        "vector": "Proposed evidentiary presumption of laundering intent from mixer or privacy-coin use, plus off-market-price crypto sales",
+        "controls": [
+          "Flag any China-nexus flow touching a mixer or privacy coin as elevated-risk pending 'reasonable counter-evidence'",
+          "Track admissibility of blockchain-analytics-firm reports as a precedent for other jurisdictions",
+          "Monitor for a Chinese state seized-asset liquidation platform, which would create a new fiat off-ramp for confiscated crypto"
+        ],
+        "obligations": ["SAR on suspected China-nexus laundering via mixers or privacy coins", "Enhanced due diligence on off-market-price crypto sale patterns"]
+      },
+      "sources": [
+        { "name": "The Block — Chinese prosecutors call for more proactive approach to investigating crypto money laundering", "url": "https://www.theblock.co/post/408035/chinese-prosecutors-call-for-more-proactive-approach-to-investigating-crypto-money-laundering", "kind": "secondary" },
+        { "name": "Decrypt — Chinese Prosecutors Float Treating Crypto Mixer, Privacy Coin Use as Sign of Money Laundering", "url": "https://decrypt.co/373374/chinese-prosecutors-float-treating-crypto-mixer-privacy-coin-use-as-sign-of-money-laundering", "kind": "secondary" },
+        { "name": "Cryptonomist — Crypto Money Laundering China: Prosecutors Target Privacy Tools", "url": "https://en.cryptonomist.ch/2026/07/13/crypto-money-laundering-china-probes/", "kind": "secondary" }
       ]
     }
   ]

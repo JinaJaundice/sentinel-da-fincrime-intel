@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14",
+  "lastUpdated": "2026-07-16",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -2001,6 +2001,75 @@
         { "name": "The Block — Chinese prosecutors call for more proactive approach to investigating crypto money laundering", "url": "https://www.theblock.co/post/408035/chinese-prosecutors-call-for-more-proactive-approach-to-investigating-crypto-money-laundering", "kind": "secondary" },
         { "name": "Decrypt — Chinese Prosecutors Float Treating Crypto Mixer, Privacy Coin Use as Sign of Money Laundering", "url": "https://decrypt.co/373374/chinese-prosecutors-float-treating-crypto-mixer-privacy-coin-use-as-sign-of-money-laundering", "kind": "secondary" },
         { "name": "Cryptonomist — Crypto Money Laundering China: Prosecutors Target Privacy Tools", "url": "https://en.cryptonomist.ch/2026/07/13/crypto-money-laundering-china-probes/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-ofac-eu-uk-ransomware-infrastructure-crackdown",
+      "type": "signal",
+      "title": "US, EU and UK jointly hit ransomware's infrastructure layer — TrickBot's 'Stern', plus the VPN and cryptor vendors behind it",
+      "summary": "On 13 July 2026 OFAC designated First VPN Service (1VPNS), its administrator Dmytro Rashevskyi (aliases 'Maksim Sorin', 'Roman Chabanenko') and Belarusian cryptor vendor Yevgeniy Silayev, citing direct cryptocurrency payments from the Anubis, Qilin and Sinobi ransomware groups and wallets linked to the high-risk exchange Cryptomus. The same day the EU Council sanctioned Vitaly Nikolayevich Kovalev ('Stern'), the 'CEO-like' administrator of the TrickBot/Conti syndicate, whose wallets have personally received over $300m in ransom payments, alongside nine other individuals and four entities tied to Russian cyber operations.",
+      "soWhat": "Enforcement is moving up the ransomware supply chain — sanctioning the VPNs and cryptor tools that keep malware undetected, and syndicate leadership, not just cash-out wallets. Extend sanctions screening to the enabling-service layer (VPN/cryptor vendors, high-risk exchanges like Cryptomus) and treat historical exposure to Stern/TrickBot-linked wallets as a live SDN/EU-list hit rather than a legacy Conti-era concern.",
+      "date": "2026-07-13",
+      "addedAt": "2026-07-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["ransomware", "OFAC", "EU", "sanctions", "TrickBot", "Conti", "VPN", "cryptor", "infrastructure"],
+      "sources": [
+        { "name": "US Treasury — Treasury Sanctions Malware and Infrastructure Providers Supporting Ransomware Attacks Against Americans", "url": "https://home.treasury.gov/news/press-releases/sb0559", "kind": "primary" },
+        { "name": "TRM Labs — OFAC Sanctions FirstVPN and Ransomware Enablers Behind Attacks on Americans", "url": "https://www.trmlabs.com/resources/blog/ofac-sanctions-firstvpn-and-ransomware-enablers-behind-attacks-on-americans", "kind": "secondary" },
+        { "name": "Chainalysis — 'Stern' Ransomware Operator Sanctioned by EU", "url": "https://www.chainalysis.com/blog/cyber-sanctions-trickbot-administrator-july-2026/", "kind": "secondary" },
+        { "name": "The Hacker News — US Sanctions First VPN Service and Malware Cryptor Seller Over Ransomware Support", "url": "https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-ofac-economic-fury-cbi-july2026",
+      "type": "signal",
+      "title": "Operation Economic Fury: OFAC and Tether freeze another $131m in Iran-linked USDT, cumulative seizures near $1bn",
+      "summary": "On 14 July 2026 OFAC designated four Tron-based wallets tied to the Central Bank of Iran and IRGC-linked networks; Tether froze the addresses, immobilising over $131m in USDT. It is the latest strike in Treasury's 'Economic Fury' campaign, which opened with the $344m CBI freeze in April 2026 (see feed-ofac-cbi-tether-freeze) and has now seized roughly $1bn in Iranian crypto according to Treasury Secretary Bessent. The freeze was paired with sanctions on a separate 50-plus-entity oil-export network run by Mohammad Hossein Shamkhani.",
+      "soWhat": "This is a named, recurring campaign rather than a one-off designation — Treasury intends to keep using the stablecoin issuer-freeze lever against Iran repeatedly. Maintain a rolling watch on newly designated CBI/IRGC Tron addresses, expect further tranches, and factor the ~$1bn cumulative total into Iran-nexus counterparty exposure assessments.",
+      "date": "2026-07-14",
+      "addedAt": "2026-07-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["OFAC", "Iran", "sanctions", "stablecoin", "USDT", "Tether", "IRGC", "Economic-Fury"],
+      "sources": [
+        { "name": "Decrypt — US Treasury Freezes $131 Million in Iran-Linked Crypto Wallets", "url": "https://decrypt.co/373565/us-treasury-freezes-131-million-iran-crypto", "kind": "secondary" },
+        { "name": "The Block — US Treasury freezes over $130 million tied to Iran-linked crypto wallets", "url": "https://www.theblock.co/post/408357/us-treasury-freezes-130-million-iran-linked-wallets", "kind": "secondary" },
+        { "name": "crypto.news — US freezes $131m in Iran-linked crypto tied to central bank", "url": "https://crypto.news/us-freezes-131m-in-iran-linked-crypto-tied-to-central-bank/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-ostium-oracle-exploit-2026",
+      "type": "typology",
+      "title": "Ostium's $18m oracle exploit extends July's 'no-bug-required' DeFi attack wave to price-feed manipulation",
+      "summary": "On 15 July 2026 an attacker exploited Ostium, an Arbitrum-based perpetuals exchange, by abusing a registered PriceUpKeep forwarder in its Gelato-based automation to submit oracle price reports with future-dated timestamps, manufacturing artificial trading profit and draining roughly $18m in USDC from the protocol's vault (about 28% of TVL at the time). Ostium halted trading. It follows a $6m Summer.fi drain the prior week and the BonkDAO/Summer.fi governance and vault-accounting exploits flagged 6 July 2026 (see feed-defi-governance-accounting-exploits-july2026) — none of which required a smart-contract code bug, only manipulation of the trusted inputs and permissions around it.",
+      "soWhat": "A third protocol-logic (not code-bug) DeFi exploit in ten days confirms oracle/keeper manipulation is now a standing attack class rather than an isolated incident. For any DeFi exposure in scope — direct holdings, custody, or counterparty protocols — extend due-diligence questionnaires to cover oracle-signer key management and automation-forwarder permissions, not just smart-contract audits.",
+      "date": "2026-07-15",
+      "addedAt": "2026-07-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["typology", "DeFi", "oracle-manipulation", "Ostium", "exploit", "Arbitrum"],
+      "typology": {
+        "vector": "DeFi oracle/keeper-automation manipulation (future-dated price reports) draining protocol vaults without a smart-contract bug",
+        "controls": [
+          "Due diligence on oracle-signer key management and automation-forwarder permissions for DeFi counterparties",
+          "Monitor for large vault payouts following anomalous price-report timestamps",
+          "Treat oracle/keeper compromise as equal-priority to smart-contract audit in DeFi risk assessment"
+        ],
+        "obligations": ["SAR on suspected DeFi exploit proceeds flowing through counterparty accounts"]
+      },
+      "sources": [
+        { "name": "CoinDesk — Ostium suffers $18 million exploit as oracle attack wave continues to hit DeFi", "url": "https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi", "kind": "secondary" },
+        { "name": "Decrypt — Another DeFi Exploit: Perp DEX Ostium Loses $18 Million in Oracle Attack", "url": "https://decrypt.co/373566/defi-exploit-ostium-oracle-hack", "kind": "secondary" }
       ]
     }
   ]

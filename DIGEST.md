@@ -1,15 +1,24 @@
-# Sentinel weekly digest — 13 July 2026
+# Sentinel weekly digest — 16 July 2026
 
-_14 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_10 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 7 new items; latest: Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
-- **Sanctions & OFAC** — 4 new items; latest: Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
-- **US rulemaking** — 3 new items; latest: Circle wins final OCC approval for a national trust bank — USDC reserve custody moves toward direct federal oversight
-- **MiCA & the EU** — 2 new items; latest: Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
-- **Travel Rule** — 1 new item; latest: FATF's June 2026 plenary agrees a 7th targeted VA/VASP update and a new DeFi regulatory-challenges report, both due for July publication
+- **Stablecoins** — 5 new items; latest: Operation Economic Fury: OFAC and Tether freeze another $131m in Iran-linked USDT, cumulative seizures near $1bn
+- **Sanctions & OFAC** — 4 new items; latest: Operation Economic Fury: OFAC and Tether freeze another $131m in Iran-linked USDT, cumulative seizures near $1bn
+- **US rulemaking** — 2 new items; latest: Operation Economic Fury: OFAC and Tether freeze another $131m in Iran-linked USDT, cumulative seizures near $1bn
+- **State actors & DPRK** — 1 new item; latest: Operation Economic Fury: OFAC and Tether freeze another $131m in Iran-linked USDT, cumulative seizures near $1bn
 
 ## Notable this week
+
+### Operation Economic Fury: OFAC and Tether freeze another $131m in Iran-linked USDT, cumulative seizures near $1bn
+*US · 14 July 2026 · High impact*
+> **So what:** This is a named, recurring campaign rather than a one-off designation — Treasury intends to keep using the stablecoin issuer-freeze lever against Iran repeatedly. Maintain a rolling watch on newly designated CBI/IRGC Tron addresses, expect further tranches, and factor the ~$1bn cumulative total into Iran-nexus counterparty exposure assessments.
+Source: [Decrypt — US Treasury Freezes $131 Million in Iran-Linked Crypto Wallets](https://decrypt.co/373565/us-treasury-freezes-131-million-iran-crypto)
+
+### US, EU and UK jointly hit ransomware's infrastructure layer — TrickBot's 'Stern', plus the VPN and cryptor vendors behind it
+*Global · 13 July 2026 · High impact*
+> **So what:** Enforcement is moving up the ransomware supply chain — sanctioning the VPNs and cryptor tools that keep malware undetected, and syndicate leadership, not just cash-out wallets. Extend sanctions screening to the enabling-service layer (VPN/cryptor vendors, high-risk exchanges like Cryptomus) and treat historical exposure to Stern/TrickBot-linked wallets as a live SDN/EU-list hit rather than a legacy Conti-era concern.
+Source: [US Treasury — Treasury Sanctions Malware and Infrastructure Providers Supporting Ransomware Attacks Against Americans](https://home.treasury.gov/news/press-releases/sb0559)
 
 ### Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
 *Russia · 1 July 2026 · High impact*
@@ -21,25 +30,15 @@ Source: [Yahoo Finance — Russia locks in July 1 crypto payments regime to bypa
 > **So what:** I-GRIP works well against traditional bank-rail transfers but the flagship crypto example in Interpol's own case file — a $122.5m wallet laundered via cross-chain swaps — shows the mechanism has no equivalent reach once proceeds go on-chain. Banks should treat cross-chain bridge/swap sequences following a large single-wallet inflow as a standing red flag for romance-scam proceeds, and expect Interpol/FIU stop-payment requests to keep missing crypto-routed fraud unless matched with blockchain-analytics tooling on the receiving side.
 Source: [Interpol — Over 5,800 arrests, USD 293 million intercepted in global fraud bust](https://www.interpol.int/en/News-and-Events/News/2026/Over-5-800-arrests-USD-293-million-intercepted-in-global-fraud-bust)
 
-### Revolut becomes last major European platform to drop USDT under MiCA — $30-35bn liquidity gap expected to flow to USDC
-*EU · 6 July 2026 · High impact*
-> **So what:** Unlike exchange-level delistings, Revolut's exit removes USDT from the daily financial interface of tens of millions of ordinary EU retail customers — the clearest sign yet that MiCA has re-routed, not just restricted, European stablecoin liquidity. Banks should expect continued concentration of EU-facing stablecoin flows into a small number of MiCA-compliant issuers (principally USDC/EURC): treat USDT balances or transfers surfacing in EU retail-facing accounts after 31 August as a marker of non-compliant or offshore-routed activity worth enhanced scrutiny. The flip side is concentration risk — a growing share of 'compliant' stablecoin exposure now sits with one issuer group, which sanctions and counterparty-risk frameworks should track as a single point of dependency.
-Source: [CoinDesk (via crypto.news) — Revolut drops Tether USDT as MiCA rules force major crypto shift](https://crypto.news/revolut-drops-tether-usdt-as-mica-force-it-out-of-eu/)
+### Ostium's $18m oracle exploit extends July's 'no-bug-required' DeFi attack wave to price-feed manipulation
+*Global · 15 July 2026 · Medium impact*
+> **So what:** A third protocol-logic (not code-bug) DeFi exploit in ten days confirms oracle/keeper manipulation is now a standing attack class rather than an isolated incident. For any DeFi exposure in scope — direct holdings, custody, or counterparty protocols — extend due-diligence questionnaires to cover oracle-signer key management and automation-forwarder permissions, not just smart-contract audits.
+Source: [CoinDesk — Ostium suffers $18 million exploit as oracle attack wave continues to hit DeFi](https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi)
 
-### Bank of Thailand and SEC launch joint data-analytics audit of high-volume USDT trading
-*Thailand · 13 July 2026 · Medium impact*
-> **So what:** A major USDT trading jurisdiction is standing up direct, analytics-driven surveillance of stablecoin flows rather than relying on exchange-level KYC alone — a template other APAC regulators are likely to follow. Banks with Thai corporate or correspondent exposure should treat abnormal high-volume USDT flows through Thai counterparties as an elevated-risk signal now, ahead of any formal enforcement action landing.
-Source: [The Block — Bank of Thailand audits high-volume stablecoin trades to crack down on illicit finance](https://www.theblock.co/post/407998/bank-of-thailand-audits-stablecoin)
-
-### Brazil's Operation Veil of Maya: 87 shell companies used to launder illegal-betting proceeds abroad via crypto
-*Brazil · 10 July 2026 · Medium impact*
-> **So what:** Shell-company layering ahead of crypto conversion is now a standing Brazilian laundering pattern for illegal-gambling proceeds, not an isolated case — two coordinated Federal Police operations in five days. Banks with Brazilian corporate-account exposure should treat rapid fiat-to-crypto conversion following inflows from newly formed, thinly staffed corporate entities as a red flag, and cross-reference beneficiary companies against Brazilian gambling and organised-crime enforcement disclosures as they emerge.
-Source: [IBTimes — Brazil Crypto Crackdown: Police Raid 87 Shell Companies in Operation Veil of Maya](https://www.ibtimes.com/brazil-crypto-crackdown-police-raid-87-shell-companies-operation-veil-maya-3805193)
-
-### Circle wins final OCC approval for a national trust bank — USDC reserve custody moves toward direct federal oversight
-*US · 10 July 2026 · Medium impact*
-> **So what:** A federally chartered custodian for USDC's own reserves changes the counterparty-risk calculus for USDC relative to issuers that rely on third-party commercial banks — it is a stronger regulatory assurance than a state money-transmitter licence alone, and a template other stablecoin issuers will likely pursue as GENIUS Act rules finalise. Track whether reserve custody actually migrates into Circle National Trust before treating it as a materially stronger control; the charter itself doesn't yet reduce custodian-concentration risk until reserves move.
-Source: [Circle — Circle Receives Final OCC Approval to Establish National Trust Bank](https://www.circle.com/pressroom/circle-receives-final-occ-approval-to-establish-national-trust-bank)
+### China's top prosecutors propose treating mixer or privacy-coin use as presumptive proof of money-laundering intent
+*China · 13 July 2026 · Medium impact*
+> **So what:** This is a burden-of-proof inversion, not a guidance update: mixer or privacy-coin use alone becomes the evidentiary trigger rather than one red flag among many. It also runs directly counter to the more nuanced US Treasury line on mixers having legitimate privacy uses (see feed-treasury-genius-innovation-report) — a live regulatory divergence to track for any China-nexus flows. For counterparties or corridors touching Chinese-linked wallets, treat any mixer or privacy-coin hop as a materially harder-to-defend exposure going forward, and watch whether analytics-firm attribution reports start being cited as admissible evidence elsewhere.
+Source: [The Block — Chinese prosecutors call for more proactive approach to investigating crypto money laundering](https://www.theblock.co/post/408035/chinese-prosecutors-call-for-more-proactive-approach-to-investigating-crypto-money-laundering)
 
 ## By the numbers
-14 new · 3 high-impact · 0 verified
+10 new · 4 high-impact · 0 verified

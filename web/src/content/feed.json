@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-16",
+  "lastUpdated": "2026-07-17",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -2070,6 +2070,76 @@
       "sources": [
         { "name": "CoinDesk — Ostium suffers $18 million exploit as oracle attack wave continues to hit DeFi", "url": "https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi", "kind": "secondary" },
         { "name": "Decrypt — Another DeFi Exploit: Perp DEX Ostium Loses $18 Million in Oracle Attack", "url": "https://decrypt.co/373566/defi-exploit-ostium-oracle-hack", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-fatf-7th-targeted-update-va-vasps-2026",
+      "type": "regulatory",
+      "title": "FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens",
+      "summary": "Published 16 July 2026, FATF's seventh targeted update on implementation of its virtual-asset/VASP standards finds most identified on-chain illicit activity now involves stablecoins, and documents a Cambodia-based financial-services conglomerate that laundered at least $4bn (2021-2025) for both organised-crime fraud rings and DPRK cyber-theft through shared infrastructure — after a legitimate issuer froze $29m of the group's tokens, it launched its own proprietary stablecoin marketed as freeze-resistant. Separately, a Spanish network laundered roughly €460m from over 5,000 fraud victims. Travel Rule implementation among surveyed jurisdictions rose to 83% (from 73% a year earlier), though FATF says enforcement remains uneven; jurisdictions with materially important VA activity now cover about 97% of the global market.",
+      "soWhat": "Issuer-freeze capability, the control this feed has repeatedly flagged as the key sanctions lever (see feed-ofac-cbi-tether-freeze, feed-fatf-stablecoin-report), now has a documented counter-typology: criminal groups standing up their own stablecoins specifically to evade it, mirroring the A7A5 kill-switch-free design already tracked. Add 'proprietary/house stablecoin with no freeze function, tied to an offshore payments conglomerate' as a standing red flag in vendor and counterparty stablecoin due diligence, not just sanctioned-issuer screening.",
+      "date": "2026-07-16",
+      "addedAt": "2026-07-17",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["FATF", "stablecoin", "typology", "Travel-Rule", "Cambodia", "DPRK", "freeze-resistant"],
+      "publication": {
+        "issuer": "FATF",
+        "kind": "Targeted Update",
+        "ref": "7th Targeted Update on Implementation of the FATF Standards on VAs and VASPs"
+      },
+      "sources": [
+        { "name": "FATF — Targeted Update on Implementation of the FATF Standards on VAs and VASPs (2026)", "url": "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/targeted-updated-virtualassets-vasps-2026.html", "kind": "primary" },
+        { "name": "AML Intelligence — Organised crime moves billions through crypto; some stablecoins impossible to seize, freeze: FATF", "url": "https://www.amlintelligence.com/2026/07/organised-crime-move-billions-crypto-fatf/", "kind": "secondary" },
+        { "name": "ANI News — FATF warns criminals exploiting gaps in virtual asset regulation", "url": "https://aninews.in/news/world/asia/fatf-warns-criminals-exploiting-gaps-in-virtual-asset-regulation20260716215520/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-ofac-cuba-crypto-wallets-july2026",
+      "type": "signal",
+      "title": "OFAC extends Cuba sanctions programme into crypto: wallets across eight chains blocked alongside Ministry of Tourism designation",
+      "summary": "On 13 July 2026 OFAC's Cuba-related action (paired with that day's separate cyber/ransomware designations) added Cuba's Ministry of Tourism and the Association of Cuban Revolutionary Warriors to the SDN list under Executive Order 14404, part of a wider campaign against GAESA, the military conglomerate that controls Cuba's tourism sector. Trade reporting describes roughly 13 associated cryptocurrency wallets — spanning Tron, Litecoin, Dogecoin, Solana, Dash, Zcash, Bitcoin and Ethereum — blocked as part of the same package; OFAC issued Cuba-related FAQ 1262 alongside the listing.",
+      "soWhat": "Cuba joins Iran, Russia and DPRK as a jurisdiction where SDN exposure now explicitly extends into on-chain wallets across multiple chains rather than just fiat-facing entities — screening programmes that treat Cuba sanctions as a legacy, crypto-irrelevant regime should update wallet-screening lists accordingly. The multi-chain spread (eight networks in one designation) is also a reminder that single-chain screening tooling under-covers even a single sanctions action.",
+      "date": "2026-07-13",
+      "addedAt": "2026-07-17",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["OFAC", "sanctions", "Cuba", "multi-chain", "SDN"],
+      "sources": [
+        { "name": "OFAC — Recent Actions, 13 July 2026 (Cyber-related Designations; Cuba Designations; FAQ 1262)", "url": "https://ofac.treasury.gov/recent-actions/20260713", "kind": "primary" },
+        { "name": "U.S. Department of State — Further sanctions on the Cuban regime's sources of funding and tools of oppression", "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/07/further-sanctions-on-the-cuban-regimes-sources-of-funding-and-tools-of-oppression", "kind": "primary" },
+        { "name": "KuCoin — U.S. Treasury sanctions 13 crypto wallets linked to Cuban regime", "url": "https://www.kucoin.com/news/flash/u-s-treasury-sanctions-13-crypto-wallets-linked-to-cuban-regime", "kind": "secondary" },
+        { "name": "Bitcoin Sistemi — US Treasury Department adds numerous cryptocurrency wallet addresses to sanctions list against Cuba", "url": "https://en.bitcoinsistemi.com/us-treasury-department-adds-numerous-cryptocurrency-wallet-addresses-to-sanctions-list-against-cuba/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-amla-sar-format-its-consultation",
+      "type": "regulatory",
+      "title": "AMLA consults on a single EU-wide format for suspicious-activity reports",
+      "summary": "On 2 July 2026 AMLA launched a public consultation on draft Implementing Technical Standards (ITS) setting a common format for reporting suspicions and providing transaction records to Financial Intelligence Units under Article 69(3) of the AML Regulation (EU 2024/1624). Reporting entities would fill in a harmonised set of data points tailored to their activity and suspicion type, rather than each member state running its own SAR template. A public hearing is set for 9 September 2026; comments are open until 20 September 2026.",
+      "soWhat": "A firm with SAR-filing obligations in multiple EU states — including CASPs, which are obliged entities under the AML Regulation — currently reconciles divergent national templates; a single ITS format is a concrete systems-and-workflow change to plan for once finalised, not just a policy footnote. Flag this ITS for the same technical-standards tracking already applied to AMLA's supervision-selection criteria (see feed-amla-supervision-selection-2026) — it will shape how any in-house or vendor SAR-generation tooling needs to format output for EU filings.",
+      "date": "2026-07-02",
+      "addedAt": "2026-07-17",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["AMLA", "SAR", "EU", "AML", "reporting", "Single-Rulebook"],
+      "publication": {
+        "issuer": "AMLA",
+        "kind": "Consultation Paper (draft ITS)",
+        "ref": "Draft ITS on the format for reporting suspicions and providing transaction records (Art. 69(3) AMLR)"
+      },
+      "sources": [
+        { "name": "AMLA — AMLA launches public consultation on common format for reporting suspicions", "url": "https://amla.europa.eu/amla-launches-public-consultation-common-format-reporting-suspicions_en", "kind": "primary" },
+        { "name": "Global Regulation Tomorrow — AMLA consults on draft ITS on the format for reporting suspicions and providing transaction records", "url": "https://www.regulationtomorrow.com/2026/07/amla-consults-on-draft-its-on-the-format-for-reporting-suspicions-and-providing-transaction-records/", "kind": "secondary" }
       ]
     }
   ]

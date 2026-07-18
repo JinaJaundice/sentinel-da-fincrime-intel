@@ -1,12 +1,12 @@
-# Sentinel weekly digest — 17 July 2026
+# Sentinel weekly digest — 18 July 2026
 
 _13 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Stablecoins** — 6 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
-- **Sanctions & OFAC** — 6 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
+- **Sanctions & OFAC** — 7 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
+- **Stablecoins** — 5 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
+- **State actors & DPRK** — 4 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
 - **US rulemaking** — 2 new items; latest: Operation Economic Fury: OFAC and Tether freeze another $131m in Iran-linked USDT, cumulative seizures near $1bn
-- **State actors & DPRK** — 2 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
 - **Travel Rule** — 1 new item; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
 
 ## Notable this week
@@ -31,15 +31,15 @@ Source: [US Treasury — Treasury Sanctions Malware and Infrastructure Providers
 > **So what:** This formalises a state-licensed, Western-correspondent-independent settlement rail for Russian trade, sitting alongside the A7A5 stablecoin and Alfa-Bank's custody build-out as parallel Russian financial infrastructure (see feed-a7a5-certik-110b-volume, feed-alfabank-russia-crypto-custody). Screen for the eight newly licensed Russian trade venues and treat any counterparty flow touching them as equivalent to direct Russia sanctions exposure — the ruble-denominated reporting regime gives Western institutions no visibility into these flows.
 Source: [Yahoo Finance — Russia locks in July 1 crypto payments regime to bypass sanctions](https://finance.yahoo.com/markets/crypto/articles/russia-locks-july-1-crypto-115919933.html)
 
-### Interpol's Operation First Light 2026: 5,811 arrests, $293m intercepted across 97 countries — but crypto still outruns the payment-blocking tools
-*Global · 9 July 2026 · High impact*
-> **So what:** I-GRIP works well against traditional bank-rail transfers but the flagship crypto example in Interpol's own case file — a $122.5m wallet laundered via cross-chain swaps — shows the mechanism has no equivalent reach once proceeds go on-chain. Banks should treat cross-chain bridge/swap sequences following a large single-wallet inflow as a standing red flag for romance-scam proceeds, and expect Interpol/FIU stop-payment requests to keep missing crypto-routed fraud unless matched with blockchain-analytics tooling on the receiving side.
-Source: [Interpol — Over 5,800 arrests, USD 293 million intercepted in global fraud bust](https://www.interpol.int/en/News-and-Events/News/2026/Over-5-800-arrests-USD-293-million-intercepted-in-global-fraud-bust)
+### CertiK: wallet compromise overtakes smart-contract bugs as Web3's costliest attack vector, $1.3bn stolen in H1 2026
+*Global · 17 July 2026 · Medium impact*
+> **So what:** 'Audited' is an increasingly incomplete signal of protocol safety: due-diligence questionnaires for DeFi and custody counterparties should weight key-custody, multisig operational security and signer-permission hygiene at least as heavily as smart-contract audit history, since operational/key failures now cause more loss than code vulnerabilities.
+Source: [CertiK — Hack3D: H1 2026 Report](https://www.certik.com/skynet-report/certik-hack3d-h1-2026-report)
 
-### AMLA consults on a single EU-wide format for suspicious-activity reports
-*EU · 2 July 2026 · Medium impact*
-> **So what:** A firm with SAR-filing obligations in multiple EU states — including CASPs, which are obliged entities under the AML Regulation — currently reconciles divergent national templates; a single ITS format is a concrete systems-and-workflow change to plan for once finalised, not just a policy footnote. Flag this ITS for the same technical-standards tracking already applied to AMLA's supervision-selection criteria (see feed-amla-supervision-selection-2026) — it will shape how any in-house or vendor SAR-generation tooling needs to format output for EU filings.
-Source: [AMLA — AMLA launches public consultation on common format for reporting suspicions](https://amla.europa.eu/amla-launches-public-consultation-common-format-reporting-suspicions_en)
+### DPRK hides crypto-wallet-stealing malware in fake coding tests and poisoned npm packages
+*Global · 17 July 2026 · Medium impact*
+> **So what:** DPRK's crypto-theft pipeline now reaches upstream of the blockchain entirely — compromising a developer's machine via a fake recruiting lure or a poisoned open-source package yields wallet keys and cloud credentials before any on-chain transaction happens. Any counterparty or vendor whose engineers could be targeted (crypto-native firms, custody providers, DeFi protocols the bank has exposure to) should be asked about developer-endpoint controls and npm/software-supply-chain vetting, not just smart-contract audits; threat-intel/wallet-attribution feeds should also flag OtterCookie/BeaverTail-linked infrastructure as a precursor signal for compromised-key laundering.
+Source: [Elastic Security Labs — Contagious Interview malware in SVG images](https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography)
 
 ## By the numbers
-13 new · 5 high-impact · 0 verified
+13 new · 4 high-impact · 0 verified

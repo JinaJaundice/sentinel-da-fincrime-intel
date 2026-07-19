@@ -1,15 +1,20 @@
-# Sentinel weekly digest — 18 July 2026
+# Sentinel weekly digest — 19 July 2026
 
-_13 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_14 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC** — 7 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
-- **Stablecoins** — 5 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
+- **Sanctions & OFAC** — 6 new items; latest: GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
+- **Stablecoins** — 4 new items; latest: GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
 - **State actors & DPRK** — 4 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
-- **US rulemaking** — 2 new items; latest: Operation Economic Fury: OFAC and Tether freeze another $131m in Iran-linked USDT, cumulative seizures near $1bn
-- **Travel Rule** — 1 new item; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
+- **MiCA & the EU** — 3 new items; latest: AMLA chair warns post-MiCA customer migration could strain CASP AML compliance
+- **Travel Rule** — 2 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
 
 ## Notable this week
+
+### GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
+*US · 18 July 2026 · High impact*
+> **So what:** 'GENIUS-Act-compliant issuer' is not yet a real category — banks should not treat any PPSI as operating under a finalised federal AML/sanctions framework, and should hold a contingency view that the rule set lands piecemeal through late 2026 or into 2027 rather than as a clean cutover. For non-US issuers such as Tether specifically, the reserve-composition gap is a second, independent readiness question distinct from the rulemaking delay — worth tracking separately in stablecoin counterparty due diligence rather than assuming resolution once US rules do land.
+Source: [Stablecoin Insider — The GENIUS Act July 18 rulemaking deadline has arrived. The rules are not ready.](https://stablecoininsider.org/the-genius-act-july-18-rulemaking-deadline-has-arrived-the-rules-are-not-ready/)
 
 ### FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
 *Global · 16 July 2026 · High impact*
@@ -26,20 +31,15 @@ Source: [Decrypt — US Treasury Freezes $131 Million in Iran-Linked Crypto Wall
 > **So what:** Enforcement is moving up the ransomware supply chain — sanctioning the VPNs and cryptor tools that keep malware undetected, and syndicate leadership, not just cash-out wallets. Extend sanctions screening to the enabling-service layer (VPN/cryptor vendors, high-risk exchanges like Cryptomus) and treat historical exposure to Stern/TrickBot-linked wallets as a live SDN/EU-list hit rather than a legacy Conti-era concern.
 Source: [US Treasury — Treasury Sanctions Malware and Infrastructure Providers Supporting Ransomware Attacks Against Americans](https://home.treasury.gov/news/press-releases/sb0559)
 
-### Russia's crypto foreign-trade payments law takes effect — a state-licensed settlement corridor outside SWIFT
-*Russia · 1 July 2026 · High impact*
-> **So what:** This formalises a state-licensed, Western-correspondent-independent settlement rail for Russian trade, sitting alongside the A7A5 stablecoin and Alfa-Bank's custody build-out as parallel Russian financial infrastructure (see feed-a7a5-certik-110b-volume, feed-alfabank-russia-crypto-custody). Screen for the eight newly licensed Russian trade venues and treat any counterparty flow touching them as equivalent to direct Russia sanctions exposure — the ruble-denominated reporting regime gives Western institutions no visibility into these flows.
-Source: [Yahoo Finance — Russia locks in July 1 crypto payments regime to bypass sanctions](https://finance.yahoo.com/markets/crypto/articles/russia-locks-july-1-crypto-115919933.html)
+### AMLA chair warns post-MiCA customer migration could strain CASP AML compliance
+*EU · 15 July 2026 · Medium impact*
+> **So what:** A licensed CASP absorbing a large post-MiCA customer influx is not automatically a lower-risk counterparty during the migration window itself — banks relying on MiCA authorisation as a due-diligence proxy should ask licensed EU CASP counterparties specifically how onboarding surge capacity and KYC/CDD controls are holding up in H2 2026, rather than treating the licence as a static assurance, and should flag AMLA's year-end report as a near-term primary source to revisit.
+Source: [Cointelegraph — AMLA warns customer migration could strain compliance at licensed CASPs](https://cointelegraph.com/news/amla-customer-migration-strain-mica-licensed-casps)
 
-### CertiK: wallet compromise overtakes smart-contract bugs as Web3's costliest attack vector, $1.3bn stolen in H1 2026
-*Global · 17 July 2026 · Medium impact*
-> **So what:** 'Audited' is an increasingly incomplete signal of protocol safety: due-diligence questionnaires for DeFi and custody counterparties should weight key-custody, multisig operational security and signer-permission hygiene at least as heavily as smart-contract audit history, since operational/key failures now cause more loss than code vulnerabilities.
-Source: [CertiK — Hack3D: H1 2026 Report](https://www.certik.com/skynet-report/certik-hack3d-h1-2026-report)
-
-### DPRK hides crypto-wallet-stealing malware in fake coding tests and poisoned npm packages
-*Global · 17 July 2026 · Medium impact*
-> **So what:** DPRK's crypto-theft pipeline now reaches upstream of the blockchain entirely — compromising a developer's machine via a fake recruiting lure or a poisoned open-source package yields wallet keys and cloud credentials before any on-chain transaction happens. Any counterparty or vendor whose engineers could be targeted (crypto-native firms, custody providers, DeFi protocols the bank has exposure to) should be asked about developer-endpoint controls and npm/software-supply-chain vetting, not just smart-contract audits; threat-intel/wallet-attribution feeds should also flag OtterCookie/BeaverTail-linked infrastructure as a precursor signal for compromised-key laundering.
-Source: [Elastic Security Labs — Contagious Interview malware in SVG images](https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography)
+### ESMA launches first coordinated MiCA review of crypto-custodian operational resilience
+*EU · 8 July 2026 · Medium impact*
+> **So what:** This is the practical follow-through on 'MiCA-authorised' as a due-diligence signal: authorisation alone does not yet confirm custody-operational maturity, and the CSA's own criteria (key-management governance, incident response, third-party dependency mapping) are a usable checklist for assessing EU CASP custody counterparties now, well before ESMA's 2027 consolidated findings land.
+Source: [ESMA — ESMA launches Common Supervisory Action on CASPs' digital operational resilience](https://www.esma.europa.eu/press-news/esma-news/esma-launches-common-supervisory-action-casps-digital-operational-resilience)
 
 ## By the numbers
-13 new · 4 high-impact · 0 verified
+14 new · 4 high-impact · 0 verified

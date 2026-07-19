@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18",
+  "lastUpdated": "2026-07-19",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -2191,6 +2191,89 @@
       "sources": [
         { "name": "CertiK — Hack3D: H1 2026 Report", "url": "https://www.certik.com/skynet-report/certik-hack3d-h1-2026-report", "kind": "primary" },
         { "name": "Forbes — 'Fewer but far more surgical': crypto hacks hit $1.3 billion in 2026", "url": "https://www.forbes.com/sites/boazsobrado/2026/07/17/fewer-but-far-more-surgical-crypto-hacks-hit-13-billion-in-2026/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-genius-act-deadline-missed-july2026",
+      "type": "regulatory",
+      "title": "GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies",
+      "summary": "The statutory 18 July 2026 deadline this feed flagged in advance (see feed-genius-act-six-agency-july18-deadline) has now passed: none of OFAC, FinCEN, the Federal Reserve, OCC, FDIC or NCUA finalised permitted-payment-stablecoin-issuer rules in time. Key comment periods run past the deadline itself — the OCC's AML rule closes 24 July, the FDIC's compliance framework 4 August, and a five-agency customer-identification rule 21 August — so a coordinated final package was not realistically possible. The GENIUS Act's statute has no fallback or interim-guidance mechanism for a missed deadline. Separately, reporting on Tether's most recent disclosures flags that roughly a quarter of USDT's reserves still sit in assets (precious metals, lending positions, bitcoin holdings) that would not meet GENIUS's cash-and-Treasuries reserve standard, even before any compliance deadline bites for non-US issuers.",
+      "soWhat": "'GENIUS-Act-compliant issuer' is not yet a real category — banks should not treat any PPSI as operating under a finalised federal AML/sanctions framework, and should hold a contingency view that the rule set lands piecemeal through late 2026 or into 2027 rather than as a clean cutover. For non-US issuers such as Tether specifically, the reserve-composition gap is a second, independent readiness question distinct from the rulemaking delay — worth tracking separately in stablecoin counterparty due diligence rather than assuming resolution once US rules do land.",
+      "date": "2026-07-18",
+      "addedAt": "2026-07-19",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["GENIUS-Act", "stablecoin", "FinCEN", "OFAC", "OCC", "FDIC", "Federal-Reserve", "NCUA", "rulemaking", "Tether", "reserves"],
+      "sources": [
+        { "name": "Stablecoin Insider — The GENIUS Act July 18 rulemaking deadline has arrived. The rules are not ready.", "url": "https://stablecoininsider.org/the-genius-act-july-18-rulemaking-deadline-has-arrived-the-rules-are-not-ready/", "kind": "secondary" },
+        { "name": "CryptoBriefing — US regulators miss GENIUS Act's one-year deadline for stablecoin rules", "url": "https://cryptobriefing.com/us-regulators-miss-genius-act-stablecoin-deadline/", "kind": "secondary" },
+        { "name": "CoinDesk — Tether's USDT hits 2-year countdown threatening its position on U.S. crypto platforms", "url": "https://www.coindesk.com/news-analysis/2026/07/17/tether-s-usdt-hits-2-year-countdown-threatening-its-position-on-u-s-crypto-platforms", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-esma-csa-casp-custody-resilience",
+      "type": "regulatory",
+      "title": "ESMA launches first coordinated MiCA review of crypto-custodian operational resilience",
+      "summary": "On 8 July 2026 ESMA launched a Common Supervisory Action (CSA) directing national competent authorities to review the digital operational resilience of MiCA-authorised CASPs providing custody, covering DLT-specific risks: governance, key and storage management, transaction controls, incident detection and response, smart-contract risk, and third-party dependencies. Each NCA runs the review within its own jurisdiction against a risk-based sample of authorised firms; the exercise runs through H2 2026 into H1 2027, with a consolidated report to ESMA's Board of Supervisors in H2 2027. It follows the MiCA transitional period's 1 July expiry and a CASP register that has grown past 280 authorised providers.",
+      "soWhat": "This is the practical follow-through on 'MiCA-authorised' as a due-diligence signal: authorisation alone does not yet confirm custody-operational maturity, and the CSA's own criteria (key-management governance, incident response, third-party dependency mapping) are a usable checklist for assessing EU CASP custody counterparties now, well before ESMA's 2027 consolidated findings land.",
+      "date": "2026-07-08",
+      "addedAt": "2026-07-19",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["ESMA", "MiCA", "CASP", "custody", "operational-resilience", "EU", "supervision"],
+      "publication": {
+        "issuer": "ESMA",
+        "kind": "Common Supervisory Action",
+        "ref": "CSA on digital operational resilience of CASPs (custody)"
+      },
+      "sources": [
+        { "name": "ESMA — ESMA launches Common Supervisory Action on CASPs' digital operational resilience", "url": "https://www.esma.europa.eu/press-news/esma-news/esma-launches-common-supervisory-action-casps-digital-operational-resilience", "kind": "primary" },
+        { "name": "Global Regulation Tomorrow — ESMA launches CSA on the digital operational resilience of CASPs", "url": "https://www.regulationtomorrow.com/2026/07/esma-launches-csa-on-the-digital-operational-resilience-of-casps-2/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-amla-mica-migration-aml-risk-warning",
+      "type": "signal",
+      "title": "AMLA chair warns post-MiCA customer migration could strain CASP AML compliance",
+      "summary": "Speaking to the European Parliament's ECON committee around 15 July 2026, AMLA chair Bruna Szego warned that the 1 July MiCA transitional-period cutoff is driving a wave of customers from unlicensed platforms toward licensed VASPs, and that this migration could strain those firms' AML compliance capacity — onboarding large new customer volumes quickly risks weakening controls even at properly authorised providers. Szego confirmed AMLA will publish a full report assessing crypto-sector money-laundering risk and cross-member-state supervisory consistency before year-end, and said AMLA is expanding its own blockchain-analytics and tracing capability.",
+      "soWhat": "A licensed CASP absorbing a large post-MiCA customer influx is not automatically a lower-risk counterparty during the migration window itself — banks relying on MiCA authorisation as a due-diligence proxy should ask licensed EU CASP counterparties specifically how onboarding surge capacity and KYC/CDD controls are holding up in H2 2026, rather than treating the licence as a static assurance, and should flag AMLA's year-end report as a near-term primary source to revisit.",
+      "date": "2026-07-15",
+      "addedAt": "2026-07-19",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["AMLA", "MiCA", "CASP", "AML", "EU", "supervision", "onboarding"],
+      "sources": [
+        { "name": "Cointelegraph — AMLA warns customer migration could strain compliance at licensed CASPs", "url": "https://cointelegraph.com/news/amla-customer-migration-strain-mica-licensed-casps", "kind": "secondary" },
+        { "name": "crypto.news — EU AMLA flags compliance risks as MiCA drives customer migration", "url": "https://crypto.news/eu-amla-flags-compliance-risks-as-mica-drives-customer-migration/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-hadrius-27m-agentic-compliance",
+      "type": "venture",
+      "title": "Hadrius raises $27m seed-and-Series-A for agentic financial-services compliance infrastructure",
+      "summary": "Hadrius, an agentic AI compliance-infrastructure platform for financial-services firms, announced $27m in combined seed and Series A funding on 14 July 2026 ($5m seed, $22m Series A led by CRV, with Y Combinator, Pathlight, and angel investors participating). The company says over 500 firms — from single-person RIAs to institutions with 100,000+ employees, including BBVA — run compliance programmes on its platform.",
+      "soWhat": "Another well-capitalised entrant in agentic-AI compliance tooling, alongside Bretton AI's $75m raise earlier in 2026 — a data point that venture capital is backing AI-agent-driven compliance workflow generally, not just crypto-native KYT vendors (Chainalysis, TRM, Elliptic). Worth tracking as a possible adjacent-category option in any build-vs-buy review of compliance workflow tooling, distinct from blockchain-analytics vendor selection.",
+      "date": "2026-07-14",
+      "addedAt": "2026-07-19",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "low",
+      "confidence": "high",
+      "tags": ["funding", "RegTech", "agentic-AI", "compliance", "Hadrius"],
+      "venture": { "company": "Hadrius", "round": "Seed + Series A", "amount": "$27m", "investors": ["CRV", "Y Combinator", "Pathlight"] },
+      "sources": [
+        { "name": "PR Newswire — Hadrius Raises $27 Million to Build Agentic Compliance Infrastructure", "url": "https://www.prnewswire.com/news-releases/hadrius-raises-27-million-to-build-agentic-compliance-infrastructure-302824196.html", "kind": "primary" },
+        { "name": "FinSMEs — Hadrius Raises $27M in Seed and Series A Funding", "url": "https://www.finsmes.com/2026/07/hadrius-raises-27m-in-funding.html", "kind": "secondary" }
       ]
     }
   ]

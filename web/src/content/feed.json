@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19",
+  "lastUpdated": "2026-07-21",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -2274,6 +2274,49 @@
       "sources": [
         { "name": "PR Newswire — Hadrius Raises $27 Million to Build Agentic Compliance Infrastructure", "url": "https://www.prnewswire.com/news-releases/hadrius-raises-27-million-to-build-agentic-compliance-infrastructure-302824196.html", "kind": "primary" },
         { "name": "FinSMEs — Hadrius Raises $27M in Seed and Series A Funding", "url": "https://www.finsmes.com/2026/07/hadrius-raises-27m-in-funding.html", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-unit21-trm-labs-integration",
+      "type": "solution",
+      "title": "Unit21 and TRM Labs integrate wallet screening and on-chain alerts directly into fiat AML case management",
+      "summary": "Announced 14 July 2026, Unit21 (AI risk-infrastructure for fraud and AML, serving 200+ customers including Crypto.com, Circle, Nexo, CoinList and BitGo) and TRM Labs integrated TRM's Wallet Screening and Transaction Monitoring into Unit21's platform: wallet risk levels, indicators and entity associations now feed Unit21's rules engine, and TRM alerts route straight into Unit21 case management alongside fiat alerts, removing the custom data-pipeline handoff compliance teams previously built themselves. TRM says further real-time wallet screening on transactions is planned.",
+      "soWhat": "A concrete data point for the in-house-vs-vendor build decision: the market is consolidating crypto KYT (TRM) and fiat AML case management (Unit21) into one workflow rather than leaving banks to stitch the two together, which is exactly the integration gap an in-house Daml compliance engine would otherwise have to build itself if paired with a standalone KYT vendor.",
+      "date": "2026-07-14",
+      "addedAt": "2026-07-21",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "low",
+      "confidence": "high",
+      "tags": ["TRM", "Unit21", "solution", "KYT", "case-management", "vendor", "integration"],
+      "solution": {
+        "vendor": "Unit21 + TRM Labs",
+        "category": "AML case management — integrated crypto wallet screening",
+        "stance": "watch",
+        "note": "Vendor-landscape consolidation move (crypto KYT + fiat case management); relevant benchmark for what an in-house engine would need to integrate to match commercial tooling."
+      },
+      "sources": [
+        { "name": "Unit21 — TRM Labs & Unit21: On-chain risk, native to your investigation workflow", "url": "https://www.unit21.ai/blog/trm-labs-unit21-on-chain-risk-native-to-your-investigation-workflow", "kind": "primary" },
+        { "name": "FinTech Global — Unit21 and TRM Labs unite digital asset and fiat crime detection", "url": "https://fintech.global/2026/07/20/unit21-and-trm-labs-unite-digital-asset-and-fiat-crime-detection/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-wanchain-cardano-bnb-bridge-exploit",
+      "type": "signal",
+      "title": "Wanchain's Cardano-BNB Chain bridge drained of ~$10m via signature-reuse flaw in four transactions",
+      "summary": "On 21 July 2026, an attacker exploited Wanchain's cross-chain bridge connecting Cardano to BNB Chain, stealing roughly 515.2 million NIGHT tokens (Midnight, the Cardano-incubated chain) worth about $10m across four transactions completed within eight minutes. The root cause was a non-injective signed-message encoding flaw in the bridge's TreasuryCheck validator: 14 variable-length fields were raw-concatenated without delimiters or length prefixes, so different field combinations could produce identical byte strings, enabling signature reuse that inflated authorised withdrawal amounts roughly 65,000x. Wanchain confirmed the incident and paused the bridge pending investigation.",
+      "soWhat": "Another entry in the recurring cross-chain-bridge exploit pattern this feed tracks (see feed-defi-governance-accounting-exploits-july2026, feed-ostium-oracle-exploit-2026): bridge validator logic remains a favoured laundering-adjacent attack surface because stolen funds move instantly across chains before monitoring catches up. Reinforces treating bridge-mediated transfers as elevated-risk in any transaction-monitoring policy, not just mixer or privacy-coin flows.",
+      "date": "2026-07-21",
+      "addedAt": "2026-07-21",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["bridge-exploit", "Wanchain", "Cardano", "BNB-Chain", "signature-reuse", "hack"],
+      "sources": [
+        { "name": "The Crypto Times — Wanchain Cardano Bridge Exploited, Hackers Stole $10M in NIGHT Tokens", "url": "https://www.cryptotimes.io/2026/07/21/wanchain-cardano-bridge-exploited-hackers-stole-10m-in-night-tokens/", "kind": "secondary" }
       ]
     }
   ]

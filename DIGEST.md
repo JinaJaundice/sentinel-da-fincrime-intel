@@ -1,13 +1,13 @@
-# Sentinel weekly digest — 19 July 2026
+# Sentinel weekly digest — 21 July 2026
 
 _14 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC** — 6 new items; latest: GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
-- **Stablecoins** — 4 new items; latest: GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
 - **State actors & DPRK** — 4 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
+- **Stablecoins** — 3 new items; latest: GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
 - **MiCA & the EU** — 3 new items; latest: AMLA chair warns post-MiCA customer migration could strain CASP AML compliance
-- **Travel Rule** — 2 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
+- **US rulemaking** — 3 new items; latest: GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
 
 ## Notable this week
 
@@ -31,15 +31,15 @@ Source: [Decrypt — US Treasury Freezes $131 Million in Iran-Linked Crypto Wall
 > **So what:** Enforcement is moving up the ransomware supply chain — sanctioning the VPNs and cryptor tools that keep malware undetected, and syndicate leadership, not just cash-out wallets. Extend sanctions screening to the enabling-service layer (VPN/cryptor vendors, high-risk exchanges like Cryptomus) and treat historical exposure to Stern/TrickBot-linked wallets as a live SDN/EU-list hit rather than a legacy Conti-era concern.
 Source: [US Treasury — Treasury Sanctions Malware and Infrastructure Providers Supporting Ransomware Attacks Against Americans](https://home.treasury.gov/news/press-releases/sb0559)
 
+### Wanchain's Cardano-BNB Chain bridge drained of ~$10m via signature-reuse flaw in four transactions
+*Global · 21 July 2026 · Medium impact*
+> **So what:** Another entry in the recurring cross-chain-bridge exploit pattern this feed tracks (see feed-defi-governance-accounting-exploits-july2026, feed-ostium-oracle-exploit-2026): bridge validator logic remains a favoured laundering-adjacent attack surface because stolen funds move instantly across chains before monitoring catches up. Reinforces treating bridge-mediated transfers as elevated-risk in any transaction-monitoring policy, not just mixer or privacy-coin flows.
+Source: [The Crypto Times — Wanchain Cardano Bridge Exploited, Hackers Stole $10M in NIGHT Tokens](https://www.cryptotimes.io/2026/07/21/wanchain-cardano-bridge-exploited-hackers-stole-10m-in-night-tokens/)
+
 ### AMLA chair warns post-MiCA customer migration could strain CASP AML compliance
 *EU · 15 July 2026 · Medium impact*
 > **So what:** A licensed CASP absorbing a large post-MiCA customer influx is not automatically a lower-risk counterparty during the migration window itself — banks relying on MiCA authorisation as a due-diligence proxy should ask licensed EU CASP counterparties specifically how onboarding surge capacity and KYC/CDD controls are holding up in H2 2026, rather than treating the licence as a static assurance, and should flag AMLA's year-end report as a near-term primary source to revisit.
 Source: [Cointelegraph — AMLA warns customer migration could strain compliance at licensed CASPs](https://cointelegraph.com/news/amla-customer-migration-strain-mica-licensed-casps)
-
-### ESMA launches first coordinated MiCA review of crypto-custodian operational resilience
-*EU · 8 July 2026 · Medium impact*
-> **So what:** This is the practical follow-through on 'MiCA-authorised' as a due-diligence signal: authorisation alone does not yet confirm custody-operational maturity, and the CSA's own criteria (key-management governance, incident response, third-party dependency mapping) are a usable checklist for assessing EU CASP custody counterparties now, well before ESMA's 2027 consolidated findings land.
-Source: [ESMA — ESMA launches Common Supervisory Action on CASPs' digital operational resilience](https://www.esma.europa.eu/press-news/esma-news/esma-launches-common-supervisory-action-casps-digital-operational-resilience)
 
 ## By the numbers
 14 new · 4 high-impact · 0 verified

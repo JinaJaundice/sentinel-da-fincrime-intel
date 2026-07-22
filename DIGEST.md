@@ -1,6 +1,6 @@
-# Sentinel weekly digest — 21 July 2026
+# Sentinel weekly digest — 22 July 2026
 
-_14 new items in the last 7 days · Sentinel — DA financial-crime intel_
+_17 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC** — 6 new items; latest: GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
@@ -31,15 +31,15 @@ Source: [Decrypt — US Treasury Freezes $131 Million in Iran-Linked Crypto Wall
 > **So what:** Enforcement is moving up the ransomware supply chain — sanctioning the VPNs and cryptor tools that keep malware undetected, and syndicate leadership, not just cash-out wallets. Extend sanctions screening to the enabling-service layer (VPN/cryptor vendors, high-risk exchanges like Cryptomus) and treat historical exposure to Stern/TrickBot-linked wallets as a live SDN/EU-list hit rather than a legacy Conti-era concern.
 Source: [US Treasury — Treasury Sanctions Malware and Infrastructure Providers Supporting Ransomware Attacks Against Americans](https://home.treasury.gov/news/press-releases/sb0559)
 
+### DOJ's Scam Center Strike Force seizes $25m+ in crypto from Southeast Asia romance-scam networks
+*US / Southeast Asia · 22 July 2026 · Medium impact*
+> **So what:** Pig-butchering and follow-on 'recovery scam' fraud remain a persistent, high-volume laundering channel through US-accessible on/off-ramps. Banks should keep linking high-velocity crypto purchases by vulnerable customers to downstream 'recovery agent' contact patterns as a single typology rather than separate alerts.
+Source: [DOJ USAO-DC — Investigations Into Cryptocurrency Scams Result in Seizure of More Than $25 Million](https://www.justice.gov/usao-dc/pr/investigations-cryptocurrency-scams-result-seizure-more-25-million)
+
 ### Wanchain's Cardano-BNB Chain bridge drained of ~$10m via signature-reuse flaw in four transactions
 *Global · 21 July 2026 · Medium impact*
 > **So what:** Another entry in the recurring cross-chain-bridge exploit pattern this feed tracks (see feed-defi-governance-accounting-exploits-july2026, feed-ostium-oracle-exploit-2026): bridge validator logic remains a favoured laundering-adjacent attack surface because stolen funds move instantly across chains before monitoring catches up. Reinforces treating bridge-mediated transfers as elevated-risk in any transaction-monitoring policy, not just mixer or privacy-coin flows.
 Source: [The Crypto Times — Wanchain Cardano Bridge Exploited, Hackers Stole $10M in NIGHT Tokens](https://www.cryptotimes.io/2026/07/21/wanchain-cardano-bridge-exploited-hackers-stole-10m-in-night-tokens/)
 
-### AMLA chair warns post-MiCA customer migration could strain CASP AML compliance
-*EU · 15 July 2026 · Medium impact*
-> **So what:** A licensed CASP absorbing a large post-MiCA customer influx is not automatically a lower-risk counterparty during the migration window itself — banks relying on MiCA authorisation as a due-diligence proxy should ask licensed EU CASP counterparties specifically how onboarding surge capacity and KYC/CDD controls are holding up in H2 2026, rather than treating the licence as a static assurance, and should flag AMLA's year-end report as a near-term primary source to revisit.
-Source: [Cointelegraph — AMLA warns customer migration could strain compliance at licensed CASPs](https://cointelegraph.com/news/amla-customer-migration-strain-mica-licensed-casps)
-
 ## By the numbers
-14 new · 4 high-impact · 0 verified
+17 new · 4 high-impact · 0 verified

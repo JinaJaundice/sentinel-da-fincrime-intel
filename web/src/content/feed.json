@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-21",
+  "lastUpdated": "2026-07-22",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -2317,6 +2317,63 @@
       "tags": ["bridge-exploit", "Wanchain", "Cardano", "BNB-Chain", "signature-reuse", "hack"],
       "sources": [
         { "name": "The Crypto Times — Wanchain Cardano Bridge Exploited, Hackers Stole $10M in NIGHT Tokens", "url": "https://www.cryptotimes.io/2026/07/21/wanchain-cardano-bridge-exploited-hackers-stole-10m-in-night-tokens/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-doj-scam-center-strike-force-25m-july2026",
+      "type": "signal",
+      "title": "DOJ's Scam Center Strike Force seizes $25m+ in crypto from Southeast Asia romance-scam networks",
+      "summary": "The US Attorney's Office for DC and the Secret Service Cyber Fraud Task Force filed five civil forfeiture complaints seizing more than $25m in cryptocurrency tied to over 670 suspected victim transactions from romance and recovery scams, with laundering infrastructure traced to China, Malaysia and Cambodia. It is the latest action under the Scam Center Strike Force (launched November 2025), which has now recovered more than $800m total.",
+      "soWhat": "Pig-butchering and follow-on 'recovery scam' fraud remain a persistent, high-volume laundering channel through US-accessible on/off-ramps. Banks should keep linking high-velocity crypto purchases by vulnerable customers to downstream 'recovery agent' contact patterns as a single typology rather than separate alerts.",
+      "date": "2026-07-22",
+      "addedAt": "2026-07-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US / Southeast Asia",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["DOJ", "forfeiture", "pig-butchering", "romance-scam", "Southeast Asia", "Secret Service"],
+      "sources": [
+        { "name": "DOJ USAO-DC — Investigations Into Cryptocurrency Scams Result in Seizure of More Than $25 Million", "url": "https://www.justice.gov/usao-dc/pr/investigations-cryptocurrency-scams-result-seizure-more-25-million", "kind": "primary" },
+        { "name": "Cryptonomist — DOJ crypto forfeiture", "url": "https://en.cryptonomist.ch/2026/07/22/crypto-fraud-forfeiture-doj/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-ftc-celsius-founders-settlement-2026",
+      "type": "regulatory",
+      "title": "FTC settlements with Celsius Network co-founders close out $16.5m in penalties and permanent crypto-marketing bans",
+      "summary": "Court orders entered 29 June 2026 require former Celsius CSO Shlomi Daniel Leon to pay $4.1m and former CTO Hanoch Goldstein to pay $2.4m, adding to Alex Mashinsky's earlier $10m settlement for a combined $16.5m that closes out the FTC's case alleging Celsius misrepresented deposit insurance and reserve safety before its 2022 collapse. All three face permanent bans from marketing crypto deposit/withdrawal products.",
+      "soWhat": "The FTC is banning individual executives, not just settling with the corporate entity — a precedent worth flagging when assessing key-person and reputational risk on crypto lending/custody counterparties with past reserve-transparency issues.",
+      "date": "2026-06-29",
+      "addedAt": "2026-07-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": ["FTC", "Celsius", "CeFi", "enforcement", "executive-liability"],
+      "sources": [
+        { "name": "FTC — Founders of Celsius Network Ordered to Pay $16.5 Million to Resolve FTC Charges", "url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/founders-celsius-network-ordered-pay-165-million-resolve-ftc-charges", "kind": "primary" },
+        { "name": "Cryptonomist — Celsius FTC settlement", "url": "https://en.cryptonomist.ch/2026/07/21/celsius-ftc-settlement/", "kind": "secondary" }
+      ]
+    },
+    {
+      "id": "feed-pakistan-fia-crypto-investigation-unit-2026",
+      "type": "signal",
+      "title": "Pakistan's FIA stands up a dedicated Cryptocurrency Investigation Unit",
+      "summary": "Pakistan's Federal Investigation Agency has created a cryptocurrency investigation unit inside its newly operational National Command and Control Centre, tasked with probing money laundering and terror financing conducted via virtual assets, and is urging other agencies to build parallel units.",
+      "soWhat": "Signals growing law-enforcement capacity in a jurisdiction that sits alongside PVARA's new licensing regime (Virtual Assets Act, March 2026) — expect more South Asia-linked crypto-fraud typologies to surface via MLAT and law-enforcement channels as this unit becomes operational.",
+      "date": "2026-07-21",
+      "addedAt": "2026-07-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Pakistan / South Asia",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": ["Pakistan", "FIA", "law-enforcement", "AML", "South Asia", "PVARA"],
+      "sources": [
+        { "name": "The Block — Pakistan launches crypto investigation unit", "url": "https://www.theblock.co/post/409180/pakistan-crypto-investigation-unit", "kind": "secondary" },
+        { "name": "Dawn — FIA cryptocurrency investigation unit", "url": "https://www.dawn.com/news/2017177", "kind": "secondary" }
       ]
     }
   ]

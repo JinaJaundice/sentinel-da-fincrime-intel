@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-23",
+  "lastUpdated": "2026-07-24",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -4568,6 +4568,101 @@
         {
           "name": "Cryptobriefing — EU's 21st sanctions package against Russia takes aim at crypto platforms and nearly 90 banks",
           "url": "https://cryptobriefing.com/eu-sanctions-russia-crypto-platforms/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-eu-21st-sanctions-package-formal-adoption-july2026",
+      "type": "regulatory",
+      "title": "EU's 21st Russia sanctions package formally adopted — crypto platform count rises to 14, four separate A7/A7A5 designations, new third-country crypto ban power",
+      "summary": "On 24 July 2026 the EU formally adopted the 21st Russia sanctions package agreed in principle two days earlier. The final legal text lists 14 crypto-asset service platforms (up from the 11 floated on 22 July), based in Georgia, Panama, the UAE, the Marshall Islands, Kyrgyzstan and Belarus, and adds four separate designations targeting the A7 cross-border payments network and its A7A5 rouble-pegged stablecoin, which Chainalysis data cited in reporting puts at close to $120bn in processed volume. The package also creates a new instrument letting the EU impose a full third-country ban on crypto-asset services where a jurisdiction is found to host Russian sanctions-evasion platforms.",
+      "soWhat": "This is the formal adoption the prior entry (feed-eu-21st-sanctions-package-agreed-july2026) flagged as pending — the entity list grew between political agreement and legal text, so counterparty screening built off the 22 July figure (11 platforms) is now stale; refresh against the adopted 14-platform list. The new third-country-ban instrument is the more consequential change for ongoing monitoring: it lets the EU cut off an entire jurisdiction's crypto sector rather than designating platforms one by one, so a bank's intermediary-jurisdiction risk list (Georgia, UAE, Kyrgyzstan and similar) should be treated as a single watch-list, not case-by-case exposure.",
+      "date": "2026-07-24",
+      "addedAt": "2026-07-24",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "sanctions",
+        "Russia",
+        "EU",
+        "CASP",
+        "A7A5",
+        "stablecoin"
+      ],
+      "sources": [
+        {
+          "name": "CoinDesk — EU hits Russia with massive 21st sanctions package targeting $120bn crypto network",
+          "url": "https://www.coindesk.com/policy/2026/07/24/eu-hits-russia-with-massive-21st-sanctions-package-targeting-usd120b-crypto-network",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-afx-trade-verus-b2-bridge-hacks-july2026",
+      "type": "signal",
+      "title": "Three DeFi exploits in one day — AFX Trade, Verus and B² Network lose $35.55m combined, again via bridge infrastructure",
+      "summary": "On 23 July 2026 three separate protocols were exploited within hours of each other: AFX Trade (a decentralised perpetuals exchange on Arbitrum) lost $24.15m to a vulnerable third-party bridge integration, Verus's Ethereum bridge lost $7.55m, and B² Network lost $3.86m — a combined $35.55m. Arbitrum's co-founder confirmed the native Arbitrum bridge itself was not compromised; the AFX Trade exploiter bridged the stolen funds to Ethereum and swapped them into ETH. AFX Trade has offered its exploiter a white-hat deal (keep 30%, return the rest).",
+      "soWhat": "A fourth cluster of bridge-mediated DeFi losses inside two weeks (see feed-wanchain-cardano-bnb-bridge-exploit, feed-defi-governance-accounting-exploits-july2026, feed-ostium-oracle-exploit-2026) confirms third-party bridge integrations, not base-layer bridges, are the recurring weak point. Any DeFi counterparty due-diligence should separately score a protocol's own contracts versus the bridges and integrations it depends on — a clean audit of the former says nothing about the latter.",
+      "date": "2026-07-23",
+      "addedAt": "2026-07-24",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "DeFi",
+        "bridge-exploit",
+        "AFX-Trade",
+        "Arbitrum",
+        "hack"
+      ],
+      "sources": [
+        {
+          "name": "CryptoTimes — Crypto's 'Hackers' Day': AFX Trade hit for $24M, losses reach $35.55M",
+          "url": "https://www.cryptotimes.io/2026/07/23/cryptos-hackers-day-afx-trade-hit-for-24m-losses-reach-35-55m/",
+          "kind": "secondary"
+        },
+        {
+          "name": "KuCoin News — Three hacks today result in a $35.55M loss",
+          "url": "https://www.kucoin.com/news/flash/three-hacks-today-result-in-35-55m-loss",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fincen-gacki-house-oversight-july2026",
+      "type": "signal",
+      "title": "FinCEN Director Gacki faces House oversight hearing — beneficial-ownership rule 'very close' to finalised, crypto enforcement posture questioned",
+      "summary": "On 21 July 2026 the House Financial Services Subcommittee on National Security, Illicit Finance and International Financial Institutions held an oversight hearing on FinCEN operations, with Director Andrea Gacki testifying. Lawmakers pressed Gacki on enforcement priorities and resourcing, including how the agency is approaching emerging financial technologies and cryptocurrency, amid industry concern that aggressive enforcement and unclear guidance could impose disproportionate costs on smaller institutions. Gacki said FinCEN is 'very close to the finish line' on finalising a revised beneficial ownership reporting rule.",
+      "soWhat": "No new rule resulted, but the hearing signals where BSA/AML enforcement pressure is heading: a still-unfinalised beneficial ownership rule creates near-term uncertainty for CTA-linked customer due-diligence programmes, and Congress's explicit framing of crypto alongside 'regulatory complexity' concerns for smaller institutions suggests FinCEN's next crypto-specific guidance may lean toward proportionality rather than a further tightening. Worth tracking for the beneficial-ownership final rule text once published.",
+      "date": "2026-07-21",
+      "addedAt": "2026-07-24",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": [
+        "FinCEN",
+        "oversight",
+        "beneficial-ownership",
+        "Congress",
+        "AML"
+      ],
+      "sources": [
+        {
+          "name": "House Financial Services Committee — National Security, Illicit Finance and International Financial Institutions Subcommittee Reviews FinCEN Operations and AML Reforms",
+          "url": "https://financialservices.house.gov/news/documentsingle.aspx?DocumentID=411207",
+          "kind": "primary"
+        },
+        {
+          "name": "ABA Banking Journal — FinCEN to finalize revised beneficial ownership reporting rule 'very soon'",
+          "url": "https://bankingjournal.aba.com/2026/07/fincen-to-finalize-revised-beneficial-ownership-reporting-rule-very-soon/",
           "kind": "secondary"
         }
       ]

@@ -1,13 +1,13 @@
-# Sentinel weekly digest — 23 July 2026
+# Sentinel weekly digest — 24 July 2026
 
 _17 new items in the last 7 days · Sentinel — DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC** — 6 new items; latest: Russia's Duma passes comprehensive crypto law — bitcoin as property, sanctions-bypass trade legalised, Sberbank and VTB building custody rails
-- **MiCA & the EU** — 4 new items; latest: EU ambassadors agree the 21st Russia sanctions package six weeks late — 11 crypto platforms and roughly 90 banks now cut off
+- **Sanctions & OFAC** — 5 new items; latest: Russia's Duma passes comprehensive crypto law — bitcoin as property, sanctions-bypass trade legalised, Sberbank and VTB building custody rails
+- **MiCA & the EU** — 4 new items; latest: EU's 21st Russia sanctions package formally adopted — crypto platform count rises to 14, four separate A7/A7A5 designations, new third-country crypto ban power
 - **Stablecoins** — 3 new items; latest: Russia's Duma passes comprehensive crypto law — bitcoin as property, sanctions-bypass trade legalised, Sberbank and VTB building custody rails
-- **Travel Rule** — 3 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
-- **State actors & DPRK** — 3 new items; latest: FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
+- **US rulemaking** — 3 new items; latest: GENIUS Act's one-year rulemaking deadline passes 18 July with no final stablecoin rules from any of the six agencies
+- **Travel Rule** — 2 new items; latest: FATF publishes DeFi report: 'decentralised' platforms routinely have identifiable controllers, but 132 of 142 jurisdictions still haven't applied VASP rules to them
 
 ## Notable this week
 
@@ -21,10 +21,15 @@ Source: [Bitcoin.com News — Russia's Duma Advances Bill 1194918-8, Sending Cry
 > **So what:** 'GENIUS-Act-compliant issuer' is not yet a real category — banks should not treat any PPSI as operating under a finalised federal AML/sanctions framework, and should hold a contingency view that the rule set lands piecemeal through late 2026 or into 2027 rather than as a clean cutover. For non-US issuers such as Tether specifically, the reserve-composition gap is a second, independent readiness question distinct from the rulemaking delay — worth tracking separately in stablecoin counterparty due diligence rather than assuming resolution once US rules do land.
 Source: [Stablecoin Insider — The GENIUS Act July 18 rulemaking deadline has arrived. The rules are not ready.](https://stablecoininsider.org/the-genius-act-july-18-rulemaking-deadline-has-arrived-the-rules-are-not-ready/)
 
-### FATF's 7th targeted update: stablecoins now dominate illicit VA volume, and criminal groups are launching their own freeze-resistant tokens
-*Global · 16 July 2026 · High impact*
-> **So what:** Issuer-freeze capability, the control this feed has repeatedly flagged as the key sanctions lever (see feed-ofac-cbi-tether-freeze, feed-fatf-stablecoin-report), now has a documented counter-typology: criminal groups standing up their own stablecoins specifically to evade it, mirroring the A7A5 kill-switch-free design already tracked. Add 'proprietary/house stablecoin with no freeze function, tied to an offshore payments conglomerate' as a standing red flag in vendor and counterparty stablecoin due diligence, not just sanctioned-issuer screening.
-Source: [FATF — Targeted Update on Implementation of the FATF Standards on VAs and VASPs (2026)](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/targeted-updated-virtualassets-vasps-2026.html)
+### Three DeFi exploits in one day — AFX Trade, Verus and B² Network lose $35.55m combined, again via bridge infrastructure
+*Global · 23 July 2026 · Medium impact*
+> **So what:** A fourth cluster of bridge-mediated DeFi losses inside two weeks (see feed-wanchain-cardano-bnb-bridge-exploit, feed-defi-governance-accounting-exploits-july2026, feed-ostium-oracle-exploit-2026) confirms third-party bridge integrations, not base-layer bridges, are the recurring weak point. Any DeFi counterparty due-diligence should separately score a protocol's own contracts versus the bridges and integrations it depends on — a clean audit of the former says nothing about the latter.
+Source: [CryptoTimes — Crypto's 'Hackers' Day': AFX Trade hit for $24M, losses reach $35.55M](https://www.cryptotimes.io/2026/07/23/cryptos-hackers-day-afx-trade-hit-for-24m-losses-reach-35-55m/)
+
+### EU's 21st Russia sanctions package formally adopted — crypto platform count rises to 14, four separate A7/A7A5 designations, new third-country crypto ban power
+*EU · 24 July 2026 · Medium impact*
+> **So what:** This is the formal adoption the prior entry (feed-eu-21st-sanctions-package-agreed-july2026) flagged as pending — the entity list grew between political agreement and legal text, so counterparty screening built off the 22 July figure (11 platforms) is now stale; refresh against the adopted 14-platform list. The new third-country-ban instrument is the more consequential change for ongoing monitoring: it lets the EU cut off an entire jurisdiction's crypto sector rather than designating platforms one by one, so a bank's intermediary-jurisdiction risk list (Georgia, UAE, Kyrgyzstan and similar) should be treated as a single watch-list, not case-by-case exposure.
+Source: [CoinDesk — EU hits Russia with massive 21st sanctions package targeting $120bn crypto network](https://www.coindesk.com/policy/2026/07/24/eu-hits-russia-with-massive-21st-sanctions-package-targeting-usd120b-crypto-network)
 
 ### EU ambassadors agree the 21st Russia sanctions package six weeks late — 11 crypto platforms and roughly 90 banks now cut off
 *EU · 22 July 2026 · Medium impact*
@@ -36,10 +41,5 @@ Source: [The Moscow Times — EU Agrees 21st Sanctions Package Against Russia](h
 > **So what:** This closes the loop flagged when the FATF plenary commissioned the report in June (see feed-fatf-june-plenary-defi-va-update). It gives banks a concrete due-diligence lens: apply FATF's 'who has control' test — deploy rights, admin keys, fee capture, governance-token concentration — to any DeFi protocol counterparty, on the working assumption that it will be treated as an unlicensed VASP in roughly 93% of jurisdictions regardless of its decentralisation claims. Expect this control test to surface next in FCA, AMLA and GENIUS Act DeFi guidance.
 Source: [FATF — Targeted Report on Regulatory Challenges from Decentralised Finance](https://www.fatf-gafi.org/en/publications/Virtualassets/targeted-report-decentralised-finance-2026.html)
 
-### DOJ's Scam Center Strike Force seizes $25m+ in crypto from Southeast Asia romance-scam networks
-*US / Southeast Asia · 22 July 2026 · Medium impact*
-> **So what:** Pig-butchering and follow-on 'recovery scam' fraud remain a persistent, high-volume laundering channel through US-accessible on/off-ramps. Banks should keep linking high-velocity crypto purchases by vulnerable customers to downstream 'recovery agent' contact patterns as a single typology rather than separate alerts.
-Source: [DOJ USAO-DC — Investigations Into Cryptocurrency Scams Result in Seizure of More Than $25 Million](https://www.justice.gov/usao-dc/pr/investigations-cryptocurrency-scams-result-seizure-more-25-million)
-
 ## By the numbers
-17 new · 3 high-impact · 0 verified
+17 new · 2 high-impact · 0 verified

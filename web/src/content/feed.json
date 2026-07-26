@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-24",
+  "lastUpdated": "2026-07-26",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -4664,6 +4664,121 @@
           "name": "ABA Banking Journal — FinCEN to finalize revised beneficial ownership reporting rule 'very soon'",
           "url": "https://bankingjournal.aba.com/2026/07/fincen-to-finalize-revised-beneficial-ownership-reporting-rule-very-soon/",
           "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ofac-zanjani-network-expansion-july2026",
+      "type": "regulatory",
+      "title": "OFAC expands Zanjani sanctions-evasion network — Zedcex/Zedxion group tied to $94bn in crypto flows",
+      "summary": "On 24 July 2026 OFAC designated four individuals and nine entities extending its sanctions on Iranian financier Babak Zanjani's Dot One Value Creation Group, building on the January 2026 first-ever designation of Zanjani-linked digital asset exchanges Zedcex and Zedxion for IRGC sanctions evasion. The two exchanges have processed over $94bn in transactions since 2022, with TRM Labs estimating roughly $1bn in IRGC-linked stablecoin flows at peak activity. The new designations target Turkish and UAE-based subsidiaries used to keep the network running after the initial listing.",
+      "soWhat": "This is a live case study in how sanctioned networks route around a first designation using offshore subsidiaries rather than shutting down — banks and VASPs need continuous re-screening of counterparties tied to previously designated exchanges, not a one-time check. The $94bn transaction volume through Zedcex/Zedxion shows how large an IRGC-linked laundering rail can grow before detection; any correspondent exposure to Turkish or UAE entities in the crypto-exchange space now needs enhanced diligence against this specific network.",
+      "date": "2026-07-24",
+      "addedAt": "2026-07-26",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "OFAC",
+        "Iran",
+        "IRGC",
+        "sanctions-evasion",
+        "Zanjani",
+        "stablecoin",
+        "typology"
+      ],
+      "sources": [
+        {
+          "name": "US Department of the Treasury — Treasury Further Dismantles Iranian Financier Zanjani's Network",
+          "url": "https://home.treasury.gov/news/press-releases/sb0576",
+          "kind": "primary"
+        },
+        {
+          "name": "TRM Labs — OFAC Sanctions Zedcex and Zedxion in First-ever Designation of an IRGC-linked Digital Asset Exchange",
+          "url": "https://www.trmlabs.com/resources/blog/ofac-sanctions-zedcex-and-zedxion-in-first-ever-designation-of-an-irgc-linked-digital-asset-exchange",
+          "kind": "secondary"
+        },
+        {
+          "name": "Elliptic — OFAC sanctions exchanges Zedcex and Zedxion for assisting in Iranian sanctions evasion and IRGC operations",
+          "url": "https://www.elliptic.co/blog/ofac-sanctions-exchanges-zedcex-and-zedxion-for-assisting-in-iranian-sanctions-evasion-and-irgc-operations",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-bitmex-shutdown-bsa-history-2026",
+      "type": "signal",
+      "title": "BitMEX to shut down September 2026 after $200m in BSA fines and a failed sale",
+      "summary": "BitMEX notified users on 23 July 2026 that it will cease operations at 04:00 UTC on 23 September 2026, ending an 11-year run as the exchange that pioneered crypto perpetual futures. The Seychelles-based platform paid roughly $200m in combined US penalties over two settlements — $100m to the CFTC/FinCEN in 2021 and $100m in criminal fines in January 2025 — after its co-founders pleaded guilty to Bank Secrecy Act violations (later pardoned by President Trump in 2025). A prolonged downturn, competition from Binance and Hyperliquid, and a failed sale process preceded the closure.",
+      "soWhat": "A pardon for the individuals did not erase the entity-level BSA settlement or restore the exchange's competitiveness — a reminder that AML enforcement outcomes and political pardons operate on separate tracks. For banks assessing counterparty risk on legacy offshore exchanges, BitMEX's exit shows how a BSA enforcement history compounds with market pressure to eventually force a wind-down; any remaining exposure or wallet activity tied to BitMEX warrants monitoring through the shutdown window for irregular withdrawal patterns.",
+      "date": "2026-07-23",
+      "addedAt": "2026-07-26",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "BitMEX",
+        "BSA",
+        "enforcement",
+        "exchange-shutdown",
+        "CFTC",
+        "FinCEN"
+      ],
+      "sources": [
+        {
+          "name": "CoinDesk — BitMEX's 11-Year Run Comes to an End, Notifies Users It Is Ending Operations by Sept 23",
+          "url": "https://www.coindesk.com/markets/2026/07/23/bitmex-s-11-year-run-comes-to-an-end-notifies-users-it-is-ending-operations-in-by-sept-23",
+          "kind": "secondary"
+        },
+        {
+          "name": "Tech Times — BitMEX Exchange Shuts Down September 23 After $200M in Fines and Failed Sale",
+          "url": "https://www.techtimes.com/articles/321478/20260724/bitmex-exchange-shuts-down-september-23-after-200m-fines-failed-sale.htm",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-certik-h1-2026-wrench-attacks-report",
+      "type": "typology",
+      "title": "CertiK's H1 2026 report: wrench-attack losses reach $124m as average payout per incident jumps 8x",
+      "summary": "CertiK's Intel3D H1 2026 Wrench Attacks Report, published 25 July 2026, recorded 52 verified physical-coercion incidents against crypto holders globally in the first half of the year, up from 39 in H1 2025, with combined financial exposure of roughly $124.1m. The average recorded exposure per incident rose sharply, from about $270,000 in H1 2025 to $2.39m in H1 2026 — attackers are increasingly targeting higher-net-worth holders rather than opportunistic victims, consistent with the OSINT-driven targeting pattern flagged in earlier 2026 reporting.",
+      "soWhat": "The shift is severity, not just frequency: a near-flat rise in incident count alongside an 8x jump in average loss per case means a small number of high-value coercion events now dominate the typology. This sharpens the earlier duress-transfer typology already tracked here — banks should weight enhanced due diligence toward large, rapid crypto-to-fiat liquidations from accounts with a known high-net-worth profile, not just any self-directed transfer, since that is now where the loss concentration sits.",
+      "date": "2026-07-25",
+      "addedAt": "2026-07-26",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "typology",
+        "physical-coercion",
+        "wrench-attacks",
+        "CertiK",
+        "high-net-worth",
+        "laundering"
+      ],
+      "typology": {
+        "vector": "Physical coercion (wrench attacks) increasingly targeting higher-net-worth holders — fewer opportunistic incidents, larger average payout per case",
+        "controls": [
+          "Weight enhanced due diligence toward large rapid crypto-to-fiat liquidations from known high-net-worth accounts",
+          "Cross-reference CertiK Skynet wrench-attack address clusters at onboarding and transaction monitoring",
+          "Relationship-manager briefing on distress signals for high-value account holders specifically"
+        ],
+        "obligations": [
+          "SAR on suspected theft proceeds transferred under duress",
+          "POCA obligations on receiving institutions for criminal property regardless of voluntary appearance"
+        ]
+      },
+      "sources": [
+        {
+          "name": "GlobeNewswire — CertiK Intel3D: H1 2026 Wrench Attacks Report Reveals 33% Surge in Physical Crypto Crime, Estimated Losses Top $124 Million",
+          "url": "https://www.globenewswire.com/news-release/2026/07/25/3333162/0/en/CertiK-Intel3D-H1-2026-Wrench-Attacks-Report-Reveals-33-Surge-in-Physical-Crypto-Crime-Estimated-Losses-Top-124-Million.html",
+          "kind": "primary"
         }
       ]
     }

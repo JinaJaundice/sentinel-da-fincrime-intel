@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-26",
+  "lastUpdated": "2026-07-27",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -4779,6 +4779,114 @@
           "name": "GlobeNewswire — CertiK Intel3D: H1 2026 Wrench Attacks Report Reveals 33% Surge in Physical Crypto Crime, Estimated Losses Top $124 Million",
           "url": "https://www.globenewswire.com/news-release/2026/07/25/3333162/0/en/CertiK-Intel3D-H1-2026-Wrench-Attacks-Report-Reveals-33-Surge-in-Physical-Crypto-Crime-Estimated-Losses-Top-124-Million.html",
           "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fca-am-alternatives-fincrime-controls",
+      "type": "regulatory",
+      "title": "FCA publishes financial crime controls findings for asset management and alternative firms",
+      "summary": "On 22 July 2026 the FCA published findings from engagement with 242 asset management and alternative firms on their financial crime controls, covering business-wide and customer risk assessments, CDD/EDD, ongoing monitoring, sanctions/PEP/adverse-media screening, governance and training, with worked examples of good and poor practice.",
+      "soWhat": "The review isn't crypto-specific, but the CDD/EDD and screening weaknesses it flags (thin or static risk assessments, screening gaps) are the same control points examiners test wherever a firm's customer base carries cryptoasset exposure. Benchmark crypto-adjacent onboarding and monitoring against these findings ahead of the next supervisory visit rather than treating this as an asset-management-only review.",
+      "date": "2026-07-22",
+      "addedAt": "2026-07-27",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "FCA",
+        "financial-crime",
+        "AML",
+        "CDD",
+        "screening",
+        "asset-management"
+      ],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Good and poor practice findings"
+      },
+      "sources": [
+        {
+          "name": "FCA — Asset management and alternative firms' financial crime controls: our findings",
+          "url": "https://www.fca.org.uk/publications/good-and-poor-practice/asset-management-alternative-firms-financial-crime-controls",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-dprk-bank-hackers-arrested-crypto-laundering",
+      "type": "typology",
+      "title": "North Korea arrests its own former military hackers over state bank theft laundered through crypto",
+      "summary": "North Korea's National Intelligence Agency arrested a group of former military hackers at a Pyongyang safe house on 12 July 2026, accused of breaching the Central Bank of the DPRK and the Foreign Trade Bank, diverting foreign-currency and trade funds into overseas crypto wallets, then cashing out via Chinese brokers and border-town contacts in Sinuiju and Hyesan using small structured transfers.",
+      "soWhat": "The laundering chain is the one banks already screen for in external DPRK IT-worker and hacking cases: crypto conversion, Chinese OTC brokers, small structured cash-out. Here it was turned inward on the regime's own banks, a signal that DPRK state cyber tradecraft is decentralising beyond central control. Expect the same pattern to keep surfacing in unrelated external attacks and OTC-broker typologies.",
+      "date": "2026-07-25",
+      "addedAt": "2026-07-27",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "North Korea / Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "DPRK",
+        "North-Korea",
+        "state-sponsored",
+        "laundering",
+        "typology",
+        "OTC-brokers"
+      ],
+      "typology": {
+        "vector": "State-actor bank compromise with proceeds routed through overseas crypto wallets, then OTC/Chinese-broker cash-out via border-town networks using small structured transfers",
+        "controls": [
+          "Screen for DPRK-linked wallet clusters and known OTC-broker typologies even on inbound flows framed as routine trade or remittance",
+          "Flag small structured transfers that follow large foreign-currency payment anomalies",
+          "Maintain DPRK typology awareness across both external-attack and insider-threat scenarios"
+        ],
+        "obligations": [
+          "SAR on suspected DPRK-linked proceeds",
+          "Sanctions screening against OFAC/UN DPRK designations for any counterparty linked to the named institutions"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CoinDesk — North Korea arrests hackers accused of laundering stolen bank funds through crypto",
+          "url": "https://www.coindesk.com/business/2026/07/25/north-korea-arrests-hackers-accused-of-laundering-stolen-funds-from-country-s-bank-via-crypto",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-triplea-treasury-wallet-breach",
+      "type": "signal",
+      "title": "Singapore stablecoin payments firm Triple-A loses $11.8m in treasury wallet breach",
+      "summary": "Triple-A, a Singapore-licensed stablecoin payments infrastructure provider, confirmed unauthorised access to its treasury wallets first detected 25 July 2026. On-chain investigators traced roughly $11.8m in company-owned assets drained across Ethereum, Solana, TRON, TON, Polygon and Arbitrum over a 31-hour window before the breach was contained; segregated client trust accounts were unaffected.",
+      "soWhat": "This is a payment-rail operator, not a retail exchange. Institutions relying on stablecoin settlement infrastructure providers for merchant or cross-border payment flows should extend third-party vendor risk assessments to a provider's own treasury wallet security, not just its client-fund custody arrangements — Triple-A's segregated trust accounts held, but its operating treasury did not.",
+      "date": "2026-07-27",
+      "addedAt": "2026-07-27",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Singapore / Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "hack",
+        "treasury",
+        "stablecoin",
+        "payments",
+        "Singapore",
+        "third-party-risk"
+      ],
+      "sources": [
+        {
+          "name": "crypto.news — Triple-A says it can meet all liabilities after treasury wallet exploit",
+          "url": "https://crypto.news/triple-a-says-it-can-meet-all-liabilities-after-treasury-wallet-exploit/",
+          "kind": "secondary"
+        },
+        {
+          "name": "Tech Times — Triple-A Treasury Wallets Drained $11.8M Across Seven Chains in 31-Hour Attack",
+          "url": "https://www.techtimes.com/articles/321654/20260727/triple-treasury-wallets-drained-118m-across-seven-chains-31-hour-attack.htm",
+          "kind": "secondary"
         }
       ]
     }

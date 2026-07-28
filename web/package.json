@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "digest": "tsx scripts/digest.ts"
+    "digest": "tsx scripts/digest.ts",
+    "prose": "node scripts/prose-check.mjs --fail"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",

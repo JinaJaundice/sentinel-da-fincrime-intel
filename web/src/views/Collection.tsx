@@ -53,7 +53,7 @@ export function Collection({
             <span className="text-xs text-neutral-500 tabular-nums">
               {shown.length} item{shown.length === 1 ? "" : "s"}
             </span>
-            <ExportMenu items={shown} docTitle={`Sentinel — ${title}`} filenameBase={`sentinel-${title}`} />
+            <ExportMenu items={shown} docTitle={`Sentinel: ${title}`} filenameBase={`sentinel-${title}`} />
           </div>
         }
       />

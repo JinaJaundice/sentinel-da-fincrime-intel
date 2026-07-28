@@ -22,9 +22,9 @@ function sourcesInline(item: Item): string {
 }
 
 // A pasteable citation for one item — title, source(s), absolute date.
-// e.g.  "EU finalises MiCA stablecoin RTS" — European Commission, https://… (3 June 2026).
+// e.g.  "EU finalises MiCA stablecoin RTS", European Commission, https://… (3 June 2026).
 export function citationText(item: Item): string {
-  return `“${item.title}” — ${sourcesInline(item)} (${longDate(item.date)}).`;
+  return `“${item.title}”, ${sourcesInline(item)} (${longDate(item.date)}).`;
 }
 
 // A slide-ready bullet: the headline as the top bullet, the bank lens
@@ -104,7 +104,7 @@ export function itemsToMarkdown(
   const lines: string[] = [
     `# ${title}`,
     "",
-    `_Exported ${longDate(today())}${sep}${items.length} item${items.length === 1 ? "" : "s"}${sep}Sentinel — DA financial-crime intel_`,
+    `_Exported ${longDate(today())}${sep}${items.length} item${items.length === 1 ? "" : "s"}${sep}Sentinel · DA financial-crime intel_`,
   ];
   if (intro) lines.push("", intro);
 

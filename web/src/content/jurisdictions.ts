@@ -58,7 +58,7 @@ const EU_MEMBERS = [
   "380", "428", "440", "442", "470", "528", "616", "620", "642", "703", "705", "724", "752",
 ];
 
-const sumsub = { name: "Sumsub — global crypto regulations 2026", url: "https://sumsub.com/blog/global-crypto-regulations/" };
+const sumsub = { name: "Sumsub: global crypto regulations 2026", url: "https://sumsub.com/blog/global-crypto-regulations/" };
 
 const SEED: Jurisdiction[] = [
   {
@@ -68,13 +68,13 @@ const SEED: Jurisdiction[] = [
     lat: 50.5,
     lon: 9.0,
     status: "implemented",
-    headline: "MiCA — comprehensive regime in force",
+    headline: "MiCA: comprehensive regime in force",
     summary:
       "MiCA is the world's most comprehensive crypto framework, fully in force since 30 Dec 2024. The transitional grandfathering period ends 1 July 2026, after which unauthorised CASPs must cease EU activity.",
-    soWhat: "Treat EU venues as requiring full CASP authorisation from July 2026 — any EU-facing platform still trading without it is elevated risk.",
+    soWhat: "Treat EU venues as requiring full CASP authorisation from July 2026; any EU-facing platform still trading without it is elevated risk.",
     keyDates: [{ date: "2026-07-01", label: "Grandfathering ends" }],
     sources: [
-      { name: "ESMA — MiCA", url: "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" },
+      { name: "ESMA: MiCA", url: "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" },
     ],
   },
   {
@@ -87,9 +87,9 @@ const SEED: Jurisdiction[] = [
     headline: "FCA regime being phased in",
     summary:
       "The FCA is consulting on and phasing in a full cryptoasset regime (stablecoins, custody, trading, conduct), with the authorisation gateway expected from ~September 2026 and the full FSMA regime around October 2027.",
-    soWhat: "The bright line between authorised and unauthorised UK crypto counterparties is being drawn now — track the gateway and treat unlicensed activity as a red flag.",
+    soWhat: "The bright line between authorised and unauthorised UK crypto counterparties is being drawn now; track the gateway and treat unlicensed activity as a red flag.",
     keyDates: [{ date: "2027-10-01", label: "Full regime (expected)" }],
-    sources: [{ name: "FCA — new cryptoasset regime", url: "https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation" }],
+    sources: [{ name: "FCA: new cryptoasset regime", url: "https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation" }],
   },
   {
     id: "us",
@@ -101,7 +101,7 @@ const SEED: Jurisdiction[] = [
     headline: "Stablecoin law passed; market structure pending",
     summary:
       "Fragmented oversight (SEC, CFTC, FinCEN, OFAC). The GENIUS Act brought payment stablecoins under federal AML/sanctions duties, but a comprehensive market-structure framework is still in progress.",
-    soWhat: "Stablecoin issuers are becoming regulated counterparties; the wider perimeter stays uncertain — monitor agency-by-agency developments.",
+    soWhat: "Stablecoin issuers are becoming regulated counterparties; the wider perimeter stays uncertain; monitor agency-by-agency developments.",
     sources: [sumsub],
   },
   {
@@ -114,7 +114,7 @@ const SEED: Jurisdiction[] = [
     headline: "MAS Payment Services Act + stablecoin framework",
     summary:
       "MAS regulates digital-payment-token services under the Payment Services Act and is enforcing its single-currency stablecoin framework (SCS 2.0) in 2026, with reserve, redemption and capital requirements.",
-    soWhat: "A mature, principles-based regime — Singapore-licensed VASPs are comparatively well-supervised counterparties.",
+    soWhat: "A mature, principles-based regime; Singapore-licensed VASPs are comparatively well-supervised counterparties.",
     sources: [{ name: "MAS", url: "https://www.mas.gov.sg/" }, sumsub],
   },
   {
@@ -127,7 +127,7 @@ const SEED: Jurisdiction[] = [
     headline: "VASP licensing + Stablecoin Ordinance",
     summary:
       "The SFC runs a mandatory VASP licensing regime, and the Stablecoin Ordinance (passed May 2025) requires an HKMA licence to issue or distribute fiat-backed stablecoins to the public.",
-    soWhat: "Clear licensing perimeter — confirm a Hong Kong counterparty's SFC/HKMA authorisation status.",
+    soWhat: "Clear licensing perimeter; confirm a Hong Kong counterparty's SFC/HKMA authorisation status.",
     sources: [{ name: "HKMA", url: "https://www.hkma.gov.hk/eng/" }, sumsub],
   },
   {
@@ -140,7 +140,7 @@ const SEED: Jurisdiction[] = [
     headline: "VARA + CBUAE payment-token regime",
     summary:
       "Dubai's VARA licenses virtual-asset activities, and the Central Bank's Payment Token Services Regulation (effective Aug 2024) governs fiat-backed stablecoin issuance and redemption on the mainland.",
-    soWhat: "Multiple regulators by emirate — confirm which licence (VARA / ADGM / CBUAE) a UAE counterparty actually holds.",
+    soWhat: "Multiple regulators by emirate; confirm which licence (VARA / ADGM / CBUAE) a UAE counterparty holds.",
     sources: [{ name: "CBUAE", url: "https://www.centralbank.ae/en/" }, sumsub],
   },
   {
@@ -150,10 +150,10 @@ const SEED: Jurisdiction[] = [
     lat: 36.5,
     lon: 138.2,
     status: "implemented",
-    headline: "Payment Services Act — licensed issuers",
+    headline: "Payment Services Act: licensed issuers",
     summary:
       "Japan regulates crypto-exchange service providers under the Payment Services Act; only banks, trust companies and licensed money-transfer firms may issue yen-backed stablecoins, under strict reserve and redemption rules.",
-    soWhat: "One of the longest-standing regimes — Japanese-licensed exchanges are tightly supervised.",
+    soWhat: "One of the longest-standing regimes; Japanese-licensed exchanges are tightly supervised.",
     sources: [{ name: "JFSA", url: "https://www.fsa.go.jp/en/" }, sumsub],
   },
   {
@@ -166,7 +166,7 @@ const SEED: Jurisdiction[] = [
     headline: "DLT Act + FINMA framework",
     summary:
       "Switzerland's DLT Act and FINMA guidance provide a clear, token-classification-based framework; stablecoins face full-reserve, licensed-issuer and redemption expectations.",
-    soWhat: "Mature, predictable regime — Swiss-licensed crypto firms are well-understood counterparties.",
+    soWhat: "Mature, predictable regime; Swiss-licensed crypto firms are well-understood counterparties.",
     sources: [{ name: "FINMA", url: "https://www.finma.ch/en/" }, sumsub],
   },
   {
@@ -179,7 +179,7 @@ const SEED: Jurisdiction[] = [
     headline: "FSCA licensing + Travel Rule live",
     summary:
       "The FSCA treats crypto assets as financial products and had approved ~300 crypto licences by end-2025; a zero-threshold Travel Rule took effect in early 2026.",
-    soWhat: "Africa's most advanced regime — licensed SA VASPs operate under Travel Rule obligations.",
+    soWhat: "Africa's most advanced regime; licensed SA VASPs operate under Travel Rule obligations.",
     sources: [sumsub],
   },
   {
@@ -192,7 +192,7 @@ const SEED: Jurisdiction[] = [
     headline: "Central Bank VASP framework (Nov 2025)",
     summary:
       "In November 2025 the Central Bank of Brazil implemented a regulatory framework for Virtual Asset Service Providers, establishing licensing and strict AML/CFT rules.",
-    soWhat: "A fresh but comprehensive regime — Brazilian VASPs now sit under central-bank licensing.",
+    soWhat: "A fresh but comprehensive regime; Brazilian VASPs now sit under central-bank licensing.",
     keyDates: [{ date: "2025-11-01", label: "VASP framework in force" }],
     sources: [sumsub],
   },
@@ -206,7 +206,7 @@ const SEED: Jurisdiction[] = [
     headline: "Securities-led platform registration",
     summary:
       "Crypto trading platforms must register with provincial securities regulators (under the CSA), with crypto largely supervised through securities and AML (FINTRAC) rules.",
-    soWhat: "Province-by-province securities oversight — check a Canadian platform's CSA registration.",
+    soWhat: "Province-by-province securities oversight; check a Canadian platform's CSA registration.",
     sources: [sumsub],
   },
   {
@@ -219,7 +219,7 @@ const SEED: Jurisdiction[] = [
     headline: "Travel Rule live; platform licensing still being developed",
     summary:
       "Crypto is legal and treated as an investment asset. AUSTRAC's Travel Rule for virtual-asset transfers took effect 1 July 2026 with no minimum-value threshold, but Treasury and ASIC's dedicated digital-asset-platform licensing framework is still being finalised.",
-    soWhat: "AML/CTF obligations (registration, Travel Rule) are now live even though bespoke platform licensing is not — treat Australia as split-state rather than fully 'in-progress'.",
+    soWhat: "AML/CTF obligations (registration, Travel Rule) are now live even though bespoke platform licensing is not; treat Australia as split-state rather than fully 'in-progress'.",
     keyDates: [{ date: "2026-07-01", label: "Travel Rule for virtual-asset transfers in force" }],
     sources: [sumsub],
   },
@@ -233,7 +233,7 @@ const SEED: Jurisdiction[] = [
     headline: "VASP licensing live; basic law pending",
     summary:
       "Real-name accounts, VASP licensing and AML duties are in force, but the comprehensive Digital Asset Basic Law is stalled over control of won-pegged stablecoin issuance.",
-    soWhat: "Strong AML/licensing today, but the full framework — especially for stablecoins — is unsettled.",
+    soWhat: "Strong AML/licensing today, but the full framework, especially for stablecoins, is unsettled.",
     sources: [sumsub],
   },
   {
@@ -246,7 +246,7 @@ const SEED: Jurisdiction[] = [
     headline: "SEC VASP registration developing",
     summary:
       "High retail adoption; the SEC is building out a VASP registration regime focused on investor protection and controlling capital flows.",
-    soWhat: "An evolving regime in a high-adoption market — counterparty diligence should not assume mature supervision.",
+    soWhat: "An evolving regime in a high-adoption market; counterparty diligence should not assume mature supervision.",
     sources: [sumsub],
   },
   {
@@ -259,7 +259,7 @@ const SEED: Jurisdiction[] = [
     headline: "Taxed + AML-registered; no full framework",
     summary:
       "Crypto is taxed (30% gains, 1% TDS) and VASPs must register with FIU-IND for AML, but no comprehensive regulatory framework has been enacted.",
-    soWhat: "Activity is tolerated and taxed, not comprehensively regulated — treat the absence of a conduct regime as a risk factor.",
+    soWhat: "Activity is tolerated and taxed rather than comprehensively regulated; treat the absence of a conduct regime as a risk factor.",
     sources: [sumsub],
   },
   {
@@ -272,7 +272,7 @@ const SEED: Jurisdiction[] = [
     headline: "Bitcoin Law (amended 2025)",
     summary:
       "El Salvador has a dedicated digital-asset framework and a national Bitcoin office; under an IMF deal it amended the 2021 Bitcoin Law in 2025, removing mandatory merchant acceptance.",
-    soWhat: "A bespoke pro-crypto regime, but recently walked back — watch for further IMF-driven changes.",
+    soWhat: "A bespoke pro-crypto regime, but recently walked back; watch for further IMF-driven changes.",
     keyDates: [{ date: "2025-02-01", label: "Bitcoin Law amended" }],
     sources: [sumsub],
   },
@@ -286,7 +286,7 @@ const SEED: Jurisdiction[] = [
     headline: "Mining legal; domestic payments banned",
     summary:
       "Russia legalised and regulates crypto mining but bans domestic crypto payments; it permits crypto in cross-border trade under an experimental regime, partly to work around sanctions.",
-    soWhat: "Sanctions-evasion nexus — treat Russian crypto activity, especially cross-border settlement, as elevated risk.",
+    soWhat: "Sanctions-evasion nexus: treat Russian crypto activity, especially cross-border settlement, as elevated risk.",
     sources: [sumsub],
   },
   {
@@ -299,7 +299,7 @@ const SEED: Jurisdiction[] = [
     headline: "Trading & mining banned",
     summary:
       "Mainland China bans crypto trading and mining; policymakers are researching tightly-controlled yuan-backed stablecoins for cross-border settlement, but no permissive framework exists.",
-    soWhat: "No legitimate onshore crypto activity — any China-nexus crypto flow warrants heightened scrutiny.",
+    soWhat: "No legitimate onshore crypto activity; any China-nexus crypto flow warrants heightened scrutiny.",
     sources: [sumsub],
   },
 ];

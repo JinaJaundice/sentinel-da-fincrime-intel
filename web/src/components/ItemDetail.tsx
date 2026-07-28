@@ -89,7 +89,7 @@ export function ItemDetail({
         <div className="mt-2.5 flex gap-2 rounded-lg bg-neutral-800/40 border-l-2 border-violet-500/50 px-3 py-2">
           <Lightbulb className="h-3.5 w-3.5 text-violet-300 mt-0.5 shrink-0" />
           <p className="text-[12px] text-neutral-300 leading-relaxed">
-            <span className="font-semibold text-neutral-100">So what — </span>
+            <span className="font-semibold text-neutral-100">So what: </span>
             {item.soWhat}
           </p>
         </div>

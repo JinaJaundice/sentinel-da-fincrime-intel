@@ -61,7 +61,7 @@ export function Trends({ items, setPage, setTheme }: { items: Item[]; setPage: (
       <PageHeader
         Icon={LineChart}
         title="Trends"
-        subtitle="How the picture is moving over time — volume, risk mix, and what's gaining momentum across the feed."
+        subtitle="How the picture is moving over time: volume, risk mix, and what's gaining momentum across the feed."
         right={
           <div className="flex items-center gap-0.5 rounded-lg bg-neutral-900 ring-1 ring-neutral-800 p-0.5">
             {RANGES.map((r) => (
@@ -85,7 +85,7 @@ export function Trends({ items, setPage, setTheme }: { items: Item[]; setPage: (
         <IconTile Icon={FileText} tone="brand" size="sm" />
         <div className="min-w-0 flex-1">
           <div className="text-sm font-medium text-neutral-200">Weekly digest</div>
-          <div className="text-xs text-neutral-500">A one-pager of what moved in the last 7 days — copy or download to forward.</div>
+          <div className="text-xs text-neutral-500">A one-pager of what moved in the last 7 days; copy or download to forward.</div>
         </div>
         <CopyButton
           text={digest}
@@ -129,7 +129,7 @@ export function Trends({ items, setPage, setTheme }: { items: Item[]; setPage: (
           <SectionHeading
             Icon={Flame}
             title="Gaining momentum"
-            sub={`Themes by new items — recent vs prior ${momWindow}d · click to drill in`}
+            sub={`Themes by new items · recent vs prior ${momWindow}d · click to drill in`}
           />
           <MomentumList rows={themeMomentum} onSelect={openTheme} empty="Not enough dated items in range to show momentum." />
         </Panel>

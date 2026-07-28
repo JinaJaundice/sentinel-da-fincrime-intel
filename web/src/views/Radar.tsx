@@ -22,7 +22,7 @@ export function Radar({ items }: { items: Item[] }) {
       <PageHeader
         Icon={CalendarClock}
         title="Regulatory radar"
-        subtitle="Key compliance dates — what's coming, and what just landed."
+        subtitle="Key compliance dates: what's coming, and what just landed."
       />
 
       <div>
@@ -95,7 +95,7 @@ export function Radar({ items }: { items: Item[] }) {
                 <h3 className="mt-1.5 text-sm font-semibold text-neutral-100">{i.title}</h3>
                 {i.soWhat && (
                   <p className="mt-1 text-[12px] text-neutral-400 leading-relaxed">
-                    <span className="text-neutral-300 font-medium">So what — </span>
+                    <span className="text-neutral-300 font-medium">So what: </span>
                     {i.soWhat}
                   </p>
                 )}

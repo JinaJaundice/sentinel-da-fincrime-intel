@@ -38,9 +38,9 @@ export function weeklyDigest(items: Item[], now = new Date()): string {
   const fresh = pub.filter((i) => new Date(i.addedAt + "T00:00:00").getTime() >= weekAgo);
 
   const lines: string[] = [
-    `# Sentinel weekly digest — ${longDate(now.toISOString().slice(0, 10))}`,
+    `# Sentinel weekly digest: ${longDate(now.toISOString().slice(0, 10))}`,
     "",
-    `_${fresh.length} new item${fresh.length === 1 ? "" : "s"} in the last 7 days · Sentinel — DA financial-crime intel_`,
+    `_${fresh.length} new item${fresh.length === 1 ? "" : "s"} in the last 7 days · Sentinel · DA financial-crime intel_`,
   ];
 
   if (fresh.length === 0) {
@@ -57,7 +57,7 @@ export function weeklyDigest(items: Item[], now = new Date()): string {
     lines.push("", "## What moved");
     for (const { t, items: ti } of themeCounts) {
       const top = [...ti].sort(byNotable)[0];
-      lines.push(`- **${t.label}** — ${ti.length} new item${ti.length === 1 ? "" : "s"}; latest: ${top.title}`);
+      lines.push(`- **${t.label}**: ${ti.length} new item${ti.length === 1 ? "" : "s"}; latest: ${top.title}`);
     }
   }
 

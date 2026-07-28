@@ -38,7 +38,7 @@ export function Term({ id, children, className }: { id: string; children?: React
           <span className="mt-0.5 block text-[11px] font-light leading-snug text-neutral-400">{entry.short}</span>
           {entry.soWhat && (
             <span className="mt-1.5 block text-[10px] leading-snug text-violet-300/90">
-              <span className="font-semibold">So what — </span>
+              <span className="font-semibold">So what: </span>
               {entry.soWhat}
             </span>
           )}

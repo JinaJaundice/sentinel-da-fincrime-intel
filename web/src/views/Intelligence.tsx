@@ -33,7 +33,7 @@ export function Intelligence({ items }: { items: Item[] }) {
       <PageHeader
         Icon={Crosshair}
         title="Intelligence"
-        subtitle="Laundering typologies for digital assets, mapped to controls and obligations — plus the shape of what we're tracking."
+        subtitle="Laundering typologies for digital assets, mapped to controls and obligations, plus the shape of what we're tracking."
       />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
@@ -45,7 +45,7 @@ export function Intelligence({ items }: { items: Item[] }) {
 
       <div className="grid lg:grid-cols-3 gap-5">
         <div className="lg:col-span-2 space-y-3">
-          <SectionHeading Icon={Crosshair} title="Typology library" sub="Vectors mapped to controls & obligations — expand for how each works" />
+          <SectionHeading Icon={Crosshair} title="Typology library" sub="Vectors mapped to controls & obligations · expand for how each works" />
           {typologies.map((i) => (
             <div key={i.id} className="rise">
               <TypologyCard item={i} />

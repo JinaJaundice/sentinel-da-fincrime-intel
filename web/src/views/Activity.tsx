@@ -16,7 +16,7 @@ export function Activity({ items, lastUpdated }: { items: Item[]; lastUpdated: s
       <PageHeader
         Icon={Radio}
         title="Activity"
-        subtitle="What the intelligence agent has published — newest first. It runs on a schedule and publishes automatically; this is a transparency log, not a gate."
+        subtitle="What the intelligence agent has published, newest first. It runs on a schedule and publishes automatically; this is a transparency log rather than a gate."
       />
 
       <Panel className="p-3 flex items-center flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-500">

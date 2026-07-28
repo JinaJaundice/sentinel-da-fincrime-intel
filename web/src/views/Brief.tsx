@@ -76,7 +76,7 @@ export function Brief({
         Icon={LayoutDashboard}
         eyebrow={todayLabel}
         title="Overview"
-        subtitle="A single, agent-tended pane of glass for financial crime across digital assets — what changed, and what it means."
+        subtitle="A single, agent-tended pane of glass for financial crime across digital assets: what changed, and what it means."
       />
 
       <Panel className="p-3 flex items-center gap-3">

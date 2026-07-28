@@ -28,8 +28,8 @@ import { cn } from "../lib/utils";
 // The knowledge hub: a guided "start here" path for newcomers + the
 // glossary. Typology primers live on Intelligence; this is the front door.
 const STREAM_TOUR: { page: Page; label: string; desc: string; Icon: LucideIcon }[] = [
-  { page: "brief", label: "Overview", desc: "Today's briefing — what changed and what's most pressing.", Icon: LayoutDashboard },
-  { page: "themes", label: "Themes", desc: "Topic briefings — the picture organised for learning or client delivery.", Icon: Shapes },
+  { page: "brief", label: "Overview", desc: "Today's briefing: what changed and what's most pressing.", Icon: LayoutDashboard },
+  { page: "themes", label: "Themes", desc: "Topic briefings: the picture organised for learning or client delivery.", Icon: Shapes },
   { page: "signals", label: "Signals", desc: "News, regulation and enforcement across DA financial crime.", Icon: Newspaper },
   { page: "ventures", label: "Ventures", desc: "Funding, M&A and market moves in the space.", Icon: TrendingUp },
   { page: "solutions", label: "Solutions", desc: "The vendor landscape and the build-vs-buy call.", Icon: Boxes },
@@ -44,7 +44,7 @@ export function Learn({ setPage }: { setPage: (p: Page) => void }) {
       <PageHeader
         Icon={GraduationCap}
         title="Start here"
-        subtitle="New to the digital-asset × financial-crime beat? This is the front door — how to read Sentinel, find your way around, and turn intel into delivery."
+        subtitle="New to the digital-asset × financial-crime beat? This is the front door: how to read Sentinel, find your way around, and turn intel into delivery."
       />
 
       {/* Thesis */}
@@ -66,7 +66,7 @@ export function Learn({ setPage }: { setPage: (p: Page) => void }) {
           <AnatomyRow
             n={2}
             label="So what"
-            body="The bank lens — the exposure it creates or the response it implies. This is the part you can't get from a news feed."
+            body="The bank lens: the exposure it creates or the response it implies. This is the part you can't get from a news feed."
             accent
           />
           <AnatomyRow n={3} label="Sources & impact" body="Every item links a real source; the High / Medium / Low chip is its risk weight." />
@@ -75,17 +75,17 @@ export function Learn({ setPage }: { setPage: (p: Page) => void }) {
 
       {/* Trust signals */}
       <div>
-        <SectionHeading Icon={ShieldCheck} title="Judge what you can rely on" sub="Trust signals on every item — built for client-facing work" />
+        <SectionHeading Icon={ShieldCheck} title="Judge what you can rely on" sub="Trust signals on every item, built for client-facing work" />
         <Panel className="p-4 space-y-2.5">
           <TrustRow
             Icon={ShieldCheck}
             label="Verified"
-            body="A human has reviewed and vouched for the item (a violet shield). Agent-published items stay unverified until someone vouches — filter any stream to 'Verified only' to build a client pack."
+            body="A human has reviewed and vouched for the item (a violet shield). Agent-published items stay unverified until someone vouches; filter any stream to 'Verified only' to build a client pack."
             accent
           />
           <TrustRow
             label="Confidence"
-            body="How certain we are in the item itself — High, Medium or Low (a small dot). Distinct from impact, which is severity."
+            body="How certain we are in the item itself: High, Medium or Low (a small dot). Distinct from impact, which is severity."
           />
           <TrustRow
             label="Source provenance"
@@ -119,7 +119,7 @@ export function Learn({ setPage }: { setPage: (p: Page) => void }) {
 
       {/* Stream tour */}
       <div>
-        <SectionHeading Icon={Compass} title="Find your way around" sub="Eight views over one content model — jump straight in" />
+        <SectionHeading Icon={Compass} title="Find your way around" sub="Eight views over one content model: jump straight in" />
         <div className="grid sm:grid-cols-2 gap-2.5">
           {STREAM_TOUR.map((s) => (
             <button
@@ -139,7 +139,7 @@ export function Learn({ setPage }: { setPage: (p: Page) => void }) {
 
       {/* Deliver it */}
       <div>
-        <SectionHeading Icon={Send} title="Turn intel into delivery" sub="Sentinel is built for client work, not just reading" />
+        <SectionHeading Icon={Send} title="Turn intel into delivery" sub="Sentinel is built for client work as well as reading" />
         <Panel className="p-4">
           <ul className="space-y-1.5 text-[13px] text-neutral-300 font-light">
             <li className="flex gap-2"><span className="text-violet-400">•</span> Copy a <span className="text-neutral-100">citation</span> or a <span className="text-neutral-100">deck bullet</span> from any item.</li>
@@ -167,7 +167,7 @@ function AnatomyRow({ n, label, body, accent }: { n: number; label: string; body
       </span>
       <p className="text-[13px] leading-snug">
         <span className={cn("font-medium", accent ? "text-violet-200" : "text-neutral-100")}>{label}</span>
-        <span className="text-neutral-400 font-light"> — {body}</span>
+        <span className="text-neutral-400 font-light"> · {body}</span>
       </p>
     </div>
   );
@@ -186,7 +186,7 @@ function TrustRow({ Icon, label, body, accent }: { Icon?: LucideIcon; label: str
       </span>
       <p className="text-[13px] leading-snug">
         <span className={cn("font-medium", accent ? "text-violet-200" : "text-neutral-100")}>{label}</span>
-        <span className="text-neutral-400 font-light"> — {body}</span>
+        <span className="text-neutral-400 font-light"> · {body}</span>
       </p>
     </div>
   );
@@ -261,7 +261,7 @@ function GlossaryCard({ entry }: { entry: GlossaryEntry }) {
       <p className="mt-1 text-[12px] text-neutral-400 font-light leading-snug">{entry.short}</p>
       {entry.soWhat && (
         <p className="mt-1.5 text-[11px] text-violet-300/90 leading-snug">
-          <span className="font-semibold">So what — </span>
+          <span className="font-semibold">So what: </span>
           {entry.soWhat}
         </p>
       )}

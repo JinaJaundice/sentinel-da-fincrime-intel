@@ -30,13 +30,13 @@ export function FCA({ items }: { items: Item[] }) {
       <PageHeader
         Icon={Landmark}
         title="FCA"
-        subtitle="FCA publications across crypto and financial crime — consultation & discussion papers, policy statements and more."
+        subtitle="FCA publications across crypto and financial crime: consultation & discussion papers, policy statements and more."
         right={
           <div className="flex items-center gap-3">
             <span className="text-xs text-neutral-500 tabular-nums">
               {shown.length} item{shown.length === 1 ? "" : "s"}
             </span>
-            <ExportMenu items={shown} docTitle="Sentinel — FCA publications" filenameBase="sentinel-fca" />
+            <ExportMenu items={shown} docTitle="Sentinel: FCA publications" filenameBase="sentinel-fca" />
           </div>
         }
       />

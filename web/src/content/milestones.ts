@@ -30,7 +30,7 @@ export const MILESTONES: Milestone[] = [
   {
     id: "ms-fdic-comment-close",
     date: "2026-07-21",
-    title: "FDIC stablecoin rule — comment period (est. close)",
+    title: "FDIC stablecoin rule: comment period (est. close)",
     blurb:
       "Estimated close of the comment window on the FDIC's proposed BSA/sanctions rule for permitted payment stablecoin issuers.",
     region: "US",
@@ -44,7 +44,7 @@ export const MILESTONES: Milestone[] = [
     date: "2027-04-08",
     title: "GENIUS stablecoin AML/sanctions rules expected effective",
     blurb:
-      "FinCEN/OFAC final PPSI rules become effective ~12 months after issuance — date is an estimate pending final issuance.",
+      "FinCEN/OFAC final PPSI rules become effective ~12 months after issuance; the date is an estimate pending final issuance.",
     region: "US",
     impact: "high",
     tentative: true,

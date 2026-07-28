@@ -29,7 +29,7 @@ export function Themes({
       <PageHeader
         Icon={Shapes}
         title="Themes"
-        subtitle="The digital-asset × financial-crime picture, organised by topic — each one a ready-made briefing for learning or client delivery."
+        subtitle="The digital-asset × financial-crime picture, organised by topic, each one a ready-made briefing for learning or client delivery."
       />
       <div className="grid sm:grid-cols-2 gap-3">
         {THEMES.map((t) => {
@@ -157,7 +157,7 @@ function ThemeDetail({ items, theme, onBack }: { items: Item[]; theme: Theme; on
       })}
 
       {list.length === 0 && (
-        <p className="text-sm text-neutral-500 font-light">No items match this theme yet — it will populate as the agent publishes relevant developments.</p>
+        <p className="text-sm text-neutral-500 font-light">No items match this theme yet; it will populate as the agent publishes relevant developments.</p>
       )}
     </div>
   );

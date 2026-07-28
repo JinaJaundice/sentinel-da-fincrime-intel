@@ -49,7 +49,7 @@ export function BriefingPackDrawer({ items }: { items: Item[] }) {
   const ids = usePack();
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [title, setTitle] = useState(`Sentinel briefing — ${longDate(today())}`);
+  const [title, setTitle] = useState(`Sentinel briefing: ${longDate(today())}`);
 
   useEffect(() => {
     if (!open) return;

@@ -75,8 +75,12 @@ URL** — no source, no publish. The Activity view is a transparency log.
 ## Verification discipline (every change)
 
 1. `tsc --noEmit` clean (run via `web/node_modules/.bin/tsc`).
-2. `npm --prefix web run lint` + `npm --prefix web test` green (ESLint +
-   Vitest; **CI runs lint + test + build on every push** — see RUNBOOK).
+2. `npm --prefix web run lint` + `npm --prefix web run prose` + `npm --prefix
+   web test` green (ESLint + the plain-language check ported from the engine +
+   Vitest; **CI runs lint + prose + test + build on every push** — see RUNBOOK).
+   The prose check covers hand-authored `.ts`/`.tsx` copy only; `feed.json` is
+   the agent's file and is not gated, so a daily ingest cannot fail CI on a
+   quoted external title.
 3. Preview console clean (no errors/warnings).
 4. **Verify via preview _snapshots_, not screenshots** — headless
    rasterisation is blocked on this machine, so screenshots time out;

@@ -20,7 +20,7 @@ export function Atlas() {
       <PageHeader
         Icon={Globe}
         title="Atlas"
-        subtitle="Crypto regulation worldwide — click a marker or country to read the status and sources."
+        subtitle="Crypto regulation worldwide: click a marker or country to read the status and sources."
       />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
@@ -88,7 +88,7 @@ function EmptyDetail() {
         <MousePointerClick className="h-5 w-5 text-neutral-600 mx-auto" />
         <div className="mt-2 text-sm font-medium text-neutral-300">Pick a jurisdiction</div>
         <div className="mt-1 text-xs text-neutral-500 font-light max-w-[14rem]">
-          Click a pulsing marker on the map — or a name below — to read its crypto-regulation status and sources.
+          Click a pulsing marker on the map, or a name below, to read its crypto-regulation status and sources.
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@ function Detail({ j }: { j: Jurisdiction }) {
         <div className="mt-3 flex gap-2 rounded-lg bg-neutral-800/40 border-l-2 border-violet-500/50 px-3 py-2">
           <Lightbulb className="h-3.5 w-3.5 text-violet-300 mt-0.5 shrink-0" />
           <p className="text-[12px] text-neutral-300 leading-relaxed">
-            <span className="font-semibold text-neutral-100">So what — </span>
+            <span className="font-semibold text-neutral-100">So what: </span>
             {j.soWhat}
           </p>
         </div>

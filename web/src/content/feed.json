@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-27",
+  "lastUpdated": "2026-07-29",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -4886,6 +4886,68 @@
         {
           "name": "Tech Times — Triple-A Treasury Wallets Drained $11.8M Across Seven Chains in 31-Hour Attack",
           "url": "https://www.techtimes.com/articles/321654/20260727/triple-treasury-wallets-drained-118m-across-seven-chains-31-hour-attack.htm",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-binance-mlat-routing-nyt-july2026",
+      "type": "signal",
+      "title": "Binance routes most foreign law-enforcement requests through the UAE, investigators say it is slowing crypto-crime cases",
+      "summary": "A New York Times investigation, reported 28 July 2026, found Binance changed its process for handling foreign law-enforcement data requests so that most now go through the United Arab Emirates government via Mutual Legal Assistance Treaties rather than direct exchange cooperation, responding directly only for CSAM, terrorism or imminent-threat-to-life cases. European and U.S. investigators say the added MLAT step is slowing access to account records and delaying asset freezes in scam and money-laundering cases; Binance says the change strengthens, not weakens, its controls.",
+      "soWhat": "For banks relying on an exchange's cooperation posture as part of correspondent or counterparty due diligence, a slower, government-mediated response path materially changes the exchange's effective law-enforcement responsiveness even without any change to its written AML programme. Worth factoring into ongoing monitoring of exchange relationships and into expectations for how quickly a linked account can be frozen when a bank itself reports suspicious activity touching Binance.",
+      "date": "2026-07-28",
+      "addedAt": "2026-07-29",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "Binance",
+        "law-enforcement-cooperation",
+        "MLAT",
+        "exchange-risk",
+        "asset-freezing"
+      ],
+      "sources": [
+        {
+          "name": "CoinDesk — Police complain that Binance is making it harder to track crypto scammers: NYT",
+          "url": "https://www.coindesk.com/business/2026/07/28/binance-makes-fighting-crypto-crime-more-difficult-says-new-nyt-article",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-blockaid-h1-2026-lazarus-attribution",
+      "type": "signal",
+      "title": "Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses",
+      "summary": "Blockaid's H1 2026 security report, published 28 July 2026, counted 212 verified incidents totalling over $1.1bn in losses, the highest first-half total on record, with the four largest (KelpDAO, Drift Protocol, Resolv, CowSwap) accounting for roughly 64%. It attributes the KelpDAO ($292m), Drift Protocol ($285m) and Humanity Protocol exploits, roughly $609m combined, to the TraderTraitor subgroup of North Korea's Lazarus Group, about 55% of all H1 losses. Solana losses were driven mainly by compromised keys and signing infrastructure rather than contract bugs.",
+      "soWhat": "A single DPRK-linked actor now drives more than half of first-half hack losses, which reframes this from a generic \"smart-contract risk\" problem into a sanctions-exposure problem: any downstream flow of stolen funds through an exchange, bridge or OTC desk carries direct OFAC/UN-sanctions nexus risk, not just a fraud-loss risk, and should be screened and escalated accordingly.",
+      "date": "2026-07-28",
+      "addedAt": "2026-07-29",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": [
+        "DPRK",
+        "Lazarus-Group",
+        "hack",
+        "sanctions-exposure",
+        "H1-2026",
+        "key-compromise"
+      ],
+      "sources": [
+        {
+          "name": "The Block — Crypto hacks hit record high in H1 2026 as losses top $1 billion, Blockaid says",
+          "url": "https://www.theblock.co/post/409944/crypto-hacks-hit-record-high-in-h1-2026-as-losses-top-1-billion-blockaid-says",
+          "kind": "secondary"
+        },
+        {
+          "name": "Cointelegraph — Ethereum and Solana lead H1 2026 crypto hack losses",
+          "url": "https://cointelegraph.com/news/ethereum-solana-led-crypto-hack-losses-h1-2026-blockaid",
           "kind": "secondary"
         }
       ]

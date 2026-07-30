@@ -1,13 +1,13 @@
-# Sentinel weekly digest: 29 July 2026
+# Sentinel weekly digest: 30 July 2026
 
-_14 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_12 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 7 new items; latest: Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses
-- **Stablecoins**: 4 new items; latest: OFAC expands Zanjani sanctions-evasion network — Zedcex/Zedxion group tied to $94bn in crypto flows
-- **US rulemaking**: 3 new items; latest: Singapore stablecoin payments firm Triple-A loses $11.8m in treasury wallet breach
-- **State actors & DPRK**: 3 new items; latest: Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses
-- **MiCA & the EU**: 2 new items; latest: EU's 21st Russia sanctions package formally adopted — crypto platform count rises to 14, four separate A7/A7A5 designations, new third-country crypto ban power
+- **Sanctions & OFAC**: 6 new items; latest: Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses
+- **US rulemaking**: 4 new items; latest: OFAC sanctions Iranian 'insurers' HormuzSafe and PGMIC for accepting bitcoin to run a Strait of Hormuz extortion scheme
+- **State actors & DPRK**: 4 new items; latest: Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses
+- **Stablecoins**: 3 new items; latest: OFAC expands Zanjani sanctions-evasion network — Zedcex/Zedxion group tied to $94bn in crypto flows
+- **MiCA & the EU**: 1 new item; latest: EU's 21st Russia sanctions package formally adopted — crypto platform count rises to 14, four separate A7/A7A5 designations, new third-country crypto ban power
 
 ## Notable this week
 
@@ -21,10 +21,10 @@ Source: [The Block — Crypto hacks hit record high in H1 2026 as losses top $1 
 > **So what:** This is a live case study in how sanctioned networks route around a first designation using offshore subsidiaries rather than shutting down — banks and VASPs need continuous re-screening of counterparties tied to previously designated exchanges, not a one-time check. The $94bn transaction volume through Zedcex/Zedxion shows how large an IRGC-linked laundering rail can grow before detection; any correspondent exposure to Turkish or UAE entities in the crypto-exchange space now needs enhanced diligence against this specific network.
 Source: [US Department of the Treasury — Treasury Further Dismantles Iranian Financier Zanjani's Network](https://home.treasury.gov/news/press-releases/sb0576)
 
-### Russia's Duma passes comprehensive crypto law — bitcoin as property, sanctions-bypass trade legalised, Sberbank and VTB building custody rails
-*Russia · 21 July 2026 · High impact*
-> **So what:** State-owned banks building licensed crypto rails ahead of a law explicitly designed to keep sanctions-bypass trade legal while banning domestic use is a second, parallel plank of Russian sanctions-evasion infrastructure alongside A7A5 and the July 1 trade corridor (see feed-a7a5-certik-110b-volume, feed-russia-crypto-foreign-trade-law-july2026). Treat any correspondent, liquidity or CASP exposure touching Sberbank, VTB or Moscow Exchange crypto products from September onward as direct Russia sanctions-nexus exposure, not generic crypto counterparty risk.
-Source: [Bitcoin.com News — Russia's Duma Advances Bill 1194918-8, Sending Crypto Law to Putin's Desk](https://news.bitcoin.com/russias-duma-advances-bill-1194918-8-sending-crypto-law-to-putins-desk/)
+### OFAC sanctions Iranian 'insurers' HormuzSafe and PGMIC for accepting bitcoin to run a Strait of Hormuz extortion scheme
+*Iran / Strait of Hormuz · 29 July 2026 · Medium impact*
+> **So what:** This is a state-linked entity built from the ground up to take crypto payment specifically because dollar and SWIFT rails are blocked — not an existing business caught using crypto incidentally. For a bank's fincrime programme it is a fresh sanctions-evasion typology to screen for: front-end 'service fee' or 'insurance' payment flows in bitcoin tied to Iranian maritime or IRGC-adjacent counterparties, and a reminder that OFAC is now designating the crypto payment rail itself as part of the evasion mechanism, not just the underlying entity.
+Source: [US Treasury: Treasury Disrupts Iranian Regime's Strait of Hormuz Extortion Network](https://home.treasury.gov/news/press-releases/sb0581)
 
 ### Binance routes most foreign law-enforcement requests through the UAE, investigators say it is slowing crypto-crime cases
 *Global · 28 July 2026 · Medium impact*
@@ -42,4 +42,4 @@ Source: [crypto.news — Triple-A says it can meet all liabilities after treasur
 Source: [CoinDesk — North Korea arrests hackers accused of laundering stolen bank funds through crypto](https://www.coindesk.com/business/2026/07/25/north-korea-arrests-hackers-accused-of-laundering-stolen-funds-from-country-s-bank-via-crypto)
 
 ## By the numbers
-14 new · 3 high-impact · 0 verified
+12 new · 2 high-impact · 0 verified

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-29",
+  "lastUpdated": "2026-07-30",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -4948,6 +4948,41 @@
         {
           "name": "Cointelegraph — Ethereum and Solana lead H1 2026 crypto hack losses",
           "url": "https://cointelegraph.com/news/ethereum-solana-led-crypto-hack-losses-h1-2026-blockaid",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ofac-hormuzsafe-iran-crypto-insurance",
+      "type": "regulatory",
+      "title": "OFAC sanctions Iranian 'insurers' HormuzSafe and PGMIC for accepting bitcoin to run a Strait of Hormuz extortion scheme",
+      "summary": "Treasury designated HormuzSafe Marine Services Authority and Persian Gulf Marine Insurance Company on 29 July 2026 for operating an IRGC-linked scheme that forces commercial vessels to buy mandatory 'insurance' to transit the Strait of Hormuz. HormuzSafe accepted bitcoin and other digital assets as payment, using crypto rails to collect the fees while sidestepping the traditional banking system OFAC normally chokes off.",
+      "soWhat": "This is a state-linked entity built from the ground up to take crypto payment specifically because dollar and SWIFT rails are blocked — not an existing business caught using crypto incidentally. For a bank's fincrime programme it is a fresh sanctions-evasion typology to screen for: front-end 'service fee' or 'insurance' payment flows in bitcoin tied to Iranian maritime or IRGC-adjacent counterparties, and a reminder that OFAC is now designating the crypto payment rail itself as part of the evasion mechanism, not just the underlying entity.",
+      "date": "2026-07-29",
+      "addedAt": "2026-07-30",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Iran / Strait of Hormuz",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "OFAC",
+        "sanctions",
+        "Iran",
+        "IRGC",
+        "bitcoin",
+        "sanctions-evasion",
+        "maritime"
+      ],
+      "sources": [
+        {
+          "name": "US Treasury: Treasury Disrupts Iranian Regime's Strait of Hormuz Extortion Network",
+          "url": "https://home.treasury.gov/news/press-releases/sb0581",
+          "kind": "primary"
+        },
+        {
+          "name": "CryptoTimes: US Targets Iran's Wartime Crypto Extortion Network in Strait of Hormuz",
+          "url": "https://www.cryptotimes.io/2026/07/30/us-targets-iran-wartime-crypto-extortion-network-in-strait-of-hormuz/",
           "kind": "secondary"
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-30",
+  "lastUpdated": "2026-07-31",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -4983,6 +4983,72 @@
         {
           "name": "CryptoTimes: US Targets Iran's Wartime Crypto Extortion Network in Strait of Hormuz",
           "url": "https://www.cryptotimes.io/2026/07/30/us-targets-iran-wartime-crypto-extortion-network-in-strait-of-hormuz/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-irs-digital-asset-compliance-portal-scam",
+      "type": "typology",
+      "title": "IRS-CI warns of mailed 'Digital Asset Compliance Portal' phishing scam targeting crypto holders",
+      "summary": "The IRS's Criminal Investigation unit warned on 30 July 2026 that fraudsters are mailing forged IRS letters directing crypto holders to scan a QR code and register on a fake 'Digital Asset Compliance Portal' — a site that does not exist. The letters mimic a genuine compliance notice and push recipients toward handing over personal data or transferring crypto holdings; unusually for this type of fraud, the vector is physical mail rather than email or SMS.",
+      "soWhat": "This is a social-engineering vector worth briefing fraud and complaints teams on directly: a customer who received one of these letters and then makes an unusual outbound crypto transfer, or shares 'portal' login details, is a live scam victim, not a suspicious originator, and should be handled through victim-support and transfer-hold processes rather than a standard SAR-first workflow. Mandatory crypto tax reporting has become scam cover here, and the same physical-mail-plus-QR-code playbook is likely to resurface impersonating other compliance-sounding portals (FinCEN, FCA, HMRC).",
+      "date": "2026-07-30",
+      "addedAt": "2026-07-31",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["IRS", "phishing", "social-engineering", "crypto-fraud", "typology", "consumer-protection"],
+      "sources": [
+        {
+          "name": "The Block — IRS warns crypto holders fraudster sending fake letters in attempt to steal digital assets or data (citing Bloomberg)",
+          "url": "https://www.theblock.co/post/410204/irs-crypto-holders-fraudster-sending-fake-letters-steal-digital-assets-data-bloomberg",
+          "kind": "secondary"
+        },
+        {
+          "name": "Crypto Briefing — IRS warns of counterfeit letters targeting crypto holders with fake compliance portal",
+          "url": "https://cryptobriefing.com/irs-warns-counterfeit-letters-crypto-holders/",
+          "kind": "secondary"
+        }
+      ],
+      "typology": {
+        "vector": "Physical-mail phishing impersonating a tax/compliance authority to harvest credentials or induce crypto transfers",
+        "controls": [
+          "Customer education alert naming this specific 'Digital Asset Compliance Portal' lure",
+          "Fraud-team playbook for outbound-transfer holds following a reported scam-letter contact",
+          "Screening for account or wallet registrations driven by a QR code claiming IRS/tax-authority origin"
+        ],
+        "obligations": [
+          "Suspicious activity reporting where a customer transfer follows a documented scam contact",
+          "Consumer-facing fraud warnings, parallel to APP-fraud duties under the UK PSR/FCA regime"
+        ]
+      }
+    },
+    {
+      "id": "feed-clarity-act-ethics-compromise-floor-vote",
+      "type": "regulatory",
+      "title": "CLARITY Act clears its ethics impasse with a sunset-and-divest compromise; Senate floor vote expected week of 3 August",
+      "summary": "Senate negotiators released a merged CLARITY Act draft around 22-24 July 2026 that resolves the ethics dispute which had stalled the bill since the July 4 recess: senior officials must divest crypto holdings or place them in a blind trust within a year, enforced by the DOJ, with the provision sunsetting when the next president is inaugurated. A motion to proceed was expected around 28-30 July, with cloture votes likely the week of 3 August, just ahead of the August recess deadline.",
+      "soWhat": "The ethics fight is resolved, but the BSA/DeFi gap this feed has tracked since the July 4 stall — Section 604 developer-protection language, and whether DeFi counterparties end up outside Bank Secrecy Act scope — is not confirmed settled by this reporting. That is the piece that actually changes a bank's screening obligations for DeFi-adjacent counterparties, so it needs checking against the final bill text and any floor amendments once the vote lands, not the ethics provision that made the headlines.",
+      "date": "2026-07-24",
+      "addedAt": "2026-07-31",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": ["CLARITY-Act", "Congress", "market-structure", "BSA", "DeFi", "ethics"],
+      "sources": [
+        {
+          "name": "CoinDesk — 2 weeks left for Clarity: State of Crypto",
+          "url": "https://www.coindesk.com/policy/2026/07/26/2-weeks-left-for-clarity-state-of-crypto",
+          "kind": "secondary"
+        },
+        {
+          "name": "Forbes — Senate Unveils New Clarity Act Text As Ethics Deal Sparks Fresh Debate",
+          "url": "https://www.forbes.com/sites/digital-assets/2026/07/24/mixed-reactions-to-new-crypto-clarity-act-text--ethics-clause/",
           "kind": "secondary"
         }
       ]

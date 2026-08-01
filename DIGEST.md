@@ -1,6 +1,6 @@
-# Sentinel weekly digest: 31 July 2026
+# Sentinel weekly digest: 1 August 2026
 
-_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_12 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC**: 5 new items; latest: Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses
@@ -9,6 +9,11 @@ _11 new items in the last 7 days · Sentinel · DA financial-crime intel_
 - **Stablecoins**: 2 new items; latest: OFAC expands Zanjani sanctions-evasion network — Zedcex/Zedxion group tied to $94bn in crypto flows
 
 ## Notable this week
+
+### Coldcard hardware-wallet entropy flaw drains $70M+ in bitcoin, exposing a self-custody laundering vector
+*Global · 30 July 2026 · High impact*
+> **So what:** This is a new theft vector feeding the laundering pipeline, not a bank-side control failure, but the proceeds still have to surface somewhere: institutions accepting crypto-to-fiat off-ramps should treat large BTC deposits from addresses newly emptied of dust/consolidated UTXOs consistent with the Coldcard entropy-flaw pattern as a screening flag, and expect a wave of stolen-fund flows through mixers and exchanges over the following weeks as attackers cash out. It is also a live case study for any custody due-diligence work (including this engagement's Notabene-vs-in-house build/buy assessment) that seed-generation entropy is a supply-chain risk worth asking vendors about directly, not something to assume from a hardware wallet's reputation.
+Source: [Coinkite — Coldcard Mk3 Seed Generation Warning (security advisory)](https://blog.coinkite.com/coldcard-mk3-seed-generation-warning/)
 
 ### Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses
 *Global · 28 July 2026 · High impact*
@@ -35,10 +40,5 @@ Source: [The Block — IRS warns crypto holders fraudster sending fake letters i
 > **So what:** This is a state-linked entity built from the ground up to take crypto payment specifically because dollar and SWIFT rails are blocked — not an existing business caught using crypto incidentally. For a bank's fincrime programme it is a fresh sanctions-evasion typology to screen for: front-end 'service fee' or 'insurance' payment flows in bitcoin tied to Iranian maritime or IRGC-adjacent counterparties, and a reminder that OFAC is now designating the crypto payment rail itself as part of the evasion mechanism, not just the underlying entity.
 Source: [US Treasury: Treasury Disrupts Iranian Regime's Strait of Hormuz Extortion Network](https://home.treasury.gov/news/press-releases/sb0581)
 
-### Binance routes most foreign law-enforcement requests through the UAE, investigators say it is slowing crypto-crime cases
-*Global · 28 July 2026 · Medium impact*
-> **So what:** For banks relying on an exchange's cooperation posture as part of correspondent or counterparty due diligence, a slower, government-mediated response path materially changes the exchange's effective law-enforcement responsiveness even without any change to its written AML programme. Worth factoring into ongoing monitoring of exchange relationships and into expectations for how quickly a linked account can be frozen when a bank itself reports suspicious activity touching Binance.
-Source: [CoinDesk — Police complain that Binance is making it harder to track crypto scammers: NYT](https://www.coindesk.com/business/2026/07/28/binance-makes-fighting-crypto-crime-more-difficult-says-new-nyt-article)
-
 ## By the numbers
-11 new · 2 high-impact · 0 verified
+12 new · 3 high-impact · 0 verified

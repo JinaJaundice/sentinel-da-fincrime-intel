@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-31",
+  "lastUpdated": "2026-08-01",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5049,6 +5049,50 @@
         {
           "name": "Forbes — Senate Unveils New Clarity Act Text As Ethics Deal Sparks Fresh Debate",
           "url": "https://www.forbes.com/sites/digital-assets/2026/07/24/mixed-reactions-to-new-crypto-clarity-act-text--ethics-clause/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-coldcard-entropy-flaw-theft",
+      "type": "typology",
+      "title": "Coldcard hardware-wallet entropy flaw drains $70M+ in bitcoin, exposing a self-custody laundering vector",
+      "summary": "A firmware bug present in Coinkite Coldcard wallets since March 2021 hashed the device-generated seed together with user-entered dice rolls instead of properly randomising it, sharply weakening entropy on affected models. An attacker exploited this on 30 July 2026, brute-forcing recovery phrases to sweep roughly 594 BTC (~$38M) from about 500 single-signature wallets within half an hour; on-chain mapping and Galaxy Digital research pushed the running total toward $70M by 31 July. Coinkite published a security advisory (updated 1 August), shipped fixed firmware (Mk3 4.2.0+, Mk4/Mk5 5.6.0+, Q 1.5.0Q+), and warned that patching alone does not protect existing seeds — affected users must generate an entirely new seed on corrected firmware and move funds.",
+      "soWhat": "This is a new theft vector feeding the laundering pipeline, not a bank-side control failure, but the proceeds still have to surface somewhere: institutions accepting crypto-to-fiat off-ramps should treat large BTC deposits from addresses newly emptied of dust/consolidated UTXOs consistent with the Coldcard entropy-flaw pattern as a screening flag, and expect a wave of stolen-fund flows through mixers and exchanges over the following weeks as attackers cash out. It is also a live case study for any custody due-diligence work (including this engagement's Notabene-vs-in-house build/buy assessment) that seed-generation entropy is a supply-chain risk worth asking vendors about directly, not something to assume from a hardware wallet's reputation.",
+      "date": "2026-07-30",
+      "addedAt": "2026-08-01",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": ["typology", "self-custody", "hardware-wallet", "Coldcard", "theft", "entropy-flaw", "bitcoin", "supply-chain-risk"],
+      "typology": {
+        "vector": "Weak-entropy seed generation in a hardware wallet's firmware allows brute-force recovery of private keys, turning a self-custody theft into a laundering-inflow event once stolen coins are consolidated and moved to off-ramps",
+        "controls": [
+          "Screen incoming BTC deposits against known Coldcard-exploit theft clusters as they are published (CertiK/Chainalysis/Elliptic Skynet-style feeds)",
+          "Flag rapid liquidation of newly consolidated UTXOs from previously dormant single-signature wallets",
+          "For custody due-diligence and vendor assessments, ask hardware/software wallet vendors directly about seed-generation entropy testing, not just key-storage security"
+        ],
+        "obligations": [
+          "SAR on suspected receipt of theft proceeds once a deposit is linked to the exploit",
+          "Consumer/customer alerts for retail clients known to hold affected Coldcard models"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Coinkite — Coldcard Mk3 Seed Generation Warning (security advisory)",
+          "url": "https://blog.coinkite.com/coldcard-mk3-seed-generation-warning/",
+          "kind": "primary"
+        },
+        {
+          "name": "CoinDesk — Coldcard's $38M (so far) exploit shakes faith in self-custody, may push investors to ETFs",
+          "url": "https://www.coindesk.com/business/2026/07/31/coldcard-s-usd38-million-so-far-exploit-shakes-faith-in-self-custody-may-push-investors-to-etfs",
+          "kind": "secondary"
+        },
+        {
+          "name": "The Daily Hodl — Galaxy Digital says $70,000,000 drained from bitcoin holders in Coldcard wallet exploit",
+          "url": "https://dailyhodl.com/2026/07/31/galaxy-digital-says-70000000-drained-from-bitcoin-holders-in-coldcard-wallet-exploit/",
           "kind": "secondary"
         }
       ]

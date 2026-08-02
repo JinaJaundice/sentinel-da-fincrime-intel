@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-01",
+  "lastUpdated": "2026-08-02",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5093,6 +5093,70 @@
         {
           "name": "The Daily Hodl — Galaxy Digital says $70,000,000 drained from bitcoin holders in Coldcard wallet exploit",
           "url": "https://dailyhodl.com/2026/07/31/galaxy-digital-says-70000000-drained-from-bitcoin-holders-in-coldcard-wallet-exploit/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-shelbit-dubai-iran-binance-676m",
+      "type": "signal",
+      "title": "Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance",
+      "summary": "A Reuters investigation published 31 July 2026 traced at least $4bn in crypto flows since May 2024 through Shelbit, an unlicensed Dubai-based exchange run by an Iranian expatriate out of an office above a budget hotel in Deira. Shelbit sat at the centre of a network of 2,000+ Farsi-language gambling sites, interacted directly with Iran's central bank and wallets linked to the IRGC, and connected to Nobitex (Iran's largest exchange, OFAC-designated in June 2026). At least $676m moved from Shelbit-linked addresses to Binance, including roughly $540m after Dubai's regulator, VARA, had already taken enforcement action. VARA issued a formal Notice of Fines against Shelbit General Trading L.L.C. on 24 July 2026 for operating without a licence, onboarding users without KYC, and unauthorised marketing — its second action against the firm after a January 2025 cease-and-desist. Binance told Reuters Shelbit never held an account with it and was not itself sanctioned, and that its compliance team had frozen linked accounts and reported them to law enforcement.",
+      "soWhat": "This is a live illustration of the gap regulated banks keep underestimating: sanctions screening built around direct SDN matches misses the intermediary layer entirely. Shelbit was never designated and never held a Binance account, yet it routed hundreds of millions from an Iran-adjacent gambling network into a top-tier exchange after its own regulator had already flagged it as unlicensed. Any correspondent or nested relationship with major CEXs should be re-tested for exposure to non-designated but regulator-flagged intermediaries, not just SDN-listed counterparties — post-enforcement-notice continuation of flows (the $540m moved after VARA's first cease-and-desist) is itself a red flag pattern worth screening for.",
+      "date": "2026-07-31",
+      "addedAt": "2026-08-02",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UAE / Iran",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": ["Iran", "IRGC", "sanctions-evasion", "Dubai", "VARA", "Binance", "unlicensed-exchange", "gambling", "money-laundering"],
+      "sources": [
+        {
+          "name": "VARA — Licensing and Enforcement Notices (Shelbit General Trading L.L.C.)",
+          "url": "https://www.vara.ae/en/regulations/regulatory-notices/",
+          "kind": "primary"
+        },
+        {
+          "name": "CoinDesk — Iran-linked crypto network moved $4B through Dubai exchange (citing Reuters)",
+          "url": "https://www.coindesk.com/business/2026/07/31/dubai-based-crypto-exchange-tied-to-usd4-billion-iran-sanctioned-evasion-network-reuters",
+          "kind": "secondary"
+        },
+        {
+          "name": "The Block — Iran-linked exchange sent $676 million to Binance in alleged sanctions-evasion operation: Reuters",
+          "url": "https://www.theblock.co/post/410355/iran-linked-exchange-sent-676-million-to-binance-in-alleged-sanctions-evasion-operation-reuters",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fca-cp26-19-penalty-crypto-market-abuse",
+      "type": "regulatory",
+      "title": "FCA consults on updating its penalty rulebook (DEPP) to explicitly cover cryptoasset market abuse",
+      "summary": "On 15 June 2026 the FCA published CP26/19, proposing targeted amendments to its Decision Procedure and Penalties Manual (DEPP) — largely unchanged since 2010. Alongside raising minimum individual market-abuse penalties (from £100,000 to £150,000) and updating serious-financial-hardship thresholds for inflation, the FCA proposes consequential amendments making clear DEPP 6's penalty framework applies equally to cryptoasset market abuse under the Financial Services and Markets Act 2000 (Cryptoassets) Regulations 2026, including treating misuse of inside information under those Regulations the same as under existing market-abuse rules. The consultation closes 10 August 2026.",
+      "soWhat": "This is the enforcement teeth behind the market-abuse regime finalised in the FCA's 30 June 2026 crypto rules package already tracked in this feed. It confirms cryptoasset market abuse will be penalised on the same calculation basis — and against the same raised minimums — as abuse in mainstream markets, once the regime is live from October 2027. Firms building crypto trading-surveillance and market-abuse controls ahead of the September 2026 gateway should size their control investment against these penalty levels, not assume a lighter-touch crypto-specific standard.",
+      "date": "2026-06-15",
+      "addedAt": "2026-08-02",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["FCA", "DEPP", "market-abuse", "penalties", "enforcement", "cryptoasset-regime"],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Consultation Paper",
+        "ref": "CP26/19"
+      },
+      "sources": [
+        {
+          "name": "FCA — CP26/19: Changes to our penalty and decision-making policies",
+          "url": "https://www.fca.org.uk/publications/consultation-papers/cp26-19-penalty-decision-making-policies-changes",
+          "kind": "primary"
+        },
+        {
+          "name": "TradeInformer — FCA proposes raising minimum market abuse penalty and extending framework to crypto",
+          "url": "https://tradeinformer.com/regulations/fca-proposes-raising-minimum-market-abuse-penalty-and-extending-framework-to-crypto",
           "kind": "secondary"
         }
       ]

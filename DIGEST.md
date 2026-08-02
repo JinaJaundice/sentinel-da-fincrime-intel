@@ -1,14 +1,19 @@
-# Sentinel weekly digest: 1 August 2026
+# Sentinel weekly digest: 2 August 2026
 
-_12 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 5 new items; latest: Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses
-- **US rulemaking**: 4 new items; latest: CLARITY Act clears its ethics impasse with a sunset-and-divest compromise; Senate floor vote expected week of 3 August
-- **State actors & DPRK**: 4 new items; latest: Blockaid: DPRK's Lazarus Group behind 55% of H1 2026's record $1.1bn in crypto hack losses
-- **Stablecoins**: 2 new items; latest: OFAC expands Zanjani sanctions-evasion network — Zedcex/Zedxion group tied to $94bn in crypto flows
+- **Sanctions & OFAC**: 5 new items; latest: Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
+- **State actors & DPRK**: 4 new items; latest: Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
+- **US rulemaking**: 3 new items; latest: CLARITY Act clears its ethics impasse with a sunset-and-divest compromise; Senate floor vote expected week of 3 August
+- **Stablecoins**: 1 new item; latest: Singapore stablecoin payments firm Triple-A loses $11.8m in treasury wallet breach
 
 ## Notable this week
+
+### Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
+*UAE / Iran · 31 July 2026 · High impact*
+> **So what:** This is a live illustration of the gap regulated banks keep underestimating: sanctions screening built around direct SDN matches misses the intermediary layer entirely. Shelbit was never designated and never held a Binance account, yet it routed hundreds of millions from an Iran-adjacent gambling network into a top-tier exchange after its own regulator had already flagged it as unlicensed. Any correspondent or nested relationship with major CEXs should be re-tested for exposure to non-designated but regulator-flagged intermediaries, not just SDN-listed counterparties — post-enforcement-notice continuation of flows (the $540m moved after VARA's first cease-and-desist) is itself a red flag pattern worth screening for.
+Source: [VARA — Licensing and Enforcement Notices (Shelbit General Trading L.L.C.)](https://www.vara.ae/en/regulations/regulatory-notices/)
 
 ### Coldcard hardware-wallet entropy flaw drains $70M+ in bitcoin, exposing a self-custody laundering vector
 *Global · 30 July 2026 · High impact*
@@ -20,10 +25,10 @@ Source: [Coinkite — Coldcard Mk3 Seed Generation Warning (security advisory)](
 > **So what:** A single DPRK-linked actor now drives more than half of first-half hack losses, which reframes this from a generic "smart-contract risk" problem into a sanctions-exposure problem: any downstream flow of stolen funds through an exchange, bridge or OTC desk carries direct OFAC/UN-sanctions nexus risk, not just a fraud-loss risk, and should be screened and escalated accordingly.
 Source: [The Block — Crypto hacks hit record high in H1 2026 as losses top $1 billion, Blockaid says](https://www.theblock.co/post/409944/crypto-hacks-hit-record-high-in-h1-2026-as-losses-top-1-billion-blockaid-says)
 
-### OFAC expands Zanjani sanctions-evasion network — Zedcex/Zedxion group tied to $94bn in crypto flows
-*Global · 24 July 2026 · High impact*
-> **So what:** This is a live case study in how sanctioned networks route around a first designation using offshore subsidiaries rather than shutting down — banks and VASPs need continuous re-screening of counterparties tied to previously designated exchanges, not a one-time check. The $94bn transaction volume through Zedcex/Zedxion shows how large an IRGC-linked laundering rail can grow before detection; any correspondent exposure to Turkish or UAE entities in the crypto-exchange space now needs enhanced diligence against this specific network.
-Source: [US Department of the Treasury — Treasury Further Dismantles Iranian Financier Zanjani's Network](https://home.treasury.gov/news/press-releases/sb0576)
+### FCA consults on updating its penalty rulebook (DEPP) to explicitly cover cryptoasset market abuse
+*UK · 15 June 2026 · Medium impact*
+> **So what:** This is the enforcement teeth behind the market-abuse regime finalised in the FCA's 30 June 2026 crypto rules package already tracked in this feed. It confirms cryptoasset market abuse will be penalised on the same calculation basis — and against the same raised minimums — as abuse in mainstream markets, once the regime is live from October 2027. Firms building crypto trading-surveillance and market-abuse controls ahead of the September 2026 gateway should size their control investment against these penalty levels, not assume a lighter-touch crypto-specific standard.
+Source: [FCA — CP26/19: Changes to our penalty and decision-making policies](https://www.fca.org.uk/publications/consultation-papers/cp26-19-penalty-decision-making-policies-changes)
 
 ### CLARITY Act clears its ethics impasse with a sunset-and-divest compromise; Senate floor vote expected week of 3 August
 *US · 24 July 2026 · Medium impact*
@@ -35,10 +40,5 @@ Source: [CoinDesk — 2 weeks left for Clarity: State of Crypto](https://www.coi
 > **So what:** This is a social-engineering vector worth briefing fraud and complaints teams on directly: a customer who received one of these letters and then makes an unusual outbound crypto transfer, or shares 'portal' login details, is a live scam victim, not a suspicious originator, and should be handled through victim-support and transfer-hold processes rather than a standard SAR-first workflow. Mandatory crypto tax reporting has become scam cover here, and the same physical-mail-plus-QR-code playbook is likely to resurface impersonating other compliance-sounding portals (FinCEN, FCA, HMRC).
 Source: [The Block — IRS warns crypto holders fraudster sending fake letters in attempt to steal digital assets or data (citing Bloomberg)](https://www.theblock.co/post/410204/irs-crypto-holders-fraudster-sending-fake-letters-steal-digital-assets-data-bloomberg)
 
-### OFAC sanctions Iranian 'insurers' HormuzSafe and PGMIC for accepting bitcoin to run a Strait of Hormuz extortion scheme
-*Iran / Strait of Hormuz · 29 July 2026 · Medium impact*
-> **So what:** This is a state-linked entity built from the ground up to take crypto payment specifically because dollar and SWIFT rails are blocked — not an existing business caught using crypto incidentally. For a bank's fincrime programme it is a fresh sanctions-evasion typology to screen for: front-end 'service fee' or 'insurance' payment flows in bitcoin tied to Iranian maritime or IRGC-adjacent counterparties, and a reminder that OFAC is now designating the crypto payment rail itself as part of the evasion mechanism, not just the underlying entity.
-Source: [US Treasury: Treasury Disrupts Iranian Regime's Strait of Hormuz Extortion Network](https://home.treasury.gov/news/press-releases/sb0581)
-
 ## By the numbers
-12 new · 3 high-impact · 0 verified
+11 new · 3 high-impact · 0 verified

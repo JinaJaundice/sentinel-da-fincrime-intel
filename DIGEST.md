@@ -1,12 +1,11 @@
-# Sentinel weekly digest: 2 August 2026
+# Sentinel weekly digest: 4 August 2026
 
-_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_8 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 5 new items; latest: Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
-- **State actors & DPRK**: 4 new items; latest: Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
-- **US rulemaking**: 3 new items; latest: CLARITY Act clears its ethics impasse with a sunset-and-divest compromise; Senate floor vote expected week of 3 August
-- **Stablecoins**: 1 new item; latest: Singapore stablecoin payments firm Triple-A loses $11.8m in treasury wallet breach
+- **Sanctions & OFAC**: 3 new items; latest: Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
+- **State actors & DPRK**: 3 new items; latest: Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
+- **US rulemaking**: 2 new items; latest: CLARITY Act clears its ethics impasse with a sunset-and-divest compromise; Senate floor vote expected week of 3 August
 
 ## Notable this week
 
@@ -41,4 +40,4 @@ Source: [CoinDesk — 2 weeks left for Clarity: State of Crypto](https://www.coi
 Source: [The Block — IRS warns crypto holders fraudster sending fake letters in attempt to steal digital assets or data (citing Bloomberg)](https://www.theblock.co/post/410204/irs-crypto-holders-fraudster-sending-fake-letters-steal-digital-assets-data-bloomberg)
 
 ## By the numbers
-11 new · 3 high-impact · 0 verified
+8 new · 3 high-impact · 0 verified

@@ -1,13 +1,18 @@
-# Sentinel weekly digest: 5 August 2026
+# Sentinel weekly digest: 6 August 2026
 
 _8 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 3 new items; latest: Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
-- **US rulemaking**: 2 new items; latest: CLARITY Act clears its ethics impasse with a sunset-and-divest compromise; Senate floor vote expected week of 3 August
-- **State actors & DPRK**: 2 new items; latest: Reuters investigation: unlicensed Dubai exchange Shelbit moved $4bn for an Iran-linked gambling network, $676m of it reaching Binance
+- **Sanctions & OFAC**: 3 new items; latest: FinCEN fines UBS Financial Services $125m — largest-ever broker-dealer BSA penalty for recidivist violations
+- **US rulemaking**: 2 new items; latest: FinCEN fines UBS Financial Services $125m — largest-ever broker-dealer BSA penalty for recidivist violations
+- **State actors & DPRK**: 2 new items; latest: FinCEN fines UBS Financial Services $125m — largest-ever broker-dealer BSA penalty for recidivist violations
 
 ## Notable this week
+
+### FinCEN fines UBS Financial Services $125m — largest-ever broker-dealer BSA penalty for recidivist violations
+*US · 3 August 2026 · High impact*
+> **So what:** The case sets the price of recidivism: going back to the same wire-monitoring gaps FinCEN flagged in 2018 is what turned a routine finding into a record penalty. The direct read-across for a bank's financial-crime programme is that remediation commitments need real evidence behind them, not just a closed-out consent order, because FinCEN treated the unfixed 2018 findings as an aggravating factor in their own right. The Iranian-digital-assets thread is also a reminder that a client's exposure to virtual-asset investment is now itself a red flag examiners expect wire-monitoring and EDD programmes to catch, even inside a conventional correspondent/FX business with no crypto-facing product.
+Source: [FinCEN — FinCEN Assesses Historic $125 Million Penalty Against UBS Financial Services Inc. for Recidivist BSA Violations](https://www.fincen.gov/news/news-releases/fincen-assesses-historic-125-million-penalty-against-ubs-financial-services-inc)
 
 ### Coldcard exploit grows past $130m across 5,200+ wallets as Coinkite's AI-code-review framing draws pushback
 *Global · 4 August 2026 · High impact*
@@ -34,10 +39,5 @@ Source: [The Block — Blockchain Association counters National Sheriffs' Associ
 > **So what:** This is the enforcement teeth behind the market-abuse regime finalised in the FCA's 30 June 2026 crypto rules package already tracked in this feed. It confirms cryptoasset market abuse will be penalised on the same calculation basis — and against the same raised minimums — as abuse in mainstream markets, once the regime is live from October 2027. Firms building crypto trading-surveillance and market-abuse controls ahead of the September 2026 gateway should size their control investment against these penalty levels, not assume a lighter-touch crypto-specific standard.
 Source: [FCA — CP26/19: Changes to our penalty and decision-making policies](https://www.fca.org.uk/publications/consultation-papers/cp26-19-penalty-decision-making-policies-changes)
 
-### CLARITY Act clears its ethics impasse with a sunset-and-divest compromise; Senate floor vote expected week of 3 August
-*US · 24 July 2026 · Medium impact*
-> **So what:** The ethics fight is resolved, but the BSA/DeFi gap this feed has tracked since the July 4 stall — Section 604 developer-protection language, and whether DeFi counterparties end up outside Bank Secrecy Act scope — is not confirmed settled by this reporting. That is the piece that actually changes a bank's screening obligations for DeFi-adjacent counterparties, so it needs checking against the final bill text and any floor amendments once the vote lands, not the ethics provision that made the headlines.
-Source: [CoinDesk — 2 weeks left for Clarity: State of Crypto](https://www.coindesk.com/policy/2026/07/26/2-weeks-left-for-clarity-state-of-crypto)
-
 ## By the numbers
-8 new · 3 high-impact · 0 verified
+8 new · 4 high-impact · 0 verified

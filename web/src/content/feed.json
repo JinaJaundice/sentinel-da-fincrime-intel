@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-05",
+  "lastUpdated": "2026-08-06",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5000,7 +5000,14 @@
       "region": "US",
       "impact": "medium",
       "confidence": "high",
-      "tags": ["IRS", "phishing", "social-engineering", "crypto-fraud", "typology", "consumer-protection"],
+      "tags": [
+        "IRS",
+        "phishing",
+        "social-engineering",
+        "crypto-fraud",
+        "typology",
+        "consumer-protection"
+      ],
       "sources": [
         {
           "name": "The Block — IRS warns crypto holders fraudster sending fake letters in attempt to steal digital assets or data (citing Bloomberg)",
@@ -5039,7 +5046,14 @@
       "region": "US",
       "impact": "medium",
       "confidence": "medium",
-      "tags": ["CLARITY-Act", "Congress", "market-structure", "BSA", "DeFi", "ethics"],
+      "tags": [
+        "CLARITY-Act",
+        "Congress",
+        "market-structure",
+        "BSA",
+        "DeFi",
+        "ethics"
+      ],
       "sources": [
         {
           "name": "CoinDesk — 2 weeks left for Clarity: State of Crypto",
@@ -5066,7 +5080,16 @@
       "region": "Global",
       "impact": "high",
       "confidence": "high",
-      "tags": ["typology", "self-custody", "hardware-wallet", "Coldcard", "theft", "entropy-flaw", "bitcoin", "supply-chain-risk"],
+      "tags": [
+        "typology",
+        "self-custody",
+        "hardware-wallet",
+        "Coldcard",
+        "theft",
+        "entropy-flaw",
+        "bitcoin",
+        "supply-chain-risk"
+      ],
       "typology": {
         "vector": "Weak-entropy seed generation in a hardware wallet's firmware allows brute-force recovery of private keys, turning a self-custody theft into a laundering-inflow event once stolen coins are consolidated and moved to off-ramps",
         "controls": [
@@ -5110,7 +5133,17 @@
       "region": "UAE / Iran",
       "impact": "high",
       "confidence": "medium",
-      "tags": ["Iran", "IRGC", "sanctions-evasion", "Dubai", "VARA", "Binance", "unlicensed-exchange", "gambling", "money-laundering"],
+      "tags": [
+        "Iran",
+        "IRGC",
+        "sanctions-evasion",
+        "Dubai",
+        "VARA",
+        "Binance",
+        "unlicensed-exchange",
+        "gambling",
+        "money-laundering"
+      ],
       "sources": [
         {
           "name": "VARA — Licensing and Enforcement Notices (Shelbit General Trading L.L.C.)",
@@ -5142,7 +5175,14 @@
       "region": "UK",
       "impact": "medium",
       "confidence": "high",
-      "tags": ["FCA", "DEPP", "market-abuse", "penalties", "enforcement", "cryptoasset-regime"],
+      "tags": [
+        "FCA",
+        "DEPP",
+        "market-abuse",
+        "penalties",
+        "enforcement",
+        "cryptoasset-regime"
+      ],
       "publication": {
         "issuer": "FCA",
         "kind": "Consultation Paper",
@@ -5174,7 +5214,17 @@
       "region": "Global",
       "impact": "high",
       "confidence": "high",
-      "tags": ["typology", "self-custody", "hardware-wallet", "Coldcard", "theft", "entropy-flaw", "bitcoin", "supply-chain-risk", "AI"],
+      "tags": [
+        "typology",
+        "self-custody",
+        "hardware-wallet",
+        "Coldcard",
+        "theft",
+        "entropy-flaw",
+        "bitcoin",
+        "supply-chain-risk",
+        "AI"
+      ],
       "typology": {
         "vector": "A five-year-old weak-entropy seed-generation bug in a hardware wallet is now being exploited by multiple independent actors in repeated waves, with losses still climbing a week after initial disclosure",
         "controls": [
@@ -5218,7 +5268,16 @@
       "region": "US",
       "impact": "medium",
       "confidence": "high",
-      "tags": ["CLARITY-Act", "Congress", "DeFi", "safe-harbor", "money-laundering", "Section-604", "non-custodial", "law-enforcement"],
+      "tags": [
+        "CLARITY-Act",
+        "Congress",
+        "DeFi",
+        "safe-harbor",
+        "money-laundering",
+        "Section-604",
+        "non-custodial",
+        "law-enforcement"
+      ],
       "sources": [
         {
           "name": "The Block — Blockchain Association counters National Sheriffs' Association's claims as pivotal week for CLARITY Act unfolds",
@@ -5228,6 +5287,43 @@
         {
           "name": "CCN — Blockchain Association Defends CLARITY Act as Sheriffs Renew DeFi Criticism",
           "url": "https://www.ccn.com/news/crypto/blockchain-association-clarity-act-sheriffs-defi-criticism/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fincen-ubs-125m-recidivist-bsa",
+      "type": "signal",
+      "title": "FinCEN fines UBS Financial Services $125m — largest-ever broker-dealer BSA penalty for recidivist violations",
+      "summary": "On 3 August 2026, FinCEN assessed a $125 million civil money penalty against UBS Financial Services Inc, the largest ever imposed on a broker-dealer for Bank Secrecy Act violations, for willfully failing to maintain an adequate AML programme and file suspicious activity reports on more than 50,000 foreign-currency wires worth over $10 billion. The order is a recidivist case: UBS had already been penalised $14.5m by FinCEN in 2018 for substantially similar deficiencies and assured regulators it would remediate them. Among the flagged relationships was a Russian oligarch with ties to Vladimir Putin whose accounts UBS maintained despite media reporting linking him to money laundering and a company invested in Iranian digital assets. FINRA, the SEC and CFTC imposed a further $48m in related penalties, and the consent order requires an independent look-back focused on Iran, Russia, Venezuela and cartel-linked risk.",
+      "soWhat": "The case sets the price of recidivism: going back to the same wire-monitoring gaps FinCEN flagged in 2018 is what turned a routine finding into a record penalty. The direct read-across for a bank's financial-crime programme is that remediation commitments need real evidence behind them, not just a closed-out consent order, because FinCEN treated the unfixed 2018 findings as an aggravating factor in their own right. The Iranian-digital-assets thread is also a reminder that a client's exposure to virtual-asset investment is now itself a red flag examiners expect wire-monitoring and EDD programmes to catch, even inside a conventional correspondent/FX business with no crypto-facing product.",
+      "date": "2026-08-03",
+      "addedAt": "2026-08-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "FinCEN",
+        "BSA",
+        "enforcement",
+        "recidivism",
+        "wire-monitoring",
+        "Iran",
+        "Russia",
+        "Venezuela",
+        "digital-assets"
+      ],
+      "sources": [
+        {
+          "name": "FinCEN — FinCEN Assesses Historic $125 Million Penalty Against UBS Financial Services Inc. for Recidivist BSA Violations",
+          "url": "https://www.fincen.gov/news/news-releases/fincen-assesses-historic-125-million-penalty-against-ubs-financial-services-inc",
+          "kind": "primary"
+        },
+        {
+          "name": "AML Intelligence — UBS fined record $125m by FinCEN over 'willful' AML breaches",
+          "url": "https://www.amlintelligence.com/2026/08/breaking-ubs-fined-record-125m-by-fincen-over-willful-aml-breaches/",
           "kind": "secondary"
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-06",
+  "lastUpdated": "2026-08-08",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5324,6 +5324,107 @@
         {
           "name": "AML Intelligence — UBS fined record $125m by FinCEN over 'willful' AML breaches",
           "url": "https://www.amlintelligence.com/2026/08/breaking-ubs-fined-record-125m-by-fincen-over-willful-aml-breaches/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ofac-shelbit-abantether-economic-fury",
+      "type": "signal",
+      "title": "OFAC formally designates Shelbit and Aban Tether under 'Economic Fury' — the Reuters-flagged Dubai exchange now sanctioned",
+      "summary": "On 7 August 2026 Treasury's OFAC designated Dubai-based exchange Shelbit, Aban Tether, and Iranian national Siavash Kayvanpour for laundering funds through a Persian-language online gambling network and for IRGC-linked sanctions evasion, under its ongoing 'Economic Fury' campaign. The action follows a 31 July 2026 Reuters investigation (already tracked) that traced $4bn through Shelbit, $676m of it reaching Binance, before Shelbit itself was ever designated — the gap between investigative reporting and formal SDN listing was about one week.",
+      "soWhat": "This closes the loop on the Shelbit case and sets a marker banks should watch: the interval from public reporting on an unlicensed, regulator-flagged intermediary to its formal OFAC designation can now be as short as seven days. Screening programmes that only re-run SDN lists on a periodic batch cadence, rather than triaging credible investigative reporting on flagged-but-undesignated counterparties in near real time, are structurally a week or more behind enforcement.",
+      "date": "2026-08-07",
+      "addedAt": "2026-08-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UAE / Iran",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "Iran",
+        "IRGC",
+        "OFAC",
+        "sanctions-evasion",
+        "Dubai",
+        "Shelbit",
+        "Economic Fury"
+      ],
+      "sources": [
+        {
+          "name": "US Department of the Treasury — Treasury Sanctions Crypto Exchanges Funding Iran's IRGC and Enabling Illicit Finance",
+          "url": "https://home.treasury.gov/news/press-releases/sb0598",
+          "kind": "primary"
+        },
+        {
+          "name": "CoinDesk — U.S. widens Iran crypto crackdown with sanctions on two exchanges",
+          "url": "https://www.coindesk.com/policy/2026/08/07/u-s-widens-iran-crypto-crackdown-with-sanctions-on-two-exchanges",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-clarity-act-senate-no-august-vote",
+      "type": "regulatory",
+      "title": "CLARITY Act misses the Senate's August window — vote pushed past recess to September",
+      "summary": "Senate Majority Leader John Thune confirmed there will be no floor vote on the CLARITY Act crypto market-structure bill before the chamber's August recess, despite the ethics-impasse compromise reached in late July. The Senate returns 14 September 2026 with roughly three weeks before other priorities crowd the calendar again.",
+      "soWhat": "A second consecutive missed deadline (after the earlier 4 July target) signals the bill's market-structure clarity — including how DeFi and custody activity get classified — stays unresolved through at least Q3. Banks weighing whether specific digital-asset activities fall inside or outside existing BSA/SEC/CFTC perimeters should keep planning on current law, not anticipated CLARITY Act definitions, for another six weeks minimum.",
+      "date": "2026-08-06",
+      "addedAt": "2026-08-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "CLARITY Act",
+        "US Congress",
+        "market-structure",
+        "legislation"
+      ],
+      "sources": [
+        {
+          "name": "CoinDesk — Senate won't vote on crypto Clarity Act before its summer break",
+          "url": "https://www.coindesk.com/policy/2026/08/06/senate-won-t-vote-on-crypto-clarity-act-before-its-summer-break",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-dprk-lazarus-gunra-ransomware-double-barrel",
+      "type": "typology",
+      "title": "DPRK's Lazarus Group shares crypto-theft infrastructure with Gunra ransomware crew hitting South Korea",
+      "summary": "South Korean researchers (AhnLab) documented 'Operation Double Barrel': Lazarus Group and the Gunra ransomware operation running parallel intrusions against South Korean targets through 2025–H1 2026, sharing identical malware filenames, privilege-escalation tools, C2 servers and even an SSH key fingerprint, both exploiting the same vulnerabilities in mandatory Korean banking security software. Lazarus used the access for espionage backdoors across 72+ organisations including crypto exchanges; Gunra used the same access to encrypt files and extort victims.",
+      "soWhat": "State-actor crypto-theft tooling is now demonstrably leaking into ordinary criminal ransomware operations, not staying siloed to nation-state campaigns. Financial-crime and cyber teams that treat 'DPRK-attributed' and 'criminal ransomware' as separate threat feeds with separate playbooks should expect infrastructure and IOC overlap going forward — a ransomware payment traced to wallet infrastructure with DPRK fingerprints is no longer an edge case.",
+      "date": "2026-07-30",
+      "addedAt": "2026-08-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "North Korea / South Korea",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "DPRK",
+        "Lazarus",
+        "ransomware",
+        "South Korea",
+        "typology",
+        "infrastructure-sharing"
+      ],
+      "typology": {
+        "vector": "Shared malware, C2 infrastructure and exploited vulnerabilities between a DPRK state-linked crypto-theft group and an independent ransomware/extortion crew",
+        "controls": [
+          "threat-intel correlation across nation-state and criminal ransomware feeds",
+          "wallet/IOC overlap screening on ransomware payment addresses"
+        ],
+        "obligations": [
+          "SAR filing on ransomware payments with DPRK-linked wallet or infrastructure overlap"
+        ]
+      },
+      "sources": [
+        {
+          "name": "The Record (Recorded Future News) — North Korea's Lazarus Group sharing tools with ransomware hackers, South Korean agencies warn",
+          "url": "https://therecord.media/north-korea-hackers-ransomware",
           "kind": "secondary"
         }
       ]

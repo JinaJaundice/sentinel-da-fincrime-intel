@@ -34,6 +34,11 @@ The agent writes **`web/src/content/feed.json`** (plain JSON — safe to
 append, clean provenance), **not** `items.ts` (that stays the hand-seeded
 baseline). The exact, repeatable run is specified in [`INGEST.md`](INGEST.md).
 
+**Fetching:** pages are read with the local **Trafilatura** CLI (raw extracted
+markdown), not WebFetch summaries — titles, dates and reference numbers come
+from the source's own text, which is what makes the no-fabrication guardrail
+enforceable. Command + fallbacks in [`INGEST.md`](INGEST.md) ("Fetching pages").
+
 ## Output contract (the `Item` type)
 
 Each item must:

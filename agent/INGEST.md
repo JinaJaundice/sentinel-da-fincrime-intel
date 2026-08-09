@@ -15,6 +15,27 @@ them by appending to `web/src/content/feed.json`.
 - `web/src/content/items.ts` + `web/src/content/feed.json` — existing items;
   use their `id`s and `title`s to **dedupe** (don't re-publish the same story).
 
+## Fetching pages (Trafilatura first)
+
+Read every page with the local Trafilatura CLI, not WebFetch. It returns the
+page's **actual text** as markdown (plus title/URL metadata), so titles, exact
+dates and reference numbers come from the source itself rather than an
+AI-digested summary — this is the fidelity backbone of the no-fabrication
+guardrail:
+
+```powershell
+& "C:\Users\soora\AppData\Local\Python\pythoncore-3.14-64\Scripts\trafilatura.exe" --output-format markdown --with-metadata -u "URL"
+```
+
+- Long pages: redirect to a scratch file (`| Out-File -Encoding utf8 x.md`)
+  and read that instead of dumping stdout.
+- Thin output or a "You need to enable JavaScript" line means the page is
+  JS-rendered — fall back to the browser pane, or WebFetch as last resort,
+  for that URL only.
+- The metadata `date:` is the page's first-published date, not last-updated —
+  take event dates from the page **body**.
+- WebSearch still finds candidate URLs; Trafilatura is how you read them.
+
 ## Steps
 
 1. **Scan / search** the registry and the web for items dated since the last
@@ -29,7 +50,9 @@ them by appending to `web/src/content/feed.json`.
    Capture consultation papers (CP), discussion papers (DP), policy statements
    (PS), guidance consultations (GC), finalised guidance (FG) and relevant
    blogs/speeches. Take the title, **exact date** and URL from the FCA page
-   itself (a primary source) — never guess a reference or date.
+   itself (a primary source, fetched with Trafilatura per "Fetching pages"
+   above — FCA pages are server-rendered and extract cleanly) — never guess a
+   reference or date.
 2. **Dedupe** against existing ids/titles; skip anything already covered.
 3. **Draft** each new item as an [`Item`](../web/src/content/types.ts):
    - `type` (signal/regulatory/venture/solution/typology), `title`, `summary`;

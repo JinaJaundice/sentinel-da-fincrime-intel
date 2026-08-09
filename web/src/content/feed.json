@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-08",
+  "lastUpdated": "2026-08-09",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5426,6 +5426,84 @@
           "name": "The Record (Recorded Future News) — North Korea's Lazarus Group sharing tools with ransomware hackers, South Korean agencies warn",
           "url": "https://therecord.media/north-korea-hackers-ransomware",
           "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-russia-crypto-law-signed-aug2026",
+      "type": "regulatory",
+      "title": "Putin signs Russia's first comprehensive crypto law, licensing exchanges and custodians under central-bank oversight",
+      "summary": "President Putin signed the 'On Digital Currency and Digital Rights' law on 4 August 2026, converting the bill this feed tracked through the Duma on 21 July (feed-russia-duma-crypto-framework-law-2026) into final legislation. Core provisions take effect 1 September 2026: crypto is classified as property under the civil code, exchanges/brokers/custodians/depositories must register with a central-bank-supervised self-regulatory organisation and hold minimum capital of 15m rubles (~$187,000), non-qualified retail investors are capped at 300,000 rubles (~$3,800) a year, and crypto remains banned as a domestic payment method while foreign-trade use stays legal. Unlicensed platforms must exit by 1 July 2027.",
+      "soWhat": "This closes the 'pending signature' gap flagged in the prior entry: the licensing and custody framework that Sberbank, VTB, T-Bank and the Moscow Exchange have been building toward is now law, not a formality-in-waiting. From 1 September, correspondent, liquidity or CASP exposure touching any Russian-licensed exchange or custodian should be treated as direct Russia sanctions-nexus exposure, and screening logic keyed off 'pending legislation' caveats should be updated to reflect an enacted regime.",
+      "date": "2026-08-04",
+      "addedAt": "2026-08-09",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Russia",
+      "impact": "high",
+      "tags": [
+        "Russia",
+        "sanctions-evasion",
+        "legislation",
+        "licensing",
+        "custody"
+      ],
+      "sources": [
+        {
+          "name": "crypto.news — Putin signs law opening regulated crypto trading in Russia",
+          "url": "https://crypto.news/putin-signs-law-opening-regulated-crypto-trading-in-russia/",
+          "kind": "secondary"
+        },
+        {
+          "name": "Blockhead — Putin Signs Russia's First Full Crypto Law",
+          "url": "https://www.blockhead.co/2026/08/06/putin-signs-russias-first-full-crypto-law/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-bybit-rico-lawsuit-dprk-asset-freeze",
+      "type": "signal",
+      "title": "Bybit sues North Korea and Lazarus Group under RICO, wins federal court freeze on stolen assets",
+      "summary": "Bybit filed a civil RICO lawsuit on 7 August 2026 in the U.S. District Court for the District of Columbia against the DPRK, its Reconnaissance General Bureau intelligence agency, and the Lazarus Group over the February 2025 $1.5bn theft from the exchange (the largest crypto heist on record). The court simultaneously granted a preliminary injunction freezing identified stolen assets held by unidentified 'John Doe' individuals and entities, finding Bybit had shown a likelihood of success on the merits. The suit relies on blockchain forensics to trace and target laundering intermediaries who touched the stolen funds.",
+      "soWhat": "This is a new private-sector recovery lever alongside sanctions and law-enforcement seizure: a victim exchange using civil RICO and a preliminary injunction to freeze traced assets held by intermediaries, without waiting on a government enforcement action. Banks assessing DPRK/Lazarus-linked wallet exposure should expect more of this pattern — private litigation reaching further downstream through laundering chains than OFAC designations alone — and should treat a named 'John Doe' defendant in this case as a live freeze order, not just a screening flag.",
+      "date": "2026-08-07",
+      "addedAt": "2026-08-09",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Global",
+      "impact": "high",
+      "tags": [
+        "DPRK",
+        "Lazarus",
+        "asset-recovery",
+        "litigation",
+        "Bybit",
+        "typology"
+      ],
+      "typology": {
+        "vector": "State-linked crypto theft proceeds pursued through private civil RICO litigation and court-ordered asset freezes against traced laundering intermediaries, rather than solely through sanctions or criminal seizure",
+        "controls": [
+          "Screen incoming deposits against wallet clusters named in the Bybit v. DPRK docket and related court filings",
+          "Treat a named John Doe defendant/frozen-asset order as equivalent in urgency to an OFAC designation for transaction-blocking purposes"
+        ],
+        "obligations": [
+          "SAR filing on any customer funds traced to addresses covered by the injunction",
+          "Legal hold coordination where a customer's assets are subject to a US court freeze order tied to this litigation"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CoinDesk — Bybit sues North Korea and Lazarus Group over $1.5 billion hack, secures asset freeze",
+          "url": "https://www.coindesk.com/policy/2026/08/07/bybit-sues-north-korea-and-lazarus-group-over-usd1-5-billion-hack-secures-asset-freeze",
+          "kind": "secondary"
+        },
+        {
+          "name": "PR Newswire — Bybit Sues North Korea and Lazarus Group, Secures Preliminary Injunction Freezing Stolen Assets",
+          "url": "https://www.prnewswire.com/news-releases/bybit-sues-north-korea-and-lazarus-group-secures-preliminary-injunction-freezing-stolen-assets-in-landmark-crypto-asset-recovery-effort-302846491.html",
+          "kind": "primary"
         }
       ]
     }

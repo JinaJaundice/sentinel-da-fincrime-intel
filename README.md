@@ -28,13 +28,15 @@ seed + the agent's [`feed.json`](web/src/content/feed.json), merged in
 [`content/index.ts`](web/src/content/index.ts)). Adding a tab is a nav entry +
 seed data — never new plumbing.
 
-Tabs: **Overview · Learn · Trends · Themes · Signals · Ventures · Solutions ·
-Intelligence · Radar · Activity.**
+Tabs: **Overview · Learn · Trends · Themes · Signals · FCA · Atlas · Ventures ·
+Solutions · Intelligence · Radar · Activity.**
 
 ## What it does
 
 - **Aggregate** — dense, searchable, sortable tables per stream, with per-tab
-  dashboards and a command-center Overview (with a "This week" pulse).
+  dashboards and a command-center Overview (with a "This week" pulse). An
+  **FCA** tab filters signals to regulator publications, keyed on each item's
+  issuer, kind and reference.
 - **Understand** — a **Learn** hub (guided start-here + a searchable glossary
   with inline tooltips) and a "how it works" primer on every typology.
 - **Trust** — client-ready signals on each item: a human **Verified** flag, a
@@ -43,12 +45,15 @@ Intelligence · Radar · Activity.**
   Markdown / CSV, or build a **briefing pack** across views into a one-pager.
 - **Track** — a **Trends** tab (volume × risk over time, theme momentum) and a
   **Radar** of key regulatory dates, plus a forwardable **weekly digest**.
+- **Map** — an **Atlas** world map of crypto-regulation status by jurisdiction
+  (around 40 sourced entries: a curated seed plus agent-maintained updates).
 
 ## The ingestion agent — auto-publish
 
 The agent runs on a daily local schedule: it web-searches new developments,
 drafts them as `Item`s (**every item must carry a real source URL**), appends
-`feed.json`, regenerates [`DIGEST.md`](DIGEST.md), and commits + pushes — which
+`feed.json`, keeps the Atlas jurisdictions current (`jurisdictions.json`),
+regenerates [`DIGEST.md`](DIGEST.md), and commits + pushes — which
 auto-deploys the live site. **It auto-publishes (no human-in-the-loop)**; the
 **Activity** tab is the transparency log. See
 [`agent/INGEST.md`](agent/INGEST.md).
@@ -68,13 +73,16 @@ cd web
 npm install
 npm run dev      # http://localhost:5174
 npm run lint     # ESLint
+npm run prose    # plain-language gate on hand-authored copy (feed.json exempt)
 npm test         # Vitest
-npm run build    # tsc + vite build  (CI runs lint + test + build on every push)
+npm run digest   # regenerate DIGEST.md
+npm run build    # tsc + vite build  (CI runs lint + prose + test + build on every push)
 ```
 
 ## Status
 
 The roadmap is delivered — foundation, the auto-publish agent, analytics,
-delivery & export, a knowledge layer, a verified tier, trends + digest, and
-dev-infra (lint / test / CI). See [`ROADMAP.md`](ROADMAP.md) for the phase log
+delivery & export, a knowledge layer, a verified tier, trends + digest,
+dev-infra (lint / prose / test / CI), an FCA publications tab, and a
+regulatory Atlas. See [`ROADMAP.md`](ROADMAP.md) for the phase log
 and [`HANDOFF.md`](HANDOFF.md) for a session-to-session snapshot.

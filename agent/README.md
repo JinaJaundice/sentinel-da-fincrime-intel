@@ -1,10 +1,10 @@
 # Sentinel ingestion agent (Phase 2)
 
 The agent is what makes Sentinel "routinely updated." It
-**monitors → classifies → drafts → publishes** — **autonomously**. As of
+**monitors → classifies → drafts → publishes**, **autonomously**. As of
 the auto-publish decision there is **no human-in-the-loop gate**: items go
 straight to `published`. The [Activity](../web/src/views/Activity.tsx) view is
-a transparency log of what it shipped, not an approval queue.
+a transparency log of what it shipped. Nothing waits there for approval.
 
 > **The one guardrail that replaces the human:** every auto-published item
 > **must carry a real source URL** and **summarise-and-link** (never invent
@@ -30,12 +30,12 @@ a transparency log of what it shipped, not an approval queue.
                  Activity view = transparency log
 ```
 
-The agent writes **`web/src/content/feed.json`** (plain JSON — safe to
+The agent writes **`web/src/content/feed.json`** (plain JSON, safe to
 append, clean provenance), **not** `items.ts` (that stays the hand-seeded
 baseline). The exact, repeatable run is specified in [`INGEST.md`](INGEST.md).
 
 **Fetching:** pages are read with the local **Trafilatura** CLI (raw extracted
-markdown), not WebFetch summaries — titles, dates and reference numbers come
+markdown), not WebFetch summaries. Titles, dates and reference numbers come
 from the source's own text, which is what makes the no-fabrication guardrail
 enforceable. Command + fallbacks in [`INGEST.md`](INGEST.md) ("Fetching pages").
 
@@ -46,9 +46,9 @@ Each item must:
 - be a valid [`Item`](../web/src/content/types.ts) with `status: "published"`,
   `addedBy: "agent"`, and today's `addedAt`;
 - include **at least one `source` with a URL** (hard requirement);
-- carry a **"So what"** (the bank financial-crime lens), not just a summary;
+- carry a **"So what"** (the bank financial-crime lens) on top of the summary;
 - estimate `impact`; for lower-confidence items, say so in the `summary`
-  ("Confidence: medium — …");
+  ("Confidence: medium, …");
 - label anything unverifiable `[Illustrative]`; never invent financings or
   enforcement actions.
 
@@ -67,5 +67,5 @@ See [`INGEST.md`](INGEST.md) for the exact prompt the schedule executes.
 ## Source registry
 
 See [`sources.ts`](sources.ts). Licensing rule: summarise and link, never
-republish paywalled report bodies — store the takeaway, the "So what", and
+republish paywalled report bodies, store the takeaway, the "So what", and
 the source URL.

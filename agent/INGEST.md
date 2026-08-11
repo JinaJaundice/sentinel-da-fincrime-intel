@@ -11,16 +11,16 @@ them by appending to `web/src/content/feed.json`.
 
 ## Inputs
 
-- [`sources.ts`](sources.ts) — the source registry to scan.
-- `web/src/content/items.ts` + `web/src/content/feed.json` — existing items;
+- [`sources.ts`](sources.ts), the source registry to scan.
+- `web/src/content/items.ts` + `web/src/content/feed.json`: existing items;
   use their `id`s and `title`s to **dedupe** (don't re-publish the same story).
 
 ## Fetching pages (Trafilatura first)
 
-Read every page with the local Trafilatura CLI, not WebFetch. It returns the
+Read every page with the local Trafilatura CLI instead of WebFetch. It returns the
 page's **actual text** as markdown (plus title/URL metadata), so titles, exact
-dates and reference numbers come from the source itself rather than an
-AI-digested summary — this is the fidelity backbone of the no-fabrication
+dates and reference numbers come from the source itself instead of an
+AI-digested summary. This is the fidelity backbone of the no-fabrication
 guardrail:
 
 ```powershell
@@ -30,9 +30,9 @@ guardrail:
 - Long pages: redirect to a scratch file (`| Out-File -Encoding utf8 x.md`)
   and read that instead of dumping stdout.
 - Thin output or a "You need to enable JavaScript" line means the page is
-  JS-rendered — fall back to the browser pane, or WebFetch as last resort,
+  JS-rendered, fall back to the browser pane, or WebFetch as last resort,
   for that URL only.
-- The metadata `date:` is the page's first-published date, not last-updated —
+- The metadata `date:` is the page's first-published date, and last-updated is a different field:
   take event dates from the page **body**.
 - WebSearch still finds candidate URLs; Trafilatura is how you read them.
 
@@ -40,9 +40,9 @@ guardrail:
 
 1. **Scan / search** the registry and the web for items dated since the last
    `lastUpdated` (regulation, enforcement, reports, funding/M&A, typologies).
-   **FCA publications — sweep exhaustively.** Each run, enumerate the FCA's own
+   **FCA publications, sweep exhaustively.** Each run, enumerate the FCA's own
    listings and add EVERY crypto- or financial-crime-related publication not
-   already in the store (dedupe by `publication.ref`, e.g. `CP25/25`), not just
+   already in the store (dedupe by `publication.ref`, e.g. `CP25/25`), going past
    the headline ones:
    - crypto regime index (lists all crypto CP/DP/GC): https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation
    - financial-crime hub: https://www.fca.org.uk/firms/financial-crime
@@ -51,33 +51,33 @@ guardrail:
    (PS), guidance consultations (GC), finalised guidance (FG) and relevant
    blogs/speeches. Take the title, **exact date** and URL from the FCA page
    itself (a primary source, fetched with Trafilatura per "Fetching pages"
-   above — FCA pages are server-rendered and extract cleanly) — never guess a
+   above, FCA pages are server-rendered and extract cleanly), never guess a
    reference or date.
 2. **Dedupe** against existing ids/titles; skip anything already covered.
 3. **Draft** each new item as an [`Item`](../web/src/content/types.ts):
    - `type` (signal/regulatory/venture/solution/typology), `title`, `summary`;
-   - **`soWhat`** — what it means for a regulated bank's financial-crime posture;
+   - **`soWhat`**: what it means for a regulated bank's financial-crime posture;
    - `date` (event), `addedAt` (today), `addedBy: "agent"`, `status: "published"`;
    - `region`, `impact`, `tags`, and **`sources` with at least one URL**;
-   - `confidence` (`high`/`medium`/`low`) — your honest certainty in the item;
-   - mark each source's `kind`: `primary` (the official / originating document —
+   - `confidence` (`high`/`medium`/`low`): your honest certainty in the item;
+   - mark each source's `kind`: `primary` (the official / originating document, 
      a regulator, court, the filing itself) or `secondary` (reporting / analysis);
    - type extras where relevant (venture/solution/typology blocks);
    - for a **regulator publication** (e.g. an FCA paper) use `type: "regulatory"`
      and set the `publication { issuer, kind, ref }` extra (e.g. issuer "FCA",
-     kind "Consultation Paper", ref "CP25/14") — it then surfaces in both Signals
+     kind "Consultation Paper", ref "CP25/14"), and it then surfaces in both Signals
      and the **FCA** tab;
-   - **never set `verified`** — that flag is a human vouch only. The agent
+   - **never set `verified`**: that flag is a human vouch only. The agent
      publishes unverified; a human marks `verified: true` when they vouch.
-4. **Validate** (hard gates — drop the item if it fails):
+4. **Validate** (hard gates, drop the item if it fails):
    - has ≥1 source URL; no fabricated specifics; illustrative content labelled
      `[Illustrative]`; paywalled bodies summarised-and-linked only.
 5. **Write**: append the new items to `feed.json` and set `lastUpdated` to today.
-6. **Digest**: regenerate the rolling weekly one-pager — `npm --prefix web run digest`
+6. **Digest**: regenerate the rolling weekly one-pager, `npm --prefix web run digest`
    (writes `DIGEST.md` at the repo root: a "what moved + so what" summary of the
-   last 7 days, by `addedAt`). Cheap and idempotent — run it every cycle so the
+   last 7 days, by `addedAt`). Cheap and idempotent, run it every cycle so the
    digest stays current.
-7. **Atlas jurisdictions** — keep the crypto-regulation world map current. If a
+7. **Atlas jurisdictions**: keep the crypto-regulation world map current. If a
    country's status materially changed (a regime came into force, a ban was
    lifted or imposed, a new framework proposed) or a notable jurisdiction is
    missing, add or override an entry in
@@ -86,7 +86,7 @@ guardrail:
    status (implemented | in-progress | none), headline, summary, soWhat?,
    keyDates?, sources[{name,url}] }`. Use a real source and the country's true
    status; the seed in `jurisdictions.ts` is the baseline your entry overrides.
-   This data changes **slowly** — only touch it when something actually changed,
+   This data changes **slowly**, only touch it when something actually changed,
    and never invent a status or coordinates.
 8. (Remote mode) commit the diff (include `DIGEST.md` and any
    `jurisdictions.json` change): `feat(feed): ingest YYYY-MM-DD (N items)`.
@@ -100,9 +100,9 @@ guardrail:
 ## Example run
 
 The 2026-06-03 run produced 7 items (3 regulatory, 2 signal, 1 venture, 1
-typology) — the GENIUS Act stablecoin NPRM, the FATF stablecoin report, the
+typology), the GENIUS Act stablecoin NPRM, the FATF stablecoin report, the
 FDIC rule, the OFAC/Tether $344m freeze, DPRK IT-worker laundering, TRM's
-Series C, and Treasury's "programmable enforcement" push — each with a source
+Series C, and Treasury's "programmable enforcement" push, each with a source
 URL and a "So what". That run is the current contents of `feed.json`; use it
 as the quality bar.
 

@@ -8,7 +8,7 @@ npm install        # one-time
 npm run dev        # → http://localhost:5174
 ```
 
-- **Port 5174** (the Compliance Engine owns 5173 — don't collide).
+- **Port 5174** (the Compliance Engine owns 5173, don't collide).
 - Preview launch config is named **`sentinel`** in the repo-root
   `.claude/launch.json` (runs `npm --prefix da-fincrime-intel/web run dev`).
   Start it with `preview_start("sentinel")`.
@@ -29,10 +29,10 @@ npm run dev        # → http://localhost:5174
 > `ANTHROPIC_API_KEY` is only for the agent), and it's independent of the
 > Vercel git-linked deploy. Tests live next to the code as `*.test.ts`.
 
-## The headless gotcha — important
+## The headless gotcha: important
 
-**`preview_screenshot` times out on this machine** — headless rasterisation
-is blocked here. This is environmental, not a bug in the app. **Verify via
+**`preview_screenshot` times out on this machine**: headless rasterisation
+is blocked here. The cause is the environment and the app is fine. **Verify via
 `preview_snapshot`** (accessibility tree: exact text, roles, structure) and
 `preview_console_logs`. Don't burn time retrying screenshots. (Same
 constraint is noted in the machine-local memory's image-generation pipeline.)
@@ -51,5 +51,5 @@ constraint is noted in the machine-local memory's image-generation pipeline.)
 - `vite-env.d.ts` (`/// <reference types="vite/client" />`) is required or
   `tsc` errors on the `index.css` side-effect import.
 - Briefing-pack localStorage key: `sentinel.pack.v1`.
-- Tailwind v4 only generates classes it sees as **literal strings** — keep
+- Tailwind v4 only generates classes it sees as **literal strings**: keep
   colour in the enumerated tokens (see [DESIGN](DESIGN.md)).

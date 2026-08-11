@@ -1,13 +1,13 @@
-# Sentinel weekly digest: 9 August 2026
+# Sentinel weekly digest: 11 August 2026
 
-_8 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC**: 6 new items; latest: Bybit sues North Korea and Lazarus Group under RICO, wins federal court freeze on stolen assets
 - **State actors & DPRK**: 4 new items; latest: Bybit sues North Korea and Lazarus Group under RICO, wins federal court freeze on stolen assets
 - **US rulemaking**: 2 new items; latest: OFAC formally designates Shelbit and Aban Tether under 'Economic Fury' — the Reuters-flagged Dubai exchange now sanctioned
 - **Stablecoins**: 1 new item; latest: OFAC formally designates Shelbit and Aban Tether under 'Economic Fury' — the Reuters-flagged Dubai exchange now sanctioned
-- **MiCA & the EU**: 1 new item; latest: Putin signs Russia's first comprehensive crypto law, licensing exchanges and custodians under central-bank oversight
+- **Travel Rule**: 1 new item; latest: AUSTRAC suspends Cryptolink, pulling 96 crypto ATMs offline for reporting failures
 
 ## Notable this week
 
@@ -36,10 +36,10 @@ Source: [FinCEN — FinCEN Assesses Historic $125 Million Penalty Against UBS Fi
 > **So what:** This is a live custody-vendor due-diligence case study, not a one-off event: three separate drain waves and a dozen independent actors over a week show the theft is still active, so institutions accepting BTC deposits should keep treating large inflows from newly-emptied, previously dormant single-sig wallets as a standing screening flag rather than a closed incident. Separately, do not accept a vendor's AI-assisted-review claim as a substitute for evidence of actual security testing — the CEO's comments here are a marketing framing that security researchers explicitly rejected, and a five-year-undetected entropy bug is exactly the kind of finding a real audit trail (not a vendor's characterisation of its process) should surface in any hardware/software wallet vendor assessment.
 Source: [Coinkite — Coldcard Mk3 Seed Generation Warning (security advisory)](https://blog.coinkite.com/coldcard-mk3-seed-generation-warning/)
 
-### DPRK's Lazarus Group shares crypto-theft infrastructure with Gunra ransomware crew hitting South Korea
-*North Korea / South Korea · 30 July 2026 · Medium impact*
-> **So what:** State-actor crypto-theft tooling is now demonstrably leaking into ordinary criminal ransomware operations, not staying siloed to nation-state campaigns. Financial-crime and cyber teams that treat 'DPRK-attributed' and 'criminal ransomware' as separate threat feeds with separate playbooks should expect infrastructure and IOC overlap going forward — a ransomware payment traced to wallet infrastructure with DPRK fingerprints is no longer an edge case.
-Source: [The Record (Recorded Future News) — North Korea's Lazarus Group sharing tools with ransomware hackers, South Korean agencies warn](https://therecord.media/north-korea-hackers-ransomware)
+### Minnesota bans virtual currency kiosks statewide after $1m in elder-targeted scams
+*US · 1 August 2026 · Medium impact*
+> **So what:** A third US state has now moved from disclosure/limit rules to an outright kiosk ban, and the state-by-state pattern (Indiana, Tennessee, now Minnesota) is accelerating faster than any federal crypto-ATM rule. For a bank with a retail-scam-prevention program, this is a jurisdiction-specific control change to track directly — a customer wiring or withdrawing cash for a Minnesota crypto kiosk after 1 August is now funding an illegal channel, which sharpens the case for treating crypto-kiosk-adjacent cash withdrawals as an elder-fraud red flag rather than a lower-priority note.
+Source: [MPR News — A ban on crypto kiosks in Minnesota begins Aug. 1. What are these machines?](https://www.mprnews.org/story/2026/07/28/what-are-crypto-kiosks-ban-august-1)
 
 ## By the numbers
-8 new · 5 high-impact · 0 verified
+11 new · 5 high-impact · 0 verified

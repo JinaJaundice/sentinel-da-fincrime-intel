@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-09",
+  "lastUpdated": "2026-08-11",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5504,6 +5504,115 @@
           "name": "PR Newswire — Bybit Sues North Korea and Lazarus Group, Secures Preliminary Injunction Freezing Stolen Assets",
           "url": "https://www.prnewswire.com/news-releases/bybit-sues-north-korea-and-lazarus-group-secures-preliminary-injunction-freezing-stolen-assets-in-landmark-crypto-asset-recovery-effort-302846491.html",
           "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-austrac-cryptolink-suspension-aug2026",
+      "type": "regulatory",
+      "title": "AUSTRAC suspends Cryptolink, pulling 96 crypto ATMs offline for reporting failures",
+      "summary": "Australia's financial intelligence regulator AUSTRAC suspended crypto-ATM operator Cryptolink Pty Ltd's VASP registration for three months from 9 August 2026, taking its 96 CATMs offline nationwide. Cryptolink had entered an enforceable undertaking with AUSTRAC in October 2025 after its Crypto Taskforce found late threshold-transaction reporting and weak AML/CTF risk assessments, and paid a A$56,340 infringement notice at the time — but subsequently failed to file required threshold transaction reports or respond to an AUSTRAC information request.",
+      "soWhat": "A regulator moved from an enforceable undertaking and a modest infringement notice straight to a full registration suspension once basic reporting obligations lapsed a second time — the escalation path took under a year. For a bank assessing correspondent or on-ramp exposure to crypto-ATM operators, a prior enforceable undertaking should be read as a live risk flag, not a closed remediation: recidivism on threshold-transaction reporting is treated as grounds to shut the channel down, not just fine it again.",
+      "date": "2026-08-09",
+      "addedAt": "2026-08-11",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Australia",
+      "impact": "medium",
+      "tags": [
+        "AUSTRAC",
+        "crypto-ATM",
+        "VASP",
+        "AML-CTF",
+        "enforcement",
+        "Australia"
+      ],
+      "sources": [
+        {
+          "name": "AUSTRAC — AUSTRAC cracks down on Cryptolink for late reporting",
+          "url": "https://www.austrac.gov.au/new-and-media/news/austrac-cracks-down-cryptolink-late-reporting",
+          "kind": "primary"
+        },
+        {
+          "name": "Mirage News — AUSTRAC Orders Cryptolink's Crypto ATMs Offline",
+          "url": "https://www.miragenews.com/austrac-orders-cryptolinks-crypto-atms-offline-1724321/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-coinsbuy-8m-cross-chain-hack-aug2026",
+      "type": "signal",
+      "title": "Coinsbuy loses $8m in coordinated TRON-Ethereum drain, funds routed through instant exchanges into Monero",
+      "summary": "Crypto exchange Coinsbuy lost roughly $8.07m on 9 August 2026 when an attacker drained eight TRON wallets and three Ethereum wallets within about an hour, linking both chains through cross-chain swapper Bridgers into a single operation. Onchain researchers found about 79% of the stolen funds routed through instant exchange FixedFloat across roughly 50 single-use addresses before being laundered into Monero; ChangeNOW froze a six-figure sum after being contacted by investigators. Coinsbuy refilled the drained wallets within 24 hours from its own reserves and says no client lost funds; the attack vector is still unconfirmed.",
+      "soWhat": "The laundering path, not the hack itself, is the compliance-relevant detail: stolen funds moved through no-KYC instant-exchange aggregators within minutes and were converted to Monero before most of it could be frozen, and only one counterparty (ChangeNOW) cooperated with a freeze request. Banks and VASPs screening inbound flows should treat rapid multi-hop routing through instant-swap services as a laundering-in-progress signal in its own right, independent of whether the originating exchange has been formally linked to a hack yet.",
+      "date": "2026-08-09",
+      "addedAt": "2026-08-11",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Global",
+      "impact": "medium",
+      "tags": [
+        "exchange-hack",
+        "cross-chain",
+        "instant-exchange",
+        "Monero",
+        "laundering",
+        "TRON",
+        "Ethereum"
+      ],
+      "typology": {
+        "vector": "Stolen exchange funds split across two chains, linked via a cross-chain swapper, then layered through no-KYC instant-exchange aggregators using single-use addresses before conversion to a privacy coin",
+        "controls": [
+          "Flag inbound deposits sourced from instant-swap aggregators (e.g. FixedFloat) that follow a cross-chain bridge hop within a short time window",
+          "Maintain a rapid-freeze liaison channel with major instant-exchange operators for time-sensitive laundering-in-progress requests"
+        ],
+        "obligations": [
+          "SAR filing on funds traced to the Coinsbuy incident wallet clusters",
+          "Enhanced due diligence on counterparties that route volume through privacy-coin off-ramps following a cross-chain hop"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CoinDesk — Crypto exchange Coinsbuy loses $8 million in coordinated two-blockchain attack",
+          "url": "https://www.coindesk.com/business/2026/08/10/crypto-exchange-coinsbuy-loses-usd8-million-in-coordinated-two-blockchain-attack",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-minnesota-crypto-atm-ban-aug2026",
+      "type": "regulatory",
+      "title": "Minnesota bans virtual currency kiosks statewide after $1m in elder-targeted scams",
+      "summary": "Minnesota's ban on cryptocurrency kiosks (SF 3868, signed by Governor Tim Walz on 5 May 2026) took effect 1 August 2026, prohibiting anyone from installing, operating, maintaining or making available a virtual-currency kiosk in the state; machines must be deactivated immediately and physically removed from public locations by 31 December 2026. The Department of Commerce cited roughly $1m in resident losses from 2023-2025 tied to crypto-kiosk scams, concentrated among older residents pressured through fake-emergency and impersonation scripts; the FBI separately reported $388m in national crypto-ATM scam losses in 2025, up 58% year-on-year. Minnesota joins Indiana and Tennessee among states banning the machines outright.",
+      "soWhat": "A third US state has now moved from disclosure/limit rules to an outright kiosk ban, and the state-by-state pattern (Indiana, Tennessee, now Minnesota) is accelerating faster than any federal crypto-ATM rule. For a bank with a retail-scam-prevention program, this is a jurisdiction-specific control change to track directly — a customer wiring or withdrawing cash for a Minnesota crypto kiosk after 1 August is now funding an illegal channel, which sharpens the case for treating crypto-kiosk-adjacent cash withdrawals as an elder-fraud red flag rather than a lower-priority note.",
+      "date": "2026-08-01",
+      "addedAt": "2026-08-11",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "US",
+      "impact": "medium",
+      "tags": [
+        "crypto-ATM",
+        "elder-fraud",
+        "state-law",
+        "Minnesota",
+        "US",
+        "scam-prevention"
+      ],
+      "sources": [
+        {
+          "name": "MPR News — A ban on crypto kiosks in Minnesota begins Aug. 1. What are these machines?",
+          "url": "https://www.mprnews.org/story/2026/07/28/what-are-crypto-kiosks-ban-august-1",
+          "kind": "secondary"
+        },
+        {
+          "name": "Fox News — Minnesota bans crypto ATMs after scammers drain nearly $1M from residents",
+          "url": "https://www.foxnews.com/tech/minnesota-bans-crypto-atms-scam-surge",
+          "kind": "secondary"
         }
       ]
     }

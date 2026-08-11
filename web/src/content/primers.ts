@@ -15,7 +15,7 @@ export interface TypologyPrimer {
 
 export const TYPOLOGY_PRIMERS: Record<string, TypologyPrimer> = {
   "typ-cross-chain-bridge": {
-    how: "Launderers move value across different blockchains through bridges and decentralised exchanges, converting and re-converting so the trail breaks at each hop. Because most tools reason about one chain at a time, a single-chain view loses the thread the moment funds cross over. Detection has to reconstruct the journey across chains and score bridge exposure rather than inspect deposits in isolation.",
+    how: "Launderers move value across different blockchains through bridges and decentralised exchanges, converting and re-converting so the trail breaks at each hop. Because most tools reason about one chain at a time, a single-chain view loses the thread the moment funds cross over. Detection has to reconstruct the journey across chains and score bridge exposure; deposits inspected in isolation miss it.",
     terms: ["bridge", "chain-hopping", "kyt", "layering", "dex"],
   },
   "typ-mixer-aec": {
@@ -27,7 +27,7 @@ export const TYPOLOGY_PRIMERS: Record<string, TypologyPrimer> = {
     terms: ["travel-rule", "sunrise", "vasp", "edd"],
   },
   "typ-stablecoin-rails": {
-    how: "Stablecoins have become the preferred laundering rail for their speed, liquidity and dollar peg, so illicit value increasingly moves as tokens rather than native crypto. Unusually, the issuer can often freeze or burn tokens at a flagged address, a disruption lever banks lack on most assets. Building the capability to trace stablecoin flows and coordinate freezes turns the biggest exposure into the fastest response.",
+    how: "Stablecoins have become the preferred laundering rail for their speed, liquidity and dollar peg, so illicit value increasingly moves as tokens, ahead of native crypto. Unusually, the issuer can often freeze or burn tokens at a flagged address, a disruption lever banks lack on most assets. Building the capability to trace stablecoin flows and coordinate freezes turns the biggest exposure into the fastest response.",
     terms: ["stablecoin", "issuer-freeze", "transaction-monitoring", "kyt"],
   },
   "feed-dprk-it-workers": {
@@ -35,7 +35,7 @@ export const TYPOLOGY_PRIMERS: Record<string, TypologyPrimer> = {
     terms: ["dprk", "kyc", "sdn", "layering"],
   },
   "feed-chinese-mln-laas-typology": {
-    how: "Chinese-language money-laundering networks operate as a professional, fee-charging back-office that cleans proceeds for many unrelated criminal groups, from romance scams to ransomware to state actors. Because the same wallet clusters serve everyone, seemingly unrelated crimes converge on shared infrastructure. Detection depends on cross-entity cluster analytics rather than one-to-one attribution, plus feeding advertised service wallets into screening.",
+    how: "Chinese-language money-laundering networks operate as a professional, fee-charging back-office that cleans proceeds for many unrelated criminal groups, from romance scams to ransomware to state actors. Because the same wallet clusters serve everyone, seemingly unrelated crimes converge on shared infrastructure. Detection depends on cross-entity cluster analytics, beyond one-to-one attribution, plus feeding advertised service wallets into screening.",
     terms: ["laas", "on-chain-analytics", "stablecoin", "layering"],
   },
   "feed-pig-butchering-ai-evolution-2026": {

@@ -65,6 +65,73 @@ const RULES = [
     "codename",
     "Use the real noun.",
   ],
+  // ---- the humaniser layer (plain-writing-voice/HUMANISER.md, 11 Aug 2026):
+  // the structural tells that survive once the words above are clean ----
+  [
+    /\brather than\b/gi,
+    '"X rather than Y" contrast',
+    "State what it is; drop the foil.",
+  ],
+  [
+    /\b(?:is|are) not (?:a(?! party| stakeholder)|an|another|the(?! same))\b/gi,
+    "negation flourish",
+    "Say what it is or what happens instead.",
+  ],
+  [
+    /\bnot (?:just|only|merely|simply)\b/gi,
+    '"not just X but Y" parallelism',
+    "State the positive on its own.",
+  ],
+  [
+    /\b(?:crucial|pivotal|meticulous(?:ly)?|intricate|intricacies|tapestry|testament to|delve[sd]?|delving|deep dive|foster(?:s|ing|ed)?|bolster(?:s|ing|ed)?|garner(?:s|ing|ed)?|empower(?:s|ing|ed)?|showcas(?:e[sd]|ing)|underscor(?:e[sd]|ing)|boasts?|vibrant|holistic)\b/gi,
+    "AI vocabulary",
+    "Use the plain word, or give the number.",
+  ],
+  [
+    /\b(?<!anonymity-)enhanc(?:e[sd]?|ing)\b(?![- ]due[- ]diligence| DD\b| screening| scrutiny| monitoring)/gi,
+    "AI vocabulary ('enhance')",
+    "Say what improves and by how much.",
+  ],
+  [
+    /\b(?:comprehensive|market-leading|end[- ]to[- ]end(?! test)|proven)\b/gi,
+    "promotional decoration",
+    "Name the test, the scope, or the deployment.",
+  ],
+  [
+    /\bkey (?:role|part|driver|factor|component|element|priority|benefit|advantage|takeaway|consideration|milestone|differentiator|enabler|theme|insight|strength)s?\b/gi,
+    "'key' as decoration",
+    "Cut it or say why it matters.",
+  ],
+  [
+    /\balign(?:s|ing)? with\b/gi,
+    "'aligns with'",
+    "Say what actually matches what.",
+  ],
+  [
+    /\b(?:serves|stands|functions|acts) as (?:a|an|the)\b/gi,
+    "copula dodge",
+    'Write "is".',
+  ],
+  [
+    /\b(?:represents|marks) (?:a|an|the) (?:\w+ ){0,2}(?:shift|step|change|moment|milestone|opportunity|evolution|departure|turning)\b/gi,
+    "significance inflation",
+    "Say what happened, with a date or number.",
+  ],
+  [
+    /\b(?:pivotal moment|significant shift|set(?:s|ting)? the stage|turning point|strategic importance|uniquely positioned|evolving landscape|highlights? the (?:importance|significance)|reflect(?:s|ing)? (?:the )?broader)\b/gi,
+    "significance inflation",
+    "Say what happened, with a date or number.",
+  ],
+  [
+    /\b(?:industry reports?|analysts? (?:note|expect|say|agree)|experts? (?:agree|argue|note|say)|widely (?:recognised|recognized|regarded|seen))\b|\ba leading (?!indicator)/gi,
+    "vague attribution",
+    "Name the source or drop the claim.",
+  ],
+  [
+    /,\s+(?:enabling|ensuring|reflecting|highlighting|demonstrating|positioning|reinforcing|underscoring|showcasing|signalling|cementing|strengthening|bolstering|fostering|empowering|unlocking)\b[^.\n]{0,90}(?:\.|\n|$)/gi,
+    "trailing participle analysis",
+    "Delete the clause or promote it to a sentence with evidence.",
+  ],
 ];
 
 // A slogan: two very short complete sentences in a row, neither carrying
@@ -94,10 +161,15 @@ function copyStrings(source) {
     .replace(/\/\*[\s\S]*?\*\//g, blank)
     .replace(/(^|[^:])\/\/[^\n]*/g, (m, lead) => lead + blank(m.slice(lead.length)));
   const found = [];
-  const literal = /"((?:[^"\\]|\\.){12,})"|'((?:[^'\\]|\\.){12,})'|`((?:[^`\\$]|\\.){12,})`/g;
+  // Match EVERY quoted span, however short, then length-filter. A minimum in
+  // the regex itself let a short string ("react" in an import) flip quote
+  // parity, after which the scanner read the code BETWEEN strings as the
+  // string and the real copy was swallowed and discarded unseen.
+  const literal = /"((?:[^"\\]|\\.)*)"|'((?:[^'\\]|\\.)*)'|`((?:[^`\\$]|\\.)*)`/g;
   let m;
   while ((m = literal.exec(withoutComments)) !== null) {
     const text = m[1] ?? m[2] ?? m[3];
+    if (text.length < 12) continue;
     // Skip anything that is plainly not prose: class lists, urls, ids.
     if (/^[\w\-/.:#]+$/.test(text)) continue;
     // A lone em-dash is the standard way to render an empty cell. That is
@@ -113,6 +185,15 @@ function copyStrings(source) {
     // the code between them (seen with two template literals: the match ran
     // from one closing backtick to the next opening one). Code is not prose.
     if (/(?:const |return |=> |for \(|if \()/.test(text)) continue;
+    const line = withoutComments.slice(0, m.index).split("\n").length;
+    found.push({ text, line });
+  }
+  // JSX text nodes: the prose the reference surfaces render lives between
+  // tags, not in string literals, and the extractor above never saw it.
+  const jsxText = />([^<>{}`]{40,})</g;
+  while ((m = jsxText.exec(withoutComments)) !== null) {
+    const text = m[1].trim();
+    if (text.length < 40) continue;
     const line = withoutComments.slice(0, m.index).split("\n").length;
     found.push({ text, line });
   }
@@ -154,11 +235,11 @@ if (findings.length === 0) {
     console.log(`  ${String(count).padStart(4)}  ${why}`);
   }
   console.log("");
-  for (const f of findings.slice(0, 60)) {
+  for (const f of findings.slice(0, 500)) {
     console.log(`${f.rel}:${f.line}  ${f.why}`);
     console.log(`    ${f.sample}`);
   }
-  if (findings.length > 60) console.log(`\n... and ${findings.length - 60} more`);
+  if (findings.length > 500) console.log(`\n... and ${findings.length - 500} more`);
 }
 
 if (process.argv.includes("--fail") && findings.length > 0) process.exitCode = 1;

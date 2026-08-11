@@ -51,7 +51,7 @@ export function Learn({ setPage }: { setPage: (p: Page) => void }) {
       <Panel className="p-4 border-l-2 border-violet-500/50">
         <div className="text-[11px] uppercase tracking-[0.14em] text-violet-300/80 font-medium mb-1.5">What Sentinel is</div>
         <p className="text-[13px] sm:text-sm text-neutral-300 leading-relaxed font-light">
-          Not another crypto news feed — an intelligence layer with a <span className="text-neutral-100">bank financial-crime
+          An intelligence layer, past the news feed, with a <span className="text-neutral-100">bank financial-crime
           point of view</span>. Every item states the <span className="text-neutral-100">"So what"</span>: what a development
           means for a regulated institution's posture. One content model powers every view; an agent drafts the monitoring, and
           human judgement makes it credible.

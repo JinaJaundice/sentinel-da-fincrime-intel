@@ -43,7 +43,7 @@ export const THEMES: Theme[] = [
     label: "Travel Rule",
     tagline: "Originator/beneficiary data that's still only half-enforced.",
     primer:
-      "FATF Recommendation 16 requires originator and beneficiary information to travel with VASP transfers, but enforcement is uneven: the 'sunrise' gap (≈85 of 117 jurisdictions enacted, ~59% not yet enforcing) means inbound transfers often arrive with thin data. Messaging networks (Notabene, Sumsub) provide interoperability; the build-vs-buy call (e.g. an in-house Daml-on-Canton workflow) hinges on counterparty reachability and on-ledger enforceability. For a bank, treat Travel Rule data completeness as a risk score rather than a yes/no, and raise monitoring sensitivity on counterparties with incomplete data.",
+      "FATF Recommendation 16 requires originator and beneficiary information to travel with VASP transfers, but enforcement is uneven: the 'sunrise' gap (≈85 of 117 jurisdictions enacted, ~59% not yet enforcing) means inbound transfers often arrive with thin data. Messaging networks (Notabene, Sumsub) provide interoperability; the build-vs-buy call (e.g. an in-house Daml-on-Canton workflow) hinges on counterparty reachability and on-ledger enforceability. For a bank, treat Travel Rule data completeness as a graded risk score, never a yes/no, and raise monitoring sensitivity on counterparties with incomplete data.",
     Icon: ArrowLeftRight,
     tags: ["travel-rule", "fatf", "vasp", "sunrise", "recommendation-15", "interoperability", "carf", "dac8"],
     keywords: ["travel rule", "vasp", "originator", "beneficiary", "sunrise", "recommendation 1"],
@@ -53,7 +53,7 @@ export const THEMES: Theme[] = [
     label: "MiCA & the EU",
     tagline: "1 July 2026 cutoff, AMLA standing up, tax-transparency layered on.",
     primer:
-      "MiCA is the world's most comprehensive crypto framework; its transitional period ends 1 July 2026, after which unauthorised CASPs must cease EU activity or face enforcement (EU MiCA penalties already exceed €540m). The new EU AML authority, AMLA, is standing up direct supervision, and CARF/DAC8 layer automatic tax-information exchange on top. For a bank, assume full CASP authorisation on EU venues from July, treat any EU-facing platform still trading without it as elevated risk, and design your data model once so Travel Rule data does double duty for CARF/DAC8.",
+      "MiCA is the widest-scope crypto framework in force anywhere; its transitional period ends 1 July 2026, after which unauthorised CASPs must cease EU activity or face enforcement (EU MiCA penalties already exceed €540m). The new EU AML authority, AMLA, is standing up direct supervision, and CARF/DAC8 layer automatic tax-information exchange on top. For a bank, assume full CASP authorisation on EU venues from July, treat any EU-facing platform still trading without it as elevated risk, and design your data model once so Travel Rule data does double duty for CARF/DAC8.",
     Icon: Landmark,
     tags: ["mica", "casp", "licensing", "amla", "dac8", "carf", "esma"],
     keywords: ["mica", "casp", "amla", "esma", "european union", "dac8", "carf", "grandfathering"],

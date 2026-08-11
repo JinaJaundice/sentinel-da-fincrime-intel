@@ -68,9 +68,9 @@ const SEED: Jurisdiction[] = [
     lat: 50.5,
     lon: 9.0,
     status: "implemented",
-    headline: "MiCA: comprehensive regime in force",
+    headline: "MiCA: full-scope regime in force",
     summary:
-      "MiCA is the world's most comprehensive crypto framework, fully in force since 30 Dec 2024. The transitional grandfathering period ends 1 July 2026, after which unauthorised CASPs must cease EU activity.",
+      "MiCA is the widest-scope crypto framework in force anywhere, live in full since 30 Dec 2024. The transitional grandfathering period ends 1 July 2026, after which unauthorised CASPs must cease EU activity.",
     soWhat: "Treat EU venues as requiring full CASP authorisation from July 2026; any EU-facing platform still trading without it is elevated risk.",
     keyDates: [{ date: "2026-07-01", label: "Grandfathering ends" }],
     sources: [
@@ -100,7 +100,7 @@ const SEED: Jurisdiction[] = [
     status: "in-progress",
     headline: "Stablecoin law passed; market structure pending",
     summary:
-      "Fragmented oversight (SEC, CFTC, FinCEN, OFAC). The GENIUS Act brought payment stablecoins under federal AML/sanctions duties, but a comprehensive market-structure framework is still in progress.",
+      "Fragmented oversight (SEC, CFTC, FinCEN, OFAC). The GENIUS Act brought payment stablecoins under federal AML/sanctions duties, but a full market-structure framework is still in progress.",
     soWhat: "Stablecoin issuers are becoming regulated counterparties; the wider perimeter stays uncertain; monitor agency-by-agency developments.",
     sources: [sumsub],
   },
@@ -192,7 +192,7 @@ const SEED: Jurisdiction[] = [
     headline: "Central Bank VASP framework (Nov 2025)",
     summary:
       "In November 2025 the Central Bank of Brazil implemented a regulatory framework for Virtual Asset Service Providers, establishing licensing and strict AML/CFT rules.",
-    soWhat: "A fresh but comprehensive regime; Brazilian VASPs now sit under central-bank licensing.",
+    soWhat: "A fresh, full-scope regime; Brazilian VASPs now sit under central-bank licensing.",
     keyDates: [{ date: "2025-11-01", label: "VASP framework in force" }],
     sources: [sumsub],
   },
@@ -219,7 +219,7 @@ const SEED: Jurisdiction[] = [
     headline: "Travel Rule live; platform licensing still being developed",
     summary:
       "Crypto is legal and treated as an investment asset. AUSTRAC's Travel Rule for virtual-asset transfers took effect 1 July 2026 with no minimum-value threshold, but Treasury and ASIC's dedicated digital-asset-platform licensing framework is still being finalised.",
-    soWhat: "AML/CTF obligations (registration, Travel Rule) are now live even though bespoke platform licensing is not; treat Australia as split-state rather than fully 'in-progress'.",
+    soWhat: "AML/CTF obligations (registration, Travel Rule) are now live even though bespoke platform licensing is not; treat Australia as split-state, with parts already live.",
     keyDates: [{ date: "2026-07-01", label: "Travel Rule for virtual-asset transfers in force" }],
     sources: [sumsub],
   },
@@ -232,7 +232,7 @@ const SEED: Jurisdiction[] = [
     status: "in-progress",
     headline: "VASP licensing live; basic law pending",
     summary:
-      "Real-name accounts, VASP licensing and AML duties are in force, but the comprehensive Digital Asset Basic Law is stalled over control of won-pegged stablecoin issuance.",
+      "Real-name accounts, VASP licensing and AML duties are in force, but the wider Digital Asset Basic Law is stalled over control of won- pegged stablecoin issuance.",
     soWhat: "Strong AML/licensing today, but the full framework, especially for stablecoins, is unsettled.",
     sources: [sumsub],
   },
@@ -258,8 +258,8 @@ const SEED: Jurisdiction[] = [
     status: "in-progress",
     headline: "Taxed + AML-registered; no full framework",
     summary:
-      "Crypto is taxed (30% gains, 1% TDS) and VASPs must register with FIU-IND for AML, but no comprehensive regulatory framework has been enacted.",
-    soWhat: "Activity is tolerated and taxed rather than comprehensively regulated; treat the absence of a conduct regime as a risk factor.",
+      "Crypto is taxed (30% gains, 1% TDS) and VASPs must register with FIU-IND for AML, but no full regulatory framework has been enacted.",
+    soWhat: "Activity is tolerated and taxed, with no full conduct regime; treat that absence as a risk factor.",
     sources: [sumsub],
   },
   {

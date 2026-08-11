@@ -49,7 +49,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     category: "Frameworks & rules",
     aliases: ["recommendation 16", "r16", "rec 16"],
     short: "FATF Recommendation 16: originator and beneficiary information must 'travel' with a transfer between regulated firms, extended to crypto VASPs.",
-    soWhat: "Inbound transfers from non-enforcing jurisdictions often arrive with thin data; treat data completeness as a risk score rather than a yes/no.",
+    soWhat: "Inbound transfers from non-enforcing jurisdictions often arrive with thin data; treat data completeness as a graded risk score, never a yes/no.",
     source: { name: "FATF", url: "https://www.fatf-gafi.org/" },
   },
   {
@@ -70,7 +70,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     id: "mica",
     term: "MiCA",
     category: "Frameworks & rules",
-    short: "Markets in Crypto-Assets, the EU's comprehensive crypto framework. Its transitional period ends 1 July 2026.",
+    short: "Markets in Crypto-Assets, the EU's full-scope crypto framework. Its transitional period ends 1 July 2026.",
     soWhat: "Assume full CASP authorisation on EU venues from July 2026; treat any EU-facing platform still trading without it as elevated risk.",
   },
   {
@@ -273,7 +273,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "Secondary source",
     category: "Controls & obligations",
     aliases: ["secondary"],
-    short: "Reporting or analysis about an event (news, vendor research) rather than the original document.",
+    short: "Reporting or analysis about an event (news, vendor research), one step from the original document.",
   },
   {
     id: "issuer-freeze",

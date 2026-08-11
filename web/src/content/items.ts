@@ -367,7 +367,7 @@ export const ITEMS: Item[] = [
     summary:
       "Transfers from VASPs in non-enforcing jurisdictions arrive with missing or low-quality originator/beneficiary data, undermining screening downstream.",
     soWhat:
-      "Treat data completeness as a risk score rather than a yes/no; incomplete Travel Rule data should raise the monitoring sensitivity on the counterparty.",
+      "Treat data completeness as a graded risk score, never a yes/no; incomplete Travel Rule data should raise the monitoring sensitivity on the counterparty.",
     date: "2026-05-17",
     addedAt: "2026-05-29",
     addedBy: "human",

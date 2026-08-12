@@ -1,6 +1,6 @@
-# Sentinel weekly digest: 11 August 2026
+# Sentinel weekly digest: 12 August 2026
 
-_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC**: 6 new items; latest: Bybit sues North Korea and Lazarus Group under RICO, wins federal court freeze on stolen assets
@@ -31,10 +31,10 @@ Source: [US Department of the Treasury — Treasury Sanctions Crypto Exchanges F
 > **So what:** The case sets the price of recidivism: going back to the same wire-monitoring gaps FinCEN flagged in 2018 is what turned a routine finding into a record penalty. The direct read-across for a bank's financial-crime programme is that remediation commitments need real evidence behind them, not just a closed-out consent order, because FinCEN treated the unfixed 2018 findings as an aggravating factor in their own right. The Iranian-digital-assets thread is also a reminder that a client's exposure to virtual-asset investment is now itself a red flag examiners expect wire-monitoring and EDD programmes to catch, even inside a conventional correspondent/FX business with no crypto-facing product.
 Source: [FinCEN — FinCEN Assesses Historic $125 Million Penalty Against UBS Financial Services Inc. for Recidivist BSA Violations](https://www.fincen.gov/news/news-releases/fincen-assesses-historic-125-million-penalty-against-ubs-financial-services-inc)
 
-### Coldcard exploit grows past $130m across 5,200+ wallets as Coinkite's AI-code-review framing draws pushback
-*Global · 4 August 2026 · High impact*
-> **So what:** This is a live custody-vendor due-diligence case study, not a one-off event: three separate drain waves and a dozen independent actors over a week show the theft is still active, so institutions accepting BTC deposits should keep treating large inflows from newly-emptied, previously dormant single-sig wallets as a standing screening flag rather than a closed incident. Separately, do not accept a vendor's AI-assisted-review claim as a substitute for evidence of actual security testing — the CEO's comments here are a marketing framing that security researchers explicitly rejected, and a five-year-undetected entropy bug is exactly the kind of finding a real audit trail (not a vendor's characterisation of its process) should surface in any hardware/software wallet vendor assessment.
-Source: [Coinkite — Coldcard Mk3 Seed Generation Warning (security advisory)](https://blog.coinkite.com/coldcard-mk3-seed-generation-warning/)
+### Coreum-XRPL bridge exploit drains ~200,000 XRP via forged-deposit relayer flaw, proceeds routed through Tornado Cash
+*Global · 9 August 2026 · Medium impact*
+> **So what:** A bridge compromised by shared verification-logic rather than key theft still ends in the same place: a sanctioned mixer. Any counterparty exposure touching THORChain swaps or Tornado Cash in the days after 9 Aug 2026 warrants a look-back, and the incident is a live example of cross-chain bridge risk for due diligence on bridge-dependent DA rails.
+Source: [Benzinga — XRP Falls to $1 as a Bridge Hack Drains 200,000 XRP: What's Going On?](https://www.benzinga.com/crypto/cryptocurrency/26/08/61124788/xrp-falls-to-1-as-a-bridge-hack-drains-200000-xrp-whats-going-on)
 
 ### Minnesota bans virtual currency kiosks statewide after $1m in elder-targeted scams
 *US · 1 August 2026 · Medium impact*
@@ -42,4 +42,4 @@ Source: [Coinkite — Coldcard Mk3 Seed Generation Warning (security advisory)](
 Source: [MPR News — A ban on crypto kiosks in Minnesota begins Aug. 1. What are these machines?](https://www.mprnews.org/story/2026/07/28/what-are-crypto-kiosks-ban-august-1)
 
 ## By the numbers
-11 new · 5 high-impact · 0 verified
+10 new · 4 high-impact · 0 verified

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-12",
+  "lastUpdated": "2026-08-13",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5646,6 +5646,153 @@
         {
           "name": "crypto.news — XRP bridge exploit update: tx identifies flaw, alerts FBI",
           "url": "https://crypto.news/xrp-bridge-exploit-update/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-cftc-sec-goliath-delgado-ponzi",
+      "type": "signal",
+      "title": "CFTC and SEC file parallel civil charges over $397m Goliath Ventures crypto Ponzi scheme",
+      "summary": "On 11 August 2026 the CFTC filed a complaint in the Middle District of Florida against Goliath Ventures Inc. and CEO Christopher Delgado, alleging a Ponzi scheme that took at least $397m from roughly 1,600 customers under false claims the funds were deployed into bitcoin and ether liquidity pools on decentralised exchanges. The SEC filed a parallel civil action the same day. The CFTC complaint alleges customer money was misappropriated to pay fictitious profits to earlier investors and to fund Delgado's personal spending, including a yacht, luxury apparel and jewellery, and pet grooming. Delgado already pleaded guilty in June 2026 to wire fraud, conspiracy and money laundering charges brought by the US Attorney's Office for the Middle District of Florida.",
+      "soWhat": "A three-agency stack, DOJ guilty plea first, CFTC and SEC civil actions following, on a single DeFi-liquidity-pool pitch shows regulators treating fabricated yield claims as straightforward fraud regardless of how the underlying token is eventually classified. For a bank's fraud and AML teams, a $397m scheme built on 1,600+ retail customers is a reminder that unverifiable 'liquidity pool' or 'DEX yield' language in a customer's stated investment purpose is a red flag worth screening for on its own, ahead of any CFTC/SEC classification outcome for the specific token.",
+      "date": "2026-08-11",
+      "addedAt": "2026-08-13",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "US",
+      "impact": "medium",
+      "tags": [
+        "Ponzi",
+        "CFTC",
+        "SEC",
+        "DOJ",
+        "DeFi",
+        "fraud",
+        "enforcement"
+      ],
+      "sources": [
+        {
+          "name": "CFTC — CFTC Charges Goliath Ventures Inc. and CEO with $400 Million Fraud Scheme",
+          "url": "https://www.cftc.gov/PressRoom/PressReleases/9280-26",
+          "kind": "primary"
+        },
+        {
+          "name": "The Block — Florida man charged by CFTC over $397 million crypto Ponzi scheme",
+          "url": "https://www.theblock.co/news/regulation/2026-08-11-florida-man-charged-by-cftc-over-397-million-crypto-ponzi-scheme-411491",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-delio-ceo-sentencing-south-korea",
+      "type": "signal",
+      "title": "Seoul court sentences Delio CEO to 15 years for $49m crypto-lending fraud",
+      "summary": "The Seoul Southern District Court sentenced Delio CEO Jeong Sang-ho to 15 years in prison (prosecutors had sought 20) on 13 August 2026, finding him guilty of embezzling roughly 70bn won ($49.2m) from customers of crypto lender Delio and of filing false documents to register the firm as a virtual asset service provider. Delio took bitcoin and ether deposits promising high yields, froze customer withdrawals in June 2023 and went bankrupt in November 2024. The court excluded part of the seized evidence as unlawfully obtained by investigators and acquitted Jeong of the prosecution's primary charge, which is why the sentence fell short of what prosecutors sought.",
+      "soWhat": "A 15-year custodial sentence, even after part of the evidence was thrown out on procedural grounds, is a heavier outcome than most Western collapsed-lender cases (Celsius, Voyager) have produced, underlining Seoul's tougher post-Terra/FTX stance on crypto-lender misconduct. For a bank assessing counterparty risk on Korean crypto platforms, the case also confirms that filing false documents to obtain VASP registration is independently prosecutable in South Korea, separate from the underlying investor fraud.",
+      "date": "2026-08-13",
+      "addedAt": "2026-08-13",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "South Korea",
+      "impact": "medium",
+      "tags": [
+        "crypto-lending",
+        "fraud",
+        "enforcement",
+        "South Korea",
+        "VASP-registration",
+        "embezzlement"
+      ],
+      "sources": [
+        {
+          "name": "The Block — South Korea sentences Delio CEO to 15 years in prison for $50 million crypto fraud: report",
+          "url": "https://www.theblock.co/news/regulation/2026-08-13-south-korea-sentences-delio-ceo-411688",
+          "kind": "secondary"
+        },
+        {
+          "name": "CoinDesk — Crypto lending platform CEO faces 15 years in South Korea in $50 million fraud case",
+          "url": "https://www.coindesk.com/business/2026/08/13/crypto-platform-operator-gets-15-year-prison-sentence-in-south-korea-due-to-usd50-million-scam",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-asic-yepbit-takedown-aug2026",
+      "type": "signal",
+      "title": "ASIC takes down Yepbit websites and rebuts platform's claim that the regulator froze investor funds",
+      "summary": "Australia's ASIC removed several websites operated by unlicensed trading platform Yepbit on 12 August 2026 after investors reported being unable to withdraw funds. ASIC said Yepbit had falsely told investors their funds were frozen because the platform was complying with an ASIC audit; the regulator said it had taken no action to prevent withdrawals. Yepbit holds no Australian Financial Services Licence and is not on AUSTRAC's VASP register. It is the fourth ASIC alert against Yepbit-linked domains this year, following an initial warning on 9 March and two further Yepbit Exchange domains added the week before this action; the Philippines' SEC separately issued a cease-and-desist against Yepbit Exchange in February 2026.",
+      "soWhat": "Blaming a regulator for a platform's own frozen withdrawals is a specific deflection pattern worth flagging in scam-education material and in any SAR narrative referencing Yepbit, since it is designed to buy the operator time before investors escalate. The repeat-domain pattern (four alerts across five months, plus a parallel Philippines action) is also a reminder that an unlicensed platform taken down in one jurisdiction typically resurfaces under a near-identical name or domain elsewhere, so a single regulator's alert list is not sufficient screening coverage on its own.",
+      "date": "2026-08-12",
+      "addedAt": "2026-08-13",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Australia",
+      "impact": "low",
+      "tags": [
+        "unlicensed-platform",
+        "investor-scam",
+        "ASIC",
+        "Australia",
+        "withdrawal-freeze"
+      ],
+      "sources": [
+        {
+          "name": "ASIC — ASIC warns against Yepbit and Yepbit Exchange",
+          "url": "https://www.asic.gov.au/about-asic/news-centre/news-items/asic-warns-against-yepbit-and-yepbit-exchange",
+          "kind": "primary"
+        },
+        {
+          "name": "The Block — Australian regulator takes down Yepbit websites as investors report blocked withdrawals",
+          "url": "https://www.theblock.co/news/regulation/2026-08-12-australian-regulator-takes-down-yepbit-websites-411538",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-trezor-shipmonk-breach-aug2026",
+      "type": "typology",
+      "title": "Trezor fulfilment-partner breach exposes shipping data of ~14,000 hardware-wallet customers",
+      "summary": "Trezor disclosed on 13 August 2026 that its shipping fulfilment provider ShipMonk suffered unauthorised access, via an exploited vulnerability in the third-party analytics tool Metabase, on 6 August 2026. The breach exposed personal data for 13,689 customers: 11,742 with full exposure (name, email, phone, shipping address) and 1,947 with partial exposure (name, city, email), across shipments to the US, UK, Sweden, Colombia, Brazil, Italy and Portugal. Trezor says no device, private key or wallet backup was compromised and its own systems were not breached.",
+      "soWhat": "A shipping-address leak for hardware-wallet buyers is a targeting list for two distinct attack types a bank's fraud team should watch for: phishing impersonating Trezor, a bank or an exchange to harvest seed phrases, and physical 'wrench attack' targeting of known self-custody holders at a real home address. Customers who bought a hardware wallet in this window and then report unusual account-recovery or wire-transfer pressure warrant faster escalation, since the exposed data gives an attacker a verified name, address and device-ownership signal to build a convincing pretext around.",
+      "date": "2026-08-13",
+      "addedAt": "2026-08-13",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Global",
+      "impact": "medium",
+      "tags": [
+        "data-breach",
+        "hardware-wallet",
+        "phishing",
+        "wrench-attack",
+        "self-custody",
+        "third-party-risk"
+      ],
+      "typology": {
+        "vector": "Third-party fulfilment/analytics vendor compromise exposes hardware-wallet buyers' names and shipping addresses, enabling targeted phishing and physical coercion ('wrench attack') against known self-custody holders",
+        "controls": [
+          "Treat post-breach customer reports of unusual recovery, device-replacement or urgent-transfer requests as elevated-priority triage, not routine support",
+          "Educate self-custody-adjacent customers that a hardware-wallet vendor breach is a precursor signal for both phishing and physical-targeting risk, not just a data-privacy notice"
+        ],
+        "obligations": [
+          "Enhanced monitoring on accounts linked to affected customers for a period following disclosure",
+          "SAR filing if a customer reports coerced or fraud-induced transfers traceable to the exposed shipping dataset"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Trezor — Recent customer data exposed in shipping provider incident",
+          "url": "https://trezor.io/blog/news/recent-customer-data-exposed-in-shipping-provider-incident",
+          "kind": "primary"
+        },
+        {
+          "name": "The Block — Trezor shipping provider breach exposes personal data of nearly 14,000 customers",
+          "url": "https://www.theblock.co/news/business/2026-08-13-trezor-shipping-provider-breach-exposes-personal-data-nearly-14000-customers-411702",
           "kind": "secondary"
         }
       ]

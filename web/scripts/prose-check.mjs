@@ -132,11 +132,34 @@ const RULES = [
     "trailing participle analysis",
     "Delete the clause or promote it to a sentence with evidence.",
   ],
+  // ---- v2 (16 Aug 2026, plain-english-default) ----
+  [
+    /\bwhich (?:is|was|means|meant) that\b/gi,
+    "'which is that' hinge",
+    "State the claim as its own sentence.",
+  ],
 ];
 
 // A slogan: two very short complete sentences in a row, neither carrying
-// detail. Real copy that happens to be brief is fine; a pair reads as a
-// tagline.
+// detail. Since v2 (16 Aug 2026) short factual sentences are allowed, so the
+// pair only counts when both halves fail isAphorism's fact tests.
+
+// What makes a short sentence an aphorism rather than information (v2,
+// 16 Aug 2026, plain-english-default). Mirrors is_aphorism() in
+// build/humaniser_rules.py: no number, no name after the first word, and no
+// verb beyond a bare copula judgement ("is a delay with a logo") or no verb
+// at all ("The slow option."). A short sentence with any of those carries a
+// fact or an event and is allowed, so a pair is a slogan only when BOTH
+// halves are aphorisms.
+const HAS_FACT = /[0-9%\u00a3$\u20ac]/;
+const MID_NAME = /\S\s+[A-Z]/;
+const COPULA_JUDGEMENT = /\b(?:is|are|was|were)\s+(?:a|an|another|the|just|only|simply|pure(?:ly)?)\b/i;
+const FINITE_VERB = /\b(?:is|are|was|were|has|have|had|does|do|did|can|cannot|will|would|becomes?|needs?|requires?|remains?|takes?|runs?|holds?|sits?|keeps?|fails?|works?|exists?|carries|refuses?|returns?|stops?|starts?|wins?|pays?|goes|comes?|makes?|gives?|writes?|opens?|closes?|proceeds?|delivers?|matters?|stands?|stays?|means?|counts?|reach(?:es)?|appl(?:y|ies)|decides?|depends?|changes?|replaces?|leaves?|brings?|sends?|tells?|shows?|reads?|ages?|differs?|var(?:y|ies)|produces?|catch(?:es)?|sees?|looks?|moves?|knows?|owes?|buys?|sells?|screens?|blocks?|touch(?:es)?|freezes?|files?|reports?|alerts?|fires?|lands?|costs?|adds?|hides?|breaks?|loses?|beats?|helps?|lets?|allows?|covers?|answers?)\b/i;
+const IRREGULAR_PAST = /\b(?:took|ran|held|kept|went|came|made|gave|wrote|won|paid|sent|told|showed|saw|knew|bought|sold|froze|broke|lost|beat|left|brought|fell|rose|grew|found|got|put|set|hit|cut|led|met|read|built|drew|chose|spent|stood|threw|drove|rang|sank|spoke|stole|swore|wore)\b/i;
+const isAphorism = (s) =>
+  !HAS_FACT.test(s) && !MID_NAME.test(s)
+  && (COPULA_JUDGEMENT.test(s)
+    || !(FINITE_VERB.test(s) || IRREGULAR_PAST.test(s) || /\b[a-z]{2,}ed\b/.test(s)));
 const SLOGAN = /(^|[.!?]\s)([A-Z][a-z][^.!?]{4,34}\.)\s([A-Z][a-z][^.!?]{4,34}\.)(\s|$)/;
 
 function walk(dir) {
@@ -212,7 +235,7 @@ for (const file of walk(ROOT)) {
       if (hit) findings.push({ rel, line, why, fix, sample: hit[0].slice(0, 60) });
     }
     const slogan = SLOGAN.exec(text);
-    if (slogan) {
+    if (slogan && isAphorism(slogan[2]) && isAphorism(slogan[3])) {
       findings.push({
         rel,
         line,

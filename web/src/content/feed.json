@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-13",
+  "lastUpdated": "2026-08-18",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5793,6 +5793,167 @@
         {
           "name": "The Block — Trezor shipping provider breach exposes personal data of nearly 14,000 customers",
           "url": "https://www.theblock.co/news/business/2026-08-13-trezor-shipping-provider-breach-exposes-personal-data-nearly-14000-customers-411702",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-genius-act-section3-issuance-nprm",
+      "type": "regulatory",
+      "title": "Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons",
+      "summary": "On 17 August 2026 the Treasury Department issued a notice of proposed rulemaking implementing Section 3 of the GENIUS Act, due in the Federal Register on 18 August with a 60-day comment period. The rule defines when a stablecoin counts as 'issued' or 'offered or sold' in the US: generally, an issuer physically or legally based in the US, or a coin issued to a US-located person. From the law's 18 January 2027 effective date, only a federally or state-licensed permitted payment stablecoin issuer (PPSI) may lawfully issue a payment stablecoin in the US, with fines up to $1m and up to five years' imprisonment for violations; from 18 July 2028, exchanges, brokers, custodians and payment platforms would be barred from offering a foreign-issued stablecoin to US persons unless its issuer complies with lawful orders and reciprocal supervisory arrangements, a provision the industry reads as aimed squarely at Tether.",
+      "soWhat": "This rule decides which stablecoins a bank's customers, custody clients and payment partners can keep touching after 2027-28, so the definitions of a 'US person' offer and the foreign-issuer reciprocity test are worth flagging to Treasury during the comment window rather than reacting once final. A bank with USDT or other foreign-issued stablecoin exposure should start mapping that exposure against the proposed reciprocity test now, since Tether's continued US access is the specific case this provision is designed to test.",
+      "date": "2026-08-17",
+      "addedAt": "2026-08-18",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "US",
+      "impact": "high",
+      "tags": [
+        "GENIUS-Act",
+        "stablecoin",
+        "Treasury",
+        "licensing",
+        "Tether",
+        "rulemaking"
+      ],
+      "publication": {
+        "issuer": "US Treasury",
+        "kind": "Notice of Proposed Rulemaking",
+        "ref": "GENIUS Act Section 3 NPRM"
+      },
+      "sources": [
+        {
+          "name": "CoinDesk — U.S. Treasury Department proposes GENIUS Act stablecoin rule",
+          "url": "https://www.coindesk.com/policy/2026/08/17/u-s-treasury-department-proposes-genius-act-stablecoin-rule",
+          "kind": "secondary"
+        },
+        {
+          "name": "Accounting Today — Treasury proposes GENIUS Act rules on who can sell stablecoin",
+          "url": "https://www.accountingtoday.com/news/treasury-proposes-genius-act-rules-on-who-can-sell-stablecoin",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-binance-htx-16platform-sanctions-cutoff",
+      "type": "signal",
+      "title": "Binance phases out transactions with HTX and 15 other platforms as EU, US and UK sanctions bite",
+      "summary": "Binance told users on 14 August 2026 it will stop processing transactions with 16 crypto platforms on a rolling schedule: Shelbit and Aban Tether Exchange from 7 August (the day OFAC sanctioned both over Iran/IRGC-linked laundering); A7 Nigeria, A7 Africa and PilotFinance from 13 August; and HTX (formerly Huobi), EXMO, Rapira, Aifory Pro, ABCeX, WhiteBird, NoOnecrypto, Tradex, Monease, BitPapa and Exnode from 23 August. The final tranche follows HTX's addition to the EU's 21st Russia sanctions package (adopted 23 July) and the UK's May designation of Huobi Global S.A.; transactions with any listed platform after its cutoff trigger a Binance compliance review and possible wallet restriction. TRM Labs separately reported HTX repeatedly rotating hot wallets across TRON, Ethereum, BNB Smart Chain and Solana since the UK action, a pattern it says can outrun static sanctions-screening lists.",
+      "soWhat": "A major exchange choosing to sever counterparty ties rather than risk its own licences is a real-world test of how sanctions pressure propagates through the exchange network, and the HTX wallet-rotation pattern is a concrete reason to treat static address lists as necessary but not sufficient. A bank with correspondent or custody exposure touching Binance, HTX or the other 15 named platforms should treat 23 August as an operational deadline: any counterparty flow into or out of the listed platforms after their respective cutoffs is now the kind of pattern that would draw scrutiny from Binance's own compliance team, and should draw the same from a bank's.",
+      "date": "2026-08-14",
+      "addedAt": "2026-08-18",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Global",
+      "impact": "medium",
+      "tags": [
+        "sanctions",
+        "HTX",
+        "Binance",
+        "Russia",
+        "Iran",
+        "wallet-rotation",
+        "EU",
+        "UK",
+        "OFAC"
+      ],
+      "sources": [
+        {
+          "name": "crypto.news — Binance to stop HTX transactions from Aug. 23 over sanctions",
+          "url": "https://crypto.news/binance-to-stop-htx-transactions-from-aug-23-over-sanctions/",
+          "kind": "secondary"
+        },
+        {
+          "name": "The Cryptonomist — Binance sanctions crypto firms in major transaction ban",
+          "url": "https://en.cryptonomist.ch/2026/08/15/binance-sanctions-crypto-firms/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-tether-freeze-window-frontrunning",
+      "type": "typology",
+      "title": "'The window is public': bots race Tether's own freeze proposals to move funds before blacklisting lands",
+      "summary": "Tether freezes are executed through a multi-signature contract, and the freeze proposal is visible on-chain from the moment it is submitted, before co-signers approve it. Analytics firm BitOK found that over the past 24 months, 7,562 addresses were blacklisted and $1.08bn in USDT destroyed, but in the most recent 12 months $127.6m still escaped during the public window across 107 cases, including $37.3m moved off a Tron address in 5.7 minutes. BlockSec's July 2026 analysis of 8,310 freeze proposals since 2017 found $215.5m moved out during delay windows at a median reaction time of 77 minutes; three other analytics firms (FlashRescue, AMLBot, ChainArgos) have separately measured the same gap. Tether says the delay is the price of a multi-signature structure that prevents one compromised key from freezing balances on a $184bn asset, and has sped up median freeze times by 44% on Ethereum and 23% on Tron over the past year; a fix proposed by PeckShield in 2025, bundling the freeze request and its signatures into one transaction to collapse the window to zero, has not been adopted.",
+      "soWhat": "A bank relying on Tether's blacklist as evidence that tainted funds were caught should treat it as a lagging, not a real-time, control: bots that watch the freeze-proposal mempool can move funds out inside minutes of a freeze being submitted, and one prior study found only 0.49% of USDT flowing into eventually-blacklisted Tron addresses was actually caught. Where a customer's inbound USDT traces to an address later blacklisted, the relevant question for a SAR or look-back is not just whether Tether froze it, but whether the funds moved out during the public delay window first.",
+      "date": "2026-08-07",
+      "addedAt": "2026-08-18",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Global",
+      "impact": "medium",
+      "tags": [
+        "Tether",
+        "USDT",
+        "stablecoin",
+        "freeze",
+        "front-running",
+        "laundering",
+        "on-chain-monitoring"
+      ],
+      "typology": {
+        "vector": "A Tether freeze proposal is submitted to a public multi-signature contract and is visible on-chain before it is executed; bots monitoring the mempool can move flagged funds out within minutes, ahead of the blacklist taking effect",
+        "controls": [
+          "Do not treat a Tether blacklist entry as proof that flagged funds were actually caught; check whether the address emptied during the public proposal-to-execution window before relying on the freeze as evidence of recovery",
+          "Monitor customer inflows from addresses with a pending or recent Tether freeze proposal, not only addresses already on the public blacklist"
+        ],
+        "obligations": [
+          "SAR filing where a customer's inbound USDT traces to an address that emptied during a public freeze window rather than being caught by it",
+          "Look-back review of transactions from a counterparty address in the period between a freeze proposal's submission and its execution, typically minutes to low tens of minutes"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Forbes — Tether Freeze Delay: How Bots Beat The USDT Blacklist",
+          "url": "https://www.forbes.com/sites/boazsobrado/2026/08/07/the-window-is-public-bots-suddenly-beat-tether-to-31-million/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ireland-national-aml-strategy-2026",
+      "type": "regulatory",
+      "title": "Ireland launches first National AML Strategy: crypto source-of-funds standard for gambling, travel-rule-style checks on crypto transfers",
+      "summary": "Tánaiste and Minister for Finance Simon Harris launched Ireland's first National Anti-Money Laundering and Countering the Financing of Terrorism Strategy on 13 August 2026, which the government called the most significant strengthening of Ireland's financial-crime framework in years. It builds on the crypto-specific findings of Ireland's June 2026 National Risk Assessment. Crypto-relevant measures include: a new 'source of funds' standard for gambling operators accepting crypto-related deposits, requiring due diligence on the legitimacy of crypto funds; extension of originator/beneficiary information requirements to crypto-asset transfers; enhanced checks on transfers involving private (unhosted) wallets and stricter due diligence on overseas crypto firms; a 'closed loop' payment rule requiring gambling payouts to return to the same account used to deposit; mandatory beneficial-ownership disclosure for limited partnerships; and a mandate for the Central Bank of Ireland to build a 'systematic understanding' of how AI and other emerging technology creates or mitigates money-laundering vulnerabilities.",
+      "soWhat": "Ireland is one of the first EU states to write private-wallet and overseas-crypto-firm due diligence directly into a national AML strategy rather than leaving it to MiCA implementation, which is a template other member states may follow as the EU's AML Authority (AMLA) beds in. A bank with Irish gambling-sector or crypto-firm counterparties should expect enhanced-due-diligence questions on unhosted-wallet transfers and crypto source-of-funds to become supervisory expectations in Ireland well before any EU-wide rule catches up.",
+      "date": "2026-08-13",
+      "addedAt": "2026-08-18",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Ireland",
+      "impact": "medium",
+      "tags": [
+        "Ireland",
+        "AML-strategy",
+        "gambling",
+        "unhosted-wallets",
+        "travel-rule",
+        "beneficial-ownership"
+      ],
+      "publication": {
+        "issuer": "Department of Finance (Ireland)",
+        "kind": "National Strategy",
+        "ref": "National AML/CFT Strategy 2026"
+      },
+      "sources": [
+        {
+          "name": "Gov.ie — Tánaiste and Minister for Finance Simon Harris launches Ireland's first National Anti-Money Laundering Strategy",
+          "url": "https://www.gov.ie/en/department-of-finance/press-releases/t%C3%A1naiste-and-minister-for-finance-simon-harris-launches-irelands-first-national-anti-money-laundering-strategy/",
+          "kind": "primary"
+        },
+        {
+          "name": "The Irish Times — Tougher rules for gambling firms as part of new drive to tackle money laundering",
+          "url": "https://www.irishtimes.com/crime-law/2026/08/13/tougher-rules-for-gambling-firms-as-part-of-coalition-drive-to-tackle-money-laundering/",
+          "kind": "secondary"
+        },
+        {
+          "name": "AML Intelligence — INSIGHT: Ireland launches first national AML strategy",
+          "url": "https://www.amlintelligence.com/2026/08/insight-ireland-launches-first-national-aml-strategy-here-are-the-key-financial-crime-reforms/",
           "kind": "secondary"
         }
       ]

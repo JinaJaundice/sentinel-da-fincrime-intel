@@ -1,15 +1,25 @@
-# Sentinel weekly digest: 18 August 2026
+# Sentinel weekly digest: 19 August 2026
 
-_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Stablecoins**: 3 new items; latest: Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons
 - **Travel Rule**: 3 new items; latest: Ireland launches first National AML Strategy: crypto source-of-funds standard for gambling, travel-rule-style checks on crypto transfers
-- **Sanctions & OFAC**: 2 new items; latest: Binance phases out transactions with HTX and 15 other platforms as EU, US and UK sanctions bite
+- **US rulemaking**: 2 new items; latest: FinCEN finalises full repeal of Corporate Transparency Act beneficial-ownership reporting for US companies
+- **Sanctions & OFAC**: 1 new item; latest: Binance phases out transactions with HTX and 15 other platforms as EU, US and UK sanctions bite
 - **MiCA & the EU**: 1 new item; latest: Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons
-- **US rulemaking**: 1 new item; latest: Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons
 
 ## Notable this week
+
+### SEC proposes "Regulation Crypto Assets": new offering exemptions and a safe harbor from securities status for crypto tokens
+*US · 18 August 2026 · High impact*
+> **So what:** If finalised, tokens sold under the safe harbor will sit outside federal securities registration and outside state securities review, so a bank's counterparty due diligence on a crypto issuer can no longer treat "registered as a security" or "cleared by a state regulator" as a proxy for oversight. Financial-crime and onboarding teams will need a separate framework for assessing issuers relying on the safe harbor, since neither SEC registration nor state blue-sky review will apply to them.
+Source: [SEC — SEC Proposes New Regulation Crypto Assets](https://www.sec.gov/newsroom/press-releases/2026-76-sec-proposes-new-regulation-crypto-assets)
+
+### FinCEN finalises full repeal of Corporate Transparency Act beneficial-ownership reporting for US companies
+*US · 14 August 2026 · High impact*
+> **So what:** FinCEN's beneficial-ownership registry was a look-up tool banks could use to unmask the shell companies that sit behind laundered crypto proceeds, including in several of the shell-network typologies tracked here. With US-person data being deleted and no US-company reporting requirement left, banks doing enhanced due diligence on a US-incorporated counterparty to a crypto business can no longer cross-check FinCEN's registry and must rely more heavily on their own KYC, corporate-registry searches and on-chain attribution.
+Source: [US Department of the Treasury — FinCEN Permanently Ends Beneficial Ownership Reporting Requirements for Millions of Small Business Owners](https://home.treasury.gov/news/press-releases/sb0603)
 
 ### Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons
 *US · 17 August 2026 · High impact*
@@ -31,15 +41,5 @@ Source: [Forbes — Tether Freeze Delay: How Bots Beat The USDT Blacklist](https
 > **So what:** A major exchange choosing to sever counterparty ties rather than risk its own licences is a real-world test of how sanctions pressure propagates through the exchange network, and the HTX wallet-rotation pattern is a concrete reason to treat static address lists as necessary but not sufficient. A bank with correspondent or custody exposure touching Binance, HTX or the other 15 named platforms should treat 23 August as an operational deadline: any counterparty flow into or out of the listed platforms after their respective cutoffs is now the kind of pattern that would draw scrutiny from Binance's own compliance team, and should draw the same from a bank's.
 Source: [crypto.news — Binance to stop HTX transactions from Aug. 23 over sanctions](https://crypto.news/binance-to-stop-htx-transactions-from-aug-23-over-sanctions/)
 
-### Trezor fulfilment-partner breach exposes shipping data of ~14,000 hardware-wallet customers
-*Global · 13 August 2026 · Medium impact*
-> **So what:** A shipping-address leak for hardware-wallet buyers is a targeting list for two distinct attack types a bank's fraud team should watch for: phishing impersonating Trezor, a bank or an exchange to harvest seed phrases, and physical 'wrench attack' targeting of known self-custody holders at a real home address. Customers who bought a hardware wallet in this window and then report unusual account-recovery or wire-transfer pressure warrant faster escalation, since the exposed data gives an attacker a verified name, address and device-ownership signal to build a convincing pretext around.
-Source: [Trezor — Recent customer data exposed in shipping provider incident](https://trezor.io/blog/news/recent-customer-data-exposed-in-shipping-provider-incident)
-
-### Seoul court sentences Delio CEO to 15 years for $49m crypto-lending fraud
-*South Korea · 13 August 2026 · Medium impact*
-> **So what:** A 15-year custodial sentence, even after part of the evidence was thrown out on procedural grounds, is a heavier outcome than most Western collapsed-lender cases (Celsius, Voyager) have produced, underlining Seoul's tougher post-Terra/FTX stance on crypto-lender misconduct. For a bank assessing counterparty risk on Korean crypto platforms, the case also confirms that filing false documents to obtain VASP registration is independently prosecutable in South Korea, separate from the underlying investor fraud.
-Source: [The Block — South Korea sentences Delio CEO to 15 years in prison for $50 million crypto fraud: report](https://www.theblock.co/news/regulation/2026-08-13-south-korea-sentences-delio-ceo-411688)
-
 ## By the numbers
-9 new · 1 high-impact · 0 verified
+10 new · 3 high-impact · 0 verified

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-18",
+  "lastUpdated": "2026-08-19",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -5955,6 +5955,64 @@
           "name": "AML Intelligence — INSIGHT: Ireland launches first national AML strategy",
           "url": "https://www.amlintelligence.com/2026/08/insight-ireland-launches-first-national-aml-strategy-here-are-the-key-financial-crime-reforms/",
           "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fincen-boi-repeal-final-rule",
+      "type": "regulatory",
+      "title": "FinCEN finalises full repeal of Corporate Transparency Act beneficial-ownership reporting for US companies",
+      "summary": "FinCEN issued a final rule, effective 14 August 2026, that permanently removes the requirement for US companies and US persons to report beneficial ownership information under the Corporate Transparency Act, making the March 2025 interim rollback permanent. FinCEN will delete previously reported beneficial-ownership data belonging to US persons from its database. Foreign entities registered to do business in the US must still report beneficial ownership for foreign individuals, but the requirement to report US-person \"company applicants\" for those foreign entities is also eliminated.",
+      "soWhat": "FinCEN's beneficial-ownership registry was a look-up tool banks could use to unmask the shell companies that sit behind laundered crypto proceeds, including in several of the shell-network typologies tracked here. With US-person data being deleted and no US-company reporting requirement left, banks doing enhanced due diligence on a US-incorporated counterparty to a crypto business can no longer cross-check FinCEN's registry and must rely more heavily on their own KYC, corporate-registry searches and on-chain attribution.",
+      "date": "2026-08-14",
+      "addedAt": "2026-08-19",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "US",
+      "impact": "high",
+      "tags": [
+        "FinCEN",
+        "beneficial ownership",
+        "Corporate Transparency Act",
+        "KYC",
+        "deregulation",
+        "shell companies"
+      ],
+      "sources": [
+        {
+          "name": "US Department of the Treasury — FinCEN Permanently Ends Beneficial Ownership Reporting Requirements for Millions of Small Business Owners",
+          "url": "https://home.treasury.gov/news/press-releases/sb0603",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-sec-regulation-crypto-assets-proposal",
+      "type": "regulatory",
+      "title": "SEC proposes \"Regulation Crypto Assets\": new offering exemptions and a safe harbor from securities status for crypto tokens",
+      "summary": "On 18 August 2026 the SEC proposed \"Regulation Crypto Assets,\" building on its March 2026 interpretive guidance on crypto and the federal securities laws. The proposal creates two Securities Act registration exemptions for investment-contract offerings involving crypto assets: a one-time exemption for offerings up to $5 million over four years, and a repeatable exemption for offerings up to $75 million every 12 months, both requiring principles-based disclosures (the larger tier also requires financial statements and ongoing reporting). It also proposes a conditional safe harbor under which a crypto asset is deemed not to be an \"investment contract,\" and would preempt state securities registration and qualification requirements for offers made under the exemptions. The public comment period runs 60 days from Federal Register publication.",
+      "soWhat": "If finalised, tokens sold under the safe harbor will sit outside federal securities registration and outside state securities review, so a bank's counterparty due diligence on a crypto issuer can no longer treat \"registered as a security\" or \"cleared by a state regulator\" as a proxy for oversight. Financial-crime and onboarding teams will need a separate framework for assessing issuers relying on the safe harbor, since neither SEC registration nor state blue-sky review will apply to them.",
+      "date": "2026-08-18",
+      "addedAt": "2026-08-19",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "US",
+      "impact": "high",
+      "tags": [
+        "SEC",
+        "securities law",
+        "token offering",
+        "safe harbor",
+        "market structure",
+        "state preemption"
+      ],
+      "sources": [
+        {
+          "name": "SEC — SEC Proposes New Regulation Crypto Assets",
+          "url": "https://www.sec.gov/newsroom/press-releases/2026-76-sec-proposes-new-regulation-crypto-assets",
+          "kind": "primary"
         }
       ]
     }

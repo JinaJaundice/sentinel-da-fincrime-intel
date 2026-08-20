@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-19",
+  "lastUpdated": "2026-08-20",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6013,6 +6013,73 @@
           "name": "SEC — SEC Proposes New Regulation Crypto Assets",
           "url": "https://www.sec.gov/newsroom/press-releases/2026-76-sec-proposes-new-regulation-crypto-assets",
           "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-zimbardi-crypto-ponzi-fiji-deportation",
+      "type": "signal",
+      "title": "Deported from Fiji, alleged $165m crypto-Ponzi mastermind faces federal fraud charges",
+      "summary": "Federal prosecutors say Edward Zimbardi, 59, of Flowery Branch, Georgia, ran \"The Crypto Program\" between June 2022 and August 2023, telling investors it was an \"advertising package\" opportunity paying a guaranteed 25% monthly return and directing them to pay in crypto to wallets he secretly controlled, taking $165m from thousands of victims. Zimbardi was indicted on 12 counts of wire fraud, 12 counts of money laundering and one count of money-laundering conspiracy, then fled to Fiji; he was deported back to the US on 14 Aug 2026 and appeared in federal court on 19 Aug 2026.",
+      "soWhat": "A guaranteed-monthly-return crypto \"package\" pitch is a Ponzi tell on its own, and this case adds a second one worth screening for: rapid relocation to a remote, slow-extradition jurisdiction once a scheme starts unwinding. Both make useful triggers for a bank's fraud and AML teams well before any indictment is public.",
+      "date": "2026-08-19",
+      "addedAt": "2026-08-20",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "Ponzi",
+        "DOJ",
+        "FBI",
+        "money-laundering",
+        "fraud",
+        "crypto"
+      ],
+      "sources": [
+        {
+          "name": "AllOnGeorgia — Alleged Mastermind of $165 Million Cryptocurrency Ponzi Scheme Facing Federal Charges after Deportation from Fiji",
+          "url": "https://allongeorgia.com/chattooga-local-news/alleged-mastermind-of-165-million-cryptocurrency-ponzi-scheme-facing-federal-charges-after-deportation-from-fiji/",
+          "kind": "secondary"
+        },
+        {
+          "name": "Atlanta Journal-Constitution — Feds say he ran a $165M crypto scam and fled to Fiji. He's back and facing charges.",
+          "url": "https://www.ajc.com/news/2026/08/georgia-man-faces-charges-over-alleged-165m-crypto-scam/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-harmony-one-mint-exploit-aug2026",
+      "type": "signal",
+      "title": "Harmony Protocol hacked: attacker mints ~4bn unauthorised ONE tokens, chain rolled back",
+      "summary": "On 11-12 Aug 2026 an attacker exploited a quorum-verification bug in Harmony's consensus code, which counted the public keys listed in a signature mask rather than the validators that actually signed, to mint roughly 4bn unauthorised ONE tokens (about 26% of supply). Harmony says about 97% of the forged tokens reached exchanges before it could freeze wallets or patch validators; on 17 Aug 2026 the team said forged and legitimate holdings could not be separated and confirmed it will roll the chain back to its pre-attack state.",
+      "soWhat": "This is a consensus-layer minting exploit, not a bridge or smart-contract bug, so it sits alongside this feed's bridge-exploit pattern as a distinct chain-level risk. A rollback that reverses transactions is itself a laundering-relevant event: any counterparty holding or custody exposure to ONE around 11-17 Aug 2026 needs a look-back for balances that no longer match the post-rollback chain.",
+      "date": "2026-08-12",
+      "addedAt": "2026-08-20",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "hack",
+        "Harmony",
+        "consensus-exploit",
+        "token-minting",
+        "rollback"
+      ],
+      "sources": [
+        {
+          "name": "Bitcoin.com News — Harmony's ONE Plunges 30% After Attacker Mints 4 Billion Tokens",
+          "url": "https://news.bitcoin.com/security/harmonys-one-plunges-30-after-attacker-mints-4-billion-tokens/",
+          "kind": "secondary"
+        },
+        {
+          "name": "CryptoRank — Harmony to Roll Back Blockchain to Pre-Attack State After Counterfeit ONE Minting Exploit",
+          "url": "https://cryptorank.io/news/feed/36e8b-harmony-blockchain-rollback-counterfeit-one-attack",
+          "kind": "secondary"
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-20",
+  "lastUpdated": "2026-08-21",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6079,6 +6079,39 @@
         {
           "name": "CryptoRank — Harmony to Roll Back Blockchain to Pre-Attack State After Counterfeit ONE Minting Exploit",
           "url": "https://cryptorank.io/news/feed/36e8b-harmony-blockchain-rollback-counterfeit-one-attack",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-trump-clarity-act-white-house-push",
+      "type": "regulatory",
+      "title": "Trump hosts White House crypto event to press Senate on stalled CLARITY Act",
+      "summary": "President Trump gathered crypto industry executives, including Coinbase's Brian Armstrong, Robinhood's Vlad Tenev, the Winklevoss twins and Kraken's Arjun Sethi, at the White House on 19 August 2026 to push the Senate to pass the CLARITY Act market-structure bill. Bitcoin rose over 11.5% to above $71,800 and ether over 18% on the news. The bill remains stalled in the Senate over ethics-provision disputes and is not expected back on the floor until the chamber returns from recess in September.",
+      "soWhat": "Direct White House pressure raises the odds of a September floor vote but does not change the compliance timeline: banks should keep planning against current BSA/SEC/CFTC perimeters, not anticipated CLARITY Act definitions, until the ethics-provision dispute actually resolves. The market's sharp reaction also signals how sensitive digital-asset prices remain to US market-structure signals, a volatility factor relevant to any bank running crypto-exposed counterparty or collateral risk.",
+      "date": "2026-08-19",
+      "addedAt": "2026-08-21",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "CLARITY Act",
+        "US Congress",
+        "market-structure",
+        "legislation",
+        "White House"
+      ],
+      "sources": [
+        {
+          "name": "Forbes — Bitcoin Soars Above $70,000 After Trump Calls For Passage Of Crypto Bill",
+          "url": "https://www.forbes.com/sites/siladityaray/2026/08/20/bitcoin-soars-above-70000-after-trump-calls-for-passage-of-clarity-act-at-white-house-crypto-event/",
+          "kind": "secondary"
+        },
+        {
+          "name": "CoinDesk — Trump pushes Congress to move on Clarity Act during White House crypto event",
+          "url": "https://www.coindesk.com/policy/2026/08/19/trump-pushes-congress-to-move-on-clarity-act-during-white-house-crypto-event",
           "kind": "secondary"
         }
       ]

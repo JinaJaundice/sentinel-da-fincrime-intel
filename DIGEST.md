@@ -1,6 +1,6 @@
-# Sentinel weekly digest: 20 August 2026
+# Sentinel weekly digest: 21 August 2026
 
-_8 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Stablecoins**: 3 new items; latest: Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons
@@ -26,6 +26,11 @@ Source: [US Department of the Treasury — FinCEN Permanently Ends Beneficial Ow
 > **So what:** This rule decides which stablecoins a bank's customers, custody clients and payment partners can keep touching after 2027-28, so the definitions of a 'US person' offer and the foreign-issuer reciprocity test are worth flagging to Treasury during the comment window rather than reacting once final. A bank with USDT or other foreign-issued stablecoin exposure should start mapping that exposure against the proposed reciprocity test now, since Tether's continued US access is the specific case this provision is designed to test.
 Source: [CoinDesk — U.S. Treasury Department proposes GENIUS Act stablecoin rule](https://www.coindesk.com/policy/2026/08/17/u-s-treasury-department-proposes-genius-act-stablecoin-rule)
 
+### Trump hosts White House crypto event to press Senate on stalled CLARITY Act
+*US · 19 August 2026 · Medium impact*
+> **So what:** Direct White House pressure raises the odds of a September floor vote but does not change the compliance timeline: banks should keep planning against current BSA/SEC/CFTC perimeters, not anticipated CLARITY Act definitions, until the ethics-provision dispute actually resolves. The market's sharp reaction also signals how sensitive digital-asset prices remain to US market-structure signals, a volatility factor relevant to any bank running crypto-exposed counterparty or collateral risk.
+Source: [Forbes — Bitcoin Soars Above $70,000 After Trump Calls For Passage Of Crypto Bill](https://www.forbes.com/sites/siladityaray/2026/08/20/bitcoin-soars-above-70000-after-trump-calls-for-passage-of-clarity-act-at-white-house-crypto-event/)
+
 ### Harmony Protocol hacked: attacker mints ~4bn unauthorised ONE tokens, chain rolled back
 *Global · 12 August 2026 · Medium impact*
 > **So what:** This is a consensus-layer minting exploit, not a bridge or smart-contract bug, so it sits alongside this feed's bridge-exploit pattern as a distinct chain-level risk. A rollback that reverses transactions is itself a laundering-relevant event: any counterparty holding or custody exposure to ONE around 11-17 Aug 2026 needs a look-back for balances that no longer match the post-rollback chain.
@@ -36,10 +41,5 @@ Source: [Bitcoin.com News — Harmony's ONE Plunges 30% After Attacker Mints 4 B
 > **So what:** A guaranteed-monthly-return crypto "package" pitch is a Ponzi tell on its own, and this case adds a second one worth screening for: rapid relocation to a remote, slow-extradition jurisdiction once a scheme starts unwinding. Both make useful triggers for a bank's fraud and AML teams well before any indictment is public.
 Source: [AllOnGeorgia — Alleged Mastermind of $165 Million Cryptocurrency Ponzi Scheme Facing Federal Charges after Deportation from Fiji](https://allongeorgia.com/chattooga-local-news/alleged-mastermind-of-165-million-cryptocurrency-ponzi-scheme-facing-federal-charges-after-deportation-from-fiji/)
 
-### Ireland launches first National AML Strategy: crypto source-of-funds standard for gambling, travel-rule-style checks on crypto transfers
-*Ireland · 13 August 2026 · Medium impact*
-> **So what:** Ireland is one of the first EU states to write private-wallet and overseas-crypto-firm due diligence directly into a national AML strategy rather than leaving it to MiCA implementation, which is a template other member states may follow as the EU's AML Authority (AMLA) beds in. A bank with Irish gambling-sector or crypto-firm counterparties should expect enhanced-due-diligence questions on unhosted-wallet transfers and crypto source-of-funds to become supervisory expectations in Ireland well before any EU-wide rule catches up.
-Source: [Gov.ie — Tánaiste and Minister for Finance Simon Harris launches Ireland's first National Anti-Money Laundering Strategy](https://www.gov.ie/en/department-of-finance/press-releases/t%C3%A1naiste-and-minister-for-finance-simon-harris-launches-irelands-first-national-anti-money-laundering-strategy/)
-
 ## By the numbers
-8 new · 3 high-impact · 0 verified
+9 new · 3 high-impact · 0 verified

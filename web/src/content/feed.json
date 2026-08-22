@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-21",
+  "lastUpdated": "2026-08-22",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6112,6 +6112,63 @@
         {
           "name": "CoinDesk — Trump pushes Congress to move on Clarity Act during White House crypto event",
           "url": "https://www.coindesk.com/policy/2026/08/19/trump-pushes-congress-to-move-on-clarity-act-during-white-house-crypto-event",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-mantra-chain-upstream-dependency-halt",
+      "type": "signal",
+      "title": "MANTRA Chain halts mainnet after an attacker exploits an upstream software dependency",
+      "summary": "MANTRA Chain froze all onchain activity — transfers, staking, deposits and withdrawals — on 21 August 2026 after identifying that an attacker had exploited a vulnerability in an upstream (third-party) software dependency, sending its OM token to a record low before the halt. The team says the pause itself did not affect user funds and that a snapshot was taken before restart, but the asset impact of the attacker's activity was still unconfirmed as MANTRA tested a patched release on its testnet ahead of a coordinated validator restart.",
+      "soWhat": "A validator set halting an entire chain rather than let the exploit run is a direct-control response most permissioned or bank-run ledgers already assume; for a public-chain counterparty, it is a reminder that custody and settlement finality on that chain can be suspended unilaterally and without notice. Any bank with exposure to OM tokens, or to counterparties who settle through MANTRA, should treat the halt window as a period where balances and transaction history cannot be relied on until the post-mortem confirms what the attacker actually moved.",
+      "date": "2026-08-21",
+      "addedAt": "2026-08-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "DeFi",
+        "exploit",
+        "MANTRA",
+        "chain-halt",
+        "supply-chain"
+      ],
+      "sources": [
+        {
+          "name": "CryptoSlate — MANTRA Chain stays offline after exploit as Aug. 21 restart hinges on patch test",
+          "url": "https://cryptoslate.com/mantra-chain-stays-offline-after-exploit-as-aug-21-restart-hinges-on-patch-test/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-chainalysis-trm-ice-contract-bid-protest",
+      "type": "signal",
+      "title": "Chainalysis sues the US government to block a $94.6m sole-source ICE contract awarded to rival TRM Labs",
+      "summary": "Chainalysis Government Solutions filed a bid protest in the US Court of Federal Claims on 27 July 2026 (case 26-1067C) challenging ICE and DHS's decision to award TRM Labs a one-year, roughly $94.6m sole-source contract for blockchain forensic software and analytical support to the Homeland Security Task Force's Cyber Disruption Center, running through 30 June 2027. Chainalysis argues the agencies bypassed competitive procurement rules and that the award was arbitrary and capricious; the complaint was sealed on 31 July 2026 for confidential material, and oral argument is scheduled for 2 September 2026.",
+      "soWhat": "The two dominant blockchain-analytics vendors are now in open legal conflict over a single large US law-enforcement contract, a concrete signal that the blockchain-intelligence vendor market is smaller and more concentrated than it looks. A bank running a build-vs-buy review of KYT (know-your-transaction) or wallet-screening tooling should treat vendor concentration and single-supplier government dependency as a procurement risk in its own right, not just a feature comparison between Chainalysis, TRM Labs and Elliptic.",
+      "date": "2026-07-27",
+      "addedAt": "2026-08-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": [
+        "Chainalysis",
+        "TRM-Labs",
+        "vendor-landscape",
+        "procurement",
+        "ICE",
+        "blockchain-analytics"
+      ],
+      "sources": [
+        {
+          "name": "Decrypt — Chainalysis Sues US Government Over $94.6M ICE Contract Handed to Rival TRM Labs",
+          "url": "https://decrypt.co/375843/chainalysis-sues-us-government-ice-contract-trm-labs",
           "kind": "secondary"
         }
       ]

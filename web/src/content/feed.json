@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-22",
+  "lastUpdated": "2026-08-23",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6169,6 +6169,40 @@
         {
           "name": "Decrypt — Chainalysis Sues US Government Over $94.6M ICE Contract Handed to Rival TRM Labs",
           "url": "https://decrypt.co/375843/chainalysis-sues-us-government-ice-contract-trm-labs",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-maya-protocol-mayachain-six-bug-exploit",
+      "type": "signal",
+      "title": "Maya Protocol exploit chains six software bugs to drain $1.7m, wipes $11m off cross-chain pools",
+      "summary": "On 18 August 2026 an attacker sent a single 23-message transaction that chained six separate bugs in MAYAChain's trade-account, outbound-transaction and liquidity-pool code. A miscalibrated compensation mechanism credited about 48.87m CACAO tokens to a thinly capitalised pool that held only around 168,000 CACAO in reserve, letting the attacker take a 99%+ share of that pool and swap it for roughly 20.83 BTC (about $1.4m) plus other assets, for direct proceeds of $1.65m-1.7m. CACAO fell nearly 89%, and combined with arbitrage losses the pools' total value fell by about $10.9m-11m. Maya Protocol halted MAYAChain network-wide and is working on a fix and possible pool-recovery plan.",
+      "soWhat": "Cross-chain DeFi protocols keep failing the same way this year: a chained logic bug, not a stolen key, lets an attacker mint or credit tokens that were never backed by real reserves, then cash out through the protocol's own liquidity before anyone can react. A bank with exposure to counterparties trading through MAYAChain, or holding CACAO, BTC or ETH positions touched by this pool around 18 August 2026, should treat that window as a look-back trigger, and treat \"decentralised\" cross-chain swap venues as carrying the same sudden-insolvency risk as a custodial exchange hack.",
+      "date": "2026-08-18",
+      "addedAt": "2026-08-23",
+      "addedBy": "agent",
+      "status": "published",
+      "confidence": "high",
+      "region": "Global",
+      "impact": "medium",
+      "tags": [
+        "hack",
+        "DeFi",
+        "cross-chain",
+        "MAYAChain",
+        "CACAO",
+        "liquidity-exploit"
+      ],
+      "sources": [
+        {
+          "name": "crypto.news — Maya Protocol suffers $1.7 million exploit, halts network",
+          "url": "https://crypto.news/maya-protocol-suffers-1-7-million-exploit-halts-network/",
+          "kind": "secondary"
+        },
+        {
+          "name": "Crowdfund Insider — Maya Protocol Halts Operations After Multi-Bug Exploit Drains CACAO Tokens And Cross-Chain Assets",
+          "url": "https://www.crowdfundinsider.com/2026/08/299219-maya-protocol-halts-operations-after-multi-bug-exploit-drains-cacao-tokens-and-cross-chain-assets/",
           "kind": "secondary"
         }
       ]

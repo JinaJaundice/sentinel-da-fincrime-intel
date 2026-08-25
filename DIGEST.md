@@ -1,15 +1,18 @@
-# Sentinel weekly digest: 23 August 2026
+# Sentinel weekly digest: 25 August 2026
 
-_12 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Stablecoins**: 3 new items; latest: Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons
-- **US rulemaking**: 2 new items; latest: FinCEN finalises full repeal of Corporate Transparency Act beneficial-ownership reporting for US companies
-- **Sanctions & OFAC**: 1 new item; latest: Binance phases out transactions with HTX and 15 other platforms as EU, US and UK sanctions bite
-- **Travel Rule**: 1 new item; latest: Ireland launches first National AML Strategy: crypto source-of-funds standard for gambling, travel-rule-style checks on crypto transfers
-- **MiCA & the EU**: 1 new item; latest: Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons
+- **US rulemaking**: 2 new items; latest: Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
+- **Sanctions & OFAC**: 1 new item; latest: Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
+- **State actors & DPRK**: 1 new item; latest: Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
 
 ## Notable this week
+
+### Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
+*US · 24 August 2026 · High impact*
+> **So what:** A sectoral determination is a bigger step than another name added to the SDN list: OFAC can now sanction any exchange or payment provider anywhere that processes a significant transaction for an Iran-linked digital-assets business, whether or not that counterparty was ever individually designated. A bank's screening can no longer stop at address- or entity-level blocklists; it needs to identify Iran exposure at the sector level, and should check historical transaction records against the 30 newly listed Mabna Institute addresses for secondary-sanctions risk.
+Source: [U.S. Department of the Treasury — Treasury Launches Unprecedented Campaign Against Iranian Regime on Economic D-Day](https://home.treasury.gov/news/press-releases/sb0613)
 
 ### SEC proposes "Regulation Crypto Assets": new offering exemptions and a safe harbor from securities status for crypto tokens
 *US · 18 August 2026 · High impact*
@@ -20,11 +23,6 @@ Source: [SEC — SEC Proposes New Regulation Crypto Assets](https://www.sec.gov/
 *US · 14 August 2026 · High impact*
 > **So what:** FinCEN's beneficial-ownership registry was a look-up tool banks could use to unmask the shell companies that sit behind laundered crypto proceeds, including in several of the shell-network typologies tracked here. With US-person data being deleted and no US-company reporting requirement left, banks doing enhanced due diligence on a US-incorporated counterparty to a crypto business can no longer cross-check FinCEN's registry and must rely more heavily on their own KYC, corporate-registry searches and on-chain attribution.
 Source: [US Department of the Treasury — FinCEN Permanently Ends Beneficial Ownership Reporting Requirements for Millions of Small Business Owners](https://home.treasury.gov/news/press-releases/sb0603)
-
-### Treasury proposes GENIUS Act Section 3 rule defining who may issue and sell stablecoins to US persons
-*US · 17 August 2026 · High impact*
-> **So what:** This rule decides which stablecoins a bank's customers, custody clients and payment partners can keep touching after 2027-28, so the definitions of a 'US person' offer and the foreign-issuer reciprocity test are worth flagging to Treasury during the comment window rather than reacting once final. A bank with USDT or other foreign-issued stablecoin exposure should start mapping that exposure against the proposed reciprocity test now, since Tether's continued US access is the specific case this provision is designed to test.
-Source: [CoinDesk — U.S. Treasury Department proposes GENIUS Act stablecoin rule](https://www.coindesk.com/policy/2026/08/17/u-s-treasury-department-proposes-genius-act-stablecoin-rule)
 
 ### Maya Protocol exploit chains six software bugs to drain $1.7m, wipes $11m off cross-chain pools
 *Global · 18 August 2026 · Medium impact*
@@ -42,4 +40,4 @@ Source: [CryptoSlate — MANTRA Chain stays offline after exploit as Aug. 21 res
 Source: [Forbes — Bitcoin Soars Above $70,000 After Trump Calls For Passage Of Crypto Bill](https://www.forbes.com/sites/siladityaray/2026/08/20/bitcoin-soars-above-70000-after-trump-calls-for-passage-of-clarity-act-at-white-house-crypto-event/)
 
 ## By the numbers
-12 new · 3 high-impact · 0 verified
+9 new · 3 high-impact · 0 verified

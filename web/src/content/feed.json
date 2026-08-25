@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-23",
+  "lastUpdated": "2026-08-25",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6203,6 +6203,41 @@
         {
           "name": "Crowdfund Insider — Maya Protocol Halts Operations After Multi-Bug Exploit Drains CACAO Tokens And Cross-Chain Assets",
           "url": "https://www.crowdfundinsider.com/2026/08/299219-maya-protocol-halts-operations-after-multi-bug-exploit-drains-cacao-tokens-and-cross-chain-assets/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ofac-economic-outcast-iran-digital-assets-sector",
+      "type": "signal",
+      "title": "Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy",
+      "summary": "On 24 August 2026 Treasury's OFAC issued five sectoral sanctions determinations under Executive Order 13902 covering Iran's digital-assets, technology, gold, aviation and shipping sectors, alongside designations of nearly 60 Iran-linked entities, individuals and vessels spanning nuclear/missile procurement, cyber operations and oil-revenue networks. Four of those designated are Mabna Institute hackers also named in a DOJ superseding indictment unsealed 18 August 2026; TRM Labs traced their 30 listed Bitcoin, Ethereum and TRON addresses to roughly $16.8m in historical inflows, 92% of it through one defendant's wallets, with only about $202,662 (1%) still resident.",
+      "soWhat": "A sectoral determination is a bigger step than another name added to the SDN list: OFAC can now sanction any exchange or payment provider anywhere that processes a significant transaction for an Iran-linked digital-assets business, whether or not that counterparty was ever individually designated. A bank's screening can no longer stop at address- or entity-level blocklists; it needs to identify Iran exposure at the sector level, and should check historical transaction records against the 30 newly listed Mabna Institute addresses for secondary-sanctions risk.",
+      "date": "2026-08-24",
+      "addedAt": "2026-08-25",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "OFAC",
+        "Iran",
+        "sanctions",
+        "sectoral-sanctions",
+        "secondary-sanctions",
+        "IRGC",
+        "Mabna-Institute"
+      ],
+      "sources": [
+        {
+          "name": "U.S. Department of the Treasury — Treasury Launches Unprecedented Campaign Against Iranian Regime on Economic D-Day",
+          "url": "https://home.treasury.gov/news/press-releases/sb0613",
+          "kind": "primary"
+        },
+        {
+          "name": "TRM Labs — Operation Economic Outcast: Treasury Sanctions Nearly 60 Iran-linked Targets and Names Digital Assets a Sanctionable Sector",
+          "url": "https://www.trmlabs.com/resources/blog/operation-economic-outcast-treasury-sanctions-nearly-60-iran-linked-targets-and-names-digital-assets-a-sanctionable-sector",
           "kind": "secondary"
         }
       ]

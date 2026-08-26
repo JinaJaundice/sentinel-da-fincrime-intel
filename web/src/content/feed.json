@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-25",
+  "lastUpdated": "2026-08-26",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6238,6 +6238,74 @@
         {
           "name": "TRM Labs — Operation Economic Outcast: Treasury Sanctions Nearly 60 Iran-linked Targets and Names Digital Assets a Sanctionable Sector",
           "url": "https://www.trmlabs.com/resources/blog/operation-economic-outcast-treasury-sanctions-nearly-60-iran-linked-targets-and-names-digital-assets-a-sanctionable-sector",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-term-finance-governance-exploit-aug2026",
+      "type": "typology",
+      "title": "Term Finance drained of $8.5m after attacker seizes DAO governance, funded from Tornado Cash",
+      "summary": "On 23 August 2026 an attacker took control of Term Finance's DAO governance wrapper around its Strategy Vaults and withdrew about 2,843 ETH (~$6.9m) plus 1.68m USDC, swapped to DAI, per blockchain security firms PeckShield and CertiK. The loss equals roughly 68% of the vault product's total value locked. PeckShield traced the attacker's address to an initial 2 ETH funding transaction from mixing service Tornado Cash. Term's seven-day timelock and liquidity-provider veto, both built to stop exactly this kind of governance takeover, did not prevent the exploit; Term has not disclosed which governance role the attacker used.",
+      "soWhat": "This is a laundering-adjacent typology, not just a hack: an attacker used a sanctioned mixer to seed a wallet that then captured a DeFi protocol's own governance controls and moved the stolen funds onward before anyone could react. A bank assessing DeFi counterparty or custody exposure should treat 'governance built-in safeguards' (timelocks, vetoes) as unproven controls, and should flag any wallet with Tornado Cash-linked funding history regardless of the small initial amount involved.",
+      "date": "2026-08-23",
+      "addedAt": "2026-08-26",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "DeFi",
+        "governance-exploit",
+        "Tornado-Cash",
+        "typology",
+        "Ethereum"
+      ],
+      "sources": [
+        {
+          "name": "The Block — DeFi lending protocol Term Finance loses an estimated $8.5 million to governance exploit",
+          "url": "https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543",
+          "kind": "secondary"
+        }
+      ],
+      "typology": {
+        "vector": "Attacker funds a wallet from a sanctioned mixer, then uses it to capture a DeFi protocol's DAO governance and authorise its own withdrawal, bypassing timelock and veto controls built to stop exactly that.",
+        "controls": [
+          "Screen wallet funding history for mixer-linked addresses before treating a DeFi governance actor as a normal counterparty",
+          "Do not treat a protocol's on-chain timelock or veto mechanism as a proven control absent independent testing",
+          "Flag sudden concentration of a low-participation governance token as a precursor signal"
+        ],
+        "obligations": [
+          "OFAC SDN screening of mixer-linked addresses",
+          "SAR filing on proceeds traced to sanctioned mixing services"
+        ]
+      }
+    },
+    {
+      "id": "feed-sandbox-sand-layerzero-bridge-exploit-aug2026",
+      "type": "signal",
+      "title": "The Sandbox's SAND bridge hijacked via LayerZero delegate exploit: $49bn face-value mint, $675k real loss",
+      "summary": "On 21-22 August 2026 an attacker exploited the approveAndCall function on The Sandbox's SAND token contract on Base to hijack LayerZero delegate permissions, minting 329.24 trillion unbacked SAND across 703 transactions over five hours. Blockaid put the face value minted at roughly $49bn, but the Ethereum-side OFT Adapter that backs the cross-chain token only held a limited reserve: the attacker actually extracted about 14.75m SAND, converted to roughly 80 ETH (about $675,000). The Sandbox severed the Base and BNB Smart Chain bridges by multisig, confirmed SAND on Ethereum and Polygon was unaffected, and Korean exchanges Upbit and Bithumb halted SAND deposits and withdrawals. This is the third major LayerZero-related bridge exploit in five months, after the $292m Kelp DAO attack in April and the Stake DAO breach in May, and has accelerated a roughly $15bn wave of protocols migrating off LayerZero to Chainlink's CCIP.",
+      "soWhat": "The gap between a $49bn headline mint and a $675,000 real loss shows why a bank tracing an incident needs the actual on-chain extraction figure, not the face-value number that first circulates. The recurring failure mode, three incidents in five months, is application-level mismanagement of cross-chain bridge permissions rather than a single protocol bug, so due diligence on any digital-asset rail with cross-chain bridge dependency should ask which bridge and delegate model it uses, not just which chains it supports.",
+      "date": "2026-08-22",
+      "addedAt": "2026-08-26",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "DeFi",
+        "bridge-exploit",
+        "LayerZero",
+        "cross-chain",
+        "The-Sandbox"
+      ],
+      "sources": [
+        {
+          "name": "crypto.news — The Sandbox's $49 billion phantom mint: how a bridge exploit created unbacked SAND tokens",
+          "url": "https://crypto.news/sandbox-bridge-exploit-49-billion-phantom-sand-mint/",
           "kind": "secondary"
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-26",
+  "lastUpdated": "2026-08-28",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6306,6 +6306,140 @@
         {
           "name": "crypto.news — The Sandbox's $49 billion phantom mint: how a bridge exploit created unbacked SAND tokens",
           "url": "https://crypto.news/sandbox-bridge-exploit-49-billion-phantom-sand-mint/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-kraken-htx-dust-attack-sanctions",
+      "type": "typology",
+      "title": "'Dust attack' floods Kraken with sanctioned HTX-linked funds to trigger account freezes",
+      "summary": "Between 17 and 24 August 2026, Kraken customers received roughly 12,000 tiny crypto transfers (a few cents to a couple of dollars each) from a wallet Arkham Intelligence linked to EU- and UK-sanctioned exchange HTX. Kraken said the transfers were a deliberate 'dust attack' aimed at spreading sanctioned funds into customer accounts to trigger its automated sanctions-screening lock and cause operational disruption; its compliance team restored customer access while continuing to hold the sanctioned funds. HTX denied initiating the transfers and said it is investigating.",
+      "soWhat": "This turns a platform's own sanctions-screening control into the attack surface: an adversary can force account freezes on innocent customers just by sending them fractions of a cent from a sanctioned wallet. A bank or exchange should design screening logic to flag, not automatically lock, an unsolicited dust-sized inbound transfer from a tainted address, and give customers a clear path to prove they neither requested nor could refuse it.",
+      "date": "2026-08-25",
+      "addedAt": "2026-08-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "typology",
+        "dust attack",
+        "HTX",
+        "Kraken",
+        "sanctions",
+        "compliance-weaponization"
+      ],
+      "typology": {
+        "vector": "Small unsolicited crypto transfers ('dust') sent from a wallet linked to a sanctioned entity land in a customer account and trigger the receiving platform's automated sanctions-screening freeze on the whole account, regardless of transfer size",
+        "controls": [
+          "Set a de minimis value threshold below which an unsolicited inbound transfer from a flagged address triggers a review flag rather than an automatic full account freeze",
+          "Distinguish a customer-initiated transfer of tainted funds from an unsolicited dust deposit the customer had no way to refuse before applying account restrictions"
+        ],
+        "obligations": [
+          "Internal review of a dust-attack pattern (many small transfers from one flagged source to many accounts) as a possible attempt to disrupt operations or discredit sanctions compliance, reportable where it meets SAR thresholds",
+          "Continue to hold sanctioned funds as required even where the inbound transfer was unsolicited and sub-cent in value"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Bitcoin Magazine — Kraken Says Users Received 'Dust' From Sanctioned HTX Wallet",
+          "url": "https://bitcoinmagazine.com/news/kraken-says-users-were-dust-attacked",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fca-htx-marketing-lawsuit-settlement-talks",
+      "type": "regulatory",
+      "title": "FCA and HTX enter settlement talks in the UK's first crypto marketing lawsuit",
+      "summary": "The FCA sued Huobi Global (trading as HTX) in October 2025 for illegally promoting crypto services to UK consumers without authorisation, its first case of this kind against a crypto firm. London's High Court has halted proceedings twice at the parties' joint request, most recently extending settlement talks to late August 2026. The FCA had accused HTX of ignoring repeated engagement attempts and operating an 'opaque operational structure'; HTX says it remains 'dedicated to upholding high standards of compliance.'",
+      "soWhat": "How this settles will set the template for FCA enforcement against offshore crypto platforms with no UK legal presence, a fact pattern many banks' correspondent and custody counterparties share. Banks with any HTX exposure should watch whether the resolution carries ongoing monitoring or reporting conditions that could become a model for other unauthorised platforms.",
+      "date": "2026-08-13",
+      "addedAt": "2026-08-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "FCA",
+        "HTX",
+        "enforcement",
+        "financial promotions",
+        "litigation"
+      ],
+      "sources": [
+        {
+          "name": "Reuters via Yahoo Finance — UK regulator, crypto exchange HTX locked in settlement talks",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/uk-regulator-crypto-exchange-htx-105912451.html",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-moonwell-mamo-oracle-exploit-aug2026",
+      "type": "typology",
+      "title": "Moonwell's MAMO market drained of $8.7m via collateral price manipulation on Base",
+      "summary": "On 27 August 2026 an attacker manipulated the collateral price of Moonwell's thinly-traded MAMO token, then borrowed real cbBTC against the inflated collateral from the protocol's mCBTC market on Base, per CertiK, PeckShield and Blockaid. Moonwell set borrow and supply caps for its Base Core Markets to a nominal 1 wei as a precaution while it investigates; WELL and MAMO both fell double digits within 24 hours. It extends a run of DeFi exploits since April 2026 that need no smart-contract code bug, only manipulation of a protocol's price or governance inputs, which have drained more than $600m combined.",
+      "soWhat": "A bank assessing a lending-protocol counterparty or a customer's DeFi collateral exposure should treat 'illiquid token accepted as loan collateral' as a control gap in its own right, independent of the protocol's smart-contract audit history.",
+      "date": "2026-08-27",
+      "addedAt": "2026-08-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "typology",
+        "DeFi",
+        "oracle-manipulation",
+        "Moonwell",
+        "Base",
+        "exploit"
+      ],
+      "typology": {
+        "vector": "An attacker manipulates the on-chain price of a thinly-traded token accepted as loan collateral, then borrows a liquid asset against the inflated collateral value, without needing a smart-contract code bug",
+        "controls": [
+          "Treat acceptance of illiquid or thinly-traded tokens as loan collateral as a standing risk factor in DeFi protocol due diligence, separate from code-audit status",
+          "Monitor for large borrows against recently-appreciated, low-liquidity collateral positions"
+        ],
+        "obligations": [
+          "SAR on suspected DeFi exploit proceeds flowing through counterparty accounts"
+        ]
+      },
+      "sources": [
+        {
+          "name": "The Block — Moonwell investigates lending market issue on Base as security firms flag multimillion-dollar exploit",
+          "url": "https://www.theblock.co/news/defi/2026-08-27-moonwell-investigates-base-lending-market-issue-412913",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-clarity-act-senate-vote-sept15-2026",
+      "type": "regulatory",
+      "title": "CLARITY Act cloture vote set for 15 September as passage odds slide below 20%",
+      "summary": "The Senate has scheduled a procedural cloture vote on the CLARITY Act crypto market-structure bill for 15 September 2026, the day after the chamber returns from recess. Passage still needs 60 votes. Polymarket-tracked odds of the bill passing have fallen from a high of 58% to below 20% since the ethics-related compromise reached in late July, reflecting continued Democratic opposition to parts of the bill.",
+      "soWhat": "A firm date narrows the planning window: if cloture fails on 15 September, the bill's DeFi and custody classification provisions stay unresolved for the rest of 2026. Banks should keep sizing digital-asset activities against current BSA/SEC/CFTC perimeters rather than anticipated CLARITY Act definitions until a vote actually lands.",
+      "date": "2026-08-12",
+      "addedAt": "2026-08-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "CLARITY Act",
+        "US Congress",
+        "market-structure",
+        "legislation"
+      ],
+      "sources": [
+        {
+          "name": "KuCoin — U.S. Senate Sets CLARITY Act Vote for September 15, 2026",
+          "url": "https://www.kucoin.com/news/flash/u-s-senate-sets-clarity-act-vote-for-september-15-2026",
           "kind": "secondary"
         }
       ]

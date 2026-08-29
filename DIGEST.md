@@ -1,6 +1,6 @@
-# Sentinel weekly digest: 28 August 2026
+# Sentinel weekly digest: 29 August 2026
 
-_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC**: 3 new items; latest: Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
@@ -13,6 +13,11 @@ _10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 *US · 24 August 2026 · High impact*
 > **So what:** A sectoral determination is a bigger step than another name added to the SDN list: OFAC can now sanction any exchange or payment provider anywhere that processes a significant transaction for an Iran-linked digital-assets business, whether or not that counterparty was ever individually designated. A bank's screening can no longer stop at address- or entity-level blocklists; it needs to identify Iran exposure at the sector level, and should check historical transaction records against the 30 newly listed Mabna Institute addresses for secondary-sanctions risk.
 Source: [U.S. Department of the Treasury — Treasury Launches Unprecedented Campaign Against Iranian Regime on Economic D-Day](https://home.treasury.gov/news/press-releases/sb0613)
+
+### A vulnerability reported through Cosmos Labs' own bug bounty sat mis-scored for four months, then drained six chains
+*Global · 28 August 2026 · Medium impact*
+> **So what:** A bank assessing a blockchain or DeFi counterparty built on a shared open-source module should treat the vendor's incident-notification track record, not just its code-audit history, as a due-diligence question in its own right. Cosmos Labs said it has no complete registry of who runs its code and has patched 37 vulnerabilities through the same silent, public-first process in the past 13 months; a counterparty on a widely-forked codebase can be exposed by another chain's disclosure, with no warning of its own.
+Source: [The Hacker News — Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)
 
 ### CLARITY Act cloture vote set for 15 September as passage odds slide below 20%
 *US · 12 August 2026 · Medium impact*
@@ -34,10 +39,5 @@ Source: [Reuters via Yahoo Finance — UK regulator, crypto exchange HTX locked 
 > **So what:** This turns a platform's own sanctions-screening control into the attack surface: an adversary can force account freezes on innocent customers just by sending them fractions of a cent from a sanctioned wallet. A bank or exchange should design screening logic to flag, not automatically lock, an unsolicited dust-sized inbound transfer from a tainted address, and give customers a clear path to prove they neither requested nor could refuse it.
 Source: [Bitcoin Magazine — Kraken Says Users Received 'Dust' From Sanctioned HTX Wallet](https://bitcoinmagazine.com/news/kraken-says-users-were-dust-attacked)
 
-### The Sandbox's SAND bridge hijacked via LayerZero delegate exploit: $49bn face-value mint, $675k real loss
-*Global · 22 August 2026 · Medium impact*
-> **So what:** The gap between a $49bn headline mint and a $675,000 real loss shows why a bank tracing an incident needs the actual on-chain extraction figure, not the face-value number that first circulates. The recurring failure mode, three incidents in five months, is application-level mismanagement of cross-chain bridge permissions rather than a single protocol bug, so due diligence on any digital-asset rail with cross-chain bridge dependency should ask which bridge and delegate model it uses, not just which chains it supports.
-Source: [crypto.news — The Sandbox's $49 billion phantom mint: how a bridge exploit created unbacked SAND tokens](https://crypto.news/sandbox-bridge-exploit-49-billion-phantom-sand-mint/)
-
 ## By the numbers
-10 new · 1 high-impact · 0 verified
+9 new · 1 high-impact · 0 verified

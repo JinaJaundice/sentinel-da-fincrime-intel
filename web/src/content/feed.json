@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-28",
+  "lastUpdated": "2026-08-29",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6440,6 +6440,53 @@
         {
           "name": "KuCoin — U.S. Senate Sets CLARITY Act Vote for September 15, 2026",
           "url": "https://www.kucoin.com/news/flash/u-s-senate-sets-clarity-act-vote-for-september-15-2026",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-cosmos-evm-disclosure-failure-aug2026",
+      "type": "typology",
+      "title": "A vulnerability reported through Cosmos Labs' own bug bounty sat mis-scored for four months, then drained six chains",
+      "summary": "Cosmos Labs' 28 August post-mortem shows a critical balance-handling flaw in its shared Cosmos EVM module was reported through its bug bounty programme on 25 April 2026 but wrongly assessed as posing no risk to live funds. The team confirmed by 13 August that every Cosmos EVM chain was affected, then shipped the fix on 19 August through its routine public patch process instead of privately warning downstream chains, as its own disclosure policy calls for on a network-wide risk. A public fork of the code described the exploit path in detail within eight hours of the release; the first attack hit MANTRA about 12 hours after that, and Cosmos Labs' first private warning went out only after MANTRA had already reported the breach. Six chains were exploited between 20 and 25 August; Cosmos Labs put confirmed proceeds at roughly $5.7m sold across DEXs and CEXs, while KiiChain's own incident report separately logged 148m KII (about $9.7m at the time) drained from its wallets, with roughly 54% later frozen by the chain halt.",
+      "soWhat": "A bank assessing a blockchain or DeFi counterparty built on a shared open-source module should treat the vendor's incident-notification track record, not just its code-audit history, as a due-diligence question in its own right. Cosmos Labs said it has no complete registry of who runs its code and has patched 37 vulnerabilities through the same silent, public-first process in the past 13 months; a counterparty on a widely-forked codebase can be exposed by another chain's disclosure, with no warning of its own.",
+      "date": "2026-08-28",
+      "addedAt": "2026-08-29",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "typology",
+        "DeFi",
+        "Cosmos",
+        "supply-chain",
+        "disclosure",
+        "exploit",
+        "cross-chain"
+      ],
+      "typology": {
+        "vector": "A vendor maintaining a shared open-source module mis-scores a bug-bounty report, then patches it through a routine public process rather than notifying every downstream chain privately; a race between the public patch and chain operators' upgrade window lets an attacker exploit the code before it is fixed",
+        "controls": [
+          "Assess a DeFi or blockchain counterparty's vendor-disclosure and patch-distribution practice for shared code, not only its audit history",
+          "Treat 'runs a widely-forked open-source module with no central registry of deployers' as a standing systemic-risk factor, independent of any single chain's own security posture",
+          "Monitor exposure to any chain built on a shared module once a critical advisory for that module is published, given the historical gap between public patch and private notification"
+        ],
+        "obligations": [
+          "SAR on suspected proceeds of the exploit flowing through counterparty accounts",
+          "Freeze or enhanced monitoring of balances tied to affected chains during an unresolved halt, given the post-mortem confirms transaction history over the exploit window cannot be relied on"
+        ]
+      },
+      "sources": [
+        {
+          "name": "The Hacker News — Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
+          "url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html",
+          "kind": "secondary"
+        },
+        {
+          "name": "The Defiant — Cosmos Labs Urges EVM Chains To Halt As Shared Bug Drains Three Networks",
+          "url": "https://thedefiant.io/news/blockchains/cosmos-labs-urges-evm-chains-halt-shared-bug-drains-three-networks",
           "kind": "secondary"
         }
       ]

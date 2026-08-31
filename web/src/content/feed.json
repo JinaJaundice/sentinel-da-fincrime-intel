@@ -6529,6 +6529,34 @@
           "kind": "secondary"
         }
       ]
+    },
+    {
+      "id": "feed-fogo-foundation-token-compromise-aug2026",
+      "type": "signal",
+      "title": "Fogo Foundation loses 400m tokens to an undisclosed compromise, halts its own mainnet",
+      "summary": "On 28 August 2026 the Fogo Foundation disclosed that an unknown actor had compromised the organisation and sent 400 million FOGO tokens, then worth about $3m and equal to roughly 10% of circulating supply, to an address it does not control. The Foundation first said the blockchain itself was unaffected, but about 15 hours later, on 29 August, halted the Fogo mainnet outright so validators could upgrade the network to restrict the addresses involved. Fogo has not disclosed the attack vector, which systems or wallets were compromised, or the destination addresses; Bitget and KuCoin both suspended FOGO deposits and withdrawals.",
+      "soWhat": "A foundation-level compromise with an undisclosed vector, followed by a unilateral mainnet halt, is a governance and custody red flag distinct from a smart-contract bug: a bank exposed to FOGO or built on Fogo has no visibility into whether the root cause is fixed, and the halt itself shows the chain operator can freeze the network without a public process. Treat any FOGO-denominated exposure, or counterparty balances routed through Bitget/KuCoin around 28-29 August 2026, as needing a fresh source-of-funds check pending Fogo's own disclosure.",
+      "date": "2026-08-29",
+      "addedAt": "2026-08-31",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": [
+        "exploit",
+        "token-theft",
+        "Fogo",
+        "Layer-1",
+        "undisclosed-vector"
+      ],
+      "sources": [
+        {
+          "name": "The Block: Fogo halts mainnet after 400m FOGO token theft",
+          "url": "https://www.theblock.co/news/defi/2026-08-29-layer-1-blockchain-fogo-halts-mainnet-after-attacker-receives-400-million-fogo-tokens-10-of-circulating-supply-413064",
+          "kind": "secondary"
+        }
+      ]
     }
   ]
 }

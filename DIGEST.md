@@ -1,6 +1,6 @@
 # Sentinel weekly digest: 31 August 2026
 
-_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC**: 3 new items; latest: Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
@@ -40,4 +40,4 @@ Source: [The Block — Moonwell investigates lending market issue on Base as sec
 Source: [Reuters via Yahoo Finance — UK regulator, crypto exchange HTX locked in settlement talks](https://finance.yahoo.com/markets/crypto/articles/uk-regulator-crypto-exchange-htx-105912451.html)
 
 ## By the numbers
-9 new · 1 high-impact · 0 verified
+10 new · 1 high-impact · 0 verified

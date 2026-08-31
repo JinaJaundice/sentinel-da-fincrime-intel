@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-29",
+  "lastUpdated": "2026-08-31",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6487,6 +6487,45 @@
         {
           "name": "The Defiant — Cosmos Labs Urges EVM Chains To Halt As Shared Bug Drains Three Networks",
           "url": "https://thedefiant.io/news/blockchains/cosmos-labs-urges-evm-chains-halt-shared-bug-drains-three-networks",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-tectonic-cronos-oracle-exploit-aug2026",
+      "type": "typology",
+      "title": "Cronos halts its own blockchain after a $75m oracle-manipulation exploit on Tectonic",
+      "summary": "On 30 August 2026 an attacker manipulated the price of Tectonic's thinly-traded TONIC token roughly 100-fold in 20 minutes, then borrowed against the inflated collateral, an attack pattern researcher Weilin Li compared to the 2022 Mango Markets hack. Cronos, the Crypto.com-linked network Tectonic runs on, halted the entire chain to stop the attacker moving funds, limiting the amount bridged out to about $6m of the roughly $75m affected. It is the third collateral price-manipulation exploit on a thinly-traded token in six days, after Moonwell's MAMO market (27 August) and a Pendle-market liquidation cascade on Morpho (25 August).",
+      "soWhat": "A third oracle-manipulation exploit in six days confirms illiquid-token collateral is a systemic DeFi weak point, not a one-off. Cronos halting the whole chain to contain the loss also shows a bank cannot treat a public chain as neutral infrastructure: the operator can freeze it unilaterally, which is itself a counterparty and settlement-finality risk to weigh in any DeFi collateral or rail assessment.",
+      "date": "2026-08-30",
+      "addedAt": "2026-08-31",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "typology",
+        "DeFi",
+        "oracle-manipulation",
+        "Cronos",
+        "Tectonic",
+        "exploit"
+      ],
+      "typology": {
+        "vector": "An attacker manipulates the on-chain price of a thinly-traded token accepted as loan collateral, then borrows a liquid asset against the inflated value, without needing a smart-contract code bug; a chain operator may respond by halting the network outright.",
+        "controls": [
+          "Treat acceptance of illiquid or thinly-traded tokens as loan collateral as a standing DeFi due-diligence risk factor, independent of code-audit history",
+          "Where a bank relies on a chain for settlement or custody, record that the chain operator can unilaterally halt it, and factor that into finality and availability risk"
+        ],
+        "obligations": [
+          "SAR on suspected DeFi exploit proceeds flowing through counterparty accounts"
+        ]
+      },
+      "sources": [
+        {
+          "name": "The Block — Crypto.com-linked Cronos network halts after Tectonic exploit estimated at $75 million",
+          "url": "https://www.theblock.co/news/defi/2026-08-30-crypto-com-linked-cronos-network-halts-after-tectonic-exploit-estimated-at-75-million-413069",
           "kind": "secondary"
         }
       ]

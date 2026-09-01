@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-31",
+  "lastUpdated": "2026-09-01",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6554,6 +6554,49 @@
         {
           "name": "The Block: Fogo halts mainnet after 400m FOGO token theft",
           "url": "https://www.theblock.co/news/defi/2026-08-29-layer-1-blockchain-fogo-halts-mainnet-after-attacker-receives-400-million-fogo-tokens-10-of-circulating-supply-413064",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-certik-august-2026-price-manipulation-shift",
+      "type": "typology",
+      "title": "CertiK: August 2026 DeFi losses hit $215m as price-manipulation attacks overtake code bugs",
+      "summary": "CertiK said on 31 August 2026 that confirmed incidents in August produced about $215m in losses, the highest monthly incident count of 2026 so far. Its breakdown: price manipulation $131.6m, phishing $41.5m, code vulnerabilities $20.6m, wallet compromise $11.8m and governance incidents $8.5m. The largest single item was the 30 August Tectonic exploit on Cronos ($120.4m impact, after an attacker inflated the thinly traded TONIC token about 100x in 20 minutes and borrowed against it), followed by Moonwell on Base ($8.7m, 27 August, same collateral-inflation pattern), Term Finance ($8.5m governance exploit, 23 August), Coinsbuy ($7.9m) and Fogo ($3.9m). CertiK classed $110.7m of the month's total as later returned or frozen, mostly because Cronos's validators halted the chain before funds moved; some commentators dispute CertiK's price-manipulation label, arguing the Tectonic and Moonwell protocols executed exactly as coded against thin collateral liquidity rather than suffering a bug. TRM Labs separately counts fewer incidents and a lower loss total for the same period, so figures vary by tracker.",
+      "soWhat": "The mix has flipped: for most of 2026 code bugs drove the most incidents but wallet compromise and phishing drove the most money, and in August price manipulation of illiquid collateral tokens took the top spot instead. For a bank's financial-crime posture, that shifts what transaction monitoring should flag on the DeFi side: large borrows taken out immediately after a sharp price spike in a thinly traded token, not just contract-exploit signatures. It also shows how thin the recovery path is. The $110.7m clawed back in August happened only because Cronos has a small validator set willing to unilaterally halt the chain; a bank receiving proceeds routed through a fully decentralised protocol with no such lever has no equivalent freeze option, so screening and SAR triage need to treat any inbound funds tied to a same-day collateral-price spike as high-risk regardless of whether the source chain can freeze anything.",
+      "date": "2026-08-31",
+      "addedAt": "2026-09-01",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "typology",
+        "DeFi",
+        "price-manipulation",
+        "oracle-exploit",
+        "CertiK",
+        "Tectonic",
+        "Cronos",
+        "collateral-liquidity"
+      ],
+      "typology": {
+        "vector": "Price manipulation of thin-liquidity DeFi collateral tokens (spot/weakly-lagged oracle exploits, pump-and-borrow) overtook code vulnerabilities as the dominant monthly loss driver for the first time in 2026",
+        "controls": [
+          "Flag large borrows or withdrawals taken immediately after a sharp same-day price spike in a low-liquidity collateral token",
+          "Treat inbound funds tied to a chain-level emergency halt or validator freeze as unresolved pending the protocol's own compensation or restart plan, not as recovered",
+          "Cross-reference exchange deposit addresses against known August 2026 exploit proceeds (Tectonic, Moonwell, Term Finance, Coinsbuy, Fogo) before releasing funds"
+        ],
+        "obligations": [
+          "SAR on suspected exploit or theft proceeds moving through customer accounts",
+          "POCA obligations on receiving institutions for criminal property regardless of the protocol's own loss classification"
+        ]
+      },
+      "sources": [
+        {
+          "name": "The Crypto Times — Crypto Losses Hit $215 Million in August 2026, With DeFi Exploits at $144.6M: CertiK",
+          "url": "https://www.cryptotimes.io/2026/08/31/crypto-losses-hit-215-million-in-august-2026-defi-exploits-certik/",
           "kind": "secondary"
         }
       ]

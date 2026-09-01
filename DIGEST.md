@@ -1,18 +1,16 @@
-# Sentinel weekly digest: 31 August 2026
+# Sentinel weekly digest: 1 September 2026
 
 _10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 3 new items; latest: Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
-- **US rulemaking**: 1 new item; latest: Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
-- **State actors & DPRK**: 1 new item; latest: Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
+- **Sanctions & OFAC**: 2 new items; latest: 'Dust attack' floods Kraken with sanctioned HTX-linked funds to trigger account freezes
 
 ## Notable this week
 
-### Treasury launches 'Operation Economic Outcast', naming digital assets a sanctionable sector of Iran's economy
-*US · 24 August 2026 · High impact*
-> **So what:** A sectoral determination is a bigger step than another name added to the SDN list: OFAC can now sanction any exchange or payment provider anywhere that processes a significant transaction for an Iran-linked digital-assets business, whether or not that counterparty was ever individually designated. A bank's screening can no longer stop at address- or entity-level blocklists; it needs to identify Iran exposure at the sector level, and should check historical transaction records against the 30 newly listed Mabna Institute addresses for secondary-sanctions risk.
-Source: [U.S. Department of the Treasury — Treasury Launches Unprecedented Campaign Against Iranian Regime on Economic D-Day](https://home.treasury.gov/news/press-releases/sb0613)
+### CertiK: August 2026 DeFi losses hit $215m as price-manipulation attacks overtake code bugs
+*Global · 31 August 2026 · Medium impact*
+> **So what:** The mix has flipped: for most of 2026 code bugs drove the most incidents but wallet compromise and phishing drove the most money, and in August price manipulation of illiquid collateral tokens took the top spot instead. For a bank's financial-crime posture, that shifts what transaction monitoring should flag on the DeFi side: large borrows taken out immediately after a sharp price spike in a thinly traded token, not just contract-exploit signatures. It also shows how thin the recovery path is. The $110.7m clawed back in August happened only because Cronos has a small validator set willing to unilaterally halt the chain; a bank receiving proceeds routed through a fully decentralised protocol with no such lever has no equivalent freeze option, so screening and SAR triage need to treat any inbound funds tied to a same-day collateral-price spike as high-risk regardless of whether the source chain can freeze anything.
+Source: [The Crypto Times — Crypto Losses Hit $215 Million in August 2026, With DeFi Exploits at $144.6M: CertiK](https://www.cryptotimes.io/2026/08/31/crypto-losses-hit-215-million-in-august-2026-defi-exploits-certik/)
 
 ### Cronos halts its own blockchain after a $75m oracle-manipulation exploit on Tectonic
 *Global · 30 August 2026 · Medium impact*
@@ -40,4 +38,4 @@ Source: [The Block — Moonwell investigates lending market issue on Base as sec
 Source: [Reuters via Yahoo Finance — UK regulator, crypto exchange HTX locked in settlement talks](https://finance.yahoo.com/markets/crypto/articles/uk-regulator-crypto-exchange-htx-105912451.html)
 
 ## By the numbers
-10 new · 1 high-impact · 0 verified
+10 new · 0 high-impact · 0 verified

@@ -1,11 +1,28 @@
-# Sentinel weekly digest: 1 September 2026
+# Sentinel weekly digest: 2 September 2026
 
-_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 2 new items; latest: 'Dust attack' floods Kraken with sanctioned HTX-linked funds to trigger account freezes
+- **Sanctions & OFAC**: 3 new items; latest: Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
+- **Stablecoins**: 2 new items; latest: DOJ and FBI seize $560k in Hamas-linked crypto, take down Al Qassam Brigades' fundraising sites
+- **State actors & DPRK**: 1 new item; latest: Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
 
 ## Notable this week
+
+### Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
+*Global · 31 August 2026 · High impact*
+> **So what:** HyperUnit's lock-and-mint design lets a wallet move native Bitcoin onto a decentralised venue and start trading without touching a wrapped-token issuer, a KYC gate or a centralised exchange, so a sanctioned actor can get exposure to Hyperliquid before any institution has a chance to screen the funds. The screening burden then falls on the centralised exchanges receiving the proceeds afterwards. Banks and exchanges that see inbound flows which touch Hyperliquid or HyperUnit-labelled addresses should treat that hop as a laundering step, not a legitimate trading detour, especially while Hyperliquid pursues a regulated US listing route.
+Source: [The Crypto Times — North Korea's Lazarus Group Moves $30M Through Hyperliquid as Trump Pushes US Entry](https://www.cryptotimes.io/2026/09/01/north-koreas-lazarus-group-moves-30m-through-hyperliquid-as-trump-pushes-us-entry/)
+
+### DOJ and FBI seize $560k in Hamas-linked crypto, take down Al Qassam Brigades' fundraising sites
+*US · 1 September 2026 · Medium impact*
+> **So what:** Hamas publicly said in 2023 it had stopped crypto fundraising; this case shows the network kept operating through rotating-address donation schemes for at least two more years. For a bank's financial-crime programme, rotating deposit addresses feeding a common cash-out point is the pattern to flag, not any single address. USDT is again the token of record in a terror-financing case, which keeps issuer freeze cooperation central to how banks think about recovery once tainted funds reach an exchange they use.
+Source: [US Department of Justice — Justice Department Continues to Disrupt Hamas Terrorist Financing Schemes Through Seizures of Cryptocurrency and Internet Infrastructure](https://www.justice.gov/opa/pr/justice-department-continues-disrupt-hamas-terrorist-financing-schemes-through-seizures)
+
+### Thai businessmen sue Tether over $42.4M USDT frozen before any warrant existed
+*US · 31 August 2026 · Medium impact*
+> **So what:** Banks and compliance teams treat a Tether blacklist as a strong signal that funds are tainted. This case tests whether that signal can exist before any judicial process authorised it, which matters for how much weight a bank should place on an issuer freeze alone when deciding whether to file a SAR or exit a customer relationship. If a court finds Tether acted on an informal law-enforcement request rather than legal authority, banks relying solely on freeze status as proof of illicit origin have a gap: freeze timing and its legal basis need to be checked, not just the fact of the freeze.
+Source: [crypto.news — Tether sued over alleged unlawful $42.4M USDT freeze](https://crypto.news/tether-sued-over-alleged-unlawful-42-4m-usdt-freeze/)
 
 ### CertiK: August 2026 DeFi losses hit $215m as price-manipulation attacks overtake code bugs
 *Global · 31 August 2026 · Medium impact*
@@ -22,20 +39,5 @@ Source: [The Block — Crypto.com-linked Cronos network halts after Tectonic exp
 > **So what:** A bank assessing a blockchain or DeFi counterparty built on a shared open-source module should treat the vendor's incident-notification track record, not just its code-audit history, as a due-diligence question in its own right. Cosmos Labs said it has no complete registry of who runs its code and has patched 37 vulnerabilities through the same silent, public-first process in the past 13 months; a counterparty on a widely-forked codebase can be exposed by another chain's disclosure, with no warning of its own.
 Source: [The Hacker News — Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)
 
-### CLARITY Act cloture vote set for 15 September as passage odds slide below 20%
-*US · 12 August 2026 · Medium impact*
-> **So what:** A firm date narrows the planning window: if cloture fails on 15 September, the bill's DeFi and custody classification provisions stay unresolved for the rest of 2026. Banks should keep sizing digital-asset activities against current BSA/SEC/CFTC perimeters rather than anticipated CLARITY Act definitions until a vote actually lands.
-Source: [KuCoin — U.S. Senate Sets CLARITY Act Vote for September 15, 2026](https://www.kucoin.com/news/flash/u-s-senate-sets-clarity-act-vote-for-september-15-2026)
-
-### Moonwell's MAMO market drained of $8.7m via collateral price manipulation on Base
-*Global · 27 August 2026 · Medium impact*
-> **So what:** A bank assessing a lending-protocol counterparty or a customer's DeFi collateral exposure should treat 'illiquid token accepted as loan collateral' as a control gap in its own right, independent of the protocol's smart-contract audit history.
-Source: [The Block — Moonwell investigates lending market issue on Base as security firms flag multimillion-dollar exploit](https://www.theblock.co/news/defi/2026-08-27-moonwell-investigates-base-lending-market-issue-412913)
-
-### FCA and HTX enter settlement talks in the UK's first crypto marketing lawsuit
-*UK · 13 August 2026 · Medium impact*
-> **So what:** How this settles will set the template for FCA enforcement against offshore crypto platforms with no UK legal presence, a fact pattern many banks' correspondent and custody counterparties share. Banks with any HTX exposure should watch whether the resolution carries ongoing monitoring or reporting conditions that could become a model for other unauthorised platforms.
-Source: [Reuters via Yahoo Finance — UK regulator, crypto exchange HTX locked in settlement talks](https://finance.yahoo.com/markets/crypto/articles/uk-regulator-crypto-exchange-htx-105912451.html)
-
 ## By the numbers
-10 new · 0 high-impact · 0 verified
+11 new · 1 high-impact · 0 verified

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-01",
+  "lastUpdated": "2026-09-02",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6597,6 +6597,84 @@
         {
           "name": "The Crypto Times — Crypto Losses Hit $215 Million in August 2026, With DeFi Exploits at $144.6M: CertiK",
           "url": "https://www.cryptotimes.io/2026/08/31/crypto-losses-hit-215-million-in-august-2026-defi-exploits-certik/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-tether-thai-lawsuit-42m-freeze",
+      "type": "signal",
+      "title": "Thai businessmen sue Tether over $42.4M USDT frozen before any warrant existed",
+      "summary": "Two Thai businessmen sued Tether on 31 August 2026 in the US District Court for the Southern District of New York, alleging the issuer blacklisted ten Ethereum addresses holding 42,417,785.62 USDT on 30 October 2025 after only an informal request from a Homeland Security Investigations agent, with no warrant, court order or subpoena. A seizure warrant covering related fraud-linked wallets was not issued until 19 February 2026, nearly four months later. The plaintiffs say they acquired the tokens in secondary-market business deals and had no direct relationship with Tether; they are seeking an injunction, damages and disgorgement of reserve income, and want to stop Tether burning the tokens under a warrant they argue cannot retroactively validate the October freeze.",
+      "soWhat": "Banks and compliance teams treat a Tether blacklist as a strong signal that funds are tainted. This case tests whether that signal can exist before any judicial process authorised it, which matters for how much weight a bank should place on an issuer freeze alone when deciding whether to file a SAR or exit a customer relationship. If a court finds Tether acted on an informal law-enforcement request rather than legal authority, banks relying solely on freeze status as proof of illicit origin have a gap: freeze timing and its legal basis need to be checked, not just the fact of the freeze.",
+      "date": "2026-08-31",
+      "addedAt": "2026-09-02",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["Tether", "USDT", "freeze", "litigation", "stablecoin", "HSI", "due-process"],
+      "sources": [
+        {
+          "name": "crypto.news — Tether sued over alleged unlawful $42.4M USDT freeze",
+          "url": "https://crypto.news/tether-sued-over-alleged-unlawful-42-4m-usdt-freeze/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-doj-fbi-hamas-crypto-seizure-sept2026",
+      "type": "signal",
+      "title": "DOJ and FBI seize $560k in Hamas-linked crypto, take down Al Qassam Brigades' fundraising sites",
+      "summary": "The Justice Department announced on 1 September 2026 that court-authorised seizure warrants dated 25 March 2025, 25 June 2025 and 10 October 2025 let the FBI seize about $560,000 in cryptocurrency destined for Hamas's military wing, the Al Qassam Brigades, plus two further warrants dated 29 July 2026 and 18 August 2026. Investigators said an encrypted group chat claiming Hamas association directed donors to a fundraising website that issued a rotating set of donation addresses, a technique meant to obscure the money trail. The FBI's Albuquerque Field Office also seized the domains and servers behind AlQassam.ps, the group's main site, and obtained data on thousands of individuals who tried to donate.",
+      "soWhat": "Hamas publicly said in 2023 it had stopped crypto fundraising; this case shows the network kept operating through rotating-address donation schemes for at least two more years. For a bank's financial-crime programme, rotating deposit addresses feeding a common cash-out point is the pattern to flag, not any single address. USDT is again the token of record in a terror-financing case, which keeps issuer freeze cooperation central to how banks think about recovery once tainted funds reach an exchange they use.",
+      "date": "2026-09-01",
+      "addedAt": "2026-09-02",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": ["Hamas", "terrorist-financing", "DOJ", "FBI", "USDT", "seizure", "sanctions"],
+      "sources": [
+        {
+          "name": "US Department of Justice — Justice Department Continues to Disrupt Hamas Terrorist Financing Schemes Through Seizures of Cryptocurrency and Internet Infrastructure",
+          "url": "https://www.justice.gov/opa/pr/justice-department-continues-disrupt-hamas-terrorist-financing-schemes-through-seizures",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-lazarus-hyperliquid-30m-laundering",
+      "type": "typology",
+      "title": "Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry",
+      "summary": "On-chain investigator Arkham disclosed on 31 August 2026 that wallets linked to the OFAC-sanctioned Lazarus Group moved more than $30 million through the decentralised derivatives exchange Hyperliquid over the prior three weeks. The funds moved via HyperUnit, Hyperliquid's lock-and-mint bridge, converting Bitcoin into Ethereum and Solana before being routed across several chains and delivered to centralised exchanges including KuCoin, LBank and Kraken, alongside unlabelled Tron-based services. The disclosure landed days after Bloomberg reported (31 August 2026) that Hyperliquid Labs and Kraken parent Payward are in advanced talks on a structure using Payward's CFTC-regulated Bitnomial exchange to bring Hyperliquid contracts to US traders; Kraken said it screens for sanctioned wallets before assets reach its platform.",
+      "soWhat": "HyperUnit's lock-and-mint design lets a wallet move native Bitcoin onto a decentralised venue and start trading without touching a wrapped-token issuer, a KYC gate or a centralised exchange, so a sanctioned actor can get exposure to Hyperliquid before any institution has a chance to screen the funds. The screening burden then falls on the centralised exchanges receiving the proceeds afterwards. Banks and exchanges that see inbound flows which touch Hyperliquid or HyperUnit-labelled addresses should treat that hop as a laundering step, not a legitimate trading detour, especially while Hyperliquid pursues a regulated US listing route.",
+      "date": "2026-08-31",
+      "addedAt": "2026-09-02",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": ["DPRK", "Lazarus", "Hyperliquid", "DeFi", "sanctions-evasion", "bridge", "Kraken"],
+      "typology": {
+        "vector": "Sanctioned wallets convert stolen Bitcoin through a decentralised exchange's native-asset lock-and-mint bridge, trading and re-routing across chains before cashing out at centralised exchanges that only screen after the funds arrive",
+        "controls": [
+          "Flag deposits traced through Hyperliquid, HyperUnit or comparable native-asset DEX bridges for enhanced sanctions screening before crediting customer accounts",
+          "Treat a DEX hop between a known theft address and a centralised exchange deposit as a laundering step rather than ordinary trading activity",
+          "Monitor for the specific BTC-to-ETH/SOL conversion and multi-chain bridging pattern Arkham documented, not just direct transfers from labelled Lazarus addresses"
+        ],
+        "obligations": [
+          "OFAC sanctions screening and blocking obligations for any US person or US-nexus institution receiving Lazarus-linked funds",
+          "SAR filing on suspected state-sponsored theft or sanctions-evasion proceeds moving through customer accounts"
+        ]
+      },
+      "sources": [
+        {
+          "name": "The Crypto Times — North Korea's Lazarus Group Moves $30M Through Hyperliquid as Trump Pushes US Entry",
+          "url": "https://www.cryptotimes.io/2026/09/01/north-koreas-lazarus-group-moves-30m-through-hyperliquid-as-trump-pushes-us-entry/",
           "kind": "secondary"
         }
       ]

@@ -1,13 +1,19 @@
-# Sentinel weekly digest: 2 September 2026
+# Sentinel weekly digest: 4 September 2026
 
-_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_8 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 3 new items; latest: Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
-- **Stablecoins**: 2 new items; latest: DOJ and FBI seize $560k in Hamas-linked crypto, take down Al Qassam Brigades' fundraising sites
+- **Stablecoins**: 3 new items; latest: FinCEN flags $12.7bn in suspected pig-butchering scam activity, issues fresh alert on scam-centre laundering
+- **Sanctions & OFAC**: 2 new items; latest: Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
+- **US rulemaking**: 1 new item; latest: FinCEN flags $12.7bn in suspected pig-butchering scam activity, issues fresh alert on scam-centre laundering
 - **State actors & DPRK**: 1 new item; latest: Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
 
 ## Notable this week
+
+### FinCEN flags $12.7bn in suspected pig-butchering scam activity, issues fresh alert on scam-centre laundering
+*US · 3 September 2026 · High impact*
+> **So what:** The $12.7bn figure is filed-SAR activity, not confirmed loss, so treat it as a floor on exposure, not a total. The alert's two named laundering steps, stablecoin transfers to offshore exchanges and use of professional money-launderer-run shell accounts, are concrete red flags to add to transaction-monitoring rules now, and FinCEN is explicitly steering banks toward 314(b) information sharing on scam-centre-linked accounts.
+Source: [FinCEN: FinCEN Identifies Nearly $13 Billion Linked to Suspected Digital Asset Scams Operated by Overseas Scam Centers](https://www.fincen.gov/news/news-releases/fincen-identifies-nearly-13-billion-linked-suspected-digital-asset-scams)
 
 ### Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
 *Global · 31 August 2026 · High impact*
@@ -34,10 +40,5 @@ Source: [The Crypto Times — Crypto Losses Hit $215 Million in August 2026, Wit
 > **So what:** A third oracle-manipulation exploit in six days confirms illiquid-token collateral is a systemic DeFi weak point, not a one-off. Cronos halting the whole chain to contain the loss also shows a bank cannot treat a public chain as neutral infrastructure: the operator can freeze it unilaterally, which is itself a counterparty and settlement-finality risk to weigh in any DeFi collateral or rail assessment.
 Source: [The Block — Crypto.com-linked Cronos network halts after Tectonic exploit estimated at $75 million](https://www.theblock.co/news/defi/2026-08-30-crypto-com-linked-cronos-network-halts-after-tectonic-exploit-estimated-at-75-million-413069)
 
-### A vulnerability reported through Cosmos Labs' own bug bounty sat mis-scored for four months, then drained six chains
-*Global · 28 August 2026 · Medium impact*
-> **So what:** A bank assessing a blockchain or DeFi counterparty built on a shared open-source module should treat the vendor's incident-notification track record, not just its code-audit history, as a due-diligence question in its own right. Cosmos Labs said it has no complete registry of who runs its code and has patched 37 vulnerabilities through the same silent, public-first process in the past 13 months; a counterparty on a widely-forked codebase can be exposed by another chain's disclosure, with no warning of its own.
-Source: [The Hacker News — Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)
-
 ## By the numbers
-11 new · 1 high-impact · 0 verified
+8 new · 2 high-impact · 0 verified

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-02",
+  "lastUpdated": "2026-09-04",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6614,7 +6614,15 @@
       "region": "US",
       "impact": "medium",
       "confidence": "high",
-      "tags": ["Tether", "USDT", "freeze", "litigation", "stablecoin", "HSI", "due-process"],
+      "tags": [
+        "Tether",
+        "USDT",
+        "freeze",
+        "litigation",
+        "stablecoin",
+        "HSI",
+        "due-process"
+      ],
       "sources": [
         {
           "name": "crypto.news — Tether sued over alleged unlawful $42.4M USDT freeze",
@@ -6636,7 +6644,15 @@
       "region": "US",
       "impact": "medium",
       "confidence": "high",
-      "tags": ["Hamas", "terrorist-financing", "DOJ", "FBI", "USDT", "seizure", "sanctions"],
+      "tags": [
+        "Hamas",
+        "terrorist-financing",
+        "DOJ",
+        "FBI",
+        "USDT",
+        "seizure",
+        "sanctions"
+      ],
       "sources": [
         {
           "name": "US Department of Justice — Justice Department Continues to Disrupt Hamas Terrorist Financing Schemes Through Seizures of Cryptocurrency and Internet Infrastructure",
@@ -6658,7 +6674,15 @@
       "region": "Global",
       "impact": "high",
       "confidence": "medium",
-      "tags": ["DPRK", "Lazarus", "Hyperliquid", "DeFi", "sanctions-evasion", "bridge", "Kraken"],
+      "tags": [
+        "DPRK",
+        "Lazarus",
+        "Hyperliquid",
+        "DeFi",
+        "sanctions-evasion",
+        "bridge",
+        "Kraken"
+      ],
       "typology": {
         "vector": "Sanctioned wallets convert stolen Bitcoin through a decentralised exchange's native-asset lock-and-mint bridge, trading and re-routing across chains before cashing out at centralised exchanges that only screen after the funds arrive",
         "controls": [
@@ -6676,6 +6700,46 @@
           "name": "The Crypto Times — North Korea's Lazarus Group Moves $30M Through Hyperliquid as Trump Pushes US Entry",
           "url": "https://www.cryptotimes.io/2026/09/01/north-koreas-lazarus-group-moves-30m-through-hyperliquid-as-trump-pushes-us-entry/",
           "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fincen-pig-butchering-fta-alert-sept2026",
+      "type": "regulatory",
+      "title": "FinCEN flags $12.7bn in suspected pig-butchering scam activity, issues fresh alert on scam-centre laundering",
+      "summary": "FinCEN published a Financial Trend Analysis and an Alert on 3 September 2026 covering digital-asset investment scams (\"pig butchering\", \"romance baiting\") run from overseas scam centres. The analysis reviewed 33,904 Bank Secrecy Act reports filed between 8 September 2023 and 31 December 2025, totalling about $12.7bn in suspected scam-related activity across all 50 US states. FinCEN said scam-centre operators buy services on \"guarantee marketplaces\" and use professional money launderers who move proceeds through money-mule networks and stablecoin transfers to digital-asset exchanges outside the US.",
+      "soWhat": "The $12.7bn figure is filed-SAR activity, not confirmed loss, so treat it as a floor on exposure, not a total. The alert's two named laundering steps, stablecoin transfers to offshore exchanges and use of professional money-launderer-run shell accounts, are concrete red flags to add to transaction-monitoring rules now, and FinCEN is explicitly steering banks toward 314(b) information sharing on scam-centre-linked accounts.",
+      "date": "2026-09-03",
+      "addedAt": "2026-09-04",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "FinCEN",
+        "pig-butchering",
+        "scam-centres",
+        "stablecoins",
+        "BSA",
+        "money-mules",
+        "314b"
+      ],
+      "sources": [
+        {
+          "name": "FinCEN: FinCEN Identifies Nearly $13 Billion Linked to Suspected Digital Asset Scams Operated by Overseas Scam Centers",
+          "url": "https://www.fincen.gov/news/news-releases/fincen-identifies-nearly-13-billion-linked-suspected-digital-asset-scams",
+          "kind": "primary"
+        },
+        {
+          "name": "FinCEN Alert, FIN-2026-Alert005: Money Laundering Activity Associated with Digital Asset Investment Scam Centers",
+          "url": "https://www.fincen.gov/system/files/2026-08/FinCEN-Alert-Scam-Centers.pdf",
+          "kind": "primary"
+        },
+        {
+          "name": "FinCEN Financial Trend Analysis: Digital Asset Investment Scams 2023-2025",
+          "url": "https://www.fincen.gov/system/files/2026-08/FinCEN-FTA-Digital-Asset-Investment-Scams.pdf",
+          "kind": "primary"
         }
       ]
     }

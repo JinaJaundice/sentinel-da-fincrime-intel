@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-04",
+  "lastUpdated": "2026-09-07",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6740,6 +6740,41 @@
           "name": "FinCEN Financial Trend Analysis: Digital Asset Investment Scams 2023-2025",
           "url": "https://www.fincen.gov/system/files/2026-08/FinCEN-FTA-Digital-Asset-Investment-Scams.pdf",
           "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-liquid-network-320m-federation-exploit",
+      "type": "signal",
+      "title": "Software bug lets $320m leave Blockstream's Liquid Bitcoin sidechain without any signing key being compromised",
+      "summary": "On 6 September 2026, a customer submitted 4,000 L-BTC to SideSwap's peg-out service, the normal process for converting Bitcoin held on Blockstream's Liquid sidechain back into on-chain Bitcoin. The request passed Liquid's standard authorisation checks, and at least 11 of the network's 15 federation members signed off, releasing about 3,996 BTC (roughly $320m) to the requester. SideSwap and Blockstream say a software flaw in Elements, the code Liquid runs on, let the 4,000 L-BTC be created without real Bitcoin backing it, so the federation approved a valid-looking withdrawal for tokens that should not have existed. No signing key was stolen. The people holding the Bitcoin identified themselves on-chain as \"whitehats\" and said they would return most of it once the bug is fixed and confirmed patched across every node; Liquid's bridge has been disabled since the incident and remains paused.",
+      "soWhat": "This is a reserve-backing failure, not a key theft: every federation signer approved the withdrawal because the flawed software told them it was legitimate. A bank relying on multi-signature custody or a federated bridge for assurance that a wrapped or bridged asset is genuinely backed 1:1 should treat that assurance as void until the issuing network proves its accounting logic, not just its key security, is sound. Any due-diligence on a counterparty or collateral position that uses Liquid, or a similar federated sidechain design, should pause until Blockstream publishes a technical post-mortem and confirms reserves are restored.",
+      "date": "2026-09-06",
+      "addedAt": "2026-09-07",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "Bitcoin",
+        "sidechain",
+        "Liquid-Network",
+        "Blockstream",
+        "exploit",
+        "custody-risk",
+        "proof-of-reserves"
+      ],
+      "sources": [
+        {
+          "name": "CryptoSlate — A whitehat hacker is holding $320 million in drained Bitcoin until developers prove they patched a fatal network flaw",
+          "url": "https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/",
+          "kind": "secondary"
+        },
+        {
+          "name": "CryptoTimes — Crypto Hacks Reached $322M in September's First Week, With Liquid Network's $320M Leaving Four Drains at $2.3M",
+          "url": "https://www.cryptotimes.io/2026/09/07/crypto-hacks-cross-322m-in-septembers-first-week-as-liquid-network-alone-loses-320m/",
+          "kind": "secondary"
         }
       ]
     }

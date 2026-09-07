@@ -1,6 +1,6 @@
-# Sentinel weekly digest: 4 September 2026
+# Sentinel weekly digest: 7 September 2026
 
-_8 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_6 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Stablecoins**: 3 new items; latest: FinCEN flags $12.7bn in suspected pig-butchering scam activity, issues fresh alert on scam-centre laundering
@@ -20,6 +20,11 @@ Source: [FinCEN: FinCEN Identifies Nearly $13 Billion Linked to Suspected Digita
 > **So what:** HyperUnit's lock-and-mint design lets a wallet move native Bitcoin onto a decentralised venue and start trading without touching a wrapped-token issuer, a KYC gate or a centralised exchange, so a sanctioned actor can get exposure to Hyperliquid before any institution has a chance to screen the funds. The screening burden then falls on the centralised exchanges receiving the proceeds afterwards. Banks and exchanges that see inbound flows which touch Hyperliquid or HyperUnit-labelled addresses should treat that hop as a laundering step, not a legitimate trading detour, especially while Hyperliquid pursues a regulated US listing route.
 Source: [The Crypto Times — North Korea's Lazarus Group Moves $30M Through Hyperliquid as Trump Pushes US Entry](https://www.cryptotimes.io/2026/09/01/north-koreas-lazarus-group-moves-30m-through-hyperliquid-as-trump-pushes-us-entry/)
 
+### Software bug lets $320m leave Blockstream's Liquid Bitcoin sidechain without any signing key being compromised
+*Global · 6 September 2026 · Medium impact*
+> **So what:** This is a reserve-backing failure, not a key theft: every federation signer approved the withdrawal because the flawed software told them it was legitimate. A bank relying on multi-signature custody or a federated bridge for assurance that a wrapped or bridged asset is genuinely backed 1:1 should treat that assurance as void until the issuing network proves its accounting logic, not just its key security, is sound. Any due-diligence on a counterparty or collateral position that uses Liquid, or a similar federated sidechain design, should pause until Blockstream publishes a technical post-mortem and confirms reserves are restored.
+Source: [CryptoSlate — A whitehat hacker is holding $320 million in drained Bitcoin until developers prove they patched a fatal network flaw](https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/)
+
 ### DOJ and FBI seize $560k in Hamas-linked crypto, take down Al Qassam Brigades' fundraising sites
 *US · 1 September 2026 · Medium impact*
 > **So what:** Hamas publicly said in 2023 it had stopped crypto fundraising; this case shows the network kept operating through rotating-address donation schemes for at least two more years. For a bank's financial-crime programme, rotating deposit addresses feeding a common cash-out point is the pattern to flag, not any single address. USDT is again the token of record in a terror-financing case, which keeps issuer freeze cooperation central to how banks think about recovery once tainted funds reach an exchange they use.
@@ -35,10 +40,5 @@ Source: [crypto.news — Tether sued over alleged unlawful $42.4M USDT freeze](h
 > **So what:** The mix has flipped: for most of 2026 code bugs drove the most incidents but wallet compromise and phishing drove the most money, and in August price manipulation of illiquid collateral tokens took the top spot instead. For a bank's financial-crime posture, that shifts what transaction monitoring should flag on the DeFi side: large borrows taken out immediately after a sharp price spike in a thinly traded token, not just contract-exploit signatures. It also shows how thin the recovery path is. The $110.7m clawed back in August happened only because Cronos has a small validator set willing to unilaterally halt the chain; a bank receiving proceeds routed through a fully decentralised protocol with no such lever has no equivalent freeze option, so screening and SAR triage need to treat any inbound funds tied to a same-day collateral-price spike as high-risk regardless of whether the source chain can freeze anything.
 Source: [The Crypto Times — Crypto Losses Hit $215 Million in August 2026, With DeFi Exploits at $144.6M: CertiK](https://www.cryptotimes.io/2026/08/31/crypto-losses-hit-215-million-in-august-2026-defi-exploits-certik/)
 
-### Cronos halts its own blockchain after a $75m oracle-manipulation exploit on Tectonic
-*Global · 30 August 2026 · Medium impact*
-> **So what:** A third oracle-manipulation exploit in six days confirms illiquid-token collateral is a systemic DeFi weak point, not a one-off. Cronos halting the whole chain to contain the loss also shows a bank cannot treat a public chain as neutral infrastructure: the operator can freeze it unilaterally, which is itself a counterparty and settlement-finality risk to weigh in any DeFi collateral or rail assessment.
-Source: [The Block — Crypto.com-linked Cronos network halts after Tectonic exploit estimated at $75 million](https://www.theblock.co/news/defi/2026-08-30-crypto-com-linked-cronos-network-halts-after-tectonic-exploit-estimated-at-75-million-413069)
-
 ## By the numbers
-8 new · 2 high-impact · 0 verified
+6 new · 2 high-impact · 0 verified

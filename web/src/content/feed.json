@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-07",
+  "lastUpdated": "2026-09-09",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6775,6 +6775,76 @@
           "name": "CryptoTimes — Crypto Hacks Reached $322M in September's First Week, With Liquid Network's $320M Leaving Four Drains at $2.3M",
           "url": "https://www.cryptotimes.io/2026/09/07/crypto-hacks-cross-322m-in-septembers-first-week-as-liquid-network-alone-loses-320m/",
           "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-india-fiu-15-platforms-takedown-sept2026",
+      "type": "regulatory",
+      "title": "India's FIU issues non-compliance notices to 15 offshore crypto platforms, seeks app and URL takedowns",
+      "summary": "On 9 September 2026, India's Financial Intelligence Unit (FIU-IND) issued non-compliance notices under the Prevention of Money Laundering Act (PMLA) to 15 crypto platforms, including Weex, Blofin, Bitunix, DigiFinex, Toobit, Rezorex, XT.com, Latoken, WOO X, Pionex, ChangeNow, SimpleSwap, FixedFloat, WhiteBIT and Guardarian. The agency also sought takedown of these platforms' apps and URLs from public access in India, saying the entities were operating illegally without complying with PMLA registration, reporting and record-keeping obligations that have applied to offshore virtual-asset service providers since March 2023.",
+      "soWhat": "The action confirms India applies its anti-money-laundering registration duty to any platform serving Indian users, wherever the platform is based. For a bank's financial-crime team, transactions linked to any of these 15 platforms from India-connected customers should be treated as touching an unregistered, non-compliant venue, the same category of risk that led Binance to pay a $2.25m penalty in 2024 and Bybit to restrict its India app in 2025 before both completed FIU registration.",
+      "date": "2026-09-09",
+      "addedAt": "2026-09-09",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "India",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "India",
+        "FIU",
+        "PMLA",
+        "AML",
+        "offshore-exchange",
+        "enforcement"
+      ],
+      "sources": [
+        {
+          "name": "The Block — India seeks takedowns of 15 crypto platforms over AML compliance",
+          "url": "https://www.theblock.co/news/regulation/2026-09-09-india-seeks-takedowns-of-15-crypto-platforms-over-aml-compliance-413975",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-sekoia-dprk-six-clusters-sept2026",
+      "type": "typology",
+      "title": "Sekoia and Kudelski Security split the Lazarus umbrella into six distinct DPRK cyber clusters",
+      "summary": "On 7 September 2026, Sekoia's Threat Detection & Research team and Kudelski Security published a joint report, \"Beyond Lazarus: How North Korea Organizes Its Cyber Operations,\" dividing the North Korean \"Lazarus\" umbrella into six separate clusters: TEMP.Hermit, Citrine Sleet, CryptoCore, Jade Sleet, Moonstone Sleet and Famous Chollima. The report maps each cluster's role under North Korea's General Reconnaissance and Information Bureau (GRIB, the renamed Reconnaissance General Bureau): CryptoCore and Jade Sleet, both descended from the former APT38, run financially-motivated campaigns against crypto and Web3 firms; Moonstone Sleet blends cyber-espionage with ransomware, deploying the Qilin ransomware-as-a-service platform; and Famous Chollima covers the fake-IT-worker operations that help fund the other units.",
+      "soWhat": "Sanctions lists and threat-intel feeds built around a single 'Lazarus' label can miss activity once it is reassigned to one of these six named clusters, so a bank's screening and typology rules should track all six names, not just 'Lazarus' or 'APT38'. The Famous Chollima fake-IT-worker cluster is the one most likely to touch a bank directly, through payroll, contractor payments or onboarding checks, rather than through crypto theft alone.",
+      "date": "2026-09-07",
+      "addedAt": "2026-09-09",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "DPRK",
+        "Lazarus",
+        "typology",
+        "threat-intel",
+        "fake-IT-workers",
+        "sanctions-evasion"
+      ],
+      "typology": {
+        "vector": "North Korea distributes crypto theft, espionage and fake-IT-worker fraud across six distinct, separately-named cyber clusters under GRIB rather than a single 'Lazarus' actor, so name-based screening against one label under-detects the activity",
+        "controls": [
+          "Update sanctions and threat-intel screening lists to include all six cluster names (TEMP.Hermit, Citrine Sleet, CryptoCore, Jade Sleet, Moonstone Sleet, Famous Chollima), not only 'Lazarus' or 'APT38'",
+          "Flag remote contractor or IT-staffing engagements for enhanced due diligence, given Famous Chollima's fake-IT-worker model",
+          "Treat wallets linked to any of the six clusters as carrying the same sanctions-evasion risk as a directly Lazarus-labelled address"
+        ],
+        "obligations": [
+          "OFAC and equivalent sanctions screening obligations extend to addresses and entities linked to any DPRK-nexus cluster, not only those explicitly labelled 'Lazarus'",
+          "SAR filing on suspected DPRK-linked IT-worker payroll or crypto-theft proceeds"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Sekoia — Beyond Lazarus: How North Korea Organizes Its Cyber Operations",
+          "url": "https://www.sekoia.com/blog/beyond-lazarus-organization-of-dprk-cyber-capabilities",
+          "kind": "primary"
         }
       ]
     }

@@ -1,12 +1,12 @@
-# Sentinel weekly digest: 7 September 2026
+# Sentinel weekly digest: 9 September 2026
 
-_6 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_4 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Stablecoins**: 3 new items; latest: FinCEN flags $12.7bn in suspected pig-butchering scam activity, issues fresh alert on scam-centre laundering
-- **Sanctions & OFAC**: 2 new items; latest: Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
+- **Stablecoins**: 1 new item; latest: FinCEN flags $12.7bn in suspected pig-butchering scam activity, issues fresh alert on scam-centre laundering
+- **Sanctions & OFAC**: 1 new item; latest: Sekoia and Kudelski Security split the Lazarus umbrella into six distinct DPRK cyber clusters
 - **US rulemaking**: 1 new item; latest: FinCEN flags $12.7bn in suspected pig-butchering scam activity, issues fresh alert on scam-centre laundering
-- **State actors & DPRK**: 1 new item; latest: Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
+- **State actors & DPRK**: 1 new item; latest: Sekoia and Kudelski Security split the Lazarus umbrella into six distinct DPRK cyber clusters
 
 ## Notable this week
 
@@ -15,30 +15,20 @@ _6 new items in the last 7 days · Sentinel · DA financial-crime intel_
 > **So what:** The $12.7bn figure is filed-SAR activity, not confirmed loss, so treat it as a floor on exposure, not a total. The alert's two named laundering steps, stablecoin transfers to offshore exchanges and use of professional money-launderer-run shell accounts, are concrete red flags to add to transaction-monitoring rules now, and FinCEN is explicitly steering banks toward 314(b) information sharing on scam-centre-linked accounts.
 Source: [FinCEN: FinCEN Identifies Nearly $13 Billion Linked to Suspected Digital Asset Scams Operated by Overseas Scam Centers](https://www.fincen.gov/news/news-releases/fincen-identifies-nearly-13-billion-linked-suspected-digital-asset-scams)
 
-### Lazarus Group routes $30M+ through Hyperliquid's HyperUnit bridge as the venue seeks a US entry
-*Global · 31 August 2026 · High impact*
-> **So what:** HyperUnit's lock-and-mint design lets a wallet move native Bitcoin onto a decentralised venue and start trading without touching a wrapped-token issuer, a KYC gate or a centralised exchange, so a sanctioned actor can get exposure to Hyperliquid before any institution has a chance to screen the funds. The screening burden then falls on the centralised exchanges receiving the proceeds afterwards. Banks and exchanges that see inbound flows which touch Hyperliquid or HyperUnit-labelled addresses should treat that hop as a laundering step, not a legitimate trading detour, especially while Hyperliquid pursues a regulated US listing route.
-Source: [The Crypto Times — North Korea's Lazarus Group Moves $30M Through Hyperliquid as Trump Pushes US Entry](https://www.cryptotimes.io/2026/09/01/north-koreas-lazarus-group-moves-30m-through-hyperliquid-as-trump-pushes-us-entry/)
+### Sekoia and Kudelski Security split the Lazarus umbrella into six distinct DPRK cyber clusters
+*Global · 7 September 2026 · Medium impact*
+> **So what:** Sanctions lists and threat-intel feeds built around a single 'Lazarus' label can miss activity once it is reassigned to one of these six named clusters, so a bank's screening and typology rules should track all six names, not just 'Lazarus' or 'APT38'. The Famous Chollima fake-IT-worker cluster is the one most likely to touch a bank directly, through payroll, contractor payments or onboarding checks, rather than through crypto theft alone.
+Source: [Sekoia — Beyond Lazarus: How North Korea Organizes Its Cyber Operations](https://www.sekoia.com/blog/beyond-lazarus-organization-of-dprk-cyber-capabilities)
+
+### India's FIU issues non-compliance notices to 15 offshore crypto platforms, seeks app and URL takedowns
+*India · 9 September 2026 · Medium impact*
+> **So what:** The action confirms India applies its anti-money-laundering registration duty to any platform serving Indian users, wherever the platform is based. For a bank's financial-crime team, transactions linked to any of these 15 platforms from India-connected customers should be treated as touching an unregistered, non-compliant venue, the same category of risk that led Binance to pay a $2.25m penalty in 2024 and Bybit to restrict its India app in 2025 before both completed FIU registration.
+Source: [The Block — India seeks takedowns of 15 crypto platforms over AML compliance](https://www.theblock.co/news/regulation/2026-09-09-india-seeks-takedowns-of-15-crypto-platforms-over-aml-compliance-413975)
 
 ### Software bug lets $320m leave Blockstream's Liquid Bitcoin sidechain without any signing key being compromised
 *Global · 6 September 2026 · Medium impact*
 > **So what:** This is a reserve-backing failure, not a key theft: every federation signer approved the withdrawal because the flawed software told them it was legitimate. A bank relying on multi-signature custody or a federated bridge for assurance that a wrapped or bridged asset is genuinely backed 1:1 should treat that assurance as void until the issuing network proves its accounting logic, not just its key security, is sound. Any due-diligence on a counterparty or collateral position that uses Liquid, or a similar federated sidechain design, should pause until Blockstream publishes a technical post-mortem and confirms reserves are restored.
 Source: [CryptoSlate — A whitehat hacker is holding $320 million in drained Bitcoin until developers prove they patched a fatal network flaw](https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/)
 
-### DOJ and FBI seize $560k in Hamas-linked crypto, take down Al Qassam Brigades' fundraising sites
-*US · 1 September 2026 · Medium impact*
-> **So what:** Hamas publicly said in 2023 it had stopped crypto fundraising; this case shows the network kept operating through rotating-address donation schemes for at least two more years. For a bank's financial-crime programme, rotating deposit addresses feeding a common cash-out point is the pattern to flag, not any single address. USDT is again the token of record in a terror-financing case, which keeps issuer freeze cooperation central to how banks think about recovery once tainted funds reach an exchange they use.
-Source: [US Department of Justice — Justice Department Continues to Disrupt Hamas Terrorist Financing Schemes Through Seizures of Cryptocurrency and Internet Infrastructure](https://www.justice.gov/opa/pr/justice-department-continues-disrupt-hamas-terrorist-financing-schemes-through-seizures)
-
-### Thai businessmen sue Tether over $42.4M USDT frozen before any warrant existed
-*US · 31 August 2026 · Medium impact*
-> **So what:** Banks and compliance teams treat a Tether blacklist as a strong signal that funds are tainted. This case tests whether that signal can exist before any judicial process authorised it, which matters for how much weight a bank should place on an issuer freeze alone when deciding whether to file a SAR or exit a customer relationship. If a court finds Tether acted on an informal law-enforcement request rather than legal authority, banks relying solely on freeze status as proof of illicit origin have a gap: freeze timing and its legal basis need to be checked, not just the fact of the freeze.
-Source: [crypto.news — Tether sued over alleged unlawful $42.4M USDT freeze](https://crypto.news/tether-sued-over-alleged-unlawful-42-4m-usdt-freeze/)
-
-### CertiK: August 2026 DeFi losses hit $215m as price-manipulation attacks overtake code bugs
-*Global · 31 August 2026 · Medium impact*
-> **So what:** The mix has flipped: for most of 2026 code bugs drove the most incidents but wallet compromise and phishing drove the most money, and in August price manipulation of illiquid collateral tokens took the top spot instead. For a bank's financial-crime posture, that shifts what transaction monitoring should flag on the DeFi side: large borrows taken out immediately after a sharp price spike in a thinly traded token, not just contract-exploit signatures. It also shows how thin the recovery path is. The $110.7m clawed back in August happened only because Cronos has a small validator set willing to unilaterally halt the chain; a bank receiving proceeds routed through a fully decentralised protocol with no such lever has no equivalent freeze option, so screening and SAR triage need to treat any inbound funds tied to a same-day collateral-price spike as high-risk regardless of whether the source chain can freeze anything.
-Source: [The Crypto Times — Crypto Losses Hit $215 Million in August 2026, With DeFi Exploits at $144.6M: CertiK](https://www.cryptotimes.io/2026/08/31/crypto-losses-hit-215-million-in-august-2026-defi-exploits-certik/)
-
 ## By the numbers
-6 new · 2 high-impact · 0 verified
+4 new · 1 high-impact · 0 verified

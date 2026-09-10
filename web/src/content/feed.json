@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-09",
+  "lastUpdated": "2026-09-10",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6844,6 +6844,113 @@
         {
           "name": "Sekoia — Beyond Lazarus: How North Korea Organizes Its Cyber Operations",
           "url": "https://www.sekoia.com/blog/beyond-lazarus-organization-of-dprk-cyber-capabilities",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ofac-doj-xinbi-guarantee-sanctions-sept2026",
+      "type": "signal",
+      "title": "Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin",
+      "summary": "On 9 September 2026 OFAC designated Xinbi Guarantee, a Telegram-based marketplace that has processed over $24 billion since 2022 serving Southeast Asian scam centres, plus two enabler firms (Cambodia's Anwen Technology and Singapore's SafeW Technology). In coordination, the DOJ's Scam Center Strike Force seized Xinbi infrastructure and two wallets, and restrained $52.8m across 52 wallets, taking the Strike Force's total to about $938m. Xinbi responded by converting roughly $2.8m of its remaining USDT into USDD, a stablecoin with no central issuer able to freeze funds.",
+      "soWhat": "This is the clearest sign yet that criminal networks are actively picking stablecoins by freeze risk. USDT carries Tether's freeze function; USDD does not, even though it is partly collateralised with freezable USDT. Banks should treat a shift from USDT to USDD or similar tokens on a counterparty's flows as an evasion signal in its own right, not just a token-type change, and should not assume any stablecoin gives the same post-seizure recovery odds as USDT has shown so far.",
+      "date": "2026-09-09",
+      "addedAt": "2026-09-10",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "OFAC",
+        "sanctions",
+        "DOJ",
+        "scam-centers",
+        "pig-butchering",
+        "USDT",
+        "USDD",
+        "stablecoin",
+        "money-laundering"
+      ],
+      "sources": [
+        {
+          "name": "U.S. Department of the Treasury — Treasury Cracks Down on Transnational Criminal Organization Behind Cyber Scam Operations Targeting Americans",
+          "url": "https://home.treasury.gov/news/press-releases/sb0624",
+          "kind": "primary"
+        },
+        {
+          "name": "The Hacker News — U.S. Disrupts Xinbi Guarantee Scam Marketplace, Freezes $52.8 Million in Crypto",
+          "url": "https://thehackernews.com/2026/09/us-disrupts-xinbi-guarantee-scam.html",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fatf-underground-banking-hawala-report-sept2026",
+      "type": "regulatory",
+      "title": "FATF: underground banking and hawala networks now settle in stablecoins, over 80% of jurisdictions name them a top laundering channel",
+      "summary": "On 3 September 2026 FATF published a report on underground banking, hawala and other similar service providers (HOSSPs), drawing on responses from over 50 jurisdictions. More than 80% of reporting jurisdictions named these systems among their principal professional money-laundering channels, with some single cases moving over EUR 500 million in a few months. Nearly 70% of respondents flagged a shift to 'digital hawala': encrypted-app coordination, mobile-wallet and fintech transfers, and operators settling balances between themselves in virtual assets, including stablecoins.",
+      "soWhat": "This confirms stablecoin settlement is now a standard part of hawala-style laundering networks, not an edge case. For a bank's financial-crime programme, the report's 'money laundering as a service' framing means a single professional network can sit behind many unrelated-looking customer transactions, so pattern detection across customers matters more than single-account monitoring. FATF flags fintech platforms, virtual IBANs and prepaid cards as entry and exit points alongside virtual asset wallets, which widens the surface a bank's typology library should cover.",
+      "date": "2026-09-03",
+      "addedAt": "2026-09-10",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "FATF",
+        "hawala",
+        "underground-banking",
+        "money-laundering-as-a-service",
+        "digital-hawala",
+        "stablecoins",
+        "typology"
+      ],
+      "publication": {
+        "issuer": "FATF",
+        "kind": "Report",
+        "ref": "Professional Money Laundering: Underground Banking, Hawala and Other Similar Service Providers"
+      },
+      "sources": [
+        {
+          "name": "FATF — New FATF report finds underground banking and hawala are key channels for professional money launderers",
+          "url": "https://www.fatf-gafi.org/en/news/pml-underground-banking-hawala-hossps-2026.html",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fca-cp26-32-qcatp-admission-deferral",
+      "type": "regulatory",
+      "title": "FCA CP26/32 proposes deferring admission and execution rules for UK cryptoasset trading platforms",
+      "summary": "FCA Consultation Paper 26/32 (Quarterly consultation paper No. 53) opened on 4 September 2026, with comments due 12 October 2026. Among eight miscellaneous Handbook amendments, it proposes deferral arrangements for the admission process of qualifying cryptoassets on UK Qualifying Cryptoasset Trading Platforms (QCATPs), the execution venue requirements on UK-authorised dealers and arrangers, and the execution policy requirement for those firms.",
+      "soWhat": "Firms building their compliance timeline toward the cryptoasset regime's 25 October 2027 start date should not assume every rule bites on day one. This deferral, if confirmed, pushes back specific admission and best-execution obligations for QCATPs and authorised dealers, so banks assessing a platform's readiness need to check which requirements are actually live on a given date, not just whether the platform holds FCA authorisation.",
+      "date": "2026-09-04",
+      "addedAt": "2026-09-10",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "low",
+      "confidence": "high",
+      "tags": [
+        "FCA",
+        "CP26-32",
+        "QCATP",
+        "cryptoasset",
+        "UK",
+        "admissions",
+        "execution-requirements"
+      ],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Consultation Paper",
+        "ref": "CP26/32"
+      },
+      "sources": [
+        {
+          "name": "FCA — CP26/32: Quarterly consultation paper No. 53",
+          "url": "https://www.fca.org.uk/publications/consultation-papers/cp26-32-quarterly-consultation-paper-no-53",
           "kind": "primary"
         }
       ]

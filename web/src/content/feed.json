@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-10",
+  "lastUpdated": "2026-09-11",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6951,6 +6951,39 @@
         {
           "name": "FCA — CP26/32: Quarterly consultation paper No. 53",
           "url": "https://www.fca.org.uk/publications/consultation-papers/cp26-32-quarterly-consultation-paper-no-53",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-clarity-act-revised-sept10-nondefi-cftc",
+      "type": "regulatory",
+      "title": "Senate Republicans release revised CLARITY Act with a non-DeFi CFTC registration rule ahead of 15 Sept vote",
+      "summary": "On 10 September 2026, Senator Cynthia Lummis and Senate Republicans released a 630-page revised CLARITY Act text ahead of a 15 September cloture vote. The new text adds a \"non-decentralized finance trading protocol\" category: anyone who keeps control over a protocol's rules or functionality must register that protocol with the CFTC, with the CFTC and Treasury told to write the detailed rules. The ethics provision on official crypto holdings is unchanged, and no Democrats have yet backed the bill.",
+      "soWhat": "For a bank, this narrows which DeFi-linked activity would stay unregulated if CLARITY passes: a protocol with an identifiable controller becomes a registered CFTC entity, closer to a normal counterparty a bank can screen and onboard. But the bill still faces a contested vote on 15 September, so banks should track it as a live proposal, not a settled rule.",
+      "date": "2026-09-10",
+      "addedAt": "2026-09-11",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "CLARITY Act",
+        "DeFi",
+        "CFTC",
+        "US Congress",
+        "digital-asset legislation"
+      ],
+      "sources": [
+        {
+          "name": "The Block: Senate Republicans unveil revised crypto bill ahead of key Clarity Act vote next week",
+          "url": "https://www.theblock.co/news/regulation/2026-09-10-senate-republicans-unveil-revised-crypto-bill-ahead-of-key-clarity-act-vote-next-week-414180",
+          "kind": "secondary"
+        },
+        {
+          "name": "Sen. Cynthia Lummis: Lummis Releases Updated Clarity Act Text",
+          "url": "https://www.lummis.senate.gov/press-releases/lummis-releases-updated-clarity-act-text/",
           "kind": "primary"
         }
       ]

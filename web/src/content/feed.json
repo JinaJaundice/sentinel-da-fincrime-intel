@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-11",
+  "lastUpdated": "2026-09-12",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -6984,6 +6984,106 @@
         {
           "name": "Sen. Cynthia Lummis: Lummis Releases Updated Clarity Act Text",
           "url": "https://www.lummis.senate.gov/press-releases/lummis-releases-updated-clarity-act-text/",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-21bank-usd-stablecoin-consortium-2027",
+      "type": "signal",
+      "title": "21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027",
+      "summary": "On 1 September 2026, 21 banks and asset managers announced plans to form a new company to issue a US dollar stablecoin, targeting a first-half-2027 launch. Members span North America (Goldman Sachs, Bank of America, Citi, Wells Fargo, Fidelity), Europe (Deutsche Bank, UBS, Santander, BBVA, Lloyds) and Asia, the Middle East and Africa (MUFG, Standard Bank). The group says the token will aim to meet the US GENIUS Act and the EU's MiCA rules, and plans a euro-denominated token next.",
+      "soWhat": "A bank-owned stablecoin changes who a regulated bank's financial-crime team has to trust. Today's dollar stablecoins (Tether's USDT, Circle's USDC) sit outside the banking system; this one would be issued by a company the participating banks themselves control, under GENIUS Act and MiCA compliance from day one. Banks in this consortium should start mapping how their existing sanctions-screening and travel-rule programmes would extend to a token they co-own, well before any 2027 launch.",
+      "date": "2026-09-01",
+      "addedAt": "2026-09-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": [
+        "stablecoin",
+        "GENIUS Act",
+        "MiCA",
+        "bank consortium",
+        "USD"
+      ],
+      "sources": [
+        {
+          "name": "Bitcoin News: Goldman, Citi, UBS Join 21-Firm Push for Dollar Stablecoin by 2027",
+          "url": "https://news.bitcoin.com/crypto-news/goldman-citi-ubs-join-21-firm-push-for-dollar-stablecoin-by-2027/",
+          "kind": "secondary"
+        },
+        {
+          "name": "CoinDesk: Citi, Goldman, other global banks and asset managers team up on stablecoin venture",
+          "url": "https://www.coindesk.com/business/2026/09/01/citi-goldman-other-global-banks-and-asset-managers-team-up-on-stablecoin-venture",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-mas-stablecoin-framework-consultation-2026",
+      "type": "regulatory",
+      "title": "MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules",
+      "summary": "On 1 September 2026, the Monetary Authority of Singapore (MAS) opened a consultation on amendments to the Payment Services Act 2019 that would create a dedicated stablecoin issuance licence. Issuers would need reserves at 100% of par value at all times, redemption at par, and a ban on paying interest to holders. MAS could also designate any stablecoin circulating in Singapore, regulated or not, as a \"Designated Systemic Stablecoin\" with power to restrict it. The consultation closes 16 October 2026.",
+      "soWhat": "Beyond reserves and redemption, MAS wants licensed issuers to hold the technical capability to trace, freeze and burn stablecoins tied to illicit activity, on top of existing customer due diligence, travel-rule and screening duties. A bank issuing or distributing a MAS-regulated stablecoin, or dealing with one that is designated systemic, should check its own token architecture now for that trace-freeze-burn capability, not just its reserve and disclosure controls.",
+      "date": "2026-09-01",
+      "addedAt": "2026-09-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Singapore",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "MAS",
+        "Singapore",
+        "stablecoin",
+        "licensing",
+        "AML/CFT",
+        "travel rule"
+      ],
+      "publication": {
+        "issuer": "MAS",
+        "kind": "Consultation Paper"
+      },
+      "sources": [
+        {
+          "name": "Monetary Authority of Singapore — MAS Consults on Legislative Amendments to Implement Stablecoin Regulatory Framework",
+          "url": "https://www.mas.gov.sg/news/media-releases/2026/mas-consults-on-legislative-amendments-to-implement-stablecoin-regulatory-framework",
+          "kind": "primary"
+        },
+        {
+          "name": "TRM Labs: Singapore's Proposed Stablecoin Rules — What the MAS Consultation Means for Issuers, Exchanges, and Banks",
+          "url": "https://www.trmlabs.com/resources/blog/singapores-proposed-stablecoin-rules-what-the-mas-consultation-means-for-issuers-exchanges-and-banks",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-g20-asheville-chair-statement-2026",
+      "type": "regulatory",
+      "title": "G20 finance chiefs commit to \"clear pathways\" for digital-asset rules and press FATF on virtual-asset supervision",
+      "summary": "The G20 Finance Ministers and Central Bank Governors, meeting in Asheville, North Carolina on 31 August and 1 September 2026, issued a Chair's Statement (China dissenting on this section) committing to regulatory frameworks that \"establish clear pathways for sound digital financial and digital assets innovation\" while preserving financial stability. The group asked the Financial Stability Board for a forthcoming summary on cross-border stablecoin arrangements and data sources, and called on FATF to ensure jurisdictions with significant virtual-asset use are effectively implementing FATF's virtual-asset standards, naming scam compounds and AI-enabled fraud as a renewed focus.",
+      "soWhat": "The statement sets no binding rule or date, but it puts political weight behind FATF pressing high-virtual-asset jurisdictions on standards enforcement, and behind the FSB's cross-border stablecoin data work. A bank's financial-crime team should watch for the FSB's stablecoin summary and any FATF follow-up naming specific jurisdictions, since those are the concrete outputs this statement points to.",
+      "date": "2026-09-01",
+      "addedAt": "2026-09-12",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "low",
+      "confidence": "high",
+      "tags": [
+        "G20",
+        "FATF",
+        "FSB",
+        "stablecoin",
+        "virtual assets",
+        "AML/CFT"
+      ],
+      "sources": [
+        {
+          "name": "U.S. Department of the Treasury — G20 Chair's Statement, Second Meeting of G20 Finance Ministers and Central Bank Governors",
+          "url": "https://home.treasury.gov/news/press-releases/sb0620",
           "kind": "primary"
         }
       ]

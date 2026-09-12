@@ -1,20 +1,30 @@
-# Sentinel weekly digest: 11 September 2026
+# Sentinel weekly digest: 12 September 2026
 
-_7 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Stablecoins**: 2 new items; latest: Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
-- **Sanctions & OFAC**: 2 new items; latest: Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
-- **US rulemaking**: 2 new items; latest: Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
-- **Travel Rule**: 1 new item; latest: FATF: underground banking and hawala networks now settle in stablecoins, over 80% of jurisdictions name them a top laundering channel
-- **State actors & DPRK**: 1 new item; latest: Sekoia and Kudelski Security split the Lazarus umbrella into six distinct DPRK cyber clusters
+- **Stablecoins**: 5 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
+- **Sanctions & OFAC**: 3 new items; latest: Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
+- **Travel Rule**: 3 new items; latest: MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
+- **US rulemaking**: 3 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
+- **MiCA & the EU**: 2 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 
 ## Notable this week
+
+### 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
+*Global · 1 September 2026 · High impact*
+> **So what:** A bank-owned stablecoin changes who a regulated bank's financial-crime team has to trust. Today's dollar stablecoins (Tether's USDT, Circle's USDC) sit outside the banking system; this one would be issued by a company the participating banks themselves control, under GENIUS Act and MiCA compliance from day one. Banks in this consortium should start mapping how their existing sanctions-screening and travel-rule programmes would extend to a token they co-own, well before any 2027 launch.
+Source: [Bitcoin News: Goldman, Citi, UBS Join 21-Firm Push for Dollar Stablecoin by 2027](https://news.bitcoin.com/crypto-news/goldman-citi-ubs-join-21-firm-push-for-dollar-stablecoin-by-2027/)
 
 ### Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
 *Global · 9 September 2026 · High impact*
 > **So what:** This is the clearest sign yet that criminal networks are actively picking stablecoins by freeze risk. USDT carries Tether's freeze function; USDD does not, even though it is partly collateralised with freezable USDT. Banks should treat a shift from USDT to USDD or similar tokens on a counterparty's flows as an evasion signal in its own right, not just a token-type change, and should not assume any stablecoin gives the same post-seizure recovery odds as USDT has shown so far.
 Source: [U.S. Department of the Treasury — Treasury Cracks Down on Transnational Criminal Organization Behind Cyber Scam Operations Targeting Americans](https://home.treasury.gov/news/press-releases/sb0624)
+
+### MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
+*Singapore · 1 September 2026 · Medium impact*
+> **So what:** Beyond reserves and redemption, MAS wants licensed issuers to hold the technical capability to trace, freeze and burn stablecoins tied to illicit activity, on top of existing customer due diligence, travel-rule and screening duties. A bank issuing or distributing a MAS-regulated stablecoin, or dealing with one that is designated systemic, should check its own token architecture now for that trace-freeze-burn capability, not just its reserve and disclosure controls.
+Source: [Monetary Authority of Singapore — MAS Consults on Legislative Amendments to Implement Stablecoin Regulatory Framework](https://www.mas.gov.sg/news/media-releases/2026/mas-consults-on-legislative-amendments-to-implement-stablecoin-regulatory-framework)
 
 ### Senate Republicans release revised CLARITY Act with a non-DeFi CFTC registration rule ahead of 15 Sept vote
 *US · 10 September 2026 · Medium impact*
@@ -31,15 +41,5 @@ Source: [FATF — New FATF report finds underground banking and hawala are key c
 > **So what:** Sanctions lists and threat-intel feeds built around a single 'Lazarus' label can miss activity once it is reassigned to one of these six named clusters, so a bank's screening and typology rules should track all six names, not just 'Lazarus' or 'APT38'. The Famous Chollima fake-IT-worker cluster is the one most likely to touch a bank directly, through payroll, contractor payments or onboarding checks, rather than through crypto theft alone.
 Source: [Sekoia — Beyond Lazarus: How North Korea Organizes Its Cyber Operations](https://www.sekoia.com/blog/beyond-lazarus-organization-of-dprk-cyber-capabilities)
 
-### India's FIU issues non-compliance notices to 15 offshore crypto platforms, seeks app and URL takedowns
-*India · 9 September 2026 · Medium impact*
-> **So what:** The action confirms India applies its anti-money-laundering registration duty to any platform serving Indian users, wherever the platform is based. For a bank's financial-crime team, transactions linked to any of these 15 platforms from India-connected customers should be treated as touching an unregistered, non-compliant venue, the same category of risk that led Binance to pay a $2.25m penalty in 2024 and Bybit to restrict its India app in 2025 before both completed FIU registration.
-Source: [The Block — India seeks takedowns of 15 crypto platforms over AML compliance](https://www.theblock.co/news/regulation/2026-09-09-india-seeks-takedowns-of-15-crypto-platforms-over-aml-compliance-413975)
-
-### Software bug lets $320m leave Blockstream's Liquid Bitcoin sidechain without any signing key being compromised
-*Global · 6 September 2026 · Medium impact*
-> **So what:** This is a reserve-backing failure, not a key theft: every federation signer approved the withdrawal because the flawed software told them it was legitimate. A bank relying on multi-signature custody or a federated bridge for assurance that a wrapped or bridged asset is genuinely backed 1:1 should treat that assurance as void until the issuing network proves its accounting logic, not just its key security, is sound. Any due-diligence on a counterparty or collateral position that uses Liquid, or a similar federated sidechain design, should pause until Blockstream publishes a technical post-mortem and confirms reserves are restored.
-Source: [CryptoSlate — A whitehat hacker is holding $320 million in drained Bitcoin until developers prove they patched a fatal network flaw](https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/)
-
 ## By the numbers
-7 new · 1 high-impact · 0 verified
+10 new · 2 high-impact · 0 verified

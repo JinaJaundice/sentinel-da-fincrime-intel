@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-12",
+  "lastUpdated": "2026-09-13",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7085,6 +7085,40 @@
           "name": "U.S. Department of the Treasury — G20 Chair's Statement, Second Meeting of G20 Finance Ministers and Central Bank Governors",
           "url": "https://home.treasury.gov/news/press-releases/sb0620",
           "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-necc-annual-report-crypto-third-priority-2026",
+      "type": "regulatory",
+      "title": "UK's National Economic Crime Centre ranks crypto its third economic-crime priority in 2025-26 annual report",
+      "summary": "The National Economic Crime Centre (NECC), the National Crime Agency unit that coordinates the UK's economic-crime response, published its 2025-26 annual report in the week of 9 September 2026. It ranks cryptoassets third among nine economic-crime priorities agreed with the FCA, the Home Office and the Treasury in July 2025, above criminal cash and money mules. The report says criminals make \"innovative use of crypto asset products to evade detection and move illicit value at scale\" and describes networks combining crypto with AI tools such as synthetic identities.",
+      "soWhat": "A national priority ranking steers where UK regulated firms are expected to point compliance effort and resource. Banks should expect closer NECC and FCA attention on crypto-linked laundering typologies, and should read the report's shift toward a \"proactive, intelligence-led\" crypto capability as a signal that more UK law-enforcement requests for crypto-linked account data are likely.",
+      "date": "2026-09-09",
+      "addedAt": "2026-09-13",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "NECC",
+        "NCA",
+        "UK",
+        "money-laundering",
+        "priorities",
+        "crypto"
+      ],
+      "sources": [
+        {
+          "name": "National Crime Agency — National Economic Crime Centre",
+          "url": "https://www.nationalcrimeagency.gov.uk/what-we-do/national-economic-crime-centre",
+          "kind": "primary"
+        },
+        {
+          "name": "Decrypt — UK Crime Agency Warns of 'Innovative Use' of Crypto by Launderers",
+          "url": "https://decrypt.co/377757/uk-crime-agency-warns-of-innovative-use-of-crypto-by-launderers",
+          "kind": "secondary"
         }
       ]
     }

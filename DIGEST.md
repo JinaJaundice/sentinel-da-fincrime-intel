@@ -1,12 +1,12 @@
-# Sentinel weekly digest: 12 September 2026
+# Sentinel weekly digest: 13 September 2026
 
-_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Stablecoins**: 5 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
+- **US rulemaking**: 4 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 - **Sanctions & OFAC**: 3 new items; latest: Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
 - **Travel Rule**: 3 new items; latest: MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
-- **US rulemaking**: 3 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 - **MiCA & the EU**: 2 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 
 ## Notable this week
@@ -20,6 +20,11 @@ Source: [Bitcoin News: Goldman, Citi, UBS Join 21-Firm Push for Dollar Stablecoi
 *Global · 9 September 2026 · High impact*
 > **So what:** This is the clearest sign yet that criminal networks are actively picking stablecoins by freeze risk. USDT carries Tether's freeze function; USDD does not, even though it is partly collateralised with freezable USDT. Banks should treat a shift from USDT to USDD or similar tokens on a counterparty's flows as an evasion signal in its own right, not just a token-type change, and should not assume any stablecoin gives the same post-seizure recovery odds as USDT has shown so far.
 Source: [U.S. Department of the Treasury — Treasury Cracks Down on Transnational Criminal Organization Behind Cyber Scam Operations Targeting Americans](https://home.treasury.gov/news/press-releases/sb0624)
+
+### UK's National Economic Crime Centre ranks crypto its third economic-crime priority in 2025-26 annual report
+*UK · 9 September 2026 · Medium impact*
+> **So what:** A national priority ranking steers where UK regulated firms are expected to point compliance effort and resource. Banks should expect closer NECC and FCA attention on crypto-linked laundering typologies, and should read the report's shift toward a "proactive, intelligence-led" crypto capability as a signal that more UK law-enforcement requests for crypto-linked account data are likely.
+Source: [National Crime Agency — National Economic Crime Centre](https://www.nationalcrimeagency.gov.uk/what-we-do/national-economic-crime-centre)
 
 ### MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
 *Singapore · 1 September 2026 · Medium impact*
@@ -36,10 +41,5 @@ Source: [Sen. Cynthia Lummis: Lummis Releases Updated Clarity Act Text](https://
 > **So what:** This confirms stablecoin settlement is now a standard part of hawala-style laundering networks, not an edge case. For a bank's financial-crime programme, the report's 'money laundering as a service' framing means a single professional network can sit behind many unrelated-looking customer transactions, so pattern detection across customers matters more than single-account monitoring. FATF flags fintech platforms, virtual IBANs and prepaid cards as entry and exit points alongside virtual asset wallets, which widens the surface a bank's typology library should cover.
 Source: [FATF — New FATF report finds underground banking and hawala are key channels for professional money launderers](https://www.fatf-gafi.org/en/news/pml-underground-banking-hawala-hossps-2026.html)
 
-### Sekoia and Kudelski Security split the Lazarus umbrella into six distinct DPRK cyber clusters
-*Global · 7 September 2026 · Medium impact*
-> **So what:** Sanctions lists and threat-intel feeds built around a single 'Lazarus' label can miss activity once it is reassigned to one of these six named clusters, so a bank's screening and typology rules should track all six names, not just 'Lazarus' or 'APT38'. The Famous Chollima fake-IT-worker cluster is the one most likely to touch a bank directly, through payroll, contractor payments or onboarding checks, rather than through crypto theft alone.
-Source: [Sekoia — Beyond Lazarus: How North Korea Organizes Its Cyber Operations](https://www.sekoia.com/blog/beyond-lazarus-organization-of-dprk-cyber-capabilities)
-
 ## By the numbers
-10 new · 2 high-impact · 0 verified
+11 new · 2 high-impact · 0 verified

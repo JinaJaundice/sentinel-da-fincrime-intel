@@ -1,15 +1,20 @@
-# Sentinel weekly digest: 13 September 2026
+# Sentinel weekly digest: 16 September 2026
 
 _11 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Stablecoins**: 5 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
+- **Stablecoins**: 6 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 - **US rulemaking**: 4 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 - **Sanctions & OFAC**: 3 new items; latest: Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
 - **Travel Rule**: 3 new items; latest: MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
 - **MiCA & the EU**: 2 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 
 ## Notable this week
+
+### CLARITY Act fails its Senate cloture vote 49-50, US crypto market-structure law stalls for 2026
+*US · 15 September 2026 · High impact*
+> **So what:** Without CLARITY, US banks get no new statutory line between a security and a commodity token, and no federal charter clarifying which agency oversees a given crypto activity. Banks should keep treating SEC and CFTC guidance, not a new law, as the near-term source of US market-structure rules, and expect that guidance to stay easier to reverse than a statute would have been.
+Source: [CoinDesk: Crypto Clarity Act flames out in failed U.S. Senate vote](https://www.coindesk.com/policy/2026/09/15/crypto-clarity-act-flames-out-in-failed-u-s-senate-vote)
 
 ### 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 *Global · 1 September 2026 · High impact*
@@ -21,25 +26,20 @@ Source: [Bitcoin News: Goldman, Citi, UBS Join 21-Firm Push for Dollar Stablecoi
 > **So what:** This is the clearest sign yet that criminal networks are actively picking stablecoins by freeze risk. USDT carries Tether's freeze function; USDD does not, even though it is partly collateralised with freezable USDT. Banks should treat a shift from USDT to USDD or similar tokens on a counterparty's flows as an evasion signal in its own right, not just a token-type change, and should not assume any stablecoin gives the same post-seizure recovery odds as USDT has shown so far.
 Source: [U.S. Department of the Treasury — Treasury Cracks Down on Transnational Criminal Organization Behind Cyber Scam Operations Targeting Americans](https://home.treasury.gov/news/press-releases/sb0624)
 
+### CoinEx to shut down after nine years, citing compliance and sanctions risk it could not contain
+*Global · 15 September 2026 · Medium impact*
+> **So what:** A mid-sized exchange citing compliance and sanctions risk, not just a weak market, as a reason to close shows how costly sustained sanctions-nexus exposure has become even without a formal enforcement action against the firm itself. Banks with counterparties or customers that routed funds through CoinEx should review that exposure now, given the TRM-reported Iran-linked flows, ahead of the December withdrawal deadline.
+Source: [TRM Labs: How CoinEx Became Iran's Primary Gateway to Global Cryptocurrency Markets](https://www.trmlabs.com/resources/blog/how-coinex-became-irans-primary-gateway-to-global-cryptocurrency-markets)
+
+### FCA publishes PS26/18, cryptoasset perimeter guidance, two weeks before the UK authorisation gateway opens
+*UK · 16 September 2026 · Medium impact*
+> **So what:** A bank running any of the five named activities in the UK now has a final map of what needs authorisation, not just a consultation proposal. Firms should use PS26/18 to decide now whether they need to apply in the window that opens 30 September 2026, rather than waiting closer to the October 2027 in-force date.
+Source: [FCA: A new regime for cryptoasset regulation](https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation)
+
 ### UK's National Economic Crime Centre ranks crypto its third economic-crime priority in 2025-26 annual report
 *UK · 9 September 2026 · Medium impact*
 > **So what:** A national priority ranking steers where UK regulated firms are expected to point compliance effort and resource. Banks should expect closer NECC and FCA attention on crypto-linked laundering typologies, and should read the report's shift toward a "proactive, intelligence-led" crypto capability as a signal that more UK law-enforcement requests for crypto-linked account data are likely.
 Source: [National Crime Agency — National Economic Crime Centre](https://www.nationalcrimeagency.gov.uk/what-we-do/national-economic-crime-centre)
 
-### MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
-*Singapore · 1 September 2026 · Medium impact*
-> **So what:** Beyond reserves and redemption, MAS wants licensed issuers to hold the technical capability to trace, freeze and burn stablecoins tied to illicit activity, on top of existing customer due diligence, travel-rule and screening duties. A bank issuing or distributing a MAS-regulated stablecoin, or dealing with one that is designated systemic, should check its own token architecture now for that trace-freeze-burn capability, not just its reserve and disclosure controls.
-Source: [Monetary Authority of Singapore — MAS Consults on Legislative Amendments to Implement Stablecoin Regulatory Framework](https://www.mas.gov.sg/news/media-releases/2026/mas-consults-on-legislative-amendments-to-implement-stablecoin-regulatory-framework)
-
-### Senate Republicans release revised CLARITY Act with a non-DeFi CFTC registration rule ahead of 15 Sept vote
-*US · 10 September 2026 · Medium impact*
-> **So what:** For a bank, this narrows which DeFi-linked activity would stay unregulated if CLARITY passes: a protocol with an identifiable controller becomes a registered CFTC entity, closer to a normal counterparty a bank can screen and onboard. But the bill still faces a contested vote on 15 September, so banks should track it as a live proposal, not a settled rule.
-Source: [Sen. Cynthia Lummis: Lummis Releases Updated Clarity Act Text](https://www.lummis.senate.gov/press-releases/lummis-releases-updated-clarity-act-text/)
-
-### FATF: underground banking and hawala networks now settle in stablecoins, over 80% of jurisdictions name them a top laundering channel
-*Global · 3 September 2026 · Medium impact*
-> **So what:** This confirms stablecoin settlement is now a standard part of hawala-style laundering networks, not an edge case. For a bank's financial-crime programme, the report's 'money laundering as a service' framing means a single professional network can sit behind many unrelated-looking customer transactions, so pattern detection across customers matters more than single-account monitoring. FATF flags fintech platforms, virtual IBANs and prepaid cards as entry and exit points alongside virtual asset wallets, which widens the surface a bank's typology library should cover.
-Source: [FATF — New FATF report finds underground banking and hawala are key channels for professional money launderers](https://www.fatf-gafi.org/en/news/pml-underground-banking-hawala-hossps-2026.html)
-
 ## By the numbers
-11 new · 2 high-impact · 0 verified
+11 new · 3 high-impact · 0 verified

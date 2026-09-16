@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-13",
+  "lastUpdated": "2026-09-16",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7119,6 +7119,109 @@
           "name": "Decrypt — UK Crime Agency Warns of 'Innovative Use' of Crypto by Launderers",
           "url": "https://decrypt.co/377757/uk-crime-agency-warns-of-innovative-use-of-crypto-by-launderers",
           "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-clarity-act-senate-vote-fails-sept15-2026",
+      "type": "regulatory",
+      "title": "CLARITY Act fails its Senate cloture vote 49-50, US crypto market-structure law stalls for 2026",
+      "summary": "On 15 September 2026, the US Senate held a cloture vote on the Digital Asset Market Clarity Act, the bill meant to set federal market-structure rules for crypto. The vote failed 49-50, well short of the 60 votes needed to advance it, with several Republicans joining all Democrats against. Sticking points included ethics provisions on officials' crypto holdings. The bill is now unlikely to move again before the current Congress ends.",
+      "soWhat": "Without CLARITY, US banks get no new statutory line between a security and a commodity token, and no federal charter clarifying which agency oversees a given crypto activity. Banks should keep treating SEC and CFTC guidance, not a new law, as the near-term source of US market-structure rules, and expect that guidance to stay easier to reverse than a statute would have been.",
+      "date": "2026-09-15",
+      "addedAt": "2026-09-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "CLARITY Act",
+        "US Congress",
+        "market structure",
+        "crypto legislation"
+      ],
+      "sources": [
+        {
+          "name": "CoinDesk: Crypto Clarity Act flames out in failed U.S. Senate vote",
+          "url": "https://www.coindesk.com/policy/2026/09/15/crypto-clarity-act-flames-out-in-failed-u-s-senate-vote",
+          "kind": "secondary"
+        },
+        {
+          "name": "NPR: Crypto suffers major defeat as Senate rejects Clarity Act",
+          "url": "https://www.npr.org/2026/09/15/nx-s1-5968711/clarity-act-crypto-senate-vote",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fca-ps26-18-perimeter-guidance-sept2026",
+      "type": "regulatory",
+      "title": "FCA publishes PS26/18, cryptoasset perimeter guidance, two weeks before the UK authorisation gateway opens",
+      "summary": "On 16 September 2026, the FCA published Policy Statement PS26/18, its final guidance on which cryptoasset activities fall inside UK regulation. It names five activities that need FCA authorisation: issuing qualifying stablecoins, operating cryptoasset trading platforms, dealing and arranging deals in cryptoassets, safeguarding cryptoassets, and arranging cryptoasset staking. It responds to feedback on consultation paper CP26/13 from April 2026. The authorisation application window opens 30 September 2026, well ahead of the regime's 25 October 2027 start date.",
+      "soWhat": "A bank running any of the five named activities in the UK now has a final map of what needs authorisation, not just a consultation proposal. Firms should use PS26/18 to decide now whether they need to apply in the window that opens 30 September 2026, rather than waiting closer to the October 2027 in-force date.",
+      "date": "2026-09-16",
+      "addedAt": "2026-09-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "FCA",
+        "UK",
+        "cryptoasset regime",
+        "authorisation",
+        "perimeter guidance"
+      ],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Policy Statement",
+        "ref": "PS26/18"
+      },
+      "sources": [
+        {
+          "name": "FCA: A new regime for cryptoasset regulation",
+          "url": "https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation",
+          "kind": "primary"
+        },
+        {
+          "name": "LeapRate: FCA Publishes Cryptoasset Authorisation Perimeter Guidance Ahead of 30 September 2026 Gateway",
+          "url": "https://www.leaprate.com/regulation/fca-publishes-cryptoasset-authorisation-perimeter-guidance-ahead-of-30-september-2026-gateway",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-coinex-shutdown-iran-sanctions-compliance-2026",
+      "type": "signal",
+      "title": "CoinEx to shut down after nine years, citing compliance and sanctions risk it could not contain",
+      "summary": "On 15 September 2026, CoinEx announced it will wind down after nine years. New registrations stopped that day, most trading ends 29 September, and withdrawals stay open until 22 December 2026. Founder Haipo Yang cited a long market downturn plus rising security and compliance costs. The exchange left the US market in 2023 after settling with the New York attorney general, and in June 2026 TRM Labs reported that CoinEx had processed over $3.84bn in flows linked to sanctioned Iranian entities since 2019, including as the largest external counterparty to Iran's Nobitex exchange.",
+      "soWhat": "A mid-sized exchange citing compliance and sanctions risk, not just a weak market, as a reason to close shows how costly sustained sanctions-nexus exposure has become even without a formal enforcement action against the firm itself. Banks with counterparties or customers that routed funds through CoinEx should review that exposure now, given the TRM-reported Iran-linked flows, ahead of the December withdrawal deadline.",
+      "date": "2026-09-15",
+      "addedAt": "2026-09-16",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "CoinEx",
+        "exchange shutdown",
+        "Iran sanctions",
+        "TRM Labs",
+        "compliance risk"
+      ],
+      "sources": [
+        {
+          "name": "The Block: Crypto exchange CoinEx to shut down after 9 years, citing market slump",
+          "url": "https://www.theblock.co/news/business/2026-09-15-coinex-shut-down-414788",
+          "kind": "secondary"
+        },
+        {
+          "name": "TRM Labs: How CoinEx Became Iran's Primary Gateway to Global Cryptocurrency Markets",
+          "url": "https://www.trmlabs.com/resources/blog/how-coinex-became-irans-primary-gateway-to-global-cryptocurrency-markets",
+          "kind": "primary"
         }
       ]
     }

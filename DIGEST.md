@@ -1,15 +1,20 @@
-# Sentinel weekly digest: 16 September 2026
+# Sentinel weekly digest: 17 September 2026
 
-_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Stablecoins**: 6 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
-- **US rulemaking**: 4 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
-- **Sanctions & OFAC**: 3 new items; latest: Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
-- **Travel Rule**: 3 new items; latest: MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
+- **Stablecoins**: 5 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
+- **Sanctions & OFAC**: 3 new items; latest: DOJ seeks forfeiture of $61m in crypto tied to Iranian oil sales laundered through Binance
+- **US rulemaking**: 3 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
+- **Travel Rule**: 2 new items; latest: MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
 - **MiCA & the EU**: 2 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
 
 ## Notable this week
+
+### DOJ seeks forfeiture of $61m in crypto tied to Iranian oil sales laundered through Binance
+*Iran / US · 15 September 2026 · High impact*
+> **So what:** The case is part of Treasury's Operation Economic Outcast (launched Aug 2026, see feed item) and shows the live typology: unhosted-wallet pipelines feeding fiat-to-crypto ramps at a major exchange, run by intermediary trading firms rather than named sanctioned entities. A bank's crypto-exposed counterparty due diligence needs to reach past the SDN list to this kind of intermediary structure.
+Source: [DOJ (SDNY) — US Attorney seeks forfeiture of $61m in cryptocurrency from Iranian military's black-market oil sales](https://www.justice.gov/usao-sdny/pr/us-attorney-seeks-forfeiture-61-million-cryptocurrency-iranian-militarys-black-market)
 
 ### CLARITY Act fails its Senate cloture vote 49-50, US crypto market-structure law stalls for 2026
 *US · 15 September 2026 · High impact*
@@ -20,11 +25,6 @@ Source: [CoinDesk: Crypto Clarity Act flames out in failed U.S. Senate vote](htt
 *Global · 1 September 2026 · High impact*
 > **So what:** A bank-owned stablecoin changes who a regulated bank's financial-crime team has to trust. Today's dollar stablecoins (Tether's USDT, Circle's USDC) sit outside the banking system; this one would be issued by a company the participating banks themselves control, under GENIUS Act and MiCA compliance from day one. Banks in this consortium should start mapping how their existing sanctions-screening and travel-rule programmes would extend to a token they co-own, well before any 2027 launch.
 Source: [Bitcoin News: Goldman, Citi, UBS Join 21-Firm Push for Dollar Stablecoin by 2027](https://news.bitcoin.com/crypto-news/goldman-citi-ubs-join-21-firm-push-for-dollar-stablecoin-by-2027/)
-
-### Treasury sanctions Xinbi Guarantee, DOJ restrains $52.8m as the scam network switches to a freeze-resistant stablecoin
-*Global · 9 September 2026 · High impact*
-> **So what:** This is the clearest sign yet that criminal networks are actively picking stablecoins by freeze risk. USDT carries Tether's freeze function; USDD does not, even though it is partly collateralised with freezable USDT. Banks should treat a shift from USDT to USDD or similar tokens on a counterparty's flows as an evasion signal in its own right, not just a token-type change, and should not assume any stablecoin gives the same post-seizure recovery odds as USDT has shown so far.
-Source: [U.S. Department of the Treasury — Treasury Cracks Down on Transnational Criminal Organization Behind Cyber Scam Operations Targeting Americans](https://home.treasury.gov/news/press-releases/sb0624)
 
 ### CoinEx to shut down after nine years, citing compliance and sanctions risk it could not contain
 *Global · 15 September 2026 · Medium impact*
@@ -42,4 +42,4 @@ Source: [FCA: A new regime for cryptoasset regulation](https://www.fca.org.uk/fi
 Source: [National Crime Agency — National Economic Crime Centre](https://www.nationalcrimeagency.gov.uk/what-we-do/national-economic-crime-centre)
 
 ## By the numbers
-11 new · 3 high-impact · 0 verified
+10 new · 3 high-impact · 0 verified

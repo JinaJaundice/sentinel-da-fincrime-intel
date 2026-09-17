@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-16",
+  "lastUpdated": "2026-09-17",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7222,6 +7222,94 @@
           "name": "TRM Labs: How CoinEx Became Iran's Primary Gateway to Global Cryptocurrency Markets",
           "url": "https://www.trmlabs.com/resources/blog/how-coinex-became-irans-primary-gateway-to-global-cryptocurrency-markets",
           "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-doj-iran-oil-binance-forfeiture",
+      "type": "signal",
+      "title": "DOJ seeks forfeiture of $61m in crypto tied to Iranian oil sales laundered through Binance",
+      "summary": "On 15 Sept 2026 the US Attorney for the Southern District of New York filed a civil forfeiture complaint against $61m in crypto tied to a $1.5bn network moving black-market Iranian oil proceeds through unhosted wallets, an Iranian exchange and IRGC-linked accounts. Two Chinese firms, Blessed Trust and Hexa Whale, allegedly laundered the funds through trading accounts at Binance before routing them to the Iranian government and its proxies.",
+      "soWhat": "The case is part of Treasury's Operation Economic Outcast (launched Aug 2026, see feed item) and shows the live typology: unhosted-wallet pipelines feeding fiat-to-crypto ramps at a major exchange, run by intermediary trading firms rather than named sanctioned entities. A bank's crypto-exposed counterparty due diligence needs to reach past the SDN list to this kind of intermediary structure.",
+      "date": "2026-09-15",
+      "addedAt": "2026-09-17",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Iran / US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "Iran",
+        "sanctions",
+        "Binance",
+        "forfeiture",
+        "IRGC",
+        "oil"
+      ],
+      "typology": {
+        "vector": "Sanctioned oil proceeds laundered via unhosted wallets into exchange trading accounts",
+        "controls": [
+          "Enhanced due diligence on crypto-linked trade-finance counterparties",
+          "Screening beyond the SDN list for front/intermediary firms",
+          "Unhosted-wallet transaction pattern monitoring"
+        ],
+        "obligations": [
+          "OFAC sanctions screening",
+          "SAR on Iran-nexus activity"
+        ]
+      },
+      "sources": [
+        {
+          "name": "DOJ (SDNY) — US Attorney seeks forfeiture of $61m in cryptocurrency from Iranian military's black-market oil sales",
+          "url": "https://www.justice.gov/usao-sdny/pr/us-attorney-seeks-forfeiture-61-million-cryptocurrency-iranian-militarys-black-market",
+          "kind": "primary"
+        },
+        {
+          "name": "CoinDesk — US DOJ seeks $61 million in what it calls Iran's crypto-laundered black market oil sales",
+          "url": "https://www.coindesk.com/markets/2026/09/15/u-s-doj-seeks-usd61-million-in-what-it-calls-crypto-laundered-iranian-oil-proceeds",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-flamingo-finance-flash-loan",
+      "type": "typology",
+      "title": "Flamingo Finance drained of $345,900 via flash-loan share-price manipulation",
+      "summary": "On 16 Sept 2026 an attacker borrowed about $18m USDT through a Morpho flash loan, staked Curve USDP liquidity-provider tokens into an older Flamincome strategy contract to inflate the VaultYUSDT share price, then redeemed aUSDT at the inflated rate for roughly $345,900 in profit. Security firm Blockaid detected and flagged the exploit.",
+      "soWhat": "Another share-price/collateral-value manipulation exploit on an older, unmonitored contract, the dominant DeFi attack pattern CertiK flagged for August 2026 (see feed item). Any bank product that treats DeFi vault tokens as collateral or a yield source needs price-manipulation resistance checked on every contract in the chain, not just the newest one.",
+      "date": "2026-09-16",
+      "addedAt": "2026-09-17",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": [
+        "DeFi",
+        "flash-loan",
+        "exploit",
+        "typology"
+      ],
+      "typology": {
+        "vector": "Flash-loan share-price manipulation of a legacy vault contract",
+        "controls": [
+          "Price-manipulation resistance testing on all contracts in a collateral chain, including older ones",
+          "Flash-loan transaction monitoring"
+        ],
+        "obligations": [
+          "Incident disclosure to affected users/counterparties"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Phemex News — Flamingo Finance Exploited for About $345,900 via Flash Loan Attack",
+          "url": "https://phemex.com/news/article/flamingo-finance-exploited-for-about-345900-via-flash-loan-attack-96863",
+          "kind": "secondary"
+        },
+        {
+          "name": "CryptoTimes — Blockaid Flags FlamingoFinance Contract Exploit, $345.9K Stolen",
+          "url": "https://www.cryptotimes.io/2026/09/16/blockaid-flags-flamingofinance-contract-exploit-345-9k-stolen/",
+          "kind": "secondary"
         }
       ]
     }

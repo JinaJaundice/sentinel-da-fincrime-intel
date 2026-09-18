@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-17",
+  "lastUpdated": "2026-09-18",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7309,6 +7309,39 @@
         {
           "name": "CryptoTimes — Blockaid Flags FlamingoFinance Contract Exploit, $345.9K Stolen",
           "url": "https://www.cryptotimes.io/2026/09/16/blockaid-flags-flamingofinance-contract-exploit-345-9k-stolen/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fca-p2p-crypto-raid-sept2026",
+      "type": "signal",
+      "title": "FCA, HMRC and the Met Police raid three more London sites over unregistered peer-to-peer crypto trading",
+      "summary": "On 10 September 2026 the FCA, working with HMRC and the Metropolitan Police Service, targeted three London premises suspected of running unregistered peer-to-peer crypto businesses. All three received cease-and-desist letters. No peer-to-peer crypto business currently holds FCA registration in the UK. The FCA announced the action on 16 September 2026, calling it a follow-up to an April 2026 sweep of eight premises whose evidence is now feeding separate criminal investigations.",
+      "soWhat": "This is the FCA's second P2P sweep in five months, so the regulator is treating unregistered peer-to-peer crypto trading as a standing enforcement lane, not a one-off. A UK bank checking a P2P crypto counterparty should treat the absence of FCA registration as an automatic red flag: none currently hold one, so an unregistered trader sits outside the money-laundering controls the FCA expects.",
+      "date": "2026-09-10",
+      "addedAt": "2026-09-18",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "FCA",
+        "enforcement",
+        "P2P",
+        "UK",
+        "money-laundering"
+      ],
+      "sources": [
+        {
+          "name": "FCA — FCA and partners continues crackdown on illegal crypto trading",
+          "url": "https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading",
+          "kind": "primary"
+        },
+        {
+          "name": "Decrypt — FCA Targets Three More London Sites Over Unregistered P2P Crypto Trading",
+          "url": "https://decrypt.co/378495/fca-targets-three-more-london-sites-over-unregistered-p2p-crypto-trading",
           "kind": "secondary"
         }
       ]

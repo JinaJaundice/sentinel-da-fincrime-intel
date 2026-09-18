@@ -16,7 +16,8 @@ duplicating it (a fact lives in one place):
 
 ## What it is
 
-A dark, sleek web app that aggregates everything at the **digital assets ×
+A horizon-scanning web app (light and dark themes, v0.2 makeover 18 Sep
+2026) that aggregates everything at the **digital assets ×
 financial crime** intersection (news, regulation, ventures, vendors,
 laundering typologies), a combination not aggregated anywhere else. Built for
 a bank financial-crime team for (a) knowledge building and (b) client-delivery

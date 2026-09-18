@@ -31,6 +31,11 @@ export function longDate(iso: string): string {
   });
 }
 
+// Short absolute date for chrome and tables (e.g. "17 Sep 2026").
+export function shortDate(iso: string): string {
+  return new Date(iso + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
+
 // True if `iso` (yyyy-mm-dd) is within the last `days` days.
 export function withinDays(iso: string, days: number, now = new Date()) {
   const d = new Date(iso + "T00:00:00").getTime();

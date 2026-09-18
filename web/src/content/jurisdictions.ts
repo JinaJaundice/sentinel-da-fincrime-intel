@@ -12,6 +12,7 @@
 // ---------------------------------------------------------------
 
 import jurisdictionsFeed from "./jurisdictions.json";
+import { TONE, type Tone } from "../lib/uiTokens";
 
 export type RegStatus = "implemented" | "in-progress" | "none";
 
@@ -29,26 +30,33 @@ export interface Jurisdiction {
   sources: { name: string; url: string }[];
 }
 
-export const STATUS_META: Record<RegStatus, { label: string; chip: string; fill: string; dot: string; order: number }> = {
+// Status colours are tokens (index.css) so the map follows the theme: the
+// accent for a regime in force, amber for one being built, grey for none.
+// `fill` (drawn at 38% opacity) and `dot` are CSS variable references for the SVG; `tone` and
+// `chip` are the class names for the legend and the detail panel.
+export const STATUS_META: Record<RegStatus, { label: string; tone: Tone; chip: string; fill: string; dot: string; order: number }> = {
   implemented: {
-    label: "Implemented",
-    chip: "bg-violet-500/15 text-violet-200 ring-1 ring-violet-500/30",
-    fill: "rgba(139,92,246,0.55)",
-    dot: "#a78bfa",
+    label: "Regime in force",
+    tone: "signal",
+    chip: TONE.signal.soft,
+    fill: "var(--color-signal)",
+    dot: "var(--color-signal)",
     order: 0,
   },
   "in-progress": {
-    label: "In progress",
-    chip: "bg-amber-500/10 text-amber-300 ring-1 ring-amber-500/25",
-    fill: "rgba(245,158,11,0.42)",
-    dot: "#fbbf24",
+    label: "Regime being built",
+    tone: "medium",
+    chip: TONE.medium.soft,
+    fill: "var(--color-medium)",
+    dot: "var(--color-medium)",
     order: 1,
   },
   none: {
-    label: "None / restrictive",
-    chip: "bg-neutral-800 text-neutral-400 ring-1 ring-neutral-700",
-    fill: "rgba(113,113,122,0.4)",
-    dot: "#a1a1aa",
+    label: "No regime, or restricted",
+    tone: "neutral",
+    chip: TONE.neutral.soft,
+    fill: "var(--color-ink-faint)",
+    dot: "var(--color-ink-faint)",
     order: 2,
   },
 };

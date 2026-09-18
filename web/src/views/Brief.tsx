@@ -1,58 +1,25 @@
-import {
-  Bot,
-  ShieldAlert,
-  Layers,
-  Sparkles,
-  ArrowRight,
-  Newspaper,
-  TrendingUp,
-  Boxes,
-  Crosshair,
-  CalendarClock,
-  Globe,
-  LayoutDashboard,
-  Flame,
-  Download,
-} from "lucide-react";
-import type { Item, ItemType } from "../content/types";
-import type { Page } from "../components/Sidebar";
+import { ArrowRight, Download } from "lucide-react";
+import type { Item } from "../content/types";
+import type { Page } from "../lib/nav";
 import { MILESTONES } from "../content/milestones";
-import { Panel, Stat, SectionHeading } from "../lib/ui";
-import { ItemCard } from "../components/ItemCard";
-import { StreamCard } from "../components/StreamCard";
+import { Panel, FigureStrip, SectionHeading, Tag } from "../lib/ui";
+import { DataTable } from "../components/DataTable";
 import { CopyButton } from "../components/CopyButton";
 import { PageHeader } from "../components/PageHeader";
 import { ImpactMix, MiniBars } from "../components/viz";
 import { countBy } from "../lib/insights";
 import { weeklyDigest, weeklyMovers } from "../lib/digest";
 import { downloadText } from "../lib/export";
-import { withinDays } from "../lib/utils";
+import { withinDays, longDate } from "../lib/utils";
 
-// The command center: headline metrics, a clickable summary of every
-// stream, an "at a glance" panel, and the latest few items.
-export function Brief({
-  items,
-  setPage,
-  setTheme,
-  lastUpdated,
-}: {
-  items: Item[];
-  setPage: (p: Page) => void;
-  setTheme: (id: string) => void;
-  lastUpdated: string;
-}) {
+// The morning read: the figures, what moved this week by topic, the latest
+// items, and at a glance the next deadline, the risk mix and the regions.
+export function Brief({ items, setPage, setTheme, lastUpdated }: { items: Item[]; setPage: (p: Page) => void; setTheme: (id: string) => void; lastUpdated: string }) {
   const published = items.filter((i) => i.status === "published");
   const agentSourced = published.filter((i) => i.addedBy === "agent");
   const highImpact = published.filter((i) => i.impact === "high");
   const thisWeek = published.filter((i) => withinDays(i.addedAt, 7));
-  const latest = [...published].sort(byIngestedDesc).slice(0, 3);
-
-  const stream = (types: ItemType[]) => published.filter((i) => types.includes(i.type)).sort(byIngestedDesc);
-  const signals = stream(["signal", "regulatory"]);
-  const ventures = stream(["venture"]);
-  const solutions = stream(["solution"]);
-  const typologies = stream(["typology"]);
-  const shortlisted = solutions.filter((i) => i.solution?.stance === "evaluate" || i.solution?.stance === "shortlist").length;
+  const latest = [...published].sort(byAddedDesc).slice(0, 12);
 
   const today = startOfToday();
   const nextMs = [...MILESTONES].filter((m) => dayMs(m.date) >= today).sort((a, b) => (a.date < b.date ? -1 : 1))[0];
@@ -60,174 +27,93 @@ export function Brief({
 
   const todayLabel = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
 
-  // "This week" pulse — reuses the digest machinery.
-  const movers = weeklyMovers(published).slice(0, 4);
+  const movers = weeklyMovers(published).slice(0, 6);
   const digest = weeklyDigest(published);
   const openTheme = (id: string) => {
-    setPage("themes"); // setPage clears the theme, so set it after
+    setPage("themes"); // setPage clears the topic, so set it after
     setTheme(id);
   };
-  const downloadDigest = () =>
-    downloadText(`sentinel-weekly-digest-${new Date().toISOString().slice(0, 10)}.md`, digest, "text/markdown");
+  const downloadDigest = () => downloadText(`sentinel-weekly-digest-${new Date().toISOString().slice(0, 10)}.md`, digest, "text/markdown");
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       <PageHeader
-        Icon={LayoutDashboard}
-        eyebrow={todayLabel}
-        title="Overview"
-        subtitle="A single, agent-tended pane of glass for financial crime across digital assets: what changed, and what it means."
+        kicker={todayLabel}
+        title="Today's briefing"
+        lede={`What changed across digital assets and financial crime, and what it means for a bank. The agent adds sourced items every day; its last run was ${longDate(lastUpdated)}.`}
+        right={
+          <>
+            <CopyButton text={digest} label="Copy digest" className="btn text-small" />
+            <button onClick={downloadDigest} className="btn" title="Download the weekly digest as Markdown">
+              <Download className="h-3.5 w-3.5" /> Download digest
+            </button>
+          </>
+        }
       />
 
-      <Panel className="p-3 flex items-center gap-3">
-        <span className="relative grid place-items-center w-8 h-8 rounded-lg bg-violet-500/15 ring-1 ring-violet-500/30 text-violet-300 shrink-0">
-          <Bot className="h-4 w-4" />
-          <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-violet-400 ring-2 ring-neutral-900" />
-        </span>
-        <div className="min-w-0 flex-1">
-          <div className="text-sm font-medium text-neutral-200">The intelligence agent is publishing automatically</div>
-          <div className="text-xs text-neutral-500">
-            Last updated <span className="text-neutral-300 tabular-nums">{lastUpdated}</span> · auto-publish, no human-in-the-loop
-          </div>
-        </div>
-        <button
-          onClick={() => setPage("activity")}
-          className="inline-flex items-center gap-1.5 rounded-full bg-white/5 text-neutral-200 ring-1 ring-white/10 text-xs font-medium px-3.5 py-1.5 hover:bg-white/10 transition-colors shrink-0"
-        >
-          View activity <ArrowRight className="h-3.5 w-3.5" />
-        </button>
-      </Panel>
+      <FigureStrip
+        figures={[
+          { label: "Items tracked", value: published.length },
+          { label: "Added by the agent", value: agentSourced.length },
+          { label: "High impact", value: highImpact.length, tone: "high" },
+          { label: "New this week", value: thisWeek.length, tone: "signal" },
+        ]}
+      />
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <Stat Icon={Layers} tone="brand" label="Tracked" value={published.length} />
-        <Stat Icon={Bot} tone="brand" label="Agent-sourced" value={agentSourced.length} />
-        <Stat Icon={ShieldAlert} tone="rose" label="High impact" value={highImpact.length} />
-        <Stat Icon={Sparkles} tone="neutral" label="Added this week" value={thisWeek.length} />
-      </div>
+      <div className="grid lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 space-y-6 min-w-0">
+          <section className="min-w-0">
+            <SectionHeading title="New this week, by topic" sub="Which topic briefings gained items in the last seven days" />
+            {movers.length > 0 ? (
+              <Panel>
+                {movers.map((m, i) => (
+                  <button key={m.id} onClick={() => openTheme(m.id)} className={i === 0 ? "w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-sunken" : "row w-full flex items-center gap-3 px-4 py-2.5 text-left"}>
+                    <span className="flex-1 text-small text-ink font-medium">{m.label}</span>
+                    <span className="text-tiny text-ink-faint num">{m.n} new</span>
+                    <ArrowRight className="h-3.5 w-3.5 text-ink-faint" aria-hidden />
+                  </button>
+                ))}
+              </Panel>
+            ) : (
+              <p className="text-small text-ink-faint">No new items in the last seven days.</p>
+            )}
+          </section>
 
-      <Panel className="p-4">
-        <SectionHeading
-          Icon={Flame}
-          title="This week"
-          sub="What moved in the last 7 days"
-          right={
-            <div className="flex items-center gap-2">
-              <CopyButton
-                text={digest}
-                label="Copy digest"
-                className="rounded-lg px-2.5 py-1.5 text-[11px] font-medium bg-neutral-900 ring-1 ring-neutral-800 hover:bg-neutral-800"
-              />
-              <button
-                onClick={downloadDigest}
-                className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-medium bg-neutral-900 text-neutral-300 ring-1 ring-neutral-800 hover:text-neutral-100 hover:bg-neutral-800 transition-colors"
-              >
-                <Download className="h-3.5 w-3.5" /> .md
-              </button>
-            </div>
-          }
-        />
-        {movers.length > 0 ? (
-          <div className="flex flex-wrap gap-2">
-            {movers.map((m) => (
-              <button
-                key={m.id}
-                onClick={() => openTheme(m.id)}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-violet-500/10 text-violet-200 ring-1 ring-violet-500/25 px-2.5 py-1 text-[12px] hover:bg-violet-500/20 transition-colors"
-              >
-                {m.label} <span className="text-violet-300/70 tabular-nums">{m.n} new</span>
-              </button>
-            ))}
-          </div>
-        ) : (
-          <p className="text-xs text-neutral-500">No new items in the last 7 days.</p>
-        )}
-      </Panel>
-
-      <div className="grid lg:grid-cols-3 gap-5">
-        <div className="lg:col-span-2">
-          <SectionHeading Icon={LayoutDashboard} title="Streams" sub="Jump into any view" />
-          <div className="grid sm:grid-cols-2 gap-3">
-            <StreamCard
-              Icon={Newspaper}
-              name="Signals"
-              count={signals.length}
-              latest={signals[0]?.title}
-              meta={`${signals.filter((i) => i.impact === "high").length} high-impact`}
-              onClick={() => setPage("signals")}
-            />
-            <StreamCard
-              Icon={TrendingUp}
-              name="Ventures"
-              count={ventures.length}
-              latest={ventures[0]?.title}
-              meta="Funding, M&A & market moves"
-              onClick={() => setPage("ventures")}
-            />
-            <StreamCard
-              Icon={Boxes}
-              name="Solutions"
-              count={solutions.length}
-              latest={solutions[0]?.title}
-              meta={`${shortlisted} on the shortlist`}
-              onClick={() => setPage("solutions")}
-            />
-            <StreamCard
-              Icon={Crosshair}
-              name="Intelligence"
-              count={typologies.length}
-              latest={typologies[0]?.title}
-              meta="Laundering typologies"
-              onClick={() => setPage("intelligence")}
-            />
-            <StreamCard
-              Icon={CalendarClock}
-              name="Radar"
-              count={MILESTONES.length}
-              latest={nextMs?.title}
-              meta={nextMs ? `Next: ${countdown(nextMs.date, today)}` : "Key compliance dates"}
-              onClick={() => setPage("radar")}
-            />
-          </div>
+          <section className="min-w-0">
+            <SectionHeading title="Latest items" sub="The twelve most recently added, across every kind" right={<button onClick={() => setPage("signals")} className="btn btn-quiet text-tiny">All news and regulation <ArrowRight className="h-3 w-3" /></button>} />
+            <DataTable items={latest} variant="signal" initialSort={{ key: "Added", dir: "desc" }} />
+          </section>
         </div>
 
-        <div className="space-y-3">
-          <SectionHeading Icon={Globe} title="At a glance" />
+        <div className="space-y-4 min-w-0">
           {nextMs && (
             <Panel className="p-4">
-              <div className="text-[11px] uppercase tracking-wide text-neutral-500">Next deadline</div>
-              <div className="mt-1 text-sm font-semibold text-neutral-100 leading-snug">{nextMs.title}</div>
-              <div className="mt-1.5 inline-flex items-center gap-1.5 text-[12px]">
-                <span className="rounded bg-violet-500/15 text-violet-200 ring-1 ring-violet-500/30 px-1.5 py-0.5 font-medium">{countdown(nextMs.date, today)}</span>
-                <span className="text-neutral-500 tabular-nums">{fmt(nextMs.date)}</span>
+              <div className="label">Next deadline</div>
+              <div className="mt-1.5 text-small font-semibold text-ink leading-snug">{nextMs.title}</div>
+              <div className="mt-2 flex items-center gap-2 text-tiny">
+                <Tag tone="signal">{countdown(nextMs.date, today)}</Tag>
+                <span className="text-ink-faint num">{longDate(nextMs.date)}</span>
               </div>
+              <button onClick={() => setPage("radar")} className="mt-2.5 btn btn-quiet text-tiny -ml-1.5">
+                All dates ahead <ArrowRight className="h-3 w-3" />
+              </button>
             </Panel>
           )}
           <Panel className="p-4">
-            <SectionHeading Icon={ShieldAlert} title="Risk mix" />
+            <div className="label mb-2">Risk mix of everything tracked</div>
             <ImpactMix items={published} />
           </Panel>
           <Panel className="p-4">
-            <SectionHeading Icon={Globe} title="Top regions" />
-            <MiniBars data={regions.slice(0, 5)} />
+            <div className="label mb-2">Items by region</div>
+            <MiniBars data={regions.slice(0, 6)} />
           </Panel>
-        </div>
-      </div>
-
-      <div>
-        <SectionHeading Icon={Sparkles} title="Latest intelligence" sub="Most recently ingested, across every stream" />
-        <div className="space-y-3">
-          {latest.map((i) => (
-            <div key={i.id} className="rise">
-              <ItemCard item={i} />
-            </div>
-          ))}
         </div>
       </div>
     </div>
   );
 }
 
-function byIngestedDesc(a: Item, b: Item) {
+function byAddedDesc(a: Item, b: Item) {
   if (a.addedAt !== b.addedAt) return a.addedAt < b.addedAt ? 1 : -1;
   return a.date < b.date ? 1 : -1;
 }
@@ -237,9 +123,6 @@ function startOfToday() {
 }
 function dayMs(date: string) {
   return new Date(date + "T00:00:00").getTime();
-}
-function fmt(date: string) {
-  return new Date(date + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
 }
 function countdown(date: string, today: number) {
   const days = Math.round((dayMs(date) - today) / 86_400_000);

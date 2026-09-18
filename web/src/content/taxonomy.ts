@@ -1,46 +1,37 @@
-import {
-  Newspaper,
-  Scale,
-  TrendingUp,
-  Boxes,
-  Crosshair,
-  type LucideIcon,
-} from "lucide-react";
+import { Newspaper, Scale, TrendingUp, Boxes, Crosshair, type LucideIcon } from "lucide-react";
 import type { ItemType, SolutionStance, Confidence } from "./types";
+import { TONE, type Tone } from "../lib/uiTokens";
 
-// Label + icon metadata per content type. The UI is monochrome by
-// design (types are told apart by icon + label, not colour), so there is
-// no per-type accent here — that keeps the violet accent meaningful.
-export const TYPE_META: Record<
-  ItemType,
-  { label: string; plural: string; Icon: LucideIcon; blurb: string }
-> = {
-  signal: { label: "Signal", plural: "Signals", Icon: Newspaper, blurb: "News & market intelligence" },
-  regulatory: { label: "Regulatory", plural: "Regulatory", Icon: Scale, blurb: "Rules, supervision & enforcement" },
-  venture: { label: "Venture", plural: "Ventures", Icon: TrendingUp, blurb: "Funding, M&A & market moves" },
-  solution: { label: "Solution", plural: "Solutions", Icon: Boxes, blurb: "Vendor & build-vs-buy landscape" },
-  typology: { label: "Typology", plural: "Intelligence", Icon: Crosshair, blurb: "Laundering vectors & controls" },
+// Label + icon metadata per content type. Types are told apart by icon and
+// word, never by colour, so the one accent keeps its meaning.
+export const TYPE_META: Record<ItemType, { label: string; plural: string; Icon: LucideIcon; blurb: string }> = {
+  signal: { label: "News", plural: "News", Icon: Newspaper, blurb: "News and market developments" },
+  regulatory: { label: "Regulation", plural: "Regulation", Icon: Scale, blurb: "Rules, supervision and enforcement" },
+  venture: { label: "Funding", plural: "Funding and deals", Icon: TrendingUp, blurb: "Funding rounds, acquisitions and market moves" },
+  solution: { label: "Vendor", plural: "Vendors", Icon: Boxes, blurb: "Vendors and the build-or-buy landscape" },
+  typology: { label: "Crime pattern", plural: "Crime patterns", Icon: Crosshair, blurb: "How the money moves and which controls catch it" },
 };
 
-// Stance chips for the Solutions vendor landscape (dark tones).
-export const STANCE_META: Record<SolutionStance, { label: string; chip: string }> = {
-  "in-use": { label: "In use", chip: "bg-violet-500/15 text-violet-300 ring-1 ring-violet-500/30" },
-  shortlist: { label: "Shortlisted", chip: "bg-neutral-200/10 text-neutral-200 ring-1 ring-neutral-200/20" },
-  evaluate: { label: "Evaluating", chip: "bg-amber-500/10 text-amber-300 ring-1 ring-amber-500/25" },
-  watch: { label: "Watching", chip: "bg-neutral-800 text-neutral-400 ring-1 ring-neutral-700" },
+// Stance on a vendor, for the build-or-buy call. "In use" carries the
+// accent because it is the one that describes a decision already made.
+export const STANCE_META: Record<SolutionStance, { label: string; tone: Tone; chip: string }> = {
+  "in-use": { label: "In use", tone: "signal", chip: TONE.signal.soft },
+  shortlist: { label: "Shortlisted", tone: "neutral", chip: "bg-sunken text-ink" },
+  evaluate: { label: "Evaluating", tone: "medium", chip: TONE.medium.soft },
+  watch: { label: "Watching", tone: "neutral", chip: TONE.neutral.soft },
 };
 
-// Confidence — a trust signal distinct from impact, so it deliberately
-// avoids the amber/rose risk colours. A single dot scales violet → grey.
+// Confidence is a trust signal, distinct from impact, so it stays off the
+// risk colours: a dot that runs from the accent to grey.
 export const CONFIDENCE_META: Record<Confidence, { label: string; dot: string }> = {
-  high: { label: "High confidence", dot: "bg-violet-400" },
-  medium: { label: "Medium confidence", dot: "bg-neutral-400" },
-  low: { label: "Low confidence", dot: "bg-neutral-600" },
+  high: { label: "High confidence", dot: "bg-signal" },
+  medium: { label: "Medium confidence", dot: "bg-ink-faint" },
+  low: { label: "Low confidence", dot: "bg-rule-strong" },
 };
 
-// Source provenance — a primary (originating/official) source is emphasised
-// in violet; secondary reporting is muted neutral.
+// Source provenance: the official or originating document carries the
+// accent; reporting about it is quiet.
 export const SOURCE_KIND_META: Record<"primary" | "secondary", { label: string; chip: string }> = {
-  primary: { label: "Primary", chip: "bg-violet-500/10 text-violet-300 ring-1 ring-violet-500/25" },
-  secondary: { label: "Secondary", chip: "bg-neutral-800 text-neutral-500 ring-1 ring-neutral-700" },
+  primary: { label: "Primary", chip: TONE.signal.soft },
+  secondary: { label: "Secondary", chip: "bg-sunken text-ink-faint" },
 };

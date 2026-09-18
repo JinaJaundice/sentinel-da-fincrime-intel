@@ -66,7 +66,7 @@ describe("deckBullet", () => {
 describe("itemsToMarkdown", () => {
   it("groups by type and carries the trust signals + source kinds", () => {
     const md = itemsToMarkdown([reg]);
-    expect(md).toContain("## Regulatory");
+    expect(md).toContain("## Regulation");
     expect(md).toContain("### Test rule, with comma");
     expect(md).toContain("Impact: High");
     expect(md).toContain("Confidence: High");
@@ -78,7 +78,7 @@ describe("itemsToMarkdown", () => {
   it("ungrouped mode prefixes the meta with the type and keeps the given order", () => {
     const md = itemsToMarkdown([ven, reg], "Pack", { grouped: false });
     expect(md.split("\n").some((l) => /^## /.test(l))).toBe(false); // no h2 type-section headers
-    expect(md).toContain("*Venture ·"); // type-prefixed meta line
+    expect(md).toContain("*Funding ·"); // type-prefixed meta line
     expect(md.indexOf("Acme raises")).toBeLessThan(md.indexOf("Test rule")); // order preserved
   });
 

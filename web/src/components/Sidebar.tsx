@@ -1,92 +1,116 @@
-import { Radar, LayoutDashboard, Newspaper, TrendingUp, Boxes, Crosshair, CalendarClock, Shapes, Radio, GraduationCap, LineChart, Landmark, Globe, type LucideIcon } from "lucide-react";
-import { cn } from "../lib/utils";
+import { Radar } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
+import { NAV_GROUPS, type Page, type Counts } from "../lib/nav";
+import { cn, shortDate } from "../lib/utils";
 
-export type Page = "brief" | "learn" | "trends" | "themes" | "signals" | "fca" | "atlas" | "ventures" | "solutions" | "intelligence" | "radar" | "activity";
+export type { Page, Counts } from "../lib/nav";
 
-// Each tab carries a plain-language descriptor so the punchy names aren't cryptic.
-const NAV: { id: Page; label: string; desc: string; Icon: LucideIcon }[] = [
-  { id: "brief", label: "Overview", desc: "Today's briefing", Icon: LayoutDashboard },
-  { id: "learn", label: "Learn", desc: "Start here & glossary", Icon: GraduationCap },
-  { id: "trends", label: "Trends", desc: "What's moving over time", Icon: LineChart },
-  { id: "themes", label: "Themes", desc: "Topics & briefings", Icon: Shapes },
-  { id: "signals", label: "Signals", desc: "News & regulation", Icon: Newspaper },
-  { id: "fca", label: "FCA", desc: "FCA publications", Icon: Landmark },
-  { id: "atlas", label: "Atlas", desc: "Regulation by country", Icon: Globe },
-  { id: "ventures", label: "Ventures", desc: "Funding & M&A", Icon: TrendingUp },
-  { id: "solutions", label: "Solutions", desc: "Vendors & build-vs-buy", Icon: Boxes },
-  { id: "intelligence", label: "Intelligence", desc: "Laundering typologies", Icon: Crosshair },
-  { id: "radar", label: "Radar", desc: "Key dates ahead", Icon: CalendarClock },
-  { id: "activity", label: "Activity", desc: "What the agent published", Icon: Radio },
-];
+function Brand({ compact = false }: { compact?: boolean }) {
+  return (
+    <div className="flex items-center gap-2.5 min-w-0">
+      <span className="grid place-items-center w-8 h-8 rounded-md bg-signal text-on-signal shrink-0" aria-hidden>
+        <Radar className="h-4 w-4" strokeWidth={2} />
+      </span>
+      <div className="min-w-0">
+        <div className="text-body font-semibold text-ink leading-none">Sentinel</div>
+        {!compact && <div className="text-micro text-ink-faint leading-none mt-1 truncate">Digital-asset financial crime</div>}
+      </div>
+    </div>
+  );
+}
 
-// Glassy left sidebar on desktop; a horizontal scrolling bar on mobile.
+/** The left rail on desktop. Grouped links, a count beside each list page,
+ *  the theme control and the feed's last update at the foot. */
 export function Sidebar({
   page,
   setPage,
-  badgeCount,
+  counts,
+  lastUpdated,
+  fresh,
 }: {
   page: Page;
   setPage: (p: Page) => void;
-  badgeCount: number;
+  counts: Counts;
+  lastUpdated: string;
+  /** Items the agent added in the last two days; shown beside its log. */
+  fresh: number;
 }) {
   return (
-    <aside className="md:w-60 md:shrink-0 md:h-screen md:sticky md:top-0 border-b md:border-b-0 md:border-r border-white/[0.06] bg-neutral-950/50 backdrop-blur-xl z-20">
-      <div className="px-4 py-4 flex md:flex-col md:h-full gap-3 md:gap-6 items-center md:items-stretch">
-        <div className="flex items-center gap-2.5 shrink-0">
-          <span className="grid place-items-center w-9 h-9 rounded-xl bg-violet-500/15 ring-1 ring-violet-500/30 text-violet-300 glow-violet">
-            <Radar className="h-4 w-4" strokeWidth={1.75} />
-          </span>
-          <div className="hidden md:block">
-            <div className="font-medium text-neutral-100 text-sm leading-none tracking-tight">Sentinel</div>
-            <div className="text-[10px] text-neutral-500 leading-none mt-1 font-light">DA financial-crime intel</div>
+    <aside className="hidden md:flex md:flex-col w-64 shrink-0 h-screen sticky top-0 border-r border-rule bg-surface">
+      <div className="px-4 pt-5 pb-4">
+        <Brand />
+      </div>
+
+      <nav aria-label="Primary" className="flex-1 overflow-y-auto px-2 pb-4">
+        {NAV_GROUPS.map((g) => (
+          <div key={g.label} className="mb-4">
+            <div className="label px-2.5 mb-1.5">{g.label}</div>
+            <ul className="space-y-px">
+              {g.items.map(({ id, label, Icon }) => {
+                const active = page === id;
+                const n = counts[id];
+                const badge = id === "activity" && fresh > 0 ? fresh : undefined;
+                return (
+                  <li key={id}>
+                    <button
+                      type="button"
+                      data-page={id}
+                      onClick={() => setPage(id)}
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "w-full flex items-center gap-2.5 pl-2.5 pr-2 py-1.5 rounded-md text-left text-small transition-colors border-l-2",
+                        active ? "bg-signal-soft text-ink border-signal font-medium" : "text-ink-soft border-transparent hover:bg-sunken hover:text-ink",
+                      )}
+                    >
+                      <Icon className={cn("h-4 w-4 shrink-0", active ? "text-signal" : "text-ink-faint")} strokeWidth={1.75} aria-hidden />
+                      <span className="flex-1 min-w-0 truncate">{label}</span>
+                      {badge !== undefined ? (
+                        <span className="text-micro font-semibold num rounded-sm px-1.5 py-0.5 bg-signal text-on-signal" title={`${badge} added in the last two days`}>
+                          {badge}
+                        </span>
+                      ) : (
+                        n !== undefined && <span className="text-micro num text-ink-faint">{n}</span>
+                      )}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-        </div>
+        ))}
+      </nav>
 
-        <nav aria-label="Primary" className="flex md:flex-col gap-1 overflow-x-auto md:overflow-visible">
-          {NAV.map(({ id, label, desc, Icon }) => {
-            const active = page === id;
-            const showCount = id === "activity" && badgeCount > 0;
-            return (
-              <button
-                key={id}
-                onClick={() => setPage(id)}
-                aria-current={active ? "page" : undefined}
-                className={cn(
-                  "group flex items-center gap-2.5 px-2.5 py-2 rounded-xl shrink-0 whitespace-nowrap transition-colors md:border-l-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-violet-500/40",
-                  active ? "bg-white/[0.04] md:border-violet-500" : "hover:bg-white/[0.03] md:border-transparent",
-                )}
-              >
-                <Icon
-                  className={cn("h-4 w-4 shrink-0", active ? "text-violet-300" : "text-neutral-500 group-hover:text-neutral-300")}
-                  strokeWidth={1.75}
-                />
-                <span className="md:flex-1 min-w-0">
-                  <span
-                    className={cn(
-                      "block text-left text-[13px] leading-none",
-                      active ? "text-neutral-100 font-medium" : "text-neutral-300 font-normal group-hover:text-neutral-100",
-                    )}
-                  >
-                    {label}
-                  </span>
-                  <span className="hidden md:block text-left text-[10px] leading-none mt-1 font-light text-neutral-500 truncate">{desc}</span>
-                </span>
-                {showCount && (
-                  <span className="grid place-items-center min-w-4 h-4 px-1 rounded-full bg-violet-500/20 text-violet-200 ring-1 ring-violet-500/30 text-[10px] font-semibold tabular-nums">
-                    {badgeCount}
-                  </span>
-                )}
-              </button>
-            );
-          })}
-        </nav>
-
-        <div className="hidden md:block md:mt-auto pt-4 text-[10px] text-neutral-600 leading-relaxed font-light">
-          v0.1 · live
-          <br />
-          auto-publish, no HITL
+      <div className="px-4 py-3 border-t border-rule flex items-center justify-between gap-3">
+        <div className="text-micro text-ink-faint leading-snug min-w-0">
+          <div className="text-ink-soft num">Updated {shortDate(lastUpdated)}</div>
+          <div>by the agent, daily</div>
         </div>
+        <ThemeToggle />
       </div>
     </aside>
+  );
+}
+
+/** The top bar on a phone: the mark, a native page picker, the theme control. */
+export function TopBar({ page, setPage }: { page: Page; setPage: (p: Page) => void }) {
+  return (
+    <header className="md:hidden sticky top-0 z-20 bg-surface border-b border-rule px-4 py-2.5 flex items-center gap-3">
+      <Brand compact />
+      <label className="flex-1 min-w-0">
+        <span className="sr-only">Go to page</span>
+        <select value={page} onChange={(e) => setPage(e.target.value as Page)} className="field py-1.5" aria-label="Go to page">
+          {NAV_GROUPS.map((g) => (
+            <optgroup key={g.label} label={g.label}>
+              {g.items.map((n) => (
+                <option key={n.id} value={n.id}>
+                  {n.label}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+      </label>
+      <ThemeToggle />
+    </header>
   );
 }

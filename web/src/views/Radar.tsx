@@ -1,150 +1,115 @@
-import { CalendarClock, History, ExternalLink, MapPin } from "lucide-react";
-import type { ReactNode } from "react";
+import { ExternalLink, MapPin } from "lucide-react";
 import type { Item } from "../content/types";
 import { MILESTONES } from "../content/milestones";
 import { IMPACT_TONE } from "../lib/uiTokens";
-import { Panel, SectionHeading } from "../lib/ui";
-import { relativeDay, cn } from "../lib/utils";
+import { Panel, SectionHeading, Tag } from "../lib/ui";
+import { relativeDay, longDate } from "../lib/utils";
 import { PageHeader } from "../components/PageHeader";
 
-// Phase 3: a forward-looking timeline of key compliance dates plus the
-// regulatory developments that recently landed (derived from the items).
+// Dates ahead: the deadlines and milestones coming, then the rules that
+// recently landed (drawn from the regulation items).
 export function Radar({ items }: { items: Item[] }) {
   const today = startOfToday();
   const upcoming = MILESTONES.filter((m) => dayMs(m.date) >= today).sort((a, b) => (a.date < b.date ? -1 : 1));
   const recent = items
     .filter((i) => i.status === "published" && i.type === "regulatory" && dayMs(i.date) < today)
     .sort((a, b) => (a.date < b.date ? 1 : -1))
-    .slice(0, 8);
+    .slice(0, 10);
 
   return (
     <div className="space-y-6">
-      <PageHeader
-        Icon={CalendarClock}
-        title="Regulatory radar"
-        subtitle="Key compliance dates: what's coming, and what just landed."
-      />
+      <PageHeader title="Dates ahead" lede="The compliance deadlines and milestones coming up, with a countdown to each, and the rules that landed most recently." />
 
-      <div>
-        <SectionHeading Icon={CalendarClock} title="Upcoming" sub="Forward-looking deadlines & milestones" />
+      <section>
+        <SectionHeading title="Coming up" sub={`${upcoming.length} dated deadlines and milestones, soonest first`} />
         {upcoming.length ? (
-          <Timeline>
-            {upcoming.map((m) => (
-              <TimelineItem key={m.id} accent="violet">
-                <Panel className="p-3">
-                  <div className="flex items-center flex-wrap gap-x-2 gap-y-1 text-[11px] text-neutral-500">
-                    <span className="text-neutral-300 tabular-nums">{fmt(m.date)}</span>
+          <Panel className="overflow-hidden">
+            {upcoming.map((m, i) => (
+              <div key={m.id} className={cn2("grid sm:grid-cols-[9rem_1fr] gap-x-4 gap-y-1 px-4 py-3", i > 0 && "border-t border-rule")}>
+                <div>
+                  <div className="text-small font-semibold text-ink num">{longDate(m.date)}</div>
+                  <div className="mt-1 flex items-center flex-wrap gap-1.5">
                     <Countdown date={m.date} today={today} />
-                    {m.tentative && (
-                      <span className="rounded bg-neutral-800 text-neutral-400 ring-1 ring-neutral-700 px-1.5 py-0.5">estimated</span>
-                    )}
-                    {m.region && (
-                      <span className="inline-flex items-center gap-0.5">
-                        <MapPin className="h-3 w-3" />
-                        {m.region}
-                      </span>
-                    )}
+                    {m.tentative && <Tag>estimated</Tag>}
+                  </div>
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-start gap-2">
+                    <h3 className="text-small font-semibold text-ink leading-snug flex-1">{m.title}</h3>
                     {m.impact && (
-                      <span className={cn("ml-auto rounded px-1.5 py-0.5 font-medium", IMPACT_TONE[m.impact].chip)}>
+                      <Tag tone={IMPACT_TONE[m.impact].tone} className="shrink-0">
                         {IMPACT_TONE[m.impact].label}
-                      </span>
+                      </Tag>
                     )}
                   </div>
-                  <h3 className="mt-1.5 text-sm font-semibold text-neutral-100">{m.title}</h3>
-                  <p className="mt-1 text-[13px] text-neutral-400 leading-relaxed">{m.blurb}</p>
-                  {m.source && (
-                    <a
-                      href={m.source.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-2 inline-flex items-center gap-1 text-[10px] text-neutral-500 hover:text-violet-300"
-                    >
-                      <ExternalLink className="h-3 w-3" /> {m.source.name}
-                    </a>
-                  )}
-                </Panel>
-              </TimelineItem>
+                  <p className="mt-1 serif text-small text-ink-soft">{m.blurb}</p>
+                  <div className="mt-1.5 flex items-center flex-wrap gap-x-3 gap-y-1 text-tiny text-ink-faint">
+                    {m.region && (
+                      <span className="inline-flex items-center gap-1">
+                        <MapPin className="h-3 w-3" aria-hidden /> {m.region}
+                      </span>
+                    )}
+                    {m.source && (
+                      <a href={m.source.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-ink-soft hover:text-signal hover:underline underline-offset-2">
+                        <ExternalLink className="h-3 w-3" aria-hidden /> {m.source.name}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
             ))}
-          </Timeline>
+          </Panel>
         ) : (
-          <p className="text-sm text-neutral-500">No upcoming milestones tracked.</p>
+          <p className="text-small text-ink-faint">No dated milestones ahead.</p>
         )}
-      </div>
+      </section>
 
-      <div>
-        <SectionHeading Icon={History} title="Recently landed" sub="Regulatory developments now in force or proposed" />
-        <Timeline>
-          {recent.map((i) => (
-            <TimelineItem key={i.id} accent="neutral">
-              <Panel className="p-3">
-                <div className="flex items-center flex-wrap gap-x-2 gap-y-1 text-[11px] text-neutral-500">
-                  <span className="text-neutral-300 tabular-nums">{fmt(i.date)}</span>
-                  <span>· {relativeDay(i.date)}</span>
-                  {i.region && (
-                    <span className="inline-flex items-center gap-0.5">
-                      <MapPin className="h-3 w-3" />
-                      {i.region}
-                    </span>
-                  )}
+      <section>
+        <SectionHeading title="Recently landed" sub="Rules now in force or proposed, newest first" />
+        <Panel className="overflow-hidden">
+          {recent.map((i, idx) => (
+            <div key={i.id} className={cn2("grid sm:grid-cols-[9rem_1fr] gap-x-4 gap-y-1 px-4 py-3", idx > 0 && "border-t border-rule")}>
+              <div>
+                <div className="text-small text-ink num">{longDate(i.date)}</div>
+                <div className="text-tiny text-ink-faint">{relativeDay(i.date)}</div>
+              </div>
+              <div className="min-w-0">
+                <div className="flex items-start gap-2">
+                  <h3 className="text-small font-semibold text-ink leading-snug flex-1">{i.title}</h3>
                   {i.impact && (
-                    <span className={cn("ml-auto rounded px-1.5 py-0.5 font-medium", IMPACT_TONE[i.impact].chip)}>
+                    <Tag tone={IMPACT_TONE[i.impact].tone} className="shrink-0">
                       {IMPACT_TONE[i.impact].label}
-                    </span>
+                    </Tag>
                   )}
                 </div>
-                <h3 className="mt-1.5 text-sm font-semibold text-neutral-100">{i.title}</h3>
                 {i.soWhat && (
-                  <p className="mt-1 text-[12px] text-neutral-400 leading-relaxed">
-                    <span className="text-neutral-300 font-medium">So what: </span>
+                  <p className="mt-1 serif text-small text-ink-soft">
+                    <span className="font-semibold text-ink">So what for a bank: </span>
                     {i.soWhat}
                   </p>
                 )}
-              </Panel>
-            </TimelineItem>
+                {i.region && (
+                  <div className="mt-1.5 inline-flex items-center gap-1 text-tiny text-ink-faint">
+                    <MapPin className="h-3 w-3" aria-hidden /> {i.region}
+                  </div>
+                )}
+              </div>
+            </div>
           ))}
-        </Timeline>
-      </div>
+        </Panel>
+      </section>
     </div>
-  );
-}
-
-function Timeline({ children }: { children: ReactNode }) {
-  return <ol className="relative border-l border-neutral-800 ml-2 space-y-3">{children}</ol>;
-}
-
-function TimelineItem({ children, accent }: { children: ReactNode; accent: "violet" | "neutral" }) {
-  return (
-    <li className="ml-5 relative">
-      <span
-        className={cn(
-          "absolute -left-[23px] top-3 w-2.5 h-2.5 rounded-full ring-4 ring-neutral-950",
-          accent === "violet" ? "bg-violet-500" : "bg-neutral-600",
-        )}
-      />
-      {children}
-    </li>
   );
 }
 
 function Countdown({ date, today }: { date: string; today: number }) {
   const days = Math.round((dayMs(date) - today) / 86_400_000);
-  const label =
-    days <= 0 ? "today" : days === 1 ? "tomorrow" : days < 14 ? `in ${days} days` : days < 60 ? `in ${Math.round(days / 7)} weeks` : `in ${Math.round(days / 30)} months`;
-  const soon = days <= 30;
-  return (
-    <span
-      className={cn(
-        "rounded px-1.5 py-0.5 font-medium",
-        soon ? "bg-violet-500/15 text-violet-200 ring-1 ring-violet-500/30" : "bg-neutral-800 text-neutral-400 ring-1 ring-neutral-700",
-      )}
-    >
-      {label}
-    </span>
-  );
+  const label = days <= 0 ? "today" : days === 1 ? "tomorrow" : days < 14 ? `in ${days} days` : days < 60 ? `in ${Math.round(days / 7)} weeks` : `in ${Math.round(days / 30)} months`;
+  return <Tag tone={days <= 30 ? "signal" : "neutral"}>{label}</Tag>;
 }
 
-function fmt(date: string) {
-  return new Date(date + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+function cn2(...c: (string | false | undefined)[]) {
+  return c.filter(Boolean).join(" ");
 }
 function dayMs(date: string) {
   return new Date(date + "T00:00:00").getTime();

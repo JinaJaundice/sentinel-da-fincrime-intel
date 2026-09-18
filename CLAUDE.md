@@ -38,14 +38,17 @@ new plumbing. The ingestion agent only ever emits `Item`s. Declutter as you
 go; reuse `DataTable`, `ItemDetail`, `Panel`, the tokens, don't add bespoke
 surfaces.
 
-### 2. Design identity: dark, neutral, violet
+### 2. Design identity: the watch desk (v0.2, 18 Sep 2026)
 
-Deliberately **distinct from the Engine** (light + blue). Near-black neutral
-base (`neutral-950/900/800`), a single **violet** accent, amber/rose risk
-bands. DefiLlama-style structure: left sidebar + stat tiles + dense
-expandable tables. All colour is enumerated in `lib/uiTokens.ts` (Tailwind
-v4 only sees literal class strings, never build colour by interpolation).
-The accent is swappable in one file.
+A professional horizon-scanning tool with **light and dark themes**, the
+same standard as the engine, Touchstone and Postern, and deliberately unlike
+each of them in look. Libre Franklin for the interface, Source Serif 4 for
+the written summaries, one **violet** accent, claret/amber risk bands,
+hairlines, no shadows or gradients. **Everything visual is a token** in
+`web/src/index.css` under `@theme`; no component names a raw colour, family,
+radius or size, and `web/scripts/design-check.mjs` fails the build if one
+does. Tab labels say what the page shows, in plain words (`lib/nav.ts`).
+Full reference: [`docs/DESIGN.md`](docs/DESIGN.md).
 
 ### 3. Content integrity: for humans and the agent
 
@@ -63,7 +66,7 @@ URL**, no source, no publish. The Activity view is a transparency log.
 | Working on… | Read |
 |---|---|
 | Architecture, the one-model-many-views design, file map, state, adding a tab | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) |
-| Design system: dark/violet tokens, layout, components, a11y, changing the accent | [`docs/DESIGN.md`](docs/DESIGN.md) |
+| Design system: the tokens and the two themes, the faces, the primitives, the pages, the gate, the research | [`docs/DESIGN.md`](docs/DESIGN.md) |
 | The `Item` schema, taxonomy, integrity rules, seeding & status lifecycle | [`docs/CONTENT.md`](docs/CONTENT.md) |
 | Running it: ports, launch.json, typecheck, the preview/headless gotcha | [`docs/RUNBOOK.md`](docs/RUNBOOK.md) |
 | Phase 2 ingestion agent: auto-publish contract + the ingest run spec | [`agent/README.md`](agent/README.md) · [`agent/INGEST.md`](agent/INGEST.md) |
@@ -81,11 +84,15 @@ URL**, no source, no publish. The Activity view is a transparency log.
    The prose check covers hand-authored `.ts`/`.tsx` copy only; `feed.json` is
    the agent's file and is not gated, so a daily ingest cannot fail CI on a
    quoted external title.
-3. Preview console clean (no errors/warnings).
-4. **Verify via preview _snapshots_ instead of screenshots**: headless
-   rasterisation is blocked on this machine, so screenshots time out;
-   accessibility-tree snapshots are reliable. See [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
-5. Decluttered + on-identity (dark/neutral/violet): confirm before reporting.
+3. `npm --prefix web run build` then `npm --prefix web run design`: the
+   design gate over every page in both themes at both widths (faces, 11px
+   floor, WCAG AA, overflow, the tells, console). Local only; CI has no
+   browser.
+4. **Look at it**: `npm --prefix web run shots -- <outdir>` writes full-page
+   PNGs through Playwright's headless Chromium (the in-app Browser pane
+   cannot screenshot; Playwright can). Open them. See [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
+5. Decluttered and on-identity (the watch desk, both themes): confirm before
+   reporting.
 
 ---
 

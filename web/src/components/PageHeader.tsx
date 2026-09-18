@@ -1,36 +1,16 @@
-import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
-import { IconTile } from "../lib/ui";
 
-// Big, thin, editorial page title with an optional themed icon and a
-// plain-language descriptor. The descriptor doubles as the explanation
-// of what each tab is.
-export function PageHeader({
-  Icon,
-  title,
-  subtitle,
-  eyebrow,
-  right,
-}: {
-  Icon?: LucideIcon;
-  title: string;
-  subtitle?: string;
-  eyebrow?: string;
-  right?: ReactNode;
-}) {
+// Every page opens the same way: an optional kicker, the title, one plain
+// sentence saying what the page shows, and the page's controls on the right.
+export function PageHeader({ title, lede, kicker, right }: { title: string; lede?: string; kicker?: string; right?: ReactNode }) {
   return (
-    <div className="flex items-center justify-between gap-4">
-      <div className="flex items-center gap-3.5 min-w-0">
-        {Icon && <IconTile Icon={Icon} tone="brand" size="lg" />}
-        <div className="min-w-0">
-          {eyebrow && (
-            <div className="text-[11px] uppercase tracking-[0.14em] text-violet-300/80 font-medium mb-1">{eyebrow}</div>
-          )}
-          <h1 className="text-[24px] sm:text-[29px] font-light tracking-tight text-neutral-50 leading-[1.1]">{title}</h1>
-          {subtitle && <p className="mt-1.5 text-[13px] sm:text-sm text-neutral-400 font-light max-w-2xl">{subtitle}</p>}
-        </div>
+    <header className="flex items-end justify-between gap-4 flex-wrap pb-4 border-b border-rule">
+      <div className="min-w-0">
+        {kicker && <div className="label mb-1.5">{kicker}</div>}
+        <h1 className="text-title font-semibold text-ink leading-none">{title}</h1>
+        {lede && <p className="mt-2 text-body text-ink-soft max-w-2xl">{lede}</p>}
       </div>
-      {right && <div className="shrink-0">{right}</div>}
-    </div>
+      {right && <div className="flex items-center gap-2 shrink-0">{right}</div>}
+    </header>
   );
 }

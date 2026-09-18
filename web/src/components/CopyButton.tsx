@@ -3,8 +3,7 @@ import { Check, Copy, type LucideIcon } from "lucide-react";
 import { copyText } from "../lib/export";
 import { cn } from "../lib/utils";
 
-// A tiny ghost copy-to-clipboard control. Swaps to a check + "Copied" for
-// a moment on success. Styled to match the source links in ItemDetail.
+// A quiet copy-to-clipboard action. Shows a tick and "Copied" for a moment.
 export function CopyButton({
   text,
   label,
@@ -29,13 +28,9 @@ export function CopyButton({
           setTimeout(() => setDone(false), 1500);
         }
       }}
-      className={cn(
-        "inline-flex items-center gap-1 text-[10px] transition-colors",
-        done ? "text-violet-300" : "text-neutral-500 hover:text-violet-300",
-        className,
-      )}
+      className={cn("btn btn-quiet text-tiny", done && "text-signal", className)}
     >
-      {done ? <Check className="h-3 w-3" /> : <Icon className="h-3 w-3" />}
+      {done ? <Check className="h-3.5 w-3.5" /> : <Icon className="h-3.5 w-3.5" />}
       {done ? copiedLabel : label}
     </button>
   );

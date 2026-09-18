@@ -20,31 +20,34 @@ entry + (optionally) a `DataTable` variant, never new plumbing.
 
 | Path | Responsibility |
 |---|---|
-| `web/src/App.tsx` | Shell: sidebar + main; merges seed + agent feed (`ALL_ITEMS`) with any overlay; routes `page → view` |
-| `web/src/components/Sidebar.tsx` | Left nav (the `Page` type lives here); "new agent items" badge |
-| `web/src/components/DataTable.tsx` | Dense, expandable table for Signals/Ventures/Solutions/FCA (per-`variant` columns) with search + sortable headers; clickable tags filter the table |
+| `web/src/App.tsx` | Shell: the rail (desktop) or top bar (phone) + main; `ALL_ITEMS`; the per-page counts the rail shows; routes `page → view` |
+| `web/src/lib/nav.ts` | The `Page` type and `NAV_GROUPS`: three groups, every label a plain description of the page |
+| `web/src/components/Sidebar.tsx` | The left rail (desktop) with counts, the theme control and the feed date; `TopBar` (phone) with a native page picker |
+| `web/src/lib/theme.ts` · `components/ThemeToggle.tsx` | Theme state (system / light / dark) and its control; the inline script in `index.html` mirrors it |
+| `web/src/components/DataTable.tsx` | The ruled list for every stream (per-`variant` columns: signal / venture / solution / fca / typology): search, sortable heads, rows that open in place, thirty rows at a time, optional `groupBy` head and `renderExtra` block |
 | `web/src/components/ItemDetail.tsx` | Shared content block (summary, "So what", type-extras, sources with primary/secondary tags, trust badges (verified · confidence), per-item copy actions) |
-| `web/src/components/ItemCard.tsx` | `Panel` + `ItemDetail`: used by Overview & Activity |
+| `web/src/components/ItemCard.tsx` | `Panel` + `ItemDetail` (kept for any page that wants one item on its own paper) |
 | `web/src/components/CopyButton.tsx` | Ghost copy-to-clipboard control (citation / deck bullet); used inside `ItemDetail` |
 | `web/src/components/ExportMenu.tsx` | Bulk export dropdown (copy Markdown · download .md / .csv) over a view's in-scope items; optional `intro` lead paragraph (theme primer) |
 | `web/src/components/BriefingPack.tsx` | `PackToggle` (per-item) + the floating `BriefingPackDrawer`: curate across views, reorder, export a one-pager |
 | `web/src/components/VendorMatrix.tsx` | Solutions comparison grid (vendors by category, stance-ordered): the "Matrix" view mode |
 | `web/src/components/Term.tsx` | Inline glossary term: dotted-underline trigger, definition on hover/focus (looks up `glossary.ts`) |
 | `web/src/components/WorldMap.tsx` | World map via **react-simple-maps** (d3-geo `geoEqualEarth`): status-tinted country geographies + pulsing clickable markers + drag-pan / scroll-wheel zoom |
-| `web/src/views/Brief.tsx` | Overview: stat tiles, auto-publish banner, a "This week" pulse (movers + digest copy/download), latest list |
-| `web/src/views/Learn.tsx` | Knowledge hub: guided "start here" path (stream tour, how to read an item) + the searchable glossary |
-| `web/src/views/Themes.tsx` | Curated topic briefings: one page per theme, aggregating related items + a primer; per-theme `ExportMenu` (primer leads the Markdown) |
-| `web/src/views/Collection.tsx` | Generic: filters by `types`, region chips, a Verified-only filter, an `ExportMenu`, a Table/Matrix toggle (solutions), renders a `DataTable` or `VendorMatrix` |
+| `web/src/views/Brief.tsx` | Today's briefing: the figures, what moved this week by topic, the twelve latest items as a list, the next deadline, the risk mix, the regions, the digest actions |
+| `web/src/views/Learn.tsx` | How to use this: what Sentinel is, how to read an item, the trust marks, what each page shows (from `NAV_GROUPS`), taking material out, the glossary |
+| `web/src/views/Themes.tsx` | Topic briefings: a ruled list of topics, then one page per topic (primer, figures, risk mix, key dates, every item as a list); per-topic `ExportMenu` (primer leads the Markdown) |
+| `web/src/views/Collection.tsx` | One list page reused by News and regulation, Funding and deals, Vendors: impact / new-this-week / verified / region chips that carry counts, an `ExportMenu`, a List/Matrix switch (vendors) |
 | `web/src/views/FCA.tsx` | FCA-publications tracker: a filtered lens over items with a `publication` from the FCA (paper-type filter + the `fca` `DataTable` variant) |
 | `web/src/views/Atlas.tsx` | Interactive world map of crypto-regulation status by jurisdiction (map + detail panel + drill-down list); **lazy-loaded** (`App.tsx`) so the topojson never weighs down the initial bundle |
-| `web/src/views/Intelligence.tsx` | Typology library (each card expands to a "How it works" primer + key-term chips) + coverage bars |
+| `web/src/views/Intelligence.tsx` | Crime patterns: figures + a `DataTable` (`typology` variant) whose open rows carry the "How it works" primer via `renderExtra` |
 | `web/src/views/Trends.tsx` | Time-series analytics: date-ranged monthly volume × risk, theme momentum (click a row to drill into the theme), top topics, and a weekly-digest export |
 | `web/scripts/digest.ts` | Writes `DIGEST.md` at the repo root (`npm --prefix web run digest`, via `tsx`): the agent runs it each cycle |
-| `web/src/views/Activity.tsx` | Transparency log of what the agent auto-published (newest first) |
+| `web/src/views/Activity.tsx` | What the agent added: figures + a `DataTable` grouped by the day the agent ran |
 | `web/src/views/Radar.tsx` | Regulatory radar: upcoming milestones (countdowns) + recently-landed regulatory items |
 | `web/src/content/` | `types.ts` · `taxonomy.ts` · `items.ts` (seed) · `feed.json` (agent output) · `themes.ts` (theme briefings) · `glossary.ts` + `primers.ts` (knowledge layer) · `jurisdictions.ts` + `jurisdictions.json` (atlas regulation status, seed + agent feed, merged by id; the daily agent maintains the JSON, see [`agent/INGEST.md`](../agent/INGEST.md)) · `milestones.ts` (radar dates) · `index.ts` (merges **and de-dupes** seed+feed → `ALL_ITEMS`: regulator publications by issuer+ref, else by id; seed wins) |
-| `web/src/lib/` | `ui.tsx` (primitives) · `uiTokens.ts` (colour tokens) · `pack.ts` (briefing-pack selection) · `utils.ts` · `insights.ts` (derived metrics + time-series) · `digest.ts` (weekly one-pager) · `export.ts` (delivery & export, see below) |
-| `web/src/components/viz.tsx` | Chart primitives (CSS/flex, no chart lib): `ImpactMix`, `MiniBars`, `MonthlyImpactChart`, `MomentumList` |
+| `web/src/lib/` | `ui.tsx` (primitives: Panel, Tag, Dot, FigureStrip, SectionHeading, Segmented, Chip, ShowMore) · `uiTokens.ts` (tone classes over the CSS tokens) · `nav.ts` · `theme.ts` · `pack.ts` (briefing-pack selection) · `utils.ts` · `insights.ts` (derived metrics + time-series) · `digest.ts` (weekly one-pager) · `export.ts` (delivery & export, see below) |
+| `web/src/components/viz.tsx` | Chart primitives, bars only (no chart lib): `ImpactMix`, `MiniBars`, `MonthlyImpactChart`, `MomentumList` |
+| `web/scripts/design-check.mjs` · `web/scripts/shots.mjs` | The design gate and the screenshot set (Playwright over `dist/`), see [`docs/RUNBOOK.md`](RUNBOOK.md) |
 
 ## State: client-side only
 
@@ -109,7 +112,7 @@ needed per the integrity rules); only the canonical frameworks link out.
 
 1. If it's a new content kind, add a `type` to `Item` and a `TYPE_META` entry.
 2. Seed some `Item`s in `items.ts`.
-3. Add a `Page` id + nav entry in `Sidebar.tsx`.
+3. Add a `Page` id and a plain-English nav entry in `lib/nav.ts`, and a count for it in `App.tsx`.
 4. Render it in `App.tsx`: usually just another `<Collection types={[…]} variant=… />`.
    Add a `DataTable` column set only if the existing variants don't fit.
 

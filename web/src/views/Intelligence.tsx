@@ -1,129 +1,51 @@
-import { useState } from "react";
-import { Crosshair, Scale, ShieldAlert, Globe, PieChart, BookOpen, ChevronDown } from "lucide-react";
-import type { Item, ItemType } from "../content/types";
-import { Panel, Stat, SectionHeading } from "../lib/ui";
-import { ItemDetail } from "../components/ItemDetail";
+import type { Item } from "../content/types";
+import { FigureStrip } from "../lib/ui";
+import { DataTable } from "../components/DataTable";
 import { Term } from "../components/Term";
-import { TYPE_META } from "../content/taxonomy";
 import { TYPOLOGY_PRIMERS } from "../content/primers";
-import { cn } from "../lib/utils";
 import { PageHeader } from "../components/PageHeader";
+import { withinDays } from "../lib/utils";
 
-// The analytics-flavoured view: the typology library plus the shape of
-// what we're tracking. Metrics are derived from the one content store.
+// Crime patterns: how the money moves, which controls catch it, and which
+// obligations it touches. Open a pattern for its detail and, where one is
+// written, a plain-language primer on how it works.
 export function Intelligence({ items }: { items: Item[] }) {
-  const published = items.filter((i) => i.status === "published");
-  const typologies = published.filter((i) => i.type === "typology");
-  const regulatory = published.filter((i) => i.type === "regulatory");
-  const highImpact = published.filter((i) => i.impact === "high");
-  const regions = new Set(published.map((i) => i.region).filter(Boolean));
-
-  const byType = (Object.keys(TYPE_META) as ItemType[])
-    .map((t) => ({ t, n: published.filter((i) => i.type === t).length }))
-    .filter((x) => x.n > 0);
-  const maxType = Math.max(...byType.map((x) => x.n), 1);
-
-  const byRegion = Array.from(new Set(published.map((i) => i.region).filter(Boolean) as string[]))
-    .map((r) => ({ r, n: published.filter((i) => i.region === r).length }))
-    .sort((a, b) => b.n - a.n);
-  const maxRegion = Math.max(...byRegion.map((x) => x.n), 1);
+  const patterns = items.filter((i) => i.status === "published" && i.type === "typology");
+  const withPrimer = patterns.filter((i) => TYPOLOGY_PRIMERS[i.id]).length;
 
   return (
     <div className="space-y-5">
-      <PageHeader
-        Icon={Crosshair}
-        title="Intelligence"
-        subtitle="Laundering typologies for digital assets, mapped to controls and obligations, plus the shape of what we're tracking."
+      <PageHeader title="Crime patterns" lede="How criminals move value through digital assets, mapped to the controls that catch each pattern and the obligations it touches. Open a pattern for the detail and, where one is written, a primer on how it works." />
+
+      <FigureStrip
+        figures={[
+          { label: "Patterns", value: patterns.length },
+          { label: "High impact", value: patterns.filter((i) => i.impact === "high").length, tone: "high" },
+          { label: "New this week", value: patterns.filter((i) => withinDays(i.addedAt, 7)).length, tone: "signal" },
+          { label: "With a primer", value: withPrimer },
+        ]}
       />
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <Stat Icon={Crosshair} tone="brand" label="Typologies" value={typologies.length} />
-        <Stat Icon={Scale} tone="neutral" label="Regulatory" value={regulatory.length} />
-        <Stat Icon={ShieldAlert} tone="rose" label="High impact" value={highImpact.length} />
-        <Stat Icon={Globe} tone="neutral" label="Regions" value={regions.size} />
-      </div>
-
-      <div className="grid lg:grid-cols-3 gap-5">
-        <div className="lg:col-span-2 space-y-3">
-          <SectionHeading Icon={Crosshair} title="Typology library" sub="Vectors mapped to controls & obligations · expand for how each works" />
-          {typologies.map((i) => (
-            <div key={i.id} className="rise">
-              <TypologyCard item={i} />
-            </div>
-          ))}
-        </div>
-
-        <div className="space-y-5">
-          <Panel className="p-4">
-            <SectionHeading Icon={PieChart} title="Coverage by stream" />
-            <div className="space-y-2.5">
-              {byType.map(({ t, n }) => (
-                <Bar key={t} label={TYPE_META[t].plural} n={n} max={maxType} className="bg-violet-500" />
-              ))}
-            </div>
-          </Panel>
-          <Panel className="p-4">
-            <SectionHeading Icon={Globe} title="Coverage by region" />
-            <div className="space-y-2.5">
-              {byRegion.map(({ r, n }) => (
-                <Bar key={r} label={r} n={n} max={maxRegion} className="bg-neutral-600" />
-              ))}
-            </div>
-          </Panel>
-        </div>
-      </div>
+      <DataTable items={patterns} variant="typology" renderExtra={(i) => <Primer id={i.id} />} />
     </div>
   );
 }
 
-// A typology Item plus its expandable "How it works" primer (the knowledge
-// layer). Collapsed by default to keep the library scannable.
-function TypologyCard({ item }: { item: Item }) {
-  const primer = TYPOLOGY_PRIMERS[item.id];
-  const [open, setOpen] = useState(false);
+function Primer({ id }: { id: string }) {
+  const primer = TYPOLOGY_PRIMERS[id];
+  if (!primer) return null;
   return (
-    <Panel className="p-4">
-      <ItemDetail item={item} />
-      {primer && (
-        <div className="mt-3 border-t border-neutral-800 pt-3">
-          <button
-            onClick={() => setOpen((o) => !o)}
-            aria-expanded={open}
-            className="inline-flex items-center gap-1.5 text-[11px] font-medium text-violet-300 hover:text-violet-200 transition-colors"
-          >
-            <BookOpen className="h-3.5 w-3.5" /> How it works
-            <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", open && "rotate-180")} />
-          </button>
-          {open && (
-            <div className="mt-2 expand">
-              <p className="text-[12px] text-neutral-300 font-light leading-relaxed">{primer.how}</p>
-              {primer.terms && primer.terms.length > 0 && (
-                <div className="mt-2.5 flex items-center flex-wrap gap-x-3 gap-y-1.5">
-                  <span className="text-[10px] uppercase tracking-wide text-neutral-600 font-semibold">Key terms</span>
-                  {primer.terms.map((t) => (
-                    <Term key={t} id={t} className="text-[11px] text-neutral-300" />
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
+    <div className="mt-3 border-t border-rule pt-3">
+      <div className="label">How it works</div>
+      <p className="serif text-ink-soft mt-1">{primer.how}</p>
+      {primer.terms && primer.terms.length > 0 && (
+        <div className="mt-2.5 flex items-center flex-wrap gap-x-3 gap-y-1.5">
+          <span className="label">Terms</span>
+          {primer.terms.map((t) => (
+            <Term key={t} id={t} className="text-tiny text-ink-soft" />
+          ))}
         </div>
       )}
-    </Panel>
-  );
-}
-
-function Bar({ label, n, max, className }: { label: string; n: number; max: number; className: string }) {
-  const pct = Math.round((n / max) * 100);
-  return (
-    <div>
-      <div className="flex items-center justify-between text-[11px] text-neutral-400 mb-1">
-        <span className="truncate">{label}</span>
-        <span className="tabular-nums text-neutral-500">{n}</span>
-      </div>
-      <div className="h-2 rounded-full bg-neutral-800 overflow-hidden">
-        <div className={cn("h-full rounded-full", className)} style={{ width: `${pct}%` }} />
-      </div>
     </div>
   );
 }

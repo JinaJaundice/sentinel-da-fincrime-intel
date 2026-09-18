@@ -3,13 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>Sentinel · Digital-Asset Financial-Crime Intelligence</title>
+    <meta name="description" content="Sentinel: a horizon-scanning tool for financial crime across digital assets. News and regulation, FCA papers, funding, vendors, crime patterns and the dates ahead, each with what it means for a bank." />
+    <meta name="theme-color" content="#0f1013" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f3f4f6" media="(prefers-color-scheme: light)" />
+    <title>Sentinel · Digital assets and financial crime</title>
+    <script>
+      // Runs before first paint so a dark-theme reader never sees a light
+      // flash. Mirrors src/lib/theme.ts; keep the two in step.
+      (function () {
+        try {
+          var v = localStorage.getItem("sentinel:theme");
+          var dark =
+            v === "dark" ||
+            ((!v || v === "system") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

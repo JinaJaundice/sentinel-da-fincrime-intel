@@ -134,3 +134,19 @@ weighs down the initial bundle.
 - **Name**: **keeping "Sentinel"** for now (a rename would touch the repo,
   the Vercel project and the live URL).
 - **Tests / lint / CI** ✅: done (Phase 8 above).
+
+## Phase 7: the makeover (18 Sep 2026, v0.2)
+
+Brought to the same standard as the engine, Touchstone and Postern:
+
+- A **token layer** in `web/src/index.css` with **light and dark themes**
+  (system / light / dark control, no first-paint flash), two self-hosted
+  faces (Libre Franklin, Source Serif 4), one violet accent, claret/amber
+  risk bands, hairlines, no shadows or gradients.
+- **Plain-English page names** in three rail groups, with item counts.
+- **Lists paged at thirty rows** with filters that carry their counts; the
+  per-page stat-tile dashboards and the Overview's stream cards removed.
+- **A design gate** (`npm run design`) over every page in both themes at
+  both widths, and a **screenshot set** (`npm run shots`) through
+  Playwright. See `docs/DESIGN.md`.
+

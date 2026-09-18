@@ -7,7 +7,8 @@ library of laundering typologies mapped to controls and obligations.
 
 **Live:** https://sentinel-da-fincrime-intel.vercel.app · Built for a bank
 financial-crime team for **(a) knowledge building** and **(b) client-delivery
-support**. Dark, neutral, violet-accented, DefiLlama-style. For the full
+support**. Light and dark themes, one violet accent, a token layer with a
+design gate (v0.2, 18 Sep 2026). For the full
 project map (architecture, design, content, runbook) see [`CLAUDE.md`](CLAUDE.md).
 
 > **It is not "another crypto news feed."** The value is the *bank
@@ -28,8 +29,10 @@ seed + the agent's [`feed.json`](web/src/content/feed.json), merged in
 [`content/index.ts`](web/src/content/index.ts)). Adding a tab is a nav entry +
 seed data, never new plumbing.
 
-Tabs: **Overview · Learn · Trends · Themes · Signals · FCA · Atlas · Ventures ·
-Solutions · Intelligence · Radar · Activity.**
+Pages, as the rail names them: **Today's briefing · What is moving · Topic
+briefings · News and regulation · FCA papers · Dates ahead · Rules by country ·
+Funding and deals · Vendors · Crime patterns · How to use this · What the agent
+added.**
 
 ## What it does
 

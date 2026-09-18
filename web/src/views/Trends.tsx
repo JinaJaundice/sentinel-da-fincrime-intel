@@ -1,27 +1,25 @@
 import { useState } from "react";
-import { LineChart, ShieldAlert, Flame, CalendarRange, FileText, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import type { Item } from "../content/types";
-import type { Page } from "../components/Sidebar";
+import type { Page } from "../lib/nav";
 import { PageHeader } from "../components/PageHeader";
-import { Panel, Stat, SectionHeading, IconTile } from "../lib/ui";
+import { Panel, FigureStrip, SectionHeading, Segmented } from "../lib/ui";
 import { CopyButton } from "../components/CopyButton";
 import { MonthlyImpactChart, MomentumList, MiniBars } from "../components/viz";
 import { monthlyByImpact, momentum, countByMulti } from "../lib/insights";
 import { weeklyDigest } from "../lib/digest";
 import { downloadText } from "../lib/export";
 import { THEMES, itemMatchesTheme } from "../content/themes";
-import { cn } from "../lib/utils";
 
-// Analytics over the accumulating feed: volume + risk over time, what's
-// gaining momentum (with theme drill-down), most-active topics, and a weekly
-// digest you can forward. A date-range scopes the period; momentum compares
-// the recent half of that range against the half before. All from the store.
+// What is moving: items per month by impact, the topics gaining or losing,
+// the most-used tags, and the weekly digest. A range scopes the period;
+// momentum compares the recent half of the range with the half before.
 type RangeId = "all" | "12m" | "90d" | "30d";
 const RANGES: { id: RangeId; label: string; days: number }[] = [
-  { id: "all", label: "All", days: 0 },
-  { id: "12m", label: "12m", days: 365 },
-  { id: "90d", label: "90d", days: 90 },
-  { id: "30d", label: "30d", days: 30 },
+  { id: "all", label: "All time", days: 0 },
+  { id: "12m", label: "12 months", days: 365 },
+  { id: "90d", label: "90 days", days: 90 },
+  { id: "30d", label: "30 days", days: 30 },
 ];
 
 export function Trends({ items, setPage, setTheme }: { items: Item[]; setPage: (p: Page) => void; setTheme: (id: string) => void }) {
@@ -30,8 +28,7 @@ export function Trends({ items, setPage, setTheme }: { items: Item[]; setPage: (
 
   const now = new Date();
   const days = RANGES.find((r) => r.id === range)!.days;
-  const inRange =
-    days === 0 ? published : published.filter((i) => new Date(i.date + "T00:00:00").getTime() >= now.getTime() - days * 86_400_000);
+  const inRange = days === 0 ? published : published.filter((i) => new Date(i.date + "T00:00:00").getTime() >= now.getTime() - days * 86_400_000);
 
   const months = monthlyByImpact(inRange);
   const momWindow = days === 0 ? 60 : Math.max(7, Math.round(days / 2));
@@ -46,98 +43,57 @@ export function Trends({ items, setPage, setTheme }: { items: Item[]; setPage: (
   const openTheme = (label: string) => {
     const t = THEMES.find((x) => x.label === label);
     if (t) {
-      // setPage clears the selected theme, so set the page first then the theme.
-      setPage("themes");
+      setPage("themes"); // setPage clears the topic, so set it after
       setTheme(t.id);
     }
   };
 
-  // Weekly digest is always "last 7 days" — independent of the range filter.
   const digest = weeklyDigest(published, now);
   const downloadDigest = () => downloadText(`sentinel-weekly-digest-${now.toISOString().slice(0, 10)}.md`, digest, "text/markdown");
 
   return (
     <div className="space-y-5">
       <PageHeader
-        Icon={LineChart}
-        title="Trends"
-        subtitle="How the picture is moving over time: volume, risk mix, and what's gaining momentum across the feed."
-        right={
-          <div className="flex items-center gap-0.5 rounded-lg bg-neutral-900 ring-1 ring-neutral-800 p-0.5">
-            {RANGES.map((r) => (
-              <button
-                key={r.id}
-                onClick={() => setRange(r.id)}
-                aria-pressed={range === r.id}
-                className={cn(
-                  "rounded-md px-2.5 py-1 text-[11px] font-medium transition-colors",
-                  range === r.id ? "bg-violet-500/15 text-violet-200 ring-1 ring-violet-500/30" : "text-neutral-400 hover:text-neutral-200",
-                )}
-              >
-                {r.label}
-              </button>
-            ))}
-          </div>
-        }
+        title="What is moving"
+        lede="How the picture changes over time: items per month by impact, which topics are gaining, and the most-used tags."
+        right={<Segmented ariaLabel="Period" value={range} onChange={setRange} options={RANGES.map((r) => ({ value: r.id, label: r.label }))} />}
       />
 
-      <Panel className="p-3 flex items-center gap-3">
-        <IconTile Icon={FileText} tone="brand" size="sm" />
-        <div className="min-w-0 flex-1">
-          <div className="text-sm font-medium text-neutral-200">Weekly digest</div>
-          <div className="text-xs text-neutral-500">A one-pager of what moved in the last 7 days; copy or download to forward.</div>
-        </div>
-        <CopyButton
-          text={digest}
-          label="Copy"
-          className="rounded-lg px-2.5 py-1.5 text-[11px] font-medium bg-neutral-900 ring-1 ring-neutral-800 hover:bg-neutral-800"
-        />
-        <button
-          onClick={downloadDigest}
-          className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-medium bg-neutral-900 text-neutral-300 ring-1 ring-neutral-800 hover:text-neutral-100 hover:bg-neutral-800 transition-colors"
-        >
-          <Download className="h-3.5 w-3.5" /> .md
-        </button>
-      </Panel>
-
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <Stat
-          Icon={CalendarRange}
-          tone="brand"
-          label="This month"
-          value={thisMonth?.total ?? 0}
-          hint={thisMonth ? `${thisMonth.label} · ${monthDelta >= 0 ? "+" : ""}${monthDelta} vs prev` : undefined}
-        />
-        <Stat Icon={ShieldAlert} tone="rose" label="High impact" value={inRange.filter((i) => i.impact === "high").length} />
-        <Stat
-          Icon={Flame}
-          tone="brand"
-          label="Rising theme"
-          value={topRising ? `+${topRising.delta}` : "—"}
-          hint={topRising ? topRising.label : "no clear riser"}
-        />
-        <Stat Icon={LineChart} tone="neutral" label="Items" value={inRange.length} />
-      </div>
+      <FigureStrip
+        figures={[
+          { label: "This month", value: thisMonth?.total ?? 0, hint: thisMonth ? `${thisMonth.label}, ${monthDelta >= 0 ? "+" : ""}${monthDelta} on the month before` : undefined },
+          { label: "High impact in range", value: inRange.filter((i) => i.impact === "high").length, tone: "high" },
+          { label: "Topic rising most", value: topRising ? `+${topRising.delta}` : "none", tone: "signal", hint: topRising ? topRising.label : "no clear riser" },
+          { label: "Items in range", value: inRange.length },
+        ]}
+      />
 
       <Panel className="p-4">
-        <SectionHeading Icon={CalendarRange} title="Activity & risk over time" sub="New items per month, stacked by impact" />
+        <SectionHeading title="Items per month, by impact" sub="Dated by the event, not by when the agent added it" />
         <MonthlyImpactChart data={months} />
       </Panel>
 
-      <div className="grid lg:grid-cols-2 gap-5">
+      <div className="grid lg:grid-cols-2 gap-4">
         <Panel className="p-4">
-          <SectionHeading
-            Icon={Flame}
-            title="Gaining momentum"
-            sub={`Themes by new items · recent vs prior ${momWindow}d · click to drill in`}
-          />
-          <MomentumList rows={themeMomentum} onSelect={openTheme} empty="Not enough dated items in range to show momentum." />
+          <SectionHeading title="Topics gaining or losing" sub={`New items in the last ${momWindow} days against the ${momWindow} before. Click a topic to open its briefing.`} />
+          <MomentumList rows={themeMomentum} onSelect={openTheme} empty="Not enough dated items in this range to compare." />
         </Panel>
         <Panel className="p-4">
-          <SectionHeading Icon={LineChart} title="Most active topics" sub="Most-tagged across the selected range" />
+          <SectionHeading title="Most-used tags" sub="Across the items in range" />
           <MiniBars data={topTags} />
         </Panel>
       </div>
+
+      <Panel className="p-4 flex items-center gap-4 flex-wrap">
+        <div className="min-w-0 flex-1">
+          <div className="text-small font-semibold text-ink">Weekly digest</div>
+          <div className="text-tiny text-ink-faint">One page of what moved in the last seven days, ready to forward. Always the last seven days, whatever period is chosen above.</div>
+        </div>
+        <CopyButton text={digest} label="Copy" className="btn text-small" />
+        <button onClick={downloadDigest} className="btn">
+          <Download className="h-3.5 w-3.5" /> Download Markdown
+        </button>
+      </Panel>
     </div>
   );
 }

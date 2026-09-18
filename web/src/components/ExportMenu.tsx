@@ -1,20 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  Download,
-  FileText,
-  FileSpreadsheet,
-  ClipboardCopy,
-  Check,
-  ChevronDown,
-  type LucideIcon,
-} from "lucide-react";
+import { Download, FileText, FileSpreadsheet, ClipboardCopy, Check, ChevronDown, type LucideIcon } from "lucide-react";
 import type { Item } from "../content/types";
 import { itemsToMarkdown, itemsToCsv, copyText, downloadText, slugify } from "../lib/export";
 import { cn } from "../lib/utils";
 
-// Bulk export for a set of items: copy as Markdown, or download Markdown /
-// CSV. Lives in a view header (PageHeader `right` slot) and exports exactly
-// the items currently in scope (so region/filter selections carry through).
+// Export the items a page is showing: copy as Markdown, or download a
+// Markdown or CSV file. Lives in the page header and exports exactly the
+// items in scope, so filters carry through.
 export function ExportMenu({
   items,
   docTitle,
@@ -24,7 +16,7 @@ export function ExportMenu({
   items: Item[];
   docTitle: string;
   filenameBase: string;
-  /** Optional lead paragraph for the Markdown export (e.g. a theme primer). */
+  /** Optional lead paragraph for the Markdown export (a topic primer). */
   intro?: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -54,7 +46,6 @@ export function ExportMenu({
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   };
-
   const copyMd = async () => {
     if (await copyText(itemsToMarkdown(items, docTitle, { intro }))) flash();
     setOpen(false);
@@ -70,26 +61,14 @@ export function ExportMenu({
 
   return (
     <div ref={ref} className="relative">
-      <button
-        type="button"
-        disabled={disabled}
-        onClick={() => setOpen((o) => !o)}
-        aria-haspopup="menu"
-        aria-expanded={open}
-        className={cn(
-          "inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-medium ring-1 transition-colors",
-          disabled
-            ? "bg-neutral-900 text-neutral-600 ring-neutral-800 cursor-not-allowed"
-            : "bg-neutral-900 text-neutral-300 ring-neutral-800 hover:text-neutral-100 hover:bg-neutral-800",
-        )}
-      >
-        {copied ? <Check className="h-3.5 w-3.5 text-violet-300" /> : <Download className="h-3.5 w-3.5" />}
+      <button type="button" disabled={disabled} onClick={() => setOpen((o) => !o)} aria-haspopup="menu" aria-expanded={open} className="btn">
+        {copied ? <Check className="h-3.5 w-3.5 text-signal" /> : <Download className="h-3.5 w-3.5" />}
         {copied ? "Copied" : "Export"}
-        <ChevronDown className={cn("h-3 w-3 text-neutral-500 transition-transform", open && "rotate-180")} />
+        <ChevronDown className={cn("h-3 w-3 text-ink-faint transition-transform", open && "rotate-180")} />
       </button>
       {open && (
-        <div role="menu" className="absolute right-0 z-30 mt-1.5 w-56 rounded-xl surface p-1 rise">
-          <MenuRow Icon={ClipboardCopy} label="Copy as Markdown" hint={`${items.length}`} onClick={copyMd} />
+        <div role="menu" className="absolute right-0 z-30 mt-1 w-60 panel p-1 rise">
+          <MenuRow Icon={ClipboardCopy} label="Copy as Markdown" hint={`${items.length} items`} onClick={copyMd} />
           <MenuRow Icon={FileText} label="Download Markdown" hint=".md" onClick={dlMd} />
           <MenuRow Icon={FileSpreadsheet} label="Download CSV" hint=".csv" onClick={dlCsv} />
         </div>
@@ -98,27 +77,12 @@ export function ExportMenu({
   );
 }
 
-function MenuRow({
-  Icon,
-  label,
-  hint,
-  onClick,
-}: {
-  Icon: LucideIcon;
-  label: string;
-  hint?: string;
-  onClick: () => void;
-}) {
+function MenuRow({ Icon, label, hint, onClick }: { Icon: LucideIcon; label: string; hint?: string; onClick: () => void }) {
   return (
-    <button
-      type="button"
-      role="menuitem"
-      onClick={onClick}
-      className="w-full flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-[12px] text-neutral-300 hover:bg-neutral-800 hover:text-neutral-100 transition-colors"
-    >
-      <Icon className="h-3.5 w-3.5 text-neutral-500 shrink-0" strokeWidth={1.75} />
+    <button type="button" role="menuitem" onClick={onClick} className="w-full flex items-center gap-2.5 rounded-sm px-2.5 py-2 text-left text-small text-ink-soft hover:bg-sunken hover:text-ink transition-colors">
+      <Icon className="h-3.5 w-3.5 text-ink-faint shrink-0" strokeWidth={1.75} />
       <span className="flex-1">{label}</span>
-      {hint && <span className="text-[10px] text-neutral-600 tabular-nums">{hint}</span>}
+      {hint && <span className="text-micro text-ink-faint num">{hint}</span>}
     </button>
   );
 }

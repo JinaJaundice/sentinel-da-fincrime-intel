@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Globe, ExternalLink, CalendarClock, Lightbulb, MousePointerClick } from "lucide-react";
+import { ExternalLink, CalendarClock } from "lucide-react";
 import { PageHeader } from "../components/PageHeader";
-import { Panel, Stat } from "../lib/ui";
+import { Panel, Chip, Dot, Tag } from "../lib/ui";
 import { WorldMap } from "../components/WorldMap";
 import { JURISDICTIONS, STATUS_META, type Jurisdiction, type RegStatus } from "../content/jurisdictions";
-import { longDate, cn } from "../lib/utils";
+import { longDate } from "../lib/utils";
 
 const STATUS_ORDER: RegStatus[] = ["implemented", "in-progress", "none"];
 
+// Rules by country: a world map of crypto regulation status. Click a dot
+// or a country for the status, the summary and the sources.
 export function Atlas() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = JURISDICTIONS.find((j) => j.id === selectedId) ?? null;
@@ -18,27 +20,19 @@ export function Atlas() {
   return (
     <div className="space-y-4">
       <PageHeader
-        Icon={Globe}
-        title="Atlas"
-        subtitle="Crypto regulation worldwide: click a marker or country to read the status and sources."
+        title="Rules by country"
+        lede={`Crypto regulation status in ${JURISDICTIONS.length} jurisdictions. Click a dot on the map, or a name below it, to read the status, what it means for a bank, and the sources.`}
       />
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <Stat Icon={Globe} tone="brand" label="Tracked" value={JURISDICTIONS.length} />
-        <Stat Icon={Globe} tone="brand" label="Implemented" value={counts.implemented} />
-        <Stat Icon={Globe} tone="amber" label="In progress" value={counts["in-progress"]} />
-        <Stat Icon={Globe} tone="neutral" label="None / restrictive" value={counts.none} />
-      </div>
-
       <div className="grid lg:grid-cols-3 gap-4">
-        <div className="lg:col-span-2 space-y-3">
+        <div className="lg:col-span-2 space-y-2.5 min-w-0">
           <WorldMap jurisdictions={JURISDICTIONS} selectedId={selectedId} onSelect={setSelectedId} />
-          <div className="flex items-center flex-wrap gap-x-4 gap-y-1.5 text-[11px] text-neutral-400">
+          <div className="flex items-center flex-wrap gap-x-4 gap-y-1.5 text-tiny text-ink-soft">
             {STATUS_ORDER.map((s) => (
               <span key={s} className="inline-flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full" style={{ background: STATUS_META[s].dot }} />
+                <Dot tone={STATUS_META[s].tone} />
                 {STATUS_META[s].label}
-                <span className="text-neutral-600 tabular-nums">{counts[s]}</span>
+                <span className="text-ink-faint num">{counts[s]}</span>
               </span>
             ))}
           </div>
@@ -52,25 +46,16 @@ export function Atlas() {
           const list = JURISDICTIONS.filter((j) => j.status === status).sort((a, b) => a.name.localeCompare(b.name));
           return (
             <div key={status}>
-              <div className="flex items-center gap-1.5 text-[11px] text-neutral-400 mb-1.5">
-                <span className="w-2 h-2 rounded-full" style={{ background: STATUS_META[status].dot }} />
+              <div className="flex items-center gap-1.5 label mb-1.5">
+                <Dot tone={STATUS_META[status].tone} />
                 {STATUS_META[status].label}
-                <span className="text-neutral-600 tabular-nums">{list.length}</span>
+                <span className="num">{list.length}</span>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {list.map((j) => (
-                  <button
-                    key={j.id}
-                    onClick={() => setSelectedId(j.id)}
-                    className={cn(
-                      "rounded-md px-2.5 py-1 text-[11px] font-medium ring-1 transition-colors",
-                      j.id === selectedId
-                        ? "bg-violet-500/15 text-violet-200 ring-violet-500/30"
-                        : "bg-neutral-900 text-neutral-400 ring-neutral-800 hover:text-neutral-200 hover:bg-neutral-800",
-                    )}
-                  >
+                  <Chip key={j.id} on={j.id === selectedId} onClick={() => setSelectedId(j.id)}>
                     {j.name}
-                  </button>
+                  </Chip>
                 ))}
               </div>
             </div>
@@ -85,11 +70,8 @@ function EmptyDetail() {
   return (
     <div className="h-full grid place-items-center text-center py-8">
       <div>
-        <MousePointerClick className="h-5 w-5 text-neutral-600 mx-auto" />
-        <div className="mt-2 text-sm font-medium text-neutral-300">Pick a jurisdiction</div>
-        <div className="mt-1 text-xs text-neutral-500 font-light max-w-[14rem]">
-          Click a pulsing marker on the map, or a name below, to read its crypto-regulation status and sources.
-        </div>
+        <div className="text-small font-semibold text-ink">Pick a jurisdiction</div>
+        <div className="mt-1 text-tiny text-ink-faint max-w-[14rem]">Click a dot on the map, or a name below it, to read its regulation status and sources.</div>
       </div>
     </div>
   );
@@ -100,44 +82,36 @@ function Detail({ j }: { j: Jurisdiction }) {
   return (
     <div>
       <div className="flex items-center gap-2 flex-wrap">
-        <span className={cn("rounded-md px-1.5 py-0.5 text-[11px] font-medium", s.chip)}>{s.label}</span>
-        <h3 className="text-sm font-semibold text-neutral-100">{j.name}</h3>
+        <h3 className="text-body font-semibold text-ink">{j.name}</h3>
+        <Tag tone={s.tone}>{s.label}</Tag>
       </div>
-      <p className="mt-1.5 text-[12px] font-medium text-violet-300/90">{j.headline}</p>
-      <p className="mt-2 text-[13px] text-neutral-400 leading-relaxed font-light">{j.summary}</p>
+      <p className="mt-1.5 text-small font-medium text-ink-soft">{j.headline}</p>
+      <p className="mt-2 serif text-small text-ink-soft">{j.summary}</p>
 
       {j.soWhat && (
-        <div className="mt-3 flex gap-2 rounded-lg bg-neutral-800/40 border-l-2 border-violet-500/50 px-3 py-2">
-          <Lightbulb className="h-3.5 w-3.5 text-violet-300 mt-0.5 shrink-0" />
-          <p className="text-[12px] text-neutral-300 leading-relaxed">
-            <span className="font-semibold text-neutral-100">So what: </span>
-            {j.soWhat}
-          </p>
+        <div className="mt-3 border-l-2 border-signal pl-3">
+          <div className="label text-signal">So what for a bank</div>
+          <p className="serif text-small text-ink mt-1">{j.soWhat}</p>
         </div>
       )}
 
       {j.keyDates && j.keyDates.length > 0 && (
         <div className="mt-3 space-y-1.5">
           {j.keyDates.map((d) => (
-            <div key={d.label} className="flex items-center gap-2 text-[11px]">
-              <CalendarClock className="h-3 w-3 text-neutral-500 shrink-0" />
-              <span className="text-neutral-300 tabular-nums">{longDate(d.date)}</span>
-              <span className="text-neutral-500">{d.label}</span>
+            <div key={d.label} className="flex items-center gap-2 text-tiny">
+              <CalendarClock className="h-3 w-3 text-ink-faint shrink-0" aria-hidden />
+              <span className="text-ink num">{longDate(d.date)}</span>
+              <span className="text-ink-faint">{d.label}</span>
             </div>
           ))}
         </div>
       )}
 
-      <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5 border-t border-neutral-800 pt-2.5">
+      <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5 border-t border-rule pt-2.5">
+        <span className="label">Sources</span>
         {j.sources.map((src) => (
-          <a
-            key={src.url}
-            href={src.url}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1 text-[10px] text-neutral-500 hover:text-violet-300 transition-colors"
-          >
-            <ExternalLink className="h-3 w-3" /> {src.name}
+          <a key={src.url} href={src.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-tiny text-ink-soft hover:text-signal hover:underline underline-offset-2 transition-colors">
+            <ExternalLink className="h-3 w-3" aria-hidden /> {src.name}
           </a>
         ))}
       </div>

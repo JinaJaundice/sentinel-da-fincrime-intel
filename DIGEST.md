@@ -1,15 +1,20 @@
-# Sentinel weekly digest: 17 September 2026
+# Sentinel weekly digest: 20 September 2026
 
-_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_8 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Stablecoins**: 5 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
-- **Sanctions & OFAC**: 3 new items; latest: DOJ seeks forfeiture of $61m in crypto tied to Iranian oil sales laundered through Binance
-- **US rulemaking**: 3 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
-- **Travel Rule**: 2 new items; latest: MAS proposes a licensed stablecoin regime for Singapore, with trace-freeze-burn duties on top of existing AML rules
-- **MiCA & the EU**: 2 new items; latest: 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
+- **Sanctions & OFAC**: 3 new items; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
+- **State actors & DPRK**: 3 new items; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
+- **Stablecoins**: 2 new items; latest: FCA publishes PS26/18, cryptoasset perimeter guidance, two weeks before the UK authorisation gateway opens
+- **MiCA & the EU**: 1 new item; latest: ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece
+- **US rulemaking**: 1 new item; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
 
 ## Notable this week
+
+### OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
+*Iran / Global · 17 September 2026 · High impact*
+> **So what:** OFAC is now treating Iran's crypto sector itself as sanctionable, not just named individuals or exchanges. A bank should read any counterparty or customer flow touching Zanjani's wider network, or an Iranian exchange with no clear licence, as high sanctions risk by default, since Treasury has shown it will designate developers and executives as well as the exchange.
+Source: [U.S. Department of the Treasury — Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime](https://home.treasury.gov/news/press-releases/sb0632)
 
 ### DOJ seeks forfeiture of $61m in crypto tied to Iranian oil sales laundered through Binance
 *Iran / US · 15 September 2026 · High impact*
@@ -21,25 +26,20 @@ Source: [DOJ (SDNY) — US Attorney seeks forfeiture of $61m in cryptocurrency f
 > **So what:** Without CLARITY, US banks get no new statutory line between a security and a commodity token, and no federal charter clarifying which agency oversees a given crypto activity. Banks should keep treating SEC and CFTC guidance, not a new law, as the near-term source of US market-structure rules, and expect that guidance to stay easier to reverse than a statute would have been.
 Source: [CoinDesk: Crypto Clarity Act flames out in failed U.S. Senate vote](https://www.coindesk.com/policy/2026/09/15/crypto-clarity-act-flames-out-in-failed-u-s-senate-vote)
 
-### 21 global banks, including Goldman Sachs, Citi, Deutsche Bank and UBS, commit to a joint US dollar stablecoin for 2027
-*Global · 1 September 2026 · High impact*
-> **So what:** A bank-owned stablecoin changes who a regulated bank's financial-crime team has to trust. Today's dollar stablecoins (Tether's USDT, Circle's USDC) sit outside the banking system; this one would be issued by a company the participating banks themselves control, under GENIUS Act and MiCA compliance from day one. Banks in this consortium should start mapping how their existing sanctions-screening and travel-rule programmes would extend to a token they co-own, well before any 2027 launch.
-Source: [Bitcoin News: Goldman, Citi, UBS Join 21-Firm Push for Dollar Stablecoin by 2027](https://news.bitcoin.com/crypto-news/goldman-citi-ubs-join-21-firm-push-for-dollar-stablecoin-by-2027/)
+### ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece
+*EU · 18 September 2026 · Medium impact*
+> **So what:** A licence granted in one EU country lets a crypto firm operate across the whole bloc, so a single national regulator's fit-and-proper call carries EU-wide weight. Banks assessing a Binance relationship, or any crypto counterparty mid-way through a MiCA application, should treat 'licence pending' as materially different from 'licence granted', since this case shows a completed application can still be stalled on money-laundering and governance grounds outside the formal process.
+Source: [CoinDesk — ECB President Christine Lagarde intervened to block Binance's EU MiCA license: WSJ](https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj)
+
+### FCA, HMRC and the Met Police raid three more London sites over unregistered peer-to-peer crypto trading
+*UK · 10 September 2026 · Medium impact*
+> **So what:** This is the FCA's second P2P sweep in five months, so the regulator is treating unregistered peer-to-peer crypto trading as a standing enforcement lane, not a one-off. A UK bank checking a P2P crypto counterparty should treat the absence of FCA registration as an automatic red flag: none currently hold one, so an unregistered trader sits outside the money-laundering controls the FCA expects.
+Source: [FCA — FCA and partners continues crackdown on illegal crypto trading](https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading)
 
 ### CoinEx to shut down after nine years, citing compliance and sanctions risk it could not contain
 *Global · 15 September 2026 · Medium impact*
 > **So what:** A mid-sized exchange citing compliance and sanctions risk, not just a weak market, as a reason to close shows how costly sustained sanctions-nexus exposure has become even without a formal enforcement action against the firm itself. Banks with counterparties or customers that routed funds through CoinEx should review that exposure now, given the TRM-reported Iran-linked flows, ahead of the December withdrawal deadline.
 Source: [TRM Labs: How CoinEx Became Iran's Primary Gateway to Global Cryptocurrency Markets](https://www.trmlabs.com/resources/blog/how-coinex-became-irans-primary-gateway-to-global-cryptocurrency-markets)
 
-### FCA publishes PS26/18, cryptoasset perimeter guidance, two weeks before the UK authorisation gateway opens
-*UK · 16 September 2026 · Medium impact*
-> **So what:** A bank running any of the five named activities in the UK now has a final map of what needs authorisation, not just a consultation proposal. Firms should use PS26/18 to decide now whether they need to apply in the window that opens 30 September 2026, rather than waiting closer to the October 2027 in-force date.
-Source: [FCA: A new regime for cryptoasset regulation](https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation)
-
-### UK's National Economic Crime Centre ranks crypto its third economic-crime priority in 2025-26 annual report
-*UK · 9 September 2026 · Medium impact*
-> **So what:** A national priority ranking steers where UK regulated firms are expected to point compliance effort and resource. Banks should expect closer NECC and FCA attention on crypto-linked laundering typologies, and should read the report's shift toward a "proactive, intelligence-led" crypto capability as a signal that more UK law-enforcement requests for crypto-linked account data are likely.
-Source: [National Crime Agency — National Economic Crime Centre](https://www.nationalcrimeagency.gov.uk/what-we-do/national-economic-crime-centre)
-
 ## By the numbers
-10 new · 3 high-impact · 0 verified
+8 new · 3 high-impact · 0 verified

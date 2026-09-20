@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-18",
+  "lastUpdated": "2026-09-20",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7342,6 +7342,68 @@
         {
           "name": "Decrypt — FCA Targets Three More London Sites Over Unregistered P2P Crypto Trading",
           "url": "https://decrypt.co/378495/fca-targets-three-more-london-sites-over-unregistered-p2p-crypto-trading",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ofac-bitbank-zanjani-irgc-sept2026",
+      "type": "regulatory",
+      "title": "OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC",
+      "summary": "On 17 September 2026 OFAC designated BitBank, an Iranian crypto exchange it says financier Babak Zanjani used between June and July 2026 to move hundreds of millions of dollars in Bitcoin to the Islamic Revolutionary Guard Corps (IRGC, Iran's paramilitary force). OFAC also named BitBank's software developer, Pishtaz Simorgh, and three Zanjani associates. The action falls under Executive Order 13902, which lets Treasury sanction anyone operating in Iran's digital-asset sector without proving a separate terrorism link, and is the latest move in Operation Economic Outcast, the campaign Treasury launched on 24 August 2026.",
+      "soWhat": "OFAC is now treating Iran's crypto sector itself as sanctionable, not just named individuals or exchanges. A bank should read any counterparty or customer flow touching Zanjani's wider network, or an Iranian exchange with no clear licence, as high sanctions risk by default, since Treasury has shown it will designate developers and executives as well as the exchange.",
+      "date": "2026-09-17",
+      "addedAt": "2026-09-20",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Iran / Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "OFAC",
+        "sanctions",
+        "Iran",
+        "IRGC",
+        "Operation-Economic-Outcast"
+      ],
+      "sources": [
+        {
+          "name": "U.S. Department of the Treasury — Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime",
+          "url": "https://home.treasury.gov/news/press-releases/sb0632",
+          "kind": "primary"
+        },
+        {
+          "name": "The Block — US sanctions Iranian crypto exchange BitBank over alleged bitcoin transfers to IRGC",
+          "url": "https://www.theblock.co/news/regulation/2026-09-17-us-sanctions-iranian-crypto-exchange-bitbank-alleged-bitcoin-transfers-to-irgc-415462",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ecb-lagarde-binance-mica-greece-sept2026",
+      "type": "regulatory",
+      "title": "ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece",
+      "summary": "The Wall Street Journal reported on 18 September 2026 that European Central Bank President Christine Lagarde personally intervened to stall Binance's application for a MiCA (Markets in Crypto-Assets) licence in Greece, even though the Hellenic Capital Market Commission had judged the application complete. The ECB has no formal role in MiCA licensing, which sits with national regulators, but Lagarde reportedly wanted the decision held until ESMA (the EU's securities regulator) takes over crypto licensing under a proposed reform. Greek officials also cited money-laundering concerns and doubts that Binance founder Changpeng Zhao met the 'fit and proper' standard, given his 2023 guilty plea for enabling money laundering on the exchange. Binance withdrew its Greek application in June 2026 and says it still intends to seek MiCA authorisation.",
+      "soWhat": "A licence granted in one EU country lets a crypto firm operate across the whole bloc, so a single national regulator's fit-and-proper call carries EU-wide weight. Banks assessing a Binance relationship, or any crypto counterparty mid-way through a MiCA application, should treat 'licence pending' as materially different from 'licence granted', since this case shows a completed application can still be stalled on money-laundering and governance grounds outside the formal process.",
+      "date": "2026-09-18",
+      "addedAt": "2026-09-20",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "MiCA",
+        "ECB",
+        "Binance",
+        "AML",
+        "licensing",
+        "EU"
+      ],
+      "sources": [
+        {
+          "name": "CoinDesk — ECB President Christine Lagarde intervened to block Binance's EU MiCA license: WSJ",
+          "url": "https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj",
           "kind": "secondary"
         }
       ]

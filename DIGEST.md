@@ -1,6 +1,6 @@
-# Sentinel weekly digest: 20 September 2026
+# Sentinel weekly digest: 21 September 2026
 
-_8 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC**: 3 new items; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
@@ -10,6 +10,11 @@ _8 new items in the last 7 days · Sentinel · DA financial-crime intel_
 - **US rulemaking**: 1 new item; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
 
 ## Notable this week
+
+### UK launches £500m Anti-Money Laundering and Asset Recovery Strategy, names crypto as a growing laundering channel
+*UK · 15 September 2026 · High impact*
+> **So what:** This is a funded, multi-year state commitment, not a one-off announcement, and it explicitly puts crypto cash-out points in scope alongside fintech and AI. A bank should expect more NCA-led requests for information tied to accounts that touch cash-to-crypto conversion, since Operation Destabilise-style casework is the model this strategy scales up. It is also a signal that UK AML supervision reform (already under way) and stronger public-private data sharing are coming together, so a firm's own crypto-exposure risk assessment should reference this strategy directly.
+Source: [GOV.UK — Hundreds of new officers to hunt down dirty money networks](https://www.gov.uk/government/news/hundreds-of-new-officers-to-hunt-down-dirty-money-networks)
 
 ### OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
 *Iran / Global · 17 September 2026 · High impact*
@@ -26,20 +31,15 @@ Source: [DOJ (SDNY) — US Attorney seeks forfeiture of $61m in cryptocurrency f
 > **So what:** Without CLARITY, US banks get no new statutory line between a security and a commodity token, and no federal charter clarifying which agency oversees a given crypto activity. Banks should keep treating SEC and CFTC guidance, not a new law, as the near-term source of US market-structure rules, and expect that guidance to stay easier to reverse than a statute would have been.
 Source: [CoinDesk: Crypto Clarity Act flames out in failed U.S. Senate vote](https://www.coindesk.com/policy/2026/09/15/crypto-clarity-act-flames-out-in-failed-u-s-senate-vote)
 
+### WSJ: Polymarket dropped a card-fraud safeguard while chasing growth, then faced a $10m stolen-card attack and a CFTC probe
+*US · 20 September 2026 · Medium impact*
+> **So what:** A same-source deposit-and-withdrawal rule is one of the plainest controls against stolen-card cash-out, and removing it under growth pressure is a recognisable failure mode wherever a fast-growing platform takes card payments. A bank with a payment or correspondent relationship to a prediction-market or similar platform should treat a control change like this as a material risk event, not routine product news, and should ask any such counterparty directly whether deposit and withdrawal methods must still match.
+Source: [The Block — Polymarket faced $10 million fraud attempt as its CEO pushed growth over compliance concerns: WSJ](https://www.theblock.co/news/regulation/2026-09-20-polymarket-faced-10-million-fraud-attempt-as-its-ceo-pushed-growth-over-compliance-concerns-wsj-415875)
+
 ### ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece
 *EU · 18 September 2026 · Medium impact*
 > **So what:** A licence granted in one EU country lets a crypto firm operate across the whole bloc, so a single national regulator's fit-and-proper call carries EU-wide weight. Banks assessing a Binance relationship, or any crypto counterparty mid-way through a MiCA application, should treat 'licence pending' as materially different from 'licence granted', since this case shows a completed application can still be stalled on money-laundering and governance grounds outside the formal process.
 Source: [CoinDesk — ECB President Christine Lagarde intervened to block Binance's EU MiCA license: WSJ](https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj)
 
-### FCA, HMRC and the Met Police raid three more London sites over unregistered peer-to-peer crypto trading
-*UK · 10 September 2026 · Medium impact*
-> **So what:** This is the FCA's second P2P sweep in five months, so the regulator is treating unregistered peer-to-peer crypto trading as a standing enforcement lane, not a one-off. A UK bank checking a P2P crypto counterparty should treat the absence of FCA registration as an automatic red flag: none currently hold one, so an unregistered trader sits outside the money-laundering controls the FCA expects.
-Source: [FCA — FCA and partners continues crackdown on illegal crypto trading](https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading)
-
-### CoinEx to shut down after nine years, citing compliance and sanctions risk it could not contain
-*Global · 15 September 2026 · Medium impact*
-> **So what:** A mid-sized exchange citing compliance and sanctions risk, not just a weak market, as a reason to close shows how costly sustained sanctions-nexus exposure has become even without a formal enforcement action against the firm itself. Banks with counterparties or customers that routed funds through CoinEx should review that exposure now, given the TRM-reported Iran-linked flows, ahead of the December withdrawal deadline.
-Source: [TRM Labs: How CoinEx Became Iran's Primary Gateway to Global Cryptocurrency Markets](https://www.trmlabs.com/resources/blog/how-coinex-became-irans-primary-gateway-to-global-cryptocurrency-markets)
-
 ## By the numbers
-8 new · 3 high-impact · 0 verified
+10 new · 4 high-impact · 0 verified

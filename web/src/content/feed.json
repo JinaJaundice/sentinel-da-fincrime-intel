@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20",
+  "lastUpdated": "2026-09-21",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7404,6 +7404,80 @@
         {
           "name": "CoinDesk — ECB President Christine Lagarde intervened to block Binance's EU MiCA license: WSJ",
           "url": "https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-uk-aml-asset-recovery-strategy-2026",
+      "type": "regulatory",
+      "title": "UK launches £500m Anti-Money Laundering and Asset Recovery Strategy, names crypto as a growing laundering channel",
+      "summary": "The UK Home Office published its Anti-Money Laundering and Asset Recovery Strategy 2026-2029 on 15 September 2026, backed by £500 million over three years from the economic crime levy on regulated firms. The money funds 500 new investigators across police forces, the National Crime Agency (NCA) and the Crown Prosecution Service. The NCA estimates more than £100 billion is laundered through the UK or UK corporate structures each year, and the strategy names fintech, crypto and AI as forces that have grown the threat. The new officers build on the NCA's Operation Destabilise, which targets Russian-speaking networks that convert street cash into cryptocurrency for organised crime groups; that operation has led to 119 arrests and over £25 million in cash and crypto seized in under a year. The FCA's Steve Smart, executive director of enforcement and market oversight, said the regulator backs the strategy and will keep prioritising financial crime.",
+      "soWhat": "This is a funded, multi-year state commitment, not a one-off announcement, and it explicitly puts crypto cash-out points in scope alongside fintech and AI. A bank should expect more NCA-led requests for information tied to accounts that touch cash-to-crypto conversion, since Operation Destabilise-style casework is the model this strategy scales up. It is also a signal that UK AML supervision reform (already under way) and stronger public-private data sharing are coming together, so a firm's own crypto-exposure risk assessment should reference this strategy directly.",
+      "date": "2026-09-15",
+      "addedAt": "2026-09-21",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "UK",
+        "AML",
+        "asset-recovery",
+        "Operation-Destabilise",
+        "NCA",
+        "FCA"
+      ],
+      "sources": [
+        {
+          "name": "GOV.UK — Hundreds of new officers to hunt down dirty money networks",
+          "url": "https://www.gov.uk/government/news/hundreds-of-new-officers-to-hunt-down-dirty-money-networks",
+          "kind": "primary"
+        },
+        {
+          "name": "GOV.UK — Anti-money laundering and asset recovery strategy: 2026 to 2029 (PDF)",
+          "url": "https://assets.publishing.service.gov.uk/media/6aa950402f29b388848184ee/Anti-money_laundering_and_asset_recovery_strategy_2026-2029__web__v2.pdf",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-polymarket-stolen-card-fraud-typology",
+      "type": "typology",
+      "title": "WSJ: Polymarket dropped a card-fraud safeguard while chasing growth, then faced a $10m stolen-card attack and a CFTC probe",
+      "summary": "The Wall Street Journal reported on 20 September 2026 that fraudsters used stolen debit cards to attempt at least $10 million in bets on Polymarket's US platform starting in February 2026, funding accounts, placing bets, then trying to withdraw any winnings to different 'clean' cards. Payment processor Checkout.com flagged the attack after rejecting over 80% of Polymarket US deposits as fraudulent, against an industry norm near 1%. Polymarket had required deposits and withdrawals to use the same payment method, a standard control against exactly this pattern, but its leadership dropped that rule despite staff warning it would enable more money laundering. CEO Shayne Coplan reportedly told staff to prioritise growth and deal with any regulatory fines later. Polymarket's US chief compliance officer resigned in April after filing a report on the fraud, and its US CEO and heads of US regulation and anti-money-laundering also departed. The Commodity Futures Trading Commission (CFTC) is investigating the firm.",
+      "soWhat": "A same-source deposit-and-withdrawal rule is one of the plainest controls against stolen-card cash-out, and removing it under growth pressure is a recognisable failure mode wherever a fast-growing platform takes card payments. A bank with a payment or correspondent relationship to a prediction-market or similar platform should treat a control change like this as a material risk event, not routine product news, and should ask any such counterparty directly whether deposit and withdrawal methods must still match.",
+      "date": "2026-09-20",
+      "addedAt": "2026-09-21",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "prediction-markets",
+        "card-fraud",
+        "AML-controls",
+        "CFTC",
+        "Polymarket"
+      ],
+      "typology": {
+        "vector": "Stolen debit cards fund accounts on a fast-growing trading platform; winnings are withdrawn to different cards after the platform drops its same-source deposit-and-withdrawal control.",
+        "controls": [
+          "Match withdrawal method to the original deposit method",
+          "Limit the number of payment cards linked per account",
+          "Require compliance sign-off before removing an existing AML control"
+        ],
+        "obligations": [
+          "Suspicious activity reporting on card-fraud patterns",
+          "Ongoing monitoring of payment-method changes at platform counterparties"
+        ]
+      },
+      "sources": [
+        {
+          "name": "The Block — Polymarket faced $10 million fraud attempt as its CEO pushed growth over compliance concerns: WSJ",
+          "url": "https://www.theblock.co/news/regulation/2026-09-20-polymarket-faced-10-million-fraud-attempt-as-its-ceo-pushed-growth-over-compliance-concerns-wsj-415875",
           "kind": "secondary"
         }
       ]

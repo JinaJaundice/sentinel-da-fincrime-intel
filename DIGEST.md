@@ -1,6 +1,6 @@
-# Sentinel weekly digest: 21 September 2026
+# Sentinel weekly digest: 22 September 2026
 
-_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC**: 3 new items; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
@@ -42,4 +42,4 @@ Source: [The Block — Polymarket faced $10 million fraud attempt as its CEO pus
 Source: [CoinDesk — ECB President Christine Lagarde intervened to block Binance's EU MiCA license: WSJ](https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj)
 
 ## By the numbers
-10 new · 4 high-impact · 0 verified
+11 new · 4 high-impact · 0 verified

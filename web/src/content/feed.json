@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-21",
+  "lastUpdated": "2026-09-22",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7479,6 +7479,48 @@
           "name": "The Block — Polymarket faced $10 million fraud attempt as its CEO pushed growth over compliance concerns: WSJ",
           "url": "https://www.theblock.co/news/regulation/2026-09-20-polymarket-faced-10-million-fraud-attempt-as-its-ceo-pushed-growth-over-compliance-concerns-wsj-415875",
           "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fca-fs26-1-tokenisation-feedback",
+      "type": "regulatory",
+      "title": "FCA and Bank of England publish FS26/1: wholesale tokenisation feedback names cryptoasset registration gap",
+      "summary": "On 14 September 2026, the FCA and the Bank of England published Feedback Statement FS26/1 on their joint May 2026 Call for Input on tokenisation in UK wholesale markets. The 123 responses backed a post-trade focus, led by collateral mobility. The regulators will publish a joint roadmap with target dates later in 2026, plan to consult on safeguarding rules for relevant specified investment cryptoassets (RSICs) in the first half of 2027, and are separately consulting on tokenised gold.",
+      "soWhat": "Wholesale tokenisation sits upstream of the FSMA cryptoasset regime that opens for authorisation applications on 30 September 2026. Two points for bank compliance teams. First, RSIC safeguarding rules due in H1 2027 will set the custody-AML bar for tokenised securities held on public DLT, alongside the cryptoasset custodian wallet-provider registration already required under the Money Laundering Regulations for public-chain activity. Second, the roadmap due later in 2026 will set the pace at which banks must build DLT-aware KYC and transaction-monitoring controls for post-trade collateral flows, so treasury and custody teams should track it alongside PS26/7 (fund tokenisation) and CP26/13 (perimeter guidance).",
+      "date": "2026-09-14",
+      "addedAt": "2026-09-22",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "low",
+      "confidence": "high",
+      "tags": [
+        "FCA",
+        "FS26-1",
+        "Bank of England",
+        "tokenisation",
+        "DLT",
+        "AML",
+        "custody",
+        "wholesale-markets",
+        "UK"
+      ],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Feedback Statement",
+        "ref": "FS26/1"
+      },
+      "sources": [
+        {
+          "name": "FCA — FS26/1: Tokenisation in wholesale markets",
+          "url": "https://www.fca.org.uk/publications/feedback-statements/fs26-1-tokenisation-wholesale-markets",
+          "kind": "primary"
+        },
+        {
+          "name": "FCA and Bank of England — shared vision for tokenisation in UK wholesale markets (press release)",
+          "url": "https://www.fca.org.uk/news/press-releases/fca-and-bank-england-set-out-shared-vision-tokenisation-uk-wholesale-markets",
+          "kind": "primary"
         }
       ]
     }

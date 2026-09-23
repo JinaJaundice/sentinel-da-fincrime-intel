@@ -1,15 +1,20 @@
-# Sentinel weekly digest: 22 September 2026
+# Sentinel weekly digest: 23 September 2026
 
-_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 3 new items; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
-- **State actors & DPRK**: 3 new items; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
-- **Stablecoins**: 2 new items; latest: FCA publishes PS26/18, cryptoasset perimeter guidance, two weeks before the UK authorisation gateway opens
+- **Sanctions & OFAC**: 3 new items; latest: DOJ opens criminal probe into whether Binance itself broke Iran sanctions
+- **State actors & DPRK**: 3 new items; latest: DOJ opens criminal probe into whether Binance itself broke Iran sanctions
+- **Stablecoins**: 1 new item; latest: Flamingo Finance drained of $345,900 via flash-loan share-price manipulation
 - **MiCA & the EU**: 1 new item; latest: ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece
 - **US rulemaking**: 1 new item; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
 
 ## Notable this week
+
+### DOJ opens criminal probe into whether Binance itself broke Iran sanctions
+*US / Iran · 22 September 2026 · High impact*
+> **So what:** This moves the exposure from Binance customers to Binance itself, so any bank with correspondent or nostro exposure to Binance-linked flows should treat the exchange as a heightened-risk counterparty pending the outcome, not rely on its post-2023 compliance remediation as settled.
+Source: [Bloomberg — DOJ Probing Binance Over Potential Iran Sanctions Violations](https://www.bloomberg.com/news/articles/2026-09-22/doj-probing-binance-over-potential-iran-sanctions-violations)
 
 ### UK launches £500m Anti-Money Laundering and Asset Recovery Strategy, names crypto as a growing laundering channel
 *UK · 15 September 2026 · High impact*
@@ -26,11 +31,6 @@ Source: [U.S. Department of the Treasury — Operation Economic Outcast Disrupts
 > **So what:** The case is part of Treasury's Operation Economic Outcast (launched Aug 2026, see feed item) and shows the live typology: unhosted-wallet pipelines feeding fiat-to-crypto ramps at a major exchange, run by intermediary trading firms rather than named sanctioned entities. A bank's crypto-exposed counterparty due diligence needs to reach past the SDN list to this kind of intermediary structure.
 Source: [DOJ (SDNY) — US Attorney seeks forfeiture of $61m in cryptocurrency from Iranian military's black-market oil sales](https://www.justice.gov/usao-sdny/pr/us-attorney-seeks-forfeiture-61-million-cryptocurrency-iranian-militarys-black-market)
 
-### CLARITY Act fails its Senate cloture vote 49-50, US crypto market-structure law stalls for 2026
-*US · 15 September 2026 · High impact*
-> **So what:** Without CLARITY, US banks get no new statutory line between a security and a commodity token, and no federal charter clarifying which agency oversees a given crypto activity. Banks should keep treating SEC and CFTC guidance, not a new law, as the near-term source of US market-structure rules, and expect that guidance to stay easier to reverse than a statute would have been.
-Source: [CoinDesk: Crypto Clarity Act flames out in failed U.S. Senate vote](https://www.coindesk.com/policy/2026/09/15/crypto-clarity-act-flames-out-in-failed-u-s-senate-vote)
-
 ### WSJ: Polymarket dropped a card-fraud safeguard while chasing growth, then faced a $10m stolen-card attack and a CFTC probe
 *US · 20 September 2026 · Medium impact*
 > **So what:** A same-source deposit-and-withdrawal rule is one of the plainest controls against stolen-card cash-out, and removing it under growth pressure is a recognisable failure mode wherever a fast-growing platform takes card payments. A bank with a payment or correspondent relationship to a prediction-market or similar platform should treat a control change like this as a material risk event, not routine product news, and should ask any such counterparty directly whether deposit and withdrawal methods must still match.
@@ -42,4 +42,4 @@ Source: [The Block — Polymarket faced $10 million fraud attempt as its CEO pus
 Source: [CoinDesk — ECB President Christine Lagarde intervened to block Binance's EU MiCA license: WSJ](https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj)
 
 ## By the numbers
-11 new · 4 high-impact · 0 verified
+9 new · 4 high-impact · 0 verified

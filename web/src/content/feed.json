@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-22",
+  "lastUpdated": "2026-09-23",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7521,6 +7521,44 @@
           "name": "FCA and Bank of England — shared vision for tokenisation in UK wholesale markets (press release)",
           "url": "https://www.fca.org.uk/news/press-releases/fca-and-bank-england-set-out-shared-vision-tokenisation-uk-wholesale-markets",
           "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-doj-binance-iran-criminal-probe-sept2026",
+      "type": "signal",
+      "title": "DOJ opens criminal probe into whether Binance itself broke Iran sanctions",
+      "summary": "Bloomberg reported on 22 Sept 2026 that federal prosecutors in Manhattan and the DOJ's criminal division are investigating whether Binance knowingly let trading continue on its platform in breach of US sanctions on Iran. The inquiry looks at Binance's own conduct and compliance controls, not just its users, and follows Binance's 2023 guilty plea and $4.3bn settlement.",
+      "soWhat": "This moves the exposure from Binance customers to Binance itself, so any bank with correspondent or nostro exposure to Binance-linked flows should treat the exchange as a heightened-risk counterparty pending the outcome, not rely on its post-2023 compliance remediation as settled.",
+      "date": "2026-09-22",
+      "addedAt": "2026-09-23",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US / Iran",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": [
+        "Binance",
+        "Iran",
+        "sanctions",
+        "DOJ",
+        "criminal-investigation"
+      ],
+      "sources": [
+        {
+          "name": "Bloomberg — DOJ Probing Binance Over Potential Iran Sanctions Violations",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-22/doj-probing-binance-over-potential-iran-sanctions-violations",
+          "kind": "primary"
+        },
+        {
+          "name": "CoinDesk — Binance probed by U.S. federal prosecutors for sanctions violations",
+          "url": "https://www.coindesk.com/policy/2026/09/22/binance-probed-by-u-s-federal-prosecutors-for-sanctions-violations-bloomberg",
+          "kind": "secondary"
+        },
+        {
+          "name": "Cointelegraph — Manhattan US Attorney probing Binance over Iran sanctions",
+          "url": "https://cointelegraph.com/news/doj-probing-binance-over-alleged-iran-sanction-violations-bloomberg",
+          "kind": "secondary"
         }
       ]
     }

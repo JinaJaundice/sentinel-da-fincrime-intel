@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23",
+  "lastUpdated": "2026-09-24",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7558,6 +7558,114 @@
         {
           "name": "Cointelegraph — Manhattan US Attorney probing Binance over Iran sanctions",
           "url": "https://cointelegraph.com/news/doj-probing-binance-over-alleged-iran-sanction-violations-bloomberg",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-chainalysis-blockchain-dead-drops",
+      "type": "typology",
+      "title": "Chainalysis: DPRK and Iran hide malware control systems inside blockchain transactions, up 420% in a year",
+      "summary": "Chainalysis found attackers hiding malware command-and-control data inside blockchain transactions and smart contracts. It calls the technique a 'blockchain dead drop': once posted on-chain, the data cannot be seized or taken offline. On-chain malware writes rose 420% in the past year, and state actors linked to North Korea and Iran now drive most of the activity.",
+      "soWhat": "A malware server hidden on a blockchain cannot be shut down the way a domain or hosting account can. Banks and exchanges need on-chain monitoring to catch the DPRK and Iranian campaigns that use this method to steal crypto wallets and credentials.",
+      "date": "2026-09-17",
+      "addedAt": "2026-09-24",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "DPRK",
+        "Iran",
+        "malware",
+        "typology",
+        "blockchain-forensics"
+      ],
+      "typology": {
+        "vector": "Malware command-and-control data hidden inside blockchain transactions and smart contracts ('blockchain dead drops')",
+        "controls": [
+          "On-chain monitoring for malicious smart-contract and transaction patterns",
+          "Blockchain intelligence feeds alongside traditional threat-intel and domain blocklists",
+          "Wallet and credential-theft detection on employee and customer endpoints"
+        ],
+        "obligations": [
+          "Sanctions screening of DPRK- and Iran-linked addresses",
+          "Cyber-incident and suspicious-activity reporting"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Chainalysis — EtherHiding & Blockchain Dead Drops: On-Chain Malware C2",
+          "url": "https://www.chainalysis.com/blog/etherhiding-blockchain-dead-drops/",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-hifi-37m-series-a",
+      "type": "venture",
+      "title": "HIFI raises $37m Series A to expand compliance-linked stablecoin infrastructure",
+      "summary": "HIFI, a stablecoin-payments company, raised $37m in a Series A led by Left Lane Capital on 24 September 2026. Its API links money movement, compliance and settlement across bank rails and digital assets. It already processes more than $7bn a year across 87 countries.",
+      "soWhat": "HIFI sells compliance as a built-in part of the payment rail, alongside Travel Rule and screening vendors in the same infrastructure layer. Its DTCC tokenised-trade pilot and its new Visa stablecoin-payout link show where stablecoin settlement volume, and the AML exposure it brings, is headed next.",
+      "date": "2026-09-24",
+      "addedAt": "2026-09-24",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "low",
+      "confidence": "high",
+      "tags": [
+        "funding",
+        "stablecoins",
+        "compliance",
+        "HIFI",
+        "Series A"
+      ],
+      "venture": {
+        "company": "HIFI",
+        "round": "Series A",
+        "amount": "$37m",
+        "investors": [
+          "Left Lane Capital"
+        ]
+      },
+      "sources": [
+        {
+          "name": "The Block — HIFI raises $37 million Series A to expand tokenized capital markets infrastructure",
+          "url": "https://www.theblock.co/news/business/2026-09-24-hifi-raises-37-million-series-a-to-expand-tokenized-capital-markets-infrastructure-416242",
+          "kind": "primary"
+        }
+      ]
+    },
+    {
+      "id": "feed-phnom-penh-declaration-iccos-2026",
+      "type": "signal",
+      "title": "28 countries adopt Phnom Penh Declaration to disrupt online-scam crypto proceeds",
+      "summary": "Delegates from 28 countries and seven international bodies adopted the Phnom Penh Declaration at the close of ICCOS-2026 on 24 September 2026. Its 11 commitments include disrupting and recovering criminal proceeds and dismantling the scam-compound infrastructure behind most pig-butchering crypto fraud.",
+      "soWhat": "The declaration carries no binding force, but the signing countries commit to financial investigation and asset recovery alongside compound raids. Banks should expect more mutual-legal-assistance requests and freeze orders reaching accounts that touch Southeast Asia's scam networks.",
+      "date": "2026-09-24",
+      "addedAt": "2026-09-24",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Southeast Asia",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "scam-centres",
+        "pig-butchering",
+        "asset-recovery",
+        "Cambodia"
+      ],
+      "sources": [
+        {
+          "name": "Agence Kampuchea Presse — Phnom Penh Declaration on Combating Online Scams Adopted",
+          "url": "https://www.akp.gov.kh/post/detail/382092",
+          "kind": "primary"
+        },
+        {
+          "name": "Khmer Times — ICCOS-2026 concludes with Phnom Penh Declaration, launching new push for global action against online scams",
+          "url": "https://www.khmertimeskh.com/502030087/iccos-2026-concludes-with-phnom-penh-declaration-launching-new-push-for-global-action-against-online-scams",
           "kind": "secondary"
         }
       ]

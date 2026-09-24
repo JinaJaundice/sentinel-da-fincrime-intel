@@ -1,11 +1,11 @@
-# Sentinel weekly digest: 23 September 2026
+# Sentinel weekly digest: 24 September 2026
 
-_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
 - **Sanctions & OFAC**: 3 new items; latest: DOJ opens criminal probe into whether Binance itself broke Iran sanctions
 - **State actors & DPRK**: 3 new items; latest: DOJ opens criminal probe into whether Binance itself broke Iran sanctions
-- **Stablecoins**: 1 new item; latest: Flamingo Finance drained of $345,900 via flash-loan share-price manipulation
+- **Stablecoins**: 1 new item; latest: HIFI raises $37m Series A to expand compliance-linked stablecoin infrastructure
 - **MiCA & the EU**: 1 new item; latest: ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece
 - **US rulemaking**: 1 new item; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
 
@@ -26,20 +26,20 @@ Source: [GOV.UK — Hundreds of new officers to hunt down dirty money networks](
 > **So what:** OFAC is now treating Iran's crypto sector itself as sanctionable, not just named individuals or exchanges. A bank should read any counterparty or customer flow touching Zanjani's wider network, or an Iranian exchange with no clear licence, as high sanctions risk by default, since Treasury has shown it will designate developers and executives as well as the exchange.
 Source: [U.S. Department of the Treasury — Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime](https://home.treasury.gov/news/press-releases/sb0632)
 
-### DOJ seeks forfeiture of $61m in crypto tied to Iranian oil sales laundered through Binance
-*Iran / US · 15 September 2026 · High impact*
-> **So what:** The case is part of Treasury's Operation Economic Outcast (launched Aug 2026, see feed item) and shows the live typology: unhosted-wallet pipelines feeding fiat-to-crypto ramps at a major exchange, run by intermediary trading firms rather than named sanctioned entities. A bank's crypto-exposed counterparty due diligence needs to reach past the SDN list to this kind of intermediary structure.
-Source: [DOJ (SDNY) — US Attorney seeks forfeiture of $61m in cryptocurrency from Iranian military's black-market oil sales](https://www.justice.gov/usao-sdny/pr/us-attorney-seeks-forfeiture-61-million-cryptocurrency-iranian-militarys-black-market)
+### 28 countries adopt Phnom Penh Declaration to disrupt online-scam crypto proceeds
+*Southeast Asia · 24 September 2026 · Medium impact*
+> **So what:** The declaration carries no binding force, but the signing countries commit to financial investigation and asset recovery alongside compound raids. Banks should expect more mutual-legal-assistance requests and freeze orders reaching accounts that touch Southeast Asia's scam networks.
+Source: [Agence Kampuchea Presse — Phnom Penh Declaration on Combating Online Scams Adopted](https://www.akp.gov.kh/post/detail/382092)
+
+### Chainalysis: DPRK and Iran hide malware control systems inside blockchain transactions, up 420% in a year
+*Global · 17 September 2026 · Medium impact*
+> **So what:** A malware server hidden on a blockchain cannot be shut down the way a domain or hosting account can. Banks and exchanges need on-chain monitoring to catch the DPRK and Iranian campaigns that use this method to steal crypto wallets and credentials.
+Source: [Chainalysis — EtherHiding & Blockchain Dead Drops: On-Chain Malware C2](https://www.chainalysis.com/blog/etherhiding-blockchain-dead-drops/)
 
 ### WSJ: Polymarket dropped a card-fraud safeguard while chasing growth, then faced a $10m stolen-card attack and a CFTC probe
 *US · 20 September 2026 · Medium impact*
 > **So what:** A same-source deposit-and-withdrawal rule is one of the plainest controls against stolen-card cash-out, and removing it under growth pressure is a recognisable failure mode wherever a fast-growing platform takes card payments. A bank with a payment or correspondent relationship to a prediction-market or similar platform should treat a control change like this as a material risk event, not routine product news, and should ask any such counterparty directly whether deposit and withdrawal methods must still match.
 Source: [The Block — Polymarket faced $10 million fraud attempt as its CEO pushed growth over compliance concerns: WSJ](https://www.theblock.co/news/regulation/2026-09-20-polymarket-faced-10-million-fraud-attempt-as-its-ceo-pushed-growth-over-compliance-concerns-wsj-415875)
 
-### ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece
-*EU · 18 September 2026 · Medium impact*
-> **So what:** A licence granted in one EU country lets a crypto firm operate across the whole bloc, so a single national regulator's fit-and-proper call carries EU-wide weight. Banks assessing a Binance relationship, or any crypto counterparty mid-way through a MiCA application, should treat 'licence pending' as materially different from 'licence granted', since this case shows a completed application can still be stalled on money-laundering and governance grounds outside the formal process.
-Source: [CoinDesk — ECB President Christine Lagarde intervened to block Binance's EU MiCA license: WSJ](https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj)
-
 ## By the numbers
-9 new · 4 high-impact · 0 verified
+10 new · 3 high-impact · 0 verified

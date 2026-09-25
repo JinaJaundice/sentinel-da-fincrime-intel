@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-24",
+  "lastUpdated": "2026-09-25",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7666,6 +7666,40 @@
         {
           "name": "Khmer Times — ICCOS-2026 concludes with Phnom Penh Declaration, launching new push for global action against online scams",
           "url": "https://www.khmertimeskh.com/502030087/iccos-2026-concludes-with-phnom-penh-declaration-launching-new-push-for-global-action-against-online-scams",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-bitget-352m-hack-dprk-sept2026",
+      "type": "signal",
+      "title": "Bitget loses $352m after attacker spoofs transaction history to drain hot wallets, CEO points to North Korea",
+      "summary": "On 24 September 2026, Bitget detected unauthorised transfers from a limited number of its hot and warm wallets at 18:31 UTC and froze withdrawals within minutes. CEO Gracy Chen said the attacker exploited a flaw in a back-end system and spoofed transaction history to trigger the withdrawals, so no signing key was stolen and Bitget's cold wallets stayed secure. Blockchain analysts traced roughly $351.6m in ETH, BNB, AVAX and USDT0 moving out across several chains before being consolidated into one address. Chen called a North Korean state-hacker link \"very likely\", citing VPN infrastructure matching past DPRK operations, though she stressed this is a preliminary assessment, not a completed forensic finding. It is the largest reported crypto exchange hack of 2026 and follows the $320m Liquid Network incident earlier the same month.",
+      "soWhat": "The attacker did not need a private key, only a system flaw that made forged transaction history look authentic to Bitget's approval process. A bank assessing an exchange counterparty's custody controls should ask specifically how withdrawal requests are validated against the exchange's own ledger, not just how signing keys are stored, since key security alone did not stop this loss. If the North Korea attribution firms up, expect the stolen funds to move through the same mixer and cross-chain bridge patterns OFAC and Chainalysis have flagged in prior DPRK thefts, which should trigger enhanced monitoring on any counterparty exposed to Bitget-linked flows in the coming weeks.",
+      "date": "2026-09-24",
+      "addedAt": "2026-09-25",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "medium",
+      "tags": [
+        "exchange-hack",
+        "Bitget",
+        "DPRK",
+        "Lazarus",
+        "hot-wallet",
+        "custody-risk"
+      ],
+      "sources": [
+        {
+          "name": "CoinDesk — Crypto exchange Bitget says $352 million affected in a hack, claims user funds are 'safe'",
+          "url": "https://www.coindesk.com/markets/2026/09/24/crypto-exchange-bitget-loses-usd352-million-in-hack-claims-user-funds-are-safe",
+          "kind": "secondary"
+        },
+        {
+          "name": "CryptoTimes — Bitget Hacked for $351.6M: Withdrawals Frozen as CEO Points to North Korea",
+          "url": "https://www.cryptotimes.io/2026/09/25/bitget-hacked-for-351-6m-withdrawals-frozen-as-ceo-points-to-north-korea/",
           "kind": "secondary"
         }
       ]

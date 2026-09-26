@@ -1,15 +1,20 @@
-# Sentinel weekly digest: 25 September 2026
+# Sentinel weekly digest: 26 September 2026
 
-_10 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 4 new items; latest: Bitget loses $352m after attacker spoofs transaction history to drain hot wallets, CEO points to North Korea
-- **State actors & DPRK**: 4 new items; latest: Bitget loses $352m after attacker spoofs transaction history to drain hot wallets, CEO points to North Korea
+- **Sanctions & OFAC**: 5 new items; latest: North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
+- **State actors & DPRK**: 5 new items; latest: North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
 - **Stablecoins**: 2 new items; latest: Bitget loses $352m after attacker spoofs transaction history to drain hot wallets, CEO points to North Korea
 - **MiCA & the EU**: 1 new item; latest: ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece
 - **US rulemaking**: 1 new item; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
 
 ## Notable this week
+
+### North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
+*Global · 25 September 2026 · High impact*
+> **So what:** The Bitget hack shows the same playbook as Bybit in 2025: an attacker spoofs what a wallet-approval system sees, not the keys themselves, so key custody alone will not stop this. A regulated bank should screen incoming deposits against TRM's "Bitget Exploiter September 2026" address tags and funds several hops downstream, since proceeds are moving through bridges and cross-chain swaps rather than arriving directly. Any counterparty exposed to Bitget, THORChain routes, or the tagged wallets should be flagged for enhanced due diligence and a possible SAR.
+Source: [TRM Labs — Bitget Loses USD 351.6 Million in Hot Wallet Breach in Likely North Korea Attack](https://www.trmlabs.com/resources/blog/bitget-loses-usd-3516-million-in-hot-wallet-breach-in-likely-north-korea-attack)
 
 ### Bitget loses $352m after attacker spoofs transaction history to drain hot wallets, CEO points to North Korea
 *Global · 24 September 2026 · High impact*
@@ -36,10 +41,5 @@ Source: [U.S. Department of the Treasury — Operation Economic Outcast Disrupts
 > **So what:** The declaration carries no binding force, but the signing countries commit to financial investigation and asset recovery alongside compound raids. Banks should expect more mutual-legal-assistance requests and freeze orders reaching accounts that touch Southeast Asia's scam networks.
 Source: [Agence Kampuchea Presse — Phnom Penh Declaration on Combating Online Scams Adopted](https://www.akp.gov.kh/post/detail/382092)
 
-### Chainalysis: DPRK and Iran hide malware control systems inside blockchain transactions, up 420% in a year
-*Global · 17 September 2026 · Medium impact*
-> **So what:** A malware server hidden on a blockchain cannot be shut down the way a domain or hosting account can. Banks and exchanges need on-chain monitoring to catch the DPRK and Iranian campaigns that use this method to steal crypto wallets and credentials.
-Source: [Chainalysis — EtherHiding & Blockchain Dead Drops: On-Chain Malware C2](https://www.chainalysis.com/blog/etherhiding-blockchain-dead-drops/)
-
 ## By the numbers
-10 new · 4 high-impact · 0 verified
+11 new · 5 high-impact · 0 verified

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25",
+  "lastUpdated": "2026-09-26",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7700,6 +7700,53 @@
         {
           "name": "CryptoTimes — Bitget Hacked for $351.6M: Withdrawals Frozen as CEO Points to North Korea",
           "url": "https://www.cryptotimes.io/2026/09/25/bitget-hacked-for-351-6m-withdrawals-frozen-as-ceo-points-to-north-korea/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-dprk-2026-crypto-theft-tops-1bn-bitget",
+      "type": "typology",
+      "title": "North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route",
+      "summary": "TRM Labs reported on 25 September 2026 that the 24 September theft of about $351.6m from Bitget's hot and warm wallets pushes North Korea's tracked crypto-theft haul for 2026 past $1bn, the second-highest annual total TRM has recorded after 2025. Bitget said an attacker compromised a backend system and spoofed the data used to approve withdrawals, rather than stealing private keys. TRM traced the stolen ETH and XRP into new wallets holding round amounts (about 10,000 ETH or 20 million XRP each), most of which sat still as of 25 September, while a smaller share moved through THORChain into Bitcoin. On-chain overlaps link the laundering wallets to funds from the 2025 Bybit and AFX Bridge thefts.",
+      "soWhat": "The Bitget hack shows the same playbook as Bybit in 2025: an attacker spoofs what a wallet-approval system sees, not the keys themselves, so key custody alone will not stop this. A regulated bank should screen incoming deposits against TRM's \"Bitget Exploiter September 2026\" address tags and funds several hops downstream, since proceeds are moving through bridges and cross-chain swaps rather than arriving directly. Any counterparty exposed to Bitget, THORChain routes, or the tagged wallets should be flagged for enhanced due diligence and a possible SAR.",
+      "date": "2026-09-25",
+      "addedAt": "2026-09-26",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "DPRK",
+        "typology",
+        "exchange-hack",
+        "Bitget",
+        "THORChain",
+        "wallet-compromise",
+        "Lazarus"
+      ],
+      "typology": {
+        "vector": "Backend/approval-system spoofing at an exchange (not private-key theft) to authorise fraudulent hot- and warm-wallet withdrawals, followed by round-number wallet splitting and cross-chain bridging (THORChain, peel chains) to obscure the trail",
+        "controls": [
+          "Screen deposits against TRM's tagged \"Bitget Exploiter September 2026\" addresses and funds several hops downstream, not only direct transfers",
+          "Treat large round-number wallet balances (e.g. exactly 10,000 ETH or 20 million XRP) newly funded from an exchange-hack address as a laundering indicator",
+          "Extend counterparty and vendor due diligence beyond key-custody audits to backend transaction-approval and authorisation-system integrity"
+        ],
+        "obligations": [
+          "OFAC / UN sanctions screening of DPRK-attributed wallet clusters receiving stolen funds",
+          "SAR on suspected DPRK-nexus laundering flows linked to the Bitget theft"
+        ]
+      },
+      "sources": [
+        {
+          "name": "TRM Labs — Bitget Loses USD 351.6 Million in Hot Wallet Breach in Likely North Korea Attack",
+          "url": "https://www.trmlabs.com/resources/blog/bitget-loses-usd-3516-million-in-hot-wallet-breach-in-likely-north-korea-attack",
+          "kind": "primary"
+        },
+        {
+          "name": "Bloomberg — Crypto Theft by North Korea Tops $1 Billion in 2026 After Bitget Attack",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-25/bitget-hack-pushes-north-korean-crypto-haul-past-1-billion",
           "kind": "secondary"
         }
       ]

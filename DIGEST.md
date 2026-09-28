@@ -1,15 +1,20 @@
-# Sentinel weekly digest: 26 September 2026
+# Sentinel weekly digest: 28 September 2026
 
-_11 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Sanctions & OFAC**: 5 new items; latest: North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
-- **State actors & DPRK**: 5 new items; latest: North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
-- **Stablecoins**: 2 new items; latest: Bitget loses $352m after attacker spoofs transaction history to drain hot wallets, CEO points to North Korea
-- **MiCA & the EU**: 1 new item; latest: ECB's Lagarde reportedly blocked Binance's MiCA licence bid in Greece
-- **US rulemaking**: 1 new item; latest: OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
+- **Stablecoins**: 4 new items; latest: Federal Reserve proposes reserve, capital and custody rules for stablecoin issuers under the GENIUS Act
+- **Sanctions & OFAC**: 4 new items; latest: North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
+- **State actors & DPRK**: 4 new items; latest: North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
+- **Travel Rule**: 1 new item; latest: ECB tells EU lawmakers to close an AML gap for unlicensed stablecoin issuers
+- **MiCA & the EU**: 1 new item; latest: ECB tells EU lawmakers to close an AML gap for unlicensed stablecoin issuers
 
 ## Notable this week
+
+### Federal Reserve proposes reserve, capital and custody rules for stablecoin issuers under the GENIUS Act
+*US · 24 September 2026 · High impact*
+> **So what:** Bank-issued stablecoins get a capital and custody floor before the regime is final, but the Fed's own vice chair for supervision says the anti-money-laundering side still has a gap. A bank weighing a stablecoin issuance plan should expect the prudential bar to firm up on this track first, with AML expectations following on a separate, still-open track.
+Source: [Federal Reserve Board — press release, two GENIUS Act stablecoin proposals](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm)
 
 ### North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
 *Global · 25 September 2026 · High impact*
@@ -26,15 +31,10 @@ Source: [CoinDesk — Crypto exchange Bitget says $352 million affected in a hac
 > **So what:** This moves the exposure from Binance customers to Binance itself, so any bank with correspondent or nostro exposure to Binance-linked flows should treat the exchange as a heightened-risk counterparty pending the outcome, not rely on its post-2023 compliance remediation as settled.
 Source: [Bloomberg — DOJ Probing Binance Over Potential Iran Sanctions Violations](https://www.bloomberg.com/news/articles/2026-09-22/doj-probing-binance-over-potential-iran-sanctions-violations)
 
-### UK launches £500m Anti-Money Laundering and Asset Recovery Strategy, names crypto as a growing laundering channel
-*UK · 15 September 2026 · High impact*
-> **So what:** This is a funded, multi-year state commitment, not a one-off announcement, and it explicitly puts crypto cash-out points in scope alongside fintech and AI. A bank should expect more NCA-led requests for information tied to accounts that touch cash-to-crypto conversion, since Operation Destabilise-style casework is the model this strategy scales up. It is also a signal that UK AML supervision reform (already under way) and stronger public-private data sharing are coming together, so a firm's own crypto-exposure risk assessment should reference this strategy directly.
-Source: [GOV.UK — Hundreds of new officers to hunt down dirty money networks](https://www.gov.uk/government/news/hundreds-of-new-officers-to-hunt-down-dirty-money-networks)
-
-### OFAC sanctions Iranian exchange BitBank for moving Bitcoin to the IRGC
-*Iran / Global · 17 September 2026 · High impact*
-> **So what:** OFAC is now treating Iran's crypto sector itself as sanctionable, not just named individuals or exchanges. A bank should read any counterparty or customer flow touching Zanjani's wider network, or an Iranian exchange with no clear licence, as high sanctions risk by default, since Treasury has shown it will designate developers and executives as well as the exchange.
-Source: [U.S. Department of the Treasury — Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime](https://home.treasury.gov/news/press-releases/sb0632)
+### ECB tells EU lawmakers to close an AML gap for unlicensed stablecoin issuers
+*EU · 22 September 2026 · Medium impact*
+> **So what:** If the Commission acts on this, some ART issuers now outside AML scope would gain full AML duties, and transfers to and from self-hosted wallets could face FATF-Travel-Rule-style information checks. A bank handling EU stablecoin flows should track which issuers currently sit in that licensing gap, since today's due-diligence assumptions about them may not hold once the review lands.
+Source: [European Central Bank — Eurosystem response to the Commission's targeted consultation on the MiCAR review](https://www.ecb.europa.eu/press/consultationresponse/pdf/ecb.conresp202609_micarreview.en.pdf)
 
 ### 28 countries adopt Phnom Penh Declaration to disrupt online-scam crypto proceeds
 *Southeast Asia · 24 September 2026 · Medium impact*
@@ -42,4 +42,4 @@ Source: [U.S. Department of the Treasury — Operation Economic Outcast Disrupts
 Source: [Agence Kampuchea Presse — Phnom Penh Declaration on Combating Online Scams Adopted](https://www.akp.gov.kh/post/detail/382092)
 
 ## By the numbers
-11 new · 5 high-impact · 0 verified
+9 new · 4 high-impact · 0 verified

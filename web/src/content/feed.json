@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-26",
+  "lastUpdated": "2026-09-28",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7747,6 +7747,80 @@
         {
           "name": "Bloomberg — Crypto Theft by North Korea Tops $1 Billion in 2026 After Bitget Attack",
           "url": "https://www.bloomberg.com/news/articles/2026-09-25/bitget-hack-pushes-north-korean-crypto-haul-past-1-billion",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-fed-genius-act-reserve-capital-proposal-sept2026",
+      "type": "regulatory",
+      "title": "Federal Reserve proposes reserve, capital and custody rules for stablecoin issuers under the GENIUS Act",
+      "summary": "On 24 Sep 2026 the Federal Reserve Board asked for public comment on two draft rules for Board-supervised payment stablecoin issuers under the GENIUS Act. The first would require issuers to fully back their stablecoins with high-quality liquid reserve assets such as short-term Treasury bills, sets standardised capital and risk-management standards, and adds custody rules for firms that safekeep the reserve assets. The second sets a tailored application process for banks that want to issue stablecoins, including a business plan, financial information and an appeals process. Comments close 60 days after the proposals are published in the Federal Register. Governor Michael Barr backed the proposal but said he wants the anti-money-laundering framework strengthened before the Fed adopts final rules.",
+      "soWhat": "Bank-issued stablecoins get a capital and custody floor before the regime is final, but the Fed's own vice chair for supervision says the anti-money-laundering side still has a gap. A bank weighing a stablecoin issuance plan should expect the prudential bar to firm up on this track first, with AML expectations following on a separate, still-open track.",
+      "date": "2026-09-24",
+      "addedAt": "2026-09-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "stablecoin",
+        "GENIUS-Act",
+        "Federal-Reserve",
+        "capital",
+        "custody",
+        "AML"
+      ],
+      "publication": {
+        "issuer": "Federal Reserve Board",
+        "kind": "Proposed Rule",
+        "ref": "Docket No. R-1850 / R-1851"
+      },
+      "sources": [
+        {
+          "name": "Federal Reserve Board — press release, two GENIUS Act stablecoin proposals",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm",
+          "kind": "primary"
+        },
+        {
+          "name": "Tech Times — Federal Reserve Sets Stablecoin Capital Floor; Barr Flags Run Risk and AML Gap",
+          "url": "https://www.techtimes.com/articles/328038/20260925/federal-reserve-sets-stablecoin-capital-floor-barr-flags-run-risk-aml-gap.htm",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ecb-mica-review-art-aml-gap-sept2026",
+      "type": "regulatory",
+      "title": "ECB tells EU lawmakers to close an AML gap for unlicensed stablecoin issuers",
+      "summary": "On 22 Sep 2026 the European Central Bank published its response to the European Commission's targeted consultation on reviewing MiCA, the EU's crypto law. The ECB said issuers of asset-referenced tokens (ARTs, a type of stablecoin) without a financial-sector licence are exempt from anti-money-laundering rules that bind every other crypto firm, and called this gap inconsistent with the principle of \"same activity, same risk, same regulation\". It asked for a stronger role for the EU's Anti-Money Laundering Authority (AMLA) to close the gap, wider powers for ESMA to authorise and supervise crypto exchanges, and a review of crypto transaction-information rules in line with the FATF's 2025 update to the Travel Rule, naming self-hosted wallets as an area needing particular attention. The ECB separately opposed a proposed requirement for stablecoin issuers to hold a minimum share of reserves as bank deposits, saying it could expose banks to a crypto-market rout.",
+      "soWhat": "If the Commission acts on this, some ART issuers now outside AML scope would gain full AML duties, and transfers to and from self-hosted wallets could face FATF-Travel-Rule-style information checks. A bank handling EU stablecoin flows should track which issuers currently sit in that licensing gap, since today's due-diligence assumptions about them may not hold once the review lands.",
+      "date": "2026-09-22",
+      "addedAt": "2026-09-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "MiCA",
+        "ECB",
+        "AMLA",
+        "stablecoin",
+        "travel-rule",
+        "self-hosted-wallets",
+        "ESMA"
+      ],
+      "sources": [
+        {
+          "name": "European Central Bank — Eurosystem response to the Commission's targeted consultation on the MiCAR review",
+          "url": "https://www.ecb.europa.eu/press/consultationresponse/pdf/ecb.conresp202609_micarreview.en.pdf",
+          "kind": "primary"
+        },
+        {
+          "name": "AML Intelligence — ECB flags AML gap for stablecoin issuers lacking financial licence",
+          "url": "https://www.amlintelligence.com/2026/09/news-ecb-flags-aml-gap-for-stablecoin-issuers-lacking-financial-licence/",
           "kind": "secondary"
         }
       ]

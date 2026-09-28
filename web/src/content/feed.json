@@ -7824,6 +7824,103 @@
           "kind": "secondary"
         }
       ]
+    },
+    {
+      "id": "feed-doj-capstone-eqibank-tether-forfeiture-sept2026",
+      "type": "signal",
+      "title": "DOJ moves to seize $84.2m from a payments firm that processed Tether and Bitfinex transfers",
+      "summary": "Reporting on 25 September 2026 detailed a civil forfeiture complaint the Department of Justice filed on 15 July 2026 in the Eastern District of California against Capstone Ltd, a Montana-based payments firm. Prosecutors say Capstone operated as an unlicensed money transmitter in at least six states and told its banks, Wells Fargo and JPMorgan Chase, that it was an IT services company. A court order dated 14 September 2026 itemises the funds seized: $79.11 million from a Wells Fargo Securities account, $1.86 million from a second Wells Fargo account, $2.06 million at JPMorgan Chase, and about $1.1 million in USDT split across two wallets. Capstone processed wire transfers on behalf of EQIBank, a Dominica-based bank that in turn handled USDT purchase and redemption transfers for Tether and its sister exchange Bitfinex. Tether said it had no knowledge of Capstone's alleged conduct and put its exposure at under 0.034% of group assets; EQIBank has said the freeze covers about 80% of its total funds and could push it toward liquidation. Neither Tether nor Bitfinex has been charged.",
+      "soWhat": "A stablecoin issuer's own controls are not the only exposure a bank needs to track. Money can pass through a chain of small intermediaries and offshore banks before it reaches a major issuer's balance sheet. A bank with correspondent or nostro exposure touching EQIBank, or that screens counterparties in Tether's banking network, should treat this case as a reason to review that chain now, not only Tether's own compliance programme.",
+      "date": "2026-09-14",
+      "addedAt": "2026-09-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US / Dominica",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "stablecoin",
+        "Tether",
+        "Bitfinex",
+        "civil-forfeiture",
+        "correspondent-banking",
+        "unlicensed-money-transmitter",
+        "DOJ"
+      ],
+      "sources": [
+        {
+          "name": "Decrypt - US Prosecutors Want $84.2 Million From a Bank Tied to Tether",
+          "url": "https://decrypt.co/379380/us-prosecutors-84-million-bank-tether-and-bitfinex",
+          "kind": "secondary"
+        },
+        {
+          "name": "PYMNTS - Justice Department Seizes $84 Million From Payments Firm Capstone",
+          "url": "https://www.pymnts.com/legal/2026/justice-department-seizes-84-million-from-payments-firm-capstone/",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-haruko-institutional-crypto-breach-sept2026",
+      "type": "signal",
+      "title": "Cyberattack on crypto infrastructure vendor Haruko exposes API data at 15 institutional clients",
+      "summary": "Coindesk reported on 18 September 2026 that Haruko, a London-based provider of portfolio and risk-management infrastructure for institutional digital-asset firms, suffered a targeted cyberattack that week. The attacker exploited a vulnerability in one of Haruko's processes to extract a user-access token, then used it to read data held in that process's memory, including clients' read-only exchange API details and trading data. Fifteen of Haruko's non-whitelisted clients were affected. Haruko's chief technology officer told clients that some smaller hedge funds with weaker security controls may have lost a small amount of funds, and that trading data was also taken. The breach was possible partly because Haruko runs on physical, bare-metal servers rather than a cloud provider's more restricted setup. Haruko's website names Bitcoin Suisse, GSR, Flowdesk, 3iQ Digital Assets, M2, Ampersan, Monarq Asset Management and Trovio Asset Management as clients; several named firms, including GSR and 3iQ, said they were not affected.",
+      "soWhat": "Counterparty due diligence on a crypto-trading client should cover the infrastructure vendors sitting behind that client's exchange connections, not just the exchanges themselves. A single vendor breach can expose API keys and trading data across many otherwise-unrelated institutional accounts at once, and a client using such a vendor may not fully control the security of its own exchange access.",
+      "date": "2026-09-18",
+      "addedAt": "2026-09-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "medium",
+      "confidence": "high",
+      "tags": [
+        "vendor-risk",
+        "API-security",
+        "institutional-crypto",
+        "cyberattack",
+        "operational-resilience"
+      ],
+      "sources": [
+        {
+          "name": "Coindesk - Crypto tech provider Haruko hit by cyberattack affecting 15 clients, with exchange API details, trading data and funds lost",
+          "url": "https://www.coindesk.com/business/2026/09/18/crypto-tech-provider-haruko-hit-by-cyberattack-affecting-15-clients-some-funds-lost",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-russia-foreign-wallet-reporting-usdt-only-sept2026",
+      "type": "regulatory",
+      "title": "Russia's new crypto law forces investors to report foreign wallets and restricts retail trading to USDT",
+      "summary": "Russia's Deputy Finance Minister Ivan Chebeskov said in a late-September 2026 interview that Federal Law No. 282-FZ, in force since 1 September 2026, requires Russian residents to report any crypto holdings tied to foreign digital-asset platforms to the Federal Tax Service. Chebeskov said about 20 million Russians hold roughly 3.7 trillion rubles, or about $44 billion, in digital assets, and that an estimated 10 million Russian-linked wallets sit on foreign platforms outside the government's visibility. The law also caps new retail investors who pass a risk-assessment test at 300,000 rubles, about $3,600, per licensed intermediary per year, and restricts stablecoin trading on regulated domestic platforms to USDT alone; other foreign stablecoins remain off-limits to non-qualified retail investors. Chebeskov cited Tether's 2025 freeze of assets tied to the sanctioned exchange Garantex as the kind of loss the reporting rule is meant to help the state track.",
+      "soWhat": "A licensed, state-supervised on-ramp is now channelling Russian retail crypto flows into USDT specifically, while a parallel reporting duty tries to pull an estimated $44 billion in existing foreign-wallet holdings into view. A bank screening for Russia sanctions-nexus exposure should treat USDT flows tied to Russian-licensed intermediaries as a distinct and growing channel, separate from the broader assumption that any stablecoin on any wallet carries the same risk.",
+      "date": "2026-09-23",
+      "addedAt": "2026-09-28",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Russia",
+      "impact": "high",
+      "confidence": "high",
+      "tags": [
+        "Russia",
+        "sanctions-evasion",
+        "USDT",
+        "stablecoin",
+        "reporting-obligation",
+        "retail-caps"
+      ],
+      "sources": [
+        {
+          "name": "Crypto Briefing - Russia mandates investors report foreign crypto transactions, warns of losses from stablecoin freezes",
+          "url": "https://cryptobriefing.com/russia-crypto-reporting-stablecoin-freeze-warning/",
+          "kind": "secondary"
+        },
+        {
+          "name": "crypto.news - Russia sets crypto reporting rules as holdings hit $44B",
+          "url": "https://crypto.news/russia-sets-crypto-reporting-rules-as-holdings-hit-44b/",
+          "kind": "secondary"
+        }
+      ]
     }
   ]
 }

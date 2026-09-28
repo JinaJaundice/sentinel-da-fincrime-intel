@@ -1,15 +1,25 @@
 # Sentinel weekly digest: 28 September 2026
 
-_9 new items in the last 7 days · Sentinel · DA financial-crime intel_
+_12 new items in the last 7 days · Sentinel · DA financial-crime intel_
 
 ## What moved
-- **Stablecoins**: 4 new items; latest: Federal Reserve proposes reserve, capital and custody rules for stablecoin issuers under the GENIUS Act
-- **Sanctions & OFAC**: 4 new items; latest: North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
+- **Stablecoins**: 6 new items; latest: Russia's new crypto law forces investors to report foreign wallets and restricts retail trading to USDT
+- **Sanctions & OFAC**: 5 new items; latest: Russia's new crypto law forces investors to report foreign wallets and restricts retail trading to USDT
 - **State actors & DPRK**: 4 new items; latest: North Korea's 2026 crypto theft toll passes $1bn as TRM traces the Bitget hack launder route
 - **Travel Rule**: 1 new item; latest: ECB tells EU lawmakers to close an AML gap for unlicensed stablecoin issuers
 - **MiCA & the EU**: 1 new item; latest: ECB tells EU lawmakers to close an AML gap for unlicensed stablecoin issuers
 
 ## Notable this week
+
+### Russia's new crypto law forces investors to report foreign wallets and restricts retail trading to USDT
+*Russia · 23 September 2026 · High impact*
+> **So what:** A licensed, state-supervised on-ramp is now channelling Russian retail crypto flows into USDT specifically, while a parallel reporting duty tries to pull an estimated $44 billion in existing foreign-wallet holdings into view. A bank screening for Russia sanctions-nexus exposure should treat USDT flows tied to Russian-licensed intermediaries as a distinct and growing channel, separate from the broader assumption that any stablecoin on any wallet carries the same risk.
+Source: [Crypto Briefing - Russia mandates investors report foreign crypto transactions, warns of losses from stablecoin freezes](https://cryptobriefing.com/russia-crypto-reporting-stablecoin-freeze-warning/)
+
+### DOJ moves to seize $84.2m from a payments firm that processed Tether and Bitfinex transfers
+*US / Dominica · 14 September 2026 · High impact*
+> **So what:** A stablecoin issuer's own controls are not the only exposure a bank needs to track. Money can pass through a chain of small intermediaries and offshore banks before it reaches a major issuer's balance sheet. A bank with correspondent or nostro exposure touching EQIBank, or that screens counterparties in Tether's banking network, should treat this case as a reason to review that chain now, not only Tether's own compliance programme.
+Source: [Decrypt - US Prosecutors Want $84.2 Million From a Bank Tied to Tether](https://decrypt.co/379380/us-prosecutors-84-million-bank-tether-and-bitfinex)
 
 ### Federal Reserve proposes reserve, capital and custody rules for stablecoin issuers under the GENIUS Act
 *US · 24 September 2026 · High impact*
@@ -31,15 +41,5 @@ Source: [CoinDesk — Crypto exchange Bitget says $352 million affected in a hac
 > **So what:** This moves the exposure from Binance customers to Binance itself, so any bank with correspondent or nostro exposure to Binance-linked flows should treat the exchange as a heightened-risk counterparty pending the outcome, not rely on its post-2023 compliance remediation as settled.
 Source: [Bloomberg — DOJ Probing Binance Over Potential Iran Sanctions Violations](https://www.bloomberg.com/news/articles/2026-09-22/doj-probing-binance-over-potential-iran-sanctions-violations)
 
-### ECB tells EU lawmakers to close an AML gap for unlicensed stablecoin issuers
-*EU · 22 September 2026 · Medium impact*
-> **So what:** If the Commission acts on this, some ART issuers now outside AML scope would gain full AML duties, and transfers to and from self-hosted wallets could face FATF-Travel-Rule-style information checks. A bank handling EU stablecoin flows should track which issuers currently sit in that licensing gap, since today's due-diligence assumptions about them may not hold once the review lands.
-Source: [European Central Bank — Eurosystem response to the Commission's targeted consultation on the MiCAR review](https://www.ecb.europa.eu/press/consultationresponse/pdf/ecb.conresp202609_micarreview.en.pdf)
-
-### 28 countries adopt Phnom Penh Declaration to disrupt online-scam crypto proceeds
-*Southeast Asia · 24 September 2026 · Medium impact*
-> **So what:** The declaration carries no binding force, but the signing countries commit to financial investigation and asset recovery alongside compound raids. Banks should expect more mutual-legal-assistance requests and freeze orders reaching accounts that touch Southeast Asia's scam networks.
-Source: [Agence Kampuchea Presse — Phnom Penh Declaration on Combating Online Scams Adopted](https://www.akp.gov.kh/post/detail/382092)
-
 ## By the numbers
-9 new · 4 high-impact · 0 verified
+12 new · 6 high-impact · 0 verified

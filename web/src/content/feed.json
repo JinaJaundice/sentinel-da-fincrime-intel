@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28",
+  "lastUpdated": "2026-09-30",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -7921,6 +7921,51 @@
           "kind": "secondary"
         }
       ]
+    },
+    {
+      "id": "feed-wdmo-vietnamese-pig-butchering-laundering-sept2026",
+      "type": "typology",
+      "title": "US charges Vietnamese national with laundering pig-butchering proceeds through unhosted wallets",
+      "summary": "The US Attorney for the Western District of Missouri unsealed a two-count money laundering complaint against Trung Nguyen Van, 37, after his initial appearance in Los Angeles. One victim allegedly sent about $16m in cryptocurrency between June and August 2024 to a fake platform called \"Triangle\". Prosecutors say wallets linked to Van received about $53.3m of fraud proceeds between February 2018 and December 2024, nearly all of it moved off traceable blockchains. The charges are allegations and no court has ruled on them.",
+      "soWhat": "The case shows the exit point that matters for a bank. Proceeds passed through a wallet at a regulated venue, then moved in one step to a self-custody wallet. A firm that banks a customer or exchange in that position should look for repeated inbound transfers from many victims followed by a single large withdrawal to an unhosted wallet. The FBI says private-sector partners helped trace the funds, so a firm may expect requests for information on that pattern.",
+      "date": "2026-09-25",
+      "addedAt": "2026-09-30",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "pig-butchering",
+        "money-laundering",
+        "unhosted-wallets",
+        "DOJ",
+        "enforcement"
+      ],
+      "sources": [
+        {
+          "name": "US Attorney's Office, Western District of Missouri: Vietnamese National Charged for Role in Massive Pig Butchering Cryptocurrency Scam",
+          "url": "https://www.justice.gov/usao-wdmo/pr/vietnamese-national-charged-role-massive-pig-butchering-cryptocurrency-scam",
+          "kind": "primary"
+        },
+        {
+          "name": "Bitcoin.com News: Feds Charge Vietnamese National in $16M Pig Butchering Crypto Scheme",
+          "url": "https://news.bitcoin.com/regulation-and-legal/feds-charge-vietnamese-national-16m-pig-butchering-crypto-scheme/",
+          "kind": "secondary"
+        }
+      ],
+      "typology": {
+        "vector": "Pig-butchering proceeds received at a regulated venue, then withdrawn in bulk to a self-custody (unhosted) wallet",
+        "controls": [
+          "Transaction monitoring for many-to-one inbound transfers followed by a large outbound transfer to an unhosted wallet",
+          "Blockchain analytics screening of inbound funds for scam-linked exposure",
+          "Enhanced due diligence on unhosted-wallet withdrawals"
+        ],
+        "obligations": [
+          "Suspicious activity reporting on suspected investment-fraud proceeds",
+          "Bank Secrecy Act anti-money laundering programme requirements"
+        ]
+      }
     }
   ]
 }

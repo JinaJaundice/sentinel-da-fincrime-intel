@@ -7966,6 +7966,68 @@
           "Bank Secrecy Act anti-money laundering programme requirements"
         ]
       }
+    },
+    {
+      "id": "feed-fca-crypto-gateway-opens-30-sept-2026",
+      "type": "regulatory",
+      "title": "FCA opens the cryptoasset authorisation gateway on 30 September 2026, with applications due by 28 February 2027",
+      "summary": "The FCA began accepting applications for authorisation under the new UK cryptoasset regime on 30 September 2026. Firms that want their application assessed before the regime starts on 25 October 2027 should apply by 28 February 2027. Existing registrations under the Money Laundering Regulations do not convert automatically.",
+      "soWhat": "A bank with crypto-exchange, custodian or stablecoin clients should ask each one whether it has applied by 28 February 2027. A client that has not applied may not be authorised when the regime starts on 25 October 2027, and the bank should plan for that in client risk ratings and exit decisions. Authorised firms will also fall under FCA financial crime control expectations, which gives the bank a supervisory standard to test client controls against.",
+      "date": "2026-09-30",
+      "addedAt": "2026-09-30",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "high",
+      "tags": [
+        "FCA",
+        "UK",
+        "cryptoasset regime",
+        "authorisation",
+        "MLR registration"
+      ],
+      "sources": [
+        {
+          "name": "Finance Magnates: FCA Opens Five-Month Authorisation Window for UK Crypto Firms",
+          "url": "https://www.financemagnates.com/cryptocurrency/regulation/fca-opens-five-month-authorisation-window-for-uk-crypto-firms/",
+          "kind": "secondary"
+        }
+      ],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Announcement"
+      }
+    },
+    {
+      "id": "feed-treasury-scrc-state-stablecoin-interim-rule-sept2026",
+      "type": "regulatory",
+      "title": "Treasury issues interim final rule on how states certify stablecoin regimes under the GENIUS Act",
+      "summary": "On 30 September 2026 Treasury published an interim final rule setting the forms and procedures the Stablecoin Certification Review Committee uses to decide whether a state regime is substantially similar to the federal one. Issuers with under $10bn outstanding may opt into a certified state regime. States can meet the initial deadline by submitting any form of certification by 18 January 2028. Comments are open until 30 November.",
+      "soWhat": "Smaller stablecoin issuers may end up under state regimes, so a bank onboarding one cannot assume the federal AML and sanctions standard applies to it. The bank should record which regime covers each issuer and test the issuer's freeze and sanctions controls directly. Treasury is not yet accepting certifications, so the state-regime map will stay incomplete for some time.",
+      "date": "2026-09-30",
+      "addedAt": "2026-09-30",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "tags": [
+        "GENIUS Act",
+        "stablecoin",
+        "Treasury",
+        "state regimes",
+        "interim final rule"
+      ],
+      "sources": [
+        {
+          "name": "ABA Banking Journal: New rule establishes procedures for reviewing state stablecoin regulations",
+          "url": "https://bankingjournal.aba.com/2026/09/new-rule-establishes-procedures-for-reviewing-state-stablecoin-regulations/",
+          "kind": "secondary"
+        }
+      ],
+      "publication": {
+        "issuer": "US Treasury",
+        "kind": "Interim final rule"
+      }
     }
   ]
 }

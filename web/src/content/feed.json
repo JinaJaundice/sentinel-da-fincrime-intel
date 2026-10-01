@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-30",
+  "lastUpdated": "2026-10-01",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -8027,6 +8027,68 @@
       "publication": {
         "issuer": "US Treasury",
         "kind": "Interim final rule"
+      }
+    },
+    {
+      "id": "feed-esma-mica-review-freeze-powers-sept2026",
+      "type": "regulatory",
+      "title": "ESMA asks for powers to order crypto firms to freeze suspect assets",
+      "summary": "On 30 September 2026 ESMA set out its response to the MiCA review and asked for powers for itself and national regulators to order crypto firms to freeze assets linked to financial crime, money laundering or terrorist financing. It also asked for powers to take down scam and unauthorised websites, to ban misleading marketing and to regulate third-party promotion. ESMA's stated reason is that current freeze requests usually clear after the funds have moved. These are proposals and not yet law.",
+      "soWhat": "If adopted, an EU regulator could order a crypto firm to freeze funds before a bank has finished its own review. A bank with EU crypto counterparties should plan how it would respond to a freeze order that reaches a counterparty's wallets. The bank should also expect faster outbound requests from EU supervisors. The proposals depend on the Commission's MiCA review and no timetable has been set.",
+      "date": "2026-09-30",
+      "addedAt": "2026-10-01",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "tags": [
+        "ESMA",
+        "MiCA",
+        "MiCA review",
+        "asset freezes",
+        "enforcement powers"
+      ],
+      "sources": [
+        {
+          "name": "SpendNode: EU Watchdog ESMA Asks for Stronger Powers to Police Crypto (reporting Reuters)",
+          "url": "https://www.spendnode.io/blog/esma-stronger-powers-police-crypto-mica-october-2026/",
+          "kind": "secondary"
+        }
+      ],
+      "publication": {
+        "issuer": "ESMA",
+        "kind": "Response to MiCA review"
+      }
+    },
+    {
+      "id": "feed-fca-bedi-mavanga-confiscation-sept2026",
+      "type": "signal",
+      "title": "FCA obtains confiscation orders in £1.5m cold-call crypto investment fraud",
+      "summary": "On 28 September 2026 Southwark Crown Court ordered Raymondip Bedi to pay £603,404.28 and Patrick Mavanga £247,997.99 in confiscation. Between February 2017 and June 2019 they cold-called consumers and sold fake cryptoasset investments through CCX Capital and Astaria Group LLP. At least 65 investors lost £1,541,799. Both men were jailed in July 2025 after an FCA prosecution, and the FCA says recovered funds will go to victims.",
+      "soWhat": "The case shows the FCA pursuing proceeds after conviction, so banks that held the fraud companies' accounts or processed victim payments may receive production or confiscation requests. Victim payments to crypto exchanges from cold-call schemes are a recognised red flag for transaction monitoring. The sums are small, but the scheme ran for 2 years before enforcement.",
+      "date": "2026-09-28",
+      "addedAt": "2026-10-01",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "UK",
+      "impact": "low",
+      "tags": [
+        "FCA",
+        "enforcement",
+        "investment fraud",
+        "confiscation",
+        "cold calling"
+      ],
+      "sources": [
+        {
+          "name": "Insurance Edge: FCA Takes Action on Crypto Fraud (reproducing FCA release)",
+          "url": "https://insurance-edge.net/2026/09/29/fca-takes-action-on-crypto-fraud/",
+          "kind": "secondary"
+        }
+      ],
+      "publication": {
+        "issuer": "FCA",
+        "kind": "Press release"
       }
     }
   ]

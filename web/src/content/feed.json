@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01",
+  "lastUpdated": "2026-10-03",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -8090,6 +8090,97 @@
         "issuer": "FCA",
         "kind": "Press release"
       }
+    },
+    {
+      "id": "feed-fincen-a7-network-alert-312-notice-oct2026",
+      "type": "regulatory",
+      "title": "FinCEN issues A7 Network alert and proposes a section 9714 primary money laundering concern finding",
+      "summary": "On 1 October 2026 FinCEN issued Alert FIN-2026-Alert007 on the A7 Network, a wholesale sanctions evasion and money laundering service with ties to Russia that Iran, the IRGC and DPRK-linked actors also use. FinCEN issued it with a finding and notice of proposed rulemaking under section 9714(a) of the Combating Russian Money Laundering Act, covering transactions with non-US companies the network controls. The alert asks institutions to put the key term FIN-2026-A7NETWORK in SAR field 2 and the narrative.",
+      "soWhat": "The alert describes sub-agents that appear as the paying party on invoices so that payments leave non-Russian accounts through correspondent banking and SWIFT. A bank cannot see the sanctions link from the payment message alone. Trade-finance and correspondent teams should test their typologies against this model and retain the SAR key term. The proposed special measure is a proposal and is not yet in force.",
+      "date": "2026-10-01",
+      "addedAt": "2026-10-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "high",
+      "tags": [
+        "FinCEN",
+        "A7 Network",
+        "A7A5",
+        "sanctions evasion",
+        "Russia",
+        "Iran",
+        "section 9714",
+        "SAR key term"
+      ],
+      "sources": [
+        {
+          "name": "FinCEN — Alert FIN-2026-Alert007 on the A7 Network",
+          "url": "https://www.fincen.gov/system/files/2026-10/FinCEN-Alert-A7-Network.pdf",
+          "kind": "primary"
+        }
+      ],
+      "publication": {
+        "issuer": "FinCEN",
+        "kind": "Alert",
+        "ref": "FIN-2026-Alert007"
+      }
+    },
+    {
+      "id": "feed-ofac-atm-jackpotting-tren-de-aragua-sept2026",
+      "type": "signal",
+      "title": "OFAC sanctions 10 over a $40.7m ATM jackpotting scheme laundered through crypto",
+      "summary": "On 30 September 2026 OFAC designated 10 individuals and entities linked to an ATM jackpotting operation that took at least $40.73 million from US financial institutions in over 1,500 incidents. The alleged architect, listed on the FBI Ten Most Wanted list, is said to have designed the Ploutus malware, and the scheme served Tren de Aragua. Reporting says the cash went into crypto at exchanges, with heavy use of stablecoins, and that 7 deposit addresses at one exchange were listed.",
+      "soWhat": "A US bank is the direct victim in this case, and its ATM fraud losses are now tied to a sanctioned terrorist organisation. Banks should screen the 7 listed addresses and review exchange and stablecoin payments from accounts that took cash deposits after ATM incidents. The detail on the listed addresses comes from secondary reporting, so teams should check the OFAC notice itself.",
+      "date": "2026-09-30",
+      "addedAt": "2026-10-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "OFAC",
+        "ATM jackpotting",
+        "Tren de Aragua",
+        "stablecoins",
+        "sanctions"
+      ],
+      "sources": [
+        {
+          "name": "Match Systems — OFAC sanctions 10 for $40M ATM jackpotting using crypto",
+          "url": "https://matchsystems.com/blog/investigations/ofac-sanctions-10-for-40m-atm-jackpotting-using-crypto",
+          "kind": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "feed-ofac-hamas-charity-crypto-network-oct2026",
+      "type": "signal",
+      "title": "OFAC sanctions Hamas fundraisers and 2 sham charities that raised over $2m, part of it in crypto",
+      "summary": "On 2 October 2026 OFAC designated a Gaza-based Hamas military wing member, 2 France-based fundraisers and 2 charities, Association Baraka and Ensemble C Mieux. Reporting says they raised over $2 million between 2020 and 2026, about $1.5 million of it after 7 October 2023, and that hundreds of thousands of dollars moved through crypto wallets and money service businesses.",
+      "soWhat": "Charity front accounts are a known terrorist-financing typology, and this case adds crypto wallets and money service businesses to the payment path. Banks should screen the 5 names and review donation-style inflows to accounts of associations. The coin, chain and exchange used are not stated in the source, so those details remain [To confirm: OFAC notice].",
+      "date": "2026-10-02",
+      "addedAt": "2026-10-03",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "OFAC",
+        "Hamas",
+        "terrorist financing",
+        "charities",
+        "crypto wallets"
+      ],
+      "sources": [
+        {
+          "name": "Crypto Times — U.S. sanctions Hamas network over $2M crypto funding",
+          "url": "https://www.cryptotimes.io/2026/10/03/u-s-sanctions-hamas-network-over-2m-crypto-funding/",
+          "kind": "secondary"
+        }
+      ]
     }
   ]
 }

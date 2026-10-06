@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-03",
+  "lastUpdated": "2026-10-06",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -8181,6 +8181,77 @@
           "kind": "secondary"
         }
       ]
+    },
+    {
+      "id": "feed-base-vault-whitelist-exploit-oct2026",
+      "type": "typology",
+      "title": "Base vault drained of ~$6m after attacker's contract is whitelisted through the owner's multisig",
+      "summary": "On 4 October 2026 an investment vault on Base lost 1,783 wstETH (about $6m). The vault owner's Safe wallet removed and re-admitted an attacker-controlled contract to the whitelist one minute apart, both with valid signatures. The contract then borrowed against deposits and redeemed them at Aave V3. Blockaid, PeckShield, CertiK and ExVul tracked the outflow, and the vault had issued no statement at the time of reporting. The cause was permission management, not Aave's code.",
+      "soWhat": "A permissions failure is not caught by a code audit of the calculation logic. A bank that uses a DeFi vault as a yield source or collateral venue should ask who can change the whitelist, whether changes are time-locked and monitored, and how a dormant multisig (inactive for about 25 days here) is alerted on when it suddenly signs. The proceeds are an on-chain laundering exposure for any counterparty that receives them.",
+      "date": "2026-10-04",
+      "impact": "low",
+      "tags": [
+        "DeFi",
+        "access-control",
+        "multisig",
+        "exploit",
+        "typology"
+      ],
+      "typology": {
+        "vector": "Admin-key and whitelist abuse in a DeFi vault, followed by redemption through a lending protocol",
+        "controls": [
+          "Time-locked and independently monitored whitelist changes",
+          "Alerting on activity from dormant multisig wallets",
+          "Due diligence on vault permission structure, not only code audits"
+        ],
+        "obligations": [
+          "Incident disclosure to affected depositors and counterparties"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CryptoTicker, Base Vault Hack: $6 Million via a Permission List (5 October 2026)",
+          "url": "https://cryptoticker.io/en/base-vault-whitelist-multisig-hack-october-2026/",
+          "kind": "secondary"
+        },
+        {
+          "name": "CryptoTimes, Base Vault Hack: $6M in wstETH Drained After Attacker Gains Whitelist Access (4 October 2026)",
+          "url": "https://www.cryptotimes.io/2026/10/04/base-vault-hack-6m-in-wsteth-drained-after-attacker-gains-whitelist-access/",
+          "kind": "secondary"
+        }
+      ],
+      "addedAt": "2026-10-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "confidence": "medium"
+    },
+    {
+      "id": "feed-near-intents-3-8m-exploit-returned-oct2026",
+      "type": "signal",
+      "title": "NEAR Intents recovers $3.8m of USDT after exploit, closing its investigation on 4 October",
+      "summary": "Between 30 September and 1 October 2026 an attacker used a smart-contract bug to withdraw about $3.87m of USDT from a treasury contract on BNB Chain in several transactions. The protocol paused services and patched within an hour. On 2 October its general manager said the suspected exploiter had been identified, set a 48-hour deadline and published return addresses on BTC, EVM and Solana. The funds were reportedly returned in full and the investigation closed on 4 October.",
+      "soWhat": "The return followed public identification of the attacker and a short deadline, a pattern that may recur where the exploiter is not a state-linked actor. A bank or custodian exposed to cross-chain settlement protocols should record the incident, confirm whether its own balances were affected, and treat returned funds as requiring provenance checks before they are re-credited.",
+      "date": "2026-10-04",
+      "impact": "low",
+      "tags": [
+        "cross-chain",
+        "exploit",
+        "BNB Chain",
+        "fund recovery"
+      ],
+      "sources": [
+        {
+          "name": "Crypto Briefing, NEAR Intents recovers $3.8 million from exploit and closes its investigation (2 October 2026)",
+          "url": "https://cryptobriefing.com/near-intents-recovers-exploit-funds/",
+          "kind": "secondary"
+        }
+      ],
+      "addedAt": "2026-10-06",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "confidence": "medium"
     }
   ]
 }

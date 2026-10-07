@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-06",
+  "lastUpdated": "2026-10-07",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -8252,6 +8252,46 @@
       "status": "published",
       "region": "Global",
       "confidence": "medium"
+    },
+    {
+      "id": "feed-cardano-cip0113-programmable-tokens-mainnet-oct2026",
+      "type": "solution",
+      "title": "Cardano puts CIP-0113 programmable tokens live on mainnet, with KYC, sanctions denylist and freeze-and-seize controls",
+      "summary": "The Cardano Foundation said on 7 October 2026 that CIP-0113 is live on mainnet, following the merge of the proposal on 29 September. The standard lets an issuer attach rules to a native token that the ledger checks each time the token is transferred, minted or burned. Reference modules include KYC-gated transfers, sanctions denylists, global pauses, forced transfers and seizures. The core standard supplies a registry and common validation, and each issuer chooses its own controls. Existing Cardano native tokens and ADA are not affected.",
+      "soWhat": "Issuer-level freeze and seizure powers written into the ledger move part of sanctions and KYC enforcement from the intermediary to the token itself. A bank that holds or transacts in tokenised assets on Cardano should establish which controls an issuer has enabled, who holds the administrative keys, and how a forced transfer would be recorded, because those powers change the legal and operational position on asset ownership and on freezing in line with sanctions obligations.",
+      "date": "2026-10-07",
+      "addedAt": "2026-10-07",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "Global",
+      "impact": "low",
+      "confidence": "medium",
+      "tags": [
+        "Cardano",
+        "programmable tokens",
+        "KYC",
+        "sanctions",
+        "freeze",
+        "tokenisation"
+      ],
+      "solution": {
+        "vendor": "Cardano Foundation",
+        "category": "Programmable token standard with on-ledger compliance controls",
+        "stance": "watch",
+        "note": "Controls such as denylists and seizure come from modules chosen per token, not from the core standard."
+      },
+      "sources": [
+        {
+          "name": "crypto.news, Cardano lets token issuers freeze and seize assets under new rules (7 October 2026)",
+          "url": "https://crypto.news/cardano-lets-token-issuers-freeze-and-seize-assets-under-new-rules/",
+          "kind": "secondary"
+        },
+        {
+          "name": "Cardano Foundation, Programmable Tokens for Cardano",
+          "url": "https://cardanofoundation.org/blog/programmable-tokens-cardano",
+          "kind": "primary"
+        }
+      ]
     }
   ]
 }

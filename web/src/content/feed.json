@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07",
+  "lastUpdated": "2026-10-08",
   "note": "Agent-published items. Appended by the Phase-2 ingestion agent on each scheduled run; auto-published (no human gate). Integrity rule: every item carries a real source URL.",
   "items": [
     {
@@ -8292,6 +8292,80 @@
           "kind": "primary"
         }
       ]
+    },
+    {
+      "id": "feed-fincen-withdraws-unhosted-wallet-mixing-proposals-oct2026",
+      "type": "regulatory",
+      "title": "FinCEN withdraws its unhosted wallet and crypto mixing proposals, and its 2023 mixing finding",
+      "summary": "On 5 October 2026 FinCEN announced the withdrawal of two proposed rules on convertible virtual currency. The first, proposed in 2020, would have imposed recordkeeping, verification and reporting requirements on certain transactions involving unhosted wallets. The second, proposed in 2023, would have imposed a special measure on convertible virtual currency mixing. FinCEN cited the Administration's deregulatory agenda and its aim to make digital asset regulations fit for purpose. According to the ABA Banking Journal, FinCEN also withdrew its 2023 finding that international convertible virtual currency mixing is a class of transactions of primary money laundering concern. The withdrawals do not change the Bank Secrecy Act obligations that already apply to regulated crypto businesses.",
+      "soWhat": "A US bank can no longer expect a rule-based requirement to record or report transfers to and from unhosted wallets, or a special measure on mixer exposure. The bank's own risk assessment therefore becomes the main basis for its controls over these flows. The bank should record why it keeps, adjusts or removes its unhosted wallet and mixer rules, because the sanctions and suspicious activity reporting expectations on those flows remain in place. A bank with UK or EU operations should also expect those regimes to keep stricter transfer information and self-hosted wallet requirements.",
+      "date": "2026-10-05",
+      "addedAt": "2026-10-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "US",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "FinCEN",
+        "unhosted wallets",
+        "mixers",
+        "Bank Secrecy Act",
+        "deregulation"
+      ],
+      "sources": [
+        {
+          "name": "FinCEN, FinCEN Announces Withdrawals of Proposed Digital Asset Related Rules (5 October 2026)",
+          "url": "https://www.fincen.gov/news/news-releases/fincen-announces-withdrawals-proposed-digital-asset-related-rules",
+          "kind": "primary"
+        },
+        {
+          "name": "ABA Banking Journal, FinCEN withdraws proposals on crypto recordkeeping (5 October 2026)",
+          "url": "https://bankingjournal.aba.com/2026/10/fincen-withdraws-proposals-on-crypto-recordkeeping/",
+          "kind": "secondary"
+        }
+      ],
+      "publication": {
+        "issuer": "FinCEN",
+        "kind": "Withdrawal of proposed rules"
+      }
+    },
+    {
+      "id": "feed-esma-unauthorised-stablecoins-supervisory-expectations-oct2026",
+      "type": "regulatory",
+      "title": "ESMA tells MiCA-authorised crypto firms to stop services on non-compliant stablecoins by 8 January 2027",
+      "summary": "On 8 October 2026 ESMA published supervisory expectations on services related to unauthorised stablecoins. According to Cointelegraph, ESMA said that crypto-asset service providers authorised under MiCA should cease providing services related to non-MiCA-compliant stablecoins to EU clients, and that national regulators should require firms to address remaining exposures as soon as possible and no later than 8 January 2027. The expectations cover trading platforms, exchange, order execution, custody, transfers, advice and portfolio management. Firms should apply technical, contractual and organisational controls to stop EU clients acquiring or increasing exposure. Regulators may allow limited, temporary and closely supervised services to help clients exit positions. The statement builds on ESMA's January 2025 guidance. The ESMA text itself was not available in extractable form at the time of the run, so the detail is taken from press coverage.",
+      "soWhat": "A bank that deals with, or holds client assets through, an EU crypto firm should ask that firm how it will treat stablecoins that are not authorised under MiCA before 8 January 2027, and how it will control exits so that wind-down flows are monitored. Exit conversions and transfers in the wind-down period may create unusual activity at the counterparty, and the bank's monitoring should take that into account. The bank should also check its own stablecoin exposures and settlement arrangements against the MiCA authorisation status of each issuer.",
+      "date": "2026-10-08",
+      "addedAt": "2026-10-08",
+      "addedBy": "agent",
+      "status": "published",
+      "region": "EU",
+      "impact": "medium",
+      "confidence": "medium",
+      "tags": [
+        "ESMA",
+        "MiCA",
+        "stablecoins",
+        "CASPs",
+        "supervisory expectations"
+      ],
+      "sources": [
+        {
+          "name": "ESMA news listing, ESMA sets out supervisory expectations on services related to unauthorised stablecoins (8 October 2026)",
+          "url": "https://www.esma.europa.eu/press-news/esma-news",
+          "kind": "primary"
+        },
+        {
+          "name": "Cointelegraph, ESMA gives crypto firms 3 months to exit non-compliant stablecoins (8 October 2026)",
+          "url": "https://cointelegraph.com/news/esma-unauthorised-stablecoins-three-month-deadline",
+          "kind": "secondary"
+        }
+      ],
+      "publication": {
+        "issuer": "ESMA",
+        "kind": "Supervisory expectations"
+      }
     }
   ]
 }
